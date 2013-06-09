@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <style>
+      html, body { padding: 0; margin:0 }
+      #container { width: 600px; margin: 40px auto;}
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="c"></canvas>
+    </div>
+<script>
+
+function fmod(f, m) {
+  var r = (f>>0);
+  r = (r/m>>0);
+  return f - r*m;
+}
+
+function scene(x, y, z) {
+    //sphere
+    //var sz = z - 100;
+    //return Math.sqrt(x*x + y*y + sz*sz) - 10;
+    var DIST = 4.5;
+    //z = z - 7;
+    x += 1.5;
+    y += 1.5;
+    //if( Math.abs(x) > DIST || Math.abs(y) > DIST ) return 1;
+    if(x > 3 || x < 0 || y > 3 || y < 0) return 1;
+    //if(z < 9) return 1;
+    var map = [1, 0, 1];
+    var m = 1;
+    for(var i = 0; i < 4; ++i) {
+      var xx = fmod(Math.abs(m*x), 3)>>0;
+      var yy = fmod(Math.abs(m*y), 3)>>0;
+      var zz = fmod(Math.abs(m*z), 3)>>0;
+      if(map[xx] + map[yy] + map[zz] < 2) {
+        return 1;
+      }
+      m*=3;
+    }
+    return 0;
+
+}
+
+var canvas = document.getElementById('c');
+var w = canvas.width = 600;
+var h = canvas.height = 480;
+t=0;
+(function() {
+    t++;
+    K = canvas.getContext('2d')
+    I = K.getImageData(0,0, w, h);
+    for(var y=0; y<h; ++y) {
+        for(var x=0;x<w; ++x) {
+            //prepare things
+            var dx = (x - 0.5*w)/w;
+            var dy = (h/w)*(y - 0.5*h)/h;
+            var dz = 1;
+            var mod = Math.sqrt(dx*dx + dy*dy + dz*dz);
+            dx /= mod;
+            dy /= mod;
+            dz /= mod;
+
+            //now raycast
+            var X = 0;
+            var Y = 0;
+            var Z = 0;
+            var depth;
+            var m = 64
+            for(depth=0; depth < 100 && m>0.01; ++depth){
+                //m = Math.sqrt(X*X+Y*Y+Z*Z) - 0.1;
+                X+=dx, Y+=dy, Z+=dz
+                m = scene(X, Y, Z);
+            }
+
+            var idx = (y*w + x)*4;
+            col = 250;
+            if(m < 0.01) {
+              var col = 255*depth/20;
+            } 
+            I.data[idx + 0] = col;
+            I.data[idx + 1] = col;
+            I.data[idx + 2] = col;
+            I.data[idx + 3] = 255;// depth;
+            
+        }
+    }
+    K.putImageData(I,0,0);
+})();
+
+/*
+N=[K=R.getContext('2d')];
+for(t=B=127,I=K.getImageData(0,0,q=64,q);t--;$=Math.cos)
+    N[t]=t/43&1;
+alert(N)
+setInterval("
+    t++;
+    for(i=y=-1;y<1;y+=A)
+        for(x=-1;x<1;x+=A=1/32,I.data[i+=4]=h+h)
+            for(
+                a = t/86
+                C = cos(a), 
+                S = cos(a+8),
+                m = C
+                b = t/127
+                c = cos(b),
+                s = cos(b+8),
+                u = x*C + S,
+                v = y*c - u*s,
+                u = u*c + y*s,
+                w = C - x*S,
+                X = q + 9*cos(a+b),
+                Y = q + 9*cos(b-a)
+                Z = t
+                h = 127
+                    ;--h && m < 64
+                        ;
+                        X+=u,
+                        Y+=v,
+                        Z+=w)
+                for(m=1;N[X*m&B]+N[Y*m&B]+N[Z*m&B]<2&&m<q;m*=3);
+    K.putImageData(I,0,0)",9)>
+*/
+</script>
+</body>
+</html>

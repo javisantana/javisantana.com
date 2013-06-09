@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Javi Santana</title>
+        <!-- <script src="http://178.79.144.11/st/pnfs/js/"> </script> -->
+        <style>
+            html, body, ul, li { margin: 0; padding: 0; }
+            html, body { height: 100%;}
+            #layout {
+                padding-top: 40px;
+                margin:0 auto;
+                width:600px;
+                height: 100%;
+                text-align:center;
+                font-family:Georgia;
+                -webkit-box-shadow: 0px 0px 10px #888;
+                -moz-box-shadow: 0px 0px 10px #888;
+                overflow: hidden;
+            }
+            #all {
+                width: 1200px;
+                position: relative;
+                height: 500px;
+            }
+            #intro, #more {
+                width: 600px;
+            }
+            #intro {
+                float: left;
+                position: relative;
+            }
+            #more {
+                float: right;
+                position: relative;
+            }
+            #l{
+                text-align:left;
+                font-size:2em;
+                margin-bottom:3em;
+            }
+            h1 {
+                font-size: 4em;
+                line-height:1em;
+                font-weight:normal;
+                margin-left:9px;
+                color: #444;
+                letter-spacing:-2px;
+            }
+            h1 span {
+                color: #111;
+            }
+            h2 {
+                font-weight: normal;
+            }
+            a{
+              /*color:#06c;*/
+                color: #111;
+                margin:0 5px 0 0;letter-spacing:0;
+                background-color: #F9FC7E;
+                padding: 3px 4px;
+            }
+            li { 
+                list-style:none;
+
+            }
+            .u{width:25%;display:inline;float:left;text-align:left}
+            p{
+                color: #444;
+            }
+            #c {
+                width: 100%;
+                height: 80px;
+            }
+            .block {
+                text-align: left;
+                padding: 5px 30px;
+                display: inline;
+                width: 240px;
+                float: left;
+            }
+            .block a {
+                color: #06c;
+                background: none;
+                margin: 0;
+                padding:0;
+            }
+            #goback {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body onload="init()">
+        <div id="layout">
+            <div id="all">
+                <div id="intro">
+                    <h1>Hello,</h1>
+                    <h1>I'm <span>Javi Santana</span></h1>
+                    <h2>I make software products</h2>
+                    <a id="gomore" class="h" href="#">more &rarr;</a>
+                </div>
+                <div id="more">
+                    <h1>Links</h1>
+                    <div class="block">
+                        <h2>Code</h2>
+                        <p>My code on <a id="github" href="http://github.com/javisantana">github</a> or <a id="bitbucket" href="http://bitbucket.org/javisantana">bitbucket</a>. <a id="lab" href="/lab">My small lab</a>.</p>
+                    </div>
+                    <div class="block">
+                        <h2>Social</h2>
+                        <p>You can read me on my <a id="blog" href="http://blep.blogspot.com">blog</a> or follow me on <a id="twitter" href="http://twitter.com/javisantana">twitter</a> (spanish).</p>
+                    </div>
+                    <div class="block">
+                        <h2>Work</h2>
+                        <p>I work for <a href="http://vizzuality.com">vizzuality</a> creating awesome web stuff and for my own company <a id="agroguia" href="http://agroguia.es">agroguía</a> doing life easier for farmers. More detailed info on <a id="linkedin" href="http://www.linkedin.com/in/javisantana">linkedin</a>.</p>
+                    </div>
+                    <div class="block">
+                        <h2>Contact</h2>
+                        <p><a id="mail" href="mailto:jsantfer@gmail.com">jsantfer@gmail.com</a></p>
+                    </div>
+                    <div style="float: left; width: 100%; text-align: center;"> <!-- hack -->
+                        <a id="goback" class="h" href="#">&larr;back</a>
+                    </div>
+                </div>
+            </div>
+        <canvas id="c" style="margin:0; padding: 0;"></canvas>
+        </div>
+    </body>
+    <script>
+        
+        var BW = 10;
+        
+        // some math
+        var seed = 1;
+        function linear(a, b, t) {
+            return a + (b - a)*t;
+        }
+        function smoothstep(a, b,t)
+        {
+            if(t < a) 
+                return 0.0;
+            if(t > b) 
+                return 1.0;
+            t = (t-a)/(b-a);
+            return t*t*(3.0 - 2.0*t);
+        }
+        function rand01() {
+            seed = (seed*214013+2531011);
+            seed = seed^(seed>>16);
+            return 2*(seed>>16)/65535;
+        }
+
+        function randf() {
+            return rand01()*2 - 1;
+        }
+
+        var global_x = 0;
+        cos = Math.cos;
+
+
+        function move(st, dir) {
+            var intro = document.getElementById('intro');
+            var more = document.getElementById('more')
+            var dur = 1000;
+            var start = (new Date()).getTime();
+            var end = start + dur;
+            var inter = setInterval(function() {
+                var time = (new Date()).getTime();
+                var p = st - dir*600*smoothstep(start, end, time);
+                global_x = p;
+                intro.style.left = p + 'px';
+                more.style.left = p + 'px';
+                if(time > end) {
+                    clearInterval(inter);
+                }
+            }, 10);
+        }
+
+        document.getElementById('gomore').onclick = function() { 
+           //Stats.track('want_more'); 
+           move(0, 1); 
+        }
+        document.getElementById('goback').onclick = function() { 
+            //Stats.track('go_back');
+            move(-600, -1); 
+        }
+
+        function draw_builing(c, px, h) {
+           c.fillStyle = "rgba(0, 0, 0, 0.1)";
+           var w = BW*0.5; //BW*Math.random();
+           c.fillRect(px + w*0.5, 0, w , Math.random()*h)
+        }
+        
+        N = 5
+        function render_grass(c, x, y, h, f) {
+            var col = Math.floor(140 + 30*randf());
+            c.strokeStyle= "rgba(5,"+ col +", 0, 1)";
+            c.beginPath();
+            c.moveTo(x, y);
+            for(var i = 0; i < h;  ++i) {
+               var ii = N - i - 1;
+               c.lineTo(x + 0.05*i*i*f, y-i*4);
+            }
+            c.stroke();
+
+        }
+
+        var layout = document.getElementById('layout');
+        var oldx= 0, oldy;
+        var dx = 0;
+        var sx = 0
+        var tdx = 0;
+        var old_global_x= 0;
+        var dgx = 0;
+        window.onmousemove = function (ev) {
+            dx = Math.max(Math.min(ev.screenX - oldx, 30), -30);
+            oldx = ev.screenX;
+            sx = ev.screenX;
+            //oldy = ev.screenY;
+        }
+
+        function draw_build(c, x, y, w, h) {
+            c.beginPath();
+            c.arc(x, y +2, w*0.5, 0, 2*Math.PI, true); 
+            c.closePath();
+            c.fill();
+            c.fillRect(x - w*.05, y, w*0.1, h);
+        }
+
+        function draw_mountain(c, x, y, w, h) {
+            c.beginPath();
+            c.arc(x, y +2, w*0.5, 0, Math.PI, true); 
+            c.closePath();
+            c.fill();
+            c.fillRect(x - w*.5, y, w, h);
+        }
+    
+        var newseed = 10;
+        window.onkeypress = function(ev) {
+          if(ev.charCode == 99) {
+            newseed *=2;
+          }
+        }
+
+        /*
+        window.onmousewheel = function(ev) {
+            if(ev.wheelDelta > 0) {
+                newseed ++;
+            } else {
+                newseed --;
+            }
+        }
+        */
+
+        function trackLink(l) {
+            if (l.attributes['id']) {
+                l.addEventListener("mousedown", function() {    
+                    var id = l.attributes['id'].textContent;
+                    //Stats.track('click_'+id);
+                }, 
+                false);
+            }
+        }
+        function setTrack() {
+            var links = document.getElementsByTagName('a');
+            for(var i=0; i<links.length; ++i) {
+                var l = links[i];
+                trackLink(l);
+            }
+        }
+        function init() {
+
+           //track
+           //Stats.init();Stats.track('visits'); 
+           //setTrack();
+           var canvas = document.getElementById('c');
+           var c = canvas.getContext('2d');
+           var w = canvas.width = 600;//layout.width;
+           var h = canvas.height;
+           var n = w/BW;
+           var ddiff= 0;
+           c.lineWidth = 1;
+           var start = (new Date()).getTime();
+           
+           setInterval(function() {
+                tdx += (dx - tdx)*0.4;
+                ddiff += (sx - ddiff)*0.1;
+                dx*=0.8;
+                dgx = global_x - old_global_x; 
+                old_global_x = global_x;
+                c.clearRect(0, 0, w, h);
+                var time = (new Date()).getTime() - start;
+                seed = newseed;
+
+                // sky
+
+                /*
+                var g = c.createLinearGradient(0, 0, 0, h);
+                g.addColorStop(0, '#8fc6db');
+                g.addColorStop(0.5, '#9bd6dc');
+                g.addColorStop(1, '#a4e3db');
+                c.fillStyle = g;
+                c.fillRect(0, 0, w, h);
+                */
+                var h6 = h/6;
+                c.fillStyle = '#8fc6db';
+                c.fillRect(0, 0, w, h6)
+                c.fillStyle = '#9bd6dc';
+                c.fillRect(0, h6, w, h6)
+                c.fillStyle = '#a4e3db';
+                c.fillRect(0, 2*h6, w, h6);
+                c.fillStyle = '#aaffdb';
+                c.fillRect(0, 3*h6, w, 3*h6);
+
+                c.fillStyle = '#aaeedb';
+                c.fillStyle = '#8fc6db';
+                for(var i = 0; i < 20; ++i) {
+                    var mh = linear(60, 100, rand01());
+                    //draw_mountain(c,linear(0, w, rand01()), h-mh, linear(4, 20, rand01()), mh);
+                    draw_build(c,global_x *0.01 +linear(0, w, rand01()), h-mh, linear(4, 20, rand01()), mh);
+                }
+            
+                // back layer
+                c.fillStyle= "#643c08";
+                for(var i = 0; i < 30; ++i) {
+                    var mh = linear(40, 60, rand01());
+                    draw_mountain(c,global_x*0.04+ linear(0, w, rand01()), h-mh, linear(4, 20, rand01()), mh);
+                }
+                // first layer 
+                c.fillStyle= "#f3f4ba";
+                for(var i = 0; i < 20; ++i) {
+                    var mh = linear(10, 30, rand01());
+                    draw_mountain(c, global_x*0.1+linear(0, w, rand01()), h-mh, linear(10, 80, rand01()), mh);
+                }
+                var NR = 20
+                var offset = (-Math.floor(global_x)) % NR;
+                for(var j = 0; j <  2*NR; ++j) 
+                for(var i = 0; i < 15;  ++i) {
+                    var x = 30*randf() + (w/NR)*(j) ;
+                    var force =  1.5 + 2*cos(0.00001*(time+i))*cos(cos(i*0.1)+0.001*time) + tdx*0.01 + dgx*0.01;
+                    var diff = 40 - Math.min(Math.abs(x - ddiff), 40);
+                    
+                    render_grass(c, global_x+ x, h,  10*rand01(), force+tdx*0.0- diff*0.1);
+                }
+
+           }, 10);
+        }
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</html>
+

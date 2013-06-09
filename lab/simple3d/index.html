@@ -1,0 +1,216 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>title</title> 
+        <meta charset="utf-8" />
+        <script src="jsUnitCore.js" type="text/javascript"></script>
+    </head>
+    <body style="margin: 0"> 
+        <canvas id="c"></canvas> 
+        <script>
+
+            function rotx(v, ang) {
+                var c = Math.cos(ang)
+                var s = Math.sin(ang)
+                return [v[0],v[1]*c - v[2]*s,v[2]*c + v[1]*s]
+            }
+
+
+            function vec3(xx, yy, zz) {
+                this.x = xx || 0;
+                this.y = yy || 0;
+                this.z = zz || 0;
+                this.translate = function (d) { return new vec3(this.x+d[0], this.y+d[1],this.z+d[2]) }
+                this.scale = function(s) { return new vec3(s*this.x, s*this.y,s*this.z) }
+                this.rotz = function(ang) {
+                    var c = Math.cos(ang)
+                    var s = Math.sin(ang)
+                    return new vec3(this.x*c - this.y*s,this.y*c + this.x*s, this.z)
+                }
+                this.proj = function () {
+                    return new vec3(100*this.x/this.z, 100*this.y/this.z, 1)
+                }
+            }
+            function vec3v(v) { return new vec3(v[0], v[1], v[2]) }
+
+
+            canvas = document.body.children[0]
+            canvas.width = 800
+            canvas.height= 400
+            c = canvas.getContext('2d')
+            c.fillStyle = "rgb(0,0,0)";
+
+            widthHalf = canvas.width/2
+            heightHalf = canvas.height/2
+            c.translate( widthHalf, heightHalf );
+            onkeyup = function(e) { 
+                /*
+                if (e.keyCode == 37) 
+                if (e.keyCode == 39)
+                if (e.keyCode == 38)
+                if (e.keyCode == 40)
+                */
+            }
+        
+
+            /*
+            setInterval( function () {
+                c.clearRect(-widthHalf, -heightHalf, canvas.width, canvas.height );
+                t = new Date().getTime();
+
+                for (var i = 0; i < N_STARS; ++i) {
+                   if( stars[i].z < 0.1)
+                      stars[i] = new vec3(50 - 100*Math.random(), 50 - 100*Math.random(), 20 + 100*Math.random())
+                   var x = stars[i].x/stars[i].z
+                   var y = stars[i].y/stars[i].z
+                   stars[i].z -= 1;
+                   c.fillRect(x*100, y*100, 2, 2)
+                }
+
+
+            }, 10);
+            */
+            function rand() { return 2*(2*Math.random() - 1)}
+            function sketchLine(c, x0, y0, x1, y1) {
+                var alpha = 1.0 //0.4
+                for(var i = 0; i < 1; ++i) {
+                        c.beginPath();
+                        c.moveTo( x0 + rand(), y0 + rand() );
+                        c.lineTo( x1 + rand(), y1 + rand() );
+                        c.closePath();
+                        c.strokeStyle = 'rgba(0, 0, 0, ' + Math.random()*alpha + ')';
+                        c.stroke()
+                }
+            }
+
+            var cubeVertex= [
+                [-10, 10, 10],
+                [10, 10, 10],
+                [10, 10,-10], 
+                [-10, 10,-10],
+                [-10,-10, 10],
+                [10, -10, 10],
+                [10, -10,-10],
+                [-10,-10,-10] 
+            ];
+            var cubeIndex = [
+                [0,1,2,3],
+                [0,3,7,4],
+                [3,2,6,7],
+                [2,1,5,6],
+                [0,4,5,1],
+                [4,7,6,5]  
+            ];
+
+            function quad(c, x, y, w, h) {
+                        c.lineJoin = "round";
+                        c.lineCap = "round";
+
+                        c.lineWidth = 1
+                        sketchLine(c, x, y, x + w, y)
+                        sketchLine(c, x + w, y, x +  w, y + h )
+                        sketchLine(c, x + w, y + h, x, y + h )
+                        sketchLine(c, x , y + h, x, y )
+                
+            }
+            
+            function obj3d(vertex) {
+                this.vertex = vertex
+                this.transformations = []
+                this.reset = function() { this.transformations = [] }
+                this.t = function(fn) {
+                    this.transformations.push(fn)
+                    return this;
+                    
+                    //for(var i = 0; i < this.vertex.length; ++i) 
+                    //vertex[i] = fn(vertex[i])
+                }
+                this.apply = function (v) {
+                    var vt = v;
+                    for (var i=0; i < this.transformations.length; ++i) {
+                        vt = this.transformations[i](vt) 
+                    }
+                    return vt
+                }
+                this.render = function(c, indexes) {
+                    for(var i=0; i< indexes.length; ++i) {
+                        var q = indexes[i]
+                        var t = [[0,1],[1,2],[2,3],[3,0]]
+                        for(var j=0; j<4; ++j) {
+                            var v1 = this.vertex[q[t[j][0]]]
+                            var v2 = this.vertex[q[t[j][1]]]
+                            v1 = this.apply(vec3v(v1))
+                            v2 = this.apply(vec3v(v2))
+                            if(v1.z < -0.01 && v2.z < -0.01) {
+                                v1 = v1.proj()
+                                v2 = v2.proj()
+                                sketchLine(c, v1.x, v1.y, v2.x, v2.y)
+                            }
+                        }
+                    }
+                }
+                
+            }
+            function cube(pos) {
+                for(var i=0; i< 6; ++i) {
+                    var q = cubeIndex[i]
+                    var t = [[0,1],[1,2],[2,3],[3,0]]
+                    for(var j=0; j<4; ++j) {
+                        var v1 = cubeVertex[q[t[j][0]]]
+                        var v2 = cubeVertex[q[t[j][1]]]
+                        v1 = vec3v(v1).translate(pos).proj()
+                        v2 = vec3v(v2).translate(pos).proj()
+                        sketchLine(c, v1.x, v1.y, v2.x, v2.y)
+                    }
+                }
+            }
+            var ang = 0
+            o = new obj3d(cubeVertex)
+            setInterval( function () {
+                c.clearRect(-widthHalf, -heightHalf, canvas.width, canvas.height );
+                t = new Date().getTime();
+                //quad(c, 100, 100, 100, 100)
+                /*
+                cube([0, 0, -50])
+                cube([30, 0, -50])
+                cube([60, 0, -50])
+                */
+                for(var j =0; j < 8;  ++j) {
+                    for(var i =0; i < 8;  ++i) {
+                        o.reset()
+                        o.t(function(v) { return v//.rotz(ang*3*(1+j))
+                                                  .translate([ 60,0, -((10*ang  + 20  + 40*j))])
+                                                  .rotz((1.0+ Math.cos(ang +j )) + i*Math.PI/4) })
+                        o.render(c, cubeIndex)
+                    }
+                }
+                ang += 0.01
+                
+
+            }, 10);
+
+
+
+        </script>
+
+        <!--          testing                -->
+        <script language="javascript">
+            function testVec2() {
+            }
+            testVec2()
+          </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    </body>
+</html>

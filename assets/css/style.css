@@ -1,0 +1,117 @@
+
+body {
+    font-family:Georgia,serif;
+}
+.separator {
+  height: 20px;
+}
+
+h1 {
+  font-family:Georgia,"Times New Roman",Times,serif;
+  letter-spacing: -2px;
+  font-size: 7em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+
+}
+
+a:hover {
+text-decoration:none;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#008800 none repeat scroll 0 0;
+color:#FFFFFF;
+}
+a {
+  color:#006600;
+}
+
+h5 {
+    font-size: 2.3em;
+    color: #111111;
+    font-family:Georgia,serif;
+}
+#main {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#description {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #444444;
+    font-size: 1.8em;
+}
+
+#header h1{
+    font-size: 4em;
+}
+#company_data {
+    margin-top: 40px;
+}
+#company_data h3 {
+    font-size: 1.9em;
+    color: #111111;
+    font-family:Georgia,serif;
+}
+
+#company_data p {
+    font-size: 1.3em;
+    font-family:Georgia,serif;
+}
+
+#company_data ol, ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+font-size: 1.3em;
+font-family:Georgia,serif;
+margin: 0;
+padding: 0;
+}
+
+#detail h2 {
+    font-size: 3.5em;
+    color: #111111;
+}
+
+#detail h3 {
+    font-size: 1.8em;
+    color: #111111;
+    margin-bottom: 0.4em;
+}
+#detail p {
+    font-size: 1.3em;
+    color: #555555;
+}
+
+#detail img {
+    border: 1px solid #AAAAAA;
+}
+
+#footer {
+   margin-top: 80px;
+   color: #555555; 
+   text-align: center;
+}
+
+.separator {
+	margin-top: 20px;
+}
+
+h4 {
+  color:#555555;
+
+  font-family:Georgia,serif;
+  font-size:1.0em;
+  text-transform:uppercase;
+}
+
+.linksmall {
+	font-size: 0.7em;
+	margin-left: 5px;
+
+}

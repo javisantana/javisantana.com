@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+    <head>
+        <title>G</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <!-- <canvas id="c"></canvas> -->
+        <script>
+            var G = function(init, loop, options) {
+                var doc = this.doc = document;
+                var body = doc.body;
+                var width = innerWidth;
+                var height = innerHeight;
+                var widthHalf = width >> 1;
+                var heightHalf = height >> 1;
+
+                G.clear_layer = function(c) {
+                    var canvas = c.canvas;
+                    canvas.width = width;
+                    canvas.height = height;
+                    c.translate( widthHalf, heightHalf );
+                }
+
+                var create_layer = G.create_layer = function() {
+                    var canvas = doc.createElement('canvas');
+                    canvas.style.position = 'absolute';
+                    body.appendChild(canvas);
+                    canvas.width = width;
+                    canvas.height = height;
+                    var c = canvas.getContext( '2d' );
+                    c.canvas = canvas;
+                    c.width = width;
+                    c.height = height;
+                    c.translate( widthHalf, heightHalf );
+                    return c;
+                }
+
+                function _init() {
+                    var c = create_layer();
+
+                    G.ctx = c;
+                    G.mouseX = 0;
+                    G.mouseY = 0;
+                    G.realmouseX = 0;
+                    G.realmouseY = 0;
+
+                    doc.onmousemove = function (event) {
+                        G.realmouseX = ( event.clientX - widthHalf );
+                        G.realmouseY = ( event.clientY - heightHalf );
+                        G.mouseX = ( event.clientX - widthHalf ) / this.width;
+                        G.mouseY = ( event.clientY - heightHalf ) / this.height;
+                    };
+
+                    init && init.apply(G);
+                    setInterval(function() {
+                            loop.apply(G);
+                    }, options && options.timeframe || 10);
+                }
+                _init();
+            }
+            //some helper math
+            function vec2(x, y) {
+                this.x = x || 0;
+                this.y = y || 0;
+                this.clone = function() { return new vec2(this.x, this.y); }
+                this.normalize = function() {
+                    var l = this.length();
+                    this.x = this.x/l;
+                    this.y = this.y/l;
+                    return this;
+                }
+                this.length= function() {
+                    return Math.sqrt(this.x*this.x + this.y*this.y);
+                }
+            }
+            vec2.add = function(v1, v2) { return new vec2(v1.x + v2.x, v1.y + v2.y); }
+            vec2.mul = function(scalar, v2) { return new vec2(scalar*v2.x, scalar*v2.y); }
+            vec2.sub = function(v1, v2) { return new vec2(v1.x - v2.x, v1.y - v2.y); }
+            vec2.dot = function(v1, v2) { return v1.x*v2.x +  v1.y*v2.y; }
+
+        </script>
+
+        <script>
+
+
+            sin = Math.sin, cos = Math.cos, pi = Math.PI;
+
+            function osc(amp, phase, freq, pos, dir) {
+                this.src_pos = pos.clone();
+                this.pos = pos;
+                this.amp = amp;
+                this.dir = dir;
+                function fn(t) {
+                    this.lastpos = vec2.add(this.pos, vec2.mul(this.amp*cos(t*freq*2*pi + phase), this.dir));
+                    return this.lastpos;
+                }
+                this.value = fn
+                this.render = function(ctx) {
+
+                    ctx.strokeStyle= "rgba(0, 0, 0, 0.2)";
+                    ctx.fillStyle= "rgba(0, 0, 0, 0.2)";
+                    ctx.beginPath();
+                    ctx.arc(this.lastpos.x, this.lastpos.y, 10, 0, Math.PI*2, true); 
+                    ctx.closePath();
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    ctx.moveTo(this.lastpos.x, this.lastpos.y);
+                    ctx.lineTo(this.pos.x, this.pos.y);
+                    ctx.stroke();
+
+                }
+
+                this.launch = function() {
+                    var d = vec2.sub(this.src_pos, this.pos);
+                    this.amp = d.length();
+                    this.dir = d.normalize();
+                }
+            }
+            var time0 = new Date().getTime()/100.0;
+            G(function() {
+                document.body.style.margin = '0px';
+                document.body.style.overflow = 'hidden';
+                document.body.style.background = '#EEE';
+
+                var self = this;
+                this.osc_x = new osc(0, 0, 13/500.0, new vec2(200, 0), new vec2(1, 0));
+                this.osc_y = new osc(0, 0.1111, 11/500.0, new vec2(0, -200), new vec2(0, 1));
+
+                var f1 = this.osc_x.value(0);
+                var f2 = this.osc_y.value(0);
+                var opos = vec2.add(f1, f2);
+
+                this.overlay = G.create_layer();
+
+                this.new_line= function(pos) {
+                    var c = this.ctx;
+                    c.strokeStyle= "rgba(0, 0, 100, 0.6)";
+                    c.beginPath();
+                    c.moveTo(opos.x, opos.y);
+                    c.lineTo(pos.x, pos.y);
+                    c.stroke();
+                    opos = pos.clone();
+                }
+
+                window.onmouseup = function() {
+                    self.osc_x.launch();
+                    self.osc_y.launch();
+                }
+
+                window.onmousedown = function() {
+                    var mousepos = new vec2(G.realmouseX, G.realmouseY);
+                    var len = vec2.sub(mousepos, self.osc_x.pos).length();
+                    if(len < 100) {
+                        self.osc_x.src_pos = mousepos.clone();
+                    }
+                    len = vec2.sub(mousepos, self.osc_y.pos).length();
+                    if(len < 100) {
+                        self.osc_y.src_pos = mousepos.clone();
+                    }
+
+                }
+
+            }, function() {
+                var LEN = 220;
+                var time = new Date().getTime()/100.0 - time0;
+                var f1 = this.osc_x.value(time);
+                var f2 = this.osc_y.value(time);
+
+                var o = vec2.sub(f1, f2);
+                var a = o.length()/2.0;
+                o.normalize();
+                var orto = new vec2(-o.y, o.x);
+                var len = LEN*LEN - a*a;
+                if (len < 0) {
+                    alert('epic');
+                }
+                len = Math.sqrt(len);
+                var pos = vec2.add(f2, vec2.add(vec2.mul(a, o), vec2.mul(len, orto)));
+                this.new_line(pos)
+                G.clear_layer(this.overlay);
+                this.osc_x.render(this.overlay);
+                this.osc_y.render(this.overlay);
+                var c = this.overlay;
+                c.strokeStyle= "rgba(0, 0, 0, 0.1)";
+                c.beginPath();
+                c.moveTo(this.osc_y.lastpos.x, this.osc_y.lastpos.y);
+                c.lineTo(pos.x, pos.y);
+                c.moveTo(this.osc_x.lastpos.x, this.osc_x.lastpos.y);
+                c.lineTo(pos.x, pos.y);
+                c.stroke();
+                c.fillRect(G.realmouseX, G.realmouseY, 5, 5);
+            });
+        </script>
+    </body>
+</html>
+

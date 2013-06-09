@@ -1,0 +1,57 @@
+
+<html>
+  <head>
+    <style>
+      html, body {
+        padding: 0; margin: 0; height: 100%;
+        background-color: #FFF;
+      }
+
+      #game {
+        width: 600;
+        margin: 0 auto;
+        background-color: rgb(1, 2, 5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="game">
+    </div>
+
+  </body>
+
+  <script src="g.js"></script>
+  <script>
+    var e = G.Entities(100, {
+
+      time: 0,
+
+      update: function(dt) {
+        this.time += dt;
+        this.pos.x = 40*Math.cos(this.time);
+        return true;
+      },
+
+      render: function (ctx) {
+        ctx.beginPath(); 
+        ctx.fillStyle = 'rgb(180, 180, 255)';
+        ctx.shadowColor = 'rgb(120, 120, 255)';
+        ctx.shadowBlur = 20;
+        ctx.arc(this.pos.x, this.pos.y, 10, 0, Math.PI*2, true); 
+        ctx.closePath();
+        ctx.fill();
+      }
+
+    });
+
+    G.g(document.getElementById('game'), 600, 600, 
+      function() {
+        G.entities.add(e);
+      },
+      function() {
+      }
+    );
+
+  </script>
+</html>

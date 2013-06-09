@@ -1,0 +1,74 @@
+
+<html>
+  <head>
+    <style>
+      html, body {
+        padding: 0; margin: 0; height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="c"></canvas>
+  </body>
+
+  <script>
+    var canvas = document.getElementById('c');
+    var w = canvas.width = innerWidth;
+    var h = canvas.height = innerHeight;
+    var ctx = canvas.getContext('2d');
+    ctx.translate(w>>1, h>>1);
+
+    // vec2
+    function vec2(x, y) { this.x = x; this.y = y; }
+    function madd(v, m, a) {
+      v.x += m*a.x
+      v.y += m*a.y;
+    }
+    function mov(v, a) {
+      v.x = a.x;
+      v.y = a.y;
+    }
+    function add(a, b) { return new vec2(a.x + b.x, a.y + b.y);}
+    function mul(a, b) { return new vec2(a*b.x, a*b.y);}
+    function length(a) { return Math.sqrt(a.x*a.x + a.y*a.y);}
+    function norm(b) { return mul(1.0/length(b), b) };
+    function clone(a) { return new vec2(a.x, a.y); }
+    function v2(x, y) { return new vec2(x, y);}
+    function rot(v, ang) {
+      var c = Math.cos(ang);
+      var s = Math.sin(ang);
+      return v2(c*v.x - s*v.y, c*v.y + s*v.x);
+    }
+
+    var frame = function(fn) { setTimeout(fn, 16); }
+
+    var t = -w/2;
+    function y(x) {
+      return Math.cos(0.01*x)*30 + (50 + 20*Math.sin(x*0.01));
+    }
+    function loop() {
+      var x = t;
+      ctx.beginPath();
+      var x0 =t;
+      var x1= t-10;
+      var y0 = y(x0);
+      var y1 = y(x1);
+      ctx.fillStyle = 'rgba(0,0,0,' + (0.5+(t/w)) + ')';
+      ctx.moveTo(x0, y0);
+      ctx.lineTo(x1, y1);
+      ctx.lineTo(x1, -y1);
+      ctx.lineTo(x0, -y0);
+      ctx.closePath();
+      ctx.fill();
+      t+=10;
+
+      frame(loop);
+    }
+    frame(loop);
+
+
+
+
+  </script>
+</html>

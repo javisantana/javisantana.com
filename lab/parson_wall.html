@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>G</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+        <script>
+            var doc = document, body = doc.body;
+            var canvas = doc.getElementById('c');
+            body.appendChild(canvas);
+            var width = innerWidth;
+            var height = innerHeight;
+            var widthHalf = width >> 1;
+            var heightHalf = height >> 1;
+
+            canvas.width = width;
+            canvas.height = height;
+
+            var c = canvas.getContext( '2d' );
+
+            sin = Math.sin, cos = Math.cos, pi = Math.PI;
+            function rndInt(a) {
+              return (Math.random()*a) >> 0;
+            }
+            function postAt(i) {
+                return i*30*(i&1?1:0);
+            }
+
+            var RND = 10;
+            c.strokeStyle= "rgba(0, 0, 150, 0.7)";
+            c.beginPath();
+            for (var i = 0; i < 10; ++i) {
+              var u = 3;
+              while(u--) {
+              for (var j = i - rndInt(4); j < i + rndInt(4); ++j) {
+                c.moveTo(30*i + rndInt(RND), rndInt(RND) + postAt(i));
+                c.lineTo(30*j + rndInt(RND), rndInt(RND) + postAt(j));
+              }
+              }
+            }
+            c.stroke();
+        </script>
+    </body>
+</html>
+

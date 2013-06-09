@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1k.javi.santana</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <style>
+        #m{margin: 5em auto;width:60%;text-align:center;letter-spacing:-2px}
+        #l{text-align:left;font-size:2em;margin-bottom:3em;}
+        h1{font-family:Georgia;line-height:0.7em;font-weight:normal;display:inline;margin-left:9px}
+        a{color:#06c;margin:0 5px 0 0;letter-spacing:0;}
+        .u{width:25%;display:inline;float:left;text-align:left;}
+        .p{font-size:2.5em}
+    </style>
+  </head>
+  <body><div id=m><div id=l></div><div id=o></div></div>
+  <script>
+        d=document;m=Math;
+        u=d.getElementById('l');
+        s='';
+        v='hola, soy Javi Santana desarrollo software'.split(' ');
+        for(x in v){
+            c = m.ceil(m.random()*10);
+            s+='<h1 style="color:#'+c+c+c+';font-size:'+100*(1+m.random()*2)+'%">'+v[x]+'</h1>';
+            if(x%2)s+='<br/>';
+        }
+        u.innerHTML=s;
+        j={social:{blog:'doXom8',twitter:'df5ADE',cv:'cqOn9j'},code:{github:'aUHoXy',bitbucket:'df5ADE'},work:{agroguia:'bsq0tM', agrotrack:'dhSTsM'},contact:{'jsantfer@gmail.com':''}};
+        s='';
+        for(x in j){
+            s+='<div class=u><div>';
+            for(l in j[x]) s+='<a href="http://bit.ly/'+j[x][l]+'">'+l+"</a>";
+            s+='</div><div class=p>'+x+'</div></div>';
+        }
+        d.getElementById('o').innerHTML=s;
+      </script>
+  </body>
+</html>

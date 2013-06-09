@@ -1,0 +1,182 @@
+
+<html>
+  <head>
+    <style>
+      html, body {
+        padding: 0; margin: 0; height: 100%;
+      }
+      canvas {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="c2"></canvas>
+    <canvas id="c"></canvas>
+  </body>
+
+  <script>
+    
+    var canvas = document.getElementById('c');
+    var w = canvas.width = innerWidth;
+    var h = canvas.height = innerHeight;
+    var ctx = canvas.getContext('2d');
+    //ctx.translate(w>>1, h>>1);
+    var canvas2 = document.getElementById('c2');
+    var w = canvas2.width = innerWidth;
+    var h = canvas2.height = innerHeight;
+    var ctx2 = canvas2.getContext('2d');
+
+    // vec2
+    function vec2(x, y) { this.x = x; this.y = y; }
+    function madd(v, m, a) {
+      v.x += m*a.x
+      v.y += m*a.y;
+    }
+    function mov(v, a) {
+      v.x = a.x;
+      v.y = a.y;
+    }
+    function add(a, b) { return new vec2(a.x + b.x, a.y + b.y);}
+    function mul(a, b) { return new vec2(a*b.x, a*b.y);}
+    function length(a) { return Math.sqrt(a.x*a.x + a.y*a.y);}
+    function norm(b) { return mul(1.0/length(b), b) };
+    function clone(a) { return new vec2(a.x, a.y); }
+    function v2(x, y) { return new vec2(x, y);}
+    function rot(v, ang) {
+      var c = Math.cos(ang);
+      var s = Math.sin(ang);
+      return v2(c*v.x - s*v.y, c*v.y + s*v.x);
+    }
+
+    var frame = function(fn) { setTimeout(fn, 16); }
+
+    var t = -w/2;
+    function y(x) {
+      return Math.cos(0.01*x)*30 + (50 + 20*Math.sin(x*0.01));
+    }
+
+
+    var HH = h*3/4;
+    ctx2.fillStyle = '#FFF';
+    ctx2.fillRect(0, 0, w, h);
+    ctx2.fillStyle = '#000';
+    ctx2.strokeStyle = '#000';
+        //#ctx.fillRect(0,0, 20, 20);
+    ctx2.font = 'bold 150px helvetica' 
+    ctx2.fillText("spainjs", (w>>1) - 290, HH);
+    ctx2.lineWidth= 5;
+    ctx2.beginPath();
+    ctx2.moveTo(0, HH);
+    ctx2.lineTo(w, HH);
+    ctx2.stroke();
+
+    var data = ctx2.getImageData(0, 0, w, h).data;
+    function water(x, y) {
+      x = x>>0;
+      y = y>>0;
+      return data[(4*(y*w + x)) ] > 0;
+    }
+    ctx2.fillStyle = '#FFF';
+    //ctx2.fillRect(0, 0, w, h);
+  
+    //canvas.width = canvas.width;
+    var pressed = false;
+    var mousepos = v2();
+
+    window.onmousedown = function(e) {
+      pressed = true;
+    }
+
+    window.onmouseup =  function(e) {
+      pressed = false;
+    }
+
+    window.onmousemove = function(e) {
+      mousepos.x = e.clientX;
+      mousepos.y = e.clientY;
+    }
+
+    window.addEventListener('touchend', function() {
+      pressed = false;
+    });
+
+    window.addEventListener('touchstart', function(e) {
+      mousepos.x = e.clientX;
+      mousepos.y = e.clientY;
+      pressed = true;
+    });
+
+    window.addEventListener("touchmove", function(event){
+      if(event.touches.length == 1){
+        var touch = event.touches[0];
+        mousepos.x = touch.pageX;
+        mousepos.y = touch.pageY;
+      }
+    });
+    
+
+    ctx.strokeStyle = 'rgba(0, 00, 0, 0.1)';
+    function randf() { return Math.random() - 0.5; }
+
+
+    var parts = [];
+    var died = [];
+    function update(i, p, dt) {
+      p.vely += 9.8*dt;
+      p.x += p.velx*dt;
+      p.y += p.vely*dt;
+      if(!water(p.x, p.y)) {
+        var n = water(p.x - 1, p.y) + water(p.x + 1, p.y);
+        if(n < 0) {
+          p.velx *= 0.9;
+        } else if( n > 0) {
+          p.velx *= -0.9;
+        }
+        p.vely = -0.5*p.vely;
+        //died.push(i);
+      }
+      if(p.y > HH) {
+        died.push(i);
+      }
+    }
+    function render(c, p) {
+      c.fillRect(p.x, p.y, 2, 2);
+    }
+
+    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx2.fillStyle = 'rgba(0,0,0,1)';
+    function loop() {
+      //ctx.clearRect(0, 0, w, h);
+      canvas.width = w;
+      for(var i = 0; i < parts.length; ++i) {
+        var p = parts[i];
+        update(i, p, 0.07);
+        render(ctx, p);
+      }
+
+      //remove old ones
+      var d;
+      while(d = died.pop()) {
+        var p = parts[d];
+        parts.splice(d, 1);
+        //p.y-=2 ;
+        //render(ctx2, p);
+        //data = ctx2.getImageData(0, 0, w, h).data;
+      }
+      if(pressed) {
+        var c = 4;
+        while(c--) 
+          parts.push({x: mousepos.x, y: mousepos.y, velx: 30*randf(), vely:30*randf() });
+      }
+      frame(loop);
+    }
+    setInterval(function(){console.log(parts.length)}, 1000);
+    frame(loop);
+
+
+
+
+  </script>
+</html>

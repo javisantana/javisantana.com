@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Javi Santana</title>
+        <style>
+            #layout {
+                padding-top: 40px;
+                margin:0 auto;
+                width:400px;
+                text-align:center;
+                font-family: Helvetica;
+                overflow: hidden;
+            }
+            p {
+                margin-top: 2em;
+                text-align: left;
+                line-height: 1.5em;
+            }
+            a {
+                color: #06c;
+            }  
+        </style>
+    </head>
+    <body>
+    <div id="layout">
+        <h1>Tunnel effect</h1>
+        <canvas id="R" width="256" height="256" style="width:256px;height:256px;background:#fff" ></canvas>
+        <p>This is an attempt to emulate <a href="http://www.iquilezles.org/blog/?p=1426">iq's tunnel pixel coding demo</a> using javascript. Used technique is plane deformation, a system reference transformation.</p>
+        <p><a href="/lab">&larr;back</a></p>
+    </div>
+
+    <script>
+        var tex = []
+        var lut = []
+        var q = 256;
+        var K = document.getElementById("R").getContext('2d')
+        var c = q*q;
+        while(c--) {
+           // texture
+           var a = c & 0xff;
+           var b  = (c >> 8) & 0xff;
+           var x = a^b;
+           tex[c] = 4*(x*(1-x))>>6 & 0xff;
+
+           // lut
+           var x = -1.0 + 2.0*b/q;
+           var y = -1.0 + 2.0*a/q;
+           var r = Math.sqrt( x*x + y*y );
+           var a = Math.atan2(y,x)/3.14;
+           lut[2*c] = 256/r;
+           lut[2*c + 1] = 255 & (256*a);
+        }
+        
+        // filter
+        var passes = 30;
+        while(passes--) {
+            c = q*q;
+            while(c--) {
+               var a = c & 0xff;
+               var b  = (c >> 8) & 0xff;
+               var i = a*q + b;
+               tex[i] = (tex[(i - 1)&0xffff]  + tex[(i + 1)&0xffff]  + tex[(i + q)&0xffff]  + tex[(i - q)&0xffff])>>2;
+            }
+        }
+
+        time = 0;
+        setInterval(function() {
+            I = K.getImageData(0,0,q=256,q);
+            c = q*q;
+            while(c--) {
+               var d = lut[c*2] + time;
+               var h = lut[c*2 + 1];
+               var r = 256/lut[c*2];
+               var col = r*tex[(d&255)*q + (h&255)];
+               I.data[4*(c) + 0] =  col;
+               I.data[4*(c) + 1] =  col;
+               I.data[4*(c) + 2] = col;
+               I.data[4*(c) + 3] = 255;
+            }
+            K.putImageData(I,0,0);
+            time +=3;
+
+        }, 10);
+
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Javi Santana</title>
+        <style>
+            html, body { margin: 0; padding: 0; /*background-image: url(bkg.png);*/}
+            #layout {
+                margin:90px auto;
+                width:800px;
+                overflow: hidden;
+                font-family: Georgia, sans-serif;
+            }
+            h1 {
+              font-size: 51px;
+              font-weight: normal;
+              color: #222;
+              margin: 40px 0;
+            }
+            p, li {
+              font-size: 17px;
+              line-height: 1.5em;
+            }
+            li {
+              margin-bottom: 1.5em;
+            }
+            p.high {
+              font-size: 23px;
+              color: #000;
+              margin-bottom: 40px;
+            }
+            a {
+              color: #06c;
+            }
+
+            #spanish{
+              display:none;
+            }
+
+            h2 {
+              margin-top: 40px;
+              text-transform: capitalize;
+              font-size: 15px;
+            }
+        </style>
+        <script>
+          window.onload = function() {
+            var en = document.getElementById('english')
+            var es = document.getElementById('spanish')
+            if(location.search.indexOf('es') !== -1) {
+              en.style.display = 'none';
+              es.style.display = 'block';
+            }
+          }
+
+        </script>
+    </head>
+    <body>
+      <div id="layout">
+        <h1>
+        Pixels are the humble bricks with which one can build cathedrals
+        </h1>
+
+        <div id="english">
+          <p class="high">Hello, Javi Santana is a software developer mainly focused on products. Contact him at <b>jsantfer@gmail.com</b></p>
+
+          <p>He is from a small village near Valladolid, a cold city in the center of Spain. He studied a telecommunications degree but he realized he was gonna be a software developer when he wrote his first line of code. He loves cars and running.</p>
+          <p>He is currently working for <a href="http://vizzuality.com">Vizzuality</a> creating CartoDB among other lovely data visualizations and maps. He also runs a <a href="http://agroguia.es">company</a> which creates simple products for farmers.</p>
+          <p>You can follow him on <a href="http://twitter.com/javisantana">twitter</a>, see his work on <a href="http://github.com/javisantana">github</a> or <a href="http://www.linkedin.com/in/javisantana">linkedin</a> and read his <a href="http://blep.blogspot.com">blog</a>.</p>
+        </div>
+
+        <div id="spanish">
+          <p class="high">Hola, Javi Santana es desarrollador de productos software. Puedes contactar con él en <b>jsantfer@gmail.com</b></p>  
+
+          <p>Él es de un pequeño pueblo de Valladolid (España), estudió telecomunicaciones aunque desde que escribió su primera línea en C ya supo que se dedicaría al desarrollo de software. Las relaciones personales son dífíciles para él y a veces se pasa de troll. También le gustan los coches y correr (con  las piernas).
+
+          <p>Ha trabajado creando herramientas de migración de datos, haciendo productos para infoarquitectura en 3D, editores para la creación de videojuegos, productos para empotrados en máquinas de vending y otras cosas curiosas como técnico en TV.</p>
+          
+          <p>Empezó su <a href="http://agroguia.es/">primera empresa</a> en 2006, desarrollando productos para agricultores, la que actualmente sigue desarrollando nuevos productos y siendo rentable (como el desde el primer día) . También ha creado alguna que otra empresa más, pero se metió alguna que otra una buena ostia.</p>
+
+          <p>Actulmente trabaja en <a href="http://vizzuality.com">Vizzuality</a> desarrollando productos para visualización de datos, definiendo la arquitectura frontend de <a href="http://cartodb.com">CartoDB</a>, participando en la creación de <a href="http://vizzuality.com/projects/evolutionofweb20">visualizaciones de datos vistas por millones de personas</a> y desarrollando prototipos relacionados con el renderizado en el navegador usando HTML5.</p>
+
+          <p>Si te interesa puedes <a href="http://twitter.com/javisantana">leerme en twitter</a>, ver mi trabajo en <a href="http://github.com/javisantana">github</a> o escarbar en mi historia laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>. También tengo un <a href="http://blep.blogspot.com">blog abandonado</a>.</p>
+
+        <!--
+        <h2>¿ESTÁS INTERESADO EN CONTRATARME?</h2>
+        <p>Actualmente no estoy interesado en cambiar de trabajo, sin embargo sí puedo ofrecer servicios concretos de áreas en las que tengo experiencia:</p>
+        <ul>
+          <li>Arquitecturas frontend: cómo organizar grandes aplicaciones javascript para que sean mantenibles y rapidas. Mi experiencia en este campo es la del desarrollo de diferentes aplicaciones, desde CartoDB hasta diferentes aplicaciones para Google usadas por millones de personas [<a href="http://vizzuality.com/projects/evolutionofweb20">1</a>, <a href="http://vizzuality.com/projects/endangeredlanguages">2</a> y <a href="http://vizzuality.com/projects/imazon">3</a> ]. </li>
+          <li>Desarrollo de productos: en diferentes ámbitos, desde cómo organizar un repositorio de código, como gestionar las versiones estables, el soporte a los clientes, enfoque de nuevas funcionalidades, etc. He creado y mantenido productos en producción tanto de escritorio, como aplicaciones móviles y web desde hace 8 años.</li>
+          <li>GPS: conozco los detalles del trabajo con este sistema, protocolos, qué tipos de errores hay, sistemas con alta precisión, cómo tratar los datos, proyecciones, herramientas, etc. Llevo 8 años pegándome con ellos en Agroguía.</li>
+          <li>Mapas web: Mi día a día desde hace 1 año y medio es trabajar con ellos.</li>
+        </ul>
+        <p>
+        -->
+        </div>
+
+          
+
+      </div>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-165269-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    </body>
+
+</html>
+

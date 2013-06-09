@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html, body {
+        margin: 0; padding: 0; border: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      .layer {
+        position: absolute;
+      }
+      .entity {
+        position: absolute;
+      }
+
+    </style>
+  </head>
+
+
+  <!-- -->
+  <body>
+    <div id="c" class="layer">
+    </div>
+  </body>
+
+
+  <!-- logic -->
+  <script>
+    function Layer(id) {
+      var el = document.getElementById(id);
+      el.style['height'] = '100%';
+      this.el = el;
+
+      this.add = function(ent) {
+        this.el.appendChild(ent.el);
+      }
+    }
+
+    function Entity(x, y, w, h) {
+      this.el = document.createElement('div');
+      this.x = x;
+      this.y = y;
+      this.w = w;
+      this.h = h;
+      this.el.setAttribute('class', 'entity');
+
+      this.set_pos = function(x, y) {
+        var el = this.el;
+        el.style['-webkit-transform'] = 'translate(' + x + 'px,' + y + 'px) translateZ(0)';
+      }
+      this.set_size = function(w, h) {
+        var el = this.el;
+        el.style['width'] = w + "px";
+        el.style['height'] = h + "px";
+      }
+
+      this.set_pos(x, y);
+      this.set_size(w, h);
+      this.set_background = function(color, hardness) {
+        var percent = 1 + hardness*60;
+        var st =  "-webkit-radial-gradient(center, ellipse cover, " + color + " 0%, " + color + " " + percent + "%, rgba(255,255,255,0) 63%, rgba(255,255,255,0) 64%)";
+        this.el.style.background = st;
+      }
+    }
+
+    var layer = new Layer('c');
+    for (var i = 0; i < 500; ++i) {
+      var size = 0.1 + Math.random()*0.9;
+      var s = 600*size*size;
+      var s2 = s >> 1;
+      var ent = new Entity(Math.random()*window.innerWidth - s2, Math.random()*window.innerHeight - s2, s, s)
+      var color = 'rgba(138,241,248,1)';
+      if (size > 0.3) {
+        color = 'rgba(178, 196, 226, 1)';
+      }
+      ent.el.style['z-index'] = size < 0.3? 2: 1;
+      ent.set_background(color, size < 0.3? 1: 0.2);
+      layer.add(ent);
+    }
+
+  </script>
+
+</html>

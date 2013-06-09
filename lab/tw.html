@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>The timeline</title>
+        <style>
+            html, body {
+                height: 100%; 
+                overflow:hidden;
+                background-color: #CCC;
+                background-image: url(exclusive_paper.png);
+            }
+            #tw {
+                /*background-color: white;*/
+                color: #111;
+                font-family: Georgia;
+                height: 90%; 
+                width: 100%; 
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                margin: 0 auto;
+                font-size: 4em;
+                letter-spacing: -0.02em;
+                text-shadow: #FFF 0px 2px 0px;
+            }
+            ul {
+                margin: 0 auto;
+                width: 90%;
+                padding: 0;
+                height: 100%;
+                top: 15%;
+            }
+            li{
+                padding: 0.5em;
+                display: block;
+            }
+            /*li span {
+                font-size: 3.5em;
+                float: left;
+                line-height: 0.9em;
+                margin-right: 0.2em;
+                text-transform: capitalize;
+            }*/
+            span.user {
+                color:#06c;
+            }
+            span.url {
+                color: #888;
+            }
+            p {
+                font-size: 70%;
+                color: #AAA;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="tw"></div>
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+    <script>
+        function colorize(t) {
+            var spaner = function(kw) {
+                return function(u) { return '<span class="'+kw+'">' + u +'</span>' }
+            }
+            return t.replace(/(@[\w+-_]+)/g, spaner('user'))
+            .replace(/(http:\/\/[\w\/\.-_]+)/g, spaner('url'))
+        }
+
+        var path = location.hash.slice(1)
+        if(path.length == 0){
+            location.hash = "@mort"
+            location.reload();
+        }
+        var url = null;
+        if(path[0] == '@') {
+            url =  'http://twitter.com/status/user_timeline/' + path.slice(1) +'.json?count=10'
+        } else {
+            url =  'http://search.twitter.com/search.json?q=' + path +'&count=10'
+        }
+
+        var up = function(){
+            $.getJSON(url + '&callback=?', function(tweets) {
+                var ul = $("<ul></ul>");
+                tweets = tweets.results || tweets;
+                for(var t in tweets) {
+                    var tweet = tweets[t];
+                    var text = tweet.text;
+                    if (text[0] != '@') {
+                        var text = colorize(text);
+                        var name = tweet.from_user || tweet.user.name
+                        var tw = $("<li></li>").append(text).append($('<p>').append('&ndash;@'+name));
+                        ul.append(tw);
+                    }
+                }
+                $('#tw').html(ul);
+                $('ul').cycle({slideshowfx: 'fade', timeout:8000});
+            });
+        }
+        up();
+        setInterval(up, 120*1000);
+    </script>
+</html>

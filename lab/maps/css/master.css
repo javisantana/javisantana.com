@@ -1,0 +1,70 @@
+
+
+html, body {
+    font-family: Helvetica;
+    height: 100%;
+}
+
+a {
+    color:#06c;
+}
+
+#onmap h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: Georgia;
+    border-bottom: 1px dotted #333;
+}
+.outer {
+    margin: 0 auto;
+    width: 924px;
+}
+
+#map_canvas {
+    height: 440px;
+}
+
+#onmap {
+    background-image: url('bkg.png');
+    height: 277px;
+    left: 100px;
+    padding: 25px 28px 0;
+    position: absolute;
+    top: 40px;
+    width: 200px;
+}
+
+.counter {
+    margin-top: 15px;
+}
+.counter .val {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.counter .unit {
+    margin-left: 10px;
+    color: #555;
+}
+
+#wtf {
+    width: 500px;
+    margin-top: 30px;
+    background-color: #EEE;
+    padding:  0 20px 20px 20px;
+}
+#wtf h2 {
+    font-size: 38px;
+    line-height: 2em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+#wtf p {
+    line-height: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+    
+}

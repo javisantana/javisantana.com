@@ -1,0 +1,25 @@
+
+#header {
+  padding-top: 30px;
+}
+.headline {
+  color:#CC0000;
+  font-family:Georgia,serif;
+  font-size:1.2em;
+}
+
+.title {
+  font-family:helvetica,arial,sans-serif;
+  letter-spacing: -7px;
+  font-weight: bold;
+  font-size: 7em;
+}
+
+.title span {
+  color: #CCCCCC;
+}
+
+.headline2 {
+  font-size: 1.8em;
+  color: black;
+}

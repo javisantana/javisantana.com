@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          body {
+            position: relative;
+            width: 1000px;
+            margin: 60px auto;
+            background-color: #6B8586;
+            background-color: #FFF;
+          }
+        canvas {
+            /*width:100%;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #toolbar { position: absolute; top:30px; left:30px; }
+        #toolbar a {
+          background-color: #AAA;
+          color: white;
+          font: bold 13px "Helvetica";
+          text-transform: uppercase;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        #toolbar a:hover {
+          background-color: #777;
+
+        }
+        </style>
+    </head>
+
+    <body>
+      <canvas id="c"></canvas>
+      <canvas id="editor"></canvas>
+      <div id="toolbar">
+        <a id="play" href="#">play</a>
+        <a id="save" href="#">save</a>
+        <a id="wheel" href="#">wheel</a>
+        <a id="motor" href="#">motor</a>
+        <a id="spring" href="#">sprint</a>
+      </div>
+
+    </body>
+
+    <script src="vec2.js"> </script>
+    <script src="particle.js"> </script>
+    <script src="editor.js"> </script>
+    <script>
+        var SX = 1000;
+        var SY = 500;
+        var i, j;
+        /*var canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);*/
+        var canvas = document.getElementById('c');
+        canvas.width = SX;
+        canvas.height = SY;
+        var ctx = canvas.getContext('2d');
+        //ctx.fillRect(0, 0, 500, 500);
+        var ed_canvas = $('editor');
+        ed_canvas.width = SX;
+        ed_canvas.height = SY;
+        var part = new ParticleSystem();
+
+        if(location.hash) {
+          //part = ParticleSystem.from_json(atob(location.hash.slice(1)))
+          part = ParticleSystem.from_json(location.hash.slice(1));
+        } 
+        
+        var editor = new Editor(canvas, ed_canvas, part);
+        if(!location.hash){
+          editor.startTutorial();
+        }
+
+        function draw_ground_line(c) {
+            c.beginPath();
+            c.strokeStyle = '#EEE';
+            c.lineWidth = 1;
+            c.moveTo(-SX, 89);
+            c.lineTo(SX, 89);
+            c.stroke();
+        }
+        setInterval(function() {
+            canvas.width = canvas.width;
+            ctx.translate(canvas.width/2, canvas.height/2);
+            if(editor.test_instance) {
+              editor.test_instance.tick(0.05);
+              editor.test_instance.render4(ctx);
+              //part.tick(0.05)
+            } else {
+              part.render4(ctx);
+              editor.update(0.05);
+              editor.render();
+            }
+            draw_ground_line(ctx);
+        }, 20);
+    </script>
+</html>

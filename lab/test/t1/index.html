@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>three.js webgl - geometries</title>
+        <meta charset="utf-8">
+        <link href="js/GUI/gui.css" media="screen" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            body {
+                font-family: Monospace;
+                background-color: #FFF;
+                margin: 0px;
+                overflow: hidden;
+            }
+            #log { color:#fff; position:absolute; top:50px; text-align:left; display:block; z-index:100; pointer-events:none; }
+        </style>
+    </head>
+    <body>
+
+        <pre id="log"></pre>
+
+        <script type="text/javascript" src="js/Three.js"></script>
+
+        <script type="text/javascript" src="js/Detector.js"></script>
+        <script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
+        <script type="text/javascript" src="js/Stats.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/GUI/DAT.GUI.js"></script>
+
+        <script type="text/javascript">
+
+            pi = Math.PI;
+            var vec3 = THREE.Vector3;
+            var max = Math.max;
+            var min = Math.min;
+
+            THREE.Vector3.prototype.madd = function(scalar, v) {
+                return this.addSelf(v.clone().multiplyScalar(scalar));
+            }
+
+            function clamp(v, a, b) {
+                return min(b, max(a, v));
+            }
+            function smoothstep(edge0, edge1, x)
+            {
+                // Scale, and clamp x to 0..1 range
+                x = clamp((x - edge0)/(edge1 - edge0), 0, 1);
+                // Evaluate polynomial
+                return x*x*x*(x*(x*6 - 15) + 10);
+            }
+
+            function Particle(scene) {
+                this.objects = [];
+                this.scene = scene;
+            }
+
+            Particle.prototype.create = function(pos, vel, scale, rot, rotd) {
+                var material = new THREE.MeshLambertMaterial({color: 0x333333});
+                var object = new THREE.Mesh( new THREE.CubeGeometry( 10, 10, 10, 4, 4, 4 ), material );
+                object.position.x = pos.x;
+                object.position.y = pos.y;
+                object.position.z = pos.z;
+                object.vel = vel;
+                object.scale = scale;
+                object.rotation = rot;
+                object.rotd =rotd;
+                material.color.setHSV( Math.random(), 0.3, 0.1 );
+                this.scene.add( object );
+                this.objects.push(object);
+                return object;
+            }
+
+            Particle.prototype.update = function(dt) {
+                var self = this;
+                for(var i=0; i< this.objects.length; ++i) {
+                   var o = self.objects[i];
+                   var mat = o.material;
+                   var v = o.vel.clone();
+                   o.position.addSelf(v.multiplyScalar(dt));
+                   //o.vel = v.add(o.vel, v.multiplyScalar(-1.0));
+                   o.rotation.addScalar(o.rotd*dt);
+                   //o.rotd += (-o.rotd)*dt;
+                   var l = o.position.length();
+                }
+            }
+            function linear(a, b, t) {
+                return a + t*(b-a);
+            }
+            function rlinear(a, b) { return linear(a, b, Math.random()); }
+            function rvector(i, o) {
+                    return new THREE.Vector3(
+                        rlinear(i, o),
+                        rlinear(i, o), 
+                        rlinear(i, o));
+            }
+            Particle.prototype.test = function() {
+                var M = 100;
+                var SI = 0.2;
+                var SF = 0.6;
+                var PI = 1.0;
+                var PF = 4.0;
+                var VI = -80.0;
+                var VF = 80.0;
+                for (var i=0; i < 30; ++i) {
+                    this.create(rvector(PI, PF),
+                        rvector(VI, VF),
+                        rvector(SI, SF),
+                        rvector(0.0, 10.0),
+                        linear(0.6, 0.8, Math.random()));
+                }
+            }
+
+
+            var cos = Math.cos;
+            var sin = Math.sin;
+            function line_pos(t) {
+                var R = 50;
+                var freq = 2*Math.PI/4;
+                var f = t*freq;
+                var a = new THREE.Vector3(R*cos(f), R*sin(f), 10*sin(5*t));//10*cos(f*10));
+                //var b = new THREE.Vector3(R*0.1*cos(5*f), R*0.1*sin(5*f), 0);
+                return a;
+                //return a.addSelf(b);
+            }
+
+            Particle.prototype.line= function() {
+                var M = 100;
+                var SI = 0.3;
+                var SF = 0.3;
+                var PI = 1.0;
+                var PF = 4.0;
+                var VI = -80.0;
+                var VF = 80.0;
+                for (var i=0; i < 50; ++i) {
+                  for (var j=0; j < 10; ++j) {
+                    var pos_offset = rvector(10, 25);
+                    var o = this.create(
+                          line_pos(i/35).addSelf(pos_offset),
+                          rvector(0, 0),
+                          rvector(SI, SF),
+                          rvector(0.0, 10.0),
+                          linear(0.05, 0.1, Math.random()));
+                    o.time_offset = i/15;
+                    o.pos_offset = pos_offset;
+                  }
+
+                }
+            }
+
+            Particle.prototype.update = function(time) {
+                var self = this;
+                for(var i=0; i< this.objects.length; ++i) {
+                   var o = self.objects[i];
+                   var mat = o.material;
+                   var v = o.vel.clone();
+                   var dpos = line_pos(time - o.time_offset).addSelf(line_pos(time - o.time_offset- 0.05).multiplyScalar(-1))
+                   o.position = line_pos(time - o.time_offset).addSelf(o.pos_offset);
+                   //o.vel = v.add(o.vel, v.multiplyScalar(-1.0));
+                   //o.rotation.addScalar(o.rotd*time*0.1);
+                   o.rotation.x = 0;//dpos.y*time*10;//Math.abs(dpos.y*time*100);
+                   o.rotation.y = o.rotd*time*100;//Math.abs(dpos.x*time*10);
+                   o.rotation.z = Math.atan2(dpos.y, dpos.x);
+                   o.eulerOrder = 'ZXY';
+                   //o.rotd += (-o.rotd)*dt;
+                   var l = o.position.length();
+                }
+            }
+
+            if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+            var container, stats;
+
+            var camera, scene, renderer;
+
+            var objects = [];
+            var time = 0;
+
+            init();
+            animate();
+
+
+            function init() {
+
+                container = document.createElement('div');
+                document.body.appendChild(container);
+
+                camera = new THREE.Camera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+                
+                camera.position.x = 0;
+                camera.position.y = 200;
+                camera.position.z = 100;
+
+                scene = new THREE.Scene();
+                //scene.fog = new THREE.FogExp2( 0xffffff, 0.003 );
+
+                var light, object, material;
+
+                //scene.addLight( new THREE.AmbientLight( 0xFFFFFF) );
+
+                light = new THREE.DirectionalLight( 0xffffff, 2.0 );
+                light.position.z = 1;
+                //scene.addLight( light );
+
+                //var material = new THREE.MeshBasicMaterial( { color: 0x333, wireframe: true, opacity: 0.1 } )
+
+                renderer = new THREE.WebGLRenderer();
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                var parameters = { color: 0xffffff }
+                material_base = new THREE.MeshLambertMaterial( parameters );
+                //renderer.initMaterial( material_base);
+
+                container.appendChild( renderer.domElement );
+
+                stats = new Stats();
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.top = '0px';
+                container.appendChild( stats.domElement );
+    
+                particles = new Particle(scene);
+                particles.line();
+                //initPostprocessing();
+                renderer.autoClear = false;
+
+
+                //var gui = new DAT.GUI();
+                //gui.add(postprocessing, 'opacity').min(0).max(10);
+
+            }
+
+            //
+
+            function animate() {
+
+                requestAnimationFrame( animate );
+
+                var d = 1.0;
+                if (time > 0.5) {
+                    d = 0.1
+                }
+                var d = 1.0 - smoothstep(0.8, 1.2, time) + 0.1;
+                particles.update(time*0.1);
+                render();
+                stats.update();
+                time += 0.1;
+
+            }
+
+            function render() {
+
+                var timer = new Date().getTime() * 0.001;
+
+                //camera.position.x = Math.cos( timer ) * 800;
+                //camera.position.z = Math.sin( timer ) * 800;
+
+                //renderer.clear();
+
+                if (false && postprocessing.enabled ) {
+
+                    // Render scene into texture
+
+                    renderer.render( scene, camera, postprocessing.rtTexture1, true );
+                    
+                    //TEST
+
+                    /*
+                    postprocessing.quad.materials = [ postprocessing.materialScreen ];
+                    postprocessing.materialScreen.uniforms.opacity.value = postprocessing.opacity;
+                    postprocessing.materialScreen.uniforms.tDiffuse.texture = postprocessing.rtTexture1;
+                    renderer.render( postprocessing.scene, postprocessing.camera );
+                    */
+                    //TEST
+
+
+
+                    // Render quad with blured scene into texture (convolution pass 1)
+                    postprocessing.quad.materials = [ postprocessing.materialConvolution ];
+
+                    postprocessing.materialConvolution.uniforms.tDiffuse.texture = postprocessing.rtTexture1;
+                    postprocessing.materialConvolution.uniforms.uImageIncrement.value = postprocessing.blurx;
+
+                    renderer.render( postprocessing.scene, postprocessing.camera, postprocessing.rtTexture2, true );
+
+                    // Render quad with blured scene into texture (convolution pass 2)
+
+                    postprocessing.materialConvolution.uniforms.tDiffuse.texture = postprocessing.rtTexture2;
+                    postprocessing.materialConvolution.uniforms.uImageIncrement.value = postprocessing.blury;
+
+                    renderer.render( postprocessing.scene, postprocessing.camera, postprocessing.rtTexture3, true );
+
+                    // Render original scene with superimposed blur to texture
+
+                    postprocessing.quad.materials = [ postprocessing.materialScreen ];
+
+                    postprocessing.materialScreen.uniforms.tDiffuse.texture = postprocessing.rtTexture3;
+                    postprocessing.materialScreen.uniforms.opacity.value = postprocessing.opacity;
+
+                    //renderer.render( postprocessing.scene, postprocessing.camera, postprocessing.rtTexture1, false );
+
+                    renderer.setClearColorHex(0xFFFFFF);
+                    renderer.clear();
+                    renderer.render( scene, camera );
+                    renderer.render( postprocessing.scene, postprocessing.camera );
+                    renderer.setClearColorHex(0x0);
+                    // Render to screen
+
+                    //postprocessing.materialScreen.uniforms.tDiffuse.texture = postprocessing.rtTexture1;
+                    //renderer.render( postprocessing.scene, postprocessing.camera );
+
+                } else {
+
+                    renderer.render( scene, camera );
+
+                }
+
+
+            }
+
+        </script>
+
+    </body>
+</html>

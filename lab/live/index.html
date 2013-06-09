@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <title>G</title>
+        <meta charset="utf-8" />
+        <style>
+          #livecode {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 450px;
+            padding-left: 10px;
+            box-shadow: 0px 0px 5px 6px #ccc;
+          }
+          #canvas_wrapper {
+            position: absolute;
+            left: 450px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+          }
+          #cw {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+          }
+          #c {
+            position: relative;
+            margin-top: -300px;
+            margin-left: -300px;
+            box-shadow: 0px 0px 5px 6px #ccc;
+          }
+          textarea {
+            color: rgba(0,0,0,0.1);
+            background-color:transparent;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-family: monospace;
+font-size: 19px;
+            width: 450px;
+            border: 0;
+            outline: none;
+
+          }
+          /* code */
+          .highlight {
+            font-family: monospace;
+            font-size: 19px;
+          }
+          span.keyword              { font-weight: bold }
+          span.string, span.regexp { color: green }
+          span.class, span.special { color: blue }
+          span.number               { color: pink }
+          span.comment              { color: grey }
+        </style>
+    </head>
+    <body>
+        <div id="livecode" class="highlight">
+        </div>
+        <textarea id="code">
+//ey, try to edit the code
+var x = 300;
+var y = 100;
+var vel = 0;
+var dt = .2;
+var K = 0.5; // <= change this to 0.2
+loop = function() {
+   ctx.clearRect(0, 0, 600, 600);
+   ctx.fillRect(x, y, 20, 20);
+   y += vel*dt;
+   vel += 9.8*dt;
+   if(y >= 580) vel = -vel*K;
+}
+ 
+        </textarea>
+
+        <div id="canvas_wrapper">
+          <div id="cw">
+            <canvas id="c"></canvas>
+          </div>
+        </div>
+
+        <script type="text/javascript" src="dat.gui.min.js"></script>
+        <script src="hijs.js"></script>
+
+        <script>
+          var codeText = document.getElementById('code');
+          var livecode = document.getElementById('livecode');
+          var previous = '';
+          setInterval(function() {
+             var changed = false;
+              try {
+                if(previous != codeText.value) {
+                  eval(codeText.value);
+                  previous = new String(codeText.value);
+                  changed = true;
+                }
+              } catch(e) {
+                console.log(e.message);
+              }
+              /*if(changed)
+                add_new_vars();*/
+              livecode.innerHTML = codeText.value
+                      .replace(/\n/g, '<br/>')
+                      .replace(/\ /g, '&nbsp');
+              highlight('.highlight');
+              
+          }, 100);
+          var gui = new dat.GUI();
+          function add_new_vars() {
+            gui.destroy();
+            gui = new dat.GUI();
+             window.test = 0;
+              gui.add(window, 'test');
+             for(x in window) {
+                if(window.hasOwnProperty(x)) {
+                  var v = window[x];
+                  if(!isNaN(parseFloat(v))){
+                    gui.add(window, x);
+                  }
+                }
+             }
+          }
+          canvas = document.getElementById('c');
+          ctx = canvas.getContext('2d');
+          canvas.width = 600;
+          canvas.height = 600;
+          setInterval(function() {
+            window.loop && window.loop();
+          }, 30);
+
+        </script>
+    </body>
+</html>
+

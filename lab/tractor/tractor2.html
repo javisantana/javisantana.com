@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        canvas {
+            /*width:100%;*/
+            border: 1px solid #CCC;
+        }
+        #toolbar { position: absolute; top:30px; left:30px; }
+        #toolbar a {
+          background-color: #AAA;
+          color: white;
+          font: bold 13px "Helvetica";
+          text-transform: uppercase;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        #toolbar a:hover {
+          background-color: #777;
+
+        }
+        </style>
+    </head>
+
+    <body>
+      <canvas id="c"></canvas>
+    </body>
+
+    <script src="vec2.js"> </script>
+    <script src="particle.js"> </script>
+    <script src="editor.js"> </script>
+    <script src="controller.js"> </script>
+    <script>
+        var SX = 1000;
+        var SY = 500;
+        var i, j;
+        /*var canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);*/
+        var canvas = document.getElementById('c');
+        canvas.width = SX;
+        canvas.height = SY;
+        var ctx = canvas.getContext('2d');
+        ctx.fillRect(0, 0, 500, 500);
+
+        var controller = new Controller();
+        local_controller(controller);
+
+        function point(ctx, v,  radius) {
+            var x = v.x;
+            var y = v.y;
+            radius = radius || 2;
+            ctx.save();
+            ctx.translate(x-radius, y - radius);
+            ctx.beginPath();
+            ctx.arc(radius, radius, radius, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function line(ctx, x1, x2) {
+           ctx.beginPath();
+           ctx.moveTo(x1.x, x1.y);
+           ctx.lineTo(x2.x, x2.y);
+           ctx.stroke();
+           ctx.strokeStyle= "#000";
+        }
+        function sign(v) {
+          return v > 0?1:-1;
+
+        }
+
+        function PositionGenerator() {
+          var vel = 0;
+          var dt = 0;
+          var angle = 1.5;
+          var old_gps_pos = vec2(0, 0);
+          var gps_angle = 0;
+          var last_time = new Date().getTime()
+          var length = 75;
+          var axis_pos; //axis pos
+          var gps_pos = vec2(0, 0);
+
+          this.history_axis_pos = [];
+
+          this.new_pos = function(new_gps_pos, vel, gps_angle, dt) {j
+            mu = 1;
+            if(vel < 0) {
+              mu = -1;
+              //vel = -vel;
+              //gps_angle = -gps_angle;
+              vel = -vel;
+            }
+
+            angle += dt*vel*Math.sin(mu*(gps_angle - angle))/length;
+
+            var v = vec2(Math.cos(angle), Math.sin(angle));
+            v = mul(-length, v);
+            axis_pos = add(v, new_gps_pos);
+            console.log(v.x, v.y);
+            this.history_axis_pos.push(axis_pos.clone());
+
+
+            //var diff = sub(new_gps_pos, old_gps_pos);
+
+            //vel = diff.length()/dt;
+            //console.log(diff.length());
+            //console.log(vel);
+            //gps_angle = Math.atan2(diff.y, diff.x);
+            //console.log(gps_angle*180.0*Math.PI);
+            /*var ang = gps_angle;// + angle;
+            gps_pos.x += dt*vel*Math.cos(ang);
+            gps_pos.y += dt*vel*Math.sin(ang);
+            angle += dt*vel*Math.sin(gps_angle - angle)/length;
+
+            var v = vec2(Math.cos(angle), Math.sin(angle));
+            v = mul(-length, v);
+            axis_pos = add(v, gps_pos);
+            //old_gps_pos = gps_pos.clone();
+
+            this.history_axis_pos.push(axis_pos.clone());
+            */
+            //this.history_axis_pos.push(gps_pos.clone());
+          }
+        }
+
+        function Tractor(pos) {
+          this.pos_generator = new PositionGenerator();
+          this.angle = 0;
+          this.steer_angle = 0.0;
+          this.pos = pos ||vec2(0, 0);
+          this.length = 75;
+          this.vel = 0;
+          this.target_vel = 0;
+          this.coupling_pos = vec2(0, 0);
+          this.coupling_vel = vec2(0, 0);
+
+          //render
+          this.toplayer = new Image();
+          this.toplayer.src = "tractor.png";
+
+          this.front_wheel= new Image();
+          this.front_wheel.src = "front_wheel.png";
+
+          this.front_wheel_2= new Image();
+          this.front_wheel_2.src = "front_wheel_2.png";
+
+          this.front_wheel_index = 0;
+
+          this.history_pos = [];
+          this.history_pos_gps = [];
+          this.history_pos_front = [];
+        }
+
+        Tractor.prototype.update_coupled = function(other, dt) {
+          var dir = sub(other.coupling_pos, this.pos);
+          var d = normalize(dir);
+          this.pos = add(other.coupling_pos, mul(-70, d));
+          var angle = Math.atan2(dir.y, dir.x);
+          this.steer_angle = angle - this.angle;
+          this.vel = other.coupling_vel;
+          var ang = this.steer_angle + this.angle;
+          /*this.pos.x += dt*this.vel*Math.cos(ang);
+          this.pos.y += dt*this.vel*Math.sin(ang);
+          */
+          this.angle += dt*this.vel*Math.sin(this.steer_angle)/this.length;
+
+        }
+
+        // given gps pos estimate the tractor pos
+        Tractor.stimeate_position = function(gps_pos) {
+
+        }
+
+        /*
+
+          this.angle += dt*this.vel*Math.sin(this.steer_angle)/this.length;
+
+
+        */
+        Tractor.prototype.update = function(dt) {
+          this.vel += (this.target_vel - this.vel)*dt;
+          var ang = this.steer_angle + this.angle;
+          this.pos.x += dt*this.vel*Math.cos(ang);
+          this.pos.y += dt*this.vel*Math.sin(ang);
+          this.angle += dt*this.vel*Math.sin(this.steer_angle)/this.length;
+
+          var v = vec2(Math.cos(this.angle), Math.sin(this.angle));
+          var vv = v.clone();
+          var normal = vec2(v.y, -v.x);
+          v = mul(-this.length, v);
+          v = add(v, this.pos);
+          this.axis_pos = v;
+
+          var gps_pos =  mul(-this.length*.6, vv);
+          this.gps_pos = add(gps_pos, this.pos);
+
+          this.history_pos.push(this.axis_pos);
+          this.history_pos_gps.push(this.gps_pos);
+          this.history_pos_front.push(this.pos.clone());
+
+          //this.pos_generator.new_pos(this.gps_pos, this.vel, this.angle, dt);
+          this.pos_generator.new_pos(this.pos, this.vel, this.angle + this.steer_angle, dt);
+
+          var c = this.get_axis_pos(30);
+          this.coupling_vel = sign(this.vel)*sub(c, this.coupling_pos).length()/dt;
+          this.coupling_pos = c;
+
+
+        }
+
+        Tractor.prototype.get_axis_pos = function(plus) {
+          plus = plus===undefined? 0:plus;
+          var v = vec2(Math.cos(this.angle), Math.sin(this.angle));
+          var normal = vec2(v.y, -v.x);
+          v = mul(-this.length - plus, v);
+          v = add(v, this.pos);
+          return v;
+        }
+
+        Tractor.prototype.acel= function(vel) { 
+          this.target_vel = vel;
+        }
+
+        Tractor.prototype.turn= function(dangle) { 
+          this.steer_angle += dangle;
+          this.steer_angle = Math.min(0.25*Math.PI, this.steer_angle)
+          this.steer_angle = Math.max(-0.25*Math.PI, this.steer_angle)
+        }
+
+        Tractor.prototype.render = function(ctx) {
+          var self = this;
+          var v = vec2(Math.cos(this.angle), Math.sin(this.angle));
+          var normal = vec2(v.y, -v.x);
+
+
+          ctx.save();
+          ctx.translate(this.axis_pos.x, this.axis_pos.y);
+          ctx.rotate(this.angle + Math.PI*0.5);
+          ctx.translate(-50, -90);
+          ctx.drawImage(this.toplayer, 0, 0, 100, 120);
+          ctx.restore();
+
+          point(ctx, this.gps_pos);
+          point(ctx, this.axis_pos);
+          line(ctx, this.axis_pos, this.pos);
+
+
+          //wheel
+          var ang = this.steer_angle + this.angle;
+          var v = vec2(Math.cos(ang), Math.sin(ang));
+          line(ctx, add(this.pos, mul(10, v)), this.pos);
+          line(ctx, add(this.pos, mul(-10, v)), this.pos);
+
+          function draw_wheel(p) {
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(ang + Math.PI*0.5);
+            ctx.translate(-5, -15);
+            var i = self.front_wheel_index%2?self.front_wheel_2:self.front_wheel;
+            ctx.drawImage(i, 0, 0, 10, 30);
+            ctx.restore();
+            //console.log(self.front_wheel_index);
+          }
+          draw_wheel(add(mul(25, normal), this.pos));
+          draw_wheel(add(mul(-30, normal), this.pos));
+          self.front_wheel_index++;
+
+        }
+
+
+
+        //var editor = new Editor(canvas, part);
+
+        function draw_ground_line(c) {
+            c.beginPath();
+            c.moveTo(-SX, 0);
+            c.lineTo(SX, 0);
+            c.stroke();
+        }
+
+        var tractor = new Tractor();
+        var tractor2 = new Tractor(vec2(-200, 0));
+
+        var gps_points = [];
+
+        setInterval(function() {
+            canvas.width = canvas.width;
+            ctx.translate(canvas.width/2, canvas.height/2);
+            /*if(editor.test_instance) {
+              editor.test_instance.tick(0.05);
+              editor.test_instance.render(ctx);
+           } else {
+            part.render(ctx);
+            }*/
+            if(controller.controls.up) {
+              tractor.acel(40);
+            } else if (controller.controls.down){
+              tractor.acel(-20);
+            } else {
+              tractor.acel(0);
+            }
+            if(controller.controls.left) {
+              tractor.turn(-0.04);
+            } else if(controller.controls.right)  {
+              tractor.turn(0.04)
+            } else {
+              tractor.turn(0);
+            }
+            this.tractor.update(0.05)
+            //this.tractor2.update_coupled(this.tractor,0.05)
+            this.tractor.render(ctx);
+            ctx.strokeStyle = "#000";
+            render_line(ctx, this.tractor.history_pos);
+            ctx.strokeStyle = "#500";
+            render_line(ctx, this.tractor.history_pos_gps);
+            ctx.strokeStyle = "#050";
+            render_line(ctx, this.tractor.history_pos_front);
+
+            ctx.strokeStyle = "#055";
+            render_line(ctx, this.tractor.pos_generator.history_axis_pos);
+            //this.tractor2.render(ctx);
+            //line(ctx, this.tractor2.pos, this.tractor.coupling_pos);
+        }, 20);
+
+        function render_line(ctx, line) {
+            if(line.length <= 1) return;
+            ctx.beginPath();
+            ctx.moveTo(line[0].x, line[0].y);
+            for(var i = 1; i < line.length; ++i) {
+               ctx.lineTo(line[i].x, line[i].y);
+            }
+            ctx.stroke();
+        }
+
+    </script>
+</html>

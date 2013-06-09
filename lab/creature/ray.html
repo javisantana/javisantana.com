@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        canvas {
+            /*width:100%;*/
+        }
+        </style>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+        var max = Math.max;
+        var min = Math.min;
+        var cos = Math.cos;
+        var sin = Math.sin;
+        var pi = Math.PI;
+        function color(r,g,b,a) {
+        }
+        // vec3
+        function vec3(x, y, z) {
+            return new _vec3(x, y, z);
+        }
+        function _vec3(x, y, z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.length = function() {
+                return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
+            }
+        }
+        var add = function(v1, v2) {
+            return vec3(v1.x+v2.x, v1.y+v2.y, v1.z+v2.z);
+        }
+        var sub = function(v1, v2) {
+            return vec3(v1.x-v2.x, v1.y-v2.y, v1.z-v2.z);
+        }
+        var mul = function(s, v1) {
+            return vec3(s*v1.x, s*v1.y, s*v1.z);
+        }
+        var dot = function(v1, v2) {
+            return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;
+        }
+        var normalize = function(v1) {
+            var m = v1.length();
+            return vec3(v1.x/m, v1.y/m, v1.z/m);
+        }
+        function vfn(v, fn) {
+            return vec3(fn(v.x), fn(v.y), fn(v.z)) }
+
+        function box(p, s) {
+            var p0 = vfn(p, Math.abs);
+            var dv = sub(p0, vec3(s, s, s));
+            dv = vec3(max(dv.x, 0), max(dv.y, 0), max(dv.z, 0))
+            return dv.length();
+        }
+        var rotx = function(p, ang) {
+            var c = cos(ang);
+            var s = sin(ang);
+            return vec3(p.x ,p.y*c - p.z*s, p.z*c + p.y*s)
+        }
+        //scene
+        function dist(p) {
+            //return Math.abs(p.length() - 1.0);
+            var ang = 0.3*pi;
+            var c = cos(ang)
+            var s = sin(ang)
+            //var v = vec3(p.x*c - p.y*s,p.y*c + p.x*s, p.z)
+            var v = rotx(p, 0.25*pi);
+            var b1 = box(v, 1.0);
+            v = sub(p, vec3(2, 2, -2));
+            var b2 = box(v, 1.0);
+            return min(b1, b2);
+        }
+        function normal(p) {
+            var E = 0.000001;
+            var dx = vec3(E, 0, 0);
+            var dy = vec3(0, E, 0);
+            var dz = vec3(0, 0, E);
+            var dx = dist(add(p, dx)) - dist(sub(p, dx));
+            var dy = dist(add(p, dy)) - dist(sub(p, dy));
+            var dz = dist(add(p, dz)) - dist(sub(p, dz));
+            return vec3(dx, dy, dz);
+        }
+        function map(ro, rd) {
+            var d = 0;
+            for(var i=0; i<9; ++i) {
+                var p = add(ro, mul(d, rd));
+                var dst = dist(p);
+                d += dst;
+                if(dst < 0.05) {
+                    return d;
+                }
+            }
+            return -1;
+        }
+        var BKG_COLOR = [51, 153, 153, 255];
+        function shader(u, v) {
+            var u = -1.0 + 2*u;
+            var v = -1.0 + 2*v;
+            var ro = vec3(0, 0, 3);
+            var rd = normalize(vec3(u*2.6,v, -1));
+            var t = map(ro, rd);
+            var col = [0, 0, 0, 255];
+            if(t > 0 ) {
+                var p = add(ro, mul(t, rd));
+                var nor = normalize(normal(p));
+                var dif = max(0.0, dot(nor, normalize(vec3(-1.0, 1.0, 1.0))));
+                col = [255*dif, 255*dif, 255*dif, 255];
+            } else {
+                col = BKG_COLOR;
+
+            }
+            return col;
+        }
+    </script>
+    <script>
+        var SX = 800;
+        var SY = 300;
+        var i, j;
+        var canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+        canvas.width = SX;
+        canvas.height = SY;
+        var ctx = canvas.getContext('2d');
+        ctx.fillRect(0, 0, 500, 500);
+        var pixels = ctx.getImageData(0,0,SX,SY);
+        //var t = map(vec3(0,0,3), vec3(0,0,-1));
+        for(var i=0;i<SX;++i) {
+            for(var j=0;j<SY; ++j) {
+                var c = shader(i/SX, j/SY);
+                var idx = 4*(j*SX+i);
+                pixels.data[idx+0] = c[0]
+                pixels.data[idx+1] = c[1]
+                pixels.data[idx+2] = c[2]
+                pixels.data[idx+3] = c[3]
+            }
+            ctx.putImageData(pixels, 0, 0);
+        }
+    </script>
+</html>

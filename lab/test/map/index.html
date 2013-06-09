@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>three.js webgl - geometries</title>
+        <meta charset="utf-8">
+        <link href="js/GUI/gui.css" media="screen" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            html {
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                font-family: Monospace;
+                background-color: #FFF;
+                margin: 0px;
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+            #wrap {
+                width: 800px;
+                height: 500px;
+                margin: 0px auto;
+                position: relative;
+            }
+            #map_canvas {
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            #canvas_3d {
+                /*display:none;*/
+                /*background-color: black;*/
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+            #log { color:#fff; position:absolute; top:50px; text-align:left; display:block; z-index:100; pointer-events:none; }
+        </style>
+    </head>
+    <body>
+
+        <pre id="log"></pre>
+
+        <div id="wrap">
+            <div id="map_canvas"></div>
+            <div id="canvas_3d"></div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"> </script>
+        <script type="text/javascript" src="js/Tween.js"></script>
+        <script type="text/javascript" src="js/Three.js"></script>
+        <script type="text/javascript" src="js/Detector.js"></script>
+        <script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
+        <script type="text/javascript" src="js/Stats.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/GUI/DAT.GUI.js"></script>
+        <script type="text/javascript" src="js/proj.js"></script>
+        <script type="text/javascript" src="js/mercator.js"></script>
+        <script type="text/javascript" src="js/procedural.js"></script>
+        <script type="text/javascript" src="js/map_layer_3d.js"></script>
+        <script type="text/javascript" src="js/path.js"></script>
+        <script type="text/javascript" src="js/map_layer_3d.js"></script>
+
+
+        <script>
+
+          $(function() {
+                window.app = new App()
+                window.app.init();
+          });
+
+          function read_gpx(url, ready) {
+            $.get(url, function(xml) {
+                var path = [];
+                gpx = $($.parseXML( xml ));
+                gpx.find("trkpt").each(function(i, e) {
+                    var pos = $(e);
+                    var date_str = pos.find('time')[0].textContent;
+                    var digitpattern = /\d+/g;
+                    m = date_str.match(digitpattern);
+                    var d = new Date(m[0], m[1], m[2], m[3], m[4], m[5]);
+                    path.push({
+                        lat: pos.attr('lat'),
+                        lon: pos.attr('lon'),
+                        timestamp: d.getTime(),
+                        z: parseInt(pos.find('ele')[0].textContent, 10)
+                    });
+                    //path.push(new google.maps.LatLng(ll.attr('lat'), ll.attr('lon')));
+                });
+                ready && ready(path);
+
+            });
+          }
+          function App() {
+
+              var self = this;
+              var map_init = function() {
+                var myOptions = { mapTypeId: google.maps.MapTypeId.HYBRID };
+                self.map = new google.maps.Map(document.getElementById("map_canvas"),
+                    myOptions);
+                self.proj = new Projector(self.map);
+              };
+
+              this.init = function() {
+                var self = this;
+                map_init();
+                this.layer_3d = new Layer3D();
+                var layer_3d = this.layer_3d;
+                //this.layer_3d.hide();
+                read_gpx('1.gpx', function(path) {
+                    var poly = [];
+                    var b = new google.maps.LatLngBounds();
+                    for(var i=0; i < path.length; ++i) {
+                        var ll= new google.maps.LatLng(path[i].lat, path[i].lon);
+                        path[i].ll = ll;
+                        poly.push(ll);
+                        b.extend(ll);
+                    }
+                    self.path= new google.maps.Polyline({path: poly, map: self.map, strokeColor: 'red'});
+
+                    self.map.fitBounds(b);
+                    setTimeout(function() {
+                        var points = [];
+                        for(var i=0; i < path.length; ++i) {
+                            var p =  self.proj.project(path[i].ll);
+                            path[i].x = p.x;
+                            path[i].y = p.y;
+                        }
+                        self.path.setMap(null);
+                        self.layer_3d.init(path);
+                    }, 3000);
+                    
+                });
+              }
+
+          };
+
+
+        </script>
+
+    </body>
+</html>

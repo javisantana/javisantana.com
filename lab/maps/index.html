@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>Farmer work animation</title>
+      <link rel="stylesheet" href="css/reset.css" type="text/css" />
+      <link rel="stylesheet" href="css/master.css" type="text/css" />
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+      <script type="text/javascript">
+       //<![CDATA[
+        
+      function initialize() {
+        var latlng = new google.maps.LatLng(-34.397, 150.644);
+        var myOptions = {
+          zoom: 16,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+        function step(a, t) {
+            if(t < a)
+                return 0;
+            return 1;
+        }
+        function computeDist(points) {
+            return google.maps.geometry.spherical.computeLength(points);
+        }
+
+        var work_time_vis = $("#work_time");
+        var total_time = 0;
+        var work_time = 0;
+        var distance_vis = $('#distance');
+        var distance = 0;
+
+        var efective_distance_vis = $('#efective_distance');
+        var ef_distance = 0;
+
+
+        $.getJSON('linestring.json', function(data) {
+            var line = []
+            for(var i in data) {
+                var ll = data[i];
+                line.push(new google.maps.LatLng(ll[1], ll[0]));
+            }
+            var cx = data[0][1], cy = data[0][0];
+            var N = 40
+            var current = N;
+            var latest = 0;
+            var inter = setInterval(function() {
+                if(current % N == 0) {
+                    var p = line.slice(current - N - 1, current);
+                    var d = computeDist(p);
+                    var vel = d/N;
+                    var r = 80 + step(6, vel)*110;
+                    distance += d;
+                    distance_vis.html((distance/1000).toFixed(2));
+                    total_time++;
+                    if (vel < 6) {
+                        ef_distance+=d;
+                        efective_distance_vis.html((ef_distance/1000).toFixed(2));
+                        work_time++;
+                    }
+                    work_time_vis.html((work_time*100/total_time).toFixed(1))
+                    var linePath = new google.maps.Polyline({
+                        path: p,
+                        strokeColor: "rgb("+(255-r)+",0,0)",
+                        strokeOpacity: 1.0,
+                        strokeWeight: 2
+                    });
+                    linePath.setMap(map);
+                    latest = current;
+                }
+                current+=4;
+                if(current >= line.length) {
+                    clearInterval(inter);
+                }
+                var tox = data[current][1];
+                var toy = data[current][0];
+                cx += (tox - cx)*0.03;
+                cy += (toy - cy)*0.03;
+                map.setCenter(new google.maps.LatLng(cx, cy));
+
+            }, 10);
+
+            
+        });
+      }
+
+
+
+      $(document).ready(function(){
+                initialize();
+      });
+       //]]>
+      </script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=geometry&sensor=false"></script>
+  </head>
+
+  <body>
+        <div id="map_canvas" ></div>
+        <div class="outer">
+            <div id="onmap">
+                <h2>Stats</h2>
+                <div class="counter">
+                    <span class="val" id="distance">0</span><span class="unit">Km</span>
+                    <div class="info">distance</div>
+                </div>
+                <div class="counter">
+                    <span class="val" id="efective_distance">0</span><span class="unit">Km</span>
+                    <div class="info">work distance</div>
+                </div>
+                <div class="counter">
+                    <span class="val" id="work_time">0</span><span class="unit">%</span>
+                    <div class="info">work time</div>
+                </div>
+            </div>
+            <div id="wtf">
+                <h2> What is this?</h2>
+                <p>During our tests with <a href="http://agroguia.es">agroguía</a> (a small guidance GPS system for farmers) we record the track made by farmer in different kind of works. This visualization shows two complete days working with a <a href="http://www.google.es/images?um=1&hl=es&biw=973&bih=745&tbs=isch%3A1&sa=1&q=seed+drill+machine+sunflower&aq=f&aqi=&aql=&oq=">seed drill</a> (sunflower plants), in "La Bureba" zone (north of spain).</p>
+                <p>On the map <span style="color:#A00;">red</span> zones represents effective work, <span style="color:#200;">black</span> zones are displacements between fields.</p>
+            <p>&nbsp;</p>
+            <p> <a href="/">&larr; back</a></p>
+            </div>
+
+        </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    </body>
+</html>

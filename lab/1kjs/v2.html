@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JS1k, 1k demo submission [15]</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+        <script>
+(function () {
+
+    doc = document, body = doc.body,
+    width = innerWidth,
+    height = innerHeight,
+
+    body.style.margin = '0px';
+    body.style.overflow = 'hidden';
+
+    var canvas = doc.body.children[0];
+    canvas.width = width;
+    canvas.height = height;
+
+    var b = canvas.getContext( '2d' );
+
+    sin = Math.sin, cos = Math.cos, pi = Math.PI;
+    
+
+
+    var alpha = 0
+    setInterval( function () {
+        //b.clearRect( 0, 0, width, height );
+        x = 100 + 100*cos(alpha*pi)
+        y = 100 + 100*sin(alpha*pi)
+        b.fillStyle="rgba("+100%255+", "+100%255+", "+100%255+", 0.8)"
+        b.moveTo(x, y)
+        b.lineTo( x + 0, y + 10)
+        b.lineTo( x + 10, y + 10)
+        b.lineTo(x + 10, y +0)
+        b.lineTo( x + 0,  y +0)
+        b.fill();
+        b.stroke()
+
+        alpha += 0.01;
+    }, 16 );
+
+} )();
+        </script>
+    </body>
+</html>
+

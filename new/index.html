@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Javi Santana</title>
+        <style>
+            html, body, ul, li { margin: 0; padding: 0; 
+              background: url(img/bgnoise.gif);
+            }
+            html, body { height: 100%;}
+            #layout {
+                padding-top: 40px;
+                margin:0 auto;
+                width:600px;
+                padding: 0 30px;
+                height: 100%;
+                text-align:center;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+            }
+            .box {
+                text-align: left;
+                margin-top: 30px;
+                border-radius: 5px;
+                background-color: white;
+                -webkit-box-shadow: 0px 0px 10px #DDD;
+                -moz-box-shadow: 0px 0px 10px #222;
+            }
+            .box h1 {
+              font-size: 31px;
+              color: #444;
+              letter-spacing:-1px;
+              font-weight: bold;
+              margin: 0;
+              padding: 0;
+              line-height:1em;
+            }
+            .box img {
+                width: 100%;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            .box .info {
+              padding: 20px;
+            }
+            header  {
+              text-align: left;
+              position: relative;
+            }
+            header h1 {
+              font-size: 251px;
+              color: #444;
+              line-height: 1em;
+              letter-spacing: -13px;
+              margin: 0;
+            }
+            header #grass{
+              position: absolute;
+              bottom: 27px;
+              left: 0;
+            }
+            header h1 span {
+              display: inline-block;
+              -webkit-transform: rotate(15deg); 
+              -moz-transform: rotate(15deg);
+            }
+
+            
+            #intro, #more {
+                width: 600px;
+            }
+            #intro {
+                float: left;
+                position: relative;
+            }
+            #more {
+                float: right;
+                position: relative;
+            }
+            #l{
+                text-align:left;
+                font-size:2em;
+                margin-bottom:3em;
+            }
+            a{
+              /*color:#06c;*/
+                color: #111;
+                margin:0 5px 0 0;letter-spacing:0;
+                background-color: #F9FC7E;
+                padding: 3px 4px;
+            }
+            li { 
+                list-style:none;
+
+            }
+            .u{width:25%;display:inline;float:left;text-align:left}
+            p{
+                color: #444;
+            }
+            #c {
+                width: 100%;
+                height: 80px;
+            }
+            .block {
+                text-align: left;
+                padding: 5px 30px;
+                display: inline;
+                width: 240px;
+                float: left;
+            }
+            .block a {
+                color: #06c;
+                background: none;
+                margin: 0;
+                padding:0;
+            }
+            #goback {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body onload="">
+        <div id="layout">
+            <header>
+              <h1>Lab</h1>
+              <canvas id="grass"></canvas>
+            </header>
+            <div class="box">
+              <img src="img/game_1.png"></img>
+              <div class="info">
+                <h1>spaceship game wip</h1>
+                <p>small procedurally generated shoot-em-up arcade
+              game</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="img/js1k.png"></img>
+              <div class="info">
+                <h1>my entry for js1k 2012</h1>
+                <p>jetpack game in one 1k</p>
+              </div>
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+        var canvas = document.getElementById('grass');
+        var c = canvas.getContext('2d');
+        var w = canvas.width = 600;//layout.width;
+        var h = canvas.height;
+
+        var seed = 1;
+        function rand01() {
+            seed = (seed*214013+2531011);
+            seed = seed^(seed>>16);
+            return 2*(seed>>16)/65535;
+        }
+
+        function randf() {
+            return rand01()*2 - 1;
+        }
+
+        function render_grass(c, x, y, h, f) {
+            var col = Math.floor(140 + 50*randf());
+            var inc = 0.2*h *(2 + rand01());
+            c.strokeStyle= "rgba(5,"+ col +", 0, 1)";
+            c.beginPath();
+            c.moveTo(x, y);
+            for(var i = 0; i < h;  ++i) {
+               var ii = N - i - 1;
+               c.lineTo(x + 0.05*i*i*f, y-i*inc);
+            }
+            c.stroke();
+        }
+        var cos = Math.cos;
+        var NR = 40;
+        var tdx = 0;
+        var ddiff = 0;
+        var N=5;
+        var dx=0, oldx=0;
+        var sx = 0;
+        var start = (new Date()).getTime();
+        canvas.onmousemove = function (ev) {
+            var x = ev.offsetX
+            dx = Math.max(Math.min(x - oldx, 30), -30);
+            oldx = x;
+            sx = x;
+            //oldy = ev.screenY;
+        }
+        setInterval(function() {
+          canvas.width = canvas.width;
+          var time = (new Date()).getTime() - start;
+          seed = 1;
+          ++time;
+          tdx += (dx - tdx)*0.4;
+          ddiff += (sx - ddiff)*0.1;
+          dx*=0.8;
+          for(var j = 0; j <  2*NR; ++j) 
+          for(var i = 0; i < 15;  ++i) {
+              var x = 30*randf() + (w/NR)*(j) ;
+              var force =  1.5 + 2*cos(0.00001*(time+i))*cos(cos(i*0.1)+0.001*time) + tdx*0.01;
+              var diff = 40 - Math.min(Math.abs(x - ddiff), 40);
+              render_grass(c, x, h-4, 8*rand01(), force+tdx*0.0- diff*0.1);
+          }
+          c.fillStyle= "rgba(5, 140, 0, 1)";
+          c.fillRect(0, h-4, w, 4);
+        }, 33);
+
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</html>
+

@@ -1,0 +1,76 @@
+
+
+#header 
+{
+  margin: 1em 0 2em;
+  background-color: #333333;
+  padding:1em 0 1em 0em;
+  width: 100%;
+  font-family:"Century Gothic","Apple Gothic","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+  font-size-adjust:none;
+  font-stretch:normal;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal;
+  line-height:normal;
+  color: white;
+}
+
+#header span {
+  letter-spacing:-0px;
+  font-size: 1.5em;
+}
+h1 {
+  letter-spacing:-1px;
+  color: white;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+color:#444444;
+font-family:"Century Gothic","Apple Gothic","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+letter-spacing:-1px;
+font-weight:bold;
+font-size: 1.8em;
+}
+h3 {
+font-family:"Century Gothic","Apple Gothic","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+letter-spacing:-1px;
+font-weight:bold;
+font-size: 1.3em;
+border-bottom: 1px dotted #444444;
+padding-bottom: 0.2em;
+/*
+color:#444444;
+*/
+color: #CC0000;
+}
+
+ul,p {
+font-family: Helvetica,Arial;
+color:#333333;
+font-size: 1.3em;
+margin:0 0 1.0em;
+}
+
+strong {
+  letter-spacing:-1px;
+}
+
+em {
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+-moz-border-radius-topleft:10px;
+-moz-border-radius-topright:10px;
+background:#888888 none repeat scroll 0 0;
+border:medium none;
+color:#FFFFFF;
+font-weight:bold;
+padding:1px 15px;
+text-shadow:1px 1px 1px #000000;
+font-size: 0.7em;
+}
+
+a {
+color:#0066CC;
+}

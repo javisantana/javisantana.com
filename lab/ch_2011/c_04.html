@@ -1,0 +1,306 @@
+<html>
+    <head>
+        <style>
+        canvas {
+            position: absolute;
+            /*width: 500px; height: 300px;*/
+
+        }
+        #c {
+            background-color: #880000;
+        
+        </style>
+    </head>
+
+    <!--<canvas id="c" style="witdh: 500px; heigth: 500px;"></canvas>-->
+    <canvas id="c"></canvas>
+    <canvas id="blur" style="display: none"></canvas>
+    <canvas id="offscreen" style="display: none"></canvas>
+    <canvas id="ball"></canvas>
+    <canvas id="over"></canvas>
+
+    <script>
+        var cos = Math.cos;
+        var sin = Math.sin;
+        var pi = Math.PI;
+        function vec3(x, y, z) {
+            return new _vec3(x, y, z);
+        }
+        function _vec3(x, y, z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.length = function() {
+                return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
+            }
+        }
+        var add = function(v1, v2) { return vec3(v1.x+v2.x, v1.y+v2.y, v1.z+v2.z); }
+        var sub = function(v1, v2) { return vec3(v1.x-v2.x, v1.y-v2.y, v1.z-v2.z); }
+        var mul = function(s, v1) { return vec3(s*v1.x, s*v1.y, s*v1.z); }
+        var dot = function(v1, v2) { return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z; }
+        var normalize = function(v1) { var m = v1.length(); return vec3(v1.x/m, v1.y/m, v1.z/m); }
+        var rotx = function(p, ang) {
+            var c = cos(ang);
+            var s = sin(ang);
+            return vec3(p.x ,p.y*c - p.z*s, p.z*c + p.y*s)
+        }
+        var rotz = function(p, ang) {
+            var c = cos(ang);
+            var s = sin(ang);
+            return vec3(p.x*c - p.y*s,p.y*c + p.x*s, p.z);
+       }
+        var roty = function(p, ang) {
+            var c = cos(ang);
+            var s = sin(ang);
+            return vec3(p.x*c - p.z*s,p.y, p.z*c + p.x*s);
+       }
+       var W = 800;
+       var H = 200;
+       var halfw = W>>1;
+       var halfh = H>>1;
+
+       function front_canvas() {
+            var canvas = document.getElementById('over');
+            canvas.height= H;
+            canvas.width= W;
+            var ctx = canvas.getContext('2d');
+            var pixels = ctx.getImageData(0,0,W, H);
+            for(var i=0;i<W;++i) 
+            for(var j=0;j<H; ++j) {
+                var x = i/W;
+                var y = j/H;
+                var o = x*(1-x)*y*(1-y);
+                o = Math.sqrt(Math.sqrt(o));
+                var c = rand01()*0.1;
+                var idx = 4*(j*W+i);
+                pixels.data[idx+0] = 0;
+                pixels.data[idx+1] = 0;
+                pixels.data[idx+2] = 0;
+                pixels.data[idx+3] = 200*(1-o)+ 100*c//*255*c;//*(c*255);
+            }
+            ctx.putImageData(pixels, 0, 0);
+       }
+
+       function ball() {
+            this.lines = generate_ball();
+            this.ball_ang = 0.0;
+       }
+       ball.prototype.update = function() {
+           this.ball_ang += 0.01;
+       }
+       ball.prototype.render = function(ctx) {
+            var x = 150;
+            var y = -10;
+            var ball_lines = this.lines;
+            ctx.arc(x, y + 30, 70, 0.4 + 0.5*pi, 0.2 -0.5*pi, true);
+            ctx.lineWidth = 15;
+            ctx.fillStyle = ctx.strokeStyle = "rgba(0, 0, 0, 0.4)"; // line color
+            ctx.stroke();
+            ctx.fillRect(x -10, y + 110, 15, 30);
+            ctx.fillRect(x -42, y + 110 + 33, 80, 15);
+            var pos= vec3(14, 1.8, 30);
+            ctx.lineWidth = 2;
+            ctx.fillStyle = ctx.strokeStyle = "rgba(0, 0, 0, 0.2)"; // line color
+            for(var i in ball_lines) {
+                var lin = ball_lines[i];
+                var v1 = lin[0];
+                var v2 = lin[1];
+                v1 = mul(6, rotz(rotx(rotz(v1, this.ball_ang), 0.5*pi), 0.10*pi));
+                v2 = mul(6, rotz(rotx(rotz(v2, this.ball_ang), 0.5*pi), 0.10*pi));
+                v1 = add(v1, pos);
+                v2 = add(v2, pos);
+                var p1 = project(v1);
+                var p2 = project(v2);
+                line(ctx, p1, p2);
+            }
+       }
+       function polar(theta, rho) {
+            var x = cos(2*pi*theta)*sin(2*pi*rho);
+            var y = sin(2*pi*theta)*sin(2*pi*rho);
+            var z = cos(2*pi*rho);
+            return mul(0.9, vec3(x, y, z));
+       }
+       function generate_ball() {
+            var lines = [];
+            var N = 10;
+            for(var i=0; i < N+1 ;++i) {
+                for(var j=0;j < N; ++j) {
+                    var theta0 = (j-1)/N;
+                    var rho0 = 0.5*(i-1)/N;
+                    var theta1 = j/N;
+                    var rho1 = 0.5*i/N;
+                    lines.push([polar(theta0, rho0), polar(theta0, rho1)]);
+                    lines.push([polar(theta0, rho0), polar(theta1, rho0)]);
+                }
+            }
+            return lines;
+       }
+
+       front_canvas();
+
+        var canvas_screen = document.getElementById('c');
+        var ctx_screen = canvas_screen.getContext('2d');
+        canvas_screen.height= H;
+        canvas_screen.width= W
+
+        var canvas = document.getElementById('offscreen');
+        var ctx = canvas.getContext('2d');
+        canvas.height= H;
+        canvas.width= W
+
+        var canvas_blur = document.getElementById('blur');
+        var ctx_blur = canvas_blur.getContext('2d');
+        canvas_blur.height= H;
+        canvas_blur.width= W
+
+        function line(ctx, p0,p1) {
+            //ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(p0.x, p0.y);
+            ctx.lineTo(p1.x, p1.y);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        var seed = 1;
+
+        function rand01() {
+            seed = (seed*214013+2531011);
+            seed = seed^(seed>>16);
+            return 2*(seed>>16)/65535;
+        }
+
+        function randf() {
+            return rand01()*2 - 1;
+        }
+        var ratio = H/W;
+        function project(v) {
+            var znear = 1.0;
+            return vec3(ratio*canvas.width*znear*v.x/v.z, canvas.height*znear*v.y/v.z, 1);
+        }
+
+        var ang = 0;
+        var ang2 = 1;
+        function generate_obj() {
+            var lines = [
+                [vec3(1, 0, 0), vec3(-1, 0, 0)],
+                [vec3(0.6, 0, 0), vec3(0.9, 0.25, 0)],
+                [vec3(0.6, 0, 0), vec3(0.9, -0.25, 0)],
+                [vec3(-0.6, 0, 0), vec3(-0.9, 0.25, 0)],
+                [vec3(-0.6, 0, 0), vec3(-0.9, -0.25, 0)],
+            ];
+            var obj = [];
+            for(var i in lines) {
+                var lin = lines[i];
+                obj.push(lin);
+                obj.push([rotz(lin[0], pi*0.5), rotz(lin[1], pi*0.5)]);
+                obj.push([rotz(lin[0], pi*0.25), rotz(lin[1], pi*0.25)]);
+                obj.push([rotz(lin[0], pi*0.75), rotz(lin[1], pi*0.75)]);
+            }
+            lines = obj;
+            for(var i in lines) {
+                var lin = lines[i];
+                obj.push([roty(lin[0], pi*0.5), roty(lin[1], pi*0.5)]);
+            }
+            lines = obj;
+            for(var i in lines) {
+                var lin = lines[i];
+                obj.push([roty(lin[0], pi*0.25), roty(lin[1], pi*0.25)]);
+            }
+            return obj;
+        }
+
+        var obj = generate_obj();
+        function snowflake(p) {
+            this.pos = p;
+            this.original_pos = vec3(p.x, p.y, p.z);
+            this.ang = 0;
+            this.dang = randf()*0.3;
+            this.ang2 = 0;
+            this.dang2 = randf()*0.5
+        }
+        snowflake.prototype.update = function(dt) {
+            this.ang += this.dang;
+            this.ang2 += this.dang2;
+            this.pos.y += 0.4;
+            this.pos.x = this.original_pos.x +  cos(0.1*this.ang)*10;
+        }
+        snowflake.prototype.render = function(ctx) {
+            var a = (450 - this.pos.z)/450;
+            a = a*a
+            ctx.strokeStyle= "rgba(255, 255, 255," + a + ")";
+            ctx.fillStyle= ctx.strokeStyle;
+            ctx.lineWidth = Math.round(this.pos.z/200);
+            if(this.pos.z > 100) {
+                var p = project(this.pos);
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, a*10, 0, Math.PI*2, true); 
+                ctx.closePath();
+                ctx.fill();
+            } else
+                for(var i in obj) {
+                    var lin = obj[i];
+                    var v1 = lin[0];
+                    var v2 = lin[1];
+                    v1 = mul(3, rotz(roty(v1, this.ang2*0.4), this.ang*0.3333));
+                    v2 = mul(3, rotz(roty(v2, this.ang2*0.4), this.ang*0.3333));
+                    v1 = add(v1, this.pos);
+                    v2 = add(v2, this.pos);
+                    var p1 = project(v1);
+                    var p2 = project(v2);
+                    line(ctx, p1, p2);
+                }
+        }
+        function snow() {
+            this.flakes = [];
+        }
+        snow.prototype.gen = function() {
+            var z = 40 + 400*rand01();
+            this.flakes.splice(0, 0, new snowflake(vec3(2*z*randf(), -30 - 0.4*z, z)))
+            if(this.flakes.length > 300) {
+                this.flakes.pop();
+            }
+            console.log(this.flakes.length)
+        }
+
+        snow.prototype.update = function(dt) {
+            var flakes = this.flakes;
+            for(var i = 0; i < flakes.length; ++i) {
+                flakes[i].update(dt);
+            }
+        }
+        snow.prototype.render = function(ctx) {
+            var flakes = this.flakes;
+            for(var i = 0; i < flakes.length; ++i) {
+                flakes[i].render(ctx);
+            }
+        }
+        var b = new ball();
+        snow = new snow();
+        setInterval(function() {
+            snow.gen();
+        }, 100);
+
+        setInterval(function() {
+            canvas.width = canvas.width;
+            canvas_screen.width = canvas_screen.width;
+            ctx.translate(halfw, halfh);
+            snow.update()
+            b.update()
+            snow.render(ctx);
+            //b.render(ctx);
+            ctx_screen.globalAlpha = 0.8;
+            ctx_screen.drawImage(canvas_blur, 0, 0);
+            ctx_screen.globalAlpha = 1.0;
+            ctx_screen.drawImage(canvas, 0, 0);
+            //canvas_blur.width = canvas_blur.width;
+            ctx_blur.drawImage(canvas, 0, 0);
+            ctx_blur.fillStyle = 'rgba(136,0,0, 0.2)',
+            ctx_blur.fillRect( 0, 0, W, H);
+
+        }, 20);
+
+
+    </script>
+
+</html>

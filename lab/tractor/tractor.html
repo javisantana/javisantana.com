@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        canvas {
+            /*width:100%;*/
+            border: 1px solid #CCC;
+        }
+        #toolbar { position: absolute; top:30px; left:30px; }
+        #toolbar a {
+          background-color: #AAA;
+          color: white;
+          font: bold 13px "Helvetica";
+          text-transform: uppercase;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        #toolbar a:hover {
+          background-color: #777;
+
+        }
+        </style>
+    </head>
+
+    <body>
+      <canvas id="c"></canvas>
+      <!--
+      <div id="toolbar">
+        <a id="play" href="#">play</a>
+        <a id="save" href="#">save</a>
+        <a id="wheel" href="#">wheel</a>
+        <a id="motor" href="#">motor</a>
+      </div>
+      -->
+
+    </body>
+
+    <script src="vec2.js"> </script>
+    <script src="particle.js"> </script>
+    <script src="editor.js"> </script>
+    <script src="controller.js"> </script>
+    <script>
+        var SX = 1000;
+        var SY = 500;
+        var i, j;
+        /*var canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);*/
+        var canvas = document.getElementById('c');
+        canvas.width = SX;
+        canvas.height = SY;
+        var ctx = canvas.getContext('2d');
+        ctx.fillRect(0, 0, 500, 500);
+
+        var controller = new Controller();
+        local_controller(controller);
+
+        function Tractor() {
+          this.angle = 0;
+          var part = this.part = new ParticleSystem();
+          this.WHEEL = 3;
+          this.REAR_AXIS = 2;
+          part.add(vec2(-10, 0));
+          part.add(vec2(10, 0));
+          part.add(vec2(0, 0));
+          part.add(vec2(0, 40));
+
+          part.translate(50, 50);
+
+          // rear axis
+          part.add_constrait(0, 2);
+          part.add_constrait(0, 1);
+          part.add_constrait(1, 2);
+
+          part.add_constrait(0, 3);
+          part.add_constrait(1, 3);
+          part.add_constrait(2, 3);
+        }
+
+        Tractor.prototype.get_dir = function() {
+          var wheel = this.part.m_x[this.WHEEL];
+          var axis = this.part.m_x[this.REAR_AXIS];
+          var dir = sub(wheel, axis);
+          return normalize(dir);
+        }
+
+        Tractor.prototype.acel = function(f) {
+           var dir = this.get_dir();
+           var force = mul(f, dir);
+           this.part.add_force(0, force);
+           this.part.add_force(1, force);
+        }
+
+        Tractor.prototype.turn = function(angle) {
+           this.angle = angle;
+           //this.part.add_force(this.WHEEL, mul(angle, nor));
+        }
+
+        Tractor.prototype.update = function(dt) {
+           var dir = this.get_dir();
+           var nor = vec2(dir.y, -dir.x);
+           dir = mul(0.5, dir);
+           nor = mul(0.5, nor)
+           this.part.set_angle_constrait(this.WHEEL, mul(3, add(nor, dir)));
+           this.part.tick(dt);
+        }
+
+
+
+        //var editor = new Editor(canvas, part);
+
+        function draw_ground_line(c) {
+            c.beginPath();
+            c.moveTo(-SX, 0);
+            c.lineTo(SX, 0);
+            c.stroke();
+        }
+
+        var tractor = new Tractor();
+
+        setInterval(function() {
+            canvas.width = canvas.width;
+            ctx.translate(canvas.width/2, canvas.height/2);
+            /*if(editor.test_instance) {
+              editor.test_instance.tick(0.05);
+              editor.test_instance.render(ctx);
+           } else {
+            part.render(ctx);
+            }*/
+            if(controller.controls.up) {
+              tractor.acel(10);
+            } else if (controller.controls.down){
+              tractor.acel(-10);
+            } else {
+              tractor.acel(0);
+            }
+            if(controller.controls.left) {
+              tractor.turn(-2);
+            } else if(controller.controls.right)  {
+              tractor.turn(2)
+            } else {
+              tractor.turn(0);
+            }
+            this.tractor.update(0.05)
+            this.tractor.part.render(ctx);
+        }, 20);
+    </script>
+</html>
