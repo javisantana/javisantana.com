@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" type="text/css" href="static/style.css"> 
+  <style>
+    .header {
+      font-family: "Helvetica";
+      padding: 20px 40px;
+    }
+    .header p {
+      line-height: 1.5em;
+    }
+    .header h1 {
+      font-size: 51px;
+      color: #333;
+    }
+    path.other {
+      fill: #000;
+      fill-opacity: 0.05;
+    }
+    path.tertiary, path.raceway, path.service, path.unclassified {
+      fill: none;
+      fill-opacity: 0.05;
+      stroke: #000;
+      stroke-opacity: 0.1;
+    }
+    path.tertiary {
+      stroke: none;
+    }
+    path.service {
+      stroke-width: 3px;
+    }
+    path.raceway {
+      stroke-opacity: 1.0;
+      stroke-width: 17px;
+      stroke: #FFF;
+    }
+
+    .right {
+      display:inline-block;
+      width: 500px;
+      height: 100%;
+      border: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>FLATOUT test</h1>
+      <p>This is a visualization that shows the race car path synchronized with a video recorded on track. This is a part of <a href="http://flatout.es/articles/first-real-test/">flatout</a> tests, an application to track and measure times for race cars. You can watch a <a href="https://www.youtube.com/watch?v=oXnMjxfjNJ0">the video in high resolution</a> to see details of how the application works (the android tablet is placed just on the right)</p>
+      <p>The visualization is done with d3 visualization library, track data is from OpenStreetMap, the video was recorded with a GoPro, it was programmed by <a href="http://twitter.com/javisantana">@javisantana</a></p>
+    </div>
+    
+    <div id="ytapiplayer">
+      You need Flash player 8+ and JavaScript enabled to view this video.
+    </div>
+  </div>
+
+<script src="static/d3.v3.js"></script>
+<script src="static/lap.js"></script>
+<script>
+
+var context = {}
+context.events = d3.dispatch('graph_pos')
+
+var container = d3.select('.container');
+var player;
+
+var lap_content = container
+  .append('div')
+  .attr('class', 'right')
+
+var laps_cache = {}
+
+function pad(number, n) {
+  number = '' + number;
+  while (number.length < n) {
+    number = '0' + number;
+  }
+  return number
+}
+
+LAP_START = 3.2;
+
+function onYouTubePlayerReady(id) {
+  player = document.getElementById('youtube_player')
+  setInterval(function() {
+    var t = Math.max(0, player.getCurrentTime() - LAP_START);
+    context.events.graph_pos({ dist: t*1000 });
+  }, 20);
+}
+
+
+function formatLapTime(millis) {
+  var dec = Math.floor(millis/100)%10;
+  var seconds = Math.floor(millis/1000);
+  var minutes = Math.floor(seconds/60);
+  seconds = seconds % 60;
+  if(seconds < 10) seconds = "0" + seconds;
+  //if(dec < 10) dec = "0" + dec;
+  if(minutes < 10) minutes = "0" + minutes;
+  return minutes + ":" + seconds + "." + dec;
+}
+
+
+function start() {
+  var laps = Array.prototype.slice.call(arguments, 1);
+  var width = 540;
+  d3.text('main/kotar.osm', "application/xml", function(osm_data){
+    d3.json('main/best.json', function(data) {
+      lap_list = [data]
+      var features = parseOSM(osm_data);
+      trackMap('track_map', width, 360, lap_list, features);
+    })
+  })
+}
+
+start();
+
+function parseOSM(xml) {
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(xml, 'text/xml');
+  var nodes = doc.getElementsByTagName('node')
+  var points =  {}
+  /*
+  for(var n = 0; n < nodes.length; ++n) {
+    var node = nodes[n];
+    points[node.getAttribute('id')] = [node.getAttribute('lon'), node.getAttribute('lat')]
+  }*/
+  d3.select(doc).selectAll('node').each(function() { 
+    var n = d3.select(this)
+    points[n.attr('id')] = [+n.attr('lon'), +n.attr('lat')]
+  })
+
+  var features = [];
+
+  d3.select(doc).selectAll('way').each(function() { 
+    var type = "LineString"
+    var way = d3.select(this)
+    var refs = []
+    var properties = {}
+    way.selectAll('nd').each(function() { refs.push(d3.select(this).attr('ref')) })
+    way.selectAll('tag').each(function() { 
+      var t = d3.select(this);
+      properties[t.attr('k')] = t.attr('v');
+    })
+    var coordinates = refs.map(function(r) { return points[r]; })
+    if (refs[0] === refs[refs.length - 1]) {
+      type = "Polygon"
+      coordinates = [ coordinates ]
+      // poygon
+    }
+    if( coordinates && coordinates.length) {
+      features.push({
+        type: "Feature",
+        geometry: {
+          type: type,
+          coordinates: coordinates
+        },
+        properties: properties
+      })
+    }
+  })
+
+  return features;
+}
+function loadGeometry(svg, geo) {
+}
+
+function trackMap(id, width, height, laps, features) {
+
+  var svg = lap_content.selectAll('svg.' + id)
+      .data([0])
+
+  svg.enter()
+    .append('svg')
+    .attr('class', id)
+    .attr('width', width)
+    .attr('height', height)
+      .append('g')
+
+  var g = svg.select('g')
+
+  var projection = d3.geo.mercator()
+    .scale(1)
+    .translate([0, 0])
+
+  var path = d3.geo.path()
+    .projection(projection)
+
+  var b = path.bounds(lap.geoJSONLaps(laps)),
+    s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+    t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+  projection.scale(s).translate(t)
+
+  // fix gps error with a little bit of offset in projection
+  var projection_osm = d3.geo.mercator().scale(s).translate([t[0] + 5, t[1] - 5])
+  var path_osm = d3.geo.path().projection(projection_osm)
+
+  // geometry
+  g.selectAll("path.track")
+    .data(features)
+    .enter().append("path")
+    .attr('class', function(d) { return "track " + (d.properties.highway || 'other') })
+      .attr("d", path_osm);
+
+
+  // points
+  var lap_pos = laps.map(function(l) {
+    return {
+      time: lap.linear.time(l),
+      speed: lap.linear.speed(l),
+      times: lap.times,
+      lap: l
+    }
+  })
+
+  context.events.on('graph_pos.track', function(p) {
+    var t = p.dist;
+    var circles = g.selectAll('circle').data(lap_pos)
+
+    circles.enter()
+      .append("circle")
+      .attr('class', function(d, i) {
+        return 'car_pos fill-' + i
+      })
+      .attr("r", 10)
+      .style('fill-opacity', 0.8)
+      .style('stroke-width', 5.5)
+      .style('stroke-opacity', 0.5)
+
+    circles.attr("transform", function(d) { 
+      var coords = [d.time.lon(t), d.time.lat(t)];
+      return "translate(" + projection(coords) + ")"; 
+    }).attr("r", function(d) {
+      var a = d.speed.acel(t)*3;
+      var v = d.speed.speed(t);
+      return (v - 30)/6.0 + a*a;
+    }).style('stroke', function(d) {
+      return d.speed.acel(t) > 0 ? '#2ca02c': '#ff7f0e';
+    })
+
+    var times = g.selectAll("g.time")
+      .data(lap_pos)
+
+    times.enter()
+      .append('g')
+      .attr('class', 'time')
+      .each(function(d) {
+        d3.select(this)
+          .selectAll('text')
+          .data(d.lap.times.slice(1))
+            .enter()
+              .append('text')
+              .attr("class", "caption")
+              .style('font-weight', 'bold')
+              .attr("y", function(time) {
+                var pos = d.lap.points[time.index];
+                return projection([pos.lon, pos.lat])[1] - 7
+              })
+              .attr("x", function(time) {
+                var pos = d.lap.points[time.index];
+                return projection([pos.lon, pos.lat])[0]
+              })
+              .text(function(time) { return formatLapTime(time.time - d.lap.points[0].time) })
+
+        d3.select(this)
+          .selectAll('circle')
+          .data(d.lap.times.slice(1))
+            .enter()
+              .append('circle')
+                .attr("r", 3)
+                .style('fill-opacity', 1.0)
+                .style('stroke', 'none')
+                .attr("transform", function(time) { 
+                  var pos = d.lap.points[time.index];
+                  return "translate(" + projection([pos.lon, pos.lat]) + ")"; 
+                })
+
+      })
+
+      
+
+
+  });
+      
+
+  var paths = g.selectAll('path.lap').data(laps);
+  
+  paths.enter().append("path")
+    .attr("class", "lap")
+    .attr("d", function(d){ return path(lap.geoJSON(d)) } );
+
+  paths.exit().remove()
+
+}
+
+
+
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<!--<iframe id="player" width="853" height="480" src="//www.youtube.com/embed/oXnMjxfjNJ0?version=3&enablejsapi=1&playerapiid=player" frameborder="0" allowfullscreen></iframe>-->
+
+  <script type="text/javascript">
+    var params = { allowScriptAccess: "always" };
+    var atts = { id: "youtube_player" };
+    swfobject.embedSWF("http://www.youtube.com/v/oXnMjxfjNJ0?enablejsapi=1&playerapiid=ytplayer&version=3",
+                       "ytapiplayer", "480", "360", "8", null, null, params, atts);
+  </script>
+</body>
+</html>
