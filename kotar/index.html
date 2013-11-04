@@ -58,6 +58,11 @@
     <div id="ytapiplayer">
       You need Flash player 8+ and JavaScript enabled to view this video.
     </div>
+    <div class="right"></div>
+    <div class="header">
+      <p style="margin-top: 30px">Here you have a map showing the different speed along the track. This visualization is done with <a href="http://cartodb.com">CartoDB</a></p>
+    </div>
+    <iframe width='100%' height='600' frameborder='0' src='http://javi.cartodb.com/viz/76b74156-4533-11e3-b2ce-3085a9a9563c/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%2C%20to_char(vel%20*%203.6%2C%20'999D9')%20as%20vel_kmph%20FROM%20sensor_log_2013_10_27_12_01&sw_lat=41.78803298876911&sw_lon=-3.585019111633301&ne_lat=41.792456605660675&ne_lon=-3.576870560646057'></iframe>
   </div>
 
 <script src="static/d3.v3.js"></script>
@@ -70,9 +75,10 @@ context.events = d3.dispatch('graph_pos')
 var container = d3.select('.container');
 var player;
 
-var lap_content = container
-  .append('div')
-  .attr('class', 'right')
+var lap_content = container.selectAll('div.right')
+  //.append('div')
+  //.attr('class', 'right')
+
 
 var laps_cache = {}
 
