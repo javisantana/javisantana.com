@@ -1,0 +1,29 @@
+---
+layout: blog3
+title: factory en backbone
+date: '2013-03-15T12:50:00+01:00'
+tags: 
+tumblr_url: http://javisantana.tumblr.com/post/45426023548/factory-en-backbone
+---
+<p>A veces necesitas una Backbone.Collection tenga modelos de diferentes tipos normalmente derivados de uno base.</p>
+<p>No hay problema si añades los modelos a mano:</p>
+<pre>var c = new Backbone.Collection();
+c.add(new MyModel());
+c.add(new MyOtherModel());
+</pre>
+<p>Sin embargo cuando los datos vienen serializados desde el API que estés usando Backbone internalmente genera los modelos, así que todos los modelos son iguales.</p>
+<p>Hay varias formas de hacer que los modelos que se generen sean los correctos, una de ellas que es más o menos simple:</p>
+<pre>var C = Backbone.Collection.extend({
+    model: function(attrs) {
+       var t = {
+        'type1': MyModel,
+        'type2': MyOtherModel
+       }
+       return new t[attrs.type](<span>attrs</span><span>);</span></pre>
+<pre>    }
+});<br/>var c = new C();
+c.reset([ 
+  { type: 'type1', ...},
+  { type: 'type2', ...},
+])</pre>
+<p>Obviamente hay que hacer un override del método toJSON de los modelos para incluir el type.</p>

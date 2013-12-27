@@ -1,0 +1,20 @@
+---
+layout: blog3
+title: CORS en la vida real
+date: '2013-09-17T06:09:45+02:00'
+tags: 
+tumblr_url: http://javisantana.tumblr.com/post/61488510961/cors-en-la-vida-real
+---
+<p><span>No voy a explicar qué es CORS, la página de la wikipedia y cientos de web a golpe de búsqueda te lo explicarán. A mi gusta verlo como el gran bugfix del desarrollo web. Este post trata de explicar algunas de las dificultades que nos hemos encontrado en el uso de CORS después de dos años usándolo en producción.</span></p>
+<p>Hasta ahora hemos estado usando JSONP y otros hacks para consumir servicios de dominios diferentes al que se ejecuta nuestra web app. Aunque tenga una siglas más o menos aparentes, detrás de ellas se esconde un hack horrible, que nunca debería haber existido. Alquien pensó que ya era hora de cambiar eso, que debería haber una tecnología que permitiese coger datos de dominios usando AJAX que no son el nuestro de forma segura. Y ahí entro CORS.</p>
+<p>Nosotros en <a href="http://cartodb.com">cartodb</a> y otros proyectos de vizzuality usamos CORS cosas muy variopintas:</p>
+<p>- poder manipular los píxeles de las imágenes (para hacer análisis raster en mapas)<br/> - poder hacer POST y con enviar más datos de los que permite una petición GET<br/> - consumir datos de nuesta API desde aplicaciones web sin necesidad de un backend</p>
+<p>Decir que en ningún caso hemos usado autentificación, desconozco lo completo que será el tema, pero imagino que tendrá sus cosillas (hay tokens CSRF por ejemplo) de por medio.</p>
+<p>Cuando digo que tenemos en producción quiero decir que hemos estado más de 9 meses basando nuestra arquitectura pública de mapas en CORS, quiero decir, ya hemos llegado a la fase de &#8220;esto functiona&#8221; a &#8220;vamos puliendo los detalles&#8221;. Cuando digo producción, digo millones de usuarios y en sitios con mucho tráfico y usuarios diferentes, por ejemplo, wikileaks, blog de twitter, lemonde, the guardian y otros con mucho más tráfico que no recuerdo.</p>
+<p>Los problemas que nos hemos encontrado:</p>
+<p>- INTERNET EXPLORER. Sí, las versiones anteriores no lo soportan y dependiendo de como le de [1] IE10 a veces reporta que tampoco lo soporta. Así que tendrás que tener un fallback ( leer la siguiente)<br/> - Vas a necesitar un fallback: no puedes basar tu arquitectura en CORS, aunque los navegadores que soporten sean compatibles, hay muchos otros problemas (leer siguientes), así que vas a tener que tragar con JSONP o proxy en tu servidor.<br/> - Algunos proxies eliminan las cabeceras de CORS. Cuando tu navegador web hace un OPTIONS antes de hacer la petición de verdad (necesita saber si puede de verdad hacerlo) si eliminan las cabeceras el navegador devolverá un error.<br/> - El número de peticiones se multiplica. Hay que hacer un OPTIONS antes de hacer la petición real. No es que sea mucha carga, pero es una petición más que tus servidores tienen que tragar (no es cacheable según el standard y efectivamente los navegadores no las cachean), hay cierto lag y es un fastidio cuando estás desarrollando.<br/> - Ahora ese problema ya no existe, pero durante este tiempo tanto chrome como FF han cambiado la forma de funcionar.</p>
+<p>Para terminar, nosotros basamos todo nuestro API de mapas en CORS y teníamos como fallback JSONP. Hace cosa de 1 mes hemos pasado de usar JSONP como herramienta principal y CORS como fallback. Falta aún un tiempito para poder basar todo el sistema en CORS, pero desde luego es un gran avance en el desarrollo web.</p>
+<p>Ya hay mucha gente incluyendo las cabeceras de CORS en sus servicios permitiendo hacer algunas cosas interesantes, por ejemplo, los tiles de los mapas de google los incluyen o algunos servicios de autentificación, por ejemplo openstreemap, permitiendo hacer <a href="http://www.mapbox.com/osmdev/2013/01/15/oauth-in-javascript/">oauth desde javascrip</a></p>
+
+<p></p>
+<p>[1] si está en modo compatibilidad IE10 no funciona CORS, pero incluso a veces en modo normal, tampoco.</p>

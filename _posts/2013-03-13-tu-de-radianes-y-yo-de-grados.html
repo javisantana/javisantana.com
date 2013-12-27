@@ -1,0 +1,19 @@
+---
+layout: blog3
+title: tú de radianes y yo de grados
+date: '2013-03-13T12:15:00+01:00'
+tags: 
+tumblr_url: http://javisantana.tumblr.com/post/45272487338/tu-de-radianes-y-yo-de-grados
+---
+<p>Cada vez que veo algo tal que así:</p>
+<pre>void turn(float angle) {...}
+</pre>
+<p>algo muere dentro de mi. </p>
+<p><span>Lo normal es que las aplicaciones usen radianes para los cálculos, sin embargo hay ámbitos en los que se trabaja en grados (por ejemplo, los GPS devuelven los ángulos en grados) y siempre hay que o revisar la documentación, mirar el código o tirar de prueba y error.</span></p>
+<p><span>Una solución es poner un comentario</span></p>
+<pre>/* angle in degrees */</pre>
+<p>que está muy bien, pero lo mejor de todo es que hagas lo que debes hacer:</p>
+<pre>void turn(float degrees) {...}</pre>
+<p>Gracias</p>
+
+<p></p>
