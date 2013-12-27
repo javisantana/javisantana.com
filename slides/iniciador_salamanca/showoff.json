@@ -1,0 +1,8 @@
+{
+  "name": "Something",
+  "description": "Example Presentation",
+  "sections": [
+    {"section":"intro"},
+    {"section":"como"}
+  ]
+}

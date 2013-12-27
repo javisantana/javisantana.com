@@ -1,0 +1,46 @@
+/* customr css and js files included at the top level of your presentation will
+ * will be included in your presentation */
+
+.title-slide h1 {
+    font-family: Helvetica;
+}
+
+.gilipollez {
+    background-color: #777777;
+    color: white;
+}
+.gilipollez h1 {
+    color: white !important;
+}
+.gilipollez h2{
+    color: yellow !important;
+}
+
+.center h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+h1 {
+    font-family: Helvetica;
+}
+h2 {
+    font-family: Helvetica;
+    color: #444;
+}
+
+.content p {
+    color: #444;
+
+}
+.corte {
+    background-color: rgb(211, 79, 36);
+}
+.corte h1, .corte p {
+    color: white !important;
+}
+
+.big h1 {
+    font-size: 8em;
+}
