@@ -1,3 +1,2 @@
-source: blog_src
-destination: ../a/
+destination: a
 pygments: true
