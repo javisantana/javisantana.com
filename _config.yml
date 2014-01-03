@@ -1,3 +1,9 @@
 destination: a
 pygments: true
 url: javisantana.tumblr.com
+prose:
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          value: "blog3"
