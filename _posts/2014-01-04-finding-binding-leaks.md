@@ -25,7 +25,7 @@ So every time `attr` changes the view is rendered. In current Backbone version y
 
 When a view is removed all those links must be removed, if it's not done those views are going to last forever. That's "only" a memory use but imagine the view have some side effects like saving another model to the server...
 
-During last chrismas I decided to do a big refactor in some part of CartoDB (wizards if you know it), and some views had binding leaks. Find them is really hard and sometimes it takes hours to find them even if you have tools. For example, we have a checker to detect leaks while the app is running, just execute [``cdb.core.View.runChecker``](https://github.com/CartoDB/cartodb.js/blob/develop/src/core/view.js#L152) int the console and it will show a list of "missing bindings". It works but only with the views that are currently created.
+During last chrismas I decided to do a big refactor in some part of CartoDB (wizards if you know it), and some views had binding leaks. Find them is really hard and sometimes it takes hours to find them even if you have tools. For example, we have a checker to detect leaks while the app is running, just execute [cdb.core.View.runChecker](https://github.com/CartoDB/cartodb.js/blob/develop/src/core/view.js#L152) int the console and it will show a list of "missing bindings". It works but only with the views that are currently created.
 
 I though it would be better to find them in **testing stage** so I created a jasmine (*) helper:
 
