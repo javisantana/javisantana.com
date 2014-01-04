@@ -45,4 +45,4 @@ Really simple, easy to use in all the view tests. It saved me hours of in-app te
 
 _NOTE: this post is actually a mail I was going to send to frontend cartodb developers but I though it may result useful for someone else_
 
-(*) we use jasmine but I totally hate it
+* we use jasmine but I totally hate it
