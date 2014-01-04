@@ -43,6 +43,6 @@ What basically does is:
 
 Really simple, easy to use in all the view tests. It saved me hours of in-app testing. The function itself is defined [here](https://github.com/CartoDB/cartodb/blob/feature/CDB-1265/lib/assets/test/spec/SpecHelper.js#L188) if you want to take a look. It can be improved with a more smarter logic but it's enough for the moment.
 
-(this post is actually a mail I was going to send to frontend cartodb developers but I though it may result useful for someone else)
+_NOTE: this post is actually a mail I was going to send to frontend cartodb developers but I though it may result useful for someone else_
 
 (*) we use jasmine but I totally hate it
