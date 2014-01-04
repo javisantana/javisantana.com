@@ -3,7 +3,7 @@ layout: blog3
 published: true
 ---
 
-## Finding bindings leaks 
+## Finding binding leaks in Backbone applications
 
 If you are developing a medium/big javascript frontend application you **do** want to have a isolation mechanism for views. This is the only way to keep your application working as expected as its size grows.
 
