@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 ## Finding bindings leaks 
