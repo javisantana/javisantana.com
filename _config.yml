@@ -6,5 +6,5 @@ prose:
     _posts:
       - name: "layout"
         field:
-          element: hidden
+          element: "hidden"
           value: "blog3"
