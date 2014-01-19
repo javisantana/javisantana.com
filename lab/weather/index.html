@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>Farmer work animation</title>
+      <link rel="stylesheet" href="css/reset.css" type="text/css" />
+      <link rel="stylesheet" href="css/master.css" type="text/css" />
+  </head>
+
+  <body>
+      <div id="map_canvas" ></div>
+      <div id="start">
+        <h1>Quieres saber cuándo va a llover en tus parcelas?</h1>
+        <h2>Marca tus parcelas y te enviaremos a tu correo electrónico un informe del tiempo que va a hacer en cada una de tus parcelas</h2>
+        <p>correo</p>
+        <input id="mail" type="text" name="mail"></input>
+        <p>población</p>
+        <input id="address" type="text" name="poblacion"></input>
+        <button id="create_plots">empezar</button>
+      </div>
+
+      <div id="search">
+        <input id="province" type="text" name="provincia" placeholder="provincia"></input>
+        <input id="address" type="text" name="poblacion" placeholder="población"></input>
+        <input id="poligono" type="text" name="poligono" placeholder="polígono"></input>
+        <input id="parcela" type="text" name="poligono" placehodler="parcela"></input>
+        <button>buscar</button>
+      </div>
+
+      <div id="help">
+        <h2>Pincha en tu parcela para recibir información sobre ella</h2>
+      </div>
+
+
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="weather.js"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&libraries=geometry&sensor=false"></script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-165269-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+
+    </body>
+</html>
