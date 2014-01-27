@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 ## Resolver bugs de memoria
@@ -21,4 +21,3 @@ Tracear el programa sin tener claro como reproducir el problema viene a ser como
 Llevo haciendolo cosa de dos semanas y es especialmente interesante sobretodo cuando tratas de reproducir bugs en código ajeno. 
 
 Y es que al final la cabeza va mucho más rápido que la vista y los dedos buscando entre el código usando el editor. Antes de ponerse a mirar como un loco el código analiza 5 minutos sin tocar el ordenador qué puede estar pasando.
-
