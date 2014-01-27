@@ -5,7 +5,7 @@ published: true
 
 ## Resolver bugs de memoria
 
-Si eres desarrollador de sofware o estás cerca de ellos te sonará lo de "no puedo reproducir este problema" o el famoso "funciona en mi máquina". Normalmente cuando vas a resolved un bug el flujo es el siguiente:
+Si eres desarrollador de sofware o estás cerca de ellos te sonará lo de "no puedo reproducir este problema" o el famoso "funciona en mi máquina". Normalmente cuando vas a resolver un bug el flujo es el siguiente:
 
 1) alquien lo reporta, normalmente con una descripción pobre y mal especificado
 
