@@ -1,11 +1,13 @@
 {% include header.html %}
-   <h1>{{ page.title }}</h1>
+<div id="layout">
+    <h1>{{ page.title }}</h1>
     <ul class="posts-list">
     {% for post in site.posts %}
     <li>
-          <h2 class="post"><a href=".{{ post.url }}">{{ post.date | date: "%B %d, %Y" }} · {{ post.title }}</a></h2>
+      <h2 class="post"><a href=".{{ post.url }}"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> · {{ post.title }}</a></h2>
     </li>
     {% endfor %}
   </ul>
 
+</div>
 {% include footer.html %}

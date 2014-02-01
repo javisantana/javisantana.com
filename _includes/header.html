@@ -5,12 +5,13 @@
         <title>Javi Santana - blog</title>
         <link rel="stylesheet" href="assets/css/pygments.css" type="text/css" />
         <style>
-            html, body { margin: 0; padding: 0; background-color: #f8f8f8; /*background-image: url(bkg.png);*/}
+            html, body { margin: 0; padding: 0; background-color: #fefefe; /*background-image: url(bkg.png);*/}
             #layout {
               overflow: hidden;
               font-family: Georgia, sans-serif;
               text-align: center;
-              margin: 90px 0;
+              margin: 90px auto;
+              max-width: 800px;
             }
             pre, code {
               text-align: left;
@@ -34,11 +35,18 @@
               margin: 50px 0 0 20px;
               text-transform: uppercase;
               letter-spacing: 2px;
-              text-align: center;
             }
+
             h2 a {
               color: #222;
               text-decoration: none;
+            }
+
+            h2.post {
+              margin: 10px 0 0 10px;
+            }
+            .posts-list {
+              text-align: left;
             }
 
             img {
@@ -47,7 +55,6 @@
             p, li {
               margin: 1.5em auto;
               text-align: left;
-              max-width: 680px;
               font-size: 19px;
               padding: 0 20px;
               line-height: 1.7em;
@@ -78,7 +85,19 @@
             }
             .footer {
               margin: 80px 0 ;
+              text-align: center;
+              margin: 2em auto;
             }
+            .posts-list  {
+              text-align: left;
+              max-width: 780px;
+            }
+            .posts-list h2 {
+            }
+            .date {
+              font-weight: 100;
+            }
+
         </style>
         <script>
           window.onload = function() {
