@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      #minkm{
+        position: relative;
+        top: 50%;
+        text-align: center;
+        margin-top: -75px;
+        font-size: 130px;
+        font-family: "helvetica neue", "helvetica";
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="minkm">
+      0:00
+    </div>
+    <script>
+      if(navigator && navigator.geolocation) {
+
+        function Track() {
+          var positions = [];
+
+          function _t() {}
+          _t.add = function(pos) {
+            var EARTH_RADIUS = 6353000
+            var coords = pos.coords;
+            var speed = 0;
+            if (coords.speed === undefined || coords.speed === null) {
+              if (positions.length) {
+                var prev = positions[positions.length - 1];
+                var dlan = coords.latitude - prev.latitude;
+                var dlng = coords.longitude - prev.longitude;
+                var dtime = pos.timestamp - prev.timestamp;
+                speed = 1000*EARTH_RADIUS*Math.sqrt(dlan*dlan + dlng*dlng)/dtime;
+              }
+            } else {
+              speed = coords.speed;
+            }
+            positions.push({
+              latitude: coords.latitude,
+              longitude: coords.longitude,
+              altitude: coords.altitude,
+              accuracy: coords.accuracy,
+              altitudeAccuracy: coords.altitudeAccuracy,
+              heading: coords.heading,
+              speed: speed,
+              timestamp: pos.timestamp
+            });
+            localStorage.setItem('positions', JSON.stringify(positions));
+          }
+
+          _t.secsPerKm = function() {
+            // latest 10 positions
+            var o = Math.max(positions.length - 10, 0);
+            var speed = 0;
+            for(var i = positions.length - 1; i >= o; --i) {
+              speed += positions[i].speed;
+            }
+            if(speed <= 0.00001) {
+              return 0;
+            }
+            // m/s -> s/km
+            return 1000.0/speed;
+          }
+
+          _t.minPerKmString = function() {
+            var s = _t.secsPerKm()
+            var mins = (s/60) >> 0;
+            var secs = String((s>>0)%60);
+            if(secs.length === 1) secs = '0' + secs;
+            return mins + ":" + secs;
+          }
+
+          return _t;
+        }
+
+        var t = Track();
+        var minkm = document.getElementById('minkm')
+        function success(position) {
+          t.add(position);
+          minkm.innerHTML = t.minPerKmString();
+        }
+        function fail(e) {
+          console.log("FAIL", e);
+        }
+        //navigator.geolocation.getCurrentPosition(success, fail);
+        navigator.geolocation.watchPosition(success, fail,{
+          enableHighAccuracy : true,
+          //timeout : 10000, // 10s
+          maximumAge : 0
+        });
+      }
+    </script>
+
+  </body>
+
+
+</html>
