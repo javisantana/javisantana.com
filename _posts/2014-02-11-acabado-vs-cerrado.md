@@ -9,7 +9,7 @@ No recuerdo cuando ni donde le escuché al mítico [Javier Arévalo](twitter.com
 
 	código cerrado >>>> codigo acabado
     
-Cuando tienes un producto y vas a meter una nueva feature hay una distancia abismal enter tenerla acabada y en producción (cerrada). Vamos ser claros, lo de "say NO" es muy bonito cuando escribes libros pero la realidad es que el software requiere cosas nuevas de vez en cuando (de hecho muy de vez en cuando)
+Cuando tienes un producto y vas a meter una nueva feature hay una distancia abismal entre tenerla acabada y en producción (cerrada). Vamos ser claros, lo de "say NO" es muy bonito cuando escribes libros pero la realidad es que el software requiere cosas nuevas de vez en cuando (de hecho muy de vez en cuando)
 
 Digamos que tenemos una feature **acabada**, todo funcionando en desarrollo y podemos usarla sin problemas en un entorno "controlado" (staging o como lo llames). Pero eso es la punta del iceberg del trabajo. Una feature es como un hijo, no vale con "poner la semillita en mamá", hay que llevarla por el camino correcto y dejarla ir cuando toque.
 
@@ -24,6 +24,6 @@ Estas son algunas de las cosas en las que deberíamos pensar (que no hacemos por
 - Plan de migración. Al hilo de la anterior, si hay ya otra feature debes tener claro como volver
 - Soporte. La feature va a generar soporte, 100% asegurado
 - Marketing y ventas. Qué menos que unos posts en el blog, un mensaje en tu lista de correo, unos tweets, una llamadita a tus mejores clientes para que se hagan upgrade, otra llamadita a esos que te la pidieron.
-- Muerte. Hay features que símplemente mueren, eliminarlas bien es una tarea case imposible, siempre queda algo. Y cuando matas muchas, sobretodo al comienzo del producto, queda mucho que puede que te machaque el resto de desarrollo. Fulmínala cuanto antes, las cosas no van a mejorar (te vas a llevar a unos cuantos usuarios por delante, pero lo entenderán)
+- Muerte. Hay features que símplemente mueren, eliminarlas bien es una tarea casi imposible, siempre queda algo. Y cuando matas muchas, sobre todo al comienzo del producto, queda mucho que puede que te machaque el resto de desarrollo. Fulmínala cuanto antes, las cosas no van a mejorar (te vas a llevar a unos cuantos usuarios por delante, pero lo entenderán)
 
 
