@@ -15,9 +15,9 @@ Digamos que tenemos una feature **acabada**, todo funcionando en desarrollo y po
 
 Estas son algunas de las cosas en las que deberíamos pensar (que no hacemos porque entraríamos en depresión):
 
-- Testing. Cada vez que haces release, no siendo que lo hayas roto. 
-- Tests de carga, porque en desarrollo todo va fino pero cuando llegas a producción y tienes 100 conexiónes esperando a coger datos de redis no es tan divertido.
-- Coste de desarrollo a posterori. Tener código no es gratis, por muy modular y bien ordenado que esté, tener nuevo código implica tener una caja más en el almacén, está ahí, no se toca, pero cuando hay que mudarse te jode vivo.
+- Testing. Cada vez que haces release, no siendo que lo hayas roto. Y muchas veces no sirve solo el testing manual.
+- Tests de carga, por que en desarrollo todo va fino pero cuando llegas a producción y tienes 100 conexiónes esperando a coger datos de redis no es tan divertido.
+- Coste de desarrollo a posteriori. Tener código no es gratis, por muy modular y bien ordenado que esté, tener nuevo código implica tener una caja más en el almacén, está ahí, no se toca, pero cuando hay que mudarse te jode vivo.
 - Monitorización. Ya sabes en los mundos de yupi hacemos TDD y con un 100% de coverage vamos a la cama tranquilos, pero la realidad es que las cosas fallan, así que más vale que estés al tanto cuando pasas a produccion.
 - Documentación. Tanto de API, tutoriales, material de preventa.
 - Compatibilidad. Si es algo que modificas, debes pensar si eres compatible hacia atrás. Si no lo eres todos los problemas se multiplican por 2 porque tienes una nueva feature y la anterior, que hace lo mismo, vas a tener que mantenerla, deprecarla y matarla (y algunos usuarios estarán contentísimos contigo)
