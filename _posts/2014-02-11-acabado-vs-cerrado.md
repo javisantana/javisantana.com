@@ -5,7 +5,7 @@ published: true
 
 ## Acabado vs Cerrado
 
-No recuerdo cuando ni donde le escuché al mítico [Javier Arévalo](twitter.com/thejare) algo así como:
+No recuerdo cuando ni donde le escuché al mítico [Javier Arévalo](http://twitter.com/thejare) algo así como:
 
 	código cerrado >>>> código acabado
     
