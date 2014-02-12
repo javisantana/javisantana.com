@@ -7,7 +7,7 @@ published: true
 
 No recuerdo cuando ni donde le escuché al mítico [Javier Arévalo](twitter.com/thejare) algo así como:
 
-	código cerrado >>>> codigo acabado
+	código cerrado >>>> código acabado
     
 Cuando tienes un producto y vas a meter una nueva feature hay una distancia abismal entre tenerla acabada y en producción (cerrada). Vamos ser claros, lo de "say NO" es muy bonito cuando escribes libros pero la realidad es que el software requiere cosas nuevas de vez en cuando (de hecho muy de vez en cuando)
 
