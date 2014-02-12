@@ -9,7 +9,7 @@ No recuerdo cuando ni donde le escuché al mítico [Javier Arévalo](twitter.com
 
 	código cerrado >>>> codigo acabado
     
-Cuando tienes un producto y vas a meter una nueva feature hay una distancia avismal enter tenerla acabada y en producción (cerrada). Vamos ser claros, lo de "say NO" es muy bonito cuando escribes libros pero la realidad es que el software requiere cosas nuevas de vez en cuando (de hecho muy de vez en cuando)
+Cuando tienes un producto y vas a meter una nueva feature hay una distancia abismal enter tenerla acabada y en producción (cerrada). Vamos ser claros, lo de "say NO" es muy bonito cuando escribes libros pero la realidad es que el software requiere cosas nuevas de vez en cuando (de hecho muy de vez en cuando)
 
 Digamos que tenemos una feature **acabada**, todo funcionando en desarrollo y podemos usarla sin problemas en un entorno "controlado" (staging o como lo llames). Pero eso es la punta del iceberg del trabajo. Una feature es como un hijo, no vale con "poner la semillita en mamá", hay que llevarla por el camino correcto y dejarla ir cuando toque.
 
