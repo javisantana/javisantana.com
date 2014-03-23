@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 ## GPS app programming
@@ -9,7 +9,7 @@ I've been working with apps that use GPS since 8 years. I'm not an expert on tha
 
 First of all, if you are going to create an app that needs to measure things forget to use any kind of internal GPS. I don't recommend it since the error is really big even with clear sky view (no obstacles). Those GPS are very good in saving battery, adquiring singal pretty fast but that's all.
 
-So the tips:
+So the tips, most of them from the development of agroguia, a [GPS guidance system for farmers](http://agricgear.com) and [flatout, a timing app for race cars](http://flatout.es).
 
 - Save all the data so you can reproduce it in a emulator with exactly the same timing. So save the timestamp GPS provides and, very recommended, the time the GPS gives you the information. I usually save the tick when the info was processed so the steps can be reproduced exactly in the same way they happened (this will save you hours of debugging)
 
