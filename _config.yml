@@ -1,5 +1,6 @@
 destination: a
 pygments: true
+markdown: kramdown
 url: javisantana.tumblr.com
 prose:
   metadata:
