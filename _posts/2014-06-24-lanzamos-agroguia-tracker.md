@@ -28,6 +28,7 @@ o este otro donde se ve como trabaja un avión. He dicho que tenemos una versió
 
 ![pivot agroguia](/blog_images/avion.png)
 
+<iframe width='100%' height='520' frameborder='0' src='//javi.cartodb.com/viz/870c41d2-fc35-11e3-83a9-0edbca4b5057/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1%7C1%7C1%7C1&sql=&sw_lat=36.289462578948395&sw_lon=-5.859832763671875&ne_lat=36.32964738675383&ne_lon=-5.802712440490723' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 Durante este tiempo hemos recibido muchas llamadas interesadas exclusivamente en esa funcionalidad
 (que dicho de paso es totalmente secundaria) así que pensamos que sería una buena idea sacar un
