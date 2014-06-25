@@ -19,7 +19,7 @@ había hecho. Algo tan simple como eso se puede convertir en un infierno si tien
 como tienen algunos de nuestros clientes.
 
 La última versión más o menos grande de Agroguía fue hace 2 años, en ella decidimos incluir una
-funcionalidad que, igual que strava o runkeeper, envía [un informe del trabajo realizado por el agricultor a su correo] para analizaro(http://agroguia.es/agroguia-pc), llevar la cuenta o símplemente ver alguna nota. A día de hoy tenemos miles de trabajos y muchos agricultores que han abandonado ya el cuaderno y lápiz que llevaban en el tractor. Aquí uno de los trabajos donde se trata solo la parte que riega el pivot:
+funcionalidad que, igual que strava o runkeeper, envía [un informe del trabajo realizado por el agricultor a su correo](http://agroguia.es/agroguia-pc) para analizaro, llevar la cuenta o símplemente ver alguna nota. A día de hoy tenemos miles de trabajos y muchos agricultores que han abandonado ya el cuaderno y lápiz que llevaban en el tractor. Aquí uno de los trabajos donde se trata solo la parte que riega el pivot:
 
 ![pivot agroguia](/blog_images/pivot.png)
 
