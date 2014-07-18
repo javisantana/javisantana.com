@@ -26,7 +26,7 @@ dynamic render. The problem was not actually render, it was generate the data in
 Torque format is pretty simple. Each tile is an array of points where each has two arrays, one for the time
 slots the pixel is active and the other one with the value for that time slot.
 
-```
+```json
 [
   {
     x__uint8: 8, // webmercator snapped to tile pixel
@@ -90,7 +90,7 @@ gzip compression works looking for similar strings so if we put similar things t
 improve compression ratio. In torque tile we could switch from an array of objects to a single
 object with different arrays, like:
 
-```
+```json
 {
   x__uint8: [............],
   y__uint8: [............],
@@ -116,7 +116,7 @@ data and the data itself it's in the same magnitude so the encoder does not impr
 what happens if we reorder the data in a totally different way. Instead of storing the data by
 coordinate, if the data is aggregated by time step, like:
 
-```
+```json
 {
   0: {
     x__uint8: [............],
@@ -140,11 +140,11 @@ In order to understand this I plot the torque tile using a 3D graph.
 
 For the tweets tile this is how it looks like:
 
-![tweets tile](../torque/tweets.png)
+![tweets tile](/torque/tweets.png)
 
 for ships:
 
-![ships tile](../torque/ships.png)
+![ships tile](/torque/ships.png)
 
 It's clear that tweets dataset the positions more or less inmutable so encoding positions as keys
 it's a good way to avoid duplicated data. For ships datasets the positions are not that fixed but
