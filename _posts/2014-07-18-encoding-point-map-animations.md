@@ -26,17 +26,17 @@ dynamic render. The problem was not actually render, it was generate the data in
 Torque format is pretty simple. Each tile is an array of points where each has two arrays, one for the time
 slots the pixel is active and the other one with the value for that time slot.
 
-```json
-[
-  {
-    x__uint8: 8, // webmercator snapped to tile pixel
-    y__uint8: 10,
-    date__uint16: [0, 10, 45, 46] // steps * floor( (date - min_date)/(max_date - min_date) )
-    vals__uint8: [1, 3, 5, 10],   // values for steps aggregated
-  },
-  ...
-]
-```
+{% highlight json %}
+  [
+    {
+      x__uint8: 8, // webmercator snapped to tile pixel
+      y__uint8: 10,
+      date__uint16: [0, 10, 45, 46] // steps * floor( (date - min_date)/(max_date - min_date) )
+      vals__uint8: [1, 3, 5, 10],   // values for steps aggregated
+    },
+    ...
+  ]
+{% endhighlight %}
 
 so lets say that we are showing tweets for a day interval, in that example for date 0 the number of
 tweets at point 8, 10 would be 1, for date 10 would be 3 tweets and so on.
@@ -91,12 +91,12 @@ improve compression ratio. In torque tile we could switch from an array of objec
 object with different arrays, like:
 
 {% highlight json %}
-{
-  x__uint8: [............],
-  y__uint8: [............],
-  vals__uint8: [............],
-  dates__uint16 : [............],
-}
+  {
+    x__uint8: [............],
+    y__uint8: [............],
+    vals__uint8: [............],
+    dates__uint16 : [............],
+  }
 {% endhighlight %}
 
 the results for this are:
@@ -116,16 +116,16 @@ data and the data itself it's in the same magnitude so the encoder does not impr
 what happens if we reorder the data in a totally different way. Instead of storing the data by
 coordinate, if the data is aggregated by time step, like:
 
-```json
-{
-  0: {
-    x__uint8: [............],
-    y__uint8: [............],
-    vals__uint8: [............],
-  },
-  1: {...}
-}
-```
+{% highlight json %}
+  {
+    0: {
+      x__uint8: [............],
+      y__uint8: [............],
+      vals__uint8: [............],
+    },
+    1: {...}
+  }
+{% endhighlight %}
 
 the results: 
 
