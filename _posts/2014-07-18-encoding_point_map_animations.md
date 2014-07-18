@@ -1,3 +1,7 @@
+---
+layout: blog3
+published: false
+---
 
 # Encoding animated point map
 
@@ -135,11 +139,11 @@ In order to understand this I plot the torque tile using a 3D graph.
 
 For the tweets tile this is how it looks like:
 
-![tweets tile](tweets.png)
+![tweets tile](../torque/tweets.png)
 
 for ships:
 
-![ships tile](ships.png)
+![ships tile](../torque/ships.png)
 
 It's clear that tweets dataset the positions more or less inmutable so encoding positions as keys
 it's a good way to avoid duplicated data. For ships datasets the positions are not that fixed but
