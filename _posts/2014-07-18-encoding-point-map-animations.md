@@ -90,14 +90,14 @@ gzip compression works looking for similar strings so if we put similar things t
 improve compression ratio. In torque tile we could switch from an array of objects to a single
 object with different arrays, like:
 
-```json
+{% highlight json %}
 {
   x__uint8: [............],
   y__uint8: [............],
   vals__uint8: [............],
   dates__uint16 : [............],
 }
-```
+{% endhighlight %}
 
 the results for this are:
 
