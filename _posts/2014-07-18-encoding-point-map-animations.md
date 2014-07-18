@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 # Encoding animated point map
@@ -64,8 +64,9 @@ cup match around the world (1.3M points), the second one (ships) is a dataset of
 second world war (800k points). They are pretty different as we will see later.
 
 The torque tile (0, 0, 0) size is:
-tweets: 854kb, 197kb, 76% gzip compressed ratio
-ships:  345kb, 72kb,  79% gzip compressed ratio
+
+    tweets: 854kb, 197kb, 76% gzip compressed ratio
+    ships:  345kb, 72kb,  79% gzip compressed ratio
 
 The compression ratio is pretty good (around 77%) but it can be improved
 
@@ -78,9 +79,8 @@ computes the difference between pixels before compression.
 In torque format the dates array always grow (it's sorted) so it's encoded using delta the
 compressionratio should improve:
 
-tweets: 854kb, 137kb, 84% (+7%)
-
-ships:  345kb, 79kb,  76%, (-3%)
+    tweets: 854kb, 137kb, 84% (+7%)
+    ships:  345kb, 79kb,  76%, (-3%)
 
 oops, in tweets we improve 7% but in ships dataset we loose 3%
 
@@ -101,9 +101,8 @@ object with different arrays, like:
 
 the results for this are:
 
-tweets: 854kb, 119kb, 86% (+10%)
-
-ships:  345kb, 62kb,  82%, (+3%)
+    tweets: 854kb, 119kb, 86% (+10%)
+    ships:  345kb, 62kb,  82%, (+3%)
 
 I tried some variations of this:
  - sorting pixels in different order
@@ -130,9 +129,8 @@ coordinate, if the data is aggregated by time step, like:
 
 the results: 
 
-tweets: 854kb, 329kb, 61% (-15%)
-
-ships:  345kb, 50kb,  85%, (+6%)
+    tweets: 854kb, 329kb, 61% (-15%)
+    ships:  345kb, 50kb,  85%, (+6%)
 
 Some surprises here, for first dataset the compression if far worse but for the second one it's the
 best. So looks like depending on the data a different codification archieve better compression
