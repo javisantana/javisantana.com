@@ -41,7 +41,7 @@ slots the pixel is active and the other one with the value for that time slot.
 so lets say that we are showing tweets for a day interval, in that example for date 0 the number of
 tweets at point 8, 10 would be 1, for date 10 would be 3 tweets and so on.
 
-This format was proposed by Andrew Hill and there is a nice presentation about it. He got the idea
+This format was proposed by [Andrew Hill](https://twitter.com/andrewxhill) and there is a [nice presentation about it](http://gijs.github.io/images/cartodb_datacubes.pdf). He got the idea
 from datacubes and the nice thing about it is that you can generate a tile with a single SQL query.
 
 The objective of this post is not explain in detail torque format (which is actually a on going task).
@@ -163,27 +163,3 @@ Although for tweets dataset this codification is worse it has some properties:
   
 
 Just try [torque.js](http://github.com/cartodb/torque) :)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
