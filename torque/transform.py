@@ -9,6 +9,13 @@ from collections import defaultdict
 JSON_SEP = (',', ':')
 src_torque_tile = json.loads(open(sys.argv[1]).read())
 
+# sort dates
+for x in src_torque_tile:
+    dv = zip(x['dates__uint16'], x['vals__uint8'])
+    dv.sort()
+    x['dates__uint16'] = [xx[0] for xx in dv]
+    x['vals__uint8'] = [xx[1] for xx in dv]
+
 def save_frame_to_image(f, i):
     from PIL import Image
     img = Image.new("RGBA", (256, 256), (0,0,0,0))
@@ -80,11 +87,32 @@ def encode_date_delta(px):
     return {
         'x__uint8': px['x__uint8'],
         'y__uint8': px['y__uint8'],
-        'vals__uint8': encode_list_delta(px['vals__uint8']),
+        'vals__uint8': px['vals__uint8'],
         'dates__uint16': encode_list_delta(px['dates__uint16'])
     }
 
 write_json_file('torque_date_delta', [encode_date_delta(x) for x in src_torque_tile])
+
+# histogram
+dates = []
+dates_encoded = []
+for x in src_torque_tile:
+    dates.extend(x['dates__uint16'])
+    dates_encoded.extend(encode_list_delta(x['dates__uint16']))
+
+import matplotlib.pyplot as plt
+num_bins = 50
+plt.figure()
+n, bins, patches = plt.hist([dates, dates_encoded], 50, normed=1, histtype='bar', 
+                            color=['red', 'green'],
+                            label=['raw', 'delta'])
+plt.legend()
+#plt.show()
+plt.savefig('hist.png')
+
+
+
+
 
 # put similar values together
 # x__uint8:[ .......]
