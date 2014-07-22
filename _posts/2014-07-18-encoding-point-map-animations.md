@@ -65,10 +65,12 @@ In the Torque format, dates are arranged in the array from earliest to latest an
 
 In tweets we improve 8% but in ships dataset stay the same, why? let see an histogram of non-encodes dates values vs encoded values.
 
-For tweets dataset
+For tweets dataset:
+
 ![hist_tweets](/torque/hist_tweets.png)
 
-For ships dataset
+For ships dataset:
+
 ![hist_ships](/torque/hist_ships.png)
 
 It's clear that for tweets the date step is uniform so the delta works pretty well but for ships dataset altough there are symbols with higher frequency (around 0) there are still lot of them. Normally torque datasets are more like ships datasets in term of dates.
