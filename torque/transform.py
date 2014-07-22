@@ -189,7 +189,7 @@ for x in torque_tile:
 #for i, s in enumerate(time_slots):
     #save_frame_to_image(time_slots[s], i)
 
-#plot_3d_graph(time_slots)
+plot_3d_graph(time_slots)
 
 for s in time_slots:
     time_slots[s]['x__uint8'] = encode_list_delta(time_slots[s]['x__uint8'])

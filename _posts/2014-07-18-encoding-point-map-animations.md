@@ -7,6 +7,8 @@ published: true
 
 During the latest World Cup you might have seen some animated maps with tweets around the world showing different colors depending the team people were talking about. Yes, the maps that look like a fireworks. Those maps are done using torque, a technology we developed at CartoDB. In this post I want to talk about how we encode the data that goes into the animation.
 
+<iframe src="http://cartodb.com/v/worldcup/match/?TC=x&vis=30acae6a-0a51-11e4-8918-0e73339ffa50&h=t&t=Germany,B40903%7CArgentina,5CA2D1&m=7%2F13%2F2014%2016:00:00%20GMT,7%2F12%2F2014%2018:35:00GMT&g=147%7C#/2/-11.7/-8.1/0" height="300"></iframe>
+
 ## a little bit of history
 
 Torque had a start a few years ago in a project where we needed to show the process of deforestation over time. If you imagine the standard web map, a bunch of tiles (generally PNG images) representing a portion of the earth, rendered on the server and put back in order on the client to show a seamless map. Static images are great, but don't help much when you want to show changes over time. On top of showing change, we wanted to style the data dynamically and let our users control the playback.
