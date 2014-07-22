@@ -94,6 +94,7 @@ the results for this are:
     ships:  345kb, 48kb,  86%, (+3%)
 
 I tried some variations of this:
+
  - sorting pixels in different order. No interesting change
  - delta encoding pixels, dates and values (+1% ships datasets)
 
