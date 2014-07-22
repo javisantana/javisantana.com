@@ -5,9 +5,8 @@ published: true
 
 # Encoding animated point map
 
-During the latest World Cup you might have seen some animated maps with tweets around the world showing different colors depending the team people were talking about. Yes, the maps that look like a fireworks. Those maps are done using torque, a technology we developed at CartoDB. In this post I want to talk about how we encode the data that goes into the animation.
+During the latest World Cup you might have seen some [animated maps](http://cartodb.com/v/worldcup/match/?TC=x&vis=30acae6a-0a51-11e4-8918-0e73339ffa50&h=t&t=Germany,B40903%7CArgentina,5CA2D1&m=7%2F13%2F2014%2016:00:00%20GMT,7%2F12%2F2014%2018:35:00GMT&g=147%7C#/2/-11.7/-8.1/0) with tweets around the world showing different colors depending the team people were talking about. Yes, the maps that look like a fireworks. Those maps are done using torque, a technology we developed at CartoDB. In this post I want to talk about how we encode the data that goes into the animation.
 
-<iframe src="http://cartodb.com/v/worldcup/match/?TC=x&vis=30acae6a-0a51-11e4-8918-0e73339ffa50&h=t&t=Germany,B40903%7CArgentina,5CA2D1&m=7%2F13%2F2014%2016:00:00%20GMT,7%2F12%2F2014%2018:35:00GMT&g=147%7C#/2/-11.7/-8.1/0" height="550px" width="100%"></iframe>
 
 ## a little bit of history
 
