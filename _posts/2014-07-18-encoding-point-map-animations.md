@@ -143,6 +143,6 @@ Although for the tweets dataset our compression ratio got worse with our last at
 
 ![farmer tile](/torque/farmer.png)
 
- - Finaly, the PNG interlacing approach makes sense here. The way it works is using subdivision  and could be used exactly int the same way for quadtree tiles.
+ - Finaly, the PNG interlacing approach makes sense here. The way it works is using subdivision  and could be used exactly in the same way for quadtree tiles.
 
 try [torque.js](http://github.com/cartodb/torque). You can find the data and the source code for the analysis in my [github account](https://github.com/javisantana/javisantana.com/tree/gh-pages/torque)
