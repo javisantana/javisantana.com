@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 ## El precio de una vida
@@ -20,7 +20,3 @@ Dejando a un lado el problema, aquella situación me dejó marcado ¿Cómo alqui
 En el tema del cura (que parece que era lo único importante aquí), que por desgracia ha muerto hoy, prefiero no tener opinión, prefiero no tener que sufrir la idea de ponerme el el pellejo del gestor o de la familia del hombre (\*). Parece que otra gente no tiene tantos problemas en debatir alegremente cuando se habla de una vida.
 
 (\*) hace ya nos años que trato de [no pensar mucho en el otro barrio](http://blep.blogspot.com.es/2010/11/mejor-me-quedo-como-estoy.html)
-
-
-
-
