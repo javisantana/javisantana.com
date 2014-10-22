@@ -27,7 +27,7 @@ I was thinking about how would be to generate a index to khow, given a SQL query
     SELECT z, x, y FROM t where e
 ```
 
-(`CDB_XYZ_Extent` method returns the bbox for the tile (x, y, z))
+([`CDB_XYZ_Extent`](https://github.com/CartoDB/cartodb-postgresql/blob/master/scripts-available/CDB_XYZ.sql#L34) method returns the bbox for the tile (x, y, z))
 
 It takes 2.8 seconds on my laptop for a dataset distributed all over the world with ~800k points
 
