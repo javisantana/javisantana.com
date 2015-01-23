@@ -94,7 +94,7 @@ Notice nothing special needs to be added, just cartodb.js code that would work w
 
 Leaflet provides a bunch of methods to work with vector features and guess what, they work as expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSON layers.
 
-```
+```javascript
 cartodb.SQL({ user: 'dev', format: 'geojson' })
   .execute( "select the_geom from tm_world_borders_s_11 where iso2 = 'ES'")
   .done(function(data) {
