@@ -103,7 +103,6 @@ cartodb.SQL({ user: 'dev', format: 'geojson' })
       L.geoJson(data).addTo(map);
   })
 
-// adds a marker
 L.marker(center).addTo(map);
 ```
 
