@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet example | CartoDB.js</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />
+          
+  </head>
+  <body>
+    <div id="map"></div>
+    
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
+    <script src="cartodb.proj.js"></script>
+
+    <script>
+      function main() {
+        var center =  [73.94027455618044, -45.773225341732314]
+        var map = new L.Map('map', {
+          zoomControl: false,
+          center: center,
+          zoom: 4,
+          crs: cartodb.proj('+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs', '32661')
+        });
+
+        // add cartodb layer with one sublayer
+        cartodb.createLayer(map, {
+          //user_name: 'andrew',
+          user_name: 'documentation',
+          type: 'cartodb',
+          sublayers: [{
+             sql: 'select area, iso2, st_transform(ST_Intersection(the_geom, ST_MakeEnvelope(-180, 0, 180, 90, 4326)), 32661) as the_geom_webmercator from tm_world_borders_simpl_0_4',
+             cartocss: '#layer { polygon-fill: #F00; polygon-opacity: 0.3; line-color: #F00; }',
+             interactivity: 'area, iso2'
+          }]
+        })
+        .addTo(map)
+        .done(function(layer) {
+            var sub = layer.getSubLayer(0)
+            // adds a infowindow to show interactivity works too
+            cdb.vis.Vis.addInfowindow(map, sub, ['area', 'iso2'])
+            //sub.setInteraction(true);
+            //sub.on('featureOver', function(e, ll, pos, data) {
+              //console.log(data);
+            //})
+        });
+
+        // fetch some data, use 4326 since it's projected client side
+        cartodb.SQL({ user: 'documentation', format: 'geojson' }).execute(
+             "select the_geom from tm_world_borders_simpl_0_4 where iso2 = 'GL'"
+        ).done(function(data) {
+          L.geoJson(data).addTo(map);
+        })
+
+        L.marker(center).addTo(map);
+        window.map = map;
+
+      }
+
+      window.onload = main;
+
+    </script>
+  </body>
+</html>
