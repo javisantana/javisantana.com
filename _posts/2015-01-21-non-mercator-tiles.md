@@ -96,7 +96,7 @@ Leaflet provides a bunch of methods to work with vector features and guess what,
 
 ```javascript
 cartodb.SQL({ user: 'dev', format: 'geojson' })
-  .execute( 'select the_geom from tm_world_borders_s_11 where iso2 = \'ES\'')
+  .execute( 'select the_geom from tm_world_borders_s_11 where iso2 = \\'ES\\'')
   .done(function(data) {
       L.geoJson(data).addTo(map);
   });
