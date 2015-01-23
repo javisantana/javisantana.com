@@ -1,6 +1,6 @@
 ---
 layout: blog3
-published: false
+published: true
 ---
 
 # working with non mercator projections in cartodb
@@ -57,7 +57,8 @@ cartodb.createLayer(map, {
 ...
 ```
 
-it uses an small library I created for this matter, [cartodb.proj](TODO)
+it uses an small library I created for this matter,
+[cartodb.proj](https://github.com/cartodb/cartodb.proj)
 
 ## interaction
 
