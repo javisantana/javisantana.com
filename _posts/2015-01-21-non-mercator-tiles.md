@@ -29,7 +29,7 @@ special SRID is required altough web mercator is for what was designed for.
 With that in mind we could tweak Maps API sending a geometry projected in something different than
 web mercator, so we can create this cartodb.js example:
 
-```
+```javascript
 cartodb.createLayer(map, {
   user_name: 'dev',
   sublayers: [{
@@ -50,7 +50,7 @@ post](http://vis4.net/blog/posts/no-more-mercator-tiles/) you can create a CRS t
 coordinates from the required projection to mercator (and in the other way around) so you can use
 leaflet as you normally do but using a different projection:
 
-```
+```javascript
 var map = new L.Map('map', {
   center: center,
   zoom: 2,
@@ -67,7 +67,7 @@ it uses an small library I created for this matter,
 
 CartoDB not only render png tiles, it also does utf grid tiles to provide interaction and this also works as expected. In the following example an infowindow with some data about the countries is included.
 
-```
+```javascript
 cartodb.createLayer(map, {
   user_name: 'dev',
   type: 'cartodb',
@@ -99,7 +99,7 @@ cartodb.SQL({ user: 'dev', format: 'geojson' })
   .execute( "select the_geom from tm_world_borders_s_11 where iso2 = 'ES'")
   .done(function(data) {
       L.geoJson(data).addTo(map);
-  })
+  });
 
 L.marker(center).addTo(map);
 ```
@@ -120,7 +120,7 @@ with distorsion or it will not even rendered because the projection fails.
 
 In PostGIS some projections fails when you try to render outside a bounding box:
 
-```
+```bash
 db=# select st_transform(st_setsrid(st_makepoint(0, -181), 4326), 2857);
 ERROR:  transform: couldn't project point (0 -181 0): latitude or longitude exceeded limits (-14)
 ```
@@ -128,7 +128,7 @@ ERROR:  transform: couldn't project point (0 -181 0): latitude or longitude exce
 in order to make it work we can use PostGIS functions
 [ST_Intersection](http://postgis.net/docs/RT_ST_Intersection.html), like:
 
-```
+```sql
 SELECT ST_Intersection(the_geom, ST_MakeEnvelope(-180, 0, 180, 90, 4326))
 ```
 
