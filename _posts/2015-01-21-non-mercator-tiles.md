@@ -107,6 +107,8 @@ cartodb.SQL({ user: 'dev', format: 'geojson' })
 L.marker(center).addTo(map);
 ```
 
+in this case the projection is done client side, notice the example fetchs 4326 from CartoDB
+
 
 ### the working map
 
