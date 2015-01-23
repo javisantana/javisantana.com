@@ -97,8 +97,6 @@ expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSO
 
 
 ```
-
-// adds polygon for spain
 cartodb.SQL({ user: 'dev', format: 'geojson' })
   .execute( "select the_geom from tm_world_borders_s_11 where iso2 = 'ES'")
   .done(function(data) {
