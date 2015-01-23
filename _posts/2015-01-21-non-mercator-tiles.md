@@ -93,8 +93,7 @@ Notice nothing special needs to be added, just cartodb.js code that would work w
 ### vector features
 
 Leaflet provides a bunch of methods to work with vector features and guess what, they work as
-expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSON layers:
-
+expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSON layers.
 
 ```
 cartodb.SQL({ user: 'dev', format: 'geojson' })
