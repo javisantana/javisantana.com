@@ -26,7 +26,6 @@
       function main() {
         var center =  [73.94027455618044, -45.773225341732314]
         var map = new L.Map('map', {
-          zoomControl: false,
           center: center,
           zoom: 4,
           crs: cartodb.proj('+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs', '32661')
@@ -34,7 +33,6 @@
 
         // add cartodb layer with one sublayer
         cartodb.createLayer(map, {
-          //user_name: 'andrew',
           user_name: 'documentation',
           type: 'cartodb',
           sublayers: [{
@@ -48,10 +46,10 @@
             var sub = layer.getSubLayer(0)
             // adds a infowindow to show interactivity works too
             cdb.vis.Vis.addInfowindow(map, sub, ['area', 'iso2'])
-            //sub.setInteraction(true);
-            //sub.on('featureOver', function(e, ll, pos, data) {
-              //console.log(data);
-            //})
+            sub.setInteraction(true);
+            sub.on('featureOver', function(e, ll, pos, data) {
+              console.log(data);
+            })
         });
 
         // fetch some data, use 4326 since it's projected client side

@@ -17,12 +17,14 @@ regular tables with some special column names like ``cartodb_id``, ``the_geom`` 
 
 In order to render map tiles CartoDB needs to things:
 
-- SQL query to fetch the data
-- CartoCSS style to render
+- · SQL query to fetch the data
+- · CartoCSS style to render
 
 Maps API uses ``the_geom_webmercator`` column by default as geometry source so when a geometry
 needs to be rendered you need to call with that name. It also expects that column is projected, no
 special SRID is required altough web mercator is for what was designed for.
+
+### client side code
 
 With that in mind we could tweak Maps API sending a geometry projected in something different than
 web mercator, so we can create this cartodb.js example:
@@ -88,13 +90,14 @@ cartodb.createLayer(map, {
 Notice nothing special needs to be added, just cartodb.js code that would work with mercator
 
 
-## vector features
+### vector features
 
 Leaflet provides a bunch of methods to work with vector features and guess what, they work as
 expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSON layers:
 
 
 ```
+
 // adds polygon for spain
 cartodb.SQL({ user: 'dev', format: 'geojson' })
   .execute( "select the_geom from tm_world_borders_s_11 where iso2 = 'ES'")
@@ -105,6 +108,7 @@ cartodb.SQL({ user: 'dev', format: 'geojson' })
 // adds a marker
 L.marker(center).addTo(map);
 ```
+
 
 ## the working map
 
