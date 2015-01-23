@@ -110,11 +110,11 @@ L.marker(center).addTo(map);
 ```
 
 
-## the working map
+### the working map
 
 <iframe width='100%' height='520' frameborder='0' src='/proj/index.html' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-# some problems
+### some problems
 
 Some projections don't work well depending on the zone you are showing and that's something you
 should expect, most projections are meant to work well only in a concrete region. For example, a
