@@ -8,7 +8,7 @@ published: true
 CartoDB provides a way to render tiles in non mercator projection, it's not something we though
 about when our Map API was designed but it's possible and works pretty well.
 
-## CartoDB geometry rendering intro
+### CartoDB geometry rendering intro
 
 CartoDB stores data in postgres tables using postgis for the geospatial data. I will not explain
 this, if you are reading this is because you already know how it works. Tables in CartoDB are
@@ -39,7 +39,8 @@ cartodb.createLayer(map, {
 ```
 
 that would render a map projected in [SRID 32661](http://epsg.io/32661), that's it, it works. The problem is leaflet is
-still working with mercator. Luckily it provides a way to change the projection used using ``crs``
+still working with mercator. Luckily it provides a way to change the projection used using
+[crs](http://leafletjs.com/reference.html#map-crs)
 option in the map.
 
 So aplying the same technique than [Gregor Aisch](https://twitter.com/driven_by_data) describes in [this
@@ -60,7 +61,7 @@ cartodb.createLayer(map, {
 it uses an small library I created for this matter,
 [cartodb.proj](https://github.com/cartodb/cartodb.proj)
 
-## interaction
+### interaction
 
 CartoDB not only render png tiles, it also does utf grid tiles to provide interaction and this also works as expected. In the following example an infowindow with some data about the countries is included.
 
@@ -84,15 +85,14 @@ cartodb.createLayer(map, {
 });
 ```
 
-Notice nothing special needs to be added, just cartodb.js code that would work with mercator. Here
-is the interactive map:
+Notice nothing special needs to be added, just cartodb.js code that would work with mercator
 
-//TODO: map
 
-# vector features
+## vector features
 
 Leaflet provides a bunch of methods to work with vector features and guess what, they work as
 expected so you can use CartoDB SQL API to fetch geometry and render as a GeoJSON layers:
+
 
 ```
 // adds polygon for spain
@@ -106,7 +106,9 @@ cartodb.SQL({ user: 'dev', format: 'geojson' })
 L.marker(center).addTo(map);
 ```
 
-<iframe width='100%' height='520' frameborder='0' src='../proj/index.html' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+## the working map
+
+<iframe width='100%' height='520' frameborder='0' src='/proj/index.html' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 # some problems
 
@@ -131,7 +133,7 @@ SELECT ST_Intersection(the_geom, ST_MakeEnvelope(-180, 0, 180, 90, 4326))
 
 in this case we get the geometry in the north side or the earth.
 
-## extra ball
+### extra ball
 
 A map I created with CartoDB with some dataset Antartica
 
