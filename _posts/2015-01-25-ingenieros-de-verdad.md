@@ -29,7 +29,7 @@ profesional:
 
 En el minuto 14 explican como en vez de perder el tiempo diseñando un sistema final usan una
 solución temporal basada en un compresor externo en vez de un turbo para agilizar las pruebas (os
-suena?). En el minuto 16, cuando les revienta el motor (ojo al jeto del perico). Más tarde en el 20
+suena?). Ojo al comentario del perico en el minuto 16 cuando les revienta el motor: "we had an accident" (eso sí que es humor del bueno). Más tarde en el 20
 se puede ver la cara de desesperación total.
 
 A partir del minuto 48 prueban el nuevo motor que decidieron diseñar desde 0. El motor no arranca,
