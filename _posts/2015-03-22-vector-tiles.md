@@ -19,38 +19,9 @@ So would it possible to generate a easily vector tile from postgres? Of course i
  1. We don't need geometry outside the tile, so ST_ClipByBox2d can remove the geometry outside the tile. This function is only present in postgis 2.2 (currently in development), you can use the slower version [ST_Intersection](http://postgis.refractions.net/docs/ST_Intersection.html)
  1. Finally change coordinate system so coordinates are within 0-255 range, ST_Affine makes the algebra thing easy.
 
- So here it is, given a query that retusn a resultset with cartodb_id and the_geom_webmercator (a geometry column in 3857)
+ So here it is, given a query that retusn a resultset with cartodb_id and the_geom_webmercator (a geometry column in 3857):
 
- ```
- CREATE OR REPLACE FUNCTION tile (z integer, x integer, y integer, query text) RETURNS TABLE(id int8, geom geometry)
- AS $$
- DECLARE
-   sql TEXT;
- BEGIN
-     sql := 'with _conf as (
-         select
-             CDB_XYZ_resolution(' || z || ') as res,
-             1.0/CDB_XYZ_resolution(' || z || ') as invres,
-             st_xmin(CDB_XYZ_Extent(' || x || ',' || y || ',' || z ||')) as tile_x,
-             st_ymin(CDB_XYZ_Extent(' || x || ',' || y || ',' || z ||')) as tile_y
-      ),
-      _geom as (
-         select ST_ClipByBox2d(
-             ST_Simplify(
-               ST_SnapToGrid(the_geom_webmercator, res/20, res/20),
-               res/20
-             ),
-             CDB_XYZ_Extent(' || x || ',' || y || ',' || z ||')
-         ) as _clip_geom, cartodb_id from (' || query || ') _wrap, _conf where the_geom_webmercator && CDB_XYZ_Extent(' || x || ',' || y || ',' || z ||')
-     )
-     select cartodb_id::int8 as id, ST_Affine(_clip_geom, invres, 0, 0, invres, -tile_x, -tile_y) as geom from _geom, _conf where not ST_IsEmpty(_clip_geom)
-     ';
-     -- RAISE NOTICE 'sql: %', sql;
-     RETURN QUERY EXECUTE sql;
-
- END;
- $$ LANGUAGE plpgsql;
-```
+<script src="https://gist.github.com/javisantana/2b12dcb66958ae0680ff.js"></script>
 
 Notice this query does not manage buffer-size, overzooming and so on, that's pretty easy add tho. Also there is a ``res/20`` that needs an extra explanation. If we used half of the pixel for the snapping we'd soon realize that some polygons and lines are removed pretty soon so using that 20 fixes the thing. I have to say that value was calcualted by hand and there are not maths behind it, why spend hours thinking when with a simple binary search you can fix the thing... The geometry is also simplified after snapping (be sure you do after snapping, the simplify algorithm complexity is higher than the snapping)
 
