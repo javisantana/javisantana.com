@@ -19,18 +19,16 @@
     <div id="map"></div>
     
     <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.uncompressed.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
     <script src="cartodb.proj.js"></script>
 
     <script>
       function main() {
-        //var center =  [73.94027455618044, -45.773225341732314]
-        var center =  [51.479559, -0.241699];
+        var center =  [73.94027455618044, -45.773225341732314]
         var map = new L.Map('map', {
           center: center,
-          zoom: 7,
-          //crs: cartodb.proj('+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs', '32661')
-          crs: cartodb.proj('+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs', '27700')
+          zoom: 4,
+          crs: cartodb.proj('+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs', '32661')
         });
 
         // add cartodb layer with one sublayer
@@ -38,7 +36,7 @@
           user_name: 'documentation',
           type: 'cartodb',
           sublayers: [{
-             sql: 'select area, iso2, st_transform(ST_Intersection(the_geom, ST_MakeEnvelope(-13, 0, 13, 90, 4326)), 27700) as the_geom_webmercator from tm_world_borders_simpl_0_4',
+             sql: 'select area, iso2, st_transform(ST_Intersection(the_geom, ST_MakeEnvelope(-180, 0, 180, 90, 4326)), 32661) as the_geom_webmercator from tm_world_borders_simpl_0_4',
              cartocss: '#layer { polygon-fill: #F00; polygon-opacity: 0.3; line-color: #F00; }',
              interactivity: 'area, iso2'
           }]
@@ -55,6 +53,12 @@
         });
 
         // fetch some data, use 4326 since it's projected client side
+        cartodb.SQL({ user: 'documentation', format: 'geojson' }).execute(
+             "select the_geom from tm_world_borders_simpl_0_4 where iso2 = 'GL'"
+        ).done(function(data) {
+          L.geoJson(data).addTo(map);
+        })
+
         L.marker(center).addTo(map);
         window.map = map;
 
