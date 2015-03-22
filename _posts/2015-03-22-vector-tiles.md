@@ -35,11 +35,11 @@ select count(*) from planet;
 select sum(st_memsize(the_geom)) from planet;
 explain analyze select cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet');
 copy (select * from cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet')) TO '/tmp/tile.cvt';
-```
 
-the results:
+--
+-- the results: cat file.sql | psql test_postgis
+--
 
-```
 Timing is on.
   count
 ---------
@@ -65,7 +65,7 @@ Time: 5874.214 ms
 
 the CartoDB Vector Tile (Did I say I'm pretty good at naming?) is 44Mb (3.8M gzip compressed) so not that bad.
 
-But we still didn't do anything special with the geometry encoding, we are using WKB to store all the things. Remember that WKB uses 16 bytes per coordinate in a geometry. Mapbox vector tiles use varint encoding of delta values in order to make this smaller. I personally don't like [varint](https://developers.google.com/protocol-buffers/docs/encoding#varints) to encode numbers, It's better to leave the compressor do its work and don't try to be smart playing with bits. But ok, in postgis we have a way to delta-varint all the things, it's called TWKB:
+But we still didn't do anything special with the geometry encoding, we are using WKB to store all the things. Remember that WKB uses 16 bytes per coordinate in a geometry. Mapbox vector tiles use varint encoding of delta values in order to make this smaller. I personally don't like [varint](https://developers.google.com/protocol-buffers/docs/encoding#varints) to encode numbers, It's better to leave the compressor do its work and don't try to be smart playing with bits. But ok, in postgis we have a way to delta-varint all the things, it's called [TWKB](https://github.com/TWKB/Specification):
 
 ```
 copy (select st_astwkbagg(geom, 0, id) from cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet')) TO '/tmp/tile2.cvt';
