@@ -29,39 +29,7 @@ Notice this query does not manage buffer-size, overzooming and so on, that's pre
 
 let's try with an extract of OSM planet where the geometry is about 350Mb
 
-```
-\timing
-select count(*) from planet;
-select sum(st_memsize(the_geom)) from planet;
-explain analyze select cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet');
-copy (select * from cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet')) TO '/tmp/tile.cvt';
-
---
--- the results: cat file.sql | psql test_postgis
---
-
-Timing is on.
-  count
----------
- 1666533
-(1 row)
-
-Time: 502.312 ms
-    sum
------------
- 342721688
-(1 row)
-
-
-Time: 927.044 ms
-
--- the select
-Time: 5436.172 ms
-
-
-COPY 704273
-Time: 5874.214 ms
-```
+<script src="https://gist.github.com/javisantana/31d470bc5e858c6d74b5.js"></script>
 
 the CartoDB Vector Tile (Did I say I'm pretty good at naming?) is 44Mb (3.8M gzip compressed) so not that bad.
 
