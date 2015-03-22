@@ -31,7 +31,7 @@ let's try with an extract of OSM planet where the geometry is about 350Mb
 
 <script src="https://gist.github.com/javisantana/31d470bc5e858c6d74b5.js"></script>
 
-the CartoDB Vector Tile (Did I say I'm pretty good at naming?) is 44Mb (3.8M gzip compressed) so not that bad.
+the CartoDB Vector Tile (did I say I'm pretty good at naming?) is 44Mb (3.8M gzip compressed) so not that bad.
 
 But we still didn't do anything special with the geometry encoding, we are using WKB to store all the things. Remember that WKB uses 16 bytes per coordinate in a geometry. Mapbox vector tiles use varint encoding of delta values in order to make this smaller. I personally don't like [varint](https://developers.google.com/protocol-buffers/docs/encoding#varints) to encode numbers, It's better to leave the compressor do its work and don't try to be smart playing with bits. But ok, in postgis we have a way to delta-varint all the things, it's called [TWKB](https://github.com/TWKB/Specification):
 
