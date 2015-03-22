@@ -5,7 +5,7 @@ published: true
 
 # vector tiles
 
-Last week we had the n-th GIS drama about [how Mapbox Vector Tiles should be called](https://twitter.com/pwramsey/status/577959264678850561). I'm actually thiking in creating the GIS version of [rubydramas](https://news.ycombinator.com/item?id=4487963) (it's gone, looks like ruby community has moved to node.js, sorry, io.js). This post is not to talk about naming, we all know standards with company names in the description never works, look at those ESRI shapefiles...
+Last week we had the n-th GIS drama about [how Mapbox Vector Tiles should be called](https://twitter.com/pwramsey/status/577959264678850561). I'm actually thiking in creating the GIS version of [rubydramas](https://news.ycombinator.com/item?id=4487963) (it's gone, looks like ruby community has moved to node.js, sorry, io.js). This post is not to talk about naming, we all know standards with company names in the description are never used, look at those ESRI shapefiles...
 
 The objetive of vector tiles (whatever format you use) is to move the data closer to the rendering stage, so it's projected, clipped, transformed, extra precision is removed, filtered using naive filters, encoded and finally compressed. You should take a look at this [Michael Migurski's blogpost](http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html) or this talk from [Dane Springmeyer in foss4g](https://2015.foss4g-na.org/sites/default/files/slides/foss4g-2015-sf-springmeyer.pdf) to understand what is the rationale behind them.
 
@@ -21,7 +21,7 @@ So would it possible to generate a easily vector tile from postgres? Of course i
 
  So here it is, given a query that retusn a resultset with cartodb_id and the_geom_webmercator (a geometry column in 3857)
 
- ```sql
+ ```
  CREATE OR REPLACE FUNCTION tile (z integer, x integer, y integer, query text) RETURNS TABLE(id int8, geom geometry)
  AS $$
  DECLARE
@@ -66,7 +66,8 @@ explain analyze select cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as t
 copy (select * from cdb_tile(0, 0, 0, 'select id as cartodb_id, the_geom as the_geom_webmercator from planet')) TO '/tmp/tile.cvt';
 ```
 
-the results
+the results:
+
 ```
 Timing is on.
   count
