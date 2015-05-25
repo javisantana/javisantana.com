@@ -3,7 +3,7 @@ pygments: true
 markdown: kramdown
 name: Javi Santana
 description: Pixels are the humble bricks with which one can build cathedrals
-url: javisantana.com
+url: http://javisantana.com
 prose:
   metadata:
     _posts:
