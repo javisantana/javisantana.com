@@ -14,7 +14,7 @@ CartoDB is a platform that runs on top of postgis, it renders tiles fetching the
 
 So would it possible to generate a easily vector tile from postgres? Of course is, you can do almost everything in postgres right now with an extension but I'm one of those persons that like to do obvious things. It sounds easy, basically we need:
 
- 1. Get the geometry for a given tile with [CDB_XYZ_Extent] (https://github.com/CartoDB/cartodb-postgresql/wiki/CDB_XYZ_Extent). PostGIS makes this pretty fast since if you have an index in the column.
+ 1. Get the geometry for a given tile with [CDB_XYZ_Extent](https://github.com/CartoDB/cartodb-postgresql/wiki/CDB_XYZ_Extent). PostGIS makes this pretty fast since if you have an index in the column.
  1. Remove extra precision. A tile is usually 256x256 pixels so you don't need 6 decimal precision. Also this makes a lot of points to be in the same pixel so we can remove them. ST_SnapToGrid to the resque here. It's useful to know what is the resolution for the zoom level you are generating so [CDB_XYZ_resolution](https://github.com/CartoDB/cartodb-postgresql/wiki/CDB_XYZ_Resolution) is handy.
  1. We don't need geometry outside the tile, so ST_ClipByBox2d can remove the geometry outside the tile. This function is only present in postgis 2.2 (currently in development), you can use the slower version [ST_Intersection](http://postgis.refractions.net/docs/ST_Intersection.html)
  1. Finally change coordinate system so coordinates are within 0-255 range, ST_Affine makes the algebra thing easy.

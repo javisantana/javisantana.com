@@ -1,7 +1,9 @@
 destination: a
 pygments: true
 markdown: kramdown
-url: javisantana.tumblr.com
+name: Javi Santana
+description: Pixels are the humble bricks with which one can build cathedrals
+url: http://javisantana.com
 prose:
   metadata:
     _posts:
