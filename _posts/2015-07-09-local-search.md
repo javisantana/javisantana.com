@@ -5,7 +5,7 @@ published: true
 
 # Local search with PostGIS
 
-(Formatting is much better in github so I encourage you to read this blog post in this [github ticket](https://github.com/javisantana/javisantana.com/issues/6) while I change the blog theme so something that actually works for code chunks)
+(Formatting is much better in github so I encourage you to read this blog post in this [github ticket](https://github.com/javisantana/javisantana.com/issues/6) while I change the blog theme to something that actually works for code chunks)
 
 I was talking with some friends about a geo problem they have:
 
