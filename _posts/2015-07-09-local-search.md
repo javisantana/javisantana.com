@@ -5,6 +5,8 @@ published: true
 
 # Local search with PostGIS
 
+(Formatting is much better in github so I encourage you to read this blog post in this [github ticket](https://github.com/javisantana/javisantana.com/issues/6) while I change the blog theme so something that actually works for code chunks)
+
 I was talking with some friends about a geo problem they have:
 
 > Given a set of elements with a position and a name in a database give me the N closest to a certain point that
@@ -15,7 +17,7 @@ Madrid city center (pretty interesting combination I'd say, in Spain ATMs are in
 
 So in order to test it I loaded Madrid OSM in a postgres database. I just downloaded the data from [geofabrik site](http://download.geofabrik.de/) and imported using osm2pgsql tool, pretty straightforward.
 
-Then I created some indices for the ``way``and ``amenity`` columns (using full text search stuff)
+Then I created some indices for the ``way`` and ``amenity`` columns (using full text search stuff)
 
 ```
 -- gist index for the geometry, full text search for the text
