@@ -1,5 +1,5 @@
 destination: a
-pygments: true
+highlighter: rogue
 markdown: kramdown
 name: Javi Santana
 description: Pixels are the humble bricks with which one can build cathedrals
@@ -11,3 +11,20 @@ prose:
         field:
           element: "hidden"
           value: "blog3"
+
+sass:
+  style:            :compressed
+
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
