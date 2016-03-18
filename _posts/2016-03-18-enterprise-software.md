@@ -84,6 +84,6 @@ En resumen, la aplicación de node que parecía simple y ágil ahora tiene una s
 añadidos de clientes, vaya, se ha hecho mayor y ahora miras a esas empresillas que empiezan
 con una sonrisa (pero por si acaso no dejas de mirarlas), con más pasta en el bolsillo y con suerte
 habrás dejado de ir a la oficina en bicicleta e irás en un coche como dios manda. Es posible que
-seas también seas menos feliz, pero no sabrás si es la edad o tu software enterprise.
+seas también menos feliz, pero no sabrás si es la edad o tu software enterprise.
 
 ![como debe ser](/blog_images/porsche.jpg)
