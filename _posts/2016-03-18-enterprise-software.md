@@ -6,7 +6,7 @@ published: true
 Eres un pinpin y te pones a desarrollar software (no necesariamente en este orden), la cosa parece
 que mola, que no hay que doblar mucho el lomo y es fácil hacer dinero. Te gusta un sector, echas
 un ojo al software que trata de solucionar la vida de la gente y, como buen ignorante que eres, las
-primeras frases que salen de tu boca son "JAJAJAJA parece software de los 90", "esto lo han hecho 4 becarios", "no tienen ni idea, son unos aficionados", "esto lo hacemos nosotros mejor con la punta del pijo".
+primeras frases que salen de tu boca son "JAJAJAJA parece software de los 90", "esto lo han hecho 4 becarios", "no tienen ni idea, son unos aficionados", "esto lo hacemos nosotros mejor con la punta del pijo". Nota importante: yo he sido el primero en estar en esa situación, así empecé [agroguía](http://agroguia.es), de hecho debes estar ahí en algún momento, tienes que ser un veinteañoero.
 
 Así que manos a la obra, creas tu proyecto en node.js, TDD, deployment automático, últimas técnicas
 de desarrollo, el recopón y toda la corporación bendita, después de 2 meses tu software está más o
