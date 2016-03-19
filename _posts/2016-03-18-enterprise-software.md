@@ -19,7 +19,7 @@ alguna empresa.
 
 Un día alguien se te acerca, un tío que tiene una empresa cargada de millones, que sabe lo que se
 hace, joder, que es el puto amo, ve tu software y te plantea: "yo te pagaría XXXX€ por esto si tuviese estas pequeñas
-modificaciones". Ese XXXX es 100X de lo que estás cobrando al mes a tus usuarios del SASS. Llamas a
+modificaciones". Ese XXXX es 100X de lo que estás cobrando al mes a tus usuarios del SaaS. Llamas a
 tus socios, lo celebras y sin saberlo estás dentro del mundo llamado "enterprise", pero aún no lo
 sabes.
 
@@ -40,7 +40,7 @@ tener una lista de requisitos en tu software de los que no teías ni idea. Te de
 - Requisitos: te pedirán una lista de cosas que tu software debe soportar. Verás que sospechosamente
   algunas de esas listas se parecen demasiado a lo que soporte tu competidor (que curiosamente ya no
   son tan aficionados como parecían hace 2 años). Obviamente no tendrás ni una linea de
-  documenación, porque quién necesita documentación, somos un SASS moderno que cambia todos los
+  documenación, porque quién necesita documentación, somos un SaaS moderno que cambia todos los
   días!
 
 - Onpremise: Una empresa que tenga dos dedos de frente no va a poner sus datos en tu infrastructura,
@@ -55,7 +55,7 @@ tener una lista de requisitos en tu software de los que no teías ni idea. Te de
   saber la rentabilidad.
 
 - Alta disponibilidad, disaster recovery, backups, SLAs: Eso, quieren que funcione, que funcione siempre y
-  que responda bien a los fallos. En tu SASS te importa poco si se cae 10 minutos porque eres guay,
+  que responda bien a los fallos. En tu SaaS te importa poco si se cae 10 minutos porque eres guay,
   tus clientes son guays y eh! no pasa nada, somos una startup. Tampoco hay que volverse loco, los
   aviones llevan volando años y siguen fallando técnicamente y estrellándose.
 
