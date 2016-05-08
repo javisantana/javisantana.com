@@ -37,8 +37,7 @@ And the problem, there is a little information out there, so you will face a lot
 
 There are some well know companies that have different approaches to the problem:
 
-- [Travis CI](https://enterprise.travis-ci.com/docs) has an installer (docker based). Not sure about
-  how
+- [Travis CI](https://enterprise.travis-ci.com/docs) has an installer (docker based).
 - [Atlasian](https://confluence.atlassian.com/adminjiraserver070/installing-jira-applications-on-linux-749382634.html) has a installer and [pretty nice documentation on upgrades](https://confluence.atlassian.com/adminjiraserver070/upgrading-jira-applications-749382701.html) depending on the SLA you need. They actually moved from onpremise to have a SaaS according to.
 - [Github](https://enterprise.github.com/home) has a virtual appliance. I follow this
   one really closely because of the release process, they manage it incredible well, take a look at this [update
