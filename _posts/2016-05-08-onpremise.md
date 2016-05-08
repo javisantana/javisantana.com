@@ -35,7 +35,7 @@ And the problem, there is a little information out there, so you will face a lot
 - Other things like announcements, communication channels, marketing, technical information and
   documentation...
 
-There is some well know companies that have different approaches to the problem:
+There are some well know companies that have different approaches to the problem:
 
 - [Travis CI](https://enterprise.travis-ci.com/docs) has an installer (docker based). Not sure about
   how
