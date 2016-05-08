@@ -42,7 +42,7 @@ There are some well know companies that have different approaches to the problem
 - [Github](https://enterprise.github.com/home) has a virtual appliance. I follow this
   one really closely because of the release process, they manage it incredible well, take a look at this [update
   mail](http://github.cmail20.com/t/ViewEmail/i/E1FF4F9947CDE5EE/EEEF9C15731A5DA59A8E73400EDACAB4)
-- There is a meta company that provides a service to create onpremise versions, [Replicated](http://www.replicated.com/). I don't think they can cover all the cases but it 
+- There is a meta company that provides a service to create onpremise versions, [Replicated](http://www.replicated.com/). I don't think they can cover all the cases but it could be a pretty good solution for companies without resources to create the enterprise version.
 - Of couse CartoDB provides an enterprise version, [CartoDB enterprise](https://cartodb.com/enterprise), we have a mix of virtual appliance plus LXC and some other more customized installations based on installation script. One of our challenges here is we are an open source company with the good and the bad parts.
 
 Do you know more companies doing onpremise/enterprise versions? I've created a [slack channel](https://saastoonpremise.slack.com/) so you can join and share them or talk about your experience with the enterprise world problems, feel free to join.
