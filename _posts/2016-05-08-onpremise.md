@@ -40,8 +40,8 @@ There are some well know companies that have different approaches to the problem
 - [Travis CI](https://enterprise.travis-ci.com/docs) has an installer (docker based). Not sure about
   how
 - [Atlasian](https://confluence.atlassian.com/adminjiraserver070/installing-jira-applications-on-linux-749382634.html) has a installer and [pretty nice documentation on upgrades](https://confluence.atlassian.com/adminjiraserver070/upgrading-jira-applications-749382701.html) depending on the SLA you need. They actually moved from onpremise to have a SaaS according to.
-- [Github](https://enterprise.github.com/home) has a virtual appliance. I follow really closely this
-  one because of the release process, they manage it incredible well, take a look at this [update
+- [Github](https://enterprise.github.com/home) has a virtual appliance. I follow this
+  one really closely because of the release process, they manage it incredible well, take a look at this [update
   mail](http://github.cmail20.com/t/ViewEmail/i/E1FF4F9947CDE5EE/EEEF9C15731A5DA59A8E73400EDACAB4)
 - There is a meta company that provides a service to create onpremise versions, [Replicated](http://www.replicated.com/). I don't think they can cover all the cases but it 
 - Of couse CartoDB provides an enterprise version, [CartoDB enterprise](https://cartodb.com/enterprise), we have a mix of virtual appliance plus LXC and some other more customized installations based on installation script. One of our challenges here is we are an open source company with the good and the bad parts.
