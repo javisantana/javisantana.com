@@ -4,11 +4,11 @@ published: true
 ---
 
 
-Hacer crecer un equipo técnico parece fácil a priori, hay unos 200 millones de blogpost sobre el tema y en general los desarrolladores tenemos tendencia a ser optimistas, en esto también. Estoy seguro que comparado con hacer crecer un equipo de ventas o de marketing es coser y cantar 
+Hacer crecer un equipo técnico parece fácil a priori, hay unos 200 millones de blogpost sobre el tema y en general los desarrolladores tenemos tendencia a ser optimistas, en esto también. Estoy seguro que comparado con hacer crecer un equipo de ventas o de marketing es coser y cantar.
 
 Sin embargo, a pesar de haber leído esos blogposts, libros y demás, hay algunas cosas que hemos aprendido en CARTO que puede que te sean útiles si piensas hacer crecer un equipo de 4 adolescentes a un equipo que funciona como un tiro.
 
-Un equipo es algo así como una persona, pasa por la fase de crío, pasa a ser un adolescente, despuésa tener pareja e hijos, posiblemente pase por una etapa de madurez, jubilación y muera. En CARTO se podría decir que acabamos de tener hijos.
+Un equipo es algo así como una persona, pasa por la fase de crío, pasa a ser un adolescente, después a tener pareja e hijos, posiblemente pase por una etapa de madurez, jubilación y muera. En CARTO se podría decir que acabamos de tener hijos.
 
 Aquí os dejo cada una de las fases por las que hemos ido pasando, con algunos consejos en forma de retales.
 
