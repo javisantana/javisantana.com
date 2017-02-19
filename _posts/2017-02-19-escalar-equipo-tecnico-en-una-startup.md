@@ -112,12 +112,13 @@ En este punto los problemas técnicos principales son básicamente no técnicos:
 - Que todo el mundo (a nivel personal y como equipo) esté enfocado y en la misma dirección
 
 Los problemas técnicos principales son:
-Como ya no hay un control férreo de como se hacen las cosas cada uno empieza a aplicar su criterio, que está muy bien, pero sin seguir ninguna norma. Te encuentras a gente haciendo programación funcional, otros refactorizando partes que no conocen, usando librerías que no pondrías en producción aunque trabajases con nodejs.
-El rol del CTO pasa a ser mucho más influencer que activo. Ya no programas (o casi), la gente deja de confiar en ti para poner cosas en producción y los nuevos piensan que no has programado en tu vida (por eso tienes que sentarte un día con ellos y hacerles una performance para poner las cosas en su sitio)
-Es imposible que tomes todas las decisiones técnicas y también es imposible que se te vayan a ocurrir todas las buenas ideas. Tienes que hacer tres cosas fundamentales para que la gente crezca como líder técnico:
-Darles espacio para tomar sus decisiones y que la caguen, exactamente igual que lo harías tú pero esta vez es su responsabilidad y lo importante, su derecho.
-Darles tiempo. No me refiero a que esperes, me refiero no presionar tanto con las tareas que no les permita parar, analizar y buscar otras soluciones.
-Si tu producto ha crecido, y lo habrá hecho a golpe de remo comercial, habrá que hacer cambios grandes de arquitectura. Nunca es buen momento pero tienes que hacerlo, así que métete y tira millas. Ojo, con cabeza, a estas alturas tienes ya datos para tomar decisiones, así que haz pruebas de concepto y mide si tiene sentido.
+
+- Como ya no hay un control férreo de como se hacen las cosas cada uno empieza a aplicar su criterio, que está muy bien, pero sin seguir ninguna norma. Te encuentras a gente haciendo programación funcional, otros refactorizando partes que no conocen, usando librerías que no pondrías en producción aunque trabajases con nodejs.
+- El rol del CTO pasa a ser mucho más influencer que activo. Ya no programas (o casi), la gente deja de confiar en ti para poner cosas en producción y los nuevos piensan que no has programado en tu vida (por eso tienes que sentarte un día con ellos y hacerles una performance para poner las cosas en su sitio)
+- Es imposible que tomes todas las decisiones técnicas y también es imposible que se te vayan a ocurrir todas las buenas ideas. Tienes que hacer tres cosas fundamentales para que la gente crezca como líder técnico:
+ - Darles espacio para tomar sus decisiones y que la caguen, exactamente igual que lo harías tú pero esta vez es su responsabilidad y lo importante, su derecho.
+ - Darles tiempo. No me refiero a que esperes, me refiero no presionar tanto con las tareas que no les permita parar, analizar y buscar otras soluciones.
+- Si tu producto ha crecido, y lo habrá hecho a golpe de remo comercial, habrá que hacer cambios grandes de arquitectura. Nunca es buen momento pero tienes que hacerlo, así que métete y tira millas. Ojo, con cabeza, a estas alturas tienes ya datos para tomar decisiones, así que haz pruebas de concepto y mide si tiene sentido.
 
 La gente que se va es como los accidentes de tráfico: nunca te pasa a ti. Hasta que te pasa. Así que igual que te pones el cinturón de seguridad, compras coches seguros (esto es, no italianos) tienes que prepararte para cuando alguien se vaya. La estrategia perfecta sería tener 1 persona extra por equipo pero nunca funciona, más tienes, más haces y más tienes que mantener, así que mantén siempre a la gente con la que te gustaría trabajar cerca. Hay muchas formas de hacer esto, pero estas ya para otro post.
 
