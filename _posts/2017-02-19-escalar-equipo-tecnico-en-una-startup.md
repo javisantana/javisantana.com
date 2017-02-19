@@ -21,7 +21,7 @@ Aprender inglés cuando eres un niño es coser y cantar, cuando tienes 40 es un 
 - La elección de la tecnología base puede parecer importante, en mi opinión no lo es. Podría parecer que escoger el último framework o la última tecnología va a ayudarte en el hiring, pero:
     - Si alguien va a un proyecto por la tecnología y no por el proyecto tienes que pararte a pensar si de verdad quieres gente tan junior. Amigo, estás poniendo el cimiento del chiringuito, más te vale poner unas buena base.
     - En el futuro la tecnología importa básicamente nada, esto es, lo que marca la diferencia es lo que haces con ella. Repito, la tecnología que uses ahora no significa absolutamente nada. En la due diligence técnica que hizo el [CTO de accel](https://blog.acolyer.org/) antes de la ronda B de CARTO no preguntó ni una sola vez por el lenguaje de programación ni frameworks (lo que preguntó lo dejo para otro post)
-    - No confundamos tecnología base con la tecnología que es clave para el negocio. Salvo excepciones el lenguaje de programación o el framework no lo es.
+    - No confundamos tecnología base con la tecnología que es clave para el negocio. Salvo excepciones el lenguaje de programación o el framework no lo es. Eso no quiere decir que no tengas que controlar bien el lenguaje y los frameworks/herramientas que uses.
     - Vas a tener oportunidades de cambiar todo unas cuantas veces, así que no te preocupes.
 
 - Aprende a trabajar con proyectos de otros. Haz que sea una práctica habitual el usarlos,
