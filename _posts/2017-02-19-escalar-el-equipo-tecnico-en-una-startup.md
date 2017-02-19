@@ -86,6 +86,8 @@ Además la empresa ha crecido un poco, hay ya alguien vendiendo, parece que hay 
     - La gente se empieza a sentir sola: empieza a forzar 1 to 1. En mi caso no me gustan los 1 to 1, me gusta mucho más pillar por banda al fulano en cuestión y hablar lo que tenga en ese momento en la cabeza. Esto último es cómodo pero un error garrafal, tienes que mantener un flujo continuo donde hablas no solo del día a día si no de lo que va a venir y de lo que piensas. Esto pasa a ser crítico con más de 20 personas.
 
     - No hay tiempo para hacer las cosas bien. Nunca hay tiempo para eso, el tiempo se gana, así que "pick your battles" y luchalos a muerte. Todo no puede estar perfecto, mejor que sea así, *embrace* [lo cutre](http://javisantana.com/2014/03/02/lo-cutre.html) para lo que tenga que ser cutre.
+    
+    - Hay cosas que, símplemente, no se pueden hacer porque no hay tiempo. Los programadores piensan (pensamos?) que se puede hacer todo lo importante. Esto duele mucho.
 
 - Evita cualquier cosa en la que no haya un control sobre la creación. Por ejemplo, la típica de
   "hacemos un wiki". Los wikis son la peste si 1) no hay un índice claro o 2) no hay alguien
