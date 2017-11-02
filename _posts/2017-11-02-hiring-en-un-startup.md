@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 ---
 
 Hace unos meses escribía sobre cómo era la experiencia de [hacer crecer un equipo en una startup](/2017/02/19/escalar-el-equipo-tecnico-en-una-startup.html) y hablaba un poco sobre el tema del **hiring**. Si estás leyendo esto seguramente habrás escuchado en más de una ocasión "es imposible encontrar buenos técnicos", "los buenos están todos pillados", "hay una burbuja y todo el mundo quiere cobrar demasiado" o "tardo meses en contratar a alguien".
