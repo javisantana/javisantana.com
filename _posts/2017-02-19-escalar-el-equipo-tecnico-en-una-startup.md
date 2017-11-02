@@ -4,11 +4,11 @@ published: true
 ---
 
 
-Hacer crecer un equipo técnico parece fácil a priori, hay unos 200 millones de blogpost sobre el tema y en general los desarrolladores tenemos tendencia a ser optimistas, en esto también. Estoy seguro que comparado con hacer crecer un equipo de ventas o de marketing es coser y cantar 
+Hacer crecer un equipo técnico parece fácil a priori, hay unos 200 millones de blogpost sobre el tema y en general los desarrolladores tenemos tendencia a ser optimistas, en esto también. Estoy seguro que comparado con hacer crecer un equipo de ventas o de marketing es coser y cantar.
 
 Sin embargo, a pesar de haber leído esos blogposts, libros y demás, hay algunas cosas que hemos aprendido en CARTO que puede que te sean útiles si piensas hacer crecer un equipo de 4 adolescentes a un equipo que funciona como un tiro.
 
-Un equipo es algo así como una persona, pasa por la fase de crío, pasa a ser un adolescente, despuésa tener pareja e hijos, posiblemente pase por una etapa de madurez, jubilación y muera. En CARTO se podría decir que acabamos de tener hijos.
+Un equipo es algo así como una persona, pasa por la fase de crío, pasa a ser un adolescente, después a tener pareja e hijos, posiblemente pase por una etapa de madurez, jubilación y muera. En CARTO se podría decir que acabamos de tener hijos.
 
 Aquí os dejo cada una de las fases por las que hemos ido pasando, con algunos consejos en forma de retales.
 
@@ -117,7 +117,7 @@ Los problemas técnicos principales son:
 
 - Como ya no hay un control férreo de como se hacen las cosas cada uno empieza a aplicar su criterio, que está muy bien, pero sin seguir ninguna norma. Te encuentras a gente haciendo programación funcional, otros refactorizando partes que no conocen, usando librerías que no pondrías en producción aunque trabajases con nodejs.
 - El rol del CTO pasa a ser mucho más influencer que activo. Ya no programas (o casi), la gente deja de confiar en ti para poner cosas en producción y los nuevos piensan que no has programado en tu vida (por eso tienes que sentarte un día con ellos y hacerles una performance para poner las cosas en su sitio)
-- Es imposible que tomes todas las decisiones técnicas y también es imposible que se te vayan a ocurrir todas las buenas ideas. Tienes que hacer tres cosas fundamentales para que la gente crezca como líder técnico:
+- Es imposible que tomes todas las decisiones técnicas y también es imposible que se te vayan a ocurrir todas las buenas ideas. Tienes que hacer dos cosas fundamentales para que la gente crezca como líder técnico:
  - Darles espacio para tomar sus decisiones y que la caguen, exactamente igual que lo harías tú pero esta vez es su responsabilidad y lo importante, su derecho.
  - Darles tiempo. No me refiero a que esperes, me refiero no presionar tanto con las tareas que no les permita parar, analizar y buscar otras soluciones.
 - Si tu producto ha crecido, y lo habrá hecho a golpe de remo comercial, habrá que hacer cambios grandes de arquitectura. Nunca es buen momento pero tienes que hacerlo, así que métete y tira millas. Ojo, con cabeza, a estas alturas tienes ya datos para tomar decisiones, así que haz pruebas de concepto y mide si tiene sentido.
