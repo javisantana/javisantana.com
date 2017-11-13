@@ -1,4 +1,9 @@
 
+---
+layout: post
+published: false
+---
+
 Iba por el pasillo de la facultad donde estaban los despachos de los profesores echando un ojo a los típicas hojas pegadas en las puertas con propuestas de proyectos fin de carrera. Me llamaron la atención 2, uno para facilitar la movilidad a gente que usa silla de ruedas y otro sobre un tema agrícola. Después de hablar con los dos profesores me decanté por el agrícola, después de todo años atrás había ido con mi padre a echarle un cable en el campo, as que me tocaba la patata, al final las cosas buenas las haces porque te tocan la fibra y no el bolsillo. Y así empezó [agroguia](http://agroguia.es).
 
 Tuve la suerte de que ese profesor, [Jaime Gomez Gil](http://jaimegomez.blogs.uva.es) era, además de agricultor e ingeniero, un tío brillante, con la cabeza sobre los hombres y con pasión por el tema. Mes tras mes trabajamos en el prototipo, de mientras trabajaba con una beca de 400 euracos al mes en TV Castilla y León poniendo cables. Cuando terminamos el proyecto decidí venderlo, total ¿por qué no? otros ponian a la venta cosas peores. Y lo hice, con unos 600€ (tuve que romper el cerdito) de inversión compramos lo necesario y a la calle a vender! creo que mejor que te lo cuente es que veas el [video](https://www.youtube.com/watch?v=LwO7mkRfrM4) que creamos, creo que resume, en el técnico y emocional, lo que es agroguía.
