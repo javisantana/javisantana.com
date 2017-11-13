@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 ---
 
 Iba por el pasillo de la facultad, donde estaban los despachos de los profesores, echando un ojo a los típicas hojas pegadas en las puertas con propuestas de proyectos fin de carrera. Me llamaron la atención dos, uno para facilitar la movilidad a gente que usa silla de ruedas y otro sobre un tema agrícola. Después de hablar con los dos profesores me decanté por el agrícola, después de todo años atrás había ido con mi padre a echarle un cable en las tareas del campo, así que me tocaba un poco la patata, al final las cosas que te motivan las haces porque te tocan la fibra y no el bolsillo. Y así empezó [agroguia](http://agroguia.es) un producto que con tecnología resolvía un problema que muchos agricultores tenían: poder medir distancias en el campo con sus tractores.
