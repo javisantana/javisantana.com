@@ -9,7 +9,7 @@ Tuve la suerte de que ese profesor, [Jaime Gomez Gil](http://jaimegomez.blogs.uv
 
 No voy a contar de nuevo la historia de agroguía, la he contado en charlas, hemos salido en la tele, periódicos (internacionales también), blogposts, puedes buscarlas si estás interesado. Como detalle curioso cuando empecé a trabajar para Vizzuality (la empresa de donde salió CARTO) la gente me conocía por "el fulano de los tractores" o ["el de las provincias"](http://www.eldiario.es/hojaderouter/emprendedores/CartoDB-Agroguia-Javier_Santana-Javier_de_la_Torre-Sergio_Arias_0_477703277.html) (algún día alguien me contará el porqué algunos lo usan en tono despectivo). 
 
-Este verano, después de pasar unos últimos años donde apenas habíamos dedicado tiempo y por tanto el negocio había bajado, decidimos transferir el negocio a nuestros partners y amigos [Smartrural](http://smartrural.net/) que sí pudiese hacerse cargo y explotar el producto. Así que el 3 de Julio firmé lo que es el punto y aparte de un negocio de más de 12 años, significaba para mi deshacerme de algo que parí, he visto crecer y que ha sido mucho más que un producto.
+Este verano, después de pasar unos últimos años donde apenas habíamos dedicado tiempo y por tanto el negocio había bajado, decidimos transferir el negocio a nuestros partners y amigos [Smartrural](http://smartrural.net/) que sí pueden hacerse cargo y explotar el producto. Así que el 3 de Julio firmé lo que es el punto y aparte de un negocio de más de 12 años, significaba para mi deshacerme de algo que parí, he visto crecer y que ha sido mucho más que un producto.
 
 Es difícil sacar conclusiones de tantos años pero en resumen estoy bastante contento aunque creo que contento no es exactamente la palabra, creo que es satisfecho.
 
