@@ -13,7 +13,7 @@ Este verano, después de pasar unos últimos años donde apenas habíamos dedica
 
 Es difícil sacar conclusiones de tantos años pero en resumen estoy bastante contento aunque creo que contento no es exactamente la palabra, creo que es satisfecho.
 
-Creamos una empresa en la que nos gustaba trabajar. No burocracia, nada forzado, trabajamos pocas horas al día. Por aquel entonces me leí "getting real" de 37signals ([libro que deberías leerte](https://gettingreal.37signals.com/)) y disfruté cada página viendo como esta gente describía, de forma muy simple, lo que yo pensaba (aunque ellos lo han ejecutado mucho mejor). No molabamos nada, no usabamos tecnología puntera
+Creamos una empresa en la que nos gustaba trabajar. No burocracia, nada forzado, trabajamos pocas horas al día. Por aquel entonces me leí "getting real" de 37signals ([libro que deberías leerte](https://gettingreal.37signals.com/)) y disfruté cada página viendo como esta gente describía, de forma muy simple, lo que yo pensaba (aunque ellos lo han ejecutado mucho mejor). No molabamos nada, no usabamos tecnología puntera, pero daba igual.
 
 Con la perspectiva de los años agroguía me parece un productazo y estoy muy orgulloso de la gestión de producto. Siempre muy enfocado, ha hecho y hace una sola cosa muy bien, hemos dicho que no a muchas cosas miles de veces. Técnicamente no es nada del otro mundo, son unas pocas miles de líneas de código, con algunos ficheros que no se han tocado en años y que ha sobrevivido durante 12 años sin despinarse pasando por varias generaciones de dispositivos móviles. Esto ahora lo llaman legacy, yo prefiero llamarlo "working code".
 
