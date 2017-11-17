@@ -51,7 +51,7 @@
     <div class="header">
       <h1>FLATOUT test</h1>
       <p>This visualization shows the race car path synchronized with a video recorded on Kotarr track. This is part of <a href="http://flatout.es/articles/first-real-test/">flatout</a> tests, an application to track and measure times for race cars. You can watch a <a href="https://www.youtube.com/watch?v=oXnMjxfjNJ0">the video in high resolution</a> to see details of how the application works (the android tablet is placed just on the right)</p>
-      <p>The visualization is done with d3 visualization library, track data is from OpenStreetMap, the video was recorded with a GoPro, it was programmed by <a href="http://twitter.com/javisantana">@javisantana</a></p>
+      <p>The visualization is done with d3 visualization library, track data is from OpenStreetMap, the video was recorded with a GoPro, it was coded by <a href="http://twitter.com/javisantana">@javisantana</a></p>
       <p>click play to start</p>
     </div>
     
@@ -67,6 +67,7 @@
 
 <script src="static/d3.v3.js"></script>
 <script src="static/lap.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 
 var context = {}
@@ -78,6 +79,25 @@ var player;
 var lap_content = container.selectAll('div.right')
   //.append('div')
   //.attr('class', 'right')
+
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('ytapiplayer', {
+      width: 500,
+      height: 400,
+      videoId: 'oXnMjxfjNJ0',
+      events: {
+          onReady: onYouTubePlayerReady
+      }
+  });
+}
+
+function onYouTubePlayerReady() {
+  setInterval(function() {
+    var t = Math.max(0, player.getCurrentTime() - LAP_START);
+    context.events.graph_pos({ dist: t*1000 });
+  }, 20);
+}
 
 
 var laps_cache = {}
@@ -92,13 +112,6 @@ function pad(number, n) {
 
 LAP_START = 3.2;
 
-function onYouTubePlayerReady(id) {
-  player = document.getElementById('youtube_player')
-  setInterval(function() {
-    var t = Math.max(0, player.getCurrentTime() - LAP_START);
-    context.events.graph_pos({ dist: t*1000 });
-  }, 20);
-}
 
 
 function formatLapTime(millis) {
@@ -309,14 +322,6 @@ function trackMap(id, width, height, laps, features) {
 
 
 </script>
-<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-<!--<iframe id="player" width="853" height="480" src="//www.youtube.com/embed/oXnMjxfjNJ0?version=3&enablejsapi=1&playerapiid=player" frameborder="0" allowfullscreen></iframe>-->
 
-  <script type="text/javascript">
-    var params = { allowScriptAccess: "always" };
-    var atts = { id: "youtube_player" };
-    swfobject.embedSWF("http://www.youtube.com/v/oXnMjxfjNJ0?enablejsapi=1&playerapiid=ytplayer&version=3",
-                       "ytapiplayer", "480", "360", "8", null, null, params, atts);
-  </script>
 </body>
 </html>
