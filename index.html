@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|PT+Serif|Source+Serif+Pro:400,600,800" rel="stylesheet">
         <title>Javi Santana</title>
         <style>
             html, body { margin: 0; padding: 0; /*background-image: url(bkg.png);*/}
             #layout {
                 margin:90px auto;
-                width:800px;
+                width: 600px;
                 overflow: hidden;
-                font-family: Georgia, sans-serif;
+                font-family: 'Source Serif Pro', Georgia, sans-serif;
             }
             h1 {
               font-size: 51px;
@@ -17,9 +18,20 @@
               color: #222;
               margin: 40px 0;
             }
+            h2 {
+              font-size: 20px;
+              /*text-transform: uppercase;*/
+              /* text-decoration: underline;*/
+              font-weight: bold;
+              color: #000;
+              margin: 80px 0 20px 0;
+              padding-top: 10px;
+              /*border-top: 1px solid #000;*/
+            }
             p, li {
-              font-size: 17px;
+              font-size: 20px;
               line-height: 1.5em;
+              color: #222;
             }
             li {
               margin-bottom: 1.5em;
@@ -37,11 +49,6 @@
               display:none;
             }
 
-            h2 {
-              margin-top: 40px;
-              text-transform: capitalize;
-              font-size: 15px;
-            }
 
             h3 {
               text-transform: uppercase;
@@ -50,12 +57,16 @@
             li {
               margin-bottom: 0;
             }
+            ul {
+              padding-left: 20px;
+            }
         </style>
         <script>
           window.onload = function() {
             var en = document.getElementById('english')
             var es = document.getElementById('spanish')
-            if(location.search.indexOf('es') !== -1) {
+            var lang = location.search || navigator.language || navigator.userLanguage;
+            if(lang.indexOf('es') !== -1) {
               en.style.display = 'none';
               es.style.display = 'block';
             }
@@ -66,35 +77,52 @@
     <body>
       <div id="layout">
         <h1>
-        Pixels are the humble bricks with which one can build cathedrals
+          Hola, qué tal estás?
+
         </h1>
 
         <div id="english">
-          <p class="high">Hello, Javi Santana is a software developer mainly focused on products. Contact him at <b>jsantfer@gmail.com</b></p>
+          <p>Hey, before start, my name is Javi Santana and I spend my time developing software products. Let's get to the point:</p>
+          <ul>
+            <li>Contact me at <b>jsantfer@gmail.com</b></li>
+            <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a> and my <a href="/blog.html">blog</a> (mostly spanish tho)</li>
+            <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
+          </ul>
 
-          <p>He is from a small village near Valladolid, a cold city in the center of Spain. He studied a telecommunications degree but he realized he was gonna be a software developer when he wrote his first line of code. He loves non-electic cars.</p>
-          <p>He is currently working for <a href="http://cartodb.com">CartoDB</a> creating CartoDB among other lovely data visualizations and maps. He also runs a <a href="http://agroguia.es">company</a> which creates simple products for farmers.</p>
-          <p>He uses 2 hours per week to develop a <a href="http://flatout.es/">racing timming app</a>, ping me if you want to try it</p>
-
-          <p>You can follow him on <a href="http://twitter.com/javisantana">twitter</a>, see his work on <a href="http://github.com/javisantana">github</a> and read his <a href="/blog.html">blog</a>.</p>
-
-           
-
+          <h2>This is what I'm proud of</h2>
+          <p>I worked on two projects I consider a real success. Success to me means 1) it impacts a important number of poeple 2) I learned something and 3) it's useful for the future:
+          </p>
+          <p>More than 10 years ago I founded a company that built software products for farmers. It was a small, efficient and useful, we kept it profitable for more than 12 years, after that we sold it.</p>
+          <p>At the same time I was part of <a href="http://carto.com">CARTO</a>, one of the best known startups in Spain, where I lead the tech team as CTO.</p>
         </div>
 
         <div id="spanish">
-          <p class="high">Hola, Javi Santana es desarrollador de productos software. Puedes contactar con él en <b>jsantfer@gmail.com</b></p>  
-<!--
-          <p>Él es de un pequeño pueblo de Valladolid (España), estudió telecomunicaciones aunque desde que escribió su primera línea en C ya supo que se dedicaría al desarrollo de software. Las relaciones personales son dífíciles para él y a veces se pasa de troll. También le gustan los coches y correr (con  las piernas).
+          <p>Si has acabado aquí no es algo fortuíto, esta no es la típica web donde vienes a ver noticias, así que no te haré perder el tiempo, esta es la web de Javi Santana, el fulano que desarrolla software, vamos al grano:</p>
+          <ul>
+            <li>Me puedes contactar por correo en <b>jsantfer@gmail.com</b>.</li>
+            <li>O leer lo que escribo en <a href="http://twitter.com/javisantana">twitter</a> o en mi <a href="/blog.html">blog</a>.</li>
+            <li>Revisar mi historial laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>.</li>
+          </ul>
 
-          <p>Ha trabajado creando herramientas de migración de datos, haciendo productos para infoarquitectura en 3D, editores para la creación de videojuegos, productos para empotrados en máquinas de vending y otras cosas curiosas como técnico en TV.</p>
-          
-          <p>Empezó su <a href="http://agroguia.es/">primera empresa</a> en 2006, desarrollando productos para agricultores, la que actualmente sigue desarrollando nuevos productos y siendo rentable (como el desde el primer día) . También ha creado alguna que otra empresa más, pero se metió alguna que otra una buena ostia.</p>
+          <h2>Qué es lo que he hecho</h2>
+          <p>He trabajado en dos proyectos que de una u otra forma se puede considerar un éxito. Para mi éxito en un proyecto es que 1) haya servido a un número importante de personas 2) haya aprendido y 3) sea útil para el futuro.</p>
+          <p>Hace más de una década fundé una empresa, <a href="https://web.archive.org/web/20171007213728/http://agroguia.es/">agroguía</a> que hacía productos software para agricultores, pusimos tecnología en donde nadie la había puesto, vendimos por internet y sobretodo, mantuvimos una empresa rentable desde casi el primer mes. Tuvimos un modesto "exit".</p>
+          <p>Durante parte de ese tiempo he sido CTO en <a href="http://carto.com">CARTO</a>, una startup que ofrece un producto tecnológico para hacer análisis y visualizar información geoespacial, y donde mi misión ha sido convertirla en un referente tecnológico.</p>
 
-          <p>Actulmente trabaja en <a href="http://vizzuality.com">Vizzuality</a> desarrollando productos para visualización de datos, definiendo la arquitectura frontend de <a href="http://cartodb.com">CartoDB</a>, participando en la creación de <a href="http://vizzuality.com/projects/evolutionofweb20">visualizaciones de datos vistas por millones de personas</a> y desarrollando prototipos relacionados con el renderizado en el navegador usando HTML5.</p>
+          <h2>Algunas cosas en las que creo</h2>
+          <ul>
+            <li>En las cosas pequeñas y eficientes que se construyen con tiempo, iterando, aprendiendo y mejorando.</li>
+            <li>Me creo cuando algo se puede entender "a ojo".</li>
+            <li>En invertir el tiempo en las cosas importanes y no importar si te dejas alguna en la estacada.</li>
+            <li>Creo muchísimo en el esfuerzo, muy por encima de capacidades innatas.</li>
+            <li>Aprender algo aunque no tengas claro que te va a servir para algo.</li>
+            <li>La calidad es el mejor "bussiness plan". Y no hablo de solo negocios.</li>
+            <li>Entender los problemas (y las soluciones) hasta el último detalle.</li>
+            <li>Creo en el largo plazo y muy poco en el corto. Y no hablo de mucho o poco tiempo.</li>
+            <li><i>Visteme despacio que tengo prisa.</i></li>
+            <li>Las personas que hacen mucho y dicen poco (y se lo creen), hablan claro y no decoran y las que valoran por grandes cosas y no pequeños detalles.</li>
+          </ul>
 
-          <p>Si te interesa puedes <a href="http://twitter.com/javisantana">leerme en twitter</a>, ver mi trabajo en <a href="http://github.com/javisantana">github</a> o escarbar en mi historia laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>. También tengo un <a href="/blog.html">blog</a>.</p>
--->
         </div>
 
           
