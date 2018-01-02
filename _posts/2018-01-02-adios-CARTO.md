@@ -14,7 +14,7 @@ CARTO sigue conmigo a pesar de no estar en el día a día.
 
 Es difícil resumir todos estos años en un post, traté de hacerlo los días antes de irme y decidí quedarme con el buen sabor de boca más que con detalles o anécdotas del pasado. Creo que el mejor resumen es el correo que envié a toda la gente que trabajaba en CARTO unas semanas antes de irme:
 
-...
+**...**
 
 Hello everybody
 
@@ -33,7 +33,8 @@ I’d like to also apologize for those moments where I didn’t act in a profess
 So thank you again, I’ll be around for some more weeks, happy to talk to you whenever you like.
 
 VAMOS!
-...
+
+**...**
 
 "Y ahora qué vas a hacer?" es la pregunta que todo el mundo me hace. Pues no lo he pensado, ni quiero, así que cuando vea algo que realmente me apetece realmente hacer, lo sabré :).
 
