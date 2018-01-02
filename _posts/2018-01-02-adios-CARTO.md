@@ -3,12 +3,16 @@ layout: post
 published: false
 ---
 
-Mañana hará dos meses que dejé CARTO. En dos meses de retiro dan para pensar muchas cosas, entre
+Mañana hará dos meses que dejé CARTO. Dejar un trabajo nunca es fácil, ya lo sabes, pero en este
+caso ha sido especialmente complicado, han sido muchos años y mucha gente, así que después de unos meses dándole más vueltas de la
+debida decidí irme.
+
+En dos meses de retiro dan para pensar muchas cosas, entre
 ellas echar la vista atrás y darte cuenta de los más de 6 años han sido tan duros como
 gratificantes, que la decisión que has tomado no podía haber sido más acertada y que lo mejor de
 CARTO sigue conmigo a pesar de no estar en el día a día.
 
-Es difícil resumir todos estos años en un post, traté de hacerlo los días antes de irme y decidí quedarme con el buen sabor de boca más que con detalles o anécdotas del pasado. Creo que el mejor resumen es el correo que envié a toda la gente que trabajaba en CARTO unas semanas antes de irme, símplemente he omitido una sección con temas más personales.
+Es difícil resumir todos estos años en un post, traté de hacerlo los días antes de irme y decidí quedarme con el buen sabor de boca más que con detalles o anécdotas del pasado. Creo que el mejor resumen es el correo que envié a toda la gente que trabajaba en CARTO unas semanas antes de irme:
 
 ...
 
@@ -31,4 +35,7 @@ So thank you again, I’ll be around for some more weeks, happy to talk to you w
 VAMOS!
 ...
 
-"Y ahora qué vas a hacer?" es la pregunta que todo el mundo me hace. Pues no lo he pensado, ni quiero, así que cuando vea algo que realmente me apetece realmente hacer, lo sabré.
+"Y ahora qué vas a hacer?" es la pregunta que todo el mundo me hace. Pues no lo he pensado, ni quiero, así que cuando vea algo que realmente me apetece realmente hacer, lo sabré :).
+
+De nuevo, gracias a todo el mundo con el que he trabajado, me ha dado una oportunidad o me ha dado
+un collejón cuando tocaba, para bien o para mal estoy aquí gracias a vosotros.
