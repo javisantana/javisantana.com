@@ -4,8 +4,8 @@ published: true
 ---
 
 Mañana hará dos meses que dejé CARTO. Dejar un trabajo nunca es fácil, ya lo sabes, pero en este
-caso ha sido especialmente complicado, han sido muchos años y mucha gente, así que después de unos meses dándole más vueltas de la
-debida decidí irme.
+caso ha sido especialmente complicado, han sido muchos años y mucha gente, así que después de unos meses dándole más vueltas de las
+debidas decidí irme.
 
 Estos meses de retiro dan para pensar muchas cosas, entre
 ellas echar la vista atrás y darte cuenta de los más de 6 años han sido tan duros como
