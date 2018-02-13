@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|PT+Serif|Source+Serif+Pro:400,600,800" rel="stylesheet">
+        <title>Javi Santana</title>
+        <style>
+            html, body { margin: 0; padding: 0; /*background-image: url(bkg.png);*/}
+            #layout {
+                margin: 90px auto;
+                width: 600px;
+                overflow: hidden;
+                font-family: 'Source Serif Pro', Georgia, sans-serif;
+            }
+            h1 {
+              font-size: 35px;
+              font-weight: normal;
+              color: #000;
+              margin: 40px 0;
+            }
+            h2 {
+              font-size: 21px;
+              /*text-transform: uppercase;*/
+              /* text-decoration: underline;*/
+              font-weight: bold;
+              color: #000;
+              margin: 40px 0 20px 0;
+              padding-top: 10px;
+              /*border-top: 1px solid #000;*/
+            }
+            p, li {
+              font-size: 20px;
+              line-height: 1.5em;
+              color: #222;
+            }
+            li {
+              margin-bottom: 1.5em;
+            }
+            p.high {
+              font-size: 23px;
+              color: #000;
+              margin-bottom: 40px;
+            }
+            a {
+              color: #06c;
+            }
+
+            #spanish{
+              display: none;
+            }
+
+            h3 {
+              text-transform: uppercase;
+              margin-top: 40px;
+            }
+            li {
+              margin-bottom: 0;
+            }
+            ul {
+              padding-left: 20px;
+            }
+        </style>
+        <script>
+          window.onload = function() {
+            var en = document.getElementById('english')
+            var es = document.getElementById('spanish')
+            var lang = location.search || navigator.language || navigator.userLanguage;
+            if(lang.indexOf('es') !== -1) {
+              en.style.display = 'none';
+              es.style.display = 'block';
+            }
+          }
+
+        </script>
+    </head>
+    <body>
+      <div id="layout">
+
+        <div id="english">
+          <h2>TECHNICAL ARCHITECTURE</h2>
+
+          <p>After 3 years of development the stack has one hundred pieces, deploy a new version is a party (not), each developer wants a different stack/framework and they seem more concerned about that than the product working like a charm.</p>
+
+          <p>Technology is hard per se and it’s harder if we overcomplicate solutions. In order to know what not to do each decision needs to be made based on defined outcomes and following company objectives.</p>
+
+
+            <h2>TEAM BUILDING AND GROWTH</h2>
+
+            <p>You are growing (or want to grow) and you don’t know to organize the recruitment process, where to find the right people, interviews, roles you need, how to organize teams (vertical, horizontal, squads…) do I need to split my team? do I need managers? how does this team talk to that other one (solutions, data scientist, support). What’s the CTO role within the company?</p>
+
+
+            <h2>PRODUCT MANAGEMENT AND PROCESSES</h2>
+
+            <p>You have like 1000 ideas per day, sales people need to have that feature to close that huge deal, there is no other way. There are a bunch of pending bugs, developers claim they can’t continue working if that refactor is not finished and so on.</p>
+
+            <p>Let me tell you something, there is no solution for that problem, there are always more things to do than development power but you can use a powerful tool called prioritization based on what the most important thing is at every single moment.</p>
+
+
+            <h2>THE B2B HELL</h2>
+
+            <p>That day when a sales guys say: I’m closing the biggest deal ever but we need our product on-premise. Corporates are different and have different requirements, for example, integration with their authentication and database systems, they need to fill the gap between their stack and your product.</p>
+
+            <p>You can’t have 100 developers to do it and you can’t add every single client feature to your product you need to enable others to scale that part for you. </p>
+
+
+            If any of the previous ones rings a bell, I could likely help you
+
+            <h1>Working together</h1>
+
+            <p>I don’t believe in short-term solutions. It’s unlikely a problem created over a couple of years can be solved in a matter of days. I really believe in hard work, understand the problems in depth and build solutions based on feedback.</p>
+
+            <p>Said that, the model I think makes sense is: I work with you some hours per week, 1 day a week face to face and some hours during the week to answer some questions/emails and review the work done. After some time we reevaluate and decide whether makes sense to continue or not.</p>
+
+            <p>Send me an email to jsantfer@gmail.com</p>
+
+
+
+          
+        </div>
+
+        <div id="spanish">
+          <h1>
+            Dime si algo de esto te suena familiar
+          </h1>
+          <h2>Arquitectura y tecnología</h2>
+
+          <p>Te has pasado 3 años desarrollando y el <i>stack</i> tienen 100 piezas, difícil de mantener, cada desarrollador solo piensa en trabajar con una tecnología/framework sin importar demasiado si el producto functiona rápido y bien y cada deploy es una fiesta... (no)</p>
+          <p>La tecnología es compleja de por si y es mucho peor si sobrecomplicamos añadiendo miles de piezas. Para saber que <b>no</b> hacer todas las decisiones técnicas necesitan seguir de uno u otro modo objectivos de la empresa</p>
+          
+          <h2>Equipo y crecimiento</h2>
+          <p>Estás creciendo (o crees que quieres crecer) y no tienes ni idea de como organizar el proceso de recruiting, donde encontrar a la gente adecuada, como entrevistarlos, como organizar los equipos. Necesito gente gestionando? cómo deben hablarse los diferentes equipos? como organizo el proceso para que esto no se vuelva una locura? qué pinta el CTO en todo esto?</p>
+
+
+          <h2>Product management y procesos</h2>
+          <p>Tienes como unas 100 ideas al día que mejoran tu producto y otras 200 de la gente de ventas. Hay otros 300 bugs esperando a ser arreglados y soporte con gente quejándose de algo</p>
+          <p>No, no hay solución para todo eso, pero se puede mejorar priorizando y teniendo en mente qué recusos tienes.</p>
+
+          <h2>El mundo B2B</h2>
+          <p>Ese día en el que alguien de ventas dice: voy a cerrar el deal más gordo de la historia pero el cliente necesita <i>on-premise</i>. Muchas de las grandes empresas tienen recelo al modelo SaaS o necesitan integrar con sus sistemas de autentificación o bases de datos.</p>
+          <p>Por otro lado la mayoría necesitan rellenar el hueco entre tu producto y su necesidad. Vas a contratar 100 desarrolladores para llenarlos? necesitas hacer el producto de forma que otros lo hagan por ti</p>
+
+
+          <h1>Tal vez te pueda ayudar</h1>
+
+          <p>No me creo las soluciones a corto plazo, es poco probable que un problema creado durante años se solucione en un par de días. Me creo más solucionar los problemas entendiéndolos en profundidad y buscando soluciones que solucionen el problema dependiendo de la urgencia o importancia.</p>
+          <p>Dicho esto, el modelo que creo que puede ayudar a una empresa que tenga alguno de los problemas anterior es el siguiente: <b>trabajo 1 día a la semana in-situ, cerca del equipo, el resto de los días estoy disponible para preguntas puntuales, revisar el trabajo y preparar el siguiente día.</b></p>
+          <p>Estoy especialmente interesado en empresas B2B enfocadas a sacar valor del dato así que las daré prioridad.</p>
+          <p>Envíame un correo a <b>jsantfer@gmail.com</b> y hablamos de qué necesitas, pasta y demás cosas importantes.</p>
+
+        </div>
+
+          
+
+      </div>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-165269-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    </body>
+
+</html>
+
