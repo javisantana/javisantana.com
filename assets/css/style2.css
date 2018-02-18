@@ -1,33 +1,29 @@
 html {
+    background-color: #EBEBEB;
     height: 100%;
 }
 
 body {
     margin: 50px auto;
-    font-family: 'Droid Serif', Georgia, Times, serif;
-    font-size: 30px;
-    line-height: 40px;
-    color: #9D9D9D;
-    background-color: #FCFCFC;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     max-width: 700px;
     padding-bottom: 50px;
 }
 
 #content {
-    font-weight: 400;
+    color: #444444;
+    line-height: 1;
+    background-color: #FFF;
+    padding: 50px;
     border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 14px #CCC;
+    -moz-box-shadow: 0px 0px 10px #EEE;
     margin-bottom: 50px;
 }
-
-#content p{
-  font-size: 20px;
-  line-height: 32px;
-  color: #555;
-}
-
 h1, h2, h3, h4 {
     color: #111111;
-    font-weight: normal;
+    font-weight: 400;
 }
 h1, h2, h3, h4, h5, p {
     margin-bottom: 24px;
@@ -50,14 +46,15 @@ header a:visited {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 74px;
-  color: #334;
-  font-weight: 300;
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin: 30px 0 60px 0;
+    /*border-bottom: 10px solid black;*/
+    padding-bottom: 10px;
+    color: #333;
 }
 h2 {
-    font-weight: normal;
     font-size: 31px;
     /* The bottom margin is small. It's designed to be used with gray meta text
      * below a post title. */
@@ -96,6 +93,8 @@ li ul, li ul {
     margin-left: 24px;
 }
 p, ul, ol {
+    font-size: 18px;
+    line-height: 1.7em;
 }
 pre {
     padding: 0px 24px;

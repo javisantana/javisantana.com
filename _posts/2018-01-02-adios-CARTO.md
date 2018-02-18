@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: post2
 published: true
+title: Adiós CARTO
 ---
 
 Mañana hará dos meses que dejé CARTO. Dejar un trabajo nunca es fácil, ya lo sabes, pero en este

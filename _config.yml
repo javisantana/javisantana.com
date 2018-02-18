@@ -1,7 +1,7 @@
 destination: a
-highlighter: rogue
+pygments: true
 markdown: kramdown
-name: Javi Santana
+name: javisantana.com
 description: Pixels are the humble bricks with which one can build cathedrals
 url: http://javisantana.com
 prose:
