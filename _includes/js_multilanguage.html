@@ -1,0 +1,15 @@
+
+<script>
+  window.onload = function() {
+    var en = document.getElementById('english')
+    var es = document.getElementById('spanish')
+    var lang = location.search || navigator.language || navigator.userLanguage;
+    if(lang.indexOf('es') !== -1) {
+      en.style.display = 'none';
+      es.style.display = 'block';
+    } else {
+      en.style.display = 'block';
+      es.style.display = 'none';
+    }
+  }
+</script>

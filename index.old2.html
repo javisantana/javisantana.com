@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|PT+Serif|Source+Serif+Pro:400,600,800" rel="stylesheet">
+        <title>Javi Santana</title>
+        <style>
+            html, body { margin: 0; padding: 0; /*background-image: url(bkg.png);*/}
+            #layout {
+                margin:90px auto;
+                width: 600px;
+                overflow: hidden;
+                font-family: 'Source Serif Pro', Georgia, sans-serif;
+            }
+            h1 {
+              font-size: 51px;
+              font-weight: normal;
+              color: #222;
+              margin: 40px 0;
+            }
+            h2 {
+              font-size: 20px;
+              /*text-transform: uppercase;*/
+              /* text-decoration: underline;*/
+              font-weight: bold;
+              color: #000;
+              margin: 80px 0 20px 0;
+              padding-top: 10px;
+              /*border-top: 1px solid #000;*/
+            }
+            p, li {
+              font-size: 20px;
+              line-height: 1.5em;
+              color: #222;
+            }
+            li {
+              margin-bottom: 1.5em;
+            }
+            p.high {
+              font-size: 23px;
+              color: #000;
+              margin-bottom: 40px;
+            }
+            a {
+              color: #06c;
+            }
+
+            #spanish{
+              display:none;
+            }
+
+
+            h3 {
+              text-transform: uppercase;
+              margin-top: 40px;
+            }
+            li {
+              margin-bottom: 0;
+            }
+            ul {
+              padding-left: 20px;
+            }
+        </style>
+        <script>
+          window.onload = function() {
+            var en = document.getElementById('english')
+            var es = document.getElementById('spanish')
+            var lang = location.search || navigator.language || navigator.userLanguage;
+            if(lang.indexOf('es') !== -1) {
+              en.style.display = 'none';
+              es.style.display = 'block';
+            }
+          }
+
+        </script>
+    </head>
+    <body>
+      <div id="layout">
+        <h1>
+          Hola, qué tal estás?
+
+        </h1>
+
+          <h2>Qué es lo que he hecho</h2>
+          <p>He trabajado en dos proyectos que de una u otra forma se puede considerar un éxito. Para mi éxito en un proyecto es que 1) haya servido a un número importante de personas 2) haya aprendido y 3) sea útil para el futuro.</p>
+          <p>Hace más de una década fundé una empresa, <a href="https://web.archive.org/web/20171007213728/http://agroguia.es/">agroguía</a> que hacía productos software para agricultores, pusimos tecnología en donde nadie la había puesto, vendimos por internet y sobretodo, mantuvimos una empresa rentable desde casi el primer mes. Tuvimos un modesto "exit".</p>
+          <p>Durante parte de ese tiempo he sido CTO en <a href="http://carto.com">CARTO</a>, una startup que ofrece un producto tecnológico para hacer análisis y visualizar información geoespacial, y donde mi misión ha sido convertirla en un referente tecnológico.</p>
+
+          <h2>Algunas cosas en las que creo</h2>
+          <ul>
+            <li>En las cosas pequeñas y eficientes que se construyen con tiempo, iterando, aprendiendo y mejorando.</li>
+            <li>Me creo cuando algo se puede entender "a ojo".</li>
+            <li>En invertir el tiempo en las cosas importanes y no importar si te dejas alguna en la estacada.</li>
+            <li>Creo muchísimo en el esfuerzo, muy por encima de capacidades innatas.</li>
+            <li>Aprender algo aunque no tengas claro que te va a servir para algo.</li>
+            <li>La calidad es el mejor "bussiness plan". Y no hablo de solo negocios.</li>
+            <li>Entender los problemas (y las soluciones) hasta el último detalle.</li>
+            <li>Creo en el largo plazo y muy poco en el corto. Y no hablo de mucho o poco tiempo.</li>
+            <li><i>Visteme despacio que tengo prisa.</i></li>
+            <li>Las personas que hacen mucho y dicen poco (y se lo creen), hablan claro y no decoran y las que valoran por grandes cosas y no pequeños detalles.</li>
+          </ul>
+
+        </div>
+
+          
+
+      </div>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-165269-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    </body>
+
+</html>
+
