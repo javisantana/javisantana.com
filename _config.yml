@@ -1,5 +1,5 @@
 destination: a
-pygments: true
+highlighter: rouge
 markdown: kramdown
 name: javisantana.com
 description: Pixels are the humble bricks with which one can build cathedrals
