@@ -35,10 +35,8 @@ Por otro lado la mayoría necesitan rellenar el hueco entre tu producto y su nec
 
 No me creo las soluciones a corto plazo, es poco probable que un problema creado durante años se solucione en un par de días. Me creo más solucionar los problemas entendiéndolos en profundidad y buscando soluciones que ataquen al problema dependiendo de la urgencia o importancia, entendiendo el porqué.
 
-Dicho esto, el modelo que creo que puede ayudar a una empresa que tenga alguno de los problemas anterior es el siguiente: **trabajo 1 día a la semana in-situ, cerca del equipo, el resto de los días estoy disponible para preguntas puntuales, revisar el trabajo y preparar el siguiente día en persona.**
+Dicho esto, el modelo que creo que puede ayudar a una empresa que tenga alguno de los problemas anterior es el siguiente: **trabajo 1 día a la semana in-situ, cerca del equipo, el resto de los días estoy disponible para preguntas puntuales, revisar el trabajo y preparar el siguiente día en persona.** Puede que no te cuadre, podemos buscar otra formula.
 
-Estoy especialmente interesado en empresas B2B enfocadas a sacar valor del dato así que las daré prioridad.
-        
 Envíame un correo a **jsantfer@gmail.com** y hablamos de qué necesitas, pasta y demás cosas importantes.
 
 {% include footer2.html %}
