@@ -21,9 +21,9 @@ Y parece que sí porque te da un modelo con el que trabajar, cuando comienzas cu
 básico suele ser muy parecido y los retos son más bien sencillos. El framework te da ese subidón de
 "lo estoy partiendo", "voy a toda leche", te enamoras de él.
 
-Pero pronto se acaba la alegria cuando empiezas a modelar el negocio de verdad y ves que el  framework
+Pero pronto se acaba la alegría cuando empiezas a modelar el negocio de verdad y ves que el  framework
 es una pequeña ayuda, entonces intentas apalancarte en el framework como forma de solucionar todo, y
-termina por ser es el que marca todo: tu arquitectura, tus herramientas y hasta el como contratas.
+termina por ser es el que marca todo: tu arquitectura, tus herramientas y hasta el cómo contratas.
 
 
 ## Cuando ya no puedes salir de la trampa
@@ -40,7 +40,7 @@ sencillos se adaptan bien a lo que el framework te da.
 De mientras todas tus ofertas de trabajo ya tienen "empresa YYYY busca personas para desarrollar en
 XXX". Ya todas tus conversaciones son sobre el último plugin o el fork del framework. Toda tu
 tecnología está basada en XXX, Todos tus
-desarrolladores quieren ir a "XXX Con" en SF, donde todos los mayores expertos se reunen para
+desarrolladores quieren ir a "XXX Con" en SF, donde todos los mayores expertos se reúnen para
 enseñar las maravillas de XXX (ellos sí son listos, sí tienen una ventaja al crear la tecnología). Las voces que
 comentan lo complicado que es hacer algo con el framework son rápidamente acalladas, todas las
 bondades que hemos vendido se irían al traste.
@@ -59,7 +59,7 @@ en producción de forma robusta, resolviendo problemas dejará de usar algo nove
 lado normal en absolutamente todas las industrias. Debemos ser los únicos que no nos sentimos
 orgullosos de nuestro pasado)
 
-El buen desarrollador usa un framwork porque sabe lo que hay debajo, no para evitarlo.
+El buen desarrollador usa un framework porque sabe lo que hay debajo, no para evitarlo.
 
 Una buena empresa es buena porque se enfoca en resolver el problema porque el que le pagan y eso
 incluye desde el CEO hasta el desarrollador.
