@@ -1,7 +1,7 @@
 ---
 layout: post2
 published: true
-Odio los framework
+title: Odio los framework
 ---
 
 Los odio, y no porque me parezcan malos, los he usado, los uso y los usaré por el resto de mis días
