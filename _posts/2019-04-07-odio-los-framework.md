@@ -51,7 +51,7 @@ usar algo que todas las empresas tienen disponible.
 
 ## Huye de los desarrolladores de framework
 
-El que se vienen por un framework se irá por otro.
+Los que se vienen por un framework se irán por otro.
 
 Un buen desarrollador no mira al framework, mira a la forma de resolver los problemas con el
 framework, lo entiende, sabe cuando y como usarlo, entiende que la tecnología avanza y que su código funcionando
