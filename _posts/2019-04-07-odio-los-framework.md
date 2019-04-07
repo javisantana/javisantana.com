@@ -6,7 +6,8 @@ title: Odio los framework
 
 Los odio, y no porque me parezcan malos, los he usado, los uso y los usaré por el resto de mis días
 como programador. Un framework no deja de ser una forma más o menos cerrada de resolver un problema
-donde la mayoría de los casos de uso más o menos comunes han sido simplificados.
+donde la mayoría de los casos de uso más o menos comunes han sido simplificados. Nada tienen de malo
+y mucho de bueno.
 
 El gran problema viene cuando el framework es el foco.
 
@@ -23,13 +24,13 @@ básico suele ser muy parecido y los retos son más bien sencillos. El framework
 
 Pero pronto se acaba la alegría cuando empiezas a modelar el negocio de verdad y ves que el  framework
 es una pequeña ayuda, entonces intentas apalancarte en el framework como forma de solucionar todo, y
-termina por ser es el que marca todo: tu arquitectura, tus herramientas y hasta el cómo contratas.
+termina por ser el que marca todo: tu arquitectura, tus herramientas y hasta el cómo contratas.
 
 
 ## Cuando ya no puedes salir de la trampa
 
 El CTO o lead developer se ve acorralado porque sus desarrolladores dicen que XXX es mejor que lo
-que estamos usando ahora. "Si usasemos XXX todo irá mucho más rápido". Todo vale para si el
+que estamos usando ahora. "Si usasemos XXX todo irá mucho más rápido". Todo vale si el
 desarrollador está feliz, de otro modo se irá a la empresa que sí usa XXX. No te preocupes, no
 tardará en salir la voz que no entienda que la cultura de empresa pasa por no hablar de frameworks y
 sí de problemas y soluciones.
@@ -61,7 +62,7 @@ orgullosos de nuestro pasado)
 
 El buen desarrollador usa un framework porque sabe lo que hay debajo, no para evitarlo.
 
-Una buena empresa es buena porque se enfoca en resolver el problema porque el que le pagan y eso
+Una buena empresa es buena porque se enfoca en resolver el problema por el que le pagan y eso
 incluye desde el CEO hasta el desarrollador.
 
 
