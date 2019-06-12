@@ -1,0 +1,11 @@
+---
+layout: micro
+---
+{% for post in site.micro %}
+  {% if post.date %}
+  <div class="post">
+      <div>{{post.content}}</div>
+      <time>{{ post.date | date_to_string }}</time> · <a href="{{ post.url }}">#</a>
+  </div>
+  {% endif %}
+{% endfor %}
