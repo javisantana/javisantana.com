@@ -1,11 +1,14 @@
 ---
 layout: micro
 ---
-{% for post in site.micro %}
+
+{% assign micro_posts = site.micro| sort: 'date' | reverse %}
+{% for post in micro_posts %}
   {% if post.date %}
+  <a id="{{post.title}}"></a>
   <div class="post">
       <div>{{post.content}}</div>
-      <time>{{ post.date | date_to_string }}</time> · <a href="{{ post.url }}">#</a>
+      <time><a href="#{{post.title}}">{{ post.date | date_to_string }}</a></time> · <a href="{{ post.url }}">#</a> 
   </div>
   {% endif %}
 {% endfor %}
