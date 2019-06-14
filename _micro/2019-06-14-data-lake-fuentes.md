@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: Data Lake, parte II: las fuentes
+name: "Data Lake, parte II: las fuentes"
 ---
 
 ### Data Lake, parte II: las fuentes
@@ -24,10 +24,10 @@ Esto en una empresa "nativa digital" es complicado, imagina en un corporate dond
 
 Y aquí radica el principal y mayor problema de un data lake a nivel de organización. Así que toca hacer cosas como estas :
 
-0) Dejar de llamar al data lake "Data Lake" y empezar a llamarlo "servicios de datos"
-1) Hacer fácil que los equipos metan sus datos
-2) Hacer que los equipos sientan los datos como suyos aún dentro de un sitio común
-3) Hacer que los nuevos equipos/proyectos nazcan con los datos ya dentro del data lake 
+0. Dejar de llamar al data lake "Data Lake" y empezar a llamarlo "servicios de datos"
+1. Hacer fácil que los equipos metan sus datos
+2. Hacer que los equipos sientan los datos como suyos aún dentro de un sitio común
+3. Hacer que los nuevos equipos/proyectos nazcan con los datos ya dentro del data lake 
 
 
 
