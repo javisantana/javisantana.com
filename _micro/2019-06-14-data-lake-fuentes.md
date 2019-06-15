@@ -10,7 +10,7 @@ Nadie crea una empresa con base tecnológica (*) y dice "empecemos pensando en e
 
 Si fuese así lo primero que crearísmos sería un equipo de data services que nos diera servicio para que los desarrolladores (y otras partes de la empresa, claro) pudieran almacenar los datos ahí.
 
-Te imaginas tener un servicio donde un comercial conecte salesforce, una ingenería cree "as a service" una base de datos para el core de la aplicación que sustenta el negocio y que todo estuviera en el mismo sitio y se puediera relacionar. 
+Te imaginas tener un servicio donde un comercial conecte salesforce, una ingeniera cree "as a service" una base de datos para el core de la aplicación que sustenta el negocio y que todo estuviera en el mismo sitio y se puediera relacionar. 
 
 No hay que imaginarse mucho, AWS y Google llevan metiendo, poco a poco, todo su arsenal para que tus datos vivan allí y los consumas con sus, relativamente caros, servicios. De qué si no iba Amazon a darte S3 a un precio "tirado"?
 
