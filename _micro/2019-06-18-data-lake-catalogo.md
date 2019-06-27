@@ -4,7 +4,7 @@ published: true
 name: "Data Lake, parte II: las fuentes"
 ---
 
-### Data Lake, parte III: El catálogo
+## Data Lake, parte III: El catálogo
 
 
 Además de poder [importar datos de forma sencilla](/micro/2019-06-14-data-lake-fuentes.html) hay otro tema fundamental que es saber qué datos has importado.

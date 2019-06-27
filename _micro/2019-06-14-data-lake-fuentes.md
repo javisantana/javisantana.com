@@ -4,7 +4,7 @@ published: true
 name: "Data Lake, parte II: las fuentes"
 ---
 
-### Data Lake, parte II: las fuentes
+## Data Lake, parte II: las fuentes
 
 Nadie crea una empresa con base tecnológica (*) y dice "empecemos pensando en el data lake". Bueno, salvo que tu empresa sea de data lakes.
 
