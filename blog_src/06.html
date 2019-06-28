@@ -64,8 +64,8 @@
     ctx2.fillStyle = '#000';
     ctx2.strokeStyle = '#000';
         //#ctx.fillRect(0,0, 20, 20);
-    ctx2.font = 'bold 150px helvetica' 
-    ctx2.fillText("spainjs", (w>>1) - 290, HH);
+    ctx2.font = 'bold 120px helvetica' 
+    ctx2.fillText("TINYBIRD.CO", (w>>1) - 380, HH);
     ctx2.lineWidth= 5;
     ctx2.beginPath();
     ctx2.moveTo(0, HH);
@@ -76,7 +76,7 @@
     function water(x, y) {
       x = x>>0;
       y = y>>0;
-      return data[(4*(y*w + x)) ] > 0;
+      return data[(4*(y*w + x)) ] > 200;
     }
     ctx2.fillStyle = '#FFF';
     //ctx2.fillRect(0, 0, w, h);
@@ -103,8 +103,9 @@
     });
 
     window.addEventListener('touchstart', function(e) {
-      mousepos.x = e.clientX;
-      mousepos.y = e.clientY;
+      var v = e.touches[0]
+      mousepos.x = v.clientX;
+      mousepos.y = v.clientY;
       pressed = true;
     });
 
@@ -125,24 +126,26 @@
     var died = [];
     function update(i, p, dt) {
       p.vely += 9.8*dt;
-      p.x += p.velx*dt;
-      p.y += p.vely*dt;
-      if(!water(p.x, p.y)) {
-        var n = water(p.x - 1, p.y) + water(p.x + 1, p.y);
-        if(n < 0) {
-          p.velx *= 0.9;
-        } else if( n > 0) {
-          p.velx *= -0.9;
+      if (Math.abs(p.vely) > 0.7) {
+        p.x += p.velx*dt;
+        p.y += p.vely*dt;
+        if(!water(p.x, p.y + p.vely*dt)) {
+          var n = water(p.x - p.velx*dt, p.y) - water(p.x + p.velx*dt, p.y);
+          if(n < 0) {
+            p.velx *= 0.9;
+          } else if( n > 0) {
+            p.velx *= -0.9;
+          }
+          p.vely = -(0.5 + randf()*0.2)*p.vely;
+          //died.push(i);
         }
-        p.vely = -0.5*p.vely;
-        //died.push(i);
       }
       if(p.y > HH) {
         died.push(i);
       }
     }
     function render(c, p) {
-      c.fillRect(p.x, p.y, 2, 2);
+      c.fillRect(p.x - 2, p.y - 2, 4, 4);
     }
 
     ctx.fillStyle = 'rgba(0,0,0,0.5)';
@@ -152,7 +155,7 @@
       canvas.width = w;
       for(var i = 0; i < parts.length; ++i) {
         var p = parts[i];
-        update(i, p, 0.07);
+        update(i, p, 0.1);
         render(ctx, p);
       }
 
@@ -166,9 +169,9 @@
         //data = ctx2.getImageData(0, 0, w, h).data;
       }
       if(pressed) {
-        var c = 4;
+        var c = 10;
         while(c--) 
-          parts.push({x: mousepos.x, y: mousepos.y, velx: 30*randf(), vely:30*randf() });
+          parts.push({x: mousepos.x, y: mousepos.y, velx: 50*randf(), vely:30*randf() });
       }
       frame(loop);
     }
