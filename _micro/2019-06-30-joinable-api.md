@@ -51,7 +51,7 @@ Let's imagine you have a regular OLTP database like Postgres, it'd be nice to be
 
 ```sql
 SELECT * FROM MyTable 
-JOIN Service('billing service', 'transactions')
+JOIN Service('billingservice.com', 'transactions')
 ON ... 
 WHERE date = yesterday() ...
 ```
