@@ -6,6 +6,10 @@ name: Joinable API
 
 ## Joinable API
 
+TLDR: nowadays any software service depends on others. The problem is your data ends up being
+distributed and there is no easy way to join those different sources easily. I'm proposing a
+"joinable API" to fix that problem.
+
 ### Data lock-in
 
 We have been talking about the vendor lock-in for years, where once you start using a provider it's
@@ -42,7 +46,7 @@ documented data dumps and their regular service API (more on this in [this excel
 
 ### Tech solution
 
-Let's imagine you have a regular OLTP like Postgres, it'd be nice to do 
+Let's imagine you have a regular OLTP database like Postgres, it'd be nice to be able to do:
 
 ```sql
 SELECT * FROM MyTable 
@@ -51,8 +55,7 @@ ON ...
 WHERE date = yesterday() ...
 ```
 
-
-That's already supported by Postgres using FDW (and all databases have a way to fetch remote data)
+fetching remote data is already supported by Postgres using FDW (and all databases have a way to fetch remote data)
 but the problem is getting the data from the service.
 
 The service would need to provide:
