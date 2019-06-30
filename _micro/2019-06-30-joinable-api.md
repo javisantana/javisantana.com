@@ -41,8 +41,15 @@ documented data dumps and their regular service API.
 
 ### Tech solution
 
-Let's imagine you have a regular OLTP like Postgres, it'd be nice to do `SELECT * FROM MyTable JOIN
-Service('stripe', 'transactions')) on ... WHERE date = yesterday() ...`
+Let's imagine you have a regular OLTP like Postgres, it'd be nice to do 
+
+```sql
+SELECT * FROM MyTable 
+JOIN Service('stripe', 'transactions')) 
+ON ... 
+WHERE date = yesterday() ...
+```
+
 
 That's already supported by Postgres using FDW (and all databases have a way to fetch remote data)
 but the problem is getting the data from the service.
