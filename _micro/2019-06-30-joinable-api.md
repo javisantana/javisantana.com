@@ -12,8 +12,8 @@ We have been talking about the vendor lock-in for years, where once you start us
 nearly impossible to move to a different one. I think the software world is like that no matter the
 software you use: once your software is running on production changing it is a really expensive and painful task.
 
-But we at least we had data exporting tools so you could more or less get your data and import to
-another system. Today that's not totally true. Try to get all "your data" from your google analytics
+Before the explosion of SaaS providers we had data exporting tools so you could more or less get your data in a standard format and import to
+another system. Today that's not totally true: try to get all "your data" from your google analytics
 account. Don't worry, those providers have tools that can access your data easily.
 
 ### Hundred of services
@@ -29,15 +29,16 @@ That's good, you spend your time in the thing you provide more value instead of 
 Eventually, someone will ask a question like "hey, how many users do we have in our XXXX tier, have
 signed up 3 times during the last month and also have ...."
 
-So you either 1) use a platform that collects everything or 2) or a one that fetches data from all those services and put data in a place you can query. in any case, querying data from a third party service es is a pain. Here is the point where a lot of scrapping and "CSV file transfer" horror stories start.
+So you either 1) use a platform that collects everything or 2) or a one that fetches data from all those services and put data in a place you can query. in any case, querying data from a third party services is a pain. Here is the point where a lot of scrapping and "CSV file transfer" horror stories start.
 
 ### Joinable API
 
 Most of those operations are what we call [joins](https://en.wikipedia.org/wiki/Join_(SQL)). It's
 easy to do when all the data is in the same place but hard to do in a distributed system.
 
-Why don't we request to our service providers to have a Joinable API apart of full, easy to use and
-documented data dumps and their regular service API.
+So how do we keep those services and at the same time the possibility of using our data?
+why don't we request to our service providers to have a Joinable API apart of full, easy to use and
+documented data dumps and their regular service API (more on this in [this excellent talk](https://www.youtube.com/watch?v=NQ5_NnrBHjo))
 
 ### Tech solution
 
