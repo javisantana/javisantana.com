@@ -2,6 +2,7 @@
 layout: micro_post
 published: true
 name: Joinable API
+tags: en, api, data
 ---
 
 ## Joinable API
@@ -50,7 +51,7 @@ Let's imagine you have a regular OLTP database like Postgres, it'd be nice to be
 
 ```sql
 SELECT * FROM MyTable 
-JOIN Service('stripe', 'transactions')) 
+JOIN Service('billing service', 'transactions')
 ON ... 
 WHERE date = yesterday() ...
 ```
