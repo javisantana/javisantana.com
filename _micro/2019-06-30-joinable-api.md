@@ -34,7 +34,7 @@ That's good, you spend your time in the thing you provide more value instead of 
 Eventually, someone will ask a question like "hey, how many users do we have in our XXXX tier, have
 signed up 3 times during the last month and also have ...."
 
-So you either 1) use a platform that collects everything or 2) or a one that fetches data from all those services and put data in a place you can query. in any case, querying data from a third party services is a pain. Here is the point where a lot of scrapping and "CSV file transfer" horror stories start.
+So you either 1) use a platform that collects everything or 2) a one that fetches data from all those services and put data in a place you can query. in any case, querying data from a third party services is a pain. Here is the point where a lot of scrapping and "CSV file transfer" horror stories start.
 
 ### Joinable API
 
