@@ -21,7 +21,7 @@ Imaginaos editar directamente esos ficheros en producción, es decir, cuando gua
 
 Obviamente hay muchas razones para no hacer esto, pero así se hacia hace años y es el en lo que tienes que pensar cuando tu deploy tarda 30 minutos: el baseline son unos milisegundos, así que todo lo lejos que estés de milisegundos lo estás haciendo peor que hace 25 años.
 
-Digo obviamente pero yo no tengo tan claro que las herramientas actuales de desarrolladores no sean "caballos más rápidos" y no coches como diría Ford. Lo mejor que he visto últimamente en esta línea [es esto](https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671), pero esto para otro post.
+Digo obviamente pero yo no tengo tan claro que las herramientas actuales de desarrolladores no sean "caballos más rápidos" y no coches como diría Ford. Lo mejor que he visto últimamente en esta línea [es esto](https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671) y [glitch](https://glitch.com/), que está empezando de juguete pero "ojo lluvia" que viene de gente que sabe como hacer producto web. Pero este tema da para otro post.
 
 Nos hemos acostumbrado a que las cosas vayan lentas a cambio de unas promesas que en muchos casos no son ni media verdad.
 
