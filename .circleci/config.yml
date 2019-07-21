@@ -8,9 +8,9 @@ jobs:
       - run: |
           export DIGEST_BRANCH=digest_`date +"%d-%m-%Y"`
           git branch -c $ >DIGEST_BRANCH
-          echo "---\nlayout: micro_post\npublished: true\nname: Javisantana.com, resumen `date +"%d-%m-%Y"`\n---\n" >> _disgest/$DIGEST_BRANCH.md
-          git log --since=1.week --reverse --grep="^D:" --pretty=format:'---## %s%n%b ' >> _disgest/$DIGEST_BRANCH.md
-          git add _disgest/$DIGEST_BRANCH.md
+          echo "---\nlayout: micro_post\npublished: true\nname: Javisantana.com, resumen `date +"%d-%m-%Y"`\n---\n" >> _digest/$DIGEST_BRANCH.md
+          git log --since=1.week --reverse --grep="^D:" --pretty=format:'---## %s%n%b ' >> _digest/$DIGEST_BRANCH.md
+          git add _digest/$DIGEST_BRANCH.md
           git ci -m "digest for `date +"%d-%m-%Y"`"
           git request-pull $DIGEST_BRANCH https://github.com/javisantana/javisantana.com
 
