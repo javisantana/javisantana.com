@@ -32,3 +32,5 @@ defaults:
 collections:
     micro:
         output: true
+    digest:
+        output: true
