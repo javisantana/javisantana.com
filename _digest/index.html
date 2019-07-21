@@ -1,0 +1,14 @@
+---
+layout: micro
+---
+
+{% assign micro_posts = site.digest| sort: 'date' | reverse %}
+{% for post in digest_posts %}
+  {% if post.date %}
+  <a id="{{post.title}}"></a>
+  <div class="post">
+      <div>{{post.content}}</div>
+      <time><a href="#{{post.title}}">{{ post.date | date_to_string }}</a></time> · <a href="{{ post.url }}">#</a> 
+  </div>
+  {% endif %}
+{% endfor %}
