@@ -17,8 +17,7 @@ echo "---" >> _digest/$DIGEST_BRANCH.md
 echo "" >> _digest/$DIGEST_BRANCH.md
 echo "# Resumen semana" >> _digest/$DIGEST_BRANCH.md
 
-git log --since=1.week --reverse --pretty=format:'## %s%n%b ' >> _digest/$DIGEST_BRANCH.md
-#--grep="^D:
+git log --since=1.week --reverse --grep="^D:" --pretty=format:'## %s%n%b ' >> _digest/$DIGEST_BRANCH.md
 
 git add _digest/$DIGEST_BRANCH.md
 git commit -m "digest for `date +"%d-%m-%Y"`"
