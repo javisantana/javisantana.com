@@ -1,6 +1,11 @@
 #!/bin/bash
 
 export DIGEST_BRANCH=digest_`date +"%d-%m-%Y"`
+
+# configure git
+git config --global user.email "no@javisantana.com"
+git config --global user.name "Javi santana bot"
+
 git checkout -b $DIGEST_BRANCH
 
 # create the markdown with the digest
