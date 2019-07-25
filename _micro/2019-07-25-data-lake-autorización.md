@@ -16,9 +16,10 @@ Pero ahora podemos hacer algo mejor que tener una sola puerta para la cueva, pod
 de autorización robustos:
 
 - Tenemos sistemas de directorio donde tenemos registradas y agrupadas a las personas que forman parte de la organización
-- Deberíamos poder decir quién accede a qué con granularidad de fila/documento. Y esto a nivel de grupos y/o personas. Esto está resuelto por absolutamente todas las bases de datos decentes hace años.
+- Deberíamos poder decir quién accede a qué con granularidad de fila/documento. Y esto a nivel de grupos y/o personas. Esto está resuelto por absolutamente todas las bases de datos decentes hace años. Y si el acceso es temporal, pues durante un tiempo. Y si el acceso tiene que ser a datos tokenizados, que así sea.
 - En la organización no solo hay personas, hay otra cosa llamada "software" que acceden al sistema, es decir, aplicaciones que usan estos datos (de hecho debería ser lo habitual). Estos bots/applicaciones deberían también estar registradas y gestionados. Hay cosas como oauth que podrían resultar muy útil aquí (mira como por ejemplo [google da acceso a los diferentes datos de un usuario](https://developers.google.com/identity/protocols/googlescopes))
-- A veces el acceso es temporal. Para qué dar acceso más tiempo del que necesitas
+
+En este último punto es donde se suele pinchar si la empresa tiene cierto recorrido: es complicado entender que hay actores no humanos, que, de hecho, son los más importantes, porque como dice  [Vicki Boykis](https://twitter.com/vboykis), los humanos estamos para [dar significado a los datos](http://veekaybee.github.io/senior-dev-day-talk/#/16), para procesarlos ya lo hacen mejor las máquinas.
 
 
 [1] Evita como puedas dar acceso a la base de datos de producción, por mucha prisa que tengas.
