@@ -17,9 +17,8 @@ de autorización robustos:
 
 - Tenemos sistemas de directorio donde tenemos registradas y agrupadas a las personas que forman parte de la organización
 - Deberíamos poder decir quién accede a qué con granularidad de fila/documento. Y esto a nivel de grupos y/o personas. Esto está resuelto por absolutamente todas las bases de datos decentes hace años.
-- A veces el acceso es temporal.
-- En la organización no solo hay personas, hay otras cosas llamadas software que acceden al sistema. Estos bots deberían también estar registradas y gestionadas. Hay cosas como oauth que podrían resultar muy útil aquí (mira como por ejemplo [google da acceso a los diferentes datos de un usuario](https://developers.google.com/identity/protocols/googlescopes))
-
+- En la organización no solo hay personas, hay otra cosa llamada "software" que acceden al sistema, es decir, aplicaciones que usan estos datos (de hecho debería ser lo habitual). Estos bots/applicaciones deberían también estar registradas y gestionados. Hay cosas como oauth que podrían resultar muy útil aquí (mira como por ejemplo [google da acceso a los diferentes datos de un usuario](https://developers.google.com/identity/protocols/googlescopes))
+- A veces el acceso es temporal. Para qué dar acceso más tiempo del que necesitas
 
 
 [1] Evita como puedas dar acceso a la base de datos de producción, por mucha prisa que tengas.
