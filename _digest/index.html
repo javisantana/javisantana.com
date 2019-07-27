@@ -2,7 +2,7 @@
 layout: micro
 ---
 
-{% assign micro_posts = site.digest| sort: 'date' | reverse %}
+{% assign digest_posts = site.digest| sort: 'date' | reverse %}
 {% for post in digest_posts %}
   {% if post.date %}
   <a id="{{post.title}}"></a>
