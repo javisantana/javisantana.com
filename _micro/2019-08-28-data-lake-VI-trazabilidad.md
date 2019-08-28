@@ -1,3 +1,8 @@
+---
+layout: micro_post
+published: true
+name: "Data lake VI: trazabilidad"
+---
 
 ## Data lake VI: trazabilidad
 
