@@ -8,7 +8,8 @@ layout: none
         <description>{{ site.description }}</description>
         <link>{{ site.url }}</link>
         <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-        {% for post in site.digest limit:10 %}
+        {% assign posts = site.digest | sort: 'date' | reverse %}
+        {% for post in posts limit:10 %}
     {% if post.date %}
             <item>
                 <title>{{ post.title }}</title>

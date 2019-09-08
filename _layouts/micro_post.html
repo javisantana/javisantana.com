@@ -3,3 +3,15 @@ layout: micro
 ---
 
 <div class="post">{{content}}</div>
+
+<div class="post">
+<h3>Otros post que tal vez te interesen</h3>
+<ul>
+{% assign micro_posts = site.micro| sort: 'date' | reverse %}
+{% for post in micro_posts limit:3 %}
+  {% if post.date %}
+  <li><a href="{{post.url}}">{{post.title}}</a>
+  {% endif %}
+{% endfor %}
+</ul>
+</div>
