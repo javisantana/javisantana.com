@@ -16,13 +16,19 @@ function tracker(token, account_name, global_function_name, host) {
   }
   var session = dateFormatted()
   setInterval(upload_events, 2000);
-  var events = [];
+  var events = JSON.parse(window.localStorage.getItem("events") || '[]')
+
   function upload_events() {
     if (events.length > 0) {
-      tinybird(token, host).datasource('tracker_javisantanacom').append(events)
-      events = []
+      tinybird(token, host).datasource('tracker_javisantanacom').append(events).then((err) => {
+        if (err && !err.error) {
+          events = []
+          window.localStorage.setItem("events", '[]')
+        }
+      })
     }
   }
+  tracker.flush = upload_events
 
   window[global_function_name] = function() {
     var ev = [dateFormatted(), session, account_name, user_cookie, document.location.href, navigator.userAgent].concat(Array.prototype.slice.call(arguments))
@@ -31,6 +37,12 @@ function tracker(token, account_name, global_function_name, host) {
     }
     events.push(ev)
   };
+  function die() {
+    window.localStorage.setItem("events", JSON.stringify(events))
+    upload_events()
+  }
+  window.addEventListener("beforeunload", die)
+  window.addEventListener("unload", die, false);
 }
 
 /**
@@ -77,6 +89,10 @@ window.addEventListener('click', function (e) {
       return el.nodeName + (el.className ? '.' + el.className : '');
     }
     return "root"
-  }).reverse().join('/'))
+  }).reverse().join('/'), e.srcElement.href ? new String(e.srcElement.href): '')
+ // exiting
+  if (e.srcElement.href) {
+    tracker.flush()
+  }
 })
 </script>
