@@ -14,6 +14,21 @@
       header {
         margin: 20px;
       }
+      header a {
+      }
+      header h1 {
+        color: #333;
+        margin-top: 60px;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      header h2 {
+        font-size: 16px;
+        font-weight: normal;
+        color: #555;
+      }
       .post {
         color: #333;
         line-height: 1.5em;
@@ -42,8 +57,11 @@
         margin: 80px 0 100px 0;
         font-size: 43px;
         font-style: italic
-
       }
+      .post h2:first-of-type  {
+        border-top: none;
+      }
+
       .post h3 {
         font-size: 25px;
         line-height: 1.3em;
@@ -66,7 +84,8 @@
     <div id="content">
     <header>
       <a href="/">javisantana.com</a> · <a href="/micro/feed.xml">rss</a> · <a href="/digest/feed.xml">rss resumen semanal</a>
-      <p><i>"Micro"</i> es un pequeño blog (<b>2 minutos</b> de lectura por post), sin ruido, sin distracciones donde escribo las cosas que me gustaría leer. <a href="https://tinyletter.com/javisantana/subscribe">Recibe un correo cada fin de semana con las actualizaciones y "comentarios del director"</a></p>
+      <h1>Micro</h1>
+      <h2>Esto es un pequeño blog (2 minutos de lectura por post), sin ruido, sin distracciones donde escribo las cosas que me gustaría leer. <a href="https://tinyletter.com/javisantana/subscribe">Recibe un correo</a> cada fin de semana con las actualizaciones y "comentarios del director"</h2>
     </header>
     {{ content }}
     </div>
