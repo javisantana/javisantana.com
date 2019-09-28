@@ -17,7 +17,7 @@ Por poner un ejemplo, querríamos disponer de información para servir la analí
 
 Y claro, que un tipo de carga no afecte a la otra. Y que además este actualizada en tiempo real con nuestro sistema productivo.
 
-Así que, de una y otra forma estamos pidiendo que el data lake sea capaz de ser tan bueno como postres en carga transaccional, tan bueno como spark para hacer análisis en batch, tan rápido como hbase y siendo capaces de tener capacidades de analítica en tiempo real como kx o Clickhouse.
+Así que, de una y otra forma estamos pidiendo que el data lake sea capaz de ser tan bueno como postgres en carga transaccional, tan bueno como spark para hacer análisis en batch, tan rápido como hbase y siendo capaces de tener capacidades de analítica en tiempo real como kx o Clickhouse.
 
 Y obviamente esto es imposible de tener al mismo tiempo, de ahí que tengamos que replicar los datos.
 
