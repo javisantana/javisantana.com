@@ -11,12 +11,12 @@ un festival de música muy bien vendido pero muy mal ejecutado que resultó ser 
 
 A medida que van pasando las entrevistas a la gente involucrada tenía una sensación familiar, la
 típica de "estoy metido en un agujero del que sé que no se sale". Los que trabajamos haciendo en vez
-de pensando en hacer sabemos perfectamente de que hablo. Tenemos ese sexto sentido de "esto no se
+de pensando en hacer sabemos perfectamente de qéé hablo. Tenemos ese sexto sentido de "esto no se
 puede hacer" que a veces nos falla pero cuando da fuerte de verdad, lo sabes.
 
 En mi vida he estado en algunas de esas, pero recuerdo dos, una de ellas hace 15 años donde un
 lunático pensó que se podía hacer un sistema de domótica en un par de semanas y todos fuimos
-arratrados allí. La segunda, de la cual fui además parte de los iluminados que vendían el sueño (y posiblemente el más culpable porque sabía que no era posible), fue en CARTO cuando decidimos que en 6 meses se podría reimplementar el 80% de los construído en años y además
+arrastrados allí. La segunda, de la cual fui además parte de los iluminados que vendían el sueño (y posiblemente el más culpable porque sabía que no era posible), fue en CARTO cuando decidimos que en 6 meses se podría reimplementar el 80% de los construído en años y además
 añadir más features.
 
 Esto no es un consejo para todo el mundo, pero si volviese atrás, en las dos ocasiones, me hubiese
@@ -56,7 +56,7 @@ Por aquí la [penúltima entrega](http://javisantana.com/micro/2019-09-28-data-l
 
 Posiblemente ni te interesen los coches ni la mecánica, pero me gustaría que pudiesemos hablar de
 tecnología con la pasíón que [este hombre habla del primer coche tracción delantera que bajó de 9
-segundos en el cuarto de milla](https://www.youtube.com/watch?v=JElRZZ8PAvM) (un coche de calle pontente tarda entre 15 y 17 segundos en hacer
+segundos en el cuarto de milla](https://www.youtube.com/watch?v=JElRZZ8PAvM) (un coche de calle potente tarda entre 15 y 17 segundos en hacer
 402m)
 
 Tener claro lo que se quiere conseguir, mostrar sin tapujos qué decisiones se tomaron para resolver
