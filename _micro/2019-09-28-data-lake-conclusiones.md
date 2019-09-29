@@ -30,5 +30,6 @@ información esté disponible y a eso se puede llegar por muchos caminos.
 Y por último, empieza por la cultura y no por la tecnología, si tus empleados no saben nada de datos
 (formatos, como se almacenan, distribuyen, consumen...) y no hay unas guías clarísimas que pasen de
 generación en generación (eso es la cultura, no?) cualquier iniciativa será en vano y terminarán
-usando la tecnología que se lo ponga más fácil (en este caso en la nube)
+usando la tecnología que se lo ponga más fácil (en este caso en la nube) y lo peor, seguirá habiendo
+los silos generados para mantener un puesto de trabajo.
 
