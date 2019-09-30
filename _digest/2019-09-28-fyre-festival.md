@@ -60,7 +60,8 @@ segundos en el cuarto de milla](https://www.youtube.com/watch?v=JElRZZ8PAvM) (un
 402m)
 
 Tener claro lo que se quiere conseguir, mostrar sin tapujos qué decisiones se tomaron para resolver
-un problema (en vez de darle a la palanca del marketing y tapar lo que realmente es interesante) (la
+un problema en vez de darle a la palanca del marketing y tapar lo que realmente es interesante (en
+el video la
 limitación del data logger),
 hablar de los problemas que encontraron por el camino (la suspensión delantera), los problemas que no resolvieron (las roturas de la transmisión en la salida), etc, etc. son las cosas que me gustaría ver en nuestro día a día.
 
