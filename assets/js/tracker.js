@@ -78,7 +78,7 @@ function getCookie(name) {
 }
 
 tracker('p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICI3ZTc1ZTI1NC02MjJkLTRiMTctYjE1MC02NjVkMmUyYjZkZjUifQ.IzKCxRueVOJij1nZtD5GNyF1Cn5cqQx9TpaerqrivKA', 'main', '_tracker', 'https://api.tinybird.co')
-_tracker('pageload')
+_tracker('pageload', document.referrer)
 
 window.addEventListener('click', function (e) {
   _tracker('click', e.x, e.y, e.path.map(function (el) {
