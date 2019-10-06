@@ -1,6 +1,6 @@
 ---
 layout: micro_post
-published: false
+published: true
 name: Cómo elegimos la tecnología en Tinybird
 ---
 
