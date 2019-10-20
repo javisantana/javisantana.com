@@ -5,7 +5,7 @@ name: El complejo del corporate
 ---
 
 ## El complejo del corporate
-He sido muy muy crítico con el corporate durante mi vida profesional, lo sigo siendo, pero últimamente al mismo tiempo trato de entender el porqué están donde están. Después de todo no se consigue facturar cientos o miles de millones de un día para otro ni por un golpe de suerte.
+He sido muy muy crítico con el corporate durante mi vida profesional, lo sigo siendo, pero últimamente al mismo tiempo trato de entender el porqué están donde están. Después de todo no se consigue facturar cientos o miles de millones de un día para otro por un golpe de suerte.
 
 El corporate sigue teniendo cosas malas no, malísimas: software de pésima calidad (la mayor parte de
 veces externalizadas) miles de personas que no saben nada y a las que lo de la transformación digital les
