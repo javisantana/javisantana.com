@@ -2,6 +2,7 @@
 ## 01 - loading JSON
 
 [code](01.html)
+[live](http://javisantana.com/data_vis_workshop/01.html)
 
 ```js
  async function run() {
@@ -16,6 +17,7 @@ run()
 ## 02 - Rendering a square
 
 [code](01.html)
+[live](http://javisantana.com/data_vis_workshop/02.html)
 
 
 ```js
@@ -40,6 +42,7 @@ content.appendChild(s)
 ## 03 - Rendering an element
 
 [code](03.html)
+[live](http://javisantana.com/data_vis_workshop/03.html)
 
 ```js
     var content = document.getElementById('content')
@@ -54,6 +57,7 @@ content.appendChild(s)
 ## 04 - rendering all
 
 [code](04.html)
+[live](http://javisantana.com/data_vis_workshop/04.html)
 
 ```js
 var H = 20
@@ -75,6 +79,7 @@ we see some missalignment
 ## 05 - fixing missing days
 
 [code](05.html)
+[live](http://javisantana.com/data_vis_workshop/05.html)
 
 ```js
 var dates = {}
@@ -93,6 +98,7 @@ for (var day = 0; day < 365; ++day) {
 ## 06 - adding some text
 
 [code](06.html)
+[live](http://javisantana.com/data_vis_workshop/06.html)
 
 ```js
 var text = document.createElement('div')
@@ -107,6 +113,7 @@ estacion_div.appendChild(text)
 ## 07 - adding some color
 
 [code](07.html)
+[live](http://javisantana.com/data_vis_workshop/07.html)
 
 ```js
 function color(v) {
@@ -126,6 +133,7 @@ function color(v) {
 ## 08 - improving the color
 
 [code](08.html)
+[live](http://javisantana.com/data_vis_workshop/08.html)
 
 ```js
 function color(v) {
