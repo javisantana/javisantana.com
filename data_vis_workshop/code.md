@@ -1,6 +1,8 @@
 
 ## 01 - loading JSON
 
+[code](01.html)
+
 ```js
  async function run() {
       const url = 'https://api.tinybird.co/v0/pipes/madrid_no2.json?token=p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICJkOTYxMjk2YS1mZTllLTQ2MzEtYTJiMy02OTA1N2Y5M2RmODcifQ.NZqRDFnFQWu4ylTCVyLfQ8LGt0KN2JR6ILSANmSObBM'
@@ -12,6 +14,9 @@ run()
 ```
 
 ## 02 - Rendering a square
+
+[code](01.html)
+
 
 ```js
 function square(x, y, w, h, c) {
@@ -30,9 +35,12 @@ function square(x, y, w, h, c) {
 var s = square(0,0, 100, 100, '#000')
 var content = document.getElementById('content')
 content.appendChild(s)
-``
+```
 
 ## 03 - Rendering an element
+
+[code](03.html)
+
 ```js
     var content = document.getElementById('content')
     var estacion = data.data[0]
@@ -44,6 +52,8 @@ content.appendChild(s)
 ```
 
 ## 04 - rendering all
+
+[code](04.html)
 
 ```js
 var H = 20
@@ -64,6 +74,8 @@ we see some missalignment
 
 ## 05 - fixing missing days
 
+[code](05.html)
+
 ```js
 var dates = {}
 for (var [i, day] of Object.entries(estacion.days)) { 
@@ -80,6 +92,8 @@ for (var day = 0; day < 365; ++day) {
 
 ## 06 - adding some text
 
+[code](06.html)
+
 ```js
 var text = document.createElement('div')
 text.style.display = 'inline-block';
@@ -91,6 +105,8 @@ estacion_div.appendChild(text)
 ```
 
 ## 07 - adding some color
+
+[code](07.html)
 
 ```js
 function color(v) {
@@ -108,6 +124,8 @@ function color(v) {
 ```
 
 ## 08 - improving the color
+
+[code](08.html)
 
 ```js
 function color(v) {
