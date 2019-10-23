@@ -16,7 +16,7 @@ run()
 
 ## 02 - Rendering a square
 
-[code](01.html) ·
+[code](02.html) ·
 [live](http://javisantana.com/data_vis_workshop/02.html)
 
 
