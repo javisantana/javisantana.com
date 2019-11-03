@@ -21,7 +21,7 @@ Así que cada vez que veo alguien que se entretiene en mirar qué hay debajo, es
 Nunca en mi vida me he arrepentido de haber invertido tiempo en entender como funciona algo, de hecho es posiblemente las mejores inversiones a largo plazo que he hecho. No hay que ser un 10x para hacerlo, ni si lo haces no te convierte en superhéroe, pero necesitamos gente que lo haga.
 
 
-## Bonus track
+### Bonus track
 
 Relacionado con lo anterior [esta charla](https://www.youtube.com/watch?v=MC1EKLQ2Wmg) donde explica como muchas de las cosas que damos por asumidas sobre el rendimiento del hardware actual, no son ciertas y solo basta con mirar lo que hay debajo. En esa línea el famoso [You are doing it wrong](https://queue.acm.org/detail.cfm?id=1814327) del creador de Varnish.
 
