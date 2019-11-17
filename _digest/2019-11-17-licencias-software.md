@@ -4,6 +4,8 @@ published: true
 name: Licencias de software
 ---
 
+##  Licencias de software
+
 Hace unos meses me escribe de una empresa para echarles un cable para entender si Clickhouse tenía sentido en su plataforma. Para los que no me hayáis escuchado hablar de Clickhouse (y es raro) es una base de datos analítica, no muy conocida, que tiene la mejor tecnología de datos que he visto en años, desarrollada por Yandex, el Google ruso (y este dato es importante para el devenir del post)
 
 Los rusos son gente hecha de otra pasta a nivel de desarrollo. Mi impresión es que son así de bestias por su formación matemática heredada de la cultura que se forjó en la unión soviética (*) (a la fuerza, pero no entraremos en el cómo). Y este párrafo es pura percepción personal probablemente influída porque últimamente hablo con algunos rusos muy listos, pero seguramente sean tan buenos como los españoles :)
@@ -12,7 +14,7 @@ Si echas un ojo al software que usamos todos los días hay algo ruso de por medi
 
 Bueno, esta empresa de la que no diré el nombre, pero con un equipo técnico de los más interesantes del panorama startup español, baraja resolver el problema con Clickhouse (entre otros) con un criterio exclusivamente técnico: buscan arreglar el problema con la mejor solución. Pero a la semana del primer correo me escriben de nuevo diciéndome que algunos de sus clientes les habían comentado que usar Clickhouse es un "no" por ser ruso (también hablaban de software chino) y por tanto su proyecto tendría que ir por otro camino con la consecuente consternación del equipo.
 
-No soy abogado y seguro que tienen razones legales buenísimas para hacer eso, pero también sé que esos clientes deberían buscar asesoría técnica inmediatamente.
+No soy abogado y seguro que tienen razones legales o de cualquier otro tipo buenísimas para hacer eso, pero también sé que esos clientes deberían buscar asesoría técnica inmediatamente.
 
 Lo habitual es que cuando tienes una empresa de VC detrás estén muy preocupados por un "exit". Una de las cosas que podría joder un "exit" es la propiedad intelectual del código, imaginate que has usado código de vaya usted a saber quien y cuando vendes tu empresa reclamen su parte, por eso una de las cosas fundamentales que miran es si tu código usa librerias con licencias virales (cómo GPL) o restrictivas. O incluso uses código sin licencia de un menda de GitHub (ahora entenderás el porqué mucha gente pide en tantos repos poner la licencia). [Aquí hay una lista de cosas que un VC suele mirar en una due diligence](https://twitter.com/javisantana/status/1136912731599253504)
 
