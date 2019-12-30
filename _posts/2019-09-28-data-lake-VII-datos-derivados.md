@@ -4,8 +4,6 @@ published: true
 name: "Data lake VII: datos derivados"
 ---
 
-## Data lake VII: datos derivados
-
 
 No olvidemos que el objetivo final del data lake es poner a disposición de quien necesite la información de la forma que necesitan consumirla. Es decir, todo lo que he escrito anteiormente no deja de ser grasa, lo importante es poner a disposición la información
 

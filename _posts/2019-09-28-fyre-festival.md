@@ -1,10 +1,8 @@
 ---
 layout: micro_post
 published: true
-name: Javisantana.com, Fyre festival
+name: Fyre festival
 ---
-
-## Fyre festival
 
 El otro día veía [Fyre](https://www.netflix.com/es/title/81035279) en Netflix, un documental sobre
 un festival de música muy bien vendido pero muy mal ejecutado que resultó ser un desastre.

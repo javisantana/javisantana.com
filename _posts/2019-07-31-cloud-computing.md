@@ -4,8 +4,6 @@ published: true
 name: "Cloud computing"
 ---
 
-## Cloud computing
-
 Hace ya unos años se empezó a hablar de cloud computing. 
 
 Para los nativos digitales poder tener máquinas bajo demanda es lo lógico. Para empresas donde los desarrolladores tenían que decir 6 meses antes que máquinas iban a necesitar para poder pedirlas, instalarlas y demás era la panacea.

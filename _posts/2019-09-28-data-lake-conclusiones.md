@@ -4,8 +4,6 @@ published: true
 name: "Data lake (y VIII): Conclusiones"
 ---
 
-## Data lake (y VIII): Conclusiones
-
 Si has llegado hasta aquí y has leído todos los capítulos verás que el Data Lake es el sueño de cualquier empresa media grande. Un sitio centralizado donde se puede consumir de forma uniforme toda la información del sistema.
 
 Bien, es tan soñado que es una utopía si tu empresa no ha arrancado así desde cero (y si tiene cierto éxito, creeme, empezará a haber ramificaciones de los datos por aquello de la agilidad)

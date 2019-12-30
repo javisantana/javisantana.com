@@ -5,8 +5,6 @@ name: Joinable API
 tags: en, api, data
 ---
 
-## Joinable API
-
 TLDR: nowadays any software service depends on others. The problem is your data ends up being
 distributed and there is no easy way to join those different sources easily. I'm proposing a
 "joinable API" to fix that problem.

@@ -4,8 +4,6 @@ published: true
 name: Cómo elegimos la tecnología en Tinybird
 ---
 
-## Cómo elegimos la tecnología en Tinybird
-
 Creo mucho en que la mayoría de empresas de tecnología deberían empezar con un servidor de 30€ al mes, con un stack basado en PHP (o unos ficheros HTML y algo como firebase) y en el que el equipo técnico, trabajando mano a mano con negocio, vaya editando directamente en producción hasta tener market fit. Rompe absolutamente todas las buenas prácticas, pero es interesante recordar dos cosas:
 
 1) Tarde o temprano tirarás el primer código (así que cuanto antes mejor)

@@ -4,7 +4,6 @@ published: true
 name: "Data lake VI: trazabilidad"
 ---
 
-## Data lake VI: trazabilidad
 
 Hay dos momentos en los cuales quieres saber lo que está pasando en tu sistema: cuando lo estás integrando y sobretodo, cuando pasa algo malo.
 

@@ -15,7 +15,7 @@ body {
 }
 
 html {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Georgia";
   font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -69,6 +70,7 @@ h4, h5, h6 {
 }
 
 p {
+  font-size: 1.1em;
   margin: 0 0 1rem;
   font-weight: 400;
 }
@@ -86,16 +88,23 @@ dt {
 dd {
   margin-bottom: .5rem;
 }
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+}
 
 ul {
   padding-left: 1em;
   
   li {
+    font-size: 1.1em;
     margin-bottom: .75rem;
   }
   
   ul,
   ol {
+    font-size: 1.1em;
     margin-top: .25rem;
     margin-bottom: .5rem;
     margin-left: 1em;
@@ -107,6 +116,7 @@ ol {
   padding-left: 0.0em;
   
   li {
+    font-size: 1.1em;
     margin-bottom: .75rem;
   }
   
@@ -274,6 +284,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .masthead {
+  background: #FFF;
 
   margin-bottom: 3.5em;
   &-title {
@@ -358,16 +369,31 @@ tbody tr:nth-child(odd) th {
 
 .post {
   &-title {
-    margin-bottom: .25rem;
+    margin-bottom: 1.25rem;
   }
   &-date {
     margin-bottom: 2rem;
     font-size: .75rem;
     text-transform: uppercase;
   }
+  margin-bottom: 6em;
+  border-bottom: 1px solid #222;
+  ul.social-icons {
+    float: right;
+      list-style: none;
+  }
+  ul.social-icons svg {
+    width: 25px;
+  }
+  ul.social-icons li {
+    float: left;
+    margin-right: 12px;
+    padding: 0;
+ }
 }
 
 .list {
+
   &-post-title {
     margin-bottom: .25rem;
     

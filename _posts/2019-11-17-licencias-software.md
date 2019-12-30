@@ -1,10 +1,9 @@
 ---
-layout: micro_post
+layout: post2
 published: true
 name: Licencias de software
 ---
 
-##  Licencias de software
 
 Hace unos meses me escribe de una empresa para echarles un cable para entender si Clickhouse tenía sentido en su plataforma. Para los que no me hayáis escuchado hablar de Clickhouse (y es raro) es una base de datos analítica, no muy conocida, que tiene la mejor tecnología de datos que he visto en años, desarrollada por Yandex, el Google ruso (y este dato es importante para el devenir del post)
 

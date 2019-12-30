@@ -4,8 +4,6 @@ published: true
 name: Los fundamentos
 ---
 
-## Los fundamentos
-
 Día a día nos pasamos en la oficina de Tinybird (amablemente proporcionada por Google Campus) discutiendo sobre cachés, índices de base de datos, optimización de lectura en función de la compresión, como funcionaría el sistema en distribuído en función de que datos... nos gusta entender como funciona incluso aunque no sea totalmente necesario.
 
 El 99% de negocios les importa poco ese tipo de cosas, y así está bien, con saber que instalando el framework y usando su API lo tienes solucionado o usando la receta es muchísimo más que suficiente. Hay cientos de miles de negocios que no saben lo que corre por debajo de lo que usan y así debe ser. A nadie se le ocurre tener que saber como funciona un coche para poder conducirlo. De hecho la humanidad no avanzaría si esto no fuese así, nos basamos en el conocimiento que otros ya concentraron.
