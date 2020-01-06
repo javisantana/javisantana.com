@@ -3,7 +3,7 @@ layout: default2
 ---
 {% include header_small.html %}
 <div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title">{% if page.name %}{{page.name}} {% else %} {{page.title}} {% endif %}</h1>
   {{ content }}
   <div class="post-date">
     <time><a href="{{site.url}}{{post.url}}">#</a>{{ page.date | date_to_string }}</time>

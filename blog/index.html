@@ -16,7 +16,7 @@ pagination:
 
 {% for post in paginator.posts %}
 <div class="content post">
-  <h1 class="post-title">{{ post.title }}</h1>
+  <h1 class="post-title">{% if post.name %}{{post.name}} {% else %} {{post.title}} {% endif %}</h1>
   {{ post.content }}
   <div class="post-date">
     <time><a href="{{site.url}}{{post.url}}">#</a>· {{ post.date | date_to_string }}</time>
