@@ -5,9 +5,9 @@ name: Repaso a una década
 ---
 
 
-En 2010 empezaba a venir por Madrid a algunas conferencias, la mayoría de ellas eran sobre Rails, el framework web que ya no mola, que por aquel entonces estaban empezando a despuntar (gracias a aquel maravilloso [video-demo](https://www.youtube.com/watch?v=Gzj723LkRJY) de DHH del que tenemos tanto que aprender). En aquel entonces fue un soplo de aire fresco, gente que le gustaba lo que hacía, que compartía sin pensar en el retorno, lejos de la cast y lo rancio del desarrollo que había visto hasta esos días. Me empezaban a conocer por el "fulano de los tractores".
+En 2010 empezaba a venir por Madrid a algunas conferencias, la mayoría de ellas eran sobre Rails, el framework web que ya no mola, que por aquel entonces estaban empezando a despuntar (gracias a aquel maravilloso [video-demo](https://www.youtube.com/watch?v=Gzj723LkRJY) de DHH del que tenemos tanto que aprender). En aquel entonces fue un soplo de aire fresco, gente que le gustaba lo que hacía, que compartía sin pensar en el retorno, lejos de la casta y lo rancio del desarrollo que había visto hasta esos días. Me empezaban a conocer por el "fulano de los tractores".
 
-Escribía por aquel entonces en un blog de blogger que había sido comprado por google (me sorprende que no lo hayan cerrado) mi [post preferido](http://blep.blogspot.com/2010/11/mejor-me-quedo-como-estoy.html), hacía algunas [demos](http://javisantana.com/lab/globe-elecciones/) que [me llevarían a trabajar para Vizzuality](https://javisantana.tumblr.com/post/6587340235/im-joining-vizzuality), después CartoDB, más tarde CARTO. Aún recuerdo el momento en el que empecé a trabajar con la gente de Vizzuality perfectamente, iba a trabajar 2 meses con los mejores de la escena en aquel momento, subir a primera división.
+Escribía por aquel entonces en un blog de blogger que había sido comprado por google (me sorprende que no lo hayan cerrado) mi [post preferido](http://blep.blogspot.com/2010/11/mejor-me-quedo-como-estoy.html), hacía algunas [demos](http://javisantana.com/lab/globe-elecciones/) que [me llevarían a trabajar para Vizzuality](https://javisantana.tumblr.com/post/6587340235/im-joining-vizzuality), después CartoDB, más tarde CARTO. Aún recuerdo perfectamente el momento en el que empecé a trabajar con la gente de Vizzuality, iba a trabajar 2 meses (el contrato era temporal, no se fiaban, con toda la razón) con los mejores de la escena en aquel momento, subir a primera división.
 
 Lo que se llevaba eran nubes de tags, wordpress tunedos, RT manuales, gente hablando de la nube (no ha cambiado esto mucho), startups ofreciendo cosas gratis y nosotros preguntándonos como iban a ganar dinero, [hoy ya lo sabemos](https://en.wikipedia.org/wiki/Cambridge_Analytica).
 
@@ -28,7 +28,7 @@ El open source ha pasado a ser una herramienta de marketing. Se acabo la ingenui
 
 El desarrollador ha pasado a ser ciudadano de primera, se acabó la tiranía de la corbata que han pasado de reirse a tener miedo. Todo el mundo recuerda los sueldos desorbitados de tuenti, hoy hordas de gente no técnica hace cursos comprimidos en 3 meses para sere "developers". No sé si esto es nuevo, las consultoras daban formación de J2EE hace 15 años a filólogos, pero desde luego el status social es bien diferente. Ahora programar es cool, quien lo iba a decir.
 
-El vendor lock-in ha pasado de ser algo a evitar a estar orgulloso y procamarlo a los 4 vientos de forma orgullosa. Veremos la siguiente década las quejas de desarrolladores migrando sistemas imposibles de mover fuera de amazon.
+El vendor lock-in ha pasado de ser algo a evitar a estar orgulloso y procamarlo a los 4 vientos. Veremos la siguiente década las quejas de desarrolladores migrando sistemas imposibles de mover fuera de amazon.
 
 Microsoft ha pasado a ser el bueno de la película y a meter Linux dentro de Windows.
 
