@@ -1,4 +1,5 @@
 
+gem "jekyll"
 gem "jekyll-paginate"
 gem "rouge"
 gem "kramdown"

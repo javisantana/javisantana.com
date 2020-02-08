@@ -6,23 +6,56 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+/* addapted from hey.com css */
+:root {
+  --color-font: rgb(13, 13, 13);
+  --space-base: 1em;
+  --space-x-small: calc(var(--space-base) / 4);
+  --space-small: calc(var(--space-base) / 2);
+  --space-medium: var(--space-base);
+  --space-large: calc(var(--space-base) * 2);
+  --space-x-large: calc(var(--space-base) * 3);
+  --space-xx-large: calc(var(--space-base) * 4);
+  --space-xxx-large: calc(var(--space-base) * 6);
+  --space-xxxx-large: calc(var(--space-base) * 12);
+  --space-navbar: var(--space-triple);
+  --space-mobile: 85%;
+  --type-base: calc(1.6em + 0.5vw);
+  --type-xxx-small: 55%;
+  --type-xx-small: 65%;
+  --type-x-small: 75%;
+  --type-small: 85%;
+  --type-medium: 90%;
+  --type-large: 125%;
+  --type-x-large: 150%;
+  --type-xx-large: 230%;
+  --type-xxx-large: 340%; 
+  --font-sans: 'Helvetica', 'Arial';
+}
+@media (min-width: 48em) {
+:root {
+    --type-base: calc(0.9em + 0.9vw); } 
+}
+@media (min-width: 90em) {
+  :root {
+    --type-base: 2.2em; 
+  } 
+}
 
-html,
 body {
   margin: 0;
   padding: 0;
   font-weight: 400;
+  font-size: var(--type-base);
 }
 
 html {
   font-family: "Georgia";
-  font-size: 20px;
   font-weight: 300;
-  line-height: 1.6;
-  
-  @media (min-width: 38em) {
-    font-size: 21px;
-  }
+  line-height: 1.5;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -52,8 +85,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -62,7 +95,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: var(--type-large);
+  font-family: var(--font-sans);
 }
 
 h4, h5, h6 {
@@ -70,9 +104,11 @@ h4, h5, h6 {
 }
 
 p {
-  font-size: 1.0em;
-  margin: 0 0 1rem;
+  color: var(--color-font);
+  font-size: var(--type-large);
+  margin: 0 0 var(--space-medium) 0;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 ul, ol, dl {
@@ -98,8 +134,12 @@ ul {
   padding-left: 1em;
   
   li {
-    font-size: 1.1em;
     margin-bottom: .75rem;
+    color: var(--color-font);
+    font-size: var(--type-large);
+    p {
+      font-size: 1em;
+    }
   }
   
   ul,
@@ -116,7 +156,6 @@ ol {
   padding-left: 0.0em;
   
   li {
-    font-size: 1.1em;
     margin-bottom: .75rem;
   }
   
@@ -273,7 +312,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .container {
-  max-width: 33rem;
+  max-width:75rem;
   padding: 2rem 1.5rem;
   margin-left:  auto;
   margin-right: auto;
@@ -288,6 +327,7 @@ tbody tr:nth-child(odd) th {
 
   margin-bottom: 3.5em;
   &-title {
+
     font-weight: 300;
     
     a {
@@ -313,7 +353,7 @@ tbody tr:nth-child(odd) th {
   .links {
     line-height: 2.35em;
     float: right;
-    font-size: .75rem;
+    font-size: var(--type-small);
     font-weight: 400;
     a {
       margin: 0 10px;
@@ -322,7 +362,7 @@ tbody tr:nth-child(odd) th {
   
   &-title--small {
     margin-bottom: .75rem;
-    font-size: .75rem;
+    font-size: var(--type-small);
     font-weight: 600;
     text-transform: uppercase;
     
@@ -368,13 +408,19 @@ tbody tr:nth-child(odd) th {
 }
 
 .post {
+  margin-top: var(--space-xxxx-large);
   &-title {
-    margin-bottom: 1.25rem;
+    font-size: var(--type-xx-large);
+    margin-bottom: var(--space-xx-large);
+    margin-top: var(--space-xx-large);
+    font-family: var(--font-sans);
+    letter-spacing: -0.05em;
+    color: #000;
   }
   &-date {
     margin-bottom: 2rem;
-    font-size: .75rem;
     text-transform: uppercase;
+    font-family: var(--font-sans);
   }
   margin-bottom: 6em;
   border-bottom: 1px solid #222;
@@ -411,7 +457,6 @@ tbody tr:nth-child(odd) th {
   }
   &-post-date {
     margin-bottom: 1rem;
-    font-size: .75rem;
     text-transform: uppercase;
   }
 }
