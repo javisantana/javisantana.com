@@ -1,5 +1,5 @@
 ---
-layout: micro_post
+layout: post2
 published: true
 name: El complejo del corporate
 ---

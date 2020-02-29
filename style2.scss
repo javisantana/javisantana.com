@@ -90,8 +90,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0rem;
-  margin-top: 2.5em;
+  margin: var(--space-large) 0 var(--space-medium) 0;
+  font-size: var(--type-large);
+  font-family: var(--font-sans);
 }
 
 h3 {
@@ -500,6 +501,16 @@ tbody tr:nth-child(odd) th {
     border-color: #2a6496;
     cursor:pointer;
   }
+}
+
+.home-post-list {
+    padding: 0;
+    time {
+      font-size: var(--type-x-small);
+    }
+    li {
+      list-style: none;
+    }
 }
 
 .highlight .hll { background-color: #ffffcc }

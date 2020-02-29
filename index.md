@@ -11,21 +11,28 @@ layout: default2
     <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a> and my <a href="/blog/">blog</a> (mostly spanish tho)</li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
   </ul>
+  <p>This is what I write (99% spanish, sorry)</p>
+  <ul class="home-post-list">
+    {% for post in site.posts limit:30%}
+      <li><time>{{ post.date | date_to_string }}</time> · <a href="{{site.url}}{{include.post.url}}">{{ post.title }}</a> </li> 
+    {% endfor %}
+  </ul>
 
 
 </div>
 
 <div id="spanish">
-  <p>Me dedico a diseñar software, al grano:</p>
-  <ul>
-    <li>Me puedes contactar por correo en <b>jsantfer@gmail.com</b>.</li>
-    <li>O leer lo que escribo en <a href="http://twitter.com/javisantana">twitter</a>, en mi <a href="/blog/">blog</a> o en mi <a href="/digest">lista de correo</a>.</li>
-    <li>Revisar mi historial laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>.</li>
+  <p>Hola, me dedico a diseñar software de alto rendimiento en <a href="https://tinybird.co">Tinybird</a>.</p>
+  
+  <p>Lo habitual es que quieras <a href="/about">saber quien soy</a>, <a href="mailto://jsantfer@gmail.com">contactarme por correo</a>, leer lo que escribo en <a href="http://twitter.com/javisantana">twitter</a> o revisar mi historial laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>.
+  <p>Escribo de vez en cuando:</p>
+  <ul class="home-post-list">
+    {% for post in site.posts limit:30%}
+      <li><time>{{ post.date | date_to_string }}</time> · <a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
+    {% endfor %}
   </ul>
-  <p>Lo último en el blog es <a href="{{ site.baseurl }}{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></p>
-
   <div class="footer">
-    <p>suscribete a mi lista de correo, un artículo quincenal sobre diseño de software, tecnología y negocios:</p>
+    <p>Suscribete a mi lista de correo, un artículo quincenal sobre diseño de software, tecnología y negocios:</p>
     {% include subscribe.html %}
   </div>
 </div>
