@@ -1,18 +1,28 @@
----
-layout: micro
----
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="assets/css/style2.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/pygments.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">javisantana.com</a>
+    </header>
+    <div id="content">
+    {{ content }}
+    </div>
+  </body>
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-165269-5']);
+      _gaq.push(['_trackPageview']);
 
-<div class="post">{{content}}</div>
-
-<div class="post">
-<h3>Otros post que tal vez te interesen</h3>
-<ul>
-{% assign micro_posts = site.micro| sort: 'date' | reverse %}
-{% for post in micro_posts limit:3 %}
-  {% if post.date %}
-  <li><a href="{{post.url}}">{{post.title}}</a>
-  {% endif %}
-{% endfor %}
-</ul>
-</div>
-{% include tracker.html %}
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+</html>
