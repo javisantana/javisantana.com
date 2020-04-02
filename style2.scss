@@ -133,19 +133,19 @@ dd {
 
 ul {
   padding-left: 1em;
-  
+  font-size: var(--type-large);
   li {
     margin-bottom: .75rem;
     color: var(--color-font);
-    font-size: var(--type-large);
-    p {
-      font-size: 1em;
-    }
   }
+
+  p {
+    font-size: 100%;
+  } 
+
   
   ul,
   ol {
-    font-size: 1.1em;
     margin-top: .25rem;
     margin-bottom: .5rem;
     margin-left: 1em;
