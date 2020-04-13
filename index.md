@@ -14,7 +14,7 @@ layout: default2
   <p>This is what I write (99% spanish, sorry)</p>
   <ul class="home-post-list">
     {% for post in site.posts limit:100%}
-      <li><time>{{ post.date | date_to_string }}</time> · <a href="{{site.url}}{{include.post.url}}">{{ post.title }}</a> </li> 
+      <li><time>{{ post.date | date_to_string }}</time> · <a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
     {% endfor %}
   </ul>
 </div>
