@@ -26,7 +26,7 @@ La persistencia que hacemos es un poco diferente a lo habitual. Usamos redis par
 
 Ya sea en redis o clickhouse todo tiene esquema. Cuando modelas una aplicación tienes dos momentos de elegir el esquema: cuando guardas o cuando lees los datos. La segunda es como estudiar el día antes del exámen, es mejor ir haciendo el trabajo poco a poco.
 
-La razón de hacer esto así en vez de usar una sola base de datos con todo es: rendimiento y sobretodo poder usar nuestro producto para construir nuestro producto. Toda la analítica que sacamos del propio uso de la plataforma la hacemos con la propia plataforma. Podrás pensar que dedicar tiempo al rendimiento es absurdo en una empresa que está validando su modelo, pero tenemos algunos SLA que nos exigen estar por debajo de tiempos de respuesta y aquí necesitas ser rápido y predecible.
+La razón de hacer esto así en vez de usar una sola base de datos con todo es: rendimiento y sobretodo poder usar nuestro producto para construir nuestro producto. Toda la analítica que sacamos del propio uso de la plataforma la hacemos con la propia plataforma (de hecho [exponemos al usuario](https://docs.tinybird.co/api-reference/service-datasources.html) parte de esas tablas internas). Podrás pensar que dedicar tiempo al rendimiento es absurdo en una empresa que está validando su modelo, pero tenemos algunos SLA que nos exigen estar por debajo de tiempos de respuesta y aquí necesitas ser rápido y predecible.
 
 Hemos además dividido algunas partes de la aplicación en varios procesos. Fundamentalmente es una decisión para que los despliegues en alta disponibilidad sean más sencillos pero en desarrollo todo sigue siendo un solo proceso maravilloso. Este arranca threads y otros procesos, pero no tienes que gestionar comunicación ni procesos ni todo el cristo de docker-compose punto yamol. En desarrollo no necesitas ni nginx, ni varnish ni flatuas.
 
@@ -48,3 +48,14 @@ La semana que viene entra la primera persona que contratamos al equipo de desarr
 
 
 
+## Bola Extra
+
+El equipo de Tinybird llevamos ya unos años haciendo aplicaciones de alto rendimiento. El chat de Tuenti, una portada de Google ([el making of](/2013/06/27/como-aguantamos-una-portada-de-google.html) ), el [mapa de la portada del WSJ](https://carto.com/blog/the-wall-street-journals-2012-election-map-done-with/) cuando Obama ganó sus segundas elecciones, gestionado un cluster de cientos de máquinas sirviendo en tiempo real y un largo etcétera.
+
+Durante estos años hemos ido aprendiendo, la mayor parte de veces a base de prueba y error, investigar como funciona el software y hardware y como interactuar con ellos. Nunca habíamos recopilado toda esa información, símplemente era conocimiento que estaba repartido en notas, presentaciones y obviamente nuestras cabezas.
+
+Así que hemos decido crear "principios de analítica en tiempo real para grandes cantidades de datos" un curso que explica, siguiendo nuestros principios de entender como funcionan las cosas, como hacer analítica en tiempo real con grandes cantidades de datos explicado desde las bases.
+
+El curso estaba pensando para hacerlo en persona (de hecho era el onboarding de nuestro primer empleado) pero dadas las circunstancias lo vamos a hacer, resumido, online. Es un curso de fundamentos, no está relacionado con ninguna tecnología concreta. Si explicas las bases con lógica y de manera sencilla, aplicarlo a tu día a día, da igual que uses una base de datos u otra, es trivial.
+
+Lee toda la información y **apuntate gratis -hagamos la cuarentena un poco más llevadera- por aquí: [Principles of real time analytics on large datasets](https://www.tinybird.co/courses/principles-of-real-time-analytics)**
