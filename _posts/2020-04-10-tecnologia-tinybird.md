@@ -14,7 +14,7 @@ De las cosas fundamentales nada ha cambiado especialmente, y esto es de lo mejor
 
 Seguimos usando solo dos lenguajes backend (python y C++) y javascript en el frontend. Buena decisión que tenemos que mantener. Para algunas cosas python no es lo mejor, C++ no es lo más rápido de desarrollar pero ningún lenguaje es perfecto.
 
-Hemos añadido una pieza grande más al stack de desarrollo: ansible. Por alguna razón, viendo ansible, y habiendo visto chef, algo me dice que el mundo del aprovisionamiento está un pelín roto. Seguramente porque cada proveedor de cloud ha tirado por su lado y que docker nos ha llevado unos 15 años atrás. Pero ansible era sencillo, basado en python y sobretodo, tiene la mayoría de recetas que necesitamos (más en el siguiente punto)
+Hemos añadido una pieza grande más al stack de desarrollo: ansible. Por alguna razón, viendo ansible, y habiendo visto chef, algo me dice que el mundo del aprovisionamiento está un pelín roto. Seguramente porque cada proveedor de cloud ha tirado por su lado y que docker nos ha llevado unos 15 años atrás. Pero ansible era sencillo, basado en python y sobre todo, tiene la mayoría de recetas que necesitamos (más en el siguiente punto)
 
 Hemos complicado la arquitectura un poco. En realidad es bastante. Hemos tenido que atacar algunos proyectos en los que necesitabamos escalar bastante y eso requiere más piezas. Los sistemas distribuídos incrementan la complejidad órdenes de magnitud.
 
@@ -26,7 +26,7 @@ La persistencia que hacemos es un poco diferente a lo habitual. Usamos redis par
 
 Ya sea en redis o clickhouse todo tiene esquema. Cuando modelas una aplicación tienes dos momentos de elegir el esquema: cuando guardas o cuando lees los datos. La segunda es como estudiar el día antes del exámen, es mejor ir haciendo el trabajo poco a poco.
 
-La razón de hacer esto así en vez de usar una sola base de datos con todo es: rendimiento y sobretodo poder usar nuestro producto para construir nuestro producto. Toda la analítica que sacamos del propio uso de la plataforma la hacemos con la propia plataforma (de hecho [exponemos al usuario](https://docs.tinybird.co/api-reference/service-datasources.html) parte de esas tablas internas). Podrás pensar que dedicar tiempo al rendimiento es absurdo en una empresa que está validando su modelo, pero tenemos algunos SLA que nos exigen estar por debajo de tiempos de respuesta y aquí necesitas ser rápido y predecible.
+La razón de hacer esto así en vez de usar una sola base de datos con todo es: rendimiento y sobre todo poder usar nuestro producto para construir nuestro producto. Toda la analítica que sacamos del propio uso de la plataforma la hacemos con la propia plataforma (de hecho [exponemos al usuario](https://docs.tinybird.co/api-reference/service-datasources.html) parte de esas tablas internas). Podrás pensar que dedicar tiempo al rendimiento es absurdo en una empresa que está validando su modelo, pero tenemos algunos SLA que nos exigen estar por debajo de tiempos de respuesta y aquí necesitas ser rápido y predecible.
 
 Hemos además dividido algunas partes de la aplicación en varios procesos. Fundamentalmente es una decisión para que los despliegues en alta disponibilidad sean más sencillos pero en desarrollo todo sigue siendo un solo proceso maravilloso. Este arranca threads y otros procesos, pero no tienes que gestionar comunicación ni procesos ni todo el cristo de docker-compose punto yamol. En desarrollo no necesitas ni nginx, ni varnish ni flatuas.
 
@@ -44,7 +44,7 @@ Hay cosas que son muy importantes que no hemos tenido tiempo de atacar, por ejem
 
 En resumen, a pesar de intentar mantener todo lo más sencillo posible, hay complejidad que no puedes evitar. Aún somos capaces de gestionar todo entre 3 personas (2 backend + 1 frontend) con consultoría de por medio.
 
-La semana que viene entra la primera persona que contratamos al equipo de desarrollo. Aquí viene el siguiente reto, sobretodo porque es 100% remoto por razones más que obvias (estamos en medio de la cuarentena, por si lees esto en un futuro) y es la primera persona que entra sin haber estado desde el día 0.
+La semana que viene entra la primera persona que contratamos al equipo de desarrollo. Aquí viene el siguiente reto, sobre todo porque es 100% remoto por razones más que obvias (estamos en medio de la cuarentena, por si lees esto en un futuro) y es la primera persona que entra sin haber estado desde el día 0.
 
 
 
