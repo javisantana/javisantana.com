@@ -55,7 +55,9 @@ La rotación es un problema enorme porque inviertes tiempo en contratar y formar
 
 No todo esto tiene que ser así, he aprovechado la ocasión para dramatizar un poco, muchas de las cosas se pueden optimizar para evitar tener que gastar más cuartos de lo debido, pero lo que he descrito son algunos de los puntos donde tiene sentido invertir tiempo en mejorar. 
 
-A veces me pregunto cuales son las dinámicas que llevan a todo esto. No sé y seguramente no sabré la respuesta. Por otro lado, el pricing B2B no es tampoco 100% atribuible al coste y mucho  tiene que ver, en mi opinión (como siempre) con el poder adquisitivo del comprador y la cultura que gracias a oracles, ciscos y compañía se instauró hace 20 años en estas empresas.
+A veces me pregunto cuales son las dinámicas que llevan a todo esto. No sé y seguramente no sabré la respuesta. Por otro lado, el pricing B2B no es tampoco 100% atribuible al coste y mucho  tiene que ver, en mi opinión (como siempre) con el poder adquisitivo del comprador y la cultura que gracias a oracles, ciscos y compañía se instauró hace 20 años en estas empresas. 
+
+Pero seguramente todo tenga que ver con que todo esto es el baile necesario para llegar al precio "justo".
 
 
 
