@@ -23,9 +23,9 @@ CONSULTAR PRECIO
 
 Debe de haber un manual donde explica que hay que poner 3-4 columnas, una de ellas resaltada (nada tiene que ver que esté resaltada con que sea la mejor para el cliente, son trampas para humanos) y la de más a la derecha, la que aunque no ponga el precio sabes que es la cara, la “enterprise”.
 
-Es simple: [el software se sigue cobrando por el valor que aporta](https://calv.info/how-to-sell-b2b). Y como los corporates tienen mucho dinero merece la pena invertir tiempo en saber cuanto valor vas a aportar para cobrar en consonancia. Lo harías para todos los "tiers" pero no creo que merezca la pena.
+Es simple: [el software se sigue cobrando por el valor que aporta](https://calv.info/how-to-sell-b2b). Y como los corporates tienen mucho dinero merece la pena invertir tiempo en saber cuanto valor vas a aportar para cobrar en consonancia. Lo harías para todos los "tiers" pero no creo que merezca la pena por el retorno de inversión, el precio suele rondar los cientos de dolares al mes (>10k anual).
 
-Pero qué hay detrás de esa columna para que sea la opción cara. Pongamonos el gorro de alguien con una empresa que ofrece un producto B2B.
+Pero qué hay, además, detrás de esa columna para que sea la opción cara. Pongamonos el gorro de alguien con una empresa que ofrece un producto B2B.
 
 Lo primero de todo es el coste que tienes ya solo por el hecho de entablar la relación. Un cliente de un saas self-service pone su tarjeta, te envía algún correo de dudas y de vez en cuando escribe a soporte. Un cliente enterprise antes de llegar a algo medio concreto tardas meses. Y eso es coste, tienes que tener a alguien llevando la cuenta, atendiendo debidamente a todos los stakeholders que lógicamente tienen que enterarse de que va.
 
