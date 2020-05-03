@@ -21,7 +21,9 @@ CONSULTAR PRECIO
 ----------------
 </pre>
 
-Debe de haber un manual donde explica que hay que poner 3-4 columnas, una de ellas resaltada (nada tiene que ver que esté resaltada con que sea la mejor para el cliente, son trampas para humanos) y la de más a la derecha, la que aunque no ponga el precio sabes que es la cara, la “enterprise”
+Debe de haber un manual donde explica que hay que poner 3-4 columnas, una de ellas resaltada (nada tiene que ver que esté resaltada con que sea la mejor para el cliente, son trampas para humanos) y la de más a la derecha, la que aunque no ponga el precio sabes que es la cara, la “enterprise”.
+
+Es simple: el software se sigue cobrando por el valor que aporta. Y como los corporates tienen mucho dinero merece la pena invertir tiempo en saber cuanto valor vas a aportar para cobrar en consonancia. Lo harías para todos los "tiers" pero no creo que merezca la pena.
 
 Pero qué hay detrás de esa columna para que sea la opción cara. Pongamonos el gorro de alguien con una empresa que ofrece un producto B2B.
 
