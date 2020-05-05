@@ -1,9 +1,8 @@
 ---
-layout: blog3
+layout: post2
 published: true
+name: El precio de una vida
 ---
-
-## El precio de una vida
 
 Esta semana el gobierno español ha decidido traer a Miguel Pajares, un cura que estaba ayudando en África, contiagiado de ébola para ver si podían sacarlo del agujero. El espectáculo ha sido lamentable pero esta vez no hablo del gobierno, he leído desde gente quejándose por el dinero hasta gente con miedo por si provocaba una epidemia de proporciones bíblicas.
 
