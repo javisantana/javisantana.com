@@ -4,11 +4,14 @@ published: true
 name: El precio de una vida
 ---
 
-Esta semana el gobierno español ha decidido traer a Miguel Pajares, un cura que estaba ayudando en África, contiagiado de ébola para ver si podían sacarlo del agujero. El espectáculo ha sido lamentable pero esta vez no hablo del gobierno, he leído desde gente quejándose por el dinero hasta gente con miedo por si provocaba una epidemia de proporciones bíblicas.
+Esta semana el gobierno español ha decidido traer a Miguel Pajares, un cura que estaba ayudando en África, contiagiado de ébola para ver si podían sacarlo del agujero. 
+
+El espectáculo ha sido lamentable pero esta vez no hablo del gobierno, he leído desde gente quejándose por el dinero hasta gente con miedo por si provocaba una epidemia de proporciones bíblicas.
 
 Hace unos años, estando yo en cuarto de carrera, en una clase de economía, el profesor enunció un problema tal que así:
 
 > Cual es coste máximo admisible para la instalación de un semáforo en un cruce donde moría 1 persona al año.
+
 
 Tuve la mala suerte de que me tocase a mi resolverlo en la pizarra y mi respuesta básicamente fue poco económica: "se pone sí o sí". Lógicamente esa no era una respuesta válida en una clase de econonomía, así que me pasé unos minutos en la pizarra tratando de hacer cuentas que no me llevaban a ninguna parte.
 
