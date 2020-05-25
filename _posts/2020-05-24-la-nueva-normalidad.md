@@ -16,7 +16,7 @@ La realidad es que entre los mejores y yo solo hay un 1-2% en los tiempos de vue
 
 Para ponerlo en contexto, los mejores hacen 50 milésimas más rápido que yo cada curva. 50 milésimas en 20 curvas que tiene un circuito hace 1 segundo por vuelta que al final de una carrera es una diferencia de 1 minuto. Es decir, la calidad viene de muchos pequeños matices que hasta que no entrenas una y otra vez no eres capaz ni de apreciar.
 
-Repito, la diferencia entre alguien que hace un trabajo de calidad y otro que no está en detalles que no vas a llegar a apreciar nunca. De hecho, la mayoría de esas veces, esos detalles vienen de conocer y aplicar [los fundamentos](/2019/11/03/los-fundamentos.html) de lo que estás haciendo.
+Repito, la diferencia entre alguien que hace un trabajo de calidad y otro que no, está en detalles que no vas a llegar a apreciar nunca. De hecho, la mayoría de esas veces, esos detalles vienen de conocer y aplicar [los fundamentos](/2019/11/03/los-fundamentos.html) de lo que estás haciendo.
 
 Al competir con los mejores empecé a hacer las cosas que hacen los mejores, cosas que sin haber estado ahí no se me hubiesen ni pasado por la cabeza: aprovechar ese centímetro de piano, sobrevirar un poco en ciertas curvas para sacar esa décima y otras tantas. Sé que para estar a un nivel que no de pena en la competición tengo que hacer todo eso, es el mínimo.
 
