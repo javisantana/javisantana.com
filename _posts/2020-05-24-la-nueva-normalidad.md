@@ -18,7 +18,7 @@ Para ponerlo en contexto, los mejores hacen 50 milésimas más rápido que yo ca
 
 Repito, la diferencia entre alguien que hace un trabajo de calidad y otro que no, está en detalles que no vas a llegar a apreciar nunca. De hecho, la mayoría de esas veces, esos detalles vienen de conocer y aplicar [los fundamentos](/2019/11/03/los-fundamentos.html) de lo que estás haciendo.
 
-Al competir con los mejores empecé a hacer las cosas que hacen los mejores, cosas que sin haber estado ahí no se me hubiesen ni pasado por la cabeza: aprovechar ese centímetro de piano, sobrevirar un poco en ciertas curvas para sacar esa décima y otras tantas. Sé que para estar a un nivel que no de pena en la competición tengo que hacer todo eso, es el mínimo.
+Al competir con los mejores empecé a hacer las cosas que hacen los mejores, cosas que sin haber estado ahí no se me hubiesen ni pasado por la cabeza: aprovechar ese centímetro de piano, sobrevirar un poco en ciertas curvas para sacar esa décima y otras tantas. Sé que para estar a un nivel que no dé pena en la competición tengo que hacer todo eso, es el mínimo.
 
 Al cabo de meses, vuelves a correr con los que corrías al principio y te da cuenta que, sin ser muy consciente, estás en otro nivel. Tu nueva normalidad es mucho mejor, pero es tu nuevo normal.
 
