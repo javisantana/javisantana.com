@@ -20,7 +20,7 @@ Repito, la diferencia entre alguien que hace un trabajo de calidad y otro que no
 
 Al competir con los mejores empecé a hacer las cosas que hacen los mejores, cosas que sin haber estado ahí no se me hubiesen ni pasado por la cabeza: aprovechar ese centímetro de piano, sobrevirar un poco en ciertas curvas para sacar esa décima y otras tantas. Sé que para estar a un nivel que no de pena en la competición tengo que hacer todo eso, es el mínimo.
 
-Al cabo de meses, vuelves a correr con los que corrías al principio y te da cuenta que, sin darte mucha cuenta, estás en otro nivel. Tu nueva normalidad es mucho mejor, pero es lo normal.
+Al cabo de meses, vuelves a correr con los que corrías al principio y te da cuenta que, sin ser muy consciente, estás en otro nivel. Tu nueva normalidad es mucho mejor, pero es tu nuevo normal.
 
 Por eso cuando dudas a veces es bueno coger un poco de perspectiva, mirar a los lados y ver si estás o no con los mejores.
 
