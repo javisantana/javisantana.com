@@ -1,6 +1,6 @@
 ---
 layout: post2
-published: false
+published: true
 name: La nueva normalidad
 ---
 
