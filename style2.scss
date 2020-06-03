@@ -59,7 +59,6 @@ html {
 }
 
 body {
-  color: #515151;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -133,15 +132,18 @@ dd {
 
 ul {
   padding-left: 1em;
-  font-size: var(--type-large);
   li {
     margin-bottom: .75rem;
     color: var(--color-font);
+    font-size: var(--type-large);
+    p {
+      font-size: 100%;
+    } 
+    li {
+      font-size: 100%;
+    }
   }
 
-  p {
-    font-size: 100%;
-  } 
 
   
   ul,
@@ -153,6 +155,7 @@ ul {
 }
 
 ol {
+  font-size: var(--type-large);
   list-style: inside decimal;
   padding-left: 0.0em;
   
