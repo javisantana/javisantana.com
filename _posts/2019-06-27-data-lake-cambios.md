@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: Data lake parte IV, los cambios
+title: Data lake parte IV, los cambios
 ---
 
 El modelo de datos cambia sí o sí, básicamente porque modelan la vida real y la vida real cambia. Mucho.

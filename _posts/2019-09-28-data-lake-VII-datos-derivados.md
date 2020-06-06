@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: "Data lake VII: datos derivados"
+title: "Data lake VII: datos derivados"
 ---
 
 

@@ -47,7 +47,7 @@ equipo/departamento/area a tu base de datos interna no es
 productizar ni democratizar el acceso a datos, es buscar dependecias externas que limitarán tu
 avance.
 
-Por aquí la [penúltima entrega](http://javisantana.com/micro/2019-09-28-data-lake-VII-datos-derivados.html), las [conclusiones](http://javisantana.com/micro/2019-09-28-data-lake-conclusiones.html) y el índice en formato [micro libro](http://javisantana.com/data-lake-micro-book/)
+Por aquí la [penúltima entrega](http://javisantana.com/2019/09/28/data-lake-VII-datos-derivados.html), las [conclusiones](http://javisantana.com/2019/09/28/data-lake-conclusiones.html) y el índice en formato [micro libro](http://javisantana.com/data-lake-micro-book/)
 
 
 ### Bonus track

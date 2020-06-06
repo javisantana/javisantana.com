@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: "Data Lake, parte V: autorización"
+title: "Data Lake, parte V: autorización"
 ---
 
 Tienes todos los datos de tu empresa en un solo sitio. Nadie en su sano juicio permitiría acceder a todos los usuarios a todos los datos. Esto obviamente no aplica tanto a una pequeña empresa, aquí con dar acceso de solo lectura a una réplica de la base de datos de producción [1] para que la herramienta de BI de turno pueda coger datos es más que suficiente. Eso sí, no llames a esto "democratizar el acceso a datos", el término sería "anarquizar el acceso a datos"

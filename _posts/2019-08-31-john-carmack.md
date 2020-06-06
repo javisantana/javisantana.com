@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 ublished: true
-name: Carmack
+title: John Carmack
 ---
 
 No es noticia que Carmack es uno de mis programadores favoritos. Gracias a él aprendí muchísimo

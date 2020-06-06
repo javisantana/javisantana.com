@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: "Data lake VI: trazabilidad"
+title: "Data lake VI: trazabilidad"
 ---
 
 

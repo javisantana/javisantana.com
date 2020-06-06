@@ -1,7 +1,7 @@
 ---
 layout: micro_post
 published: true
-name: "Data lake (y VIII): Conclusiones"
+title: "Data lake (y VIII): Conclusiones"
 ---
 
 Si has llegado hasta aquí y has leído todos los capítulos verás que el Data Lake es el sueño de cualquier empresa media grande. Un sitio centralizado donde se puede consumir de forma uniforme toda la información del sistema.

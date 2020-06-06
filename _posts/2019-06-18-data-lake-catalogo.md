@@ -1,11 +1,11 @@
 ---
 layout: post2 
 published: true
-name: "Data Lake, parte III: El catálogo"
+title: "Data Lake, parte III: El catálogo"
 ---
 
 
-Además de poder [importar datos de forma sencilla](/micro/2019-06-14-data-lake-fuentes.html) hay otro tema fundamental que es saber qué datos has importado.
+Además de poder [importar datos de forma sencilla](/2019/06/14/data-lake-fuentes.html) hay otro tema fundamental que es saber qué datos has importado.
 
 No me refiero solo a saber "el día 25 importamos estos datos" si no a saber de qué van esos datos:
 
