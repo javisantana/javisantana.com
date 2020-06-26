@@ -16,9 +16,9 @@ Desde aquello han pasado unos años, algunas empresas y un par de historias (las
 
 Y además te las voy a contar, y lo sabes.
 
-Hace ya siglos estabamos en un proceso de "due diligence" típico y parte de ese proceso fue hacer pruebas técnicas a todo el equipo de tecnología. Las pruebas no eran sencillas, eran las típicas pruebas de puzzles y programación de pizarra, que son tan absurdas como inútiles, y que lo único que hacen es aumentar el ego del entrevistador, de hecho un día haré un post sobre cual es mi prueba ideal, pero no nos despistemos ahora.
+Hace ya siglos estábamos en un proceso de "due diligence" típico y parte de ese proceso fue hacer pruebas técnicas a todo el equipo de tecnología. Las pruebas no eran sencillas, eran las típicas pruebas de puzzles y programación de pizarra, que son tan absurdas como inútiles, y que lo único que hacen es aumentar el ego del entrevistador, de hecho un día haré un post sobre cual es mi prueba ideal, pero no nos despistemos ahora.
 
-Al terminar nos dijeron que las pruebas eran horribles (usaría palabras más contundentes pero luego me tachan de negativo), cosa que ya sabíamos después de las pestes que echábamos cuando salíamos de las pruebas (no lo voy a suavizar: pensabamos que eran gilipollas). Pero, vamos a ver, cómo es posible que fuesemos capaces de hacer lo que hacíamos y las pruebas técnicas fuesen tan malas. La explicación era bastante sencilla, estaban evaluando al equipo por separado y no como un equipo. Subestimaban el efecto pegamento del equipo.
+Al terminar nos dijeron que las pruebas eran horribles (usaría palabras más contundentes pero luego me tachan de negativo), cosa que ya sabíamos después de las pestes que echábamos cuando salíamos de las pruebas (no lo voy a suavizar: pensábamos que eran gilipollas). Pero, vamos a ver, cómo es posible que fuésemos capaces de hacer lo que hacíamos y las pruebas técnicas fuesen tan malas. La explicación era bastante sencilla, estaban evaluando al equipo por separado y no como un equipo. Subestimaban el efecto pegamento del equipo.
 
 La segunda historia es bastante más reciente. Si no lo sabes, te lo digo yo, al entrar en un corporate en un determinado puesto lo primero que hacen es asignarte gente. Es decir, no la buscas tú, estas empresas tienen mucha gente y siempre hay gente que termina proyectos o quiere cambiar de equipo. Montar un equipo y hacerlo funcionar es sencillo, eso lo hace cualquiera, pero coger gente de diferentes equipos, que tú no eliges, y hacerlo funcionar es harina de otro costal.
 
@@ -30,7 +30,7 @@ Entró gente al equipo rechazados de otras áreas, contratamos gente que no pasa
 
 Así que ahora, cuando hago una entrevista, rara vez pregunto algo técnico (aunque el perfil sea puramente técnico) y busco cualidades personales (dentro de lo que mi incapacidad social me permite) que me hagan ver que la persona es de esas que van a tender la mano cuando otra esté en pozo.
 
-Lógicamente tener conocimientos técnicos es muy importante, pero es mejor trabajar con alguien con quien puedes aprender lo que no sabes a con alquien al que miras mientras trabaja, aunque da la casualidad que los del primer grupo suelen ser muy decentes tecnicamente.
+Lógicamente tener conocimientos técnicos es muy importante, pero es mejor trabajar con alguien con quien puedes aprender lo que no sabes a con alguien al que miras mientras trabaja.
 
 
 
