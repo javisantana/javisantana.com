@@ -1,0 +1,40 @@
+name: Publish things
+
+on:
+  schedule:
+    - cron:  '0 8 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2
+      # We need full history to introspect created/updated:
+      with:
+        fetch-depth: 0  
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - uses: actions/cache@v1
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: pos tweets
+      run: |-
+        python tweet_proxy.py 1 2 3 4 http://javisantana.com/feed.xml
+    - name: Commit and push posted-urls.log changed
+      run: |-
+        git diff
+        git config --global user.email "javisantana-bot@example.com"
+        git config --global user.name "javisantana-bot"
+        git diff --quiet || (git add posted-urls.log && git commit -m "updated posted-urls")
+        git push
