@@ -89,7 +89,7 @@ h1 {
 }
 
 h2 {
-  margin: var(--space-large) 0 var(--space-medium) 0;
+  margin: var(--space-medium) 0 var(--space-medium) 0;
   font-size: var(--type-large);
   font-family: var(--font-sans);
 }
@@ -105,7 +105,7 @@ h4, h5, h6 {
 
 p {
   color: var(--color-font);
-  font-size: var(--type-large);
+  font-size: var(--type-medium);
   margin: 0 0 var(--space-medium) 0;
   font-weight: 400;
   line-height: 1.5;
@@ -135,7 +135,7 @@ ul {
   li {
     margin-bottom: .75rem;
     color: var(--color-font);
-    font-size: var(--type-large);
+    font-size: var(--type-medium);
     p {
       font-size: 100%;
     } 
@@ -155,7 +155,7 @@ ul {
 }
 
 ol {
-  font-size: var(--type-large);
+  font-size: var(--type-medium);
   list-style: inside decimal;
   padding-left: 0.0em;
   
@@ -170,8 +170,9 @@ ol {
   }
 }
 
+/*
 p + h1,
-p + h2,
+p + h2, 
 p + h3,
 ul + h1,
 ul + h2,
@@ -181,6 +182,7 @@ ol + h2,
 ol + h3 {
   margin-top: 1.5rem;
 }
+*/
 
 hr {
   border: 0;
@@ -412,10 +414,10 @@ tbody tr:nth-child(odd) th {
 }
 
 .post {
-  margin-top: var(--space-xxxx-large);
+  margin-top: var(--space-x-large);
   &-title {
-    font-size: var(--type-xx-large);
-    margin-bottom: var(--space-xx-large);
+    font-size: var(--type-large);
+    margin-bottom: var(--space-large);
     margin-top: var(--space-xx-large);
     font-family: var(--font-sans);
     letter-spacing: -0.05em;
@@ -510,6 +512,8 @@ tbody tr:nth-child(odd) th {
     padding: 0;
     time {
       font-size: var(--type-x-small);
+      display: inline-block;
+      width: calc(3*var(--type-base));
     }
     li {
       list-style: none;
