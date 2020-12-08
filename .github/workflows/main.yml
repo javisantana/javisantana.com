@@ -2,7 +2,7 @@ name: Publish things
 
 on:
   schedule:
-    - cron:  '*/30 * * * *'
+    - cron:  '* * * * *'
 
 jobs:
   build:
