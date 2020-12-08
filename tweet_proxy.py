@@ -56,7 +56,7 @@ def compose_message(item: feedparser.FeedParserDict) -> str:
     title, link, _ = item["title"], item["link"], item["description"]
     desc = shorten_text(strip_html(item['description']).split('\n')[0], 128)
     msg = f"""
-    🏁 {item['title']}
+    🏁 blog post => {item['title']}
 
     {desc}...
 
@@ -97,7 +97,6 @@ def post_tweet(message: str):
         Message to post on Twitter.
     """
     print(message)
-    return
     try:
         twitter = Twython(TwitterAuth.consumer_key,
                           TwitterAuth.consumer_secret,
