@@ -2,7 +2,7 @@ name: Publish things
 
 on:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '*/30 * * * *'
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         pip install -r requirements.txt
     - name: pos tweets
       run: |-
-        python tweet_proxy.py 1 2 3 4 http://javisantana.com/feed.xml
+        python tweet_proxy.py ${{secret.API_KEY}} ${{secret.API_KEY_SECRET}} ${{secret.ACCESS_TOKEN}} ${{secret.ACCESS_SECRET}} http://javisantana.com/feed.xml
     - name: Commit and push posted-urls.log changed
       run: |-
         git diff
