@@ -175,8 +175,8 @@ def display_help():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 6:
-        TwitterAuth.consumer_key, TwitterAuth.consumer_secret, TwitterAuth.access_token, TwitterAuth.access_token_secret = sys.argv[1:5]
-        read_rss_and_tweet(url=sys.argv[5])
+    if len(sys.argv) == 2:
+        TwitterAuth.consumer_key, TwitterAuth.consumer_secret, TwitterAuth.access_token, TwitterAuth.access_token_secret = os.getenv('API_KEY'), os.getenv('API_KEY_SECRET'), os.getenv('ACCESS_TOKEN'), os.getenv('ACCESS_SECRET')
+        read_rss_and_tweet(url=sys.argv[1])
     else:
         display_help()
