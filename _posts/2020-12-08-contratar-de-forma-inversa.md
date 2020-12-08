@@ -1,7 +1,7 @@
 ---
 layout: post2
 published: true
-title: Contratar de forma inversa
+title: Otra forma de contratar
 ---
 
 Mira que me había prometido que no volvería a hablar de cómo contratar pero pensaba que no estaba de más explicar cómo lo hemos hecho esta última vez. Y soy gilipollas porque cuando hice aquella promesa fue porque me dieron por todos los costados (no sé si con razón o no, [compruebalo tú misma](http://javisantana.com/2017/11/02/hiring-en-un-startup.html)), y yo soy una persona sensible, me afecta cuando me sacuden.
