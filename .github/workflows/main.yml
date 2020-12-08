@@ -1,8 +1,9 @@
 name: Publish things
 
 on:
+  push:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '*/30 * * * *'
 
 jobs:
   build:
