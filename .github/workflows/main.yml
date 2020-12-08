@@ -31,7 +31,7 @@ jobs:
         pip install -r requirements.txt
     - name: pos tweets
       run: |-
-        python tweet_proxy.py ${{secret.API_KEY}} ${{secret.API_KEY_SECRET}} ${{secret.ACCESS_TOKEN}} ${{secret.ACCESS_SECRET}} http://javisantana.com/feed.xml
+        python tweet_proxy.py http://javisantana.com/feed.xml
     - name: Commit and push posted-urls.log changed
       run: |-
         git diff
