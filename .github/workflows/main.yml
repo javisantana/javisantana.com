@@ -32,6 +32,11 @@ jobs:
     - name: pos tweets
       run: |-
         python tweet_proxy.py http://javisantana.com/feed.xml
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+        API_KEY: ${{ secrets.API_KEY }}
+        API_KEY_SECRET: ${{ secrets.API_KEY_SECRET }}
     - name: Commit and push posted-urls.log changed
       run: |-
         git diff
