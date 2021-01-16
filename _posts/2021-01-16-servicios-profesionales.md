@@ -6,7 +6,7 @@ title: Organización de Servicios profesionales
 
 En Tinybird empezamos al revés que muchas empresas de producto: por la parte de monetizar. Antes de meternos 100% a desarrollar producto y luego ir viendo (pivotar lo llaman) decidimos empezar facturando con un producto muy pequeño y haciendo servicios profesionales.
 
-El tema de servicios profesionales es un tema un pelín tabú, ya sabes, la métrica estrella de cualquier SaaS B3B es el MRR (la gallina que entra de forma recurrente al mes) y claro, los servicios profesionales no son, en teoría, recurrentes y tampoco escalan bien. Bien en el sentido de que necesitan personas, y somos caros y tenemos sentimientos, cosa que una máquina en amazon no. Por suerte nuestros clientes son personas y prefieren a alguien humano del otro lado.
+El tema de servicios profesionales es un tema un pelín tabú, ya sabes, la métrica estrella de cualquier SaaS B2B es el MRR (la gallina que entra de forma recurrente al mes) y claro, los servicios profesionales no son, en teoría, recurrentes y tampoco escalan bien. Bien en el sentido de que necesitan personas, y somos caros y tenemos sentimientos, cosa que una máquina en amazon no. Por suerte nuestros clientes son personas y prefieren a alguien humano del otro lado.
 
 Pero la realidad es que [la mayoría de productos tienen una parte de servicios profesionales](https://www.saastr.com/dont-forget-the-services-revenue/) y son necesarios para cerrar clientes que paguen pasta. Hay muchas razones, la más importante es que hemos idealizado tanto las empresas de producto, gracias a esos blog post de americanos vendiendonos el mejor humo, que hemos perdido el norte y nos hemos pasado de vendernos a nosotros mismos.
 
