@@ -29,7 +29,7 @@ Estas reuniones la mayor parte de las veces son de coordinación técnica-negoci
 
 Si hay algo que necesita tiempo especial hacemos reunión específica sobre ello previa actualización en su correspondiente proyecto.
 
-- Las cosas de bajo nivel se tratan en el repositorio correspondiente del proyecto. Si no podría parecer que hacemos consultoría "estratégica".
+- Las cosas de bajo nivel se tratan en el repositorio correspondiente del proyecto. Si no podría parecer que hacemos consultoría "estratégica", todavía somos mucho más baratos que Mckinsey.
 
 Nada nuevo bajo el sol, seguramente la mayor parte de empresas de consultoría tengan un proceso mucho más depurado y haya herramientas maravillosas para este tema, pero la clave está en no olvidar que los servicios profesionales en empresas de producto también necesitan organización y procesos, especialmente 100% remoto.
 
