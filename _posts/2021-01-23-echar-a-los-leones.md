@@ -26,7 +26,6 @@ Algún día va a hacerlo sola, se va a calzar la hostia del siglo y me tocará l
 Así que me dije, cuantas más escaleras suba y baje, con o sin barandilla, menos probabilidad de que me toque pasar la angustia de esos segundos, que parecen meses de confinamiento, entre que oyes el golpe y empieza a llorar. Y con sinceridad, así me deja un rato tranquilo.
 
 Empecé a dejarla bajar y subir las escaleras. Yo simplemente miraba desde 3 escalones más abajo, para en más de una ocasión cogerla al, literalmente, segundo bote. Meses más tarde me pide que me vaya más abajo, que ella puede sola. Cuando ve las orejas al lobo pone el culo en tierra, porque aprender a usar la barandilla no lo llevamos en los genes, pero lo de ahorrarnos dolor parece que sí. No tengo la certeza de que haya bajado las escaleras ella sola, pero tampoco tengo la duda. Y ese creo que era el objetivo.
--·-
 
 <center>-·-</center>
 
