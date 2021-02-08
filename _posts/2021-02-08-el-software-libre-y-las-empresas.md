@@ -1,0 +1,21 @@
+---
+layout: post2
+published: false
+name: Software libre y las empresas detrás
+---
+
+Hay un par de extremos en el mundo de las empresas y el software libre: las que lo crean y las que lo usan.
+
+En el medio hay otras que son las que contribuyen. Por ejemplo, si miras las contribuciones del kernel de Linux verás empresas como Redhat, IBM, Facebook que contribuen pero no controlan el proyecto. En mi opinión esto es lo que debería pasar siempre, pero claro, no todos los proyectos tienen una fundación detrás en este caso Linux Fundation, pero hay otras como Apache fundation. Ojo, es importante mirar el "board of directors".
+
+Luego tienes empresas como Mongo o Elastic, que crean, guían el proyecto y además tienen un negocio que basan en esa pieza de código. Todos sabemos lo que ha pasado en los últimos años con cambios de licencias de software para evitar que el gran Amazon use su software. Redis, Elastic, Mongo, Mapbox han hecho cambios de licencia relativamente duros para evitar que otras empresas aprovechen su trabajo y les hagan la competencia.
+
+Yo me sigo creyendo en toda esa historia del software libre, creo que hace avanzar a la humanidad, de hecho me parece que hacer software abierto es una "externalidad positiva" de libro, especialmente si lo haces con consistencia y resuelves un problema. El otro día [escuchaba un podcast donde el CEO de databricks](https://thetwentyminutevc.com/ali-ghodsi/), empresa que mantiene Spark, era usada por las científicas que han hecho posible la vacuna del puto coronavirus. A su vez spark surge como proyecto aplicando el famoso paper de map reduce de google, de cuando google compartía cosas sin ser marketing vacío.
+
+Pero la triste realidad es que la mayoría de empresas lo único que hacen es usar ese software libre. Unas pocas colaboran un poco, alguna contribución de vez en cuando y ya. No pasa nada, es lo normal, muchas empresas suficienten tienen con lo suyo.
+
+En CARTO, la empresa que era CTO anteriormente, basabamos nuestra tecnología en open source. Sin embargo, aunque sabíamos como funcionaba apenas contribuíamos y eso a la larga terminó pasando factura, porque para innovar necesitas no solo saber como funciona si no cambiar lo que necesitas. Y para cambiar necesitas músculo. Así que para paliar este tema [contratamos a los mejores del mundo en ese momento](http://blog.cleverelephant.ca/2015/02/the-new-gig.html) y [pusimos unos cuantas personas de la empresa a trabajar 100% en eso](https://javisantana.com/2017/12/13/technology-research-team.html). 
+
+El caso es que me creo bastante que para que una empresa de tecnología sea puntera tiene que conocer tan bien lo que usa como si lo hicieran ellos mismos. Y esto es como plantar un árbol, cuanto antes lo hagas, mejor. No tengo claro que muchas empresas "deep-tech" se den cuenta de esto a tiempo, una empresa tarda unos años en madurar a todos los niveles y unos años en tecnología es la vida. Echa la vista atrás 10 años y verás a lo que me refiero.
+
+Por eso una de las cosas que vamos a hacer en Tinybird es contratar a gente para aportar 100% a Clickhouse, la base de datos que usamos en nuestro producto. La norma dentro de la empresa es, para enteder lo que está pasando, se mira el código fuente, lo demás son conjeturas.
