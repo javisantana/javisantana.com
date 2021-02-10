@@ -4,7 +4,7 @@ published: false
 name: Software libre y la innovación en las empresas
 ---
 
-Hay dos extremos en el mundo de las empresas y el software libre: las que lo crean y las que lo usan. En el medio hay otras que son las que contribuyen.
+Hay dos extremos en el mundo de las empresas y el software libre: las que lo crean y las que lo usan. En el medio hay otras que son las que contribuyen al que crean otras empresas.
 
 Por ejemplo, si miras las contribuciones del kernel de Linux verás empresas como Redhat, IBM, Facebook que contribuen pero no controlan el proyecto. En mi opinión esto es lo que debería pasar siempre, pero claro, no todos los proyectos tienen una fundación detrás en este caso Linux Fundation ni tienen tanto impacto, pero hay otras como Apache fundation que gestionan muchísimos proyectos. Tampoco hay que ser iluso, es importante mirar el "board of directors" y sobre todo en que empresas trabajan.
 
