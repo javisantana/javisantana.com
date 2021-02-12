@@ -1,6 +1,6 @@
 ---
 layout: post2
-published: false
+published: true
 name: Software libre y la innovación en las empresas
 ---
 
