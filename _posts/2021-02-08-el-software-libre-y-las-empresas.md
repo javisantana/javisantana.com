@@ -6,7 +6,7 @@ name: Software libre y la innovación en las empresas
 
 Hay dos extremos en el mundo de las empresas y el software libre: las que lo crean y las que lo usan. En el medio hay otras que son las que contribuyen al que crean otras empresas.
 
-Por ejemplo, si miras las contribuciones del kernel de Linux verás empresas como Redhat, IBM, Facebook que contribuen pero no controlan el proyecto. En mi opinión esto es lo que debería pasar siempre, pero claro, no todos los proyectos tienen una fundación detrás, en este caso Linux Fundation, ni tienen tanto impacto, pero hay otras como Apache fundation que gestionan muchísimos proyectos pequeños. Tampoco hay que ser iluso, es importante mirar el "board of directors" y sobre todo en que empresas trabajan.
+Por ejemplo, si miras las contribuciones del kernel de Linux verás empresas como Redhat, IBM, Facebook que contribuen pero no controlan el proyecto. En mi opinión esto es lo que debería pasar siempre, pero claro, no todos los proyectos tienen una fundación detrás, en este caso Linux Foundation, ni tienen tanto impacto, pero hay otras como Apache fundation que gestionan muchísimos proyectos pequeños. Tampoco hay que ser iluso, es importante mirar el "board of directors" y sobre todo en que empresas trabajan.
 
 Luego tienes empresas como Mongo o Elastic, que crean, guían el proyecto y además tienen un negocio que basan en esa pieza de código. Todos sabemos lo que ha pasado en los últimos años con cambios de licencias de software para evitar que el gran Amazon use su software. Redis, Elastic, Mongo, Mapbox han hecho cambios de licencia relativamente duros para evitar que otras empresas aprovechen su trabajo y les hagan la competencia.
 
