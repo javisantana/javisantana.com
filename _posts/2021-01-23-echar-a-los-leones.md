@@ -4,7 +4,7 @@ published: true
 name: Echar a los leones
 ---
 
-Como “manager” soy lamentable. No es falsa modestia, podéis preguntar a cualquier persona que me haya sufrido como jefe. Hacedlo en privado, en público ya sabéis que nadie dice la verdad. No pasa nada, no hay mejor cosa que asumir tus limitaciones y dejarte de gilipolleces de “superar tus miedos” o “dejar tu zona de confort”.
+Como “manager” soy lamentable. No es falsa modestia, podéis preguntar a cualquier persona que me haya sufrido como jefe. Hacedlo en privado, en público ya sabéis que nadie dice la verdad, no vayamos a quedar mal. No pasa nada, no hay mejor cosa que asumir tus limitaciones y dejarte de gilipolleces de “superar tus miedos” o “dejar tu zona de confort”.
 
 Y soy malo porque, además de tener un nivel de empatía más bien bajo y tampoco me motiva mucho mejorarlo, la gente me aburre. No me aburre en el sentido “soy un ser superior y tu conversación carente de sustancia intelectual es desmotivante”, más bien en el de “me cuesta estar con gente porque tengo que hacer un esfuerzo extra en no parecer tonto”. [Esta escena](https://www.youtube.com/watch?v=KnVX-uv-QPc) de "Pulp Fiction" define bastante bien mi relación con las interacciones humanas.
 
@@ -26,7 +26,6 @@ Algún día va a hacerlo sola, se va a calzar la hostia del siglo y me tocará l
 Así que me dije, cuantas más escaleras suba y baje, con o sin barandilla, menos probabilidad de que me toque pasar la angustia de esos segundos, que parecen meses de confinamiento, entre que oyes el golpe y empieza a llorar. Y con sinceridad, así me deja un rato tranquilo.
 
 Empecé a dejarla bajar y subir las escaleras. Yo simplemente miraba desde 3 escalones más abajo, para en más de una ocasión cogerla al, literalmente, segundo bote. Meses más tarde me pide que me vaya más abajo, que ella puede sola. Cuando ve las orejas al lobo pone el culo en tierra, porque aprender a usar la barandilla no lo llevamos en los genes, pero lo de ahorrarnos dolor parece que sí. No tengo la certeza de que haya bajado las escaleras ella sola, pero tampoco tengo la duda. Y ese creo que era el objetivo.
--·-
 
 <center>-·-</center>
 
