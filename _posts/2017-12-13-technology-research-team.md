@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post2
+title: Technology research team
 published: true
 ---
 
