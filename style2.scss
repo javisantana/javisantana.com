@@ -34,7 +34,7 @@
 }
 @media (min-width: 48em) {
 :root {
-    --type-base: calc(0.9em + 0.9vw); } 
+    --type-base: calc(1.3em + 0.7vw); } 
 }
 @media (min-width: 90em) {
   :root {
@@ -50,9 +50,11 @@ body {
 }
 
 html {
-  font-family: "Georgia";
+ // font-family: "Georgia";
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, Arial;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.5em;
   font-size: 10px;
   margin: 0;
   padding: 0;
@@ -107,8 +109,9 @@ p {
   color: var(--color-font);
   font-size: var(--type-medium);
   margin: 0 0 var(--space-medium) 0;
-  font-weight: 400;
-  line-height: 1.5;
+  //--font-weight: 400;
+  //--line-height: 1.6;
+  line-height: 1.7;
 }
 
 ul, ol, dl {
@@ -136,6 +139,7 @@ ul {
     margin-bottom: .75rem;
     color: var(--color-font);
     font-size: var(--type-medium);
+    line-height: 1.5em;
     p {
       font-size: 100%;
     } 
@@ -359,7 +363,7 @@ tbody tr:nth-child(odd) th {
   .links {
     line-height: 2.35em;
     float: right;
-    font-size: var(--type-small);
+    font-size: var(--type-x-small);
     font-weight: 400;
     a {
       margin: 0 10px;
@@ -368,7 +372,8 @@ tbody tr:nth-child(odd) th {
   
   &-title--small {
     margin-bottom: .75rem;
-    font-size: var(--type-small);
+    line-height: 2.35em;
+    font-size: var(--type-x-small);
     font-weight: 600;
     text-transform: uppercase;
     
@@ -416,20 +421,22 @@ tbody tr:nth-child(odd) th {
 .post {
   margin-top: var(--space-x-large);
   &-title {
-    font-size: var(--type-large);
-    margin-bottom: var(--space-large);
-    margin-top: var(--space-xx-large);
+    font-size: var(--type-xx-large);
+    margin-bottom: var(--space-small);
+    margin-top: var(--space-large);
     font-family: var(--font-sans);
     letter-spacing: -0.05em;
     color: #000;
+    text-transform: none;
   }
   &-date {
+    margin-top: 4rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-family: var(--font-sans);
   }
-  margin-bottom: 6em;
-  border-bottom: 1px solid #222;
+  margin-bottom: 1em;
+  //border-bottom: 1px solid #222;
   ul.social-icons {
     float: right;
     list-style: none;
@@ -489,8 +496,8 @@ tbody tr:nth-child(odd) th {
 }
 
 .footer {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .subscribe-form {
