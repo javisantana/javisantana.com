@@ -10,7 +10,7 @@ Resultó que, lo que estaba lejos, se veía bien, nítido. No tenía ningún sen
 
 Siempre había visto todo borroso, la televisión, las personas, los paisajes. Es lógico, si algo está lejos, se tiene que ver mal. Punto.
 
-Pero aguanta, esto no es lo contraintitivo.
+Pero aguanta, esto no es lo contraintuitivo.
 
 Pasé toda mi secundaria y bachillerato sin ver nada de lo que el profesor ponía en la pizarra, nos sentaban por apellido, así que siempre me tocaba al fondo.
 
@@ -22,7 +22,7 @@ La miopía se cura? es lo primero que pregunté al señor de la óptica. Primera
 
 Aquello que a priori es una tara, resultó ser una de mis superpoderes en la universidad. La capacidad de atención y concentración que desarrollé aquellos años me permitieron seguir las clases sin problema. Tenía que estudiar relativamente poco (aunque lo hacía todos los santos días) y era sencillo asimilar todo aquello.
 
-Toda esa capacidad se fue con los años y sobre todo, cuando contraté la tarifa de datos de mi smartphone.
+Toda esa capacidad se fue perdiendo con los años y sobre todo, cuando contraté la tarifa de datos de mi smartphone.
 
 Me lo escribo para que cuando me encuentre con alguna limitación me acuerde que tal vez sea un regalo del cielo.
 
