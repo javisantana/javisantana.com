@@ -12,11 +12,11 @@ Siempre había visto todo borroso, la televisión, las personas, los paisajes. E
 
 Pero aguanta, esto no es lo contraintuitivo.
 
-Pasé toda mi secundaria y bachillerato sin ver nada de lo que el profesor ponía en la pizarra, nos sentaban por apellido, así que siempre me tocaba al fondo.
+Pasé toda mi secundaria y bachillerato sin ver nada de lo que el profesor ponía en la pizarra, nos sentaban por apellido, así que siempre me tocaba al fondo. Pedir sentarme más cerca de la pizarra estaba fuera de mis habilidades. Hay cosas que no se solucionan con unas gafas.
 
 Así que desarrollé un sistema para poder coger apuntes: entender lo que decían. No podía permitirme no hacerlo, copiar lo que ponía en la pizarra para entenderlo después era imposible. Como es lógico, la pizarra estaba lejos, mala suerte por apellidarme Santana.
 
-Me crucé un día con mi madre por la calle y no la saludé. Me paró y me dijo: tu, hijo, no ves nada.
+Me crucé un día con mi madre por la calle y no la saludé. Me paró y me dijo: tú, hijo, no ves nada.
 
 La miopía se cura? es lo primero que pregunté al señor de la óptica. Primera gran decepción de mi vida.
 
