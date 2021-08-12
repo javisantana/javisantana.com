@@ -1,5 +1,5 @@
 ---
-layout: micro_post
+layout: data
 published: true
 name: Joinable API
 tags: en, api, data
