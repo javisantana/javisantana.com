@@ -47,7 +47,5 @@ defaults:
       layout:       "post"
 
 collections:
-    micro:
-        output: true
-    digest:
+    smalldata:
         output: true

@@ -98,6 +98,10 @@
           letter-spacing: 0.04em;
       }
       pre { margin-bottom: 2em;}
+      .more h2 { padding-top:  3em; border-top: 1px solid #888;}
+      .more li {
+        margin: 0.5em 0 0.5em 5%;
+      }
 
     </style>
     <link rel="stylesheet" href="/assets/css/pygments.css" type="text/css" />
@@ -109,7 +113,18 @@
         <h1>{{page.title}} — <span>@javisantana</span></h1>
         {{page.content}}
       </div>
+
+      <div class="entry more">
+        <h2>More posts</h2>
+        <ul>
+      {% for post in site.smalldata limit:5 %}
+      <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
+      {% endfor %}
+        <ul>
+      </div>
     </div>
+
+
   </body>
 
 </html>
