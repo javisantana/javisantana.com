@@ -47,5 +47,5 @@ defaults:
       layout:       "post"
 
 collections:
-    smalldata:
+    fastdata:
         output: true

@@ -117,7 +117,7 @@
       <div class="entry more">
         <h2>More posts</h2>
         <ul>
-      {% for post in site.smalldata limit:5 %}
+      {% for post in site.fastdata limit:5 %}
       <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
       {% endfor %}
         <ul>
