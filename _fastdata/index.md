@@ -10,6 +10,7 @@ layout: base_data
       <ul>
       {% for post in site.fastdata %} {% if post.title != "Index" %}<li style="list-style-type: none;"><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>{%endif %}{% endfor %}
       </ul>
+  </div>
 
 </div>
 
