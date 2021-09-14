@@ -17,12 +17,16 @@ Back to the data engineering test. What was I expecting from a tech test like th
 
 1) Reproducibility: I expect something I can run whatever the data I use. A simple script is 100% reproducible, you don't need anything fancy here.
 
-```
+```bash
 # this is enough
 process.sh url | jq .
 ```
 
 2) Testability: provide tests is another important task. How do you guarantee your code works? Yes, testing is something you need to do in your ETL in the same way you test any other piece of code.
+
+```bash
+process.sh fixture.csv | diff result -
+```
 
 3) Performance: we tend to think speed is not that important but it changes the way people do things. Something that works in real-time allows different things than a 1-hour process. The feedback loop is critical. That’s why we send emails instead of letters, that’s why slack is all over the place.
 
