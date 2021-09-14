@@ -3,7 +3,7 @@ layout: base_data
 ---
 <div class="container">
   <div class="entry">
-    <h1>{{page.title}} — <span>@javisantana</span></h1>
+    <h1>{{page.title}} — <span><a href="https://twitter.com/javisantana">@javisantana</a></span></h1>
     {{page.content}}
   </div>
 
@@ -11,8 +11,10 @@ layout: base_data
     <h2>More posts</h2>
     <ul>
   {% for post in site.fastdata limit:5 %}
+  {% if post.url != page.url %} 
   {% if post.title != "Index" %}
   <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
+  {% endif %}
   {% endif %}
   {% endfor %}
     <ul>
