@@ -13,7 +13,7 @@ The test is hard because just writing is itself a hard task. Most developers hav
 
 But hey, why spend 5 minutes thinking about what questions to ask when you can kill a full morning writing a 500 script in a python notebook. I’ve done that 100 times and will continue doing it until I retire.
 
-Back to the data engineering test. What was I expecting from a tech test like that? if you didn't read the test, TLDR it's is about calculating outliers from a medium-size CSV file.
+Back to the data engineering test. What was I expecting from a tech test like that? if you didn't read the test, TLDR it's is about calculating outliers from a medium-size CSV file:
 
 1) Reproducibility: I expect something I can run whatever the data I use. A simple script is 100% reproducible, you don't need anything fancy here.
 
