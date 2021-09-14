@@ -15,14 +15,14 @@ But hey, why spend 5 minutes thinking about what questions to ask when you can k
 
 Back to the data engineering test. What was I expecting from a tech test like that? if you didn't read the test, TLDR it's is about calculating outliers from a medium-size CSV file:
 
-1) Reproducibility: I expect something I can run whatever the data I use. A simple script is 100% reproducible, you don't need anything fancy here.
+1) Reproducibility: I expect something I can run with any data that follows the format and outputs always the same for the same input. A simple script is 100% reproducible, you don't need anything fancy here.
 
 ```bash
 # this is enough
 process.sh url | jq .
 ```
 
-2) Testability: provide tests is another important task. How do you guarantee your code works? Yes, testing is something you need to do in your ETL in the same way you test any other piece of code.
+2) Testability: provide tests is another important task. How do you guarantee your code works? testing is something you need to do in your ETL in the same way you test any other piece of code.
 
 ```bash
 process.sh fixture.csv | diff result -
