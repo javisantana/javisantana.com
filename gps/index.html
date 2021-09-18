@@ -16,10 +16,14 @@
         font-size: 1.5em;
         text-transform:uppercase;
       }
+      #speed {
+        font-size: 10em;
+      }
     </style>
   </head>
 <body>
   <a id="start_btn" class="button">start</a>
+  <div id="speed">0</div>
   <script>
       // https://stackoverflow.com/questions/59471449/how-to-prevent-screen-sleep-using-javascript
       function keepScreenAwake() {
@@ -61,9 +65,12 @@
             };
             function printPos(p) {
               console.log(p);
-              document.body.append(
-                `${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}`
+              document.body.insertAdjacentHTML('beforeend',
+                `<div>${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}</div>`
               )
+              if(p.coords.speed)
+               document.getElementById('start_btn').innerHTML = p.coords.speed.toFixed(2)
+
             }
             const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
             //setInterval(() => { }, 1000)
