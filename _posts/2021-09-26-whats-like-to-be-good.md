@@ -6,7 +6,7 @@ name: What's like to be good
 
 "I know what's like to be good" son las palabras que me quedaron grabadas hablando con un advisor de startups, uno de esos que te ayudan a montar parte del equipo, cuando le pregunté como podía ayudarnos.
 
-Estos días estoy entrevistando a perfiles diferentes a técnicos. Entrevistar a carabolis es fácil, cuando eres uno de ellos sabes de que va todo el tinglado. Normalmente con unos minutos te hagas una idea de qué tipo de perfil tiene, donde puede o no cuadrar y en qué cosas se está vendiendo un poco. Somos malos vendiendonos, alguna cosa buena tenía que tener.
+Estos días estoy entrevistando a perfiles diferentes a técnicos. Entrevistar a carabolis es fácil, cuando eres uno de ellos sabes de que va todo el tinglado. Normalmente con unos minutos te hagas una idea de qué tipo de perfil tiene, donde puede o no cuadrar y en qué cosas se está vendiendo un poco. Somos malos vendiendonos, alguna cosa buena tenía que tener. Nadie te cuenta esto cuando montas una startup.
 
 Ya me sé todo ese tema de que las entrevistas tienen que ser lo más objetivas posible, que tienes que eliminar el "bias" y demás. Nada en contra de que los procesos sean los más objetivos posible, pero la realidad es que nunca lo son, no se puede evaluar una persona objetivamente y mucho menos para algo que dista mucho de ser una cadena de montaje. No es mi intención entrar aquí, así que ahí lo dejo y me voy a lo mio.
 
@@ -32,7 +32,7 @@ Esta segunda opción suele ser mejor, no tienen incentivo por colocarte a nadie,
 
 Si no quieres abusar demasiado puedes preguntar sobre qué preguntas hacen en las entrevistas, qué vieron en cierta persona (que también conoces), qué guión siguen, cual son los "red flags", que valoran muy positivamente, donde es más fácil equivocarse, qué es más difícil de ver, qué pruebas "técnicas" ponen, qué hay que preguntar y en general todos los porqués de lo que acabo de decir, es también una buena forma de hacerse una idea. Es bueno incluso preguntarlo al propio candidato :).
 
-Como siempre, vas a cometer errores contratando, pero las personas no somos máquinas que podamos evaluar al milímetro con preguntas. Lo que si sé es que cuando los fundadores de uns startup no tienen claro para qué quieren contratar un perfil y sólamente lo hacen porque "es lo que toca" (que suele pasar con los VPs), es la receta infalible para el desastre.
+Como siempre, vas a cometer errores contratando, pero las personas no somos máquinas que podamos evaluar al milímetro con preguntas. Lo que si sé es que cuando los fundadores de una startup no tienen claro para qué quieren contratar un perfil y sólamente lo hacen porque "es lo que toca" (que suele pasar con los VPs), es la receta infalible para el desastre.
 
 
 
