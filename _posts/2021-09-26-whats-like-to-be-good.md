@@ -24,13 +24,15 @@ Os pongo un ejemplo práctico. Ahora mismo buscamos gente de comercial. Yo no he
 
 Cuando monté Tinybird el objetivo era que el logotipo estuviese en la puerta de algún coche de competición. Creo que podamos, aún recuerdo una reunión con Alteryx en uno de los viajes a SF, de cuando se podía viajar, y en la que nos contaban que tenían más bien poco ARR. Hoy están en un coche de F1. Así que me estoy dedicando a intentar vender Tinybird a alguna marca de competición. No he conseguido nada como ya imaginabais, pero aprendes que es más difícil de lo que parece. Solo saber a quien y como atacar dentro de la organización es absurdamente difícil.
 
-2) Buscar a alguien del que te fies que sepa distinguir entre el grano y la paja. Las empresas de recruiting en teoría hacen esto. En la práctica rara es la vez que tienen la misma intuición que tú. Otra opción es buscar a alguien que haya pasado por ese puesto y te ayude a entender a quien entrevistas.
+2) La otra forma de generar esa intuición es no generarla y buscar a alguien del que te fies que sepa distinguir entre el grano y la paja. Las empresas de recruiting en teoría hacen esto. En la práctica rara es la vez que tienen la misma intuición que tú.
 
-Esta segunda opción suele ser mejor, no tienen incentivo por colocarte a nadie, pero pedir a tus amigos que te entrevisten gente no es bueno para mantener la amistad. 
+Otra opción es buscar a alguien que haya pasado por ese puesto y te ayude a entender a quien entrevistas.
 
-Preguntar sobre qué preguntas hacen en las entrevistas, qué vieron en cierta persona (que también conoces), qué guión siguen, cual son los "red flags", que valoran muy positivamente, donde es más fácil equivocarse, qué es más difícil de ver, qué pruebas "técnicas" ponen, qué hay que preguntar y en general todos los porqués de lo que acabo de decir, es también una buena forma de hacerse una idea. Es bueno incluso preguntarlo al propio candidato :).
+Esta segunda opción suele ser mejor, no tienen incentivo por colocarte a nadie, pero pedir a tus amigos que te entrevisten gente no es bueno para mantener la amistad. Tampoco es perfecto, hay algunas cosas que son difíciles de evaluar desde fuera de la empresa (de ahí también la diferencia de criterios con las agencias de recruiting)
 
-Como siempre, vas a cometer errores contratando, pero las personas no somos máquinas que podamos evaluar al milímetro con preguntas.
+Si no quieres abusar demasiado puedes preguntar sobre qué preguntas hacen en las entrevistas, qué vieron en cierta persona (que también conoces), qué guión siguen, cual son los "red flags", que valoran muy positivamente, donde es más fácil equivocarse, qué es más difícil de ver, qué pruebas "técnicas" ponen, qué hay que preguntar y en general todos los porqués de lo que acabo de decir, es también una buena forma de hacerse una idea. Es bueno incluso preguntarlo al propio candidato :).
+
+Como siempre, vas a cometer errores contratando, pero las personas no somos máquinas que podamos evaluar al milímetro con preguntas. Lo que si sé es que cuando los fundadores de uns startup no tienen claro para qué quieren contratar un perfil y sólamente lo hacen porque "es lo que toca" (que suele pasar con los VPs), es la receta infalible para el desastre.
 
 
 
