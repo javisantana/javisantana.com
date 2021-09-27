@@ -23,12 +23,16 @@ We format the data to move it around. It could be hundreds of kilometers or a fe
 I didn't find the best format. 
 
 Text formats are easy to read by an human but harder and slower to parse.
-Binary formats are fast to parse but hard to debug.
-XML is a good container but it's to verbose.
-JSON is easy but does not have basic data types.
-Serializable formats are not good to keep them in memory but specific formats for in memory operations are not compatible.
 
-The most important thing I learned is: you need pick find the right balance between speed, flexibility, compatibility and human-computer interface.
+Binary formats are fast to parse but hard to debug.
+
+XML is a good container but it's to verbose.
+
+JSON is easy but does not have basic data types.
+
+Serializable formats are not good to keep them in memory but specific formats for in memory operations are not binary compatible with other laguajes.
+
+The most important thing I learned is: you need find the right balance between speed, flexibility, compatibility and human-computer interface.
 
 
 
