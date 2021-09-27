@@ -17,3 +17,19 @@ Other way to see it: modeling reality always get complex. There are always small
 
 The only models I found easy to work with and understand are the ones that reflect computer things.
 
+## 2. There is no "the best data format"
+
+We format the data to move it around. It could be hundreds of kilometers or a few nanometers but we always need to encode information somehow.
+I didn't find the best format. 
+
+Text formats are easy to read by an human but harder and slower to parse.
+Binary formats are fast to parse but hard to debug.
+XML is a good container but it's to verbose.
+JSON is easy but does not have basic data types.
+Serializable formats are not good to keep them in memory but specific formats for in memory operations are not compatible.
+
+The most important thing I learned is: you need pick find the right balance between speed, flexibility, compatibility and human-computer interface.
+
+
+
+
