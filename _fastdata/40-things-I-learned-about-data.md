@@ -39,8 +39,8 @@ The most important thing I learned is: you need find the right balance between s
 
 When the data model is not well designed, everything that goes after feels wrong. You feel like you are doing hacks and tweaks all the time. 
 
-When the data model is the right one everything flows, it's easy to explain, when you make a change it just fits like a good Tetris play. Only time can tell if the data model was good, if it still supports your product/app, you did it right.
+When the data model is the right one everything flows, it's easy to explain, when you make a change it just fits like a good Tetris play. Only time can tell if the data model was the right one for the use case. If after some years you still use the same data model (maybe not the same database or same code) you did it right.
 
-Designing a good data model takes time, prototypes and a well understanding of the reality your are simulating (see 1 for more into)
+Designing a good data model takes time, prototypes and a well understanding of the reality your are modelling (see point 1 for more info)
 
 
