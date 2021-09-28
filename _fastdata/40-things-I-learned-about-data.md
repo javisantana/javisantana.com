@@ -20,7 +20,7 @@ The only models I found easy to work with and understand are the ones that refle
 ## 2. There is no "the best data format"
 
 We format the data to move it around. It could be hundreds of kilometers or a few nanometers but we always need to encode information somehow.
-I didn't find the best format. 
+I never found "El dorado" of data formats. 
 
 Text formats are easy to read by an human but harder and slower to parse.
 
@@ -30,7 +30,7 @@ XML is a good container but it's to verbose.
 
 JSON is easy but does not have basic data types.
 
-Serializable formats are not good to keep them in memory but specific formats for in memory operations are not binary compatible with other laguajes.
+Serializable formats are not good to keep them in memory but specific formats for in memory operations are not binary compatible with other laguages.
 
 The most important thing I learned is: you need find the right balance between speed, flexibility, compatibility and human-computer interface.
 
