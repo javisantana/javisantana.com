@@ -43,4 +43,12 @@ When the data model is the right one everything flows, it's easy to explain, whe
 
 Designing a good data model takes time, prototypes and a well understanding of the reality your are modelling (see point 1 for more info)
 
+## 4. The second most important rule of working with data: the faster data is the one you don't read
+
+As simple as it sounds, most people forget about using one of the most important database features: indices. Well, you also need to think about what's the actual data you need, a lot of apps are full of `select * from table`.
+
+The problem is, as your system grows, so do the amount and complexity of queries and that makes tracking what's going on and adding indices or thinking about the data you actually need is harder. To avoid that you need... yes, data about how you query your data. 
+
+
+
 
