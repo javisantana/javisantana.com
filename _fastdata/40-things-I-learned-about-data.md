@@ -47,7 +47,11 @@ Designing a good data model takes time, prototypes and a well understanding of t
 
 As simple as it sounds, most people forget about using one of the most important database features: indices. Well, you also need to think about what's the actual data you need, a lot of apps are full of `select * from table`.
 
-The problem is, as your system grows, so do the amount and complexity of queries and that makes tracking what's going on and adding indices or thinking about the data you actually need is harder. To avoid that you need... yes, data about how you query your data. 
+The problem is, as your system grows, so do the amount and complexity of queries. Know what data you need becomes harder. To avoid that you need... yes, data about how you query your data. 
+
+
+
+
 
 
 
