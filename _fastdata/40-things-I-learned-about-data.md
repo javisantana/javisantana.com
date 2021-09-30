@@ -50,8 +50,15 @@ As simple as it sounds, most people forget about using one of the most important
 The problem is, as your system grows, so do the amount and complexity of queries. Know what data you need becomes harder. To avoid that you need... yes, data about how you query your data. 
 
 
+## 5. When in doubt, use Postgres as your database.
 
+It's quite typical when you start a project to decide what DBMS to use. Elastic, Mongo, some key/value like redis, funny things like Neo4J. If you have an use case that **clearly** fits with a database, fine, otherwise, use postgres or anything relational. Of course, there will be someone that says "but it does not scale". Anyone who has worked with a system at scale knows there is no storage system that scales well (except it's simple as hell and is eventually consistent, but not even that)
 
+I love Postgres because of many things: solid, battle tested, support transactions (will write about them), feature complete, fast, it's not owned by a VC backed company, guided by the comunity, calm and steady progress, great tooling, cloud services providing infra, companies with expertise. 
+
+When you pick something funny, you end up developing half of the features a solid RDBMS system provide but just worse. 
+
+I decided to use redis as the storage for [Tinybird](https://tinybird.co) and it's working great but as the project evolves you miss many of the builtin features postgres provides. Probably a mistake.
 
 
 
