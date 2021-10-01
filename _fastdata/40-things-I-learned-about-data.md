@@ -60,6 +60,9 @@ When you pick something funny, you end up developing half of the features a soli
 
 I decided to use redis as the storage for [Tinybird](https://tinybird.co) and it's working great but as the project evolves you miss many of the builtin features postgres provides. Probably a mistake.
 
+## 6. Behind every null value there is a story
+
+When you join a company, just ask about it, you'll learn a lot
 
 
 
