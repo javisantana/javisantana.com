@@ -65,7 +65,7 @@ I decided to use redis as the storage for [Tinybird](https://tinybird.co) and it
 When you join a company, just ask about it, you'll learn a lot
 
 
-### 7. When I try to understand data I always end up using an histogram
+## 7. When I try to understand data I always end up using an histogram
 
 When visualizing data you have to pick the right visualization type but before that you need to understand the data.
 
