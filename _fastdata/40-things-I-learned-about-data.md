@@ -72,3 +72,12 @@ When visualizing data you have to pick the right visualization type but before t
 I start using an avg, then avg plus stddev, then min-max and finally I go with an histogram.
 
 It captures min, max, avg and most important, the data distribution.
+
+
+## 8. Analytics it's a product not a department
+
+When you have people asking for metrics and people extracting then from data. For the same metric you'll have as many definitions for a metric as people you have in the company.
+
+Reporting is something that requires the same thing as a digital product needs: owners, maintenance, clear definitions, improvements and you know, give people what they want in a way is useful for everybody in the company.
+
+Many companies don't consider analytics as a first class citizen and end up spending more to have less quality.
