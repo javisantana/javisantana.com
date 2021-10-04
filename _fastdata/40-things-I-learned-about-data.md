@@ -82,7 +82,7 @@ Reporting is something that requires the same thing as a digital product needs: 
 
 Many companies don't consider analytics as a first class citizen and end up spending more to have less quality.
 
-## 9. it's better to master just one database than be bad at 2
+## 9. it's better to master just one database than be bad at two
 
 It's tempting to start using another database when you run into a performance problem or the lack of a feature.
 
