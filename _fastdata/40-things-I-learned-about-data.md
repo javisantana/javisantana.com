@@ -81,3 +81,15 @@ When you have people asking for metrics and people extracting then from data. Fo
 Reporting is something that requires the same thing as a digital product needs: owners, maintenance, clear definitions, improvements and you know, give people what they want in a way is useful for everybody in the company.
 
 Many companies don't consider analytics as a first class citizen and end up spending more to have less quality.
+
+## 9. it's better to master just one database than be bad at 2
+
+It's tempting to start using another database when you run into a performance problem or the lack of a feature.
+
+There are always ways to make it perform better or solving the problem with a workaround. 
+
+You'd be surprised how good your database can perform when you understand the internals. It's not that bad to do that thing in two steps instead of one.
+
+If you go after the shiny new thing just because you find a small roadblock, you'll never understand the actual limits of your database and you may never know when there is a real reason to change.
+
+
