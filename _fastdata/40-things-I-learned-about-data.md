@@ -92,4 +92,20 @@ You'd be surprised how good your database can perform when you understand the in
 
 If you go after the shiny new thing just because you find a small roadblock, you'll never understand the actual limits of your database and you may never know when there is a real reason to change.
 
+## 10. Try to use the simplest possible data structure.
+
+A few years ago, one of the websites I was working on went on the front page of Google (yes, that small blue link). The traffic it gets is pretty high.
+
+I had to develop a search functionality. The first thing you'd think is to use the database you are currently using or maybe using a special one, like elastic.
+
+But in this case, I needed to use the database as less as possible to be able to cope with the load. 
+
+So I decided to go the simplest way: create an index with an in-memory array where all the words would be stored. I ran a linear search, yes, a simple for loop with the search logic.
+
+was it the best index structure? No if you just think about performance, but it worked, it was simple, easy to maintain and change.
+
+There is always time to make it more advanced. With time you end up loving simple and flat arrays.
+
+BTW, you can read the full story [here](https://javisantana.com/2013/06/27/como-aguantamos-una-portada-de-google.html)
+
 
