@@ -108,4 +108,10 @@ There is always time to make it more advanced. With time you end up loving simpl
 
 BTW, you can read the full story [here](https://javisantana.com/2013/06/27/como-aguantamos-una-portada-de-google.html)
 
+## 11. Learn SQL
+
+You may not like SQL based databases but, the probability dealing with a SQL based system in your career is so high that learning it as a soon as possible will compound.
+
+I didn't like SQL, I still don't like it even I work with it every single day, but I have to recognize it's a handy tool.
+
 
