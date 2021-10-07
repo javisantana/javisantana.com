@@ -114,4 +114,12 @@ You may not like SQL based databases but, the probability dealing with a SQL bas
 
 I didn't like SQL, I still don't like it even I work with it every single day, but I have to recognize it's a handy tool.
 
+## 12. The third most important rule of working with data: the faster data after the one you don't read is the one you read (and process) once
+
+In other words, caching is one of the most important features and you should trade processing time by memory (or any kind of storage). 
+
+Caching is also applied statistics, you usually use LRU or MRU in combination with some kind of TTL but there are many models to improve caches.
+
+Just gather info about how you data is accessed and run simulations on how well different cache models perform.
+
 
