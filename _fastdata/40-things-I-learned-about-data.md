@@ -122,4 +122,12 @@ Caching is also applied statistics, you usually use LRU or MRU in combination wi
 
 Just gather info about how you data is accessed and run simulations on how well different cache models perform.
 
+## 13. There is always a schema
+
+You decide it when you write the data or later when you read it, but at some point you need to decide attributes and data types for your data.
+
+When you store data without schema you usually need ["armies of engineers who effectively become the schema"](https://twitter.com/javisantana/status/1275779816982220800). It looks easier because a lot of decisions are postponed.
+
+On the other hand, not choosing the schema accelerates the development quite a lot, that's why databases like MongoDB became so popular a few years ago.
+
 
