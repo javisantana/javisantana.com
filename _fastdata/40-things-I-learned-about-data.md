@@ -130,4 +130,14 @@ When you store data without schema you usually need ["armies of engineers who ef
 
 On the other hand, not choosing the schema accelerates the development quite a lot, that's why databases like MongoDB became so popular a few years ago.
 
+## 14. Almost everything was invented years ago
+
+Document based databases: IMS from IBM, 1966, used in the Apollo program
+Analytics databases: Teradata, 1979
+
+> Future users of large data banks must be protected from having to know how the data is organized in the machine (the internal representation). A prompting service which supplies such information is not 
+
+> - E. F. CODD, IBM Research Laboratory, San Jose, California - 1970
+
+Those are examples, but there are many more. So it worts to spend some time researching old systems to understand better the new ones.
 
