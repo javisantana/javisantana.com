@@ -141,3 +141,14 @@ Analytics databases: Teradata, 1979
 
 Those are examples, but there are many more. So it worts to spend some time researching old systems to understand better the new ones.
 
+## 15. Data debugging is as important as code debugging
+
+When the data is not the expected one (and you usually find when in production) you find the find the root cause.
+
+With code you reproduce the steps and reproduce (if you are lucky) the problem. With data those steps don't usually exists (I'll talk about this) so you need guess what's wrong.
+
+There are many ways, I usually use a mix of data visualization, drill down, diffs, extrapolate from particular examples, snapshots and so on. I sometimes use unix shell tools, sqlite3 and mostly python, but that's not important, each one should find their own tools.
+
+
+
+
