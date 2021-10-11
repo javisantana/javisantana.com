@@ -149,6 +149,11 @@ With code you reproduce the steps and reproduce (if you are lucky) the problem. 
 
 There are many ways, I usually use a mix of data visualization, drill down, diffs, extrapolate from particular examples, snapshots and so on. I sometimes use unix shell tools, sqlite3 and mostly python, but that's not important, each one should find their own tools.
 
+## 16. Learn how Log data structure works
 
+Log is probbaly the simplest data structure. If you are a developer you have been using it forever, writing into files, appending stuff to a list... 
 
+Append only stryctures have many properties but one of them is they play well with hardware. In general today's hardware performs at peak when you do a bunch of stuff at the same time and you do in the same place (in the disk, memory, cache...). That's why almost every database have a Write Aheade Log to make their writes faster and reliable.
+
+At higher level there are things like redis, kafka and others that implement log strutuctures in a distributed way. You should use them when you reach a point, they are good. Please, [read this blog post from one of the Kafka authors](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying).
 
