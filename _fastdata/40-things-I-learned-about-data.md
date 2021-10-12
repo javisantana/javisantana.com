@@ -157,3 +157,14 @@ Append only stryctures have many properties but one of them is they play well wi
 
 At higher level there are things like redis, kafka and others that implement log strutuctures in a distributed way. You should use them when you reach a point, they are good. Please, [read this blog post from one of the Kafka authors](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying).
 
+## 17. If you want to process data at speed, you need to design for speed
+
+In the same way a fast car is not a regular car with just more power, a fast processing pipeline is not a pipeline with more or faster cores/memory/disks/network.
+
+If you see a F1 they have a powerful engine but there are also hundred of small details that are needed at high speed. And of course there are some comfort options you need to get rid of.
+
+When talking about data you may need to design with parallelism in mind, working only in memory, forget about slow operations and so on.
+
+Remember there is an important difference between latency and throughtput. Both are systems that require speed but a different kind of design.
+
+The main thing I learned during all these years is: data processing get slower with time and you neeed to watch speed metrics to avoid degradation.
