@@ -168,3 +168,14 @@ When talking about data you may need to design with parallelism in mind, working
 Remember there is an important difference between latency and throughtput. Both are systems that require speed but a different kind of design.
 
 The main thing I learned during all these years is: data processing get slower with time and you neeed to watch speed metrics to avoid degradation.
+
+## 18. I don't believe in "data driven"
+
+At least in the way they are selling it: you'd be able to drive your company/department/life based on data, IA will rule the world. 
+
+Data captures just part of the reality so I see pretty hard to make decision just only relying on data. 
+
+I like more the term "[Data informed decision making](https://www.speedwins.tech/posts/jane-yang-from-basecamp#question-6)"
+
+Machines can be run 100% data driven (and they still fail), I don't think humans can follow just what data tells them, I still believe humans are better than that.
+
