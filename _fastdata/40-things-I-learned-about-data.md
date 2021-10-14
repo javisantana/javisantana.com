@@ -179,3 +179,14 @@ I like more the term "[Data informed decision making](https://www.speedwins.tech
 
 Machines can be run 100% data driven (and they still fail), I don't think humans can follow just what data tells them, I still believe humans are better than that.
 
+## 19. Reproducibility is an invaluable aid
+
+When working with data, being able to reproduce the exact results given the same data saves time and headaches (and also create good quality pipelines).
+
+In the software world having reproducible builds is still a challenge and data has the same challenges plus the data side. 
+
+Race conditions, third party library changes, underlying architecture (not all of them run IEEE754 operations in the same way, [read the story about how game developers use fixed point to avoid problems with precision on multiplatform](https://www.gamedeveloper.com/programming/cross-platform-rts-synchronization-and-floating-point-indeterminism)).
+
+A good read about this is "[Why us make](https://bost.ocks.org/mike/make/)"
+
+Tomorrow there will be an story about this :)
