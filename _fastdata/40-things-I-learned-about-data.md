@@ -191,7 +191,7 @@ A good read about this is "[Why us make](https://bost.ocks.org/mike/make/)"
 
 Tomorrow there will be an story about this :)
 
-## 20. When using data from sensors, try to capture as much as you can
+## 20. When using data from sensors, try to capture as much data as you can
 
 Some time ago I started a company that developed a mobile app (on windows mobile, android later) for farmers that use GPS. It was a quite successful company, I owned it during 12 years and it's still running.
 
