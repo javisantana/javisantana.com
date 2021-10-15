@@ -190,3 +190,15 @@ Race conditions, third party library changes, underlying architecture (not all o
 A good read about this is "[Why us make](https://bost.ocks.org/mike/make/)"
 
 Tomorrow there will be an story about this :)
+
+## 20. When using data from sensors, try to capture as much as you can
+
+Some time ago I started a company that developed a mobile app (on windows mobile, android later) for farmers that use GPS. It was a quite successful company, I owned it during 12 years and it's still running.
+
+Anyway, GPS information was the main input for the app. After some months with the application running in production I realized it was nearly impossible to reproduce problems. Farmers had a problem, they called me and I had to guess what the problem was asking really weird questions for non-tech people.
+
+So I started to serialize all the state of the app for every change (4 times a second) so I was able to run exactly the same thing the farmer saw. That file I was storing became the application format, it had much information that needed but it totally worth it.
+
+One funny thing is: 16 years ago there was no mobile internet so I had to find a way to send those files to my server, and of course make it really easy so farmers , with very little tech knowledge, could do it. I decided to generate a KML file (The google earth file) on a SD card every time a farmer would use the app so  they could open it with Google Earth and visualize their work. KML supports loading placemarks from a external server so I used those requests to send the serialized file as URL params.
+
+Years later I ported the app to android and it was possible to sync works from the phone using 3G and Wifi but years later the KML service was still getting requests.
