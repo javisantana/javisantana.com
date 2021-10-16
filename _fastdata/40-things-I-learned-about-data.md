@@ -202,3 +202,11 @@ So I started to serialize all the state of the app for every change (4 times a s
 One funny thing is: 16 years ago there was no mobile internet so I had to find a way to send those files to my server, and of course make it really easy so farmers , with very little tech knowledge, could do it. I decided to generate a KML file (The google earth file) on a SD card every time a farmer would use the app so  they could open it with Google Earth and visualize their work. KML supports loading placemarks from a external server so I used those requests to send the serialized file as URL params.
 
 Years later I ported the app to android and it was possible to sync works from the phone using 3G and Wifi but years later the KML service was still getting requests.
+
+## 21. Learning the basics of how the modern hardware works is key
+
+I think it was after reading Poul-Henning Kamp's [famous article](https://queue.acm.org/detail.cfm?id=1814327) (it's not about HW but about the OS system) I realized there was a huge difference in performane when using the hardware you run you app in the right way.
+
+Using caches, using sequential writes and reads, exploiting data locality and parallelization as much as possible. Looks like obvious now but takes quite a lot of time to realize how to properly program with that in mind.
+
+
