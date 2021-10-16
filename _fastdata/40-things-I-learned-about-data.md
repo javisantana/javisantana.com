@@ -205,7 +205,7 @@ Years later I ported the app to android and it was possible to sync works from t
 
 ## 21. Learning the basics of how the modern hardware works is key
 
-I think it was after reading Poul-Henning Kamp's [famous article](https://queue.acm.org/detail.cfm?id=1814327) (it's not about HW but about the OS system) I realized there was a huge difference in performane if you use the hardware you use in the right way.
+I think it was after reading Poul-Henning Kamp's [famous article](https://queue.acm.org/detail.cfm?id=1814327) (it's not about HW but about the OS system) I realized there was a huge difference in performance if you use the hardware you use in the right way.
 
 Using caches, using sequential writes and reads, exploiting data locality and parallelization as much as possible. Looks like obvious now but takes quite a lot of time to realize how to properly program with that in mind.
 
