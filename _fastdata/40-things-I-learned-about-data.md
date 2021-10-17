@@ -209,4 +209,15 @@ I think it was after reading Poul-Henning Kamp's [famous article](https://queue.
 
 Using caches, using sequential writes and reads, exploiting data locality and parallelization as much as possible. Looks like obvious now but takes quite a lot of time to realize how to properly program with that in mind.
 
+## 22. When you think about creating a data warehouse, start with the use cases and not the tech
+
+It's pretty common when companies get to a reasonable data size to start thinknoing about a data watrehouse that allows you to analyze your data.
+
+It's also common the first thing you thing about is about the tech: slowflake, bigquery, redshift or any more realtime (like Tinybird, of couse)
+
+The way to think about it is: how am I going to use it. 
+
+For example, are you going to use your data to atomate stuff? just see how your auomtation tool reads data and how it needs it an expose it in that way. Do you need auomtation or just access to create reports using any fancy BI tool? Do you need also to access stats to send them to your users?
+
+Those are the questions, not the tech you are using to store the data in.
 
