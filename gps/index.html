@@ -42,7 +42,7 @@
                 `<div>${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}</div>`
               )
               if(p.coords.speed)
-               document.getElementById('start_btn').innerHTML = p.coords.speed.toFixed(2)
+               document.getElementById('speed').innerHTML = p.coords.speed.toFixed(2)
 
             }
             const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
