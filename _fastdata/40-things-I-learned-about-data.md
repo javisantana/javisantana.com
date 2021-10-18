@@ -221,3 +221,12 @@ For example, are you going to use your data to automate stuff? just see how your
 
 Those are the questions, not the tech you are using to store the data in.
 
+## 23. In speed benchmarks, the one publishing it always wins
+
+We use benchmarks to decide what technology to use quite often. But I never saw a speed benchmark where the one publishing it looses. Makes sense, I'd not spend a single minute running benchmarks in which I'm going to look bad but for God's shake, you can't win on everything.
+
+That's why I don't trust technology that does not talk about the downsides or the weak points.
+
+When picking a technology you should evaluate your use case and use benchmarks as a baseline, not as the truth.
+
+
