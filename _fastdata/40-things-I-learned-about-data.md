@@ -229,4 +229,14 @@ That's why I don't trust technology that does not talk about the downsides or th
 
 When picking a technology you should evaluate your use case and use benchmarks as a baseline, not as the truth.
 
+## 24. Compression is not magic
+
+The first time I saw winzip running (on windows 98, of course) it was like a miracle. Later I learned there was something called compression algorithms that made data smaller. Yes, I tried to compress a .zip file to save even more bytes :)
+
+When I looked at compression algorithms more in detail I felt dumb, the code was full of bitwise operations, huffman tables, RLE, blocks.
+
+After some time I realized there are different kinds of compression algorithms and each one has different properties and you don't need to know how the code works in detail. It makes sense to understand where to use each algo depending on the kind of data you use.
+
+Also knowing how the compression works allows you to encode the information in a way the compressor can do its best work. I recommend you to take a look at how PNG format uses filters to make the compressor life easier.
+
 
