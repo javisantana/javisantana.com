@@ -236,7 +236,13 @@ After some time I realized there are different kinds of compression algorithms a
 
 Also knowing how the compression works allows you to encode the information in a way the compressor can do its best work. I recommend you to take a look at how PNG format uses filters to make the compressor life easier.
 
+## 25. The most important rule when working with data: the best data is the one you don't write
 
+When you don't write data you avoid processing, storing, migrating and updating it. 
+
+Sometimes we say data is new oil but it's actually more like nuclear waste. It's a good example of ["software inventory"](https://www.joelonsoftware.com/2012/07/09/software-inventory/)
+
+So when you think about: let's save this "just in case", give it a second though.
 
 
 
