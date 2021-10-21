@@ -248,13 +248,21 @@ So when you think about: let's save this "just in case", give it a second though
 ## 26. These are the values I hate the most
 
 `NaN` - I divided zero by zero or you are using javascript.
+
 `+Inf` - I divided something by zero?
+
 `1970-01-01 00:00:00` - missing date somewhere
+
 `9223372036854776000` - or any large number with 3 zeros at the end. An Int64 parsed like a float.
+
 `-1` - a function is not working great. I hate this one because of socket programming
+
 `500` - that feeling when you see it
+
 `0º 00' 00` - projection didn't work
+
 `0xFFFFFFFF` - debugging 
+
 `0x00000000` - core dumped 
 
 
