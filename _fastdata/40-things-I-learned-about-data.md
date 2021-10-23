@@ -275,6 +275,23 @@ These days I mostly work with immutable data structures (not directly but using 
 
 They don't always work, of course, there is no silver bullet.
 
+## 28. There is some hidden Moore's Law for data
+
+Something in this direction: "Volume of data duplicates every XX months".
+
+For me, what was big a few years ago, it's the new normal today. 800Mb files were monsters, you could even store a full movie in one of them, now your server generates 1Gb per hour of logs in a Saturday night.
+
+Systems are more capable so we gather more data because we can process it.
+
+Networks as way faster.
+
+Companies that used to store data in their servers now move it to the cloud. And of couse the cloud makes it easy to store more and more.
+
+We have more sensors: phones, cars, cameras, connected devices... even my TV shows "the cookies dialog".
+
+We reached the limits of Moore's Law and the industry had to shift to be smarter rather than faster and faster. I hope we follow the same path.
+
+
 
 
 
