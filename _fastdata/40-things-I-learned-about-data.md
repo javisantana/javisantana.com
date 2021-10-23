@@ -267,9 +267,9 @@ So when you think about: let's save this "just in case", give it a second though
 
 ## 27. You end up loving immutable data
 
-I hated immutbale data structures, I though it was a total waste of resources, why using more memory storing things you can override. I started to code when machines had 128mb RAM, I still remember one of my first questions in the #C channel on IRC: "does someone reserved more than 64kb of mem?". I was using a 16 bits compiler at that time :)
+I hated immutable data structures, I though it was a total waste of resources, why using more memory storing things you can override. I started to code when machines had 128mb RAM, I still remember one of my first questions in the #C channel on IRC: "does someone reserved more than 64kb of mem?". I was using a 16 bits compiler at that time :)
 
-With time I started to value more a more immutable structures, when you look at them you see exactly what happened, you can reproduce behaviour and in genera lis faster to write new things that override old ones.
+With time I started to value more a more immutable structures, when you look at them you see exactly what happened, you can reproduce behaviour and in general is faster to write new things that override old ones.
 
 These days I mostly work with immutable data structures (not directly but using databases that use them).
 
