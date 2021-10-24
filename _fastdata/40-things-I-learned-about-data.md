@@ -292,7 +292,17 @@ We have more sensors: phones, cars, cameras, connected devices... even my TV sho
 We reached the limits of Moore's Law and the industry had to shift to be smarter rather than faster and faster. I hope we follow the same path.
 
 
+## 29. You need to understand the bussiness to get most of your data
 
+When you don't understand what you are modelling you are not getting everything you can from the data.
+
+There are always rules you can exploit in order to make it faster or simpler. 
+
+I spend 80% of my time thinking on how to optimize data access for large amounts of data in order to get low latency queries. There are a few generic rules that you can use to optimize (see #4, #12 and #25) but what makes the difference is when you use bussiness rules.
+
+There are some of them you can usually extract with some statistics and usage patterns but others you need to understand the bussiness you are in.
+
+Well, no matter what you do, you should try to understand what your work is about.
 
 
 
