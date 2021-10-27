@@ -304,6 +304,36 @@ There are some of them you can usually extract with some statistics and usage pa
 
 Well, no matter what you do, you should try to understand what your work is about.
 
+## 30. When you set bounds, think in outliers rather than the average
+
+As I mentioned in #20 I founded the company that developed a mobile app for farmers. It used GPS and it'd store all the positions in a highly optimized data structure based on a quadtree. When I created the app the window mobile tables had a few megabytes of RAM so every byte counted.
+
+In that quadtree data structure I had to set up the width and heigh. I decided to set it to 256km, a tractor is able to travel al 50km/h at top so it was *really* unlikely that a farmer would travel during 5 hours at top speed working (the working speed is usually less than 10km/h, so 5 times more unlikely)
+
+One day a client called me and explained me the problem. It was not the typical problem, it was different, so after 20 minutes of questions I asked: how much distance did you travel since you started. Yes, he answeres "about 300km, I started to work 6 days ago and never shutdown the app".
+
+I raised to 1024km :)
+
+## 31. Your app needs to know how to work with eventual consistency
+
+Eventual consistency means you can't garantee all the machines in your cluster report the same data at the same time. So when you write something you could be reading "stale data". 
+
+So if you are working with a strong consistency (which usually means less performance and/or less availability) you app in general will be safe (if you use transactions wisely, of course) but if your system is eventually consistent, you better prepare your app to know how to handle it
+
+## 32. The articles I liked the most about data
+
+These are not the best ones but the ones I enjoyed a lot. You know you usually enjoy things because of mix of reasons: the content quality, the things you are working on and even your mood:
+
+- [Mesh compression](https://iquilezles.org/www/articles/meshcompression/meshcompression.htm) by Iñigo Quilez. I love it because it explains how to "exploit" data to compress it better
+- [How figma multiplayer works](https://www.figma.com/blog/how-figmas-multiplayer-technology-works/) It explains how to sync data structures in a real time way. Kind of what the future of the web is ([and what videogames have been for 25 years](https://github.com/id-Software/Quake/blob/master/WinQuake/net_main.c))
+- [Local fist](https://www.inkandswitch.com/pushpin/) by Inkandswitch. They explain about CRDTs and how to use them to get rid of the data lock-in the cloud vendores and pushing us to.
+- [I was wrong about CRDT](https://josephg.com/blog/crdts-are-the-future/). Another one about CRDT.
+- [Fixed timestep loop](http://www.iguanademos.com/Jare/Articles.php?view=FixLoop) This is old and it's about videogames and looks like it's not related to data, but it is.
+- [How DynamoDB works](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) oldie but good, the paper about how DyanmoDB works
+- [The paper about Procella, the youtube analytics database](https://blog.acolyer.org/2019/09/11/procella/)
+
+I think there are many more and I will keep updating the post as I remember more.
+
 
 
 
