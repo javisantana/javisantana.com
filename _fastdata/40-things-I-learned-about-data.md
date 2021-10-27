@@ -331,6 +331,7 @@ These are not the best ones but the ones I enjoyed a lot. You know you usually e
 - [Fixed timestep loop](http://www.iguanademos.com/Jare/Articles.php?view=FixLoop) This is old and it's about videogames and looks like it's not related to data, but it is.
 - [How DynamoDB works](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) oldie but good, the paper about how DyanmoDB works
 - [The paper about Procella, the youtube analytics database](https://blog.acolyer.org/2019/09/11/procella/)
+- [Bittorrent distributed hash table spec](http://www.bittorrent.org/beps/bep_0005.html) Bittorrent was way ahead of its time and I hope, with all the distributed hype we have these days, comes back.
 
 I think there are many more and I will keep updating the post as I remember more.
 
