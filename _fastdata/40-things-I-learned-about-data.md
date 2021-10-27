@@ -304,7 +304,7 @@ There are some of them you can usually extract with some statistics and usage pa
 
 Well, no matter what you do, you should try to understand what your work is about.
 
-## 30. When you set bounds, think in outliers rather than the average
+## 30. When you set bounds, think beyond the outliers 
 
 As I mentioned in #20 I founded the company that developed a mobile app for farmers. It used GPS and it'd store all the positions in a highly optimized data structure based on a quadtree. When I created the app the window mobile tables had a few megabytes of RAM so every byte counted.
 
