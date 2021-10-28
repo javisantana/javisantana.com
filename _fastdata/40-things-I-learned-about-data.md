@@ -283,7 +283,7 @@ For me, what was big a few years ago, it's the new normal today. 800Mb files wer
 
 Systems are more capable so we gather more data because we can process it.
 
-Networks as way faster.
+Networks are way faster.
 
 Companies that used to store data in their servers now move it to the cloud. And of couse the cloud makes it easy to store more and more.
 
