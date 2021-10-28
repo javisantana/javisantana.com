@@ -335,6 +335,16 @@ These are not the best ones but the ones I enjoyed a lot. You know you usually e
 
 I think there are many more and I will keep updating the post as I remember more.
 
+## 33. Timezones are easy until you have to compare data from two years 
+
+No, they are never easy.
+
+But those days when exactly one year ago DST was of but today is on.
+
+Like today :)
+
+
+
 
 
 
