@@ -339,7 +339,7 @@ I think there are many more and I will keep updating the post as I remember more
 
 No, they are never easy.
 
-But those days when exactly one year ago DST was of but today is on.
+But those days when exactly one year ago DST was of but today is on are a real PITA
 
 Like today :)
 
