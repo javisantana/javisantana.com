@@ -343,6 +343,20 @@ But those days when exactly one year ago DST was of but today is on are a real P
 
 Like today :)
 
+## 34 Data visualization is lossy
+
+When I worked making maps one of the reference books was "how to lie with maps", it explains how visualizing the same data in different ways gives different information to the user.
+
+There is no way to not lose information when you visualize it, it's actually the point, remove some information to focus on the one you are interested to show.
+
+Visualization is based on perception and every human is different therefore impossible to make it perfect. Learning the very basis of human percepcion and how we understand distances, areas, colors and shapes (the basic tools of data vis) is key to do good data visualization and not lie by mistake.
+
+On the other hand data vis is key to understand the data and it's one of the best data debugging tools. So master the principles and the tools to quickly analyze the data in your system.
+
+But always ask: "the data I'm getting rid of to create this visualization is important?" and "is this visualization showing what the data is telling us or what I want it to tell us"?
+
+Understanding data is a billion dollars industry for a reason.
+
 
 
 
