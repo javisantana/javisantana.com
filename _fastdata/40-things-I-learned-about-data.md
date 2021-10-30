@@ -358,6 +358,14 @@ But always ask: "the data I'm getting rid of to create this visualization is imp
 Understanding data is a billion dollars industry for a reason.
 
 
+## 35 Things around data are as important as the data itself
+
+Things like security, privacy, trazability (lineage), clasification, documentation, accessibility are parts of working with data that have nothing to do with the data processing itself and are as important as the data itself.
+
+When you create an ETL or any data processing tool (or just a simple application) you don't usually start with a "I'm going to add here some trazability stuff for the future" or "let's think about user privacy" (except maybe you work for wikipedia).
+
+There is no single medium-large company I talked with that does not want a nice way to find data in a company wide catalog where data is easy to access for everybody. Most of them think that adding documentation to columns and making them "public" in the company directory is everything they need.
+
 
 
 
