@@ -367,10 +367,15 @@ When you create an ETL or any data processing tool (or just a simple application
 There is no single medium-large company I talked with that does not want a nice way to find data in a company wide catalog where data is easy to access for everybody. Most of them think that adding documentation to columns and making them "public" in the company directory is everything they need.
 
 
+## 36. Working with real time data is an order or magnitude harder than non real time
 
+Working with real time data (as data you have to process as it comes in) is like changing a wheel while you are driving. You can't stop the system, it needs to keep working and you have to deal with problems as they appear.
 
+That's why things like Kafka makes it easier, you have a buffer that saves you.
 
+Also you can't rely on "getting all the data and generating some views", you need to calculate those views when the data arrives. 
 
+Changing my mind to think in real time took 2 years (and I'm actually getting used to it).
 
 
 
