@@ -378,7 +378,25 @@ Also you can't rely on "getting all the data and generating some views", you nee
 Changing my mind to think in real time took 2 years (and I'm actually getting used to it).
 
 
+## 37. Books about data
 
+These are the books I use as a reference or like them. Most of them are classic and most reference books rather than regular reading books.
+
+THE book is "designing data intensive applications". This book is a must if you work with data, it explains all the basic concepts of databases, distributed systems and so on. Every single person working with data should have this book as a reference. You should also watch the talks from Kartin Kleppmann, the author, about data.
+
+"Naked statistics" helps you to understand basic stuff about statistics in an easy way. Easy to read and gives you an overview. Not a formal book.
+
+The visual display of quantitative information: a pretty good intro to data visualization
+
+"Computer Architecture: A Quantitative Approach", Hennesy & Patterson. A classic to learn about computer architecture, CPU internals and so on.
+
+"The algortihm design manual": it's quite long, of course, I didn't read but it's good to check some data structures and learn some algorithms.
+
+"Systems performance, enterprise and the cloud". Another classic and good to have it as a reference.
+
+"Effective data base design", William H. Inmon (the father of th data warehouse). Quite old (from 1981) and outdated (you laught a lot reading some concepts) but it has pretty bold statements that are true today.
+
+To be clear, most of what those books say is already on wikipedia and many other internet places, but it's always good to have high-quality content in one single place. They will get outdated soon but some fundamental concepts will be here for a while.
 
 
 
