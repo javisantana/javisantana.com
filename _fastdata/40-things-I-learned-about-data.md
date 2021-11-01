@@ -425,5 +425,19 @@ To be clear, most of what those books say is already on wikipedia and many other
 [Why SQLite succeeded as a database](https://changelog.com/podcast/201) If you don't fall in love with SQLite after hearing this podcast you are not human :)
 
 
+## 39. Future of data
 
+This post is different, it's about the things I'd like to see in a few years about data from the technical point of view.
+
+Data systems closer to how video games work. In video games, everything is real-time and fast and everything is designed to work in that way.
+
+A standard way to share data between systems. And that shouldn't be JSON :). AVRO or Arrow maybe are good ones. But I'm just talking about formats, but the full protocol. I hope we get to a point where a CDC-like system is standardized so any data system can sync with another one reliably.
+
+Developer-friendly data systems. Most of what we have today is meant to be managed by systems people. It does not mean "simple", developers are not dumb, but the abstraction level should be higher. For example, as a developer, I want to be able to control the tiered storage, move data seamlessly, in an atomic way, and with clear numbers about performance and costs. I don't need to know about S3, HDD, SDD, networking or distributed transactions.
+
+Distributed and decentralized data storage systems (like IPFS or BitTorrent)
+
+More CRDT based systems. The previous point and this one is the perfect combination: distributed, local-friendly and being able to keep track of every single change, not a just a snapshot.
+
+Specific hardware to query large amounts of data effectively. The systems today are really expensive and inefficient, I wish we have had the same innovations as custom hardware to mine bitcoin.
 
