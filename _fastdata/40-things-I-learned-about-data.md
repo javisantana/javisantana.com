@@ -398,6 +398,32 @@ The visual display of quantitative information: a pretty good intro to data visu
 
 To be clear, most of what those books say is already on wikipedia and many other internet places, but it's always good to have high-quality content in one single place. They will get outdated soon but some fundamental concepts will be here for a while.
 
+## 38. My favourite talks and podcast
+
+[Haunted by Data](https://www.youtube.com/watch?v=GAXLHM-1Psk) - Maciej Ceglowski. Quite a pessimistic talk about data we are collecting, not agree with everything he says but makes some good points
+
+[CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc)
+
+> "Different problems require different solutions.[...] If you have different data, you have a different problem.”
+
+
+[How To Design A Good API and Why it Matters](https://www.youtube.com/watch?v=heh4OeB9A-c) old, not 100% related to data, but data and API to are pretty close concepts.
+
+[Building a Website To Scale](https://www.youtube.com/watch?v=RlkCdM_f3p4). Youporn CTO explains a lot of things about how they use different data storages.
+
+
+[Keynote speech given by William Binney at HOPE 9](https://www.dailymotion.com/video/xs8zl4). This is a crazy talk I found after watching the documentary "A good American" (which is awesome, you should see it)
+
+[Creating an Extensible Big Data Platform | Uber](https://www.youtube.com/watch?v=sdIJqW8zsdg) the talk that explains [this fantastic blogpost about the Uber datawarehouse](https://eng.uber.com/uber-big-data-platform/)
+
+[EBtree - Design for a Scheduler and Use (Almost) Everywhere](https://www.infoq.com/presentations/ebtree-design/) The data structure HAProxy uses to deal with high amount of connecctions per second
+
+[Worse Case Scenario in the Database](https://www.youtube.com/watch?v=-IRhAZ0Dfuw) about legacy in databases
+
+[Slack Data Platform with Josh Wills](https://softwareengineeringdaily.com/2020/01/10/slack-data-platform-with-josh-wills/) Awesome podcast about the challenges of Slack when dealing with data.
+
+[Why SQLite succeeded as a database](https://changelog.com/podcast/201) If you don't fall in love with SQLite after hearing this podcast you are not human :)
+
 
 
 
