@@ -382,7 +382,7 @@ Changing my mind to think in real time took 2 years (and I'm actually getting us
 
 These are the books I use as a reference or like them. Most of them are classic and most reference books rather than regular reading books.
 
-THE book is "designing data intensive applications". This book is a must if you work with data, it explains all the basic concepts of databases, distributed systems and so on. Every single person working with data should have this book as a reference. You should also watch the talks from Kartin Kleppmann, the author, about data.
+THE book is "designing data intensive applications". This book is a must if you work with data, it explains all the basic concepts of databases, distributed systems and so on. Every single person working with data should have this book as a reference. You should also watch the talks from Kartin Kleppmann, the author.
 
 "Naked statistics" helps you to understand basic stuff about statistics in an easy way. Easy to read and gives you an overview. Not a formal book.
 
