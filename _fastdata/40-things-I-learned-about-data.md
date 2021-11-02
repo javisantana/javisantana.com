@@ -414,7 +414,7 @@ To be clear, most of what those books say is already on wikipedia and many other
 
 [Keynote speech given by William Binney at HOPE 9](https://www.dailymotion.com/video/xs8zl4). This is a crazy talk I found after watching the documentary "A good American" (which is awesome, you should see it)
 
-[Creating an Extensible Big Data Platform | Uber](https://www.youtube.com/watch?v=sdIJqW8zsdg) the talk that explains [this fantastic blogpost about the Uber datawarehouse](https://eng.uber.com/uber-big-data-platform/)
+[Creating an Extensible Big Data Platform, Uber](https://www.youtube.com/watch?v=sdIJqW8zsdg) the talk that explains [this fantastic blogpost about the Uber datawarehouse](https://eng.uber.com/uber-big-data-platform/)
 
 [EBtree - Design for a Scheduler and Use (Almost) Everywhere](https://www.infoq.com/presentations/ebtree-design/) The data structure HAProxy uses to deal with high amount of connecctions per second
 
