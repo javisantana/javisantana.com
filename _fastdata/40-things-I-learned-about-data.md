@@ -429,15 +429,17 @@ To be clear, most of what those books say is already on wikipedia and many other
 
 This post is different, it's about the things I'd like to see in a few years about data from the technical point of view.
 
-Data systems closer to how video games work. In video games, everything is real-time and fast and everything is designed to work in that way.
+Data systems closer to how video games work. In video games, everything is real-time and fast, everything is designed to work in that way and the experience is totally different to use an app. I hope every single app has the collaborative feeling of figma, google doccs and so on.
 
-A standard way to share data between systems. And that shouldn't be JSON :). AVRO or Arrow maybe are good ones. But I'm just talking about formats, but the full protocol. I hope we get to a point where a CDC-like system is standardized so any data system can sync with another one reliably.
+A standard way to share data between systems. And that shouldn't be JSON :). AVRO or Arrow could be good alternatives. But I'm not just talking about formats, but the full protocol. I hope we get to a point where a CDC-like system is standardized so any data system can sync with another one reliably. Pug and play but for data sync.
 
-Developer-friendly data systems. Most of what we have today is meant to be managed by systems people. It does not mean "simple", developers are not dumb, but the abstraction level should be higher. For example, as a developer, I want to be able to control the tiered storage, move data seamlessly, in an atomic way, and with clear numbers about performance and costs. I don't need to know about S3, HDD, SDD, networking or distributed transactions.
+Developer-friendly data systems. Most of what we have today is meant to be managed by systems people. Developer friendly does not mean "simple", developers are not dumb, but the abstraction level should be higher. For example, as a developer, I want to be able to control the tiered storage, move data seamlessly, in an atomic way, and with clear numbers about performance and costs, branch my database, create disposable clones, move the database to a previous state... I don't need to know about S3, HDD, SDD, networking or distributed transactions.
 
 Distributed and decentralized data storage systems (like IPFS or BitTorrent)
 
 More CRDT based systems. The previous point and this one is the perfect combination: distributed, local-friendly and being able to keep track of every single change, not a just a snapshot.
 
 Specific hardware to query large amounts of data effectively. The systems today are really expensive and inefficient, I wish we have had the same innovations as custom hardware to mine bitcoin.
+
+GPT3 but for data visualization and analysis, like, this is the data, here you have the visualizations to understand it. "I found several values that does not fit, please review them".
 
