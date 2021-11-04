@@ -382,7 +382,7 @@ Changing my mind to think in real time took 2 years (and I'm actually getting us
 
 These are the books I use as a reference or like them. Most of them are classic and most reference books rather than regular reading books.
 
-THE book is "designing data intensive applications". This book is a must if you work with data, it explains all the basic concepts of databases, distributed systems and so on. Every single person working with data should have this book as a reference. You should also watch the talks from Kartin Kleppmann, the author, about data.
+THE book is "designing data intensive applications". This book is a must if you work with data, it explains all the basic concepts of databases, distributed systems and so on. Every single person working with data should have this book as a reference. You should also watch the talks from Kartin Kleppmann, the author.
 
 "Naked statistics" helps you to understand basic stuff about statistics in an easy way. Easy to read and gives you an overview. Not a formal book.
 
@@ -414,7 +414,7 @@ To be clear, most of what those books say is already on wikipedia and many other
 
 [Keynote speech given by William Binney at HOPE 9](https://www.dailymotion.com/video/xs8zl4). This is a crazy talk I found after watching the documentary "A good American" (which is awesome, you should see it)
 
-[Creating an Extensible Big Data Platform | Uber](https://www.youtube.com/watch?v=sdIJqW8zsdg) the talk that explains [this fantastic blogpost about the Uber datawarehouse](https://eng.uber.com/uber-big-data-platform/)
+[Creating an Extensible Big Data Platform, Uber](https://www.youtube.com/watch?v=sdIJqW8zsdg) the talk that explains [this fantastic blogpost about the Uber datawarehouse](https://eng.uber.com/uber-big-data-platform/)
 
 [EBtree - Design for a Scheduler and Use (Almost) Everywhere](https://www.infoq.com/presentations/ebtree-design/) The data structure HAProxy uses to deal with high amount of connecctions per second
 
@@ -429,33 +429,38 @@ To be clear, most of what those books say is already on wikipedia and many other
 
 This post is different, it's about the things I'd like to see in a few years about data from the technical point of view.
 
-Data systems closer to how video games work. In video games, everything is real-time and fast and everything is designed to work in that way.
+Data systems closer to how video games work. In video games, everything is real-time and fast, everything is designed to work in that way and the experience is totally different to use an app. I hope every single app has the collaborative feeling of figma, google doccs and so on.
 
-A standard way to share data between systems. And that shouldn't be JSON :). AVRO or Arrow maybe are good ones. But I'm just talking about formats, but the full protocol. I hope we get to a point where a CDC-like system is standardized so any data system can sync with another one reliably.
+A standard way to share data between systems. And that shouldn't be JSON :). AVRO or Arrow could be good alternatives. But I'm not just talking about formats, but the full protocol. I hope we get to a point where a CDC-like system is standardized so any data system can sync with another one reliably. Pug and play but for data sync.
 
-Developer-friendly data systems. Most of what we have today is meant to be managed by systems people. It does not mean "simple", developers are not dumb, but the abstraction level should be higher. For example, as a developer, I want to be able to control the tiered storage, move data seamlessly, in an atomic way, and with clear numbers about performance and costs. I don't need to know about S3, HDD, SDD, networking or distributed transactions.
+Developer-friendly data systems. Most of what we have today is meant to be managed by systems people. Developer friendly does not mean "simple", developers are not dumb, but the abstraction level should be higher. For example, as a developer, I want to be able to control the tiered storage, move data seamlessly, in an atomic way, and with clear numbers about performance and costs, branch my database, create disposable clones, move the database to a previous state... I don't need to know about S3, HDD, SDD, networking or distributed transactions.
 
 Distributed and decentralized data storage systems (like IPFS or BitTorrent)
 
 More CRDT based systems. The previous point and this one is the perfect combination: distributed, local-friendly and being able to keep track of every single change, not a just a snapshot.
 
 Specific hardware to query large amounts of data effectively. The systems today are really expensive and inefficient, I wish we have had the same innovations as custom hardware to mine bitcoin.
+GPT3 but for data visualization and analysis, like, this is the data, here you have the visualizations to understand it. "I found several values that does not fit, please review them".
+
 
 ## 40. Data does not have feelings
 
-I'm a weird guy, I'm totally outside of the center of the gauss curve. Because of that I usually need to spoke with people on the phone to explain some things because automatic systems consider I'm a high risky kind of person.
+I'm a weird guy, I'm totally outside of the center of the gauss curve. Because of that I usually need to spoke with people on the phone to explain some things because automatic systems consider I'm a high risk kind of person.
 
-To be honest, that's a small problem compared with people being rejected in job applications, having issues with access to basic stuff like a doctor or credit. 
+To be honest, that's a small problem compared with people being rejected in job applications, having issues with access to basic stuff like a doctor or credit just because their religion, skin tone, gender and many other personal things. 
 
-I feel shame of our industry when I see how privacy is not by default, how we code recommendation systems that optimize reveneu rather at all costs rather than trying to show the best content or even modify people votes.
+I feel shame of our industry when I see how privacy is not by default, how we code recommendation systems that optimize reveneu at all costs rather than trying to show the best content. Don't want to mention when we try to modify what poeple vote spreading hate and lies.
 
-I've been really lucky of working in companies like CARTO where they didn't work with oil&gas indsutry or military or BBVA where proctecting user data was in the company culture. I love [how wikipedia works with user data](https://speakerdeck.com/nuria_ruiz/wikipedias-lean-data-diet-and-lessons-learned) and I think this is the way.
+I've been really lucky of working in companies like CARTO where they didn't work with oil&gas indsutry or military or BBVA where protecting user data was in the company culture. I love [how wikipedia works with user data](https://speakerdeck.com/nuria_ruiz/wikipedias-lean-data-diet-and-lessons-learned) and I think this is the way.
 
 We, as developer, data engineers, data scientist, product managers and in the end, people, should be respectful and treat user data as it was any other personal belonging and avoid cacusing any harm because we decided to get every single fucking penny. 
 
 "We just code, it's not our fault", yes, [it is](https://www.nytimes.com/2017/08/25/business/volkswagen-engineer-prison-diesel-cheating.html).
 
-Remember, behing all of those bytes there are people and data does not have feelings but people do, so sometimes we just need to keep the data out and just listen.
+Remember, behing all of those bytes there are people, and data does not have feelings but people do, so sometimes we just need to keep the data out and just listen and watch with our human eyes.
 
 Thanks everybody for reading so far, I hope you enjoyed this as much I did writing it.
+
+
+
 
