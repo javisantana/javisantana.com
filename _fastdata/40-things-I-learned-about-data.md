@@ -445,7 +445,7 @@ GPT3 but for data visualization and analysis, like, this is the data, here you h
 
 ## 40. Data does not have feelings
 
-I'm a weird guy, I'm totally outside of the center of the gauss curve. Because of that I usually need to spoke with people on the phone to explain some things because automatic systems consider I'm a high risk kind of person.
+I'm a weird guy, I'm totally outside of the center of the gauss curve. Because of that I usually need to speak to people on the phone to explain some things because automatic systems consider I'm a high risk kind of person.
 
 To be honest, that's a small problem compared with people being rejected in job applications, having issues with access to basic stuff like a doctor or credit just because their religion, skin tone, gender and many other personal things. 
 
