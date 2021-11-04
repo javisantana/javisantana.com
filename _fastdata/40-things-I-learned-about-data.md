@@ -440,6 +440,27 @@ Distributed and decentralized data storage systems (like IPFS or BitTorrent)
 More CRDT based systems. The previous point and this one is the perfect combination: distributed, local-friendly and being able to keep track of every single change, not a just a snapshot.
 
 Specific hardware to query large amounts of data effectively. The systems today are really expensive and inefficient, I wish we have had the same innovations as custom hardware to mine bitcoin.
-
 GPT3 but for data visualization and analysis, like, this is the data, here you have the visualizations to understand it. "I found several values that does not fit, please review them".
+
+
+## 40. Data does not have feelings
+
+I'm a weird guy, I'm totally outside of the center of the gauss curve. Because of that I usually need to spoke with people on the phone to explain some things because automatic systems consider I'm a high risk kind of person.
+
+To be honest, that's a small problem compared with people being rejected in job applications, having issues with access to basic stuff like a doctor or credit just because their religion, skin tone, gender and many other personal things. 
+
+I feel shame of our industry when I see how privacy is not by default, how we code recommendation systems that optimize reveneu at all costs rather than trying to show the best content. Don't want to mention when we try to modify what poeple vote spreading hate and lies.
+
+I've been really lucky of working in companies like CARTO where they didn't work with oil&gas indsutry or military or BBVA where protecting user data was in the company culture. I love [how wikipedia works with user data](https://speakerdeck.com/nuria_ruiz/wikipedias-lean-data-diet-and-lessons-learned) and I think this is the way.
+
+We, as developer, data engineers, data scientist, product managers and in the end, people, should be respectful and treat user data as it was any other personal belonging and avoid cacusing any harm because we decided to get every single fucking penny. 
+
+"We just code, it's not our fault", yes, [it is](https://www.nytimes.com/2017/08/25/business/volkswagen-engineer-prison-diesel-cheating.html).
+
+Remember, behing all of those bytes there are people, and data does not have feelings but people do, so sometimes we just need to keep the data out and just listen and watch with our human eyes.
+
+Thanks everybody for reading so far, I hope you enjoyed this as much I did writing it.
+
+
+
 
