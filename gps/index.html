@@ -27,7 +27,9 @@
   <script src="NoSleep.min.js"></script>
   <script>
       // https://stackoverflow.com/questions/59471449/how-to-prevent-screen-sleep-using-javascript
+        var locations = [];
         var noSleep = new NoSleep();
+        var c = 0;
         var playFn = function() {
             noSleep.enable();
             document.body.removeEventListener('touchend', playFn);
@@ -43,6 +45,12 @@
               )
               if(p.coords.speed)
                document.getElementById('speed').innerHTML = (3.6 * p.coords.speed).toFixed(2)
+
+              locations.push([p.timestamp,p.coords.latitude,p.coords.latitude, p.coords.altitude, p.coords.speed])
+              var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+              if (c % 10 == 0)
+                localStorage.setItem(utc, JSON.stringify(locations));
+              ++c;
 
             }
             const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
