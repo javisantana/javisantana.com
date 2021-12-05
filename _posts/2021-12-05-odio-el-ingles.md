@@ -10,7 +10,7 @@ Pero no odio el idioma porque se me de mal (bueno, también), lo odio porque no 
 
 Y no es -solo- por la limitación de vocabulario, mi sensación es que mi parte del cerebro que uso para pensar se malgasta procesando si tengo que decir poner la puta ese de la tercera persona en el verbo o si people es plural o singular.
 
-Pero amigo, el idioma internacional del software es el inglés; programamos en inglés, documentación en inglés, reuniones también en inglés aunque todos habléis castellano, hasta las notas las tomo en inglés con tal de no sentirme un fracaso profesional. Incluso [escribo en inglés](/fastdata/)
+Pero amigo, el idioma internacional del software es el inglés; programamos en inglés, documentación en inglés, reuniones también en inglés aunque todos habléis castellano (somos la elite, que no se note que somos españoles), hasta las notas las tomo en inglés con tal de no sentirme un fracaso profesional. Incluso [escribo en inglés](/fastdata/), soy un vendido, un chaquetas.
 
 Uno de mis programadores preferidos es Kenta Cho, no es conocido, ni lo será, me encanta por su estilo diseñando mecánicas de juego super sencillas. El amigo Kenta tuitea en japonés (o eso creo) y programa igual que escribe: pensando en japonés.
 
