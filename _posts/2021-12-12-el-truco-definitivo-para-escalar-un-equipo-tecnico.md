@@ -2,6 +2,7 @@
 layout: post2
 published: true
 name: Solo necesitas saber esto para escalar rápido tu equipo técnico.
+title: Solo necesitas saber esto para escalar rápido tu equipo técnico.
 ---
 
 No son pocas las veces que alguien me escribe con algo tal que así: "tú que tienes experiencia escalando equipos técnicos tal vez nos podrías dar algún consejo sobre como escalar, tenemos muchos retos por delante"
