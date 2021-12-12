@@ -7,7 +7,7 @@ title: Solo necesitas saber esto para escalar rápido tu equipo técnico.
 
 No son pocas las veces que alguien me escribe con algo tal que así: "tú que tienes experiencia escalando equipos técnicos tal vez nos podrías dar algún consejo sobre como escalar, tenemos muchos retos por delante"
 
-La traducción al mundo real suele ser: vamos hasta arriba de trabajo, estamos intentando hacer y vender más de lo que podemos y nos damos cuenta de que la producción es el cuello de botella. La última frase, la de "los retos" suele ser indicativo de que has levantado pasta y no has prometido con todas tus fuerzas.
+La traducción al mundo real suele ser: vamos hasta arriba de trabajo, estamos intentando hacer y vender más de lo que podemos y nos damos cuenta de que la producción es el cuello de botella. La última frase, la de "los retos" suele ser indicativo de que has levantado pasta y has prometido con todas tus fuerzas.
 
 En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, termina aceptando. Igual que cuando tienes una enfermedad que nadie te cura y terminas pidiendo cita en un profesional del tarot.
 
