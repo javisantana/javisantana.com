@@ -28,7 +28,7 @@ Seguramente, cuando hayas entendido que no puedes tener todo y que si queres hac
 
 Y en función de si vas por la vía del caos o la vía del órden (["order or progress"](https://twitter.com/amartino/status/1129026540401045504) dicen los americanos, que saben mucho) estas dos cosas tienen que ser radicalmente diferente. Necesitas gente diferente y procesos diferentes.
 
-Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí puedes por otro decidir cuanto balanceas y tener expectativas claras de lo que puede pasar y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
+Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí que puede decidir cuanto balanceas y tener expectativas claras de lo que puede pasar, y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
 
 Dirás, ya pero la empresa X lo hace. Y te respondo con un refrán popular: "en todas las casas cuecen habas"
 
