@@ -19,14 +19,14 @@ Por suerte o desgracia los equipos de producto son el cuello de botella de la em
 
 Así que la solución a tu problema no pasa por squads, kanbans, agile, OKRs u otros metodologías: pasa por entender que la realidad es más complicada de lo que crees y puedes hacer menos cosas de las que crees.
 
-Pasa por entender que cada línea de código que añades necesita alguien de por vida manteniendola y que una persona puede mantener un máximo de ellas.
+Pasa por entender que cada línea de código que añades necesita alguien de por vida manteniéndola y que una persona puede mantener un máximo de ellas.
 
-Seguramente, cuando hayas entendido que no puedes tener todo y que si queres hacer mucho el caos va a ser monumental (y vas a tener que aprender a vivir con ello), ya puedas entrar en la siguiente fase que incluye muchas cosas, pero que las más importantes son:
+Seguramente, cuando hayas entendido que no puedes tener todo y que si quieres hacer mucho el caos va a ser monumental (y vas a tener que aprender a vivir con ello), ya puedas entrar en la siguiente fase que incluye muchas cosas, pero que las más importantes son:
 
 - Equipo: contratación, despidos, poner a la gente a funcionar lo antes posible, marcar objetivos, directrices y prioridades claras.
 - Procesos: mantener producción, poner en producción, prototipado, desarrollo, etc, etc, etc.
 
-Y en función de si vas por la vía del caos o la vía del órden (["order or progress"](https://twitter.com/amartino/status/1129026540401045504) dicen los americanos, que saben mucho) estas dos cosas tienen que ser radicalmente diferente. Necesitas gente diferente y procesos diferentes.
+Y en función de si vas por la vía del caos o la vía del orden (["order or progress"](https://twitter.com/amartino/status/1129026540401045504) dicen los americanos, que saben mucho) estas dos cosas tienen que ser radicalmente diferente. Necesitas gente diferente y procesos diferentes.
 
 Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí que puede decidir cuanto balanceas y tener expectativas claras de lo que puede pasar, y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
 
