@@ -9,7 +9,7 @@ No son pocas las veces que alguien me escribe con algo tal que así: "tú que ti
 
 La traducción al mundo real suele ser: vamos hasta arriba de trabajo, estamos intentando hacer y vender más de lo que podemos y nos damos cuenta de que la producción es el cuello de botella. La última frase, la de "los retos" suele ser indicativo de que has levantado pasta y no has prometido con todas tus fuerzas.
 
-En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego. O de que alguien te esté colocando el último framework en vez de arreglar un problema de un cliente.
+En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, pero acepta.
 
 Mi respuesta siempre es: no creo que os pueda ayudar. No es falsa modestia, es que vuestro problema es algo que no tiene solución. Se puede hacer mejor o peor, pero en la vida no se puede tener todo:
 
@@ -29,5 +29,7 @@ Seguramente, cuando hayas entendido que no puedes tener todo y que si queres hac
 Y en función de si vas por la vía del caos o la vía del órden (["order or progress"](https://twitter.com/amartino/status/1129026540401045504) dicen los americanos, que saben mucho) estas dos cosas tienen que ser radicalmente diferente. Necesitas gente diferente y procesos diferentes.
 
 Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí puedes por otro decidir cuanto balanceas y tener expectativas claras de lo que puede pasar y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
+
+Dirás, ya pero la empresa X lo hace. Y te respondo con un refrán popular: "en todas las casas cuecen habas"
 
 
