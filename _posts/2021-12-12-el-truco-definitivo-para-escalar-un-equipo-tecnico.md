@@ -9,7 +9,7 @@ No son pocas las veces que alguien me escribe con algo tal que así: "tú que ti
 
 La traducción al mundo real suele ser: vamos hasta arriba de trabajo, estamos intentando hacer y vender más de lo que podemos y nos damos cuenta de que la producción es el cuello de botella. La última frase, la de "los retos" suele ser indicativo de que has levantado pasta y no has prometido con todas tus fuerzas.
 
-En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, pero acepta.
+En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, termina aceptando. Igual que cuando tienes una enfermedad que nadie te cura y terminas pidiendo cita en un profesional del tarot.
 
 Mi respuesta siempre es: no creo que os pueda ayudar. No es falsa modestia, es que vuestro problema es algo que no tiene solución. Se puede hacer mejor o peor, pero en la vida no se puede tener todo:
 
