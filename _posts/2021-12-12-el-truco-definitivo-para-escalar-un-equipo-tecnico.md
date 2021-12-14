@@ -9,7 +9,7 @@ No son pocas las veces que alguien me escribe con algo tal que así: "tú que ti
 
 La traducción al mundo real suele ser: vamos hasta arriba de trabajo, estamos intentando hacer y vender más de lo que podemos y nos damos cuenta de que la producción es el cuello de botella. La última frase, la de "los retos" suele ser indicativo de que has levantado pasta y has prometido con todas tus fuerzas.
 
-En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, termina aceptando. Igual que cuando tienes una enfermedad que nadie te cura y terminas pidiendo cita en un profesional del tarot.
+En ese momento el CEO habla con el CTO, normalmente el desarrollador que ha hecho el 50% de todo el código y dice: "vamos a buscar a alguien que haya pasado ya por aquí y que te cuente como tienes que enfocar el tema". El CTO, que sabe perfectamente el percal que tiene y pasa tres pueblos de perder el tiempo en hablar de sus penurias con un "gurú" en vez de estar atento al último fuego, termina aceptando. Igual que cuando tienes una enfermedad que nadie te cura y pides cita en un profesional del tarot.
 
 Mi respuesta siempre es: no creo que os pueda ayudar. No es falsa modestia, no es de lejos mi especialidad, pero es que vuestro problema es algo que no tiene solución. Se puede hacer mejor o peor, pero en la vida no se puede tener todo:
 
@@ -17,7 +17,7 @@ No puedes ir rápido y que todo vaya como la seda. No existe. Ni en software ni 
 
 Por suerte o desgracia los equipos de producto son el cuello de botella de la empresa. Son los que tienen que aterrizar y poner a funcionar todas esas ideas felices que se nos ocurren. Y ahí ya no caben estrategias, ni sinergias, ni reuniones de trabajo, ni documentos colaborativos, ni comités, ni cristo que lo fundó, es tu empresa frente a la realidad de la ejecución, las limitaciones del mundo real. 
 
-Así que la solución a tu problema no pasa por squads, kanbans, agile, OKRs u otros metodologías: pasa por entender que la realidad es más complicada de lo que crees y puedes hacer menos cosas de las que crees.
+Así que la solución a tu problema no pasa por squads, kanbans, agile, OKRs u otros metodologías: pasa por entender que la realidad es más complicada de lo que crees y puedes hacer menos cosas de las que quieres.
 
 Pasa por entender que cada línea de código que añades necesita alguien de por vida manteniéndola y que una persona puede mantener un máximo de ellas.
 
@@ -28,7 +28,7 @@ Seguramente, cuando hayas entendido que no puedes tener todo y que si quieres ha
 
 Y en función de si vas por la vía del caos o la vía del orden (["order or progress"](https://twitter.com/amartino/status/1129026540401045504) dicen los americanos, que saben mucho) estas dos cosas tienen que ser radicalmente diferente. Necesitas gente diferente y procesos diferentes.
 
-Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí que puede decidir cuanto balanceas y tener expectativas claras de lo que puede pasar, y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
+Así que el truco es que no hay truco, lo siento. No vale con una conversación de 45 minutos con alguien que "ya lo ha hecho". Sí que puedes decidir cuanto balanceas y tener expectativas claras de lo que puede pasar, y apechugar. Cuando ya seas una máquina engrasadísima, conozcas el negocio, etc es posible que puedas ir con cierta velocidad y cierto orden. Me imagino.
 
 Dirás, ya pero la empresa X lo hace. Y te respondo con un refrán popular: "en todas las casas cuecen habas"
 
