@@ -1,5 +1,24 @@
 
-var TRACKER_COLUMNS = 15
+
+
+async function sendEvent(event){
+    const date = new Date();
+    event = {
+        'timestamp': date.toISOString(),
+        ...event
+    }
+    const headers = {
+        'Authorization': `Bearer p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICJmMDNmYWQyYS0xZWY4LTRhYzMtYmI2OC0wYzdiODMyYzY2MWMifQ.l1yWCn_cdhQ3GFqxUmReB2M_ekU5iR3cMtij_DsQYjg`,
+    }
+    const rawResponse = await fetch('https://api.tinybird.co/v0/events?name=events_web_json', {
+        method: 'POST',
+        body: JSON.stringify(event),
+        headers: headers,
+    });
+    const content = await rawResponse.json();
+    console.log(content)
+}
+
 
 /**
  * install a tracker for the user
@@ -17,22 +36,22 @@ function tracker(token, account_name, global_function_name, host) {
 
   function upload_events() {
     if (events.length > 0) {
-      tinybird(token, host).datasource('tracker_javisantanacom').append(events).then((err) => {
-        if (err && !err.error) {
-          events = []
-          window.localStorage.setItem("events", '[]')
-        }
-      })
+      for (var e of events) {
+        await sendEvent(e);
+      }
+      events = []
+      window.localStorage.setItem("events", '[]')
     }
   }
   tracker.flush = upload_events
 
-  window[global_function_name] = function() {
+  window[global_function_name] = function(user_events) {
     var ev = [dateFormatted(), session, account_name, user_cookie, document.location.href, navigator.userAgent].concat(Array.prototype.slice.call(arguments))
-    if (ev.length < TRACKER_COLUMNS) {
-      ev = ev.concat(Array(TRACKER_COLUMNS - ev.length).fill(''))
+   
+    var ev = {
+      session, account_name, user_cookie, href: document.location.href, userAgent: navigator.userAgent
     }
-    events.push(ev)
+    events.push({...ev, ...user_events)
   };
   function die() {
     window.localStorage.setItem("events", JSON.stringify(events))
