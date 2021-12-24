@@ -1,5 +1,24 @@
 
-var TRACKER_COLUMNS = 15
+
+
+async function sendEvent(event){
+    const date = new Date();
+    event = {
+        'timestamp': date.toISOString(),
+        ...event
+    }
+    const headers = {
+        'Authorization': `Bearer p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICJmMDNmYWQyYS0xZWY4LTRhYzMtYmI2OC0wYzdiODMyYzY2MWMifQ.l1yWCn_cdhQ3GFqxUmReB2M_ekU5iR3cMtij_DsQYjg`,
+    }
+    const rawResponse = await fetch('https://api.tinybird.co/v0/events?name=events_web_json', {
+        method: 'POST',
+        body: JSON.stringify(event),
+        headers: headers,
+    });
+    const content = await rawResponse.json();
+    console.log(content)
+}
+
 
 /**
  * install a tracker for the user
@@ -12,34 +31,15 @@ function tracker(token, account_name, global_function_name, host) {
     setCookie('tinybird_track', user_cookie);
   }
   var session = dateFormatted()
-  setInterval(upload_events, 2000);
-  var events = JSON.parse(window.localStorage.getItem("events") || '[]')
 
-  function upload_events() {
-    if (events.length > 0) {
-      tinybird(token, host).datasource('tracker_javisantanacom').append(events).then((err) => {
-        if (err && !err.error) {
-          events = []
-          window.localStorage.setItem("events", '[]')
-        }
-      })
-    }
-  }
-  tracker.flush = upload_events
-
-  window[global_function_name] = function() {
+  window[global_function_name] = async function(user_events) {
     var ev = [dateFormatted(), session, account_name, user_cookie, document.location.href, navigator.userAgent].concat(Array.prototype.slice.call(arguments))
-    if (ev.length < TRACKER_COLUMNS) {
-      ev = ev.concat(Array(TRACKER_COLUMNS - ev.length).fill(''))
+   
+    var ev = {
+      session, account_name, user_cookie, href: document.location.href, userAgent: navigator.userAgent
     }
-    events.push(ev)
+    await sendEvent({...ev, ...user_events})
   };
-  function die() {
-    window.localStorage.setItem("events", JSON.stringify(events))
-    upload_events()
-  }
-  window.addEventListener("beforeunload", die)
-  window.addEventListener("unload", die, false);
 }
 
 /**
@@ -78,17 +78,13 @@ function getCookie(name) {
 }
 
 tracker('p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICI3ZTc1ZTI1NC02MjJkLTRiMTctYjE1MC02NjVkMmUyYjZkZjUifQ.IzKCxRueVOJij1nZtD5GNyF1Cn5cqQx9TpaerqrivKA', 'main', '_tracker', 'https://api.tinybird.co')
-_tracker('pageload', document.referrer)
+_tracker({'event': 'pageload', 'referrer': document.referrer})
 
 window.addEventListener('click', function (e) {
-  _tracker('click', e.x, e.y, e.path.map(function (el) {
+  _tracker({'event': 'click', 'x': e.x, 'y': e.y, 'xpath': e.path.map(function (el) {
     if (el.nodeName) {
       return el.nodeName + (el.className ? '.' + el.className : '');
     }
     return "root"
-  }).reverse().join('/'), e.srcElement.href ? new String(e.srcElement.href): '')
- // exiting
-  if (e.srcElement.href) {
-    tracker.flush()
-  }
+  }).reverse().join('/'), src: e.srcElement.href ? new String(e.srcElement.href): ''})
 })
