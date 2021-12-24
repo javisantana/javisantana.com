@@ -31,34 +31,15 @@ function tracker(token, account_name, global_function_name, host) {
     setCookie('tinybird_track', user_cookie);
   }
   var session = dateFormatted()
-  setInterval(upload_events, 2000);
-  var events = JSON.parse(window.localStorage.getItem("events") || '[]')
 
-  function upload_events() {
-    if (events.length > 0) {
-      for (var e of events) {
-        await sendEvent(e);
-      }
-      events = []
-      window.localStorage.setItem("events", '[]')
-    }
-  }
-  tracker.flush = upload_events
-
-  window[global_function_name] = function(user_events) {
+  window[global_function_name] = async function(user_events) {
     var ev = [dateFormatted(), session, account_name, user_cookie, document.location.href, navigator.userAgent].concat(Array.prototype.slice.call(arguments))
    
     var ev = {
       session, account_name, user_cookie, href: document.location.href, userAgent: navigator.userAgent
     }
-    events.push({...ev, ...user_events)
+    await sendEvent({...ev, ...user_events})
   };
-  function die() {
-    window.localStorage.setItem("events", JSON.stringify(events))
-    upload_events()
-  }
-  window.addEventListener("beforeunload", die)
-  window.addEventListener("unload", die, false);
 }
 
 /**
@@ -97,17 +78,13 @@ function getCookie(name) {
 }
 
 tracker('p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICI3ZTc1ZTI1NC02MjJkLTRiMTctYjE1MC02NjVkMmUyYjZkZjUifQ.IzKCxRueVOJij1nZtD5GNyF1Cn5cqQx9TpaerqrivKA', 'main', '_tracker', 'https://api.tinybird.co')
-_tracker('pageload', document.referrer)
+_tracker({'event': 'pageload', 'referrer': document.referrer})
 
 window.addEventListener('click', function (e) {
-  _tracker('click', e.x, e.y, e.path.map(function (el) {
+  _tracker({'event': 'click', 'x': e.x, 'y': e.y, 'xpath': e.path.map(function (el) {
     if (el.nodeName) {
       return el.nodeName + (el.className ? '.' + el.className : '');
     }
     return "root"
-  }).reverse().join('/'), e.srcElement.href ? new String(e.srcElement.href): '')
- // exiting
-  if (e.srcElement.href) {
-    tracker.flush()
-  }
+  }).reverse().join('/'), src: e.srcElement.href ? new String(e.srcElement.href): ''})
 })
