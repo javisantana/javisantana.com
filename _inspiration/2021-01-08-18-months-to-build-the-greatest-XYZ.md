@@ -1,3 +1,7 @@
+---
+layout: post
+published: true
+---
 
 > If you knew you had 18 months to build the world's greatest XYZ, and you could hire a world-class team of scientists and engineers to build it, what kind of facility would you set up?
 

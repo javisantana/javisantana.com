@@ -1,13 +1,17 @@
-<div class="container">
-  <div class="entry">
-  <h1>Fast data — <span>@javisantana</span></h1>
+---
+layout: base_data
+---
+
+<div class="container desierto">
+  <div class="entry space">
+  <h1>Inspiration — <span>@javisantana</span></h1>
   <p>I'm cofounder of <a href="https://tinybird.co">Tinybird</a>, a product to build realtime data products.
   These are the quotes that inspire me.</p>
-  
+  </div>
 
-   {% for post in site.inspiration %}
+   {% for post in site.inspiration reversed %}
    {% if post.title != "Index" %}
-        <div class="entry">
+        <div class="entry space">
             {% if post.title and post.tags contains 'post' %}
             <h2>≗ {{post.title}}</h2>
             {% endif %}
@@ -17,4 +21,3 @@
     {%endif %}
   {% endfor %}
 
-</div>

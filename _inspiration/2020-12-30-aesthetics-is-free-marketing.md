@@ -1,3 +1,7 @@
+---
+layout: post
+published: true
+---
 
 > Aesthetics is free marketing
 
