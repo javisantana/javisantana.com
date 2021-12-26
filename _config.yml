@@ -49,3 +49,5 @@ defaults:
 collections:
     fastdata:
         output: true
+    inspiration:
+        output: true
