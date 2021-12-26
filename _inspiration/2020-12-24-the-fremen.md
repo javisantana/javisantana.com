@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: data
 published: true
 ---
 > If you want to know how to work with new or limited resources, find a population that’s used to not having many alternatives. Find someone who has already optimized for the reality you’re about to enter and learn from them.
