@@ -16,7 +16,7 @@ layout: base_data
             <h2>≗ {{post.title}}</h2>
             {% endif %}
             {{post.content}}
-          <a href="#{{ post.slug }}"><span class="date">#</span></a><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span></a>
+          <a href="#{{ post.slug }}"><span class="date">#</span></a> <a href="{{ post.url }}"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span></a>
         </div>
     {%endif %}
   {% endfor %}
