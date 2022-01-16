@@ -1,0 +1,13 @@
+---
+name: 'Entrevistas a desarrolladores'
+title: 'Entrevistas a desarrolladores'
+date: 2005-10-30T16:50:00.000+01:00
+layout: post2
+published: true
+url: /2005/10/entrevistas-desarrolladores.html
+---
+
+[![](http://www.bestsoftwareprice.com/images/Sid%20Meiers%20Civilization%20III.jpg)](http://www.bestsoftwareprice.com/images/Sid%20Meiers%20Civilization%20III.jpg)Recientemente he encontrado dos entrevistas recientes a desarrolladores de juegos. [Una es a sid meier](http://interviews.slashdot.org/interviews/05/10/21/0550213.shtml?tid=11), creador de la saga civilization. La entrevista se hizo con preguntas que enviaron los lectores de slashdot y algunas de ellas van dirigidas al terreno del soft libre. Personalmente me ha parecido interesante su visión de la forma antigua de hacer juegos, se nota que la añora xD. También habla bastante acerca del tema de la IA y destaco la respuesta que da a la pregunta de si cree que la IA de los juegos se acercará tanto a la de un humano que un oponente humano no sabrá distinguir de que tipo es. A eso responde con un ejemplo calirificador; compara las posibilidades del ajedrez con las de Civilization. La verdad es que no me quiero ni imaginar como será la IA de un juego de estrategia, personalmente no he pasado de una simple máquina de estados finitos.  
+[![](http://w1.prisonserver.com/web/es/gfxsow/interviu/5.jpg)](http://w1.prisonserver.com/web/es/gfxsow/interviu/5.jpg)La [otra entrevista](http://w1.prisonserver.com/spanish/entrevista/) a la que me refiero es a los creadores de La prisión, un juego online español en el que encarnas a un personaje que vive en una prisión. La entrevista es entretenida, una pena que las fotos que hay no se puedan ampliar. Hay algunos guiños a la programación que están interesantes, pero no llegan muy lejos salvo cuando hablan de threads y linux y otras cuestiones por las que no usaron linux como servidor. En [barrapunto les están poniendo de vuelta y media](http://barrapunto.com/articles/05/10/30/0011232.shtml) por ese tema, aunque es la tónica habitual :).  
+  
+Ayer se me olvidó que en la [sección nacional de ojgames](http://www.ojgames.com/nacional) hay entrevistas muy interesantes a desarrolladores españoles, tales como [devilishgames](http://www.devilishgames.com/), [nuriumgames](http://www.nurium.com/) y algunos otros. Además de entrevistas a desarrolladores hay otros artículos y supongo que en breve habrá uno de la edición de artfutura05 según me ha comentado el radactor, Nae.

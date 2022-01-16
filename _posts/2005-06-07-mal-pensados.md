@@ -1,0 +1,14 @@
+---
+name: 'mal pensados'
+title: 'mal pensados'
+date: 2005-06-07T13:24:00.000+02:00
+layout: post2
+published: true
+url: /2005/06/mal-pensados.html
+---
+
+La encriptación y la seguridad nunca me gustó demasiado, en el fondo es algo que no debería existir, bastaría con confiar en el resto de seres humanos. Sin embargo hace unos días un profesor me acusó de plagio con unos argumentos bastante lamentables en una práctica en la que había que hacer un cliente de FTP en C. Supongo que ver un código estructurado y bien enfocado le resultaría ilógico. Llegué tan irritado a casa que me puse a buscar la forma de demostrar que un código estaba copiado, [incluso mandé una noticia a barrapunto que han publicado hoy](http://barrapunto.com/preguntas/05/06/07/0945201.shtml). La verdad es que el señor me cabreó bastante , incluso di unos cuantos golpes encima de la mesa donde estaba el sparc V donde hacía la revisión (a veces seguir a david goleman es difícil, aunque sé que no debería haberme irritado tanto). Es una asigantura de tercero de teleco, a mi me quedan 4 asiganturas y esta es la única de libre configuración que me queda, con lo cual me da por el culo que me suspenda, sin embargo no me da tanto que me acuse de plagio. Se ve que el hombre estaba un poco tocado después de hacerle ver que de RPC y XDR estaba tan verde como yo.  
+  
+[Como bien dice goleman en su libro la práctica de la inteligencia emocional](http://www.google.es/search?hl=es&client=firefox-a&rls=org.mozilla%3Aes-ES%3Aofficial&q=practica+de+la+inteligencia+emocional+david+goleman&btnG=B%C3%BAsqueda&meta=), las personas optimistas y que sacan partido de sus errores son emocionalmente más inteligentes, por tanto he decidido tomar algunas medidas. Para empezar he creado mi par de claves RSA para enviar correos y así, en un futuro, poder validarlos. Lo segundo, en todas las prácticas actuales he referenciado absolutamente todo, incluso aunque sea lo más estúpido y evidente. Estas son dos, pero supongo que a partir de ahora tomaré muchas más precauciones con el código y conocimientos que libere, supongo que usaré algún tipo de licencia, ya veremos.  
+  
+En mi vida me habían acusado de plagio, más que nada por que nunca he plagiado nada, y menos por un profesor. Quiero pensar que el hombre estaba picado y la pagó así. Todos los síntomas apuntaban a eso, sobretodo porque se puso a nuestra altura (a la altura del alumno) cosa que un profesor no debe hacer, si he copiado, he copiado y me lo demuestras, pero no te pones a discutir con argumentos estúpidos. Desde ahora seré un mal pensado y responderé en la típica pregunta de test de personalidad de las entrevistas laborales: "sí, creo que la gente habitualmente trata de engañar".

@@ -1,0 +1,16 @@
+---
+name: 'facilidad de uso o flexibilidad'
+title: 'facilidad de uso o flexibilidad'
+date: 2006-04-03T12:08:00.000+02:00
+layout: post2
+published: true
+url: /2006/04/facilidad-de-uso-o-flexibilidad.html
+---
+
+Leo en planetcodigo un post bastante interesante sobre las [futuras caracterísitcas de la programación sobre avalon](http://rfog.blogsome.com/2006/03/30/adios-hwnd-adios/trackback/) y dice cosas bastante interesantes y no faltas de razón.  
+  
+Cuando has programado con windows para hacer cualquier cosa, siempre te topas con alguna dificultad que soluciones tirando del bajo nivel, siempre hay alguna "ñapa" que te saca del apuro. En mis escasos años como observador de las tecnologías de programación me he dado cuenta como se tiende a hacer lenguajes más simples, más eficientes en cuanto al tiempo de programación. No hay más que comparar C con C# o cualquier de los lenguajes más o menos recientes. Es lógico que esto sea así, la hora d e mano de obra es cara y compensa mucho más tener un producto más barato a pesar de necesitar una máquina más potente, ahora las máquinas son baratas en el fondo.  
+  
+Sin embargo llega un momento en el que facilitar tanto las cosas deja de ser algo bueno para la tecnología, al acercar la programación a nivel de usuario, por decirlo de alguna forma, estás quitando flexibilidad a los programadores más experimentados. Esto es una espada de doble filo, ya que permite acercar a la programación a personas que no necesitan tanta cualificación, pero por otro lado, estás arriesgándote a que el software sea de peor calidad y no estás permitiendo "salirse del tiesto" a los que lo necesitan. El modelo de visual basic ha sido así y ha funcionado (y sigue haciéndolo) muy bien.  
+  
+Otro detalle que comenta es el posible mercado de componentes. Recuerdo cuando estudiaba en quinto (jaja) todo el sistema que pretendían montar sobre componentes, J2EE, CORBA (vamos, el rollo aquel que tenían de [componentes](http://www.google.es/search?hs=SLg&hl=es&client=firefox-a&rls=org.mozilla%3Aen-US%3Aofficial&q=CORBA+ccm&btnG=B%C3%BAsqueda&meta=)) y aquellos sistemas para descrubrir componentes que [después se ha aplicado a los web services](http://en.wikipedia.org/wiki/UDDI) (de las narices) y que serviría para crear un mercado global de componentes, en el cual tuvieras un interface bien definido... cualquier persona en sus cavales se reiría de esto, la verdad es que es algo bastante interesante y sería cojonudo tener cajas negras de verdad reutilizables y buen precio (que se lo digan a los fabricantes de hardware lo bien que les funciona VHDL). La verdad es que estaba todo bien montado tecnológicamente, pero, como llevamos viendo unos años, no es precisamente lo más avanzado tecnológicamente hablando lo que finalmente termina imponiéndose. Creo que todo el mundo quiere un sistema para tener la modularidad y reusabilidad tan deseada, pero no creo que sea a costa de tener que pagar X cantidad a MS (o cualquier otra) para poder usar su SDK y tener la licencia necesaria.
