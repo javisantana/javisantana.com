@@ -22,7 +22,7 @@ layout: default2
   <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
 </div>
   <div>
-    {% for post in site.posts limit:100 %}
+    {% for post in site.posts limit:1000 %}
 
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
