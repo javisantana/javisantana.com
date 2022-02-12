@@ -52,7 +52,7 @@
                 localStorage.setItem(utc, JSON.stringify(locations));
               ++c;
               
-              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.latitude, alt: p.coords.altitude, speed: p.coords.speed})
+              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed})
 
             }
             const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
