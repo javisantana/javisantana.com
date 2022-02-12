@@ -30,6 +30,7 @@
         var locations = [];
         var noSleep = new NoSleep();
         var c = 0;
+        var session;
         var playFn = function() {
             noSleep.enable();
             document.body.removeEventListener('touchend', playFn);
@@ -52,7 +53,7 @@
                 localStorage.setItem(utc, JSON.stringify(locations));
               ++c;
               
-              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed})
+              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session})
 
             }
             const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
@@ -63,6 +64,13 @@
       }
       document.body.addEventListener('touchend', playFn);
       document.body.addEventListener('click', playFn);
+
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+      session = uuidv4()
       async function sendEvent(event){
           const date = new Date();
           event = {
