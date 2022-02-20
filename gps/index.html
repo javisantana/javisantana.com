@@ -4,33 +4,85 @@
   <meta charset=utf-8>
   <title>tracker</title>
     <style>
+      :root {
+        --bkg-color: rgb(43, 43, 43);
+        --text-color: rgba(255, 255, 255, 0.9);
+      }
+
       html {
         font-family: Helvetica;
-        padding: 20px;
+        background-color: var(--bkg-color);
       }
-      .button {
-        padding: 20px 30px;
-        background: #333;
-        color: white;
+      html, body {
+        height: 100%; 
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .center_vertically {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        flex-wrap: wrap;
+      }
+      #start_btn {
+        padding: 5vh 14vw;
+        flex: 0 0 100%;
+        background: transparent;
+        border: 5px solid var(--text-color);
+        color: var(--text-color);
         font-weight: bold;
-        font-size: 1.5em;
+        letter-spacing: -0.1vh;
+        font-size: 5vh;
         text-transform:uppercase;
+        text-shadow: 0 0 10px #111;
       }
-      #speed {
-        font-size: 10em;
+
+      #time { 
+        display: none; 
+        flex: 0 0 100%;
+        /*flex: 99 0 99%;*/
+        font-family: monospace;
+        font-weight: bold;
+        letter-spacing: -0.3vh;
+        color: #FFF;
+        text-shadow: 0 0 10px #111;
+        min-width: 100vw;
+      }
+      #debug {
+        position: fixed;
+        font-family: monospace;
+        font-size: 2vh;
+        bottom: 1vh;
+        color: #888;
+        text-shadow: 0 0 10px #111;
       }
     </style>
   </head>
 <body>
-  <a id="start_btn" class="button">start</a>
-  <div id="speed">0</div>
+  <div class="center_vertically">
+    <a id="start_btn">start</a>
+    <div id="time">01:54.2</div>
+    <div id="debug">
+      <span id="pos">42.559169, -2.168215</span>
+      ·
+      <span id="speed">0 kmh</span>
+    </div>
+  </div>
   <script src="NoSleep.min.js"></script>
+  <script src="geometric.js"></script>
+  <script src="app.js"></script>
   <script>
       // https://stackoverflow.com/questions/59471449/how-to-prevent-screen-sleep-using-javascript
         var locations = [];
         var noSleep = new NoSleep();
         var c = 0;
         var session;
+
         var playFn = function() {
             noSleep.enable();
             document.body.removeEventListener('touchend', playFn);
@@ -39,55 +91,56 @@
               maximumAge: 30000,
               timeout: 27000
             };
-            function printPos(p) {
-              console.log(p);
+            function newPos(p) {
+              /*
               document.body.insertAdjacentHTML('beforeend',
                 `<div>${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}</div>`
               )
+              */
               if(p.coords.speed)
-               document.getElementById('speed').innerHTML = (3.6 * p.coords.speed).toFixed(2)
+                document.getElementById('speed').innerHTML = `${(3.6 * p.coords.speed).toFixed(2)} kmh`
+              if(p.coords)
+               document.getElementById('pos').innerHTML = `${p.coords.longitude},${p.coords.latitude}`
 
-              locations.push([p.timestamp,p.coords.latitude,p.coords.latitude, p.coords.altitude, p.coords.speed])
+              locations.push([p.timestamp, p.coords.longitude, p.coords.latitude, p.coords.altitude, p.coords.speed ])
               var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
               if (c % 10 == 0)
                 localStorage.setItem(utc, JSON.stringify(locations));
               ++c;
               
               sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session})
-
             }
-            const watchID = navigator.geolocation.watchPosition(printPos, (e) => console.log(e), options);
-            //setInterval(() => { }, 1000)
-            navigator.geolocation.getCurrentPosition(printPos, (e) => console.log(e), options);
+            const watchID = navigator.geolocation.watchPosition(newPos, (e) => console.log(e), options);
+            navigator.geolocation.getCurrentPosition(newPos, (e) => console.log(e), options);
+
+            // hide start button and show stuff
             document.getElementById('start_btn').style.display = 'none';
+            document.getElementById('time').style.display = 'block';
+            fitText(document.getElementById('time'));
           
       }
       document.body.addEventListener('touchend', playFn);
       document.body.addEventListener('click', playFn);
 
-function uuidv4() {
-  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  );
-}
-      session = uuidv4()
-      async function sendEvent(event){
-          const date = new Date();
-          event = {
-              'timestamp': date.toISOString(),
-              ...event
-          }
-          const headers = {
-              'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICJlZTM1MjMwZi0xYmZlLTQ4N2MtOTRjNC1jYjA1NjExM2Y3NDYifQ.GBO3WIIltxMDskzBA6HUaBoR17vm4kQVglgfB8Ew8lk`,
-          }
-          const rawResponse = await fetch('https://api.tinybird.co/v0/events?name=gps_tracker', {
-              method: 'POST',
-              body: JSON.stringify(event),
-              headers: headers,
-          });
-          const content = await rawResponse.json();
-          console.log(content)
+      function uuidv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+          (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
       }
+      session = uuidv4()
+
+      var RACETRACKS = [
+        {
+          name: 'Los arcos',
+          start: 
+          [
+            [42.559169, -2.168215],
+            [42.559307, -2.167767]
+          ]
+        }
+      ]
+
+
       
   </script>
 </body>
