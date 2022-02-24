@@ -66,7 +66,7 @@
 <body>
   <div class="center_vertically">
     <a id="start_btn">start</a>
-    <div id="time">01:54.2</div>
+    <div id="time">00:00.0</div>
     <div id="debug">
       <span id="pos">42.559169, -2.168215</span>
       ·
@@ -75,13 +75,16 @@
   </div>
   <script src="NoSleep.min.js"></script>
   <script src="geometric.js"></script>
+  <script src="flatten.js"></script>
   <script src="app.js"></script>
   <script>
       // https://stackoverflow.com/questions/59471449/how-to-prevent-screen-sleep-using-javascript
         var locations = [];
         var noSleep = new NoSleep();
         var c = 0;
-        var session;
+        var session_id;
+        var session = new Session()
+        var user_id;
 
         var playFn = function() {
             noSleep.enable();
@@ -97,10 +100,10 @@
                 `<div>${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}</div>`
               )
               */
-              if(p.coords.speed)
-                document.getElementById('speed').innerHTML = `${(3.6 * p.coords.speed).toFixed(2)} kmh`
-              if(p.coords)
-               document.getElementById('pos').innerHTML = `${p.coords.longitude},${p.coords.latitude}`
+              if(p.coords.speed !== undefined)
+                document.getElementById('speed').innerHTML = `${(3.6 * p.coords.speed).toFixed(0)} kmh`
+              if(p.coords !== undefined)
+                document.getElementById('pos').innerHTML = `${p.coords.longitude},${p.coords.latitude}`
 
               locations.push([p.timestamp, p.coords.longitude, p.coords.latitude, p.coords.altitude, p.coords.speed ])
               var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
@@ -108,7 +111,12 @@
                 localStorage.setItem(utc, JSON.stringify(locations));
               ++c;
               
-              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session})
+              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session_id, uid: user_id})
+              session.newPos(p.coords.timestamp, [
+                p.coords.longitude,
+                p.coords.latitude
+              ], p.coords.speed)
+
             }
             const watchID = navigator.geolocation.watchPosition(newPos, (e) => console.log(e), options);
             navigator.geolocation.getCurrentPosition(newPos, (e) => console.log(e), options);
@@ -122,26 +130,8 @@
       document.body.addEventListener('touchend', playFn);
       document.body.addEventListener('click', playFn);
 
-      function uuidv4() {
-        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-          (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-        );
-      }
-      session = uuidv4()
+      [session_id, user_id] = flatout_init();
 
-      var RACETRACKS = [
-        {
-          name: 'Los arcos',
-          start: 
-          [
-            [42.559169, -2.168215],
-            [42.559307, -2.167767]
-          ]
-        }
-      ]
-
-
-      
   </script>
 </body>
 </html>

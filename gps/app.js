@@ -81,3 +81,83 @@ function mercator_project(ll) {
     (xy[1] < -MAXEXTENT) && (xy[1] = -MAXEXTENT);
     return xy;
 };
+
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+function flatout_init() {
+    var session = uuidv4()
+    let user_id = localStorage.getItem('user_id')
+    if (!user_id) {
+        user_id = uuidv4()
+        localStorage.setItem('user_id', user_id)
+    }
+    return [session, user_id]
+}
+
+var RACETRACKS = [
+  {
+    name: 'Los arcos',
+    start: 
+    [
+      [42.559169, -2.168215],
+      [42.559307, -2.167767]
+    ]
+  }
+]
+
+const Flatten = window["@flatten-js/core"];
+const {point, circle, segment} = Flatten;
+
+var THRESHOLD_SPEED = 20;
+class Session {
+
+  constructor() {
+    this.positions = [];
+    this.inLap = false;
+    this.startingPos = null;
+  }
+
+  newPos(ts, lonlat, speed) {
+    var xy = mercator_project(lonlat)
+    this.positions.push(xy);
+    var len = this.positions.length
+
+
+    // at least two positions and speed over 20kmh
+    if (len >= 2 && speed*3.6 > THRESHOLD_SPEED ) {
+      let carTrace = new Flatten.Segment(
+          new Flatten.Point(this.positions[len - 2]),
+          new Flatten.Point(this.positions[len - 1])
+      )
+  
+      for (var track of RACETRACKS) {
+        let trackStart = new Flatten.Segment(
+          new Flatten.Point(track.start[0]),
+          new Flatten.Point(track.start[1])
+        )
+
+        var intersection = carTrace.interserts(trackStart);
+        var currentPos = {
+          ts: ts, // TODO interpolate
+          pos: intersection
+        }
+        if (interserts.length) {
+          if (this.inLap) {
+            this.laps.push({
+              start: this.startingPos,
+              end: currentPos
+            })
+          } else {
+            this.startingPos = currentPos
+            this.inLap = true;
+          }
+        }
+      }
+    }
+  }
+
+}
