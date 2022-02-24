@@ -5,7 +5,7 @@ published: true
 
 > Three stone cutters were asked about their jobs.
 > 
-> First said he was paid to cut stones..."
+> First said he was paid to cut stones...
 > 
 > Second one replied that he used special techniques in a exceptional way [...]
 > 
