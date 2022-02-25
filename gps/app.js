@@ -101,10 +101,10 @@ function flatout_init() {
 var RACETRACKS = [
   {
     name: 'Los arcos',
-    start: 
+    start:
     [
-      [42.559169, -2.168215],
-      [42.559307, -2.167767]
+      [-2.168215, 42.559169],
+      [-2.167767, 42.559307]
     ]
   }
 ]
@@ -113,39 +113,53 @@ const Flatten = window["@flatten-js/core"];
 const {point, circle, segment} = Flatten;
 
 var THRESHOLD_SPEED = 20;
+
 class Session {
 
   constructor() {
     this.positions = [];
     this.inLap = false;
     this.startingPos = null;
+    this.laps = []
   }
 
   newPos(ts, lonlat, speed) {
     var xy = mercator_project(lonlat)
-    this.positions.push(xy);
+    this.positions.push({ts: ts, pos: xy});
     var len = this.positions.length
 
+    if (len < 2)
+      return;
 
     // at least two positions and speed over 20kmh
-    if (len >= 2 && speed*3.6 > THRESHOLD_SPEED ) {
-      let carTrace = new Flatten.Segment(
-          new Flatten.Point(this.positions[len - 2]),
-          new Flatten.Point(this.positions[len - 1])
-      )
-  
+    if (speed*3.6 > THRESHOLD_SPEED) {
+
+      let t0 = this.positions[len - 2].ts
+      let t1 = this.positions[len - 1].ts
+      let p0 = new Flatten.Point(this.positions[len - 2].pos)
+      let p1 = new Flatten.Point(this.positions[len - 1].pos)
+      let carTrace = new Flatten.Segment(p0, p1);
+
       for (var track of RACETRACKS) {
         let trackStart = new Flatten.Segment(
-          new Flatten.Point(track.start[0]),
-          new Flatten.Point(track.start[1])
+          new Flatten.Point(mercator_project(track.start[0])),
+          new Flatten.Point(mercator_project(track.start[1]))
         )
 
-        var intersection = carTrace.interserts(trackStart);
-        var currentPos = {
-          ts: ts, // TODO interpolate
-          pos: intersection
-        }
-        if (interserts.length) {
+        var intersection = carTrace.intersect(trackStart);
+
+
+        if (intersection.length) {
+
+          var d0 = intersection[0].distanceTo(p0)[0];
+          var d1 = intersection[0].distanceTo(p1)[0];
+          var t = d0 / (d0 + d1)
+
+          var currentPos = {
+            ts: t0 + t * (t1 - t0),
+            pos: intersection
+          }
+
           if (this.inLap) {
             this.laps.push({
               start: this.startingPos,
@@ -159,5 +173,26 @@ class Session {
       }
     }
   }
-
 }
+
+function selfTest() {
+  var session = new Session();
+  session.newPos(0, [-2.168040, 42.559179], 30);
+  session.newPos(1000, [-2.168209, 42.559467], 30);
+  console.assert(session.inLap)
+  session.newPos(2000, [-2.165811, 42.560299], 30);
+  console.assert(session.inLap)
+  console.assert(session.laps.length == 0)
+  session.newPos(3000, [-2.164577, 42.558971], 30);
+  console.assert(session.inLap)
+  console.assert(session.laps.length == 0)
+  session.newPos(4000, [-2.168040, 42.559179], 30);
+  session.newPos(5000, [-2.168209, 42.559467], 30);
+  console.assert(session.inLap)
+  console.assert(session.laps.length == 1)
+  console.assert(session.laps[0].end.ts > 4000)
+  console.assert(session.laps[0].end.ts < 5000)
+}
+
+selfTest();
+
