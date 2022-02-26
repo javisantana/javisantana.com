@@ -4,6 +4,10 @@
   <meta charset=utf-8>
   <title>tracker</title>
     <style>
+      @font-face {
+        font-family: 'MyWebFont';
+        src: url('webfont.ttf')  format('truetype');
+      }
       :root {
         --bkg-color: rgb(43, 43, 43);
         --text-color: rgba(255, 255, 255, 0.9);
@@ -39,15 +43,14 @@
         letter-spacing: -0.1vh;
         font-size: 5vh;
         text-transform:uppercase;
-        text-shadow: 0 0 10px #111;
+        text-shadow: 0 0 10vh #111;
       }
 
       #time { 
         display: none; 
         flex: 0 0 100%;
         /*flex: 99 0 99%;*/
-        font-family: monospace;
-        font-weight: bold;
+        font-family: MyWebFont;
         letter-spacing: -0.3vh;
         color: #FFF;
         text-shadow: 0 0 10px #111;
@@ -68,6 +71,8 @@
     <a id="start_btn">start</a>
     <div id="time">00:00.0</div>
     <div id="debug">
+      <span id="track"></span>
+      ·
       <span id="pos">42.559169, -2.168215</span>
       ·
       <span id="speed">0 kmh</span>
@@ -86,6 +91,52 @@
         var session = new Session()
         var user_id;
 
+        function newPos(p) {
+          if(p.coords.speed !== undefined)
+            document.getElementById('speed').innerHTML = `${(3.6 * p.coords.speed).toFixed(0)} kmh`
+          if(p.coords !== undefined)
+            document.getElementById('pos').innerHTML = `${p.coords.longitude.toFixed(4)},${p.coords.latitude.toFixed(4)}`
+          if(session.track) {
+            document.getElementById('track').innerHTML = session.track.name;
+          }
+
+          locations.push([p.timestamp, p.coords.longitude, p.coords.latitude, p.coords.altitude, p.coords.speed ])
+          var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+          if (c % 10 == 0)
+            localStorage.setItem(utc, JSON.stringify(locations));
+          ++c;
+          
+          //sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session_id, uid: user_id})
+
+          session.newPos(p.timestamp, [
+            p.coords.longitude,
+            p.coords.latitude
+          ], p.coords.speed)
+          var timeDiv = document.getElementById('time')
+          if (session.inLap) {
+            if (session.lapsNumber() > 0 && session.currentLapTime() < 30000) {
+              // show last lap time and diff
+              if (Math.round(session.currentLapTime()/1000) % 3 == 0 && session.lapsNumber() > 1) {
+                var delta = session.lastDeltaWithBest()
+                timeDiv.innerHTML = formatDelta(delta)
+                if (delta <= 0) {
+                  timeDiv.style.textShadow = '0 0 10vh #0F0';
+                } else {
+                  timeDiv.style.textShadow = '0 0 10vh #F00';
+                }
+
+              } else {
+                timeDiv.innerHTML = formatTime(session.lastLapTime())
+                timeDiv.style.textShadow = '0 0 10vh #000';
+              }
+            } else {
+              timeDiv.innerHTML = formatTime(session.currentLapTime())
+              timeDiv.style.textShadow = '0 0 10vh #000';
+            }
+          }
+
+        }
+
         var playFn = function() {
             noSleep.enable();
             document.body.removeEventListener('touchend', playFn);
@@ -94,30 +145,7 @@
               maximumAge: 30000,
               timeout: 27000
             };
-            function newPos(p) {
-              /*
-              document.body.insertAdjacentHTML('beforeend',
-                `<div>${p.timestamp},${p.coords.latitude},${p.coords.latitude}, ${p.coords.altitude},${p.coords.speed}</div>`
-              )
-              */
-              if(p.coords.speed !== undefined)
-                document.getElementById('speed').innerHTML = `${(3.6 * p.coords.speed).toFixed(0)} kmh`
-              if(p.coords !== undefined)
-                document.getElementById('pos').innerHTML = `${p.coords.longitude},${p.coords.latitude}`
 
-              locations.push([p.timestamp, p.coords.longitude, p.coords.latitude, p.coords.altitude, p.coords.speed ])
-              var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-              if (c % 10 == 0)
-                localStorage.setItem(utc, JSON.stringify(locations));
-              ++c;
-              
-              sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session_id, uid: user_id})
-              session.newPos(p.coords.timestamp, [
-                p.coords.longitude,
-                p.coords.latitude
-              ], p.coords.speed)
-
-            }
             const watchID = navigator.geolocation.watchPosition(newPos, (e) => console.log(e), options);
             navigator.geolocation.getCurrentPosition(newPos, (e) => console.log(e), options);
 
@@ -127,8 +155,39 @@
             fitText(document.getElementById('time'));
           
       }
-      document.body.addEventListener('touchend', playFn);
-      document.body.addEventListener('click', playFn);
+      if (window.location.search.indexOf('debug') === -1) {
+        document.body.addEventListener('touchend', playFn);
+        document.body.addEventListener('click', playFn);
+      } else {
+        fetch('data/kotar.geojson')
+            .then(r => r.json())
+            .then(data => {
+              var position = 0;
+
+              setInterval(() => {
+                newPos({
+                  coords: {
+                    latitude: data.features[position].geometry.coordinates[1],
+                    longitude: data.features[position].geometry.coordinates[0],
+                    altitude: 0,
+                    speed: data.features[position].properties.vel,
+                  },
+                  timestamp: data.features[position].properties.time
+                })
+                //console.log(new Date(data.features[position].properties.time))
+                position += 10;
+              }, 500);
+
+
+              document.getElementById('start_btn').style.display = 'none';
+              document.getElementById('time').style.display = 'block';
+              fitText(document.getElementById('time'));
+            })
+        // start simulation
+        setInterval(() => {
+        }, 1000);
+
+      }
 
       [session_id, user_id] = flatout_init();
 

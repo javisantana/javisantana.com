@@ -49,7 +49,7 @@ window.fitText = function (el, kompressor, options) {
 };
 
 // TB send event
-async function sendEvent(event){
+async function sendEvent(event) {
     const date = new Date();
     event = {
         'timestamp': date.toISOString(),
@@ -106,6 +106,14 @@ var RACETRACKS = [
       [-2.168215, 42.559169],
       [-2.167767, 42.559307]
     ]
+  },
+  {
+    name: 'Kotar',
+    start: [
+      [-3.583358, 41.791305],
+      [-3.583682, 41.791313]
+    ]
+
   }
 ]
 
@@ -120,7 +128,56 @@ class Session {
     this.positions = [];
     this.inLap = false;
     this.startingPos = null;
+    this.track = null;
     this.laps = []
+  }
+
+  currentLapTime() {
+    if (this.inLap) {
+      var len = this.positions.length
+      let last = this.positions[len - 1].ts;
+      return last - this.startingPos.ts;
+    }
+  }
+
+  lastLapTime() {
+      var len = this.laps.length
+      let last = this.laps[len - 1]
+      return last.end.ts - last.start.ts;
+  }
+  
+  lapsNumber() {
+    return this.laps.length
+  }
+
+  // return the delta with best for the last lap
+  lastDeltaWithBest() {
+    if (this.laps.length === 0) {
+      return null
+    }
+    var best = Number.MAX_SAFE_INTEGER;
+    for(var lap of this.laps.slice(0, -1)) {
+      var time = lap.end.ts - lap.start.ts
+      if (time < best) {
+        best = time;
+      }
+    }
+    return this.lastLapTime() - best;
+
+  }
+
+  bestLapTime() {
+    if (this.laps.length === 0) {
+      return null
+    }
+    var best = Number.MAX_SAFE_INTEGER;
+    for(var lap of this.laps) {
+      var time = lap.end.ts - lap.start.ts
+      if (time < best) {
+        best = time;
+      }
+    }
+    return best;
   }
 
   newPos(ts, lonlat, speed) {
@@ -131,7 +188,7 @@ class Session {
     if (len < 2)
       return;
 
-    // at least two positions and speed over 20kmh
+    // speed over 20kmh
     if (speed*3.6 > THRESHOLD_SPEED) {
 
       let t0 = this.positions[len - 2].ts
@@ -148,9 +205,8 @@ class Session {
 
         var intersection = carTrace.intersect(trackStart);
 
-
         if (intersection.length) {
-
+          this.track = track;
           var d0 = intersection[0].distanceTo(p0)[0];
           var d1 = intersection[0].distanceTo(p1)[0];
           var t = d0 / (d0 + d1)
@@ -165,14 +221,66 @@ class Session {
               start: this.startingPos,
               end: currentPos
             })
+            //TODO: manage non closed tracks
+            this.startingPos = currentPos;
           } else {
-            this.startingPos = currentPos
+            this.startingPos = currentPos;
             this.inLap = true;
           }
         }
       }
     }
   }
+}
+
+function formatTime(millis) {
+  var dec = Math.floor(millis/100)%10;
+  var seconds = Math.floor(millis/1000);
+  var minutes = Math.floor(seconds/60);
+  seconds = seconds % 60;
+  if(seconds < 10) seconds = "0" + seconds;
+  //if(dec < 10) dec = "0" + dec;
+  if(minutes < 10) minutes = "0" + minutes;
+  return minutes + ":" + seconds + "." + dec;
+}
+
+function formatDelta(delta) {
+  var millis = Math.abs(delta)
+  var dec = Math.floor(millis/100)%10;
+  var seconds = Math.floor(millis/1000);
+  //if(seconds < 10) seconds = "0" + seconds;
+  return (delta < 0 ? '-':'+') + seconds + "." + dec;
+}
+
+class StopWatch {
+
+  constructor(el) {
+    this.el = el;
+    this.startTS = 0;
+    this.realTS = +Date.now()
+    this.interval = null
+  }
+
+  reset(ts) {
+    this.startTS = ts;
+    this.realTS = +Date.now()
+  }
+
+  start(ts) {
+    this.interval = setInterval(() => this.update, 100);
+  }
+
+  stop() {
+    this.interval && clearInterval(this.interval)
+    this.interval = null;
+  }
+
+  update() {
+    let delta = +Date.now() - this.readTS
+    this.el.innerHTML = formatTime(delta)
+  }
+
+
 }
 
 function selfTest() {
