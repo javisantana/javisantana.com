@@ -48,22 +48,37 @@ window.fitText = function (el, kompressor, options) {
   return el;
 };
 
+var eventsBuffer = []
+var sendTimeout = -1
 // TB send event
-async function sendEvent(event) {
+async function sendEvent(event, where) {
+    where = where || 'gps_tracker'
     const date = new Date();
     event = {
         'timestamp': date.toISOString(),
         ...event
     }
     const headers = {
-        'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICJlZTM1MjMwZi0xYmZlLTQ4N2MtOTRjNC1jYjA1NjExM2Y3NDYifQ.GBO3WIIltxMDskzBA6HUaBoR17vm4kQVglgfB8Ew8lk`,
+        //'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICJlZTM1MjMwZi0xYmZlLTQ4N2MtOTRjNC1jYjA1NjExM2Y3NDYifQ.GBO3WIIltxMDskzBA6HUaBoR17vm4kQVglgfB8Ew8lk`,
+        'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICI3YTFlODFmOC05MzIxLTQyMzktODQ4Yi1hZmRiZTg3NjFiZWYifQ.F21rTepeBiDueLc5uiR8Vpbt2SBJSSbZbos2PkT6uzg`
     }
-    const rawResponse = await fetch('https://api.tinybird.co/v0/events?name=gps_tracker', {
-        method: 'POST',
-        body: JSON.stringify(event),
-        headers: headers,
-    });
-    const content = await rawResponse.json();
+    eventsBuffer.push(event)
+    async function send() {
+      var body = eventsBuffer.map(x => JSON.stringify(x)).join('\n')
+      eventsBuffer = []
+      const rawResponse = await fetch(`https://api.tinybird.co/v0/events?name=${where}`, {
+          method: 'POST',
+          body: body,
+          headers: headers
+      });
+      const content = await rawResponse.json();
+    }
+    sendTimeout >= 0 && clearTimeout(sendTimeout);
+    if (eventsBuffer.length > 50) {
+      await send()
+    } else {
+      sendTimeout = setTimeout(send, 5000);
+    }
 }
 
 function mercator_project(ll) {
@@ -130,7 +145,10 @@ class Session {
     this.startingPos = null;
     this.track = null;
     this.laps = []
+    this.lapId = ''
   }
+
+  currentLapId() { return this.lapId }
 
   currentLapTime() {
     if (this.inLap) {
@@ -186,7 +204,7 @@ class Session {
     var len = this.positions.length
 
     if (len < 2)
-      return;
+      return []
 
     // speed over 20kmh
     if (speed*3.6 > THRESHOLD_SPEED) {
@@ -204,6 +222,8 @@ class Session {
         )
 
         var intersection = carTrace.intersect(trackStart);
+        
+        var triggerEvents = []
 
         if (intersection.length) {
           this.track = track;
@@ -212,8 +232,8 @@ class Session {
           var t = d0 / (d0 + d1)
 
           var currentPos = {
-            ts: t0 + t * (t1 - t0),
-            pos: intersection
+            ts: Math.floor(t0 + t * (t1 - t0)),
+            pos: intersection[0]
           }
 
           if (this.inLap) {
@@ -223,13 +243,32 @@ class Session {
             })
             //TODO: manage non closed tracks
             this.startingPos = currentPos;
+            // mark the end
+            triggerEvents.push({
+              currentLap: this.lapId,
+              ...currentPos
+            })
+            this.lapId = uuidv4()
+            // mark the start
+            triggerEvents.push({
+              currentLap: this.lapId,
+              ...currentPos
+            })
           } else {
             this.startingPos = currentPos;
             this.inLap = true;
+            this.lapId = uuidv4()
+            triggerEvents.push({
+              currentLap: this.lapId,
+              ...currentPos
+            })
           }
+
+          return triggerEvents;
         }
       }
     }
+    return []
   }
 }
 

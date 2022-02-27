@@ -106,9 +106,8 @@
             localStorage.setItem(utc, JSON.stringify(locations));
           ++c;
           
-          //sendEvent({ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session_id, uid: user_id})
 
-          session.newPos(p.timestamp, [
+          var intersection = session.newPos(p.timestamp, [
             p.coords.longitude,
             p.coords.latitude
           ], p.coords.speed)
@@ -135,6 +134,25 @@
             }
           }
 
+          // send data
+          var dataToSend = {
+            ts:p.timestamp,lat: p.coords.latitude, lon:p.coords.longitude, alt: p.coords.altitude, speed: p.coords.speed, session:session_id, uid: user_id,
+            currentLap: session.currentLapId()
+          }
+          sendEvent(dataToSend)
+          if (intersection.length) {
+            for (var ev of intersection) {
+              dataToSend = {
+                ts: ev.ts,
+                pos_x: ev.pos.x,
+                pos_y: ev.pos.y,
+                currentLap: ev.currentLap,
+                session: session_id,
+                uid: user_id
+              }
+              sendEvent(dataToSend)
+            }
+          }
         }
 
         var playFn = function() {
@@ -159,24 +177,27 @@
         document.body.addEventListener('touchend', playFn);
         document.body.addEventListener('click', playFn);
       } else {
+        var pressedKeys = {};
+        window.onkeyup = function(e) { pressedKeys[e.keyCode] = false; }
+        window.onkeydown = function(e) { pressedKeys[e.keyCode] = true; }
         fetch('data/kotar.geojson')
             .then(r => r.json())
             .then(data => {
               var position = 0;
 
               setInterval(() => {
+                var pp = Math.floor(position)
                 newPos({
                   coords: {
-                    latitude: data.features[position].geometry.coordinates[1],
-                    longitude: data.features[position].geometry.coordinates[0],
+                    latitude: data.features[pp].geometry.coordinates[1],
+                    longitude: data.features[pp].geometry.coordinates[0],
                     altitude: 0,
-                    speed: data.features[position].properties.vel,
+                    speed: data.features[pp].properties.vel,
                   },
-                  timestamp: data.features[position].properties.time
+                  timestamp: data.features[pp].properties.time
                 })
-                //console.log(new Date(data.features[position].properties.time))
-                position += 10;
-              }, 500);
+                position += pressedKeys[83] ? 1:10; // s key
+              }, 100);
 
 
               document.getElementById('start_btn').style.display = 'none';
