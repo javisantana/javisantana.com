@@ -45,6 +45,14 @@
         text-transform:uppercase;
         text-shadow: 0 0 10vh #111;
       }
+      .time { 
+        font-family: MyWebFont;
+        letter-spacing: -0.1vh;
+        color: #FFF;
+        font-size: 7vh;
+        text-shadow: 0 0 10px #111;
+        min-width: 100vw;
+      }
 
       #time { 
         display: none; 
@@ -67,7 +75,7 @@
     </style>
   </head>
 <body>
-  <div class="center_vertically">
+  <div class="center_vertically" id="timer">
     <a id="start_btn">start</a>
     <div id="time">00:00.0</div>
     <div id="debug">
@@ -77,6 +85,8 @@
       ·
       <span id="speed">0 kmh</span>
     </div>
+  </div>
+  <div class="center_vertically" style="display:none" id="lap_list">
   </div>
   <script src="NoSleep.min.js"></script>
   <script src="geometric.js"></script>
@@ -112,6 +122,8 @@
             p.coords.latitude
           ], p.coords.speed)
           var timeDiv = document.getElementById('time')
+
+
           if (session.inLap) {
             if (session.lapsNumber() > 0 && session.currentLapTime() < 30000) {
               // show last lap time and diff
@@ -151,6 +163,9 @@
                 uid: user_id
               }
               sendEvent(dataToSend)
+              if (ev.type === 'lap_end' && session.lapsNumber() > 0) {
+                document.getElementById('lap_list').innerHTML += `<div class="time">${formatTime(session.lastLapTime())}</div>`
+              }
             }
           }
         }
@@ -171,7 +186,21 @@
             document.getElementById('start_btn').style.display = 'none';
             document.getElementById('time').style.display = 'block';
             fitText(document.getElementById('time'));
+            swicther();
           
+      }
+      function swicther() {
+            var screenShown = true;
+            window.onclick = (e) => {
+              if (screenShown) {
+                document.getElementById('timer').style.display = 'none'
+                document.getElementById('lap_list').style.display = 'flex'
+              } else {
+                document.getElementById('timer').style.display = 'flex'
+                document.getElementById('lap_list').style.display = 'none'
+              }
+              screenShown = !screenShown
+            }
       }
       if (window.location.search.indexOf('debug') === -1) {
         document.body.addEventListener('touchend', playFn);
@@ -180,6 +209,7 @@
         var pressedKeys = {};
         window.onkeyup = function(e) { pressedKeys[e.keyCode] = false; }
         window.onkeydown = function(e) { pressedKeys[e.keyCode] = true; }
+          swicther();
         fetch('data/kotar.geojson')
             .then(r => r.json())
             .then(data => {

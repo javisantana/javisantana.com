@@ -241,12 +241,14 @@ class Session {
             this.startingPos = currentPos;
             // mark the end
             triggerEvents.push({
+              type: 'lap_end',
               currentLap: this.lapId,
               ...currentPos
             })
             this.lapId = uuidv4()
             // mark the start
             triggerEvents.push({
+              type: 'lap_start',
               currentLap: this.lapId,
               ...currentPos
             })
@@ -255,6 +257,7 @@ class Session {
             this.inLap = true;
             this.lapId = uuidv4()
             triggerEvents.push({
+              type: 'lap_start',
               currentLap: this.lapId,
               ...currentPos
             })
