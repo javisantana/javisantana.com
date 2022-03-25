@@ -191,7 +191,7 @@
       }
       function swicther() {
             var screenShown = true;
-            window.onclick = (e) => {
+            var ss = (e) => {
               if (screenShown) {
                 document.getElementById('timer').style.display = 'none'
                 document.getElementById('lap_list').style.display = 'flex'
@@ -201,6 +201,8 @@
               }
               screenShown = !screenShown
             }
+            //document.body.addEventListener('click', ss)
+            document.body.addEventListener('touchend', ss)
       }
       if (window.location.search.indexOf('debug') === -1) {
         document.body.addEventListener('touchend', playFn);
