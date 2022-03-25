@@ -48,8 +48,7 @@ window.fitText = function (el, kompressor, options) {
   return el;
 };
 
-var eventsBuffer = []
-var sendTimeout = -1
+eventsBuffer = []
 // TB send event
 async function sendEvent(event, where) {
     where = where || 'gps_tracker'
@@ -73,12 +72,7 @@ async function sendEvent(event, where) {
       });
       const content = await rawResponse.json();
     }
-    sendTimeout >= 0 && clearTimeout(sendTimeout);
-    if (eventsBuffer.length > 50) {
-      await send()
-    } else {
-      sendTimeout = setTimeout(send, 5000);
-    }
+    await send()
 }
 
 function mercator_project(ll) {
@@ -128,7 +122,13 @@ var RACETRACKS = [
       [-3.583358, 41.791305],
       [-3.583682, 41.791313]
     ]
-
+  },
+  {
+    name: 'Cheste',
+    start: [
+      [-0.631284, 39.483813],
+      [-0.630794, 39.483251]
+    ]
   }
 ]
 
