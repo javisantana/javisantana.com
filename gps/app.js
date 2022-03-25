@@ -48,8 +48,7 @@ window.fitText = function (el, kompressor, options) {
   return el;
 };
 
-var eventsBuffer = []
-var sendTimeout = -1
+eventsBuffer = []
 // TB send event
 async function sendEvent(event, where) {
     where = where || 'gps_tracker'
@@ -119,7 +118,13 @@ var RACETRACKS = [
       [-3.583358, 41.791305],
       [-3.583682, 41.791313]
     ]
-
+  },
+  {
+    name: 'Cheste',
+    start: [
+      [-0.631284, 39.483813],
+      [-0.630794, 39.483251]
+    ]
   }
 ]
 
