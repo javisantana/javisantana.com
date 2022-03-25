@@ -62,23 +62,14 @@ async function sendEvent(event, where) {
         //'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICJlZTM1MjMwZi0xYmZlLTQ4N2MtOTRjNC1jYjA1NjExM2Y3NDYifQ.GBO3WIIltxMDskzBA6HUaBoR17vm4kQVglgfB8Ew8lk`,
         'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICI3YTFlODFmOC05MzIxLTQyMzktODQ4Yi1hZmRiZTg3NjFiZWYifQ.F21rTepeBiDueLc5uiR8Vpbt2SBJSSbZbos2PkT6uzg`
     }
-    eventsBuffer.push(event)
-    async function send() {
-      var body = eventsBuffer.map(x => JSON.stringify(x)).join('\n')
-      eventsBuffer = []
-      const rawResponse = await fetch(`https://api.tinybird.co/v0/events?name=${where}`, {
-          method: 'POST',
-          body: body,
-          headers: headers
-      });
-      const content = await rawResponse.json();
-    }
-    sendTimeout >= 0 && clearTimeout(sendTimeout);
-    if (eventsBuffer.length > 50) {
-      await send()
-    } else {
-      sendTimeout = setTimeout(send, 5000);
-    }
+    var body = JSON.stringify(event)
+    eventsBuffer = []
+    const rawResponse = await fetch(`https://api.tinybird.co/v0/events?name=${where}`, {
+        method: 'POST',
+        body: body,
+        headers: headers
+    });
+    const content = await rawResponse.json();
 }
 
 function mercator_project(ll) {
