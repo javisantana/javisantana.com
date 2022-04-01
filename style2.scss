@@ -34,11 +34,11 @@
 }
 @media (min-width: 48em) {
 :root {
-    --type-base: calc(1.3em + 0.7vw); } 
+    --type-base: calc(1.3em + 0.9vw); } 
 }
 @media (min-width: 90em) {
   :root {
-    --type-base: 2.2em; 
+    --type-base: 2.7em; 
   } 
 }
 
@@ -322,7 +322,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .container {
-  max-width:75rem;
+  max-width: 95rem;
   padding: 2rem 1.5rem;
   margin-left:  auto;
   margin-right: auto;
@@ -422,12 +422,13 @@ tbody tr:nth-child(odd) th {
   margin-top: var(--space-x-large);
   &-title {
     font-size: var(--type-xx-large);
-    margin-bottom: var(--space-small);
+    margin-bottom: var(--space-large);
     margin-top: var(--space-large);
     font-family: var(--font-sans);
     letter-spacing: -0.05em;
     color: #000;
     text-transform: none;
+    text-align: center;
   }
   &-date {
     margin-top: 4rem;
