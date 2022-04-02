@@ -61,18 +61,14 @@ async function sendEvent(event, where) {
         //'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICJlZTM1MjMwZi0xYmZlLTQ4N2MtOTRjNC1jYjA1NjExM2Y3NDYifQ.GBO3WIIltxMDskzBA6HUaBoR17vm4kQVglgfB8Ew8lk`,
         'Authorization': `Bearer p.eyJ1IjogImM4YWY4Zjg2LWQzY2EtNGRhNy1iMWVhLWUyNmMxN2ViNGI0OSIsICJpZCI6ICI3YTFlODFmOC05MzIxLTQyMzktODQ4Yi1hZmRiZTg3NjFiZWYifQ.F21rTepeBiDueLc5uiR8Vpbt2SBJSSbZbos2PkT6uzg`
     }
-    eventsBuffer.push(event)
-    async function send() {
-      var body = eventsBuffer.map(x => JSON.stringify(x)).join('\n')
-      eventsBuffer = []
-      const rawResponse = await fetch(`https://api.tinybird.co/v0/events?name=${where}`, {
-          method: 'POST',
-          body: body,
-          headers: headers
-      });
-      const content = await rawResponse.json();
-    }
-    await send()
+    var body = JSON.stringify(event)
+    eventsBuffer = []
+    const rawResponse = await fetch(`https://api.tinybird.co/v0/events?name=${where}`, {
+        method: 'POST',
+        body: body,
+        headers: headers
+    });
+    const content = await rawResponse.json();
 }
 
 function mercator_project(ll) {
@@ -245,12 +241,14 @@ class Session {
             this.startingPos = currentPos;
             // mark the end
             triggerEvents.push({
+              type: 'lap_end',
               currentLap: this.lapId,
               ...currentPos
             })
             this.lapId = uuidv4()
             // mark the start
             triggerEvents.push({
+              type: 'lap_start',
               currentLap: this.lapId,
               ...currentPos
             })
@@ -259,6 +257,7 @@ class Session {
             this.inLap = true;
             this.lapId = uuidv4()
             triggerEvents.push({
+              type: 'lap_start',
               currentLap: this.lapId,
               ...currentPos
             })
