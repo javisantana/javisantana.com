@@ -9,4 +9,4 @@ Two quotes from this video where they guy tries to understand why Porsche entusi
 
 > They are engineered systems not just engineered parts assembled into a system
 
-- [The problem with Porsche]([https://vimeo.com/showcase/2337580/video/69909709](https://youtu.be/rdJYiRROeAc)
+- [The problem with Porsche](https://youtu.be/rdJYiRROeAc)
