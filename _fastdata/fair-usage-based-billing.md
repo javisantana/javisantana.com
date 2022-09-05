@@ -5,13 +5,13 @@ name: Usage based billing on data products
 tags: en, API, data
 ---
 
-Every time I go to the Google Cloud console to understand how much I'm spending I end up giving up. That's not a Google thing, almost all the service providers that bill you by usage are hard to understand.
+Every time I go to the Google Cloud console to understand how much I'm spending in some particular thing I end up giving up. That's not a Google thing, almost all the service providers that bill you by usage provide interfaces that are hard to understand.
 
-I don't blame them, it's actually hard to do it right because just tracking the usage is a non trivial task, not to mention when you need to mix usage plus the ad-hoc agreements when signing the contract, sales people usually give a better pricing, first X units are free or have different tiers based on the usage.
+I don't blame them, it's actually hard to do it right because just tracking the usage is a non trivial task, not to mention when you need to mix usage plus the ad-hoc agreements when signing the contract: sales people usually give a better pricing, first X units are free or have different tiers based on the usage.
 
 On the other hand, the big problem here is: there are really a few incentives to make it better, if you don't know where you are exactly spending your money you are not going to optimize it. Just that. I didn't look them up, but I'm 100% sure there are companies with products just focused on understand your Amazon bill.
 
-The product we develop at the company I founded (and no, I'm not going to try to sell anything here, I'm not even linking to it) charges by usage. The product allows you to run SQL queries (and generate API endpoints based on them) over the data you push to the product and we bill based on the amount of bytes you read/write. Easy exaplined, but hard to implement. Let me explain some decisions we made to make it 100% clear to the user.
+The product we develop at the company I founded (*) charges by usage. The product allows you to run SQL queries (and generate API endpoints based on them) over the data you push to the product and we bill based on the amount of bytes you read/write. Easy to explain. Let me explain some decisions we made to make it 100% clear and easy to the user.
 
 1) Costs are fine grained. It's not aggregated, you can see them raw. So each query you run you know exactly how much it costs. At the beggining when we designed the system we provided stats by day. That's nice but it does not allow to know what **exactly** is being cheap/expensive. Funny thing here: costs are stored in a table you can also query as another table. 
 
@@ -25,3 +25,4 @@ To be clear, this sounds the easier part, but just handling usage is hard, usual
 
 Hope it helps if you are implemented usage based billing. BTW, we use our own product to implement usage based billing.
 
+(*) And no, I'm not going to try to sell anything here, I'm not even linking to it, I'm tired of people trying to sell me things.
