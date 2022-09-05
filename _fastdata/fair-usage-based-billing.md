@@ -13,13 +13,15 @@ On the other hand, the big problem here is: there are really a few incentives to
 
 The product we develop at the company I founded (and no, I'm not going to try to sell anything here, I'm not even linking to it) charges by usage. The product allows you to run SQL queries (and generate API endpoints based on them) over the data you push to the product and we bill based on the amount of bytes you read/write. Easy exaplined, but hard to implement. Let me explain some decisions we made to make it 100% clear to the user.
 
-1) Costs are fine grained. It's not aggregated, you can see them raw. So each query you run you know exactly how much it costs. At the beggining when we designed the system we provided stats by day. That's nice but it does not allow to know what **exactly** is being cheap/expensive. Funny thing here: costs are stored in a table you can also query as another table.
+1) Costs are fine grained. It's not aggregated, you can see them raw. So each query you run you know exactly how much it costs. At the beggining when we designed the system we provided stats by day. That's nice but it does not allow to know what **exactly** is being cheap/expensive. Funny thing here: costs are stored in a table you can also query as another table. 
+
+To be clear, this sounds the easier part, but just handling usage is hard, usually because the amount of information is huge and you need entire teams just to deal with this.
 
 2) Costs are reported real time. You run a query that scans 1Tb and that peaks the costs per minute, you know it after 1-2 seconds. You don't need to wait for a report to be generated. Most of out clients have graphs/alerts in their monitoring systems using that data in real time.
 
 3) We limit the "shoot yourself in the foot" opportunities as much as possible. For example, our product have an UI which is generally used to explore your data. It's so easy to run a query that runs a full scan when you don't know the data and incurr in unexpected costs that we just don't charge by those queries. 
 
-4) As the final resort, our Customer Success team (yes, real people) has dashboards that track usage and ping clients in case anything is unnusual. We help clients to optimize their queries as if we'd pay for them. This sounds totally counter intuitive, but it drives more product usage in the long term and it makes me sleep well at night (which is you can't pay with any money you can earn overcharging your clients)
+4) As the final resort, our Customer Success team (yes, real people) has dashboards that track usage and ping clients in case anything is unnusual. We help clients to optimize their queries as if we'd pay for them. This sounds totally counter intuitive, but it drives more product usage in the long term and it makes me sleep well at night (which is you can't pay with any money you can earn overcharging your clients). Looks like being fair always wins and trust me, this would no happen if the team had a "Reveneu target KPI". 
 
 Hope it helps if you are implemented usage based billing. BTW, we use our own product to implement usage based billing.
 
