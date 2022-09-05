@@ -13,7 +13,7 @@ On the other hand, the big problem here is: there are really a few incentives to
 
 The product we develop at the company I founded (*) charges by usage. The product allows you to run SQL queries (and generate API endpoints based on them) over the data you push to the product and we bill based on the amount of bytes you read/write. Easy to explain. Let me explain some decisions we made to make it 100% clear and easy to the user.
 
-1) Costs are fine grained. It's not aggregated, you can see them raw. So each query you run you know exactly how much it costs. At the beggining when we designed the system we provided stats by day. That's nice but it does not allow to know what **exactly** is being cheap/expensive. Funny thing here: costs are stored in a table you can also query as another table. 
+1) Costs are fine grained. It's not aggregated, you can see them raw. So each query you run you know exactly how much it costs. At the beggining when we designed the system we provided stats by day. That's nice but it does not allow to know what **exactly** is being cheap/expensive. Funny thing here, usage is stored in a table you can also query as regular table. 
 
 To be clear, this sounds the easier part, but just handling usage is hard, usually because the amount of information is huge and you need entire teams just to deal with this.
 
