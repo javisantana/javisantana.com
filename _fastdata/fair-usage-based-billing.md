@@ -21,7 +21,7 @@ To be clear, this sounds the easier part, but just handling usage is hard, usual
 
 3) We limit the "shoot yourself in the foot" opportunities as much as possible. For example, our product have an UI which is generally used to explore your data. It's so easy to run a query that runs a full scan when you don't know the data and incurr in unexpected costs that we just don't charge by those queries. We also show several hints to the user when they are running something "expensive". 
 
-4) As the final resort, our Customer Success team (yes, real people) has dashboards that track usage and ping clients in case anything is unnusual. We help clients to optimize their queries as if we'd pay for them. This sounds totally counter intuitive, but it drives more product usage in the long term and it makes me sleep well at night (which is you can't pay with any money you can earn overcharging your clients). Looks like being fair always wins and trust me, this would no happen if the team had a "Reveneu target KPI". 
+4) As the final resort, our Customer Success team (yes, real people) has dashboards that track usage and ping clients in case anything is unnusual. We help clients to optimize their queries as if we'd pay for them. This sounds totally counter intuitive, but it drives more product usage in the long term and it makes me sleep well at night (which is you something can't pay with any money you can earn overcharging your clients). Looks like being fair always wins and trust me, this would not happen if the team had a "Reveneu target KPI". 
 
 Hope it helps if you are implemented usage based billing. BTW, we use our own product to implement usage based billing.
 
