@@ -1,6 +1,6 @@
 ---
 layout: data
-published: false
+published: true
 name: Usage based billing on data products
 tags: en, API, data
 ---
