@@ -19,7 +19,7 @@ To be clear, this sounds the easier part, but just handling usage is hard, usual
 
 2) Costs are reported real time. You run a query that scans 1Tb and that peaks the costs per minute, you know it after 1-2 seconds. You don't need to wait for a report to be generated. Most of out clients have graphs/alerts in their monitoring systems using that data in real time.
 
-3) We limit the "shoot yourself in the foot" opportunities as much as possible. For example, our product have an UI which is generally used to explore your data. It's so easy to run a query that runs a full scan when you don't know the data and incurr in unexpected costs that we just don't charge by those queries. 
+3) We limit the "shoot yourself in the foot" opportunities as much as possible. For example, our product have an UI which is generally used to explore your data. It's so easy to run a query that runs a full scan when you don't know the data and incurr in unexpected costs that we just don't charge by those queries. We also show several hints to the user when they are running something "expensive". 
 
 4) As the final resort, our Customer Success team (yes, real people) has dashboards that track usage and ping clients in case anything is unnusual. We help clients to optimize their queries as if we'd pay for them. This sounds totally counter intuitive, but it drives more product usage in the long term and it makes me sleep well at night (which is you can't pay with any money you can earn overcharging your clients). Looks like being fair always wins and trust me, this would no happen if the team had a "Reveneu target KPI". 
 
