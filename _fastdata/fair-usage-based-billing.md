@@ -5,7 +5,7 @@ name: Usage based billing on data products
 tags: en, API, data
 ---
 
-Every time I go to the Google Cloud console to understand how much I'm spending in some particular thing I end up giving up. That's not a Google thing, almost all the service providers that bill you by usage provide interfaces that are hard to understand.
+Every time I go to the <MY CLOUD PROVIDER> console to understand how much I'm spending in some particular thing I end up giving up. That's not a Google thing, almost all the service providers that bill you by usage provide interfaces that are hard to understand.
 
 I don't blame them, it's actually hard to do it right because just tracking the usage is a non trivial task, not to mention when you need to mix usage plus the ad-hoc agreements when signing the contract: sales people usually give a better pricing, first X units are free or have different tiers based on the usage.
 
