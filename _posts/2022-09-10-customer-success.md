@@ -22,6 +22,7 @@ Puedo comprender el porqué las empresas tratan de poner nombres standard a depa
 
 
 (1) La wikipedia acierta bastante con la definición, la verdad.
+
 (2) Me refiero a la primera acepción “Discurso cristiano u oración evangélica que predica el sacerdote ante los fieles para la enseñanza de la buena doctrina.”. La "buena doctrina", ya sabes.
 
 
