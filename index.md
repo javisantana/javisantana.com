@@ -22,6 +22,16 @@ layout: default2
   <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
 </div>
   <div>
+    <h2>en mi lista de correo<h2>
+    <ul class="home-post-list">
+      <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
+      <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a> </li>
+      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-la-espada">A la segunda todo sale bien: la espada de Damocles</a> </li>
+      <li><a href="https://javisantana.substack.com/p/a-la-segunda-siempre-sale-bien-el">A la segunda todo sale bien: el soporte técnico</a> </li>
+      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-la-recetita">A la segunda todo sale bien: la recetita</a> </li>
+      <li><a href="https://javisantana.substack.com/p/puede-chatgpt-trabajar-en-tinybird">Puede chatGPT trabajar en Tinybird</a> </li>
+      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-el-end">A la segunda todo sale bien</a> </li>
+    </ul>
     {% for post in site.posts limit:1000 %}
 
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
