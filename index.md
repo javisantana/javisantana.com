@@ -7,7 +7,7 @@ layout: default2
 <div id="english">
   <p>I'm Javi Santana and I spend my time developing software products. Let's get to the point:</p>
   <ul>
-    <li>Contact me at <b>jsantfer@gmail.com</b></li>
+    <li>Contact me at javi @ </li>
     <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a> and my <a href="/blog/">blog</a> (mostly spanish tho)</li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
   </ul>
@@ -22,7 +22,7 @@ layout: default2
   <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
 </div>
   <div>
-    <h2>en mi lista de correo<h2>
+    <h2>En mi lista de correo (<a href="https://javisantana.substack.com/">suscribete</a>)<h2>
     <ul class="home-post-list">
       <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
       <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a> </li>
