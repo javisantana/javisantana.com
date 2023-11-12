@@ -25,7 +25,7 @@ layout: default2
     <h2>En mi lista de correo (<a href="https://javisantana.substack.com/">suscríbete</a>)</h2>
     <ul class="home-post-list">
       <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
-      <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a> </li>.  
+      <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a></li>  
       <li><a href="https://javisantana.substack.com/p/puede-chatgpt-trabajar-en-tinybird">Puede chatGPT trabajar en Tinybird</a> </li>
     </ul>
     <h3>Temporada "a la segunda todo sale bien"</h3>

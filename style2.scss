@@ -97,7 +97,8 @@ h2 {
 }
 
 h3 {
-  font-size: var(--type-large);
+  margin: var(--space-medium) 0 var(--space-small) 0;
+  font-size: var(--type-medium);
   font-family: var(--font-sans);
 }
 
