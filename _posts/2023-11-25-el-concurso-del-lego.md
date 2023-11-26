@@ -39,7 +39,7 @@ Así que en el caso que nos atañe tenemos dos columnas, vamos a asumir que son 
 
 No tan rápido, en realidad nosotros somos más listos que eso, en la tabla había un timestamp, y en enunciado dice que son unos 1000 registros por segundo. Debería haber usado un timestamp de 64 bits, pero no lo hice (mal), pero en este caso, sabemos que hay 1000 valores seguidos iguales si los vamos colocando en la base de datos según nos los envían.
 
-Y si en vez almacenar el valor, almacenamos la diferencia con el valor anterior? Pues vamos a tener 1 uno, seguido de 999 ceros. No sé a ti, pero a mi me da que eso se puede guardar de una forma eficiente. Alguien ya se dio cuenta hace años he inventó algo llamado RLE compression, que permite reducir la cantidad de información cuando se repiten mucho los valores. En este caso, usé un algoritmo algo más moderno, LZ4. La historia de LZ4 es bastante increíble, os recomiendo este podcast.
+Y si en vez almacenar el valor, almacenamos la diferencia con el valor anterior? Pues vamos a tener 1 uno, seguido de 999 ceros. No sé a ti, pero a mi me da que eso se puede guardar de una forma eficiente. Alguien ya se dio cuenta hace años he inventó algo llamado RLE compression, que permite reducir la cantidad de información cuando se repiten mucho los valores. En este caso, usé un algoritmo algo más moderno, LZ4. La historia de LZ4 es bastante increíble, os recomiendo [este podcast](https://corecursive.com/data-compression-yann-collet/?utm_medium=email&_hsmi=78227817&_hsenc=p2ANqtz--OAM-PcYW8HtYJPtAYaGOimN7Dfxr5fOAOfsBWM6-3rYd0Ni3Ki_MYUOSkaZEatcU3CNdUSEgSJGMAJBTnMPU7Wz1eow&utm_content=78227817&utm_source=hs_email).
 
 Echando cuentas, si guardamos 1 uno y 999 ceros, repetido 60 segundos * 60 minutos * 24 horas son básicamente 1kb que es tamaño que ocupa 1000 valores y otro más para decirle las veces que lo tiene que repetir. En la base de datos que usamos, Clickhouse, ocupa unos 22mb. Lógicamente hay ineficiencias porque el sistema de almacenamiento no está pensado para este caso de uso, ni LZ4 funciona exactamente como he dicho. Aún así, de 4gb a 22Mb podemos decir que hemos hecho un buen trabajo.
 
@@ -55,6 +55,6 @@ Con ese dato puedes intuir que la query está por debajo de 1 milisegundo casi c
 
 Solo 8 personas respondieron 1ms o menos. De hecho la query total costaba unos 0.8ms, ganó Claudia que puso 0.99 :) 
 
-Si has llegado hasta aquí es porque el tema te interesa. Hice un curso de unas 3 horas explicando en detalle todo esto, lo puedes ver por aquí.
+Si has llegado hasta aquí es porque el tema te interesa. Hice un curso de unas 3 horas explicando en detalle todo esto, lo puedes ver por [aquí](https://www.tinybird.co/courses/principles-of-realtime-analytics?utm_medium=email&_hsmi=78227817&_hsenc=p2ANqtz--LFRmoLsGaTY7jIMiRvNr6zFlMVMXRVdYILdAOlOzuoG6X9j0dBofLy0z2K4e4en8WGpN-SB5b2Z54tQBXK4DpqqFwHw&utm_content=78227817&utm_source=hs_email).
 
 Gracias por pasar por el stand de Tinybird, fue un placer hablar con vosotros.
