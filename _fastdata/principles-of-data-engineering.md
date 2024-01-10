@@ -5,15 +5,15 @@ name: Principles of data engineering
 tags: en, api, data
 ---
 
-We often think there is a right way to do things. Reality tells us time and again that the path is not as important as the experience you gain in doing things that way.
+We often think there is a right way to do things. Reality tells us again and again that the path is not as important as the experience you gain in doing things that way.
 
 You can choose your own way, follow an existing one, or a mix; it doesn't matter. The interesting part isn't what following a philosophy gives you, it's what it doesn't take away, which is time spent thinking your choice isn't the right one. It might not be, but you'll never know unless you delve deeper. Yes, insisting on your own way of doing things helps, whether it ends up working or is a failure.
 
-There are people who go about trying things superficially and end up doing things without really knowing why. It's not about never changing; it's about exploring far enough.
+There are people who [go about trying things superficially and end up doing things without really knowing why](/inspiration/2022-04-18-new-vs-improved.html). It's not about never changing; it's about exploring far enough.
 
 All this introduction is to say that my career in recent years has been focused on data work, always in what I like to call “high performance,” and I had never written down the principles I follow. It's worth spending a while explaining them to oneself, so here they are.
 
-Data must serve a purpose.
+*Data must serve a purpose*
 
 When you generate data, it should have a purpose, and only the data that will be useful for that purpose should be generated.
 
@@ -25,19 +25,19 @@ Whenever I start designing a data project, I start from the same place: what pro
 
 Distilling, condensing, and explaining data is an art, although most of the time a BI tool is used.
 
-Any analysis of the data must be quick.
+*Any analysis of the data must be quick*
 
 Humans operate with hearing, sight, and other systems that are practically instantaneous, so should anything be in which a machine, much faster than a human, is involved.
 
 I programmed video games and 3D for a while. In a game, you have to do all the calculations in 16ms, which is how long a frame of an animation should last for it to seem fluid. In fact, I started programming thanks to the source code of Quake (published in 1999), which, although it accessed a significant amount of information, maintained speed even on those machines (there are $20 microcontrollers more powerful than the best of that time). Allow me this digression, but Quake's code should be studied at university, and enough of so much “object-oriented programming.”
 
-Feedback must be instantaneous.
+*Feedback must be instantaneous*
 
 It's not just about the data being fast; it shouldn't take long from when they are generated to when they are used.
 
 An exam can be studied every day or the last day; guess which technique is the best for learning (which has nothing to do with passing an exam).
 
-Data about data is as important as the data itself.
+*Data about data is as important as the data itself*
 
 When things happen fast, you need to know what's happening, anticipate, detect when there's a problem, understand or simply stare at a graph moving for minutes out of sheer tribute to the number of orchestrated things that have to happen to see that number on the screen.
 
