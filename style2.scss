@@ -165,8 +165,18 @@ ol {
   list-style: inside decimal;
   padding-left: 0.0em;
   
-  li {
+   li {
     margin-bottom: .75rem;
+    color: var(--color-font);
+    font-size: var(--type-medium);
+    line-height: 1.5em;
+    p {
+      font-size: 100%;
+    } 
+    li {
+      font-size: 100%;
+      line-height: 1.7;
+    }
   }
   
   ul,
