@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: post2
 published: true
 ---
 
 Eres un pinpin y te pones a desarrollar software (no necesariamente en este orden), la cosa parece
 que mola, que no hay que doblar mucho el lomo y es fácil hacer dinero. Te gusta un sector, echas
 un ojo al software que trata de solucionar la vida de la gente y, como buen ignorante que eres, las
-primeras frases que salen de tu boca son "JAJAJAJA parece software de los 90", "esto lo han hecho 4 becarios", "no tienen ni idea, son unos aficionados", "esto lo hacemos nosotros mejor con la punta del pijo". Nota importante: yo he sido el primero en estar en esa situación, así empecé [agroguía](http://agroguia.es), de hecho debes estar ahí en algún momento, tienes que ser un veinteañero.
+primeras frases que salen de tu boca son "JAJAJAJA parece software de los 90", "esto lo han hecho 4 becarios", "no tienen ni idea, son unos aficionados", "esto lo hacemos nosotros mejor con una mano atada a la espalda". Nota importante: yo he sido el primero en estar en esa situación, así empecé [agroguía](http://agroguia.es), de hecho debes estar ahí en algún momento, tienes que ser un veinteañero.
 
 Así que manos a la obra, creas tu proyecto en node.js, TDD, deployment automático, últimas técnicas
 de desarrollo, el recopón y toda la corporación bendita, después de 2 meses tu software está más o
@@ -20,14 +20,13 @@ alguna empresa.
 Un día alguien se te acerca, un tío que tiene una empresa cargada de millones, que sabe lo que se
 hace, joder, que es el puto amo, ve tu software y te plantea: "yo te pagaría XXXX€ por esto si tuviese estas pequeñas
 modificaciones". Ese XXXX es 100X de lo que estás cobrando al mes a tus usuarios del SaaS. Llamas a
-tus socios, lo celebras y sin saberlo estás dentro del mundo llamado "enterprise", pero aún no lo
-sabes.
+tus socios, lo celebras y sin saberlo estás dentro del mundo llamado "enterprise", pero aún no eres consciente.
 
 Te comes toda la mierda que el cliente quiere meter en tu producto, llegan otros clientes como ese y
 rápidamente te das cuenta (bueno, seguramente te lleve meses) que puedes cobrar 100X por lo mismo con mucho menos esfuerzo si empiezas a vender a empresas. Ahora sí, ya sabes que estás en el mundo enterprise, pero aún no sabes cuanta vaselina vas a tener que comprar.
 
 Y aquí es cuando empieza la cosa a ponerse seria, empiezas a hablar con empresas gordas gordas, que
-tienen gallina de verdad y les dices que tu software es la requetepolla. Entonces pasas por
+tienen gallina de verdad y les dices que tu software es "best in class". Entonces pasas por
 diferentes encorbatados y llegas al momento en el que de verdad están interesados. Te mandan la
 lista de requisitos, la abres pensando que eres el puto amo y entonces es cuando abres el tarro de
 vaselina.
@@ -83,7 +82,7 @@ tener una lista de requisitos en tu software de los que no teías ni idea. Te de
 En resumen, la aplicación de node que parecía simple y ágil ahora tiene una serie de limitaciones,
 añadidos de clientes, vaya, se ha hecho mayor y ahora miras a esas empresillas que empiezan
 con una sonrisa (pero por si acaso no dejas de mirarlas), con más pasta en el bolsillo y con suerte
-habrás dejado de ir a la oficina en bicicleta e irás en un coche como dios manda. Es posible que
+habrás dejado de ir a la oficina en bicicleta e irás en un coche como debe ser. Es posible que
 seas también menos feliz, pero no sabrás si es la edad o tu software enterprise.
 
 ![como debe ser](/blog_images/porsche.jpg)
