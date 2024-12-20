@@ -23,84 +23,10 @@ layout: base_data
   </div>
   -->
 
-  <div id="subscribe-form" class="entry space" style="text-align: center; margin-top: 5em;">
-    <h2>Subscribe to get updates</h2>
-    <form id="subscribe-form-inner" onsubmit="handleSubscribe(event)" style="margin: 2em 0; display: flex; flex-direction: column; align-items: center; gap: 1em;">
-      <input 
-        type="email" 
-        id="email" 
-        placeholder="Enter your email"
-        style="padding: 8px 12px; font-size: 16px; width: 300px;"
-        required
-      >
-      <textarea
-        id="reason"
-        placeholder="What interests you about this content? (optional)" 
-        style="padding: 8px 12px; font-size: 13px; width: 300px; height: 60px; resize: vertical;"
-      ></textarea>
-      <button 
-        type="submit"
-        style="padding: 8px 16px; font-size: 16px; background: #ff9f71; border: none; color: #1a1a1a; cursor: pointer; width: 300px;"
-      >
-        Subscribe
-      </button>
-    </form>
-    <div id="subscribe-message" style="display: none; margin-top: 1em;"></div>
+  <div style="text-align: center;margin-top: 4em;">
+    <iframe src="https://failingwithdata.substack.com/embed" width="480" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
   </div>
-
-  <script>
-    async function handleSubscribe(e) {
-      e.preventDefault();
-      
-      const emailInput = document.getElementById('email');
-      const reasonInput = document.getElementById('reason');
-      const messageDiv = document.getElementById('subscribe-message');
-      const email = emailInput.value.trim();
-      const reason = reasonInput.value.trim();
-
-      // Basic email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        messageDiv.style.display = 'block';
-        messageDiv.style.color = '#ff4444';
-        messageDiv.textContent = 'Please enter a valid email address';
-        return;
-      }
-
-      try {
-        const response = await fetch('https://api.tinybird.co/v0/events?name=subscriptions', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer p.eyJ1IjogIjM5ZjBiNjdiLThjODQtNDU2Zi1iZTdmLWQ4MDhmMzhjN2YxMCIsICJpZCI6ICJiOTZlZDAyMi0wYmY2LTRhNTktYjZkYi05YzJhOWMyZGJiYTUiLCAiaG9zdCI6ICJldV9zaGFyZWQifQ.zmMJvSsUPvSZ5LBezK7cTc2A6TXBsg701nyXVprtWBk',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            reason: reason,
-            timestamp: new Date().toISOString(),
-            source: window.location.href,
-            unsubscribe: 0
-          })
-        });
-
-        if (response.ok) {
-          messageDiv.style.display = 'block';
-          messageDiv.style.color = '#4CAF50';
-          messageDiv.textContent = "Thanks for subscribing, you'll get an email each time I publish";
-          emailInput.value = '';
-          reasonInput.value = '';
-          document.getElementById('subscribe-form-inner').style.display = 'none';
-        } else {
-          throw new Error('Subscription failed');
-        }
-      } catch (error) {
-        messageDiv.style.display = 'block';
-        messageDiv.style.color = '#ff4444';
-        messageDiv.textContent = 'Something went wrong. Please try again later.';
-      }
-    }
-  </script>
-
+  </div>
 
   <div class="entry more close"><a href="/">≗</a> </div>
 </div>
