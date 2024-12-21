@@ -7,6 +7,6 @@ layout: data
 
 David Cramer, founder of sentry, talking about hiring. 
 
-I've seen and done this several times, even knowing i needed to do something different I ended up doing right (average) thing.
+I've seen and done this several times, even knowing I needed to do something different I ended up doing the "right" (average) thing, I followed the fucking recipe.
 
 it's always better to trust your gut, even it's not the best solution because you will be pushing and working hard for it. Most of times that's the right thing
