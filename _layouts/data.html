@@ -3,7 +3,7 @@ layout: base_data
 ---
 <div class="container">
   <div class="entry">
-    <h1> <a href="/">≗</a> {{page.title}} — <span><a href="https://twitter.com/javisantana">@javisantana</a></span></h1>
+    <h1> <a href="/">≗</a> {{page.title}} <span id="pageviews" style="color: #999; font-size: 0.5em; font-weight: normal;"></span> — <span><a href="https://twitter.com/javisantana">@javisantana</a></span></h1>
     {{page.content}}
   </div>
 
@@ -29,6 +29,19 @@ layout: base_data
   </div>
 
   <div class="entry more close"><a href="/">≗</a> </div>
+
+  <script>
+    const currentPath = window.location.pathname;
+    const apiUrl = `https://api.europe-west2.gcp.tinybird.co/v0/pipes/url_visits.json?path=${encodeURIComponent(currentPath)}&limit=100&token=p.eyJ1IjogIjhiNDNmMmZiLTA4N2YtNDc3Ny1hNWU2LTA3MmY3OGQzMzY0NiIsICJpZCI6ICI3ZWMwYmY5Yy0wZDc2LTQ5MmEtOGNiMC03ZTE5ZWRmZGMwMTIiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.qRnN2JjpFRx5mU9mLWS43yn0qGMHNaYr9WturqwF9tU`;
+    
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const visits = data.data[0]?.visits || 0;
+        document.getElementById('pageviews').textContent = `[${visits}]`;
+      })
+      .catch(error => console.error('Error fetching pageviews:', error));
+  </script>
 </div>
 
 
