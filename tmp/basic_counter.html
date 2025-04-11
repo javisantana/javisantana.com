@@ -1,10 +1,10 @@
 <!doctype html><script>
-  const u=new URL(location),k="p.eyJ1IjogIjQyODg1NWFlLTYxMTAtNGI3ZC1iZjNkLWNlMzQ5Ym  U0MzU5NiIsICJpZCI6ICI4MjRiOGYxNC02ZWNhLTRmY2YtOWM4Ny0zMzdjNDU5MjhhNTYiLCAiaG9zdCI  6ICJnY3AtZXVyb3BlLXdlc3QyIn0.JdNZOvPKyzfdw7Y8tTiXAjHgqbZktDmoG5EMnlKDz00"
+  const u=new URL(location),k="p.eyJ1IjogIjQyODg1NWFlLTYxMTAtNGI3ZC1iZjNkLWNlMzQ5YmU0MzU5NiIsICJpZCI6ICI4MjRiOGYxNC02ZWNhLTRmY2YtOWM4Ny0zMzdjNDU5MjhhNTYiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.JdNZOvPKyzfdw7Y8tTiXAjHgqbZktDmoG5EMnlKDz00"
   fetch('https://api.europe-west2.gcp.tinybird.co/v0/events?name=events',{
     method:'POST',
     headers:{Authorization:'Bearer '+k},
     body:JSON.stringify({ts:Date.now(),path:location.pathname})
   })
 
-fetch('https://api.europe-west2.gcp.tinybird.co/v0/pipes/count.json?token=' + k).  then(r=>r.json()).then(c => document.body.innerHTML = `<h1 style="display:grid;pl  ace-items:center;height:40vh;font-size:200px">${c.data[0].views}</h1><a style="di  splay:grid;place-items:center;"href='https://tinybird.co/'>Made with Tinybird</a>  `)
+fetch('https://api.europe-west2.gcp.tinybird.co/v0/pipes/count.json?token=' + k).  then(r=>r.json()).then(c => document.body.innerHTML = `<h1 style="display:grid;place-items:center;height:40vh;font-size:200px">${c.data[0].views}</h1><a style="display:grid;place-items:center;"href='https://tinybird.co/'>Made with Tinybird</a>  `)
 </script>
