@@ -1,5 +1,5 @@
 ---
-layout: post2
+layout: data
 published: true
 title: The Jira moment
 ---
@@ -40,7 +40,7 @@ De hecho, como el tiempo es limitado hubo alguien que pensó en que alguien debe
 
 ## La solución
 
-No hay solución, sobretodo si vas a muerte y no tienes tiempo de hacer tareas de mantenimiento. A
+No hay solución, sobre todo si vas a muerte y no tienes tiempo de hacer tareas de mantenimiento. A
 quién le gusta revisar los tickets, ver si las features planteadas tienen sentido? Lo que NO es la
 solución es buscar una herramienta que solucione un problema de base, está bien buscar una
 herramienta que te ayude mapear tu proceso a lo digital, pero esa herramienta no va a solucionar un
