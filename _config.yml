@@ -4,11 +4,19 @@ markdown: kramdown
 name: javisantana.com
 description: Pixels are the humble bricks with which one can build cathedrals
 url: http://javisantana.com
-plugins: [jekyll-paginate]
 
+# Modern Jekyll plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination settings
 paginate: 5
 paginate_path: "/blog/page:num/"
 
+# Prose.io configuration
 prose:
   metadata:
     _posts:
@@ -17,37 +25,61 @@ prose:
           element: "hidden"
           value: "blog3"
 
+# Sass configuration
 sass:
-  style:            :compressed
+  style: :compressed
 
+# Default layouts
 defaults:
   -
     scope:
-      path:         ""
-      type:         "pages"
+      path: ""
+      type: "pages"
     values:
-      layout:       "page"
+      layout: "page"
   -
     scope:
-      path:         "studio"
-      type:         "pages"
+      path: "studio"
+      type: "pages"
     values:
-      layout:       "page"
+      layout: "page"
   -
     scope:
-      path:         "micro-book-template"
-      type:         "pages"
+      path: "micro-book-template"
+      type: "pages"
     values:
-      layout:       "page"
+      layout: "page"
   -
     scope:
-      path:         ""
-      type:         "posts"
+      path: ""
+      type: "posts"
     values:
-      layout:       "post"
+      layout: "post"
 
+# Collections
 collections:
-    inspiration:
-        output: true
-    fastdata:
-        output: true
+  inspiration:
+    output: true
+  fastdata:
+    output: true
+
+# SEO and feed settings
+author:
+  name: "Javi Santana"
+  email: "javisantana@gmail.com"
+  bio: "Data Engineer and Developer"
+  location: "Madrid, Spain"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/javisantana"
+
+# Feed settings
+feed:
+  path: feed.xml
+  limit: 10
+
+# Sitemap settings
+sitemap:
+  changefreq: weekly
+  priority: 0.5
