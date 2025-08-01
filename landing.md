@@ -28,7 +28,7 @@ layout: base_data
         {% if forloop.index < 40 %}
         <div class="entry " id="{{post.slug}}">
         {% if post.title %} 
-        <p style="margin: 0 0 0 1em;font-size: 80%">• <a style="background-color: transparent; color: white;" href="#{{ post.slug }}">{{post.title}}</a></p>
+        <p style="margin: 0 0 0 2.5em;font-size: 80%">• <a style="background-color: transparent; color: white;" href="#{{ post.slug }}">{{post.title}}</a></p>
         {% endif %}
         </div>
         {% endif %}
