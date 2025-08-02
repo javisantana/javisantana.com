@@ -9,7 +9,7 @@ layout: base_data
   <strong>Who is Javi Santana</strong><br/>
   Hello, you are landing here from a social network, this is the 101 about me:<br/>
    • Tinybird co-founder<br/>
-   • Tech person, builder working at the intersection of tech and data. My mother language is C++, was addopted by Python<br/>
+   • Tech person, builder working at the intersection of tech and data. My mother language is C++, I was later addopted by Python<br/>
    • I write about technical stuff, startups and low quality philoshopy (I'm getting older and that's what you do)<br/>
   </p>
 
@@ -28,7 +28,7 @@ layout: base_data
         {% if forloop.index < 40 %}
         <div class="entry " id="{{post.slug}}">
         {% if post.title %} 
-        <p style="margin: 0 0 0 5%;font-size: 100%">• <a style="background-color: transparent; color: white;" href="#{{ post.slug }}">{{post.title}}</a></p>
+        <p style="margin: 0 0 0 5%;font-size: 100%">• <a style="background-color: transparent; color: white;" href="{{ post.url}}">{{post.title}}</a></p>
         {% endif %}
         </div>
         {% endif %}
