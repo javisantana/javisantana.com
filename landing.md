@@ -8,8 +8,8 @@ layout: base_data
   <p style="margin: 2em;font-size: 100%">
   <strong>Who is Javi Santana</strong><br/>
   Hello, you are landing here from a social network, this is the 101 about me:<br/>
-   • Tinybird co-founder<br/>
-   • Tech person, builder working at the intersection of tech and data. My mother language is C++, I was later addopted by Python<br/>
+   • <a href="https://www.tinybird.co/">Tinybird</a> co-founder<br/>
+   • Tech person, builder working at the intersection of tech and data. My mother language is C++, I was later adopted by Python<br/>
    • I write about technical stuff, startups and low quality philoshopy (I'm getting older and that's what you do)<br/>
   </p>
 
