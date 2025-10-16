@@ -77,7 +77,6 @@ function getCookie(name) {
     return null;
 }
 
-tracker('p.eyJ1IjogIjI0OTA1NjBmLWJkYTEtNDE0OC1iZmViLTNmYWEzODMzZGEzMyIsICJpZCI6ICI3ZTc1ZTI1NC02MjJkLTRiMTctYjE1MC02NjVkMmUyYjZkZjUifQ.IzKCxRueVOJij1nZtD5GNyF1Cn5cqQx9TpaerqrivKA', 'main', '_tracker', 'https://api.tinybird.co')
 _tracker({'event': 'pageload', 'referrer': document.referrer})
 
 window.addEventListener('click', function (e) {
