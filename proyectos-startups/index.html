@@ -129,6 +129,31 @@
             content: "•";
         }
 
+        blockquote {
+            background: #f8f8f8;
+            border-left: 3px solid #000;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        blockquote ul {
+            margin: 0;
+        }
+
+        blockquote li {
+            font-size: 0.85rem;
+            color: #333;
+            margin-bottom: 0.4rem;
+        }
+
+        blockquote li::before {
+            content: "•";
+            color: #666;
+        }
+
         footer {
             margin-top: 4rem;
             color: #ccc;
@@ -284,12 +309,11 @@
             <li>Solo hay un documento de trabajo. Más sobre esto abajo.</li>
             <li>Hay un líder, tiene que haber alguien empujando.</li>
         </ul>
-        <p>En realidad solo</p>
         <div class="divider"></div>
 
         <div class="section">
             <p class="label">Quién lidera y cómo lidera</p>
-            <p class="header">Alguien tiene que empujar.</p>
+            <p class="header">Nadie va a venir a empujar por ti</p>
         </div>
 
         <p>Tú eres el lider. Tú marcas el paso en cada reunión, decides que hacer cuando hay dudas, recuerdas todos los días donde vamos y donde estamos, eres el primero en entrar a la reunión diaria, el que prepara el documento, el que dice qué se va a hacer cada semana, el que aprieta o suelta en función de como va el equipo. Decide quien está y quien no está. Te va a tocar meter y sacar gente de ese equipo, así que tiene que tener cierta mano.</p>
@@ -313,12 +337,16 @@
             <li>Logística: quién y cómo</li>
             <li>Un worklog donde todos los días todo el mundo pone qué ha hecho y que va a hacer. Suena a fiscalizar y efectivamente, mantener a la gente “accountable” requiere un esfuerzo y es una pesadilla, pero hasta los deportistas de élite, con la mejor fuerza de voluntad del mundo necesitan a alguien que les de la brasa.</li>
             <li>Principios a nivel técnicos/de producto/de como trabajar, esto es, cosas que valores por encima de otras cosas y que te ayudan a tomar decisiones. Por ejemplo, esto fueron los principios de uno de los proyectos</li>
-            <li>Local experience first, UI second</li>
-            <li>We leverage LLMs everywhere: suggest schema, suggest migrations, suggest SQL, cursor context, tests generation, generate fixtures, [re]generate tests, fix tests, add quality tests, generate everything</li>
-            <li>Development speed is the priority. If there is a workaround, we take it.</li>
-            <li>UI will work more like the CLI (we deploy stuff instead of changing it right away)</li>
-            <li>Let's forget about git integrations for now. That does not mean we can't integrate deep (for example, pushing from the ui to the repo)</li>
         </ul>
+        <blockquote>
+            <ul>
+                <li>Local experience first, UI second</li>
+                <li>We leverage LLMs everywhere: suggest schema, suggest migrations, suggest SQL, cursor context, tests generation, generate fixtures, [re]generate tests, fix tests, add quality tests, generate everything</li>
+                <li>Development speed is the priority. If there is a workaround, we take it.</li>
+                <li>UI will work more like the CLI (we deploy stuff instead of changing it right away)</li>
+                <li>Let's forget about git integrations for now. That does not mean we can't integrate deep (for example, pushing from the ui to the repo)</li>
+            </ul>
+        </blockquote>
         <p>Otras cosas que puede tener:</p>
         <ul>
             <li>Decisiones técnicas</li>
