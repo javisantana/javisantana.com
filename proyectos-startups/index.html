@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La guía definitiva de gestión de proyectos técnicos en startup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 580px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 3.5rem;
+        }
+
+        .section {
+            margin-bottom: 1rem;
+        }
+
+        .label {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: -0.01em;
+            margin-bottom: 0;
+        }
+
+        .header {
+            font-size: 1.1rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.5;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        li {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ccc;
+        }
+
+        .quote {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+
+        .divider {
+            width: 40px;
+            height: 2px;
+            background: #000;
+            margin: 2.5rem 0;
+        }
+
+        .principles {
+            background: #f5f5f5;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .principles li {
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        .principles li::before {
+            content: "•";
+        }
+
+        footer {
+            margin-top: 4rem;
+            color: #ccc;
+        }
+
+        .header-wrapper {
+            position: relative;
+            padding: 4rem 0 3rem;
+            margin-bottom: 2rem;
+        }
+
+        #chaos-canvas {
+            position: absolute;
+            top: 0;
+            left: -6rem;
+            right: -6rem;
+            width: calc(100% + 12rem);
+            height: 100%;
+            background: transparent;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .header-wrapper h1 {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px rgba(255,255,255,0.5);
+        }
+
+        .header-wrapper .subtitle {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 3rem 1.25rem 4rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .header {
+                font-size: 1rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-wrapper">
+            <canvas id="chaos-canvas"></canvas>
+            <h1>La guía definitiva de gestión de proyectos técnicos en startup</h1>
+            <p class="subtitle">Para gente que odia la gestión de proyectos</p>
+        </div>
+
+        <div class="section">
+            <p class="label">De qué va esto</p>
+            <p class="header">Nadie en su sano jucio quiere ser project manager pero aquí estamos</p>
+        </div>
+
+        <p>Nadie en su sano juicio le puede gustar la gestión de proyectos. Si lo haces es porque es la herramienta para conseguir algo, dudo que un humano quiera dedicar su vida a la parte aburrida del trabjo. Dicho esto, mis respetos a toda esa gente, como veis, yo no me dedico a esto profesionalmente, así que no tengo que hacer ningun amigo.</p>
+        <p>Como me ha tocado hacer esto durante toda mi vida laboral y veo todos los santos días a gente que no tiene la más remota idea de como gestionar un proyecto, por pequeño que sea, voy a soltarte un rollo importantísimo con algunas cosas básicas de como llevar proyectos.</p>
+        <p>Esta pequeña guía está pensada para startup tecnológica, pero los principios aplican a cualquier cosa. Y aplican porque el 99% de un proyecto es la gente y la gente siempre es igual (de pesada, es tontería no soltarlo en la intro directamente).</p>
+        <p>Por si acaso tu capacidad de concentración no te da para leerte 7 secciones de 3 párrafos cada una, te dejo el resumen en una frase: tu proyecto sale si la pones a la gente a funcionar. El resto da más o menos igual.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Las dos fases de un producto</p>
+            <p class="header">No todos los procesos caben en las mismas empresas</p>
+        </div>
+
+        <p>Los productos pasan por diferentes fases y no tiene sentido tener el mismo proceso. Por mucho que te empeñes en usar SCRUM/Kanban/la tontería de Spotify o la cosa de moda del momento tienes que adaptarla a tu empresa, tu presupuesto, el momento de tu producto y sobre todo, tu gente.</p>
+        <p>Por eso cuando lees que Google o similar tienen un sistema, seguramente no tiene sentido aplicarlo para tu empresa de 6 fulanos en Boadilla. La parte de leer, comprender lo leído, analizarlo y luego razonar sobre si tiene sentido en tu contexto se ve que la quitaron de la carrera de informática (o puede que de secundaria) en algún momento de este siglo.</p>
+        <p>Así que aplica el cuento para este texto, estos son procesos que a mi me han funcionado, pero puede que a ti no, así que como te digo, lee, analiza y usa lo que te sirva.</p>
+        <p>Al tema. Las dos fases que diferencio en el desarrollo de un producto en una startup son <strong>preproducción</strong>, que va desde que tiras la primera línea hasta que tienes <strong>clientes</strong> en producción y <strong>post-producción</strong>, que es cuando los clientes ya se empiezan a quejar y no sabes muy bien como organizar el trabajo.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Pre-producción</p>
+            <p class="header">Si no tienes clientes, no tienes producto</p>
+        </div>
+
+        <p>El único objetivo es poner tu producto delante del cliente, así que es el único foco que tienes que tener.</p>
+        <p>La pregunta diaria es: hay algún cliente probando esto? si la respuesta es no, eso es lo único que tiene que importar, el resto es ornamento, fuegos de artificio, champán para desayunar.</p>
+        <p>Esto suena fácil, pero rápidamente te encuentras a dos desarrolladores discutiendo sobre qué framework de testing usar o si “tabs vs spaces”. En ese momento seguramente tienes que estar pensando en poner order (y pensar si has contratado bien) pero es la patada en la boca que necesitas para saber que tienes que tomar decisiones y poner a la gente a mirar al mismo sitio.</p>
+        <p>Bueno, mi receta para estos proyectos es la siguiente:</p>
+        <ul>
+            <li>Monta un equipo pequeño, 5-6 personas máximo y aislarlo</li>
+            <li>Marca un objetivo de lo que quieres que el cliente use</li>
+            <li>Pon una fecha agresiva</li>
+            <li>Monta un plan semanal</li>
+            <li>Trackea todos los santos días, empuja cada detalle, modifica el plan</li>
+        </ul>
+        <p>Facilímismo. No hay mucho misterio, da igual que montes el equipo de cero o sea dentro de una empresa ya establecida.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Las reglas básicas</p>
+            <p class="header">Qué es lo que quieres hacer?</p>
+        </div>
+
+        <p>La primera regla es que tienes que tener claro qué quieres hacer. Esto no quiere decir que tengas claro el producto que quieres tener, si no el problema que quieres solucionar. El producto coge forma por el camino.</p>
+        <p>Estás pensando ahora mismo “este es gilipollas, he venido a leer un artículo para que este me diga que tengo que saber qué hacer”. Bien, la mayoría de gente no tiene claro exactamente qué quiere hacer, tiene una idea de lo que cree que quiere hacer.</p>
+        <p>El otro tema es, puede que tengas tu idea clarísima, pero está en tu cabeza, ahora tienes que sacarla fuera. No eres ese genio que tienes ideas increíbles y necesitas dar un aire místico ocultando parte de ellas para darte el pisto. No seas ese gilipollas, pon encima de la mesa todo lo que tengas.</p>
+        <p>La segunda regla es que tienes que tener el mínimo número de cosas y quitar el máximo número de tonterías. Te tiene que sobrar todo, como cuando no quieres pagar los 40€ para llevar maleta en Ryanair.</p>
+        <p>Si no tienes clara la regla número 1, no pierdas el tiempo en montar un equipo vas a tirar tu dinero y el tiempo de mucha gente.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Qué gente necesitas?</p>
+            <p class="header">La gente es lo peor</p>
+        </div>
+
+        <p>La gente es lo peor. Cualquier que haya gestionado personas en su vida lo sabe. Seguramente por eso es la clave de todo. Poner a la gente a funcionar juntos, entender las dinámicas, lo que les motiva y todo ese tinglado de las emociones es horrible porque no se puede medir, no se puede hacer un proceso y no son matemáticas.</p>
+        <p>La gente que esté en ese equipo tiene que ser poca y muy navajeros, les tiene que importar poco guarrear, no seguir las normas. Tienen que estar pensando en poner en producción todo el día. Que les queme. No importa si son rápidos o lentos, tienen que tener claro lo que hacer e ir allí.</p>
+        <p>Hay que saber elegir bien la combinación de gente que pones. No vale coger a los más rápidos o las más listas, tiene que haber un tejido entre esas personas. Es el grupo el que hace que el proyecto salga, así que hay que priorizar el conjunto y no la lista de individuos. Tampoco vayas a pensar que pones a un paquete en un equipazo y se va a convertir en el nuevo John Carmack. Así que si vas a contratar, busca a quien complemente, no una lista de “features”. Aquí la intuición, por mucho que duela a toda la industria del recruitment, es clave.</p>
+        <p>Tienes que desarrollar esa intuición, la gente no son matemáticas, ni tampoco son “frontend” y “backend”, la gente es tan buena como los dispuesta que esté a comerse el marrón de otro de buena gana.</p>
+        <p>Y cómo se desarrolla esa intuición? fácil, haciendo muchos proyectos con muchos equipos, llevándolos a producción, trabajando con mucha gente, hablando con ellos, al final identificas patrones con relativa facilidad. Al principio tendrás que cargarla y arreglarlo por el camino, luego también, nunca se hace bien esto.</p>
+        <p>Dicho esto, en general, cualquier cosa que hagas es menos importante que <a href="https://x.com/tommytrxnh/status/1970143299496472954" target="_blank" rel="noopener">esto</a></p>
+        <p>“YOU CANNOT COMPETE WITH SOMEONE WHO IS HAVING FUN”</p>
+        <p>A menudo se nos olvida que la gente que mejor funciona es la motivada y la gente está motivada si está pasandoselo bien (que no tiene que ver con hacer una cosa u otra, he visto a gente hacer debugging de cosas horribles y estar pasándoselo bien)</p>
+        <p>Y no puedes fakear la motivación, es como el amor, se nota cuando pasa.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Establece unas fechas</p>
+            <p class="header">Un desarrollo sin fecha es un proyecto europeo</p>
+        </div>
+
+        <p>El día que se empieza el proyecto se sabe el día que se lanza. No digo que se termina, digo que se lanza, y esto implica que tienes que tener en mente que hay que lanzarlo, no solo programarlo</p>
+        <p>Se marca una fecha, lo que va a salir y de ahí hacia atrás, semanalmente, se colocan lo que se espera tener cada semana. OBVIAMENTE esto va a cambiar, pero tiene que haber buenas razones para hacerlo.</p>
+        <p>Cada semana el lider (ver “el lider”) se trabaja bien lo que hay que hacer la siguiente semana y se lo explica al equipo. Se discute, se cambia y se pone la gente manos a la obra. Lo que no se hace es llegar e improvisar, se prepara, se preve los problemas, se tira lo que claramente no funciona.</p>
+        <p>Se puede hacer más de una semana, pero me parece que es un buen compromiso de tiempo para no meterme muy en la mierda si la has liado</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Cuales son los rituales, aka “el proceso”</p>
+        </div>
+
+        <p>El proceso por el proceso no tiene sentido, el proceso en este caso es llevar a producción y para llevar a producción necesitas: descubrir, corregir, iterar, probar y vuelta a todo esto. Lo mismo que dicen todos los tratados agilistas pero esta vez no hablas más del proceso que del resultado.</p>
+        <p>El sistema que uso funciona así:</p>
+        <ul>
+            <li>Se habla todos los días. Se revisa lo que se ha hecho y lo que se va a hacer. Se eliminan dudas y bloqueos. Tu labor como gestor es salir de allí con la sensación de que a todo el mundo le parezca que tienes claro el qué y el cómo. La mayoría de veces tomas decisiones sin tener ni idea, pero da igual, lo importante es avanzar. <strong>Avanzas para descubrir.</strong> No significa que tengas al equipo engañado, significa que no hay más mínimo lugar a dudas que aquí no se para.</li>
+            <li>Los canales de comunicación son constantes y en tiempo real. Es más importante resolver una duda que tener foco.</li>
+            <li>Si hay posibilidad, estar en persona donde todo fluye mejor (que yo sé que eres muy fan del trabajo en remoto, pero es que venimos a trabajar)</li>
+            <li>Solo hay un documento de trabajo. Más sobre esto abajo.</li>
+            <li>Hay un líder, tiene que haber alguien empujando.</li>
+        </ul>
+        <p>En realidad solo</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Quién lidera y cómo lidera</p>
+            <p class="header">Alguien tiene que empujar.</p>
+        </div>
+
+        <p>Tú eres el lider. Tú marcas el paso en cada reunión, decides que hacer cuando hay dudas, recuerdas todos los días donde vamos y donde estamos, eres el primero en entrar a la reunión diaria, el que prepara el documento, el que dice qué se va a hacer cada semana, el que aprieta o suelta en función de como va el equipo. Decide quien está y quien no está. Te va a tocar meter y sacar gente de ese equipo, así que tiene que tener cierta mano.</p>
+        <p>Pero tiene que haber alguien, no vale el juego de “confiar en el proceso”. El proceso son los raíles pero tiene que haber alguien tirando.Solo una persona y si puede ser que tenga el respeto del resto, no vayas a pensar en poner un engineering manager standard. Y tiene que tener cierto respeto porque cuando vengan relativamente mal dadas a la gente se la sopla que seas “loquesea manager”, recuerda que estás trabajando con gente con criterio propio.</p>
+        <p>La otra cosa que tienes que hacer como lider es explicar qué es lo que quieres hacer, poner lo que tienes en la cabeza fuera. Ya sabemos que eres el rey del mambo y que tus ideas son las mejores. En tu cabeza todo suena espectacular, así que más vale que saques todo eso día tras día.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">El documento de trabajo</p>
+            <p class="header">Un documento. Solo uno.</p>
+        </div>
+
+        <p>Este documento es la biblia. No hay más sitios donde se trabaje, puede ser un google doc o lo que te de la real gana <strong>que sea colaborativo</strong>. Nada de issue trackers, no linear, no JIRA, no has venido a trackear, no has venido a jugar a ser una empresa que se puede permitir invertir tiempo en gestionar, has venido a poner en producción.</p>
+        <p>Tiene que tener</p>
+        <ul>
+            <li>Qué se va a hacer</li>
+            <li>Que NO se va a hacer</li>
+            <li>Cómo lo vamos a hacer</li>
+            <li>Cómo medir que lo que hacemos está bien</li>
+            <li>Timeline <strong>con un deadline</strong> y deadlines intermedios</li>
+            <li>Logística: quién y cómo</li>
+            <li>Un worklog donde todos los días todo el mundo pone qué ha hecho y que va a hacer. Suena a fiscalizar y efectivamente, mantener a la gente “accountable” requiere un esfuerzo y es una pesadilla, pero hasta los deportistas de élite, con la mejor fuerza de voluntad del mundo necesitan a alguien que les de la brasa.</li>
+            <li>Principios a nivel técnicos/de producto/de como trabajar, esto es, cosas que valores por encima de otras cosas y que te ayudan a tomar decisiones. Por ejemplo, esto fueron los principios de uno de los proyectos</li>
+            <li>Local experience first, UI second</li>
+            <li>We leverage LLMs everywhere: suggest schema, suggest migrations, suggest SQL, cursor context, tests generation, generate fixtures, [re]generate tests, fix tests, add quality tests, generate everything</li>
+            <li>Development speed is the priority. If there is a workaround, we take it.</li>
+            <li>UI will work more like the CLI (we deploy stuff instead of changing it right away)</li>
+            <li>Let's forget about git integrations for now. That does not mean we can't integrate deep (for example, pushing from the ui to the repo)</li>
+        </ul>
+        <p>Otras cosas que puede tener:</p>
+        <ul>
+            <li>Decisiones técnicas</li>
+            <li>Documentación</li>
+            <li>Links a cosas importantes, contexto</li>
+        </ul>
+        <p>Personalmente uso un google doc, tiene tabs para separar cosas, es tiempo real, permite comentarios, cumple bien.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Los standard de calidad</p>
+            <p class="header">Lo que no persigues, no existe.</p>
+        </div>
+
+        <p>Lo que estableces como fundamental y persigues cada día, se queda. Lo que quieres que pase pero no persigues, se queda en amor de verano y buenas intenciones.</p>
+        <p>Si tu dices que tu software tiene que ser rápido o que los bugs se resuelven el mismo día que aparecen, lo repites mil veces, lo persigues todo el rato. Si no se hace, te vas al equipo y dices “sois unos buenos lebreles, no me hacéis ni puto caso” o la fórmula que tú tengas para echar la peta sin parecer un cabrón.</p>
+        <p>Esto pasa a nivel de proyecto y a nivel de empresa, lo que persigues durante un tiempo, se queda para siempre, así que ten claro lo que valoras y síguelo.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">El aceite</p>
+            <p class="header">Los roces hay que engrasarlos.</p>
+        </div>
+
+        <p>Hay momentos de rozamiento, en todos los equipos los hay, pero en estos, especialmente. Has elegido a esta gente porque son decididos (high agency que se dice ahora) y es normal que pasen cosas.</p>
+        <p>Tú eres el que engrasa eso, los roces no pueden quedarse ahí, o bien eres tú quien toma la decisión y todo el mundo se pone a funcionar o tratas de quitar la parte del ego (que es lo que jode todo) y racionalizar.</p>
+        <p>La regla aquí es que no dejes que un conflicto no se solucione. A veces se tarda, tienes que dejarlo madurar y volver, pero vas y lo puto arreglas.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">La mochila</p>
+        </div>
+
+        <p>Si este proyecto que tienes pensado está dentro de una empresa relativamente grande, con cierta inercia, con su pasado, sus formas, tienes que aislar a la gente del proyecto. Si crees que el corporate es incapaz de lanzar proyectos interesantes porque son malos es que no has trabajado en uno nunca, no los sacan porque hay un montón de moscardones tocandolos huevos, un montón de políticas y procesos que "hay que seguir".</p>
+        <p>Tú has venido aquí a romper el cristal de "rómpase solo en caso de emergencia", coger el martillo y huir con el botín. Tienes a un equipo que va a salvar al rehen en medio de la selva, van a dejar algún herido seguro, va a doler.</p>
+        <p>Esto significa que puede que te juegues tu puesto, bien porque salga mal y termines en un sótano siendo SCRUM master o porque quemes todos los puentes. Pero, joder, tú has venido a este mundo a dejar huella, no a ser un rule follower, no vayas a coger el camino aburrido.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Cómo medir si la cosa va bien?</p>
+            <p class="header">Olvídate de las métricas.</p>
+        </div>
+
+        <p>No busques un numerito, no hay una métrica que te diga si está bien o mal. Ni ahora, ni nunca (aunque parezca que sí). Los KPI se ponen para que los directivos cobren bonuses y puedas apretar a tus empleados, no porque sean útiles en esta fase.</p>
+        <p>Esta es la forma de medir: 1\) hay clientes? si la respuesta es “no” significa que vas mal.   2\) la gente que lo está usando te dice que les gusta? si es que si (y va a ser que si, nadie te dice que algo no le gusta), lo siguen usando? si la respuesta es no, te estaban mintiendo para quedar bien y tienes que entender como arreglarlo.</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Cuando termina esta fase ?</p>
+            <p class="header">Cuando no des abasto, cambia de modo.</p>
+        </div>
+
+        <p>En el momento en que estés en producción, tengas clientes, hayas iterado y empezado a tener suficiente número de problemas para que el equipo esté sobrepasado, entonces es cuando tienes que pasar al otro modo</p>
+        <div class="divider"></div>
+
+        <div class="section">
+            <p class="label">Fase de post producción</p>
+        </div>
+
+        <p>TBD</p>
+
+        <footer>—</footer>
+    </div>
+
+    <script>
+    (function() {
+        const canvas = document.getElementById('chaos-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * window.devicePixelRatio;
+            canvas.height = rect.height * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const W = () => canvas.getBoundingClientRect().width;
+        const H = () => canvas.getBoundingClientRect().height;
+
+        const colors = ['#000', '#222', '#333', '#444', '#555'];
+        
+        const gridSize = 30;
+        let gridPoints = [];
+        
+        function initGrid() {
+            gridPoints = [];
+            for (let x = 0; x <= W() + gridSize; x += gridSize) {
+                for (let y = 0; y <= H() + gridSize; y += gridSize) {
+                    gridPoints.push({ x, y, baseX: x, baseY: y, vx: 0, vy: 0 });
+                }
+            }
+        }
+        initGrid();
+        window.addEventListener('resize', initGrid);
+
+        const chains = [];
+        const urlParams = new URLSearchParams(window.location.search);
+        const chainCount = parseInt(urlParams.get('chains')) || 15;
+        const manhattanMode = true; //urlParams.get('manhattan') === '1';
+        
+        function generateChainConfigs(count) {
+            const configs = [];
+            for (let i = 0; i < count; i++) {
+                const t = i / Math.max(count - 1, 1);
+                const depth = Math.random();
+                const depthScale = 0.3 + depth * 0.7;
+                
+                configs.push({
+                    nodeCount: 3 + Math.floor(Math.random() * 5),
+                    yOffset: 0.1 + t * 0.8,
+                    yAmplitude: 0.05 + Math.random() * 0.15,
+                    nodeSize: (1 + Math.random() * 2) * depthScale,
+                    particleSize: (0.3 + Math.random() * 0.5) * depthScale,
+                    particleCount: Math.floor((5 + Math.random() * 12) * depthScale),
+                    speed: (0.004 + Math.random() * 0.006) * (0.7 + depth * 0.6),
+                    depth: depth,
+                    opacity: 0.4 + depth * 0.6
+                });
+            }
+            configs.sort((a, b) => a.depth - b.depth);
+            return configs;
+        }
+        
+        function snapToGrid(val, depth = 1) {
+            if (!manhattanMode) return val;
+            const gridForDepth = 10 + depth * 15;
+            return Math.round(val / gridForDepth) * gridForDepth;
+        }
+        
+        const chainConfigs = generateChainConfigs(chainCount);
+        
+        function initChains() {
+            chains.length = 0;
+            const margin = 30;
+            
+            chainConfigs.forEach((config, chainIdx) => {
+                const nodes = [];
+                const depth = config.depth;
+                const startX = snapToGrid(margin + Math.random() * 20, depth);
+                const endX = snapToGrid(W() - margin - Math.random() * 20, depth);
+                
+                for (let i = 0; i < config.nodeCount; i++) {
+                    const progress = i / (config.nodeCount - 1);
+                    const baseX = startX + (endX - startX) * progress;
+                    const baseY = H() * config.yOffset + Math.sin(i * 1.5 + chainIdx) * (H() * config.yAmplitude);
+                    
+                    nodes.push({
+                        x: snapToGrid(baseX, depth),
+                        y: snapToGrid(baseY, depth),
+                        radius: config.nodeSize,
+                        color: colors[(i + chainIdx) % colors.length],
+                        pulse: Math.random() * Math.PI * 2,
+                        depth: config.depth
+                    });
+                }
+                
+                chains.push({
+                    nodes: nodes,
+                    particles: [],
+                    config: config
+                });
+            });
+        }
+        initChains();
+        window.addEventListener('resize', initChains);
+
+        const getAllNodes = () => chains.flatMap(c => c.nodes);
+        const particles = [];
+
+        class FlowParticle {
+            constructor(chain, chainIndex) {
+                this.chain = chain;
+                this.chainIndex = chainIndex;
+                this.nodes = chain.nodes;
+                this.pathIndex = Math.floor(Math.random() * (this.nodes.length - 1));
+                this.t = Math.random();
+                this.speed = chain.config.speed + (Math.random() - 0.5) * 0.004;
+                this.offset = (Math.random() - 0.5) * 8;
+                this.color = colors[(this.pathIndex + chainIndex) % colors.length];
+                this.size = chain.config.particleSize * (0.7 + Math.random() * 0.6);
+            }
+
+            update() {
+                this.t += this.speed;
+                if (this.t >= 1) {
+                    this.t = 0;
+                    this.pathIndex = (this.pathIndex + 1) % (this.nodes.length - 1);
+                    this.color = colors[(this.pathIndex + this.chainIndex) % colors.length];
+                    const node = this.nodes[this.pathIndex + 1];
+                    if (node && Math.random() > 0.7) {
+                        for (let i = 0; i < 2; i++) {
+                            sparks.push(new Spark(node.x, node.y, this.color));
+                        }
+                    }
+                }
+            }
+
+            getPosition() {
+                const from = this.nodes[this.pathIndex];
+                const to = this.nodes[this.pathIndex + 1];
+                if (!from || !to) return { x: 0, y: 0 };
+                
+                const t = this.t;
+                let x, y;
+                
+                if (manhattanMode) {
+                    const midX = (from.x + to.x) / 2;
+                    if (t < 0.33) {
+                        const segT = t / 0.33;
+                        x = from.x + (midX - from.x) * segT;
+                        y = from.y;
+                    } else if (t < 0.66) {
+                        const segT = (t - 0.33) / 0.33;
+                        x = midX;
+                        y = from.y + (to.y - from.y) * segT;
+                    } else {
+                        const segT = (t - 0.66) / 0.34;
+                        x = midX + (to.x - midX) * segT;
+                        y = to.y;
+                    }
+                } else {
+                    const cx = (from.x + to.x) / 2;
+                    const cy = (from.y + to.y) / 2 - 15;
+                    
+                    const mt = 1 - t;
+                    x = mt * mt * from.x + 2 * mt * t * cx + t * t * to.x;
+                    y = mt * mt * from.y + 2 * mt * t * cy + t * t * to.y;
+                    
+                    const dx = to.x - from.x;
+                    const dy = to.y - from.y;
+                    const len = Math.sqrt(dx * dx + dy * dy);
+                    if (len > 0) {
+                        const nx = -dy / len;
+                        const ny = dx / len;
+                        x += nx * this.offset;
+                        y += ny * this.offset;
+                    }
+                }
+                
+                return { x, y };
+            }
+
+            draw() {
+                const pos = this.getPosition();
+                const depthOpacity = this.chain.config.opacity || 1;
+                
+                ctx.globalAlpha = 0.1 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, this.size * 10, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.2 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, this.size * 6, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.35 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, this.size * 3.5, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.6 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, this.size * 2, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = depthOpacity;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = '#000';
+                ctx.fill();
+                
+                ctx.globalAlpha = 1;
+                return pos;
+            }
+        }
+
+        const sparks = [];
+        
+        class Spark {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 1 + Math.random() * 2;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.life = 20 + Math.random() * 15;
+                this.maxLife = this.life;
+                this.length = 4 + Math.random() * 6;
+                this.color = color;
+            }
+            
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.vx *= 0.94;
+                this.vy *= 0.94;
+                this.life--;
+            }
+            
+            draw() {
+                const alpha = this.life / this.maxLife;
+                const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+                const len = this.length * (speed / 2);
+                
+                const nx = this.vx / (speed || 1);
+                const ny = this.vy / (speed || 1);
+                
+                ctx.globalAlpha = alpha * 0.15;
+                ctx.beginPath();
+                ctx.moveTo(this.x - nx * len, this.y - ny * len);
+                ctx.lineTo(this.x + nx * len * 0.3, this.y + ny * len * 0.3);
+                ctx.strokeStyle = this.color;
+                ctx.lineWidth = 6;
+                ctx.stroke();
+                
+                ctx.globalAlpha = alpha * 0.4;
+                ctx.beginPath();
+                ctx.moveTo(this.x - nx * len, this.y - ny * len);
+                ctx.lineTo(this.x + nx * len * 0.3, this.y + ny * len * 0.3);
+                ctx.strokeStyle = this.color;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                ctx.globalAlpha = alpha * 0.9;
+                ctx.beginPath();
+                ctx.moveTo(this.x - nx * len, this.y - ny * len);
+                ctx.lineTo(this.x + nx * len * 0.3, this.y + ny * len * 0.3);
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        function initParticles() {
+            particles.length = 0;
+            chains.forEach((chain, chainIndex) => {
+                for (let i = 0; i < chain.config.particleCount; i++) {
+                    const p = new FlowParticle(chain, chainIndex);
+                    particles.push(p);
+                    chain.particles.push(p);
+                }
+            });
+        }
+        initParticles();
+        window.addEventListener('resize', () => { initChains(); initParticles(); });
+
+        function warpGrid(attractors) {
+            const influence = 50;
+            const strength = 5;
+            
+            for (const point of gridPoints) {
+                let fx = 0, fy = 0;
+                
+                for (const attr of attractors) {
+                    const dx = attr.x - point.baseX;
+                    const dy = attr.y - point.baseY;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < influence && dist > 0) {
+                        const force = (1 - dist / influence) * strength;
+                        fx += (dx / dist) * force;
+                        fy += (dy / dist) * force;
+                    }
+                }
+                
+                point.vx += (fx - point.vx) * 0.008;
+                point.vy += (fy - point.vy) * 0.008;
+                point.x = point.baseX + point.vx;
+                point.y = point.baseY + point.vy;
+            }
+        }
+
+        function drawGrid() {
+            const cols = Math.ceil(W() / gridSize) + 1;
+            const rows = Math.ceil(H() / gridSize) + 1;
+            
+            ctx.strokeStyle = '#ddd';
+            ctx.lineWidth = 1;
+            
+            for (let i = 0; i < cols; i++) {
+                ctx.beginPath();
+                for (let j = 0; j < rows; j++) {
+                    const idx = i * rows + j;
+                    if (gridPoints[idx]) {
+                        if (j === 0) ctx.moveTo(gridPoints[idx].x, gridPoints[idx].y);
+                        else ctx.lineTo(gridPoints[idx].x, gridPoints[idx].y);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            for (let j = 0; j < rows; j++) {
+                ctx.beginPath();
+                for (let i = 0; i < cols; i++) {
+                    const idx = i * rows + j;
+                    if (gridPoints[idx]) {
+                        if (i === 0) ctx.moveTo(gridPoints[idx].x, gridPoints[idx].y);
+                        else ctx.lineTo(gridPoints[idx].x, gridPoints[idx].y);
+                    }
+                }
+                ctx.stroke();
+            }
+        }
+
+        function drawPaths() {
+            chains.forEach((chain, chainIdx) => {
+                const nodes = chain.nodes;
+                const sizeScale = chain.config.nodeSize / 4;
+                const depthOpacity = chain.config.opacity || 1;
+                
+                for (let i = 0; i < nodes.length - 1; i++) {
+                    const from = nodes[i];
+                    const to = nodes[i + 1];
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(from.x, from.y);
+                    
+                    if (manhattanMode) {
+                        const midX = (from.x + to.x) / 2;
+                        ctx.lineTo(midX, from.y);
+                        ctx.lineTo(midX, to.y);
+                        ctx.lineTo(to.x, to.y);
+                    } else {
+                        const cx = (from.x + to.x) / 2;
+                        const cy = (from.y + to.y) / 2 - 15;
+                        ctx.quadraticCurveTo(cx, cy, to.x, to.y);
+                    }
+                    
+                    ctx.strokeStyle = colors[(i + chainIdx) % colors.length];
+                    
+                    ctx.lineWidth = 16 * sizeScale;
+                    ctx.globalAlpha = 0.03 * depthOpacity;
+                    ctx.stroke();
+                    
+                    ctx.lineWidth = 10 * sizeScale;
+                    ctx.globalAlpha = 0.06 * depthOpacity;
+                    ctx.stroke();
+                    
+                    ctx.lineWidth = 5 * sizeScale;
+                    ctx.globalAlpha = 0.12 * depthOpacity;
+                    ctx.stroke();
+                    
+                    ctx.lineWidth = 2.5 * sizeScale;
+                    ctx.globalAlpha = 0.25 * depthOpacity;
+                    ctx.stroke();
+                    
+                    ctx.lineWidth = 1 * sizeScale;
+                    ctx.globalAlpha = 0.5 * depthOpacity;
+                    ctx.stroke();
+                    
+                    ctx.globalAlpha = 1;
+                }
+            });
+        }
+
+        function drawNodes(time) {
+            for (const node of getAllNodes()) {
+                node.pulse += 0.05;
+                const pulseScale = 1 + Math.sin(node.pulse) * 0.15;
+                const depthOpacity = 0.4 + (node.depth || 0.5) * 0.6;
+                
+                ctx.globalAlpha = 0.04 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 6 * pulseScale, 0, Math.PI * 2);
+                ctx.fillStyle = node.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.08 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 4 * pulseScale, 0, Math.PI * 2);
+                ctx.fillStyle = node.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.15 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 2.5 * pulseScale, 0, Math.PI * 2);
+                ctx.fillStyle = node.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.3 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 1.8 * pulseScale, 0, Math.PI * 2);
+                ctx.fillStyle = node.color;
+                ctx.fill();
+                
+                ctx.globalAlpha = 0.7 * depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 1.2, 0, Math.PI * 2);
+                ctx.strokeStyle = node.color;
+                ctx.lineWidth = node.radius * 0.4;
+                ctx.stroke();
+                
+                ctx.globalAlpha = depthOpacity;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius * 0.5, 0, Math.PI * 2);
+                ctx.fillStyle = '#000';
+                ctx.fill();
+            }
+            ctx.globalAlpha = 1;
+        }
+
+        let time = 0;
+        
+        function getCamera(t) {
+            const speed = 0.002;
+            return {
+                x: Math.sin(t * speed) * 30 + Math.sin(t * speed * 0.7) * 20,
+                y: Math.cos(t * speed * 0.8) * 22 + Math.cos(t * speed * 0.5) * 15,
+                zoom: 1 + Math.sin(t * speed * 0.6) * 0.12 + Math.sin(t * speed * 0.3) * 0.08
+            };
+        }
+        
+        function animate() {
+            time++;
+            const cam = getCamera(time);
+            
+            ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+            ctx.clearRect(0, 0, W(), H());
+            
+            const cx = W() / 2;
+            const cy = H() / 2;
+            ctx.setTransform(
+                window.devicePixelRatio * cam.zoom, 0, 0, 
+                window.devicePixelRatio * cam.zoom,
+                (cx * (1 - cam.zoom) + cam.x) * window.devicePixelRatio,
+                (cy * (1 - cam.zoom) + cam.y) * window.devicePixelRatio
+            );
+
+            if (Math.random() > 0.95 && chains.length > 0) {
+                const chain = chains[Math.floor(Math.random() * chains.length)];
+                const pathIdx = Math.floor(Math.random() * (chain.nodes.length - 1));
+                const from = chain.nodes[pathIdx];
+                const to = chain.nodes[pathIdx + 1];
+                if (from && to) {
+                    const t = Math.random();
+                    const x = from.x + (to.x - from.x) * t + (Math.random() - 0.5) * 20;
+                    const y = from.y + (to.y - from.y) * t + (Math.random() - 0.5) * 20;
+                    sparks.push(new Spark(x, y, colors[pathIdx % colors.length]));
+                }
+            }
+
+            const attractors = [...getAllNodes()];
+            const particlePositions = [];
+            
+            for (const p of particles) {
+                p.update();
+                const pos = p.getPosition();
+                particlePositions.push(pos);
+            }
+            
+            attractors.push(...particlePositions);
+            warpGrid(attractors);
+            
+            drawGrid();
+            drawPaths();
+            
+            for (let i = sparks.length - 1; i >= 0; i--) {
+                sparks[i].update();
+                sparks[i].draw();
+                if (sparks[i].life <= 0) {
+                    sparks.splice(i, 1);
+                }
+            }
+            
+            for (const p of particles) {
+                p.draw();
+            }
+            
+            drawNodes(time);
+            
+            ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+            const fadeWidth = 80;
+            
+            const leftGrad = ctx.createLinearGradient(0, 0, fadeWidth, 0);
+            leftGrad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            leftGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = leftGrad;
+            ctx.fillRect(0, 0, fadeWidth, H());
+            
+            const rightGrad = ctx.createLinearGradient(W() - fadeWidth, 0, W(), 0);
+            rightGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+            rightGrad.addColorStop(1, 'rgba(255, 255, 255, 1)');
+            ctx.fillStyle = rightGrad;
+            ctx.fillRect(W() - fadeWidth, 0, fadeWidth, H());
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    })();
+    </script>
+
+    <script src="tracking.js"></script>
+</body>
+</html>
