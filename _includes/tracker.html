@@ -1,23 +1,4 @@
 <script src="/assets/js/tracking.js"></script>
-<script>
-(function() {
-    const e = (name, data = {}) => {
-        navigator.sendBeacon('https://e.javisantana.com/e', JSON.stringify({
-            e: name,
-            u: location.pathname,
-            r: document.referrer,
-            w: innerWidth,
-            ...data
-        }));
-    };
-    e('v');
-    document.addEventListener('click', ev => {
-        const a = ev.target.closest('a');
-        if (a) e('c', { t: a.href });
-    });
-})();
-</script>
-
 <script data-host="https://api.tinybird.co" data-token="p.eyJ1IjogIjRmN2U1ODEyLWUzMTAtNDJkYS1iMmU0LWZjZmU4MzYyZmJmYiIsICJpZCI6ICJhNjU4NDFlZi01OGRlLTQyMzAtOGRhZS04MDVlNzAyMjcyY2YiLCAiaG9zdCI6ICJldV9zaGFyZWQifQ.mHu_nLgjeMFsLsbm3tatm434FjRQJYFHIJ2WY1yE4_s">
 
   (function(){
