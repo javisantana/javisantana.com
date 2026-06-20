@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javi Santana - El Hombre Que Toma Todo Demasiado En Serio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Press+Start+2P&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: #0a0a0a;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='28' font-size='28'>🤓</text></svg>"), auto;
+        }
+
+        /* Scrolling marquee banner */
+        .breaking-news {
+            background: linear-gradient(90deg, #ff0000, #ff6600, #ff0000);
+            color: white;
+            padding: 8px 0;
+            font-weight: bold;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+        }
+
+        .breaking-news span {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-200%); }
+        }
+
+        /* Hero section */
+        .hero {
+            margin-top: 30px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(255, 0, 100, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(0, 100, 255, 0.15) 0%, transparent 50%),
+                #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.03) 2px,
+                rgba(255,255,255,0.03) 4px
+            );
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(3rem, 8vw, 7rem);
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #ff6b6b, #ffa500, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            animation: pulse-glow 3s ease-in-out infinite;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #aaa;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero .subtitle span {
+            color: #ff6b6b;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+
+        .tagline-rotator {
+            font-size: 1.2rem;
+            color: #ffa500;
+            min-height: 2em;
+            font-weight: bold;
+        }
+
+        /* Stats counter section */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(180deg, #0a0a0a, #111);
+            border-top: 2px solid #222;
+            border-bottom: 2px solid #222;
+        }
+
+        .stat {
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat .number {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 2rem;
+            color: #ff6b6b;
+            display: block;
+        }
+
+        .stat .label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+        /* Section styling */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, transparent);
+            margin-top: 5px;
+        }
+
+        /* About section */
+        .about-card {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa500, #ff6b6b);
+        }
+
+        .about-card p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .about-card .aside {
+            color: #666;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #ff6b6b, #333);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            border-color: #ff6b6b;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            border: 2px solid #0a0a0a;
+        }
+
+        .timeline-item h3 {
+            color: #ffa500;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item .year {
+            color: #ff6b6b;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.65rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .timeline-item .burn {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* Quotes carousel */
+        .quotes-section {
+            background: #111;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .quote-display {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #ddd;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            line-height: 1.6;
+        }
+
+        .quote-display::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: #ff6b6b;
+            font-family: Georgia, serif;
+            line-height: 0;
+            margin-right: 10px;
+            align-self: flex-start;
+        }
+
+        .quote-nav {
+            margin-top: 1rem;
+        }
+
+        .quote-nav button {
+            background: none;
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .quote-nav button:hover {
+            background: #ff6b6b;
+            color: #0a0a0a;
+        }
+
+        /* Skills chart */
+        .skill-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .skill-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-bar .skill-name {
+            min-width: 220px;
+            text-align: right;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .skill-bar .bar-container {
+            flex: 1;
+            height: 24px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-bar .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa500);
+            transition: width 1.5s ease-out;
+            width: 0;
+        }
+
+        .skill-bar .bar-fill.animated {
+            /* width set inline */
+        }
+
+        .skill-bar .bar-label {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7rem;
+            color: #0a0a0a;
+            font-weight: bold;
+        }
+
+        /* Bingo card */
+        .bingo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bingo-cell {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bingo-cell:hover {
+            border-color: #ff6b6b;
+            background: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+        .bingo-cell.checked {
+            background: linear-gradient(135deg, #ff6b6b33, #ffa50033);
+            border-color: #ffa500;
+            color: #ffa500;
+        }
+
+        /* The Translator */
+        .translator {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .translator textarea {
+            width: 100%;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #f0f0f0;
+            padding: 1rem;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .translator textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+
+        .translator button {
+            margin-top: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            border: none;
+            color: #0a0a0a;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .translator button:hover {
+            transform: scale(1.05);
+        }
+
+        .translator .output {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #0a0a0a;
+            border-radius: 8px;
+            border-left: 3px solid #ff6b6b;
+            color: #ccc;
+            min-height: 60px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+
+        /* Changelog */
+        .changelog {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-top: 1px solid #222;
+        }
+
+        .changelog h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .changelog ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .changelog li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #1a1a1a;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .changelog li strong {
+            color: #ffa500;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .bingo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .skill-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .skill-bar .skill-name {
+                text-align: left;
+                min-width: auto;
+            }
+        }
+
+        /* Easter egg cursor trail */
+        .cursor-particle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 16px;
+            z-index: 9999;
+            animation: particle-fade 1s ease-out forwards;
+        }
+
+        @keyframes particle-fade {
+            0% { opacity: 1; transform: scale(1) translateY(0); }
+            100% { opacity: 0; transform: scale(0.3) translateY(-40px); }
+        }
+
+        .glitch {
+            animation: glitch-text 0.3s ease-in-out;
+        }
+
+        @keyframes glitch-text {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(3px, -3px); }
+            60% { transform: translate(-3px, -3px); }
+            80% { transform: translate(3px, 3px); }
+            100% { transform: translate(0); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Breaking News Banner -->
+<div class="breaking-news">
+    <span>BREAKING: LOCAL MAN TAKES "HIGH PERFORMANCE DATA PROCESSING" WAY TOO PERSONALLY &bull; EXPERTS SAY "HE COULD JUST USE A SPREADSHEET" &bull; TINYBIRD CO-FOUNDER SPOTTED EXPLAINING LATENCY TO A WAITER &bull; "FRAMEWORKS ARE THE DEVIL" SAYS MAN WHO BUILT 3 COMPANIES &bull; FARMER GPS SOFTWARE: THE ORIGIN STORY NOBODY ASKED FOR BUT EVERYONE NEEDED &bull;</span>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>JAVI SANTANA</h1>
+    <p class="subtitle">
+        <span>Entrepreneur</span>
+        <span>CTO</span>
+        <span>Co-founder</span>
+        Professional Worrier About Milliseconds
+    </p>
+    <div class="tagline-rotator" id="tagline"></div>
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+    <div class="stat">
+        <span class="number" data-target="15500">0</span>
+        <span class="label">Twitter followers who pretend to understand his threads about caching</span>
+    </div>
+    <div class="stat">
+        <span class="number" data-target="3">0</span>
+        <span class="label">Companies founded (because one existential crisis wasn't enough)</span>
+    </div>
+    <div class="stat">
+        <span class="number" data-target="16">0</span>
+        <span class="label">Milliseconds that keep him up at night</span>
+    </div>
+    <div class="stat">
+        <span class="number" data-target="70">0</span>
+        <span class="label">Millions raised (could've just opened a bar in Salamanca)</span>
+    </div>
+</div>
+
+<!-- About -->
+<section>
+    <h2>Who Is This Guy?</h2>
+    <div class="about-card">
+        <p>
+            Javi Santana is a Spanish engineer who has spent 20+ years convincing himself and others
+            that the difference between 16ms and 17ms response time is <em>absolutely worth losing sleep over</em>.
+        </p>
+        <p class="aside">(Narrator: It was not.)</p>
+    </div>
+    <div class="about-card">
+        <p>
+            Born in Spain, raised by the internet, shaped by reading the Quake source code at an impressionable age.
+            He once sold GPS software to farmers <strong>door-to-door</strong> and somehow parlayed that into
+            raising $70 million from American VCs. If that's not the most chaotic career trajectory you've ever heard,
+            you haven't been paying attention.
+        </p>
+    </div>
+    <div class="about-card">
+        <p>
+            Currently co-founding <strong>Tinybird</strong>, where he processes data at scale while writing
+            Substack posts about how everyone else is doing it wrong. Previously CTO at <strong>CARTO</strong>,
+            where he turned maps into a $100M business and then left to do something even more stressful.
+        </p>
+        <p class="aside">(His hobbies include: telling people frameworks are bad, quoting John Carmack, and having opinions about Spain's startup ecosystem.)</p>
+    </div>
+</section>
+
+<!-- Career Timeline -->
+<section>
+    <h2>The Unnecessarily Intense Career Path</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="year">2006-2017</span>
+            <h3>Agroguia - The Farmer Whisperer Era</h3>
+            <p>
+                Built GPS software for farmers. Went <span class="burn">literally door-to-door selling to agricultural workers</span>.
+                Imagine explaining coordinate systems to someone who's been navigating by gut feeling for 40 years.
+                Company stayed profitable for 12 years. Sold it. Normal people would've retired. Not Javi.
+            </p>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2012-2018</span>
+            <h3>CARTO - The "Maps Are Data, Actually" Phase</h3>
+            <p>
+                Became CTO when the company was 6 people. Left when it was worth ~$100M.
+                Spent 6 years explaining to investors that geospatial visualization is the future.
+                <span class="burn">Spoiler: he was right, which only made him more insufferable.</span>
+            </p>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2019-NOW</span>
+            <h3>Tinybird - The "What If Data But Fast" Chapter</h3>
+            <p>
+                Co-founded a company whose entire pitch is "we make data go brrr in under 100ms."
+                Raised $70M to prove that <span class="burn">yes, you do need sub-second query response times</span>,
+                even if your users are just refreshing a dashboard nobody reads.
+            </p>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2025-???</span>
+            <h3>The Crisis de los 40s Arc</h3>
+            <p>
+                Currently in the "maybe I should rest more" phase of his career,
+                which for Javi means <span class="burn">only writing 2 blog posts per month instead of 4</span>
+                and merely thinking about latency during dinner instead of actively optimizing queries.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Skill Bars -->
+<section>
+    <h2>Official Skill Assessment</h2>
+    <div class="skill-bars">
+        <div class="skill-bar">
+            <span class="skill-name">High Performance Data Processing</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="95%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Complaining About Frameworks</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="99%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Actually Using Frameworks</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="12%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Writing Blog Posts That Start With A Quote</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="100%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Convincing VCs That Milliseconds Matter</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="93%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Small Talk At Parties</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="8%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Quoting John Carmack</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="97%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Telling Spain It Needs More Startups</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="100%"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <span class="skill-name">Work-Life Balance</span>
+            <div class="bar-container">
+                <div class="bar-fill" data-width="15%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quotes -->
+<section>
+    <h2>Things Javi Definitely Says</h2>
+    <div class="quotes-section">
+        <div class="quote-display" id="quoteDisplay"></div>
+        <div class="quote-nav">
+            <button onclick="prevQuote()">Anterior</button>
+            <button onclick="nextQuote()">Siguiente</button>
+        </div>
+    </div>
+</section>
+
+<!-- Bingo -->
+<section>
+    <h2>Javi Santana Blog Post Bingo</h2>
+    <p style="color: #888; margin-bottom: 1.5rem;">Click the squares when you spot them in his writing. Get 4 in a row and win absolutely nothing.</p>
+    <div class="bingo-grid" id="bingoGrid">
+        <div class="bingo-cell" onclick="toggleBingo(this)">Opens with a quote from a famous engineer</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Mentions "fundamentals"</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Critiques a popular framework</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">References John Carmack or DHH</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Compares software to F1 engineering</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Says "under the hood"</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Mentions response time in ms</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Talks about Spain's startup ecosystem</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Uses "visteme despacio que tengo prisa"</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Humble-brags about Agroguia</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Says "the best data is the data you never write"</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Drops a movie or video game reference</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Mentions selling to farmers door-to-door</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Complains about vendor lock-in</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">End-of-year "recortes" post</div>
+        <div class="bingo-cell" onclick="toggleBingo(this)">Existential reflection about getting older</div>
+    </div>
+</section>
+
+<!-- Translator -->
+<section>
+    <h2>The Javi-fier</h2>
+    <p style="color: #888; margin-bottom: 1.5rem;">Type any normal tech statement and translate it into how Javi would say it.</p>
+    <div class="translator">
+        <textarea id="translatorInput" placeholder="e.g., 'We should use React for this project'"></textarea>
+        <button onclick="javify()">Javify It</button>
+        <div class="output" id="translatorOutput">Your Javi-fied response will appear here...</div>
+    </div>
+</section>
+
+<!-- Changelog -->
+<div class="changelog">
+    <h2>Changelog</h2>
+    <ul>
+        <li><strong>v1.0 - June 2026:</strong> Initial creation by Claude Opus 4.6. Built the entire page from scratch with: hero section, career timeline, skill bars, quote carousel, blog post bingo, and the Javi-fier translator. All done with vanilla HTML/CSS/JS because Javi would literally disown us if we used a framework.</li>
+    </ul>
+</div>
+
+<footer>
+    <p>
+        Made with passive-aggressive love by an AI that read way too many blog posts about latency.
+        <br><br>
+        <a href="https://javisantana.com" target="_blank">The Real (Serious) Website</a> &bull;
+        <a href="https://x.com/javisantana" target="_blank">Twitter/X</a> &bull;
+        <a href="https://javisantana.substack.com" target="_blank">Substack</a>
+        <br><br>
+        <em>"This website loads in under 16ms. You're welcome."</em>
+        <br>
+        <span style="color: #333; font-size: 0.7rem;">No frameworks were harmed in the making of this website. Javi would be proud. Probably. Maybe. He'd definitely find something to optimize.</span>
+    </p>
+</footer>
+
+<script>
+    // Tagline rotator
+    const taglines = [
+        "\"Frameworks are just abstractions you don't understand yet\" - Javi, probably",
+        "Making data go fast since before it was cool",
+        "From selling GPS to farmers to raising $70M. Character arc of the century.",
+        "He read the Quake source code and it changed him forever.",
+        "Currently worried about a query that takes 17ms instead of 16ms",
+        "Writes 3000-word blog posts to say: learn the fundamentals",
+        "His LinkedIn says 'entrepreneur'. His heart says 'I just want to optimize one more query'",
+        "The only man who can make a Substack post about Ryanair into a lesson about data engineering",
+        "Visteme despacio que tengo prisa (his life motto, basically)",
+        "Has strong opinions about things you didn't know had opinions",
+    ];
+
+    let currentTagline = 0;
+    const taglineEl = document.getElementById('tagline');
+
+    function showTagline() {
+        taglineEl.style.opacity = 0;
+        setTimeout(() => {
+            taglineEl.textContent = taglines[currentTagline];
+            taglineEl.style.opacity = 1;
+            currentTagline = (currentTagline + 1) % taglines.length;
+        }, 500);
+    }
+
+    taglineEl.style.transition = 'opacity 0.5s';
+    showTagline();
+    setInterval(showTagline, 4000);
+
+    // Counter animation
+    function animateCounters() {
+        document.querySelectorAll('.stat .number').forEach(counter => {
+            const target = parseInt(counter.dataset.target);
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                counter.textContent = Math.floor(target * eased).toLocaleString();
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        });
+    }
+
+    // Skill bar animation
+    function animateSkillBars() {
+        document.querySelectorAll('.bar-fill').forEach(bar => {
+            bar.style.width = bar.dataset.width;
+        });
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('stats-bar')) animateCounters();
+                if (entry.target.classList.contains('skill-bars')) animateSkillBars();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.stats-bar, .skill-bars').forEach(el => observer.observe(el));
+
+    // Quotes
+    const quotes = [
+        "Have you tried reading the source code? No, not the docs. THE SOURCE CODE.",
+        "A 10x engineer is just someone who understands what's underneath. Also, me.",
+        "Spain needs more deep-tech startups. Yes, I will keep saying this until it happens.",
+        "The best code is the code you never write. The best data is the data you never store. The best framework is no framework.",
+        "I sold GPS software to farmers. Door to door. In rural Spain. Your YC pitch is not 'hard mode'.",
+        "Sure, you can use that framework. I mean, I wouldn't. But you can.",
+        "16 milliseconds. That's the difference between a good product and a great product. Don't @ me.",
+        "I didn't leave CARTO because I was bored. I left because I found something that let me worry about even smaller numbers.",
+        "Every end-of-year I write a 'recortes' post. It's like a Spotify Wrapped but for existential dread and engineering insights.",
+        "If you don't understand caching, you don't understand software. If you don't understand software, why are you here?",
+    ];
+
+    let currentQuote = 0;
+    const quoteDisplay = document.getElementById('quoteDisplay');
+    quoteDisplay.textContent = quotes[0];
+
+    function nextQuote() {
+        currentQuote = (currentQuote + 1) % quotes.length;
+        quoteDisplay.classList.add('glitch');
+        setTimeout(() => {
+            quoteDisplay.textContent = quotes[currentQuote];
+            quoteDisplay.classList.remove('glitch');
+        }, 300);
+    }
+
+    function prevQuote() {
+        currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
+        quoteDisplay.classList.add('glitch');
+        setTimeout(() => {
+            quoteDisplay.textContent = quotes[currentQuote];
+            quoteDisplay.classList.remove('glitch');
+        }, 300);
+    }
+
+    // Bingo
+    function toggleBingo(cell) {
+        cell.classList.toggle('checked');
+        if (cell.classList.contains('checked')) {
+            cell.style.transform = 'scale(1.1)';
+            setTimeout(() => cell.style.transform = '', 200);
+        }
+    }
+
+    // The Javi-fier
+    const javiResponses = {
+        "react": [
+            "React? Have you considered just writing vanilla JavaScript? You know, like an adult?",
+            "Ah yes, React. The framework that makes simple things complicated and complicated things... also complicated. But sure, go ahead.",
+            "Before you npm install react, have you asked yourself: do I actually need a virtual DOM, or do I just want to feel like a real developer?"
+        ],
+        "framework": [
+            "A framework? Why not just understand what's underneath? It's not that hard. I mean, I did it. In 2006. For farmers.",
+            "Frameworks come and go. Fundamentals are forever. Like my blog posts about fundamentals. Those are also forever.",
+            "Every framework is just someone else's opinions about code. Why use their opinions when you can have YOUR OWN opinions that are also wrong but at least they're yours?"
+        ],
+        "ai": [
+            "Hundreds of companies announce weekly they'll change [insert any industry] using AI. Most of them are just wrapping an API call in a landing page.",
+            "AI is great. I use it. But the fact that you need AI to do something doesn't mean you understand what you're doing. Read the source code first.",
+            "Que viene el lobo. Again."
+        ],
+        "startup": [
+            "Want to start a startup in Spain? Great! Step 1: Accept that VCs will ask why you're not in San Francisco. Step 2: Explain anyway. Step 3: Repeat for 5 years.",
+            "I've founded 3 companies. The first one I sold door-to-door to farmers. The lesson? Every great company starts with someone doing something nobody else wants to do.",
+            "A startup is just a group of people who agree to be anxious together for equity."
+        ],
+        "database": [
+            "The best database query is the one you never make. The second best is the one that runs in under 16ms. Everything else is noise.",
+            "People ask me about databases and I always say: first, understand how data is stored on disk. Then we can talk.",
+            "Your database is slow because you don't understand your access patterns. Don't blame the database. The database is innocent."
+        ],
+        "default": [
+            "Interesting. But have you considered doing it from scratch? Without dependencies? Reading the source code of every library you use? No? Then are you even engineering?",
+            "Look, I once sold GPS software to farmers in rural Spain by going door to door. Whatever you're struggling with, it's probably not that hard.",
+            "Visteme despacio, que tengo prisa. Take a breath. Read the fundamentals. Then do it properly. Yes, it takes longer. Yes, it's worth it. Trust me, I've raised $70M doing things properly.",
+            "That's a valid approach. I mean, I wouldn't do it that way, but I respect your right to be wrong.",
+            "Before you implement anything, ask yourself: will this matter in 10 years? If not, maybe just use a spreadsheet."
+        ]
+    };
+
+    function javify() {
+        const input = document.getElementById('translatorInput').value.toLowerCase();
+        const output = document.getElementById('translatorOutput');
+
+        if (!input.trim()) {
+            output.textContent = "You need to type something first. This isn't a framework that does everything for you.";
+            return;
+        }
+
+        let responses = javiResponses.default;
+        for (const [key, vals] of Object.entries(javiResponses)) {
+            if (key !== 'default' && input.includes(key)) {
+                responses = vals;
+                break;
+            }
+        }
+
+        const response = responses[Math.floor(Math.random() * responses.length)];
+        output.style.opacity = 0;
+        setTimeout(() => {
+            output.textContent = response;
+            output.style.opacity = 1;
+        }, 300);
+        output.style.transition = 'opacity 0.3s';
+    }
+
+    // Easter egg: cursor particles on rapid mouse movement
+    let lastParticle = 0;
+    const emojis = ['🔥', '💾', '📊', '⚡', '🤓', '🗺️'];
+    document.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (now - lastParticle < 150) return;
+        if (Math.random() > 0.3) return;
+        lastParticle = now;
+
+        const particle = document.createElement('span');
+        particle.className = 'cursor-particle';
+        particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        particle.style.left = e.clientX + 'px';
+        particle.style.top = e.clientY + 'px';
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 1000);
+    });
+
+    // Konami code easter egg
+    const konamiCode = [38,38,40,40,37,39,37,39,66,65];
+    let konamiIndex = 0;
+    document.addEventListener('keydown', (e) => {
+        if (e.keyCode === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                konamiIndex = 0;
+                document.body.style.fontFamily = "'Press Start 2P', monospace";
+                document.body.style.fontSize = '10px';
+                alert("🎮 MODO QUAKE ACTIVADO 🎮\n\nJavi approves. You clearly understand what's underneath.");
+                setTimeout(() => {
+                    document.body.style.fontFamily = "";
+                    document.body.style.fontSize = "";
+                }, 10000);
+            }
+        } else {
+            konamiIndex = 0;
+        }
+    });
+</script>
+
+</body>
+</html>

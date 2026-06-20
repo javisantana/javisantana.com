@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javi Santana - Seriousness Audit</title>
+  <meta name="description" content="Una web alternativa, cari&ntilde;osamente pasivo-agresiva, para Javi Santana.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111318;
+      --paper: #fff8e8;
+      --hot: #ff4f6d;
+      --cyan: #25d9ff;
+      --lime: #8af15a;
+      --yellow: #ffe15d;
+      --violet: #6e45ff;
+      --blue: #1437ff;
+      --muted: #5d6470;
+      --line: rgba(17, 19, 24, 0.18);
+      --mx: 50%;
+      --my: 50%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at var(--mx) var(--my), rgba(37, 217, 255, 0.24), transparent 22rem),
+        linear-gradient(90deg, rgba(17, 19, 24, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(17, 19, 24, 0.05) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 34px 34px, 34px 34px, auto;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 0.14em;
+      text-underline-offset: 0.22em;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--blue);
+    }
+
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 1rem;
+      z-index: 20;
+      background: var(--yellow);
+      color: var(--ink);
+      padding: 0.8rem 1rem;
+      border: 2px solid var(--ink);
+    }
+
+    .skip:focus {
+      left: 1rem;
+    }
+
+    .ticker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      border-bottom: 2px solid var(--ink);
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-transform: uppercase;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      animation: crawl 24s linear infinite;
+    }
+
+    @keyframes crawl {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .hero {
+      min-height: 88svh;
+      display: grid;
+      align-content: end;
+      padding: 6rem clamp(1rem, 4vw, 4rem) 4rem;
+      border-bottom: 5px solid var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255, 248, 232, 0.92), rgba(255, 248, 232, 0.58) 46%, rgba(255, 248, 232, 0.12)),
+        linear-gradient(0deg, rgba(17, 19, 24, 0.22), rgba(17, 19, 24, 0)),
+        url("../fotos_del_jeto/photo_3.jpg");
+      background-size: cover;
+      background-position: center 28%;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 9rem;
+      background: repeating-linear-gradient(
+        -7deg,
+        rgba(255, 79, 109, 0.9) 0 16px,
+        rgba(37, 217, 255, 0.9) 16px 31px,
+        rgba(138, 241, 90, 0.9) 31px 44px,
+        rgba(255, 225, 93, 0.9) 44px 60px
+      );
+      mix-blend-mode: multiply;
+      opacity: 0.42;
+      z-index: -1;
+    }
+
+    .hero-kicker {
+      width: max-content;
+      max-width: 100%;
+      margin: 0 0 1rem;
+      padding: 0.45rem 0.7rem;
+      border: 2px solid var(--ink);
+      background: var(--cyan);
+      box-shadow: 8px 8px 0 var(--ink);
+      font-size: clamp(0.78rem, 2vw, 1rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: rotate(-2deg);
+    }
+
+    h1 {
+      max-width: 9.5ch;
+      margin: 0;
+      font-size: clamp(4.6rem, 17vw, 15rem);
+      line-height: 0.76;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-shadow:
+        5px 5px 0 var(--cyan),
+        10px 10px 0 var(--hot),
+        15px 15px 0 var(--yellow);
+    }
+
+    .hero-copy {
+      max-width: 54rem;
+      margin: 2.4rem 0 0;
+      font-size: clamp(1.15rem, 2.4vw, 2.15rem);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+
+    .hero-copy strong {
+      background: var(--lime);
+      padding: 0 0.22em;
+    }
+
+    .nav-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.6rem;
+    }
+
+    .nav-strip a,
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.6rem;
+      padding: 0.58rem 0.82rem;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    }
+
+    .nav-strip a:nth-child(2n) {
+      background: var(--yellow);
+    }
+
+    .nav-strip a:nth-child(3n) {
+      background: var(--lime);
+    }
+
+    .nav-strip a:hover,
+    .nav-strip a:focus-visible,
+    .action:hover,
+    .action:focus-visible {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--ink);
+      color: var(--ink);
+    }
+
+    main {
+      display: grid;
+      gap: 0;
+    }
+
+    section {
+      padding: clamp(3.6rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem);
+      border-bottom: 3px solid var(--ink);
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      width: max-content;
+      max-width: 100%;
+      padding: 0.35rem 0.62rem;
+      border: 2px solid var(--ink);
+      background: var(--hot);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: rotate(1.5deg);
+    }
+
+    h2 {
+      margin: 0;
+      max-width: 16ch;
+      font-size: clamp(2.4rem, 7vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 58rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.3vw, 1.55rem);
+      line-height: 1.28;
+      font-weight: 700;
+    }
+
+    .audit {
+      background:
+        radial-gradient(circle at 85% 12%, rgba(255, 79, 109, 0.26), transparent 18rem),
+        #ffffff;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .metric {
+      min-height: 12rem;
+      display: grid;
+      align-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      border: 3px solid var(--ink);
+      border-radius: 6px;
+      background: var(--paper);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .metric:nth-child(2) { background: var(--cyan); }
+    .metric:nth-child(3) { background: var(--yellow); }
+    .metric:nth-child(4) { background: var(--lime); }
+
+    .metric b {
+      display: block;
+      font-size: clamp(2.2rem, 6vw, 4.6rem);
+      line-height: 0.9;
+      letter-spacing: 0;
+    }
+
+    .metric span {
+      font-size: 0.93rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .lab {
+      background: #111318;
+      color: #fff8e8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lab:before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        linear-gradient(115deg, transparent 0 46%, rgba(37, 217, 255, 0.2) 46% 48%, transparent 48% 100%),
+        linear-gradient(65deg, transparent 0 54%, rgba(255, 225, 93, 0.2) 54% 56%, transparent 56% 100%);
+      pointer-events: none;
+      transform: rotate(-8deg);
+    }
+
+    .lab > * {
+      position: relative;
+    }
+
+    .lab .eyebrow {
+      color: var(--ink);
+      background: var(--yellow);
+    }
+
+    .lab .lead {
+      color: rgba(255, 248, 232, 0.78);
+    }
+
+    .console {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .oracle,
+    .meter {
+      min-height: 21rem;
+      padding: clamp(1rem, 2.5vw, 1.6rem);
+      border: 3px solid #fff8e8;
+      border-radius: 6px;
+      background: rgba(255, 248, 232, 0.08);
+      box-shadow: 8px 8px 0 rgba(255, 248, 232, 0.18);
+    }
+
+    .oracle {
+      display: grid;
+      align-content: space-between;
+      gap: 1.2rem;
+    }
+
+    .oracle p {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 3.25rem);
+      line-height: 1.02;
+      font-weight: 900;
+    }
+
+    .action {
+      width: max-content;
+      background: var(--hot);
+      color: #fff;
+      box-shadow: 5px 5px 0 #fff8e8;
+      border-color: #fff8e8;
+    }
+
+    .action:hover,
+    .action:focus-visible {
+      color: #fff;
+      box-shadow: 2px 2px 0 #fff8e8;
+    }
+
+    .meter {
+      display: grid;
+      align-content: center;
+      gap: 1rem;
+    }
+
+    .meter-title {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .bar {
+      height: 2.3rem;
+      border: 2px solid #fff8e8;
+      border-radius: 999px;
+      padding: 0.28rem;
+      background: rgba(255, 248, 232, 0.12);
+    }
+
+    .bar-fill {
+      width: 86%;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--lime), var(--yellow), var(--hot));
+      transition: width 240ms ease;
+    }
+
+    .meter-output {
+      margin: 0;
+      color: rgba(255, 248, 232, 0.82);
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .exhibits {
+      background:
+        linear-gradient(135deg, rgba(255, 225, 93, 0.54), transparent 34%),
+        linear-gradient(35deg, rgba(37, 217, 255, 0.4), transparent 40%),
+        #fff;
+    }
+
+    .exhibit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .exhibit {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+      min-height: 20rem;
+      padding: 1.1rem;
+      border: 3px solid var(--ink);
+      border-radius: 6px;
+      background: #fff8e8;
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+
+    .exhibit:nth-child(even) {
+      transform: rotate(1deg);
+      background: #e9fbff;
+    }
+
+    .exhibit:nth-child(3n) {
+      transform: rotate(-1deg);
+      background: #fff1f4;
+    }
+
+    .exhibit h3 {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 2.4rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .exhibit p {
+      margin: 0;
+      color: #30343b;
+      font-size: 1.02rem;
+      line-height: 1.36;
+      font-weight: 700;
+    }
+
+    .tag {
+      width: max-content;
+      max-width: 100%;
+      padding: 0.25rem 0.45rem;
+      border: 2px solid var(--ink);
+      background: var(--lime);
+      font-size: 0.76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      background: var(--paper);
+    }
+
+    .day {
+      display: grid;
+      gap: 0.75rem;
+      max-width: 72rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .day li {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 800;
+    }
+
+    .day time {
+      color: var(--blue);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .sources {
+      background: #f2f4ff;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      min-height: 8.5rem;
+      padding: 1rem;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 800;
+    }
+
+    .source-list small {
+      display: block;
+      margin-top: 0.6rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+
+    .changelog {
+      background:
+        repeating-linear-gradient(90deg, rgba(17, 19, 24, 0.06) 0 2px, transparent 2px 16px),
+        #fff8e8;
+    }
+
+    .log {
+      max-width: 72rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .log li {
+      display: grid;
+      grid-template-columns: minmax(9rem, 0.28fr) 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      border: 2px dashed var(--ink);
+      border-radius: 6px;
+      background: #fff;
+      font-weight: 800;
+    }
+
+    .log b {
+      color: var(--hot);
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 2rem clamp(1rem, 4vw, 4rem);
+      background: var(--ink);
+      color: #fff8e8;
+      font-weight: 800;
+    }
+
+    footer p {
+      max-width: 64rem;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 940px) {
+      .metric-grid,
+      .exhibit-grid,
+      .source-list,
+      .console {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(4.2rem, 23vw, 9rem);
+      }
+
+      .hero {
+        min-height: 86svh;
+        background:
+          linear-gradient(0deg, rgba(255, 248, 232, 0.94), rgba(255, 248, 232, 0.38)),
+          url("../fotos_del_jeto/photo_3.jpg");
+        background-size: cover;
+        background-position: center top;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .ticker span {
+        animation-duration: 18s;
+      }
+
+      .hero {
+        padding-top: 5rem;
+        padding-bottom: 2.8rem;
+      }
+
+      .hero-copy {
+        font-size: 1.1rem;
+        line-height: 1.18;
+      }
+
+      .day li,
+      .log li {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        min-height: 10rem;
+      }
+
+      .oracle,
+      .meter {
+        min-height: 16rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *:before,
+      *:after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <div class="ticker" aria-hidden="true">
+    <span>Seriousness audit open - SQL opinions calibrated - tiny tools welcomed - Postgres feelings protected - Substack drama contained - </span>
+    <span>Seriousness audit open - SQL opinions calibrated - tiny tools welcomed - Postgres feelings protected - Substack drama contained - </span>
+  </div>
+
+  <header class="hero">
+    <p class="hero-kicker">Alternative website, mildly audited by Codex</p>
+    <h1>Javi Santana</h1>
+    <p class="hero-copy">
+      Cofundador de <strong>Tinybird</strong>, ex CTO de CARTO, fundador de Agroguia y se&ntilde;or oficialmente sospechoso de convertir cualquier caf&eacute; en una reuni&oacute;n sobre datos, producto y por qu&eacute; tu notebook de 500 l&iacute;neas no es una arquitectura.
+    </p>
+    <nav class="nav-strip" aria-label="Social links">
+      <a href="https://javisantana.com/">Web seria</a>
+      <a href="https://x.com/javisantana">X/Twitter</a>
+      <a href="https://javisantana.substack.com/">Substack</a>
+      <a href="https://github.com/javisantana">GitHub</a>
+      <a href="https://www.tinybird.co/blog/authors/javisantana">Tinybird posts</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="audit" aria-labelledby="audit-title">
+      <div class="section-heading">
+        <p class="eyebrow">Acta no notarial</p>
+        <h2 id="audit-title">Dashboard de gravedad profesional</h2>
+        <p class="lead">Todos los n&uacute;meros son falsos, pero tienen pinta de haber salido de una query decente. Eso ya es m&aacute;s de lo que se puede decir de muchas reuniones.</p>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric">
+          <span>Nivel de builder</span>
+          <b>99%</b>
+          <span>El 1% restante est&aacute; escribiendo un post sobre el 99%.</span>
+        </article>
+        <article class="metric">
+          <span>Repositorios GitHub</span>
+          <b>96</b>
+          <span>Suficientes para llamarlo hobby. Demasiados para llamarlo descanso.</span>
+        </article>
+        <article class="metric">
+          <span>Substack</span>
+          <b>2K+</b>
+          <span>Gente que voluntariamente recibe pensamiento estructurado en la bandeja.</span>
+        </article>
+        <article class="metric">
+          <span>Latencia de opini&oacute;n</span>
+          <b>&lt;1s</b>
+          <span>Especialmente si alguien dice "data engineering" sin tests.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="lab" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <p class="eyebrow">Laboratorio de autoestima t&eacute;cnica</p>
+        <h2 id="lab-title">Generador de feedback con cari&ntilde;o</h2>
+        <p class="lead">Mismo esp&iacute;ritu: buen rollo, una ceja levantada y la sensaci&oacute;n de que alguien va a pedir reproducibilidad antes de dejarte cenar.</p>
+      </div>
+
+      <div class="console">
+        <div class="oracle" aria-live="polite">
+          <p id="oracle-text">Tu idea est&aacute; muy bien. Ahora falta la peque&ntilde;a parte de hacer que funcione, que escale y que no dependa de un CSV llamado final_final2.csv.</p>
+          <button class="action" type="button" id="remix">Remix</button>
+        </div>
+
+        <aside class="meter" aria-label="Seriousness meter">
+          <div class="meter-title">Seriousness meter</div>
+          <div class="bar" aria-hidden="true">
+            <div class="bar-fill" id="bar-fill"></div>
+          </div>
+          <p class="meter-output" id="meter-output">86% serio, 14% haciendo bromas para que entre mejor la arquitectura.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="exhibits" aria-labelledby="exhibit-title">
+      <div class="section-heading">
+        <p class="eyebrow">Museo temporal</p>
+        <h2 id="exhibit-title">Exposiciones permanentes</h2>
+        <p class="lead">Una visita guiada por la persona que dice "cosas peque&ntilde;as y eficientes" y cinco minutos despu&eacute;s est&aacute; hablando de petabytes, ClickHouse y feedback loops.</p>
+      </div>
+
+      <div class="exhibit-grid">
+        <article class="exhibit">
+          <span class="tag">Sala 01</span>
+          <h3>La catedral de p&iacute;xeles</h3>
+          <p>En la web seria, los p&iacute;xeles construyen catedrales. Aqu&iacute; tambi&eacute;n, solo que alguien ha dejado pintura fosforita, una query a medias y una ligera preocupaci&oacute;n por el margen.</p>
+        </article>
+
+        <article class="exhibit">
+          <span class="tag">Sala 02</span>
+          <h3>El confesionario columnar</h3>
+          <p>Entras pensando en Postgres, sales pregunt&aacute;ndote si tu patr&oacute;n de consulta merece una base columnar o una charla honesta con tu yo de 2019.</p>
+        </article>
+
+        <article class="exhibit">
+          <span class="tag">Sala 03</span>
+          <h3>Agroguia, o el tractor con backlog</h3>
+          <p>Primero software para agricultores, luego mapas, luego datos en tiempo real. Una carrera totalmente normal si entre medias te persigue la idea de que la calidad es plan de negocio.</p>
+        </article>
+
+        <article class="exhibit">
+          <span class="tag">Sala 04</span>
+          <h3>LLM con espejo cruel</h3>
+          <p>Le pides a una IA que critique duro, te critica duro, y de pronto recuerdas que "pasivo-agresivo pero con humor" era una petici&oacute;n peligrosa desde el principio.</p>
+        </article>
+
+        <article class="exhibit">
+          <span class="tag">Sala 05</span>
+          <h3>El test del data engineer</h3>
+          <p>Trama: no era sobre escribir m&aacute;s c&oacute;digo. Era sobre explicar decisiones, hacer tests y recordar que resolver el problema sigue siendo parte del problema.</p>
+        </article>
+
+        <article class="exhibit">
+          <span class="tag">Sala 06</span>
+          <h3>Founder en modo producto</h3>
+          <p>Quiere hacerlo simple, local-first, r&aacute;pido y entendible. Lo cual suena simple hasta que hay que hacerlo simple, local-first, r&aacute;pido y entendible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="timeline" aria-labelledby="day-title">
+      <div class="section-heading">
+        <p class="eyebrow">Agenda probablemente injusta</p>
+        <h2 id="day-title">Un d&iacute;a no verificado</h2>
+        <p class="lead">No es biograf&iacute;a. Es caricatura con fuentes, que es como LinkedIn pero admitiendo la parte de caricatura.</p>
+      </div>
+
+      <ol class="day">
+        <li>
+          <time>08:12</time>
+          <span>Revisar algo de Tinybird y susurrar "esto deber&iacute;a ser una API SQL r&aacute;pida" sin asustar a ventas.</span>
+        </li>
+        <li>
+          <time>09:40</time>
+          <span>Escribir una frase sobre datos que parece sencilla, pero trae incorporadas tres decisiones de arquitectura y una mirada al abismo.</span>
+        </li>
+        <li>
+          <time>11:03</time>
+          <span>Abrir Cursor, crear un HTML plano y comprobar que el traje a medida vuelve a ganar al SaaS con onboarding de 14 pasos.</span>
+        </li>
+        <li>
+          <time>13:26</time>
+          <span>Defender que data engineering es software engineering mientras alguien en la sala intenta esconder un notebook.</span>
+        </li>
+        <li>
+          <time>17:55</time>
+          <span>Publicar en Substack con tono de "esto no es consejo", que suele ser justo el momento en el que todo el mundo toma notas.</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="sources" aria-labelledby="sources-title">
+      <div class="section-heading">
+        <p class="eyebrow">Material social usado</p>
+        <h2 id="sources-title">Fuentes miradas con cari&ntilde;o</h2>
+        <p class="lead">La broma funciona porque sale de su propio rastro p&uacute;blico: web, Substack, X/Twitter, GitHub y posts de Tinybird.</p>
+      </div>
+
+      <ul class="source-list">
+        <li>
+          <a href="https://javisantana.com/">javisantana.com</a>
+          <small>Perfil p&uacute;blico: builder entre tecnolog&iacute;a y datos, cofundador de Tinybird, enlaces sociales y la famosa frase de los p&iacute;xeles.</small>
+        </li>
+        <li>
+          <a href="https://javisantana.substack.com/">Substack</a>
+          <small>Bio p&uacute;blica: cofundador de Tinybird, ex CARTO CTO, fundador de Agroguia y dise&ntilde;ador de productos software.</small>
+        </li>
+        <li>
+          <a href="https://x.com/javisantana">X/Twitter</a>
+          <small>Handle p&uacute;blico @javisantana y se&ntilde;ales recientes sobre Tinybird, data processing y craft con IA.</small>
+        </li>
+        <li>
+          <a href="https://github.com/javisantana">GitHub</a>
+          <small>Perfil p&uacute;blico en Madrid con decenas de repositorios, porque aparentemente descansar era demasiado mainstream.</small>
+        </li>
+        <li>
+          <a href="https://www.tinybird.co/blog/authors/javisantana">Tinybird author page</a>
+          <small>Posts sobre bases columnares, ClickHouse, Confluent, Flink, data engineering y otras formas respetables de no hablar del tiempo.</small>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/javisantana">LinkedIn</a>
+          <small>Lo enlaza su web. No he hecho demasiadas bromas porque LinkedIn ya trabaja solo.</small>
+        </li>
+      </ul>
+    </section>
+
+    <section class="changelog" aria-labelledby="change-title">
+      <div class="section-heading">
+        <p class="eyebrow">Registro interno</p>
+        <h2 id="change-title">Change log</h2>
+        <p class="lead">Si este HTML se actualiza, que la verg&uuml;enza quede versionada como corresponde.</p>
+      </div>
+
+      <ol class="log">
+        <li>
+          <b>2026-06-20 - Codex</b>
+          <span>Creada la primera versi&oacute;n de <code>codex.html</code>: hero con foto local, dashboard de gravedad profesional, generador de feedback, museo de chistes, agenda caricaturesca, fuentes sociales y esta secci&oacute;n de cambios.</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con vanilla HTML, CSS y JavaScript. Sin framework, porque Javi ya tiene suficientes opiniones y no hac&iacute;a falta traerle otra dependencia para sufrir.</p>
+  </footer>
+
+  <script>
+    const roasts = [
+      {
+        text: "Tu idea esta muy bien. Ahora falta la pequena parte de hacer que funcione, que escale y que no dependa de un CSV llamado final_final2.csv.",
+        width: 86,
+        label: "86% serio, 14% haciendo bromas para que entre mejor la arquitectura."
+      },
+      {
+        text: "Has dicho real-time con mucha seguridad. Precioso. Ahora ensename la latencia, el coste y el plan para cuando alguien pulse refrescar dos veces.",
+        width: 94,
+        label: "94% serio, porque alguien ha usado la palabra real-time sin presupuesto."
+      },
+      {
+        text: "No es que odie tu framework. Es que me gustaria conocer el problema antes de invitar a ocho dependencias a vivir con nosotros.",
+        width: 79,
+        label: "79% serio, 21% terapia preventiva para package.json."
+      },
+      {
+        text: "Data engineering no significa memorizar siglas de cloud. Aunque admito que queda muy bonito en una oferta de trabajo.",
+        width: 91,
+        label: "91% serio, certificado por un acronimo que acaba en DB."
+      },
+      {
+        text: "Podemos llamarlo MVP, pero si no responde a ninguna pregunta igual es solo una maqueta con autoestima.",
+        width: 88,
+        label: "88% serio, 12% preocupado por el roadmap."
+      },
+      {
+        text: "La reunion ha sido productiva: ahora tenemos los mismos problemas, mejor nombrados y con tres responsables nuevos.",
+        width: 73,
+        label: "73% serio, porque la ironia tambien necesita SLAs."
+      }
+    ];
+
+    const text = document.querySelector("#oracle-text");
+    const fill = document.querySelector("#bar-fill");
+    const output = document.querySelector("#meter-output");
+    const button = document.querySelector("#remix");
+    let index = 0;
+
+    button.addEventListener("click", () => {
+      index = (index + 1) % roasts.length;
+      const next = roasts[index];
+      text.textContent = next.text;
+      fill.style.width = next.width + "%";
+      output.textContent = next.label;
+    });
+
+    window.addEventListener("pointermove", (event) => {
+      const x = Math.round((event.clientX / window.innerWidth) * 100);
+      const y = Math.round((event.clientY / window.innerHeight) * 100);
+      document.documentElement.style.setProperty("--mx", x + "%");
+      document.documentElement.style.setProperty("--my", y + "%");
+    }, { passive: true });
+  </script>
+</body>
+</html>
