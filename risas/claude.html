@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javi Santana - The Unnecessarily Serious Homepage</title>
+    <script src="/assets/js/tracking.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Comic+Neue:wght@400;700&family=Space+Mono&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%);
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(199, 44, 65, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .title-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b35, #4ecdc4, #c72c41);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
+            animation: subtleFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .subtitle .strike {
+            text-decoration: line-through;
+            color: #555;
+        }
+
+        .tagline {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #4ecdc4;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            opacity: 0.7;
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            animation: bounce 2s infinite;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #4ecdc4;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(78, 205, 196, 0.2);
+        }
+
+        .card h3 {
+            font-family: 'Space Mono', monospace;
+            color: #4ecdc4;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .card .aside {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            border-left: 2px solid #333;
+            padding-left: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #ff6b35, #4ecdc4, #c72c41);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff6b35;
+            border: 2px solid #0a0a0a;
+        }
+
+        .timeline-item .year {
+            font-family: 'Space Mono', monospace;
+            color: #ff6b35;
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item h3 {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #888;
+            line-height: 1.7;
+        }
+
+        .quote-block {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(78, 205, 196, 0.05));
+            border-left: 4px solid #ff6b35;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .quote-block .attribution {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            font-style: normal;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .trait {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .trait .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trait .label {
+            color: #4ecdc4;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .trait .desc {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .lotus-section {
+            background: linear-gradient(135deg, rgba(199, 44, 65, 0.05) 0%, rgba(78, 205, 196, 0.03) 100%);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .lotus-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c72c41;
+            margin-bottom: 1rem;
+        }
+
+        .lotus-section p {
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            line-height: 1.7;
+        }
+
+        .blink-warning {
+            animation: blink 1s step-end infinite;
+            color: #c72c41;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            background: rgba(255, 107, 53, 0.05);
+            padding: 1rem 0;
+            margin: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .marquee-text {
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #444;
+            font-size: 0.8rem;
+        }
+
+        .footer a {
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+
+        a { color: #ff6b35; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .notary-dialog {
+            background: rgba(255,255,255,0.02);
+            border: 1px dashed rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .notary-dialog .line {
+            margin-bottom: 0.6rem;
+        }
+
+        .notary-dialog .notary {
+            color: #888;
+        }
+
+        .notary-dialog .javi {
+            color: #ff6b35;
+        }
+
+        .notary-dialog .javi-inner {
+            color: #555;
+            font-style: italic;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+
+        .counter {
+            font-family: 'Space Mono', monospace;
+            font-size: 4rem;
+            color: #ff6b35;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .counter-label {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.1);
+            color: #4ecdc4;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin: 0.2rem;
+        }
+
+        .badge.warn {
+            background: rgba(199, 44, 65, 0.1);
+            color: #c72c41;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: #888;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .changelog {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .changelog h2 {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .changelog h2::after {
+            background: #333;
+        }
+
+        .changelog ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .changelog li {
+            color: #555;
+            font-size: 0.85rem;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            font-family: 'Space Mono', monospace;
+        }
+
+        .changelog .date {
+            color: #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="title-container">
+        <div class="tagline">co-founder, ex-cto, ex-programmer, current overthinker</div>
+        <h1>Javi Santana</h1>
+        <p class="subtitle">
+            "<span class="strike">Pixels</span> Opinions are the humble bricks with which one can build <span class="strike">cathedrals</span> overly long blog posts about engineering principles"
+        </p>
+        <div class="social-links">
+            <a href="https://twitter.com/javisantana">@javisantana</a>
+            <a href="https://javisantana.substack.com">substack</a>
+            <a href="https://github.com/javisantana">github</a>
+            <a href="https://linkedin.com/in/javisantana">linkedin</a>
+        </div>
+    </div>
+    <div class="scroll-hint">scroll down to witness the seriousness</div>
+</div>
+
+<div class="marquee-container">
+    <div class="marquee-text">
+        QUALITY IS THE BEST BUSINESS PLAN &bull; UNDERSTAND PROBLEMS TO THE LAST DETAIL &bull; LONG TERM OVER SHORT TERM &bull; EFFORT OVER INNATE TALENT &bull; SIMPLICITY IS KING &bull; 16 MILLISECONDS OR BUST &bull; PIXELS ARE BRICKS &bull; TERMINADO Y CERRADO &bull; VISTEME DESPACIO QUE TENGO PRISA &bull; I BELIEVE IN SMALL AND EFFICIENT THINGS (except my car collection) &bull;
+    </div>
+</div>
+
+<div class="section">
+    <h2>The Identity Crisis</h2>
+
+    <div class="notary-dialog">
+        <div class="line"><span class="notary">Notary:</span> "Your profession?"</div>
+        <div class="line"><span class="javi">Javi:</span> "..."</div>
+        <div class="line"><span class="javi-inner">(internal panic: if I say 'programmer' they'll think I'm a nobody, if I say 'entrepreneur' I'll feel like a fraud, if I say 'CTO' that was three jobs ago...)</span></div>
+        <div class="line"><span class="javi">Javi:</span> "...builder?"</div>
+        <div class="line"><span class="notary">Notary:</span> "So... construction?"</div>
+        <div class="line"><span class="javi">Javi:</span> "I'll write a 2000-word Substack post about this."</div>
+    </div>
+
+    <p class="card">
+        <span style="color: #aaa; line-height: 1.7; display: block;">
+            A man who has spent 20+ years building technology companies but still gets existential anxiety when asked "what do you do?" at the notary. Has founded three companies, led engineering at one of Spain's most successful startups, raised $70M+ in funding... but please, call him a "builder." Not a programmer (that hurts), not an entrepreneur (too pretentious), not a manager (God forbid). Just a humble builder who happens to own a Lotus Elise and wake up at 6AM on weekends to code on microcontrollers. You know, as one does.
+        </span>
+    </p>
+</div>
+
+<div class="section">
+    <h2>Professional Timeline</h2>
+    <p style="color: #666; margin-bottom: 2rem; font-style: italic;">(or: How To Accidentally Build Companies While Trying To Stay A Programmer)</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="year">~2003</div>
+            <h3>The Origin Story</h3>
+            <p>Started as a "digitalizador" - literally copying data from paper to a database. Found this so soul-crushingly boring that he automated himself out of the job. This pattern of "I'll automate it rather than do it" would define his entire career and, honestly, explains a lot.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2006-2017</div>
+            <h3>Agroguia - The Farming Years</h3>
+            <p>Built GPS software for farmers. Profitable from almost month one. Kept it running for 12 years. Got featured in Bloomberg. The man literally helped Spanish farmers navigate their fields and somehow this is the project he's most emotionally humble about. Sold it and moved on. <span class="badge">modest exit</span></p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2010s</div>
+            <h3>CARTO - The CTO Era</h3>
+            <p>CTO of one of Spain's best-known startups. Raised $30M+. Led the tech team. Made maps cool before everyone had a "geospatial strategy." Then left, presumably because being CTO wasn't programmer-y enough. <span class="badge warn">identity crisis #1</span></p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2019-present</div>
+            <h3>Tinybird - The Final Form(?)</h3>
+            <p>Co-founded a real-time data analytics company. Raised ~$70M from American and European investors. Built a product that processes data at absurd speeds. Still writes blog posts about how he's "not really an entrepreneur" and just "ended up here." Sir, you founded THREE companies. <span class="badge">~$70M raised</span> <span class="badge warn">still in denial</span></p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2025-present</div>
+            <h3>The Weekend Programmer Arc</h3>
+            <p>Wakes up at 6AM on Saturdays to code on an ESP32 microcontroller before his family wakes up. Building his own lap timer for track days. Compares himself to a chef cooking at home. This is a man at peace. <span class="badge">6AM Saturday alarm</span></p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Things Javi Believes In</h2>
+    <p style="color: #666; margin-bottom: 1rem;">(With the conviction of someone who has thought about them for way too long)</p>
+
+    <div class="traits-grid">
+        <div class="trait">
+            <div class="label">Simplicity</div>
+            <div class="desc">Wants everything minimal and efficient. Uses vanilla HTML/JS. Will judge your npm dependency tree from across the room.</div>
+        </div>
+        <div class="trait">
+            <div class="label">16ms</div>
+            <div class="desc">Believes all data analysis should return in 16 milliseconds. Named after a video frame. Will not negotiate.</div>
+        </div>
+        <div class="trait">
+            <div class="label">Long Term</div>
+            <div class="desc">"I believe in the long term and very little in the short term." Except when it comes to cars. Those he buys immediately.</div>
+        </div>
+        <div class="trait">
+            <div class="label">Effort > Talent</div>
+            <div class="desc">Believes hard work beats innate ability. Wakes at 6AM on weekends to prove it. Every. Single. Weekend.</div>
+        </div>
+        <div class="trait">
+            <div class="label">Finishing Things</div>
+            <div class="desc">Wrote an entire essay about how satisfying it is to tighten the last bolt on a car vs. never-ending software. Still ships software.</div>
+        </div>
+        <div class="trait">
+            <div class="label">Anti-Hype</div>
+            <div class="desc">"Every week hundreds of companies announce they'll change their industry with AI." &mdash; Man who actively uses 4 different LLMs daily.</div>
+        </div>
+    </div>
+
+    <div class="quote-block">
+        "I don't want to be an entrepreneur for the sake of being an entrepreneur. I want to be an entrepreneur because I had no other choice to get what I want."
+        <div class="attribution">&mdash; A man who has voluntarily founded three companies</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="lotus-section">
+        <h3>The Lotus Elise Situation</h3>
+        <p>
+            Owns a Lotus Elise, a car designed in the 90s with one premise: be as light as possible. Takes it to the racetrack. Does his own oil changes because the nearest dealer is 800km away. Wrote a 1500-word philosophical essay connecting car maintenance to software engineering principles.
+        </p>
+        <p>
+            Also has "some other weekend cars" (plural) and once said: <em>"If it were up to me I'd have a parking garage with a house attached to it."</em>
+        </p>
+        <p>
+            Recently drove a 475hp car and admitted struggling with the first three corners. The man builds real-time data platforms handling millions of events per second but couldn't handle the horsepower difference.
+        </p>
+        <p class="blink-warning">WARNING: Will compare your startup to a Lotus Elise at some point</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>How He Uses LLMs</h2>
+    <p style="color: #666; margin-bottom: 1.5rem;">(A guide for people who actually build things, not LinkedIn shamans)</p>
+
+    <div class="card">
+        <h3>The Approach</h3>
+        <p>Uses exactly two tools: Cursor and a command-line tool called <code>llm</code>. Refuses to learn more. Has been coding for 20 years and his tech stack for AI is literally <code>cat file | llm "do the thing"</code>. Peak minimalism.</p>
+    </div>
+
+    <div class="card">
+        <h3>The LebrelBot Incident</h3>
+        <p>Created a Slack bot with his own personality. It was "bastante cabroncete" (quite a little bastard). Had to shut it down. Also made it "passive-aggressive" and had to remove that too because "LLMs are especially good at hitting where it hurts."</p>
+        <div class="aside">His own words: "Children and LLMs reflect the worst acts of each person." We're not touching that one.</div>
+    </div>
+
+    <div class="card">
+        <h3>The Self-Criticism Workflow</h3>
+        <p>Regularly asks LLMs to criticize his writing in a "harsh, passive-aggressive but humorous" way. Warns others: "If you have thin skin, don't do it. No human without social problems will be this honest."</p>
+        <div class="aside">He literally asked a machine to roast him. Repeatedly. For productivity.</div>
+    </div>
+
+    <div class="card">
+        <h3>The Blog Post Factory</h3>
+        <p>Once generated blog posts using LLMs and passed them to colleagues as his own writing. Only one person noticed. He told this story <em>publicly</em>, in his own Substack, seemingly proud. Absolute menace.</p>
+    </div>
+
+    <div class="quote-block">
+        "It's like a custom-tailored suit made for you with a brain implant of the world's best tailor, vs. one from Zara for 119.93 euros."
+        <div class="attribution">&mdash; Javi, describing vibe-coded HTML apps with a suspiciously specific Zara price</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Fun Facts</h2>
+
+    <div class="card">
+        <h3>On His Daughter's School Lunch Strategy</h3>
+        <p>His daughter figured out that eating less lunch = leaving school earlier. He recognized this as a case study in how OKRs produce unintended consequences. <em>Most dads would just say "eat your lunch."</em> This one wrote a data engineering lesson about it.</p>
+    </div>
+
+    <div class="card">
+        <h3>The 6AM Weekend Ritual</h3>
+        <p>Wakes at 6AM on weekends. Makes a large coffee. Codes on an ESP32 trying to compress data in a few kilobytes of RAM. Building a DIY lap timer for his track car. Says "that's not important" about the project he wakes up at 6AM for.</p>
+    </div>
+
+    <div class="card">
+        <h3>The About Page</h3>
+        <p>His actual about page starts with: "This is me looking at the ceiling pretending I'm thinking to say something really smart." It's genuinely the most self-aware thing on the internet and also somehow still takes itself seriously three paragraphs later.</p>
+    </div>
+
+    <div class="card">
+        <h3>The LinkedIn Take</h3>
+        <p>Refers to LinkedIn thought leaders as "the same middle managers who don't know which way is up, who have found a new way to get noticed." Then goes on to write a 3000-word Substack post. The cognitive dissonance has its own gravitational field.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>In Summary</h2>
+
+    <div class="counter" id="companies-counter">3</div>
+    <div class="counter-label">companies founded by a man who doesn't want to be called an entrepreneur</div>
+
+    <div class="counter" id="years-counter">20+</div>
+    <div class="counter-label">years in tech by a man who still hesitates to say "programmer" at the notary</div>
+
+    <div class="counter">6:00</div>
+    <div class="counter-label">AM wake-up time on Saturday, voluntarily, to code for fun</div>
+
+    <div class="counter">~119.93</div>
+    <div class="counter-label">euros for a Zara suit, which is apparently the benchmark for everything</div>
+
+    <div class="quote-block">
+        "Sorry about this post, friends. I know you don't really care, but I needed to write it."
+        <div class="attribution">&mdash; How he ends a deeply personal essay about not being a programmer anymore. Peak Javi.</div>
+    </div>
+</div>
+
+<div class="section changelog">
+    <h2>Changelog</h2>
+    <ul>
+        <li><span class="date">2026-06-20</span> - Initial creation by Claude. Assembled from Javi's blog posts, Substack, Twitter/X, and about page. Key sources: "Programador" (the notary crisis), "Terminado y cerrado" (the Lotus essay), "Como uso los LLM" (the LebrelBot incident), "ESP32" (the 6AM weekend programmer), and his actual about page where he admits to ceiling-staring. No farmers were harmed in the making of this page.</li>
+    </ul>
+</div>
+
+<div class="footer">
+    <p>Made with passive-aggressive admiration by Claude |
+    <a href="https://javisantana.com">Visit the serious version</a> |
+    <a href="https://javisantana.substack.com">Read the existential essays</a></p>
+    <p style="margin-top: 1rem; color: #333;">
+        "Pixels are the humble bricks with which one can build cathedrals" &mdash; and also this webpage, apparently
+    </p>
+</div>
+
+</body>
+</html>

@@ -3,661 +3,664 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javi Santana™ — Professional Seriousness, Cathedral-Grade</title>
+  <title>Javi Santana™ — Builder of Cathedrals (Unlicensed)</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
     :root {
-      --neon: #39ff14;
-      --ceo-gold: #ffd700;
+      --holy-gold: #ffd700;
+      --ceo-navy: #0a1628;
+      --passive-lime: #b8ff57;
+      --agro-green: #2d5a27;
       --sql-blue: #00d4ff;
-      --passive-pink: #ff6b9d;
       --notary-maroon: #6b1d3a;
-      --bg: #0a0a12;
-      --card: #14141f;
+      --tinybird-yellow: #ffe600;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
-      background: var(--bg);
-      color: #e8e8f0;
+      font-family: 'Comic Neue', cursive;
+      background: var(--ceo-navy);
+      color: #e8e8e8;
       overflow-x: hidden;
-      cursor: crosshair;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='18' font-size='18'%3E🏗️%3C/text%3E%3C/svg%3E") 12 12, auto;
     }
 
-    body.linkedin-mode {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #f3f2ef;
-      color: #191919;
-      cursor: default;
+    .marquee-wrap {
+      background: linear-gradient(90deg, var(--notary-maroon), var(--agro-green), var(--ceo-navy));
+      border-bottom: 3px solid var(--holy-gold);
+      overflow: hidden;
+      padding: 0.4rem 0;
     }
 
-    .pixel-rain {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.15;
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 19px, var(--neon) 19px, var(--neon) 20px),
-        repeating-linear-gradient(90deg, transparent, transparent 19px, var(--sql-blue) 19px, var(--sql-blue) 20px);
-      animation: drift 20s linear infinite;
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll 28s linear infinite;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--passive-lime);
     }
 
-    @keyframes drift {
-      from { background-position: 0 0, 0 0; }
-      to { background-position: 0 400px, 400px 0; }
-    }
+    .marquee span { padding-right: 4rem; }
 
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 6rem;
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     header {
       text-align: center;
-      margin-bottom: 3rem;
-      animation: wobble 4s ease-in-out infinite;
-    }
-
-    @keyframes wobble {
-      0%, 100% { transform: rotate(-0.5deg); }
-      50% { transform: rotate(0.5deg); }
+      padding: 3rem 1.5rem 2rem;
+      position: relative;
     }
 
     .badge {
       display: inline-block;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, var(--passive-pink), var(--ceo-gold));
+      background: var(--tinybird-yellow);
       color: #000;
-      padding: 0.35rem 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 999px;
       margin-bottom: 1rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     h1 {
-      font-size: clamp(2.2rem, 8vw, 4.5rem);
-      line-height: 1;
-      background: linear-gradient(135deg, var(--neon), var(--sql-blue), var(--passive-pink));
+      font-size: clamp(2rem, 8vw, 4.5rem);
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--holy-gold), var(--passive-lime), var(--sql-blue));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .subtitle {
-      font-size: 1.1rem;
-      color: #888;
+      font-size: 1.2rem;
+      color: #aaa;
       margin-top: 0.75rem;
       font-style: italic;
     }
 
-    body.linkedin-mode h1 {
-      -webkit-text-fill-color: #0a66c2;
-      background: none;
-      color: #0a66c2;
-      font-size: 2rem;
+    .quote-block {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border: 2px dashed var(--holy-gold);
+      border-radius: 12px;
+      font-size: 1.4rem;
+      text-align: center;
+      position: relative;
     }
 
-    body.linkedin-mode .subtitle { color: #666; font-style: normal; }
+    .quote-block::before {
+      content: '✦ pretensión level: cathedral ✦';
+      position: absolute;
+      top: -0.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ceo-navy);
+      padding: 0 0.75rem;
+      font-size: 0.75rem;
+      color: var(--holy-gold);
+      font-family: 'Space Mono', monospace;
+    }
 
     .mode-bar {
       display: flex;
+      justify-content: center;
       gap: 0.5rem;
       flex-wrap: wrap;
-      justify-content: center;
-      margin: 2rem 0;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #333;
     }
 
     .mode-btn {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      padding: 0.6rem 1.2rem;
-      border: 2px solid var(--neon);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #444;
       background: transparent;
-      color: var(--neon);
+      color: #ccc;
       cursor: pointer;
+      border-radius: 6px;
       transition: all 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
     .mode-btn:hover, .mode-btn.active {
-      background: var(--neon);
-      color: #000;
-      box-shadow: 0 0 20px var(--neon);
+      border-color: var(--passive-lime);
+      color: var(--passive-lime);
+      box-shadow: 0 0 12px rgba(184, 255, 87, 0.3);
     }
 
-    body.linkedin-mode .mode-btn {
-      border-color: #0a66c2;
-      color: #0a66c2;
-      border-radius: 24px;
+    .mode-btn.active[data-mode="ceo"] {
+      border-color: var(--tinybird-yellow);
+      color: var(--tinybird-yellow);
     }
 
-    body.linkedin-mode .mode-btn:hover,
-    body.linkedin-mode .mode-btn.active {
-      background: #0a66c2;
-      color: #fff;
-      box-shadow: none;
+    .mode-btn.active[data-mode="notario"] {
+      border-color: var(--notary-maroon);
+      color: #ff6b9d;
     }
 
-    .card {
-      background: var(--card);
-      border: 1px solid #2a2a3a;
-      border-radius: 12px;
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      overflow: hidden;
+    .mode-btn.active[data-mode="builder"] {
+      border-color: var(--sql-blue);
+      color: var(--sql-blue);
     }
 
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--neon), var(--sql-blue), var(--passive-pink));
+    main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    section {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    body.linkedin-mode .card {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
-    }
-
-    body.linkedin-mode .card::before { display: none; }
-
-    h2 {
-      font-size: 1.4rem;
+    section h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      color: var(--passive-lime);
       margin-bottom: 1rem;
-      color: var(--ceo-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
-    body.linkedin-mode h2 { color: #191919; font-weight: 600; }
-
-    p, li { line-height: 1.7; margin-bottom: 0.75rem; color: #bbb; }
-    body.linkedin-mode p, body.linkedin-mode li { color: #333; }
-
-    .quote-block {
-      border-left: 4px solid var(--passive-pink);
-      padding-left: 1.25rem;
-      margin: 1.25rem 0;
-      font-style: italic;
-      color: #ccc;
-    }
-
-    body.linkedin-mode .quote-block {
-      border-left-color: #0a66c2;
-      color: #555;
-    }
-
-    .stats {
+    .kpi-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
-      margin: 1.5rem 0;
     }
 
-    .stat {
-      text-align: center;
+    .kpi {
+      background: rgba(0, 0, 0, 0.3);
       padding: 1rem;
-      background: rgba(57, 255, 20, 0.05);
-      border: 1px dashed var(--neon);
-      border-radius: 8px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #333;
     }
 
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--neon);
-      font-family: 'IBM Plex Mono', monospace;
+    .kpi .num {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.8rem;
+      color: var(--sql-blue);
+      display: block;
     }
 
-    .stat-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #666;
+    .kpi .label {
+      font-size: 0.75rem;
+      color: #888;
       margin-top: 0.25rem;
     }
 
-    body.linkedin-mode .stat {
-      background: #f8f8f8;
-      border-color: #ccc;
+    .timeline { list-style: none; }
+
+    .timeline li {
+      padding: 0.75rem 0 0.75rem 1.5rem;
+      border-left: 3px solid var(--agro-green);
+      margin-left: 0.5rem;
+      position: relative;
     }
 
-    body.linkedin-mode .stat-num { color: #0a66c2; }
+    .timeline li::before {
+      content: '▸';
+      position: absolute;
+      left: -0.6rem;
+      color: var(--passive-lime);
+    }
 
-    .timeline-item {
+    .timeline .year {
+      font-family: 'Space Mono', monospace;
+      color: var(--holy-gold);
+      font-size: 0.8rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--holy-gold);
+    }
+
+    .card p { font-size: 0.95rem; line-height: 1.5; color: #bbb; }
+
+    .social {
       display: flex;
       gap: 1rem;
-      margin-bottom: 1.25rem;
-      align-items: flex-start;
-    }
-
-    .timeline-year {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--sql-blue);
-      min-width: 4rem;
-      padding-top: 0.2rem;
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .social-link {
-      display: block;
-      padding: 1rem;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid #333;
-      border-radius: 8px;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .social-link:hover {
-      transform: translateY(-3px) rotate(-1deg);
-      border-color: var(--passive-pink);
-    }
-
-    .social-link strong { color: var(--neon); display: block; margin-bottom: 0.25rem; }
-    body.linkedin-mode .social-link strong { color: #0a66c2; }
-    body.linkedin-mode .social-link { border-color: #ddd; background: #fafafa; }
-
-    .social-link span { font-size: 0.85rem; color: #777; }
-
-    .rehearsal-bar {
-      height: 8px;
-      background: #222;
-      border-radius: 4px;
-      overflow: hidden;
-      margin: 1rem 0;
-    }
-
-    .rehearsal-fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--notary-maroon), var(--ceo-gold));
-      animation: rehearse 8s ease-in-out infinite;
-    }
-
-    @keyframes rehearse {
-      0%, 100% { width: 12%; }
-      25% { width: 67%; }
-      50% { width: 43%; }
-      75% { width: 89%; }
-    }
-
-    .rehearsal-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      color: #666;
-      text-align: right;
-    }
-
-    .changelog {
-      background: rgba(107, 29, 58, 0.2);
-      border: 1px solid var(--notary-maroon);
-    }
-
-    .changelog h2 { color: var(--passive-pink); }
-
-    .changelog time {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--sql-blue);
-    }
-
-    .changelog ul { list-style: none; padding: 0; }
-    .changelog li { padding: 0.5rem 0; border-bottom: 1px solid #2a2a3a; }
-    .changelog li:last-child { border-bottom: none; }
-
-    .easter-egg {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.65rem;
-      color: #333;
-      user-select: none;
-    }
-
-    .notary-popup {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      z-index: 999;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 2rem;
     }
 
-    .notary-popup.show { display: flex; }
+    .social a {
+      font-family: 'Space Mono', monospace;
+      color: var(--sql-blue);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--sql-blue);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
 
-    .notary-box {
-      background: var(--notary-maroon);
-      border: 3px double var(--ceo-gold);
-      padding: 2.5rem;
-      max-width: 480px;
+    .social a:hover {
+      background: var(--sql-blue);
+      color: #000;
+    }
+
+    .notario-sim {
+      display: none;
       text-align: center;
-      animation: stamp 0.4s ease;
+      padding: 2rem;
+      background: linear-gradient(180deg, #2a0f1a, var(--ceo-navy));
+      border: 3px double var(--notary-maroon);
+      border-radius: 16px;
     }
 
-    @keyframes stamp {
-      0% { transform: scale(1.3) rotate(-5deg); opacity: 0; }
-      100% { transform: scale(1) rotate(0); opacity: 1; }
+    .notario-sim.visible { display: block; }
+
+    .notario-sim input {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.2rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--notary-maroon);
+      background: #1a0a12;
+      color: #fff;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem 0;
     }
 
-    .notary-box h3 { color: var(--ceo-gold); margin-bottom: 1rem; font-size: 1.5rem; }
-    .notary-box button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 2rem;
-      background: var(--ceo-gold);
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      font-family: inherit;
+    .notario-sim .verdict {
+      font-size: 1.1rem;
+      color: #ff6b9d;
+      min-height: 3rem;
+      margin-top: 1rem;
     }
 
-    .cathedral-cursor {
+    .sql-canvas {
       position: fixed;
-      width: 12px;
-      height: 12px;
-      background: var(--neon);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
-      z-index: 10000;
-      mix-blend-mode: difference;
-      transition: transform 0.05s;
+      z-index: 0;
+      opacity: 0.15;
     }
+
+    .content-wrap { position: relative; z-index: 1; }
+
+    .changelog {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .changelog li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #222;
+      list-style: none;
+    }
+
+    .changelog .date { color: var(--holy-gold); }
 
     footer {
       text-align: center;
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #444;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #555;
+      border-top: 1px solid #222;
     }
 
-    footer a { color: var(--passive-pink); }
+    body.mode-ceo {
+      --accent: var(--tinybird-yellow);
+    }
 
-    @media (max-width: 600px) {
-      .container { padding: 1rem; }
-      h1 { font-size: 2rem; }
+    body.mode-ceo section {
+      border-color: rgba(255, 230, 0, 0.2);
+    }
+
+    body.mode-ceo h2 { color: var(--tinybird-yellow); }
+
+    body.mode-notario .quote-block {
+      border-color: var(--notary-maroon);
+    }
+
+    body.mode-builder h1 {
+      background: linear-gradient(135deg, var(--sql-blue), #fff);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .ceiling-photo {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      border: 3px solid var(--holy-gold);
+      display: block;
+      margin: 1rem auto;
+      filter: sepia(0.3);
+    }
+
+    .confession {
+      background: rgba(107, 29, 58, 0.2);
+      border-left: 4px solid var(--notary-maroon);
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
     }
   </style>
 </head>
-<body>
-  <div class="pixel-rain"></div>
-  <div class="cathedral-cursor" id="cursor"></div>
+<body class="mode-builder">
+  <canvas class="sql-canvas" id="sqlRain"></canvas>
 
-  <div class="container">
-    <header>
-      <div class="badge">⚠️ No oficial · Hecho con cariño pasivo-agresivo</div>
-      <h1 id="main-title">Javi Santana</h1>
-      <p class="subtitle" id="main-subtitle">
-        Los píxeles son los ladrillos humildes con los que uno puede construir catedrales.
-        <br>(Y luego escribir 40 posts citando a Miyamoto sobre la energía del equipo.)
-      </p>
-    </header>
-
-    <div class="mode-bar">
-      <button class="mode-btn active" data-mode="builder">Modo Builder</button>
-      <button class="mode-btn" data-mode="ceo">Modo CEO</button>
-      <button class="mode-btn" data-mode="linkedin">LinkedIn Serious™</button>
+  <div class="content-wrap">
+    <div class="marquee-wrap">
+      <div class="marquee" id="marquee">
+        <span>⚠️ CEO MODE ACTIVATED 2025 — employees please do not panic at "Recortes" email subject lines</span>
+        <span>🏗️ pixels → cathedrals → KPIs → existential Substack → repeat</span>
+        <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
+        <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
+        <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
+        <span>⚠️ CEO MODE ACTIVATED 2025 — employees please do not panic at "Recortes" email subject lines</span>
+        <span>🏗️ pixels → cathedrals → KPIs → existential Substack → repeat</span>
+        <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
+        <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
+        <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
+      </div>
     </div>
 
-    <section class="card" id="hero-card">
-      <h2 id="hero-title">Builder en la intersección de tech y data</h2>
-      <p id="hero-text">
-        Hola, Javi Santana escribiendo. Cofundador de <strong>Tinybird</strong> (ahora CEO, porque alguien tenía que firmar los papeles del notario).
-        Antes CTO en <strong>CARTO</strong> (pintar mapas bonitos). Antes eso, <strong>Agroguía</strong> (GPS para agricultores — Bloomberg lo mencionó, él lo menciona más).
-      </p>
-      <div class="quote-block" id="hero-quote">
-        «Nunca fui programador, fui lo que tuve que ser en ese momento para conseguir lo que quería.»
-        <br><small>— Substack "Programador", ene 2026. 52 likes. Crisis existencial incluida.</small>
+    <header>
+      <div class="badge">ALTERNATIVE FACTS EDITION — powered by Grok (he pays for this)</div>
+      <h1>Javi Santana</h1>
+      <p class="subtitle">Builder · CEO · Former Programador (retired, emotionally) · Ceiling Philosopher</p>
+
+      <div class="quote-block" id="heroQuote">
+        "Pixels are the humble bricks with which one can build cathedrals"
+        <br><small style="color:#888; font-size:0.8rem;">— said unironically on javisantana.com</small>
       </div>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-num" id="stat-years">20+</div>
-          <div class="stat-label">Años con datos</div>
+    </header>
+
+    <nav class="mode-bar">
+      <button class="mode-btn active" data-mode="builder">🔧 Builder Mode</button>
+      <button class="mode-btn" data-mode="ceo">👔 CEO Mode</button>
+      <button class="mode-btn" data-mode="notario">📜 Notario Simulator</button>
+    </nav>
+
+    <main>
+      <section id="kpis">
+        <h2>Live KPIs (totally real)</h2>
+        <div class="kpi-grid">
+          <div class="kpi"><span class="num" data-target="12">0</span><span class="label">years profitable Agroguía</span></div>
+          <div class="kpi"><span class="num" data-target="52">0</span><span class="label">Substack hearts on "Programador"</span></div>
+          <div class="kpi"><span class="num" data-target="6">0</span><span class="label">AM weekend wake-up (ESP32 hours)</span></div>
+          <div class="kpi"><span class="num" data-target="256">0</span><span class="label">MB RAM of first PC (Pentium III)</span></div>
+          <div class="kpi"><span class="num" data-target="50">0</span><span class="label">% adult life NOT coding professionally*</span></div>
+          <div class="kpi"><span class="num" data-target="3000">0</span><span class="label">word Substack posts about LinkedIn shamans</span></div>
         </div>
-        <div class="stat">
-          <div class="stat-num">1:10000</div>
-          <div class="stat-label">Ratio builders / gente hablando de AI agents</div>
+        <p style="font-size:0.75rem; color:#555; margin-top:0.75rem;">*he still codes at 6AM. make it make sense.</p>
+      </section>
+
+      <section id="about">
+        <h2>About (the version he'd never write)</h2>
+        <img src="/fotos_del_jeto/photo_3.jpg" alt="Javi mirando al techo" class="ceiling-photo">
+        <p style="text-align:center; color:#888; margin-bottom:1rem;">Official pose: looking at the ceiling pretending to think something smart</p>
+
+        <p>Hi, <strong>Javi Santana typing</strong>. Builder at the intersection of tech and data. Cofounder of <a href="https://tinybird.co" style="color:var(--sql-blue)">Tinybird</a> — which he now runs as CEO because someone had to push every day and it turns out "empujar todos los días es carísimo a nivel mental."</p>
+
+        <div class="confession">
+          Career path: digitalizador (copied paper to database) → automated it out of existence → programmer → CTO at CARTO → farmer software → data cathedrals → CEO. He insists he never wanted the leadership roles, they just happened to walk past him and he accidentally founded things.
         </div>
-        <div class="stat">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">Citas de Grace Hopper en talks</div>
+
+        <p>Find him on <a href="https://twitter.com/javisantana" style="color:var(--sql-blue)">Twitter</a>, <a href="https://www.linkedin.com/in/javisantana" style="color:var(--sql-blue)">LinkedIn</a> (the platform he calls full of shamans), or <a href="https://javisantana.substack.com" style="color:var(--sql-blue)">Substack</a> where he writes 3000-word essays about how he doesn't want to be what he is.</p>
+      </section>
+
+      <section id="timeline">
+        <h2>Career timeline (passive-aggressive edition)</h2>
+        <ul class="timeline">
+          <li><span class="year">~2000</span> — Starts as "digitalizador" at a metal company. Hates it so much he automates himself toward freedom.</li>
+          <li><span class="year">2000s</span> — Programs videojuegos, embedded, backend, frontend. The full caraboli tour.</li>
+          <li><span class="year">~2010</span> — Founds Agroguía. Puts tech where nobody put tech. Bloomberg writes about it. Modest exit. Farmers unimpressed.</li>
+          <li><span class="year">2010s</span> — CTO at CARTO. Converts startup into "referente tecnológico." Also wins "most dysfunctional sales company" award (probably).</li>
+          <li><span class="year">2020s</span> — Tinybird cofounder. Vibe-codes entire apps in single index.html files. Pays for Grok. Tells you not to use LinkedIn.</li>
+          <li><span class="year">2025</span> — Becomes CEO of Tinybird. Employees flinch when he says "Recortes."</li>
+          <li><span class="year">Jan 2026</span> — Publishes "Programador." Goes to notary. Cannot say the word out loud. Identity crisis achieved.</li>
+        </ul>
+      </section>
+
+      <section id="beliefs">
+        <h2>Things he believes (stolen from /about)</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Small & efficient</h3>
+            <p>Builds small things with time, iterating. Except his Substack posts, which are enormous.</p>
+          </div>
+          <div class="card">
+            <h3>"A ojo"</h3>
+            <p>Believes things should be understandable at a glance. His career path is not.</p>
+          </div>
+          <div class="card">
+            <h3>Effort > talent</h3>
+            <p>Creo muchísimo en el esfuerzo. Wakes at 6AM to code ESP32 lap timers. Effort confirmed.</p>
+          </div>
+          <div class="card">
+            <h3>Quality = business plan</h3>
+            <p>Except when he let LebrelBot write passive-aggressive newsletter copy and had to tone it down because LLMs "son especialmente buenos dando donde duele."</p>
+          </div>
+          <div class="card">
+            <h3>Vísteme despacio que tengo prisa</h3>
+            <p>His entire personality in one sentence. Lotus Elise owner. Race track weekends. SQL at dawn.</p>
+          </div>
+          <div class="card">
+            <h3>Terminado y cerrado</h3>
+            <p>Envies physical products. Software is a fractal of never-done. Tightens last bolt on Lotus → peace. Ships Tinybird feature → existential dread.</p>
+          </div>
         </div>
-        <div class="stat">
-          <div class="stat-num">256MB</div>
-          <div class="stat-label">RAM del Pentium III que lo cambió todo</div>
+      </section>
+
+      <section id="llm-corner">
+        <h2>How Javi uses LLMs (he wrote this, we're just highlighting)</h2>
+        <div class="card">
+          <h3>🤖 LebrelBot</h3>
+          <p>AI newsletter editor for Tinybird. Originally instructed to be "passive-aggressive." Had to remove that because the LLM was too good at it. <em>The children and LLMs reflect the worst acts of each one.</em></p>
         </div>
-      </div>
-    </section>
+        <div class="card" style="margin-top:1rem;">
+          <h3>🧪 JaviBot (aborted mission)</h3>
+          <p>Trained an LLM on his Slack writing style. It was "bastante cabroncete." Had to shut it down. You're welcome, Tinybird employees.</p>
+        </div>
+        <div class="card" style="margin-top:1rem;">
+          <h3>✍️ index.html everything</h3>
+          <p>His text editor, user journey analyzer, and probably this page's spiritual ancestor: all vibe-coded vanilla HTML apps via Cursor. Bespoke suit vs Zara €119.93.</p>
+        </div>
+        <div class="card" style="margin-top:1rem;">
+          <h3>💳 Pays for Grok</h3>
+          <p>Uses deepsearch on Twitter. Irony not lost on us: you're reading a page made by the thing he subscribes to, mocking him lovingly.</p>
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>🎼 Barra de perfeccionismo (Comentarios del director)</h2>
-      <p>
-        Javi prefiere ver el <em>ensayo</em> del concierto que el concierto. Por eso esta web tiene una barra de progreso que nunca llega al 100%.
-        Es el último 10-20% que solo Dios ve. (Y los empleados de Tinybird cuando ven un email titulado "Recortes 2025".)
-      </p>
-      <div class="rehearsal-bar"><div class="rehearsal-fill"></div></div>
-      <div class="rehearsal-label">director.exe: ajustando volumen... repetir parte B...</div>
-    </section>
+      <section id="notario-section">
+        <h2>Notario Identity Crisis Simulator™</h2>
+        <p>Inspired by <a href="https://javisantana.substack.com/p/programador" style="color:var(--sql-blue)">"Programador"</a> (Jan 2026). Type your profession. Hear the verdict.</p>
+        <div class="notario-sim visible" id="notarioSim">
+          <p style="color:#aaa;">El notario pregunta: <strong>¿Profesión?</strong></p>
+          <input type="text" id="professionInput" placeholder="programador" autocomplete="off">
+          <p class="verdict" id="notarioVerdict">Waiting for your existential input...</p>
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>📜 Timeline de roles que "me tocaron"</h2>
-      <div class="timeline-item">
-        <span class="timeline-year">~2000</span>
-        <div><strong>Digitalizador</strong> — Copiar papel → base de datos. Empresa del metal. Horrible. Automatizó el proceso porque obvio.</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2000s</span>
-        <div><strong>Programador</strong> — Videojuegos, embebido, backend, frontend, "todas las posiciones por las que un buen caraboli pueda pasar".</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">12+</span>
-        <div><strong>Fundador Agroguía</strong> — Rentable desde casi el primer mes. Modest exit. Bloomberg contento.</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">CTO</span>
-        <div><strong>CARTO</strong> — Convertir startup española en referente tecnológico. Spoiler: lo consiguió.</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2019+</span>
-        <div><strong>Cofundador Tinybird</strong> — Analizar datos en milisegundos. Escribir sobre ello en mil palabras.</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2025</span>
-        <div><strong>CEO Tinybird</strong> — "Empujar todos los días es carísimo a nivel mental." Firmado con sangre, dice él.</div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2026</span>
-        <div><strong>Ex-programador confeso</strong> — En el notario dice "programador" y le da vergüenza. Los LLMs programan mejor. Plot twist.</div>
-      </div>
-    </section>
+      <section id="weekend">
+        <h2>A typical Javi weekend (ESP32 edition)</h2>
+        <p style="line-height:1.8; color:#bbb;">
+          <strong>06:00</strong> — Alarm. Large coffee. Nobody else awake. Chef's "cooking for family" time except the family gets nothing.<br>
+          <strong>06:15</strong> — ESP32 data compressor. Kilobyte buffers. Lap timer for race track.<br>
+          <strong>09:00</strong> — Family wakes up. Javi has already confronted mortality via microcontroller constraints.<br>
+          <strong>Saturday PM</strong> — Lotus Elise. Circuit Ricardo Tormo. Checks every bolt because software never lets you tighten the last one.<br>
+          <strong>Sunday</strong> — Writes Substack post about how he'll never be a programmer again. Publishes anyway.
+        </p>
+      </section>
 
-    <section class="card">
-      <h2>💡 Cosas en las que cree (según su web, con comentario)</h2>
-      <ul>
-        <li>✅ Cosas pequeñas y eficientes — <em>excepto su lista de 40 posts sobre datos, que es una catedral entera</em></li>
-        <li>✅ Entender problemas hasta el último detalle — <em>por eso los dashboards analógicos de Porsche le flipan</em></li>
-        <li>✅ La calidad es el mejor business plan — <em>cita Pixar. Obvio.</em></li>
-        <li>✅ Largo plazo, no corto — <em>excepto cuando hay que publicar recortes anuales</em></li>
-        <li>✅ <i>Vísteme despacio que tengo prisa</i> — <em>su versión de hustle culture</em></li>
-        <li>✅ Personas que hacen mucho y dicen poco — <em>él escribe mucho. Ironía detectada.</em></li>
-      </ul>
-    </section>
+      <section id="changelog-section">
+        <h2>Changelog (what Grok changed)</h2>
+        <ul class="changelog">
+          <li><span class="date">2026-06-20</span> — Initial creation. Sources: javisantana.com homepage, /about, Substack ("Programador", "Como uso los LLM", "Terminado y cerrado", "Recortes 2025", "Comentarios del director"), Twitter @javisantana. Features: SQL rain, mode switcher, KPI counters, Notario simulator, marquee of uncomfortable truths. Mood: loving passive-aggression. No farmers harmed. One CEO mildly roasted.</li>
+        </ul>
+      </section>
+    </main>
 
-    <section class="card">
-      <h2>📡 Encuéntrale (si tienes tiempo y SQL)</h2>
-      <div class="social-grid">
-        <a class="social-link" href="https://javisantana.com" target="_blank" rel="noopener">
-          <strong>javisantana.com</strong>
-          <span>Catedrales de píxeles + 40 posts truncados a 50 palabras</span>
-        </a>
-        <a class="social-link" href="https://javisantana.substack.com" target="_blank" rel="noopener">
-          <strong>Substack</strong>
-          <span>"Programador" (ene 2026) · Recortes anuales que asustan a empleados</span>
-        </a>
-        <a class="social-link" href="https://twitter.com/javisantana" target="_blank" rel="noopener">
-          <strong>@javisantana</strong>
-          <span>Twitter/X en español. Opiniones sobre remoto, SQL y coches</span>
-        </a>
-        <a class="social-link" href="https://www.linkedin.com/in/javisantana" target="_blank" rel="noopener">
-          <strong>LinkedIn</strong>
-          <span>Modo profesional activado. Foto mirando al techo pensando algo inteligente</span>
-        </a>
-        <a class="social-link" href="https://github.com/javisantana" target="_blank" rel="noopener">
-          <strong>GitHub</strong>
-          <span>Código que escribe en ratos libres, no para pagar facturas</span>
-        </a>
-        <a class="social-link" href="https://tinybird.co" target="_blank" rel="noopener">
-          <strong>Tinybird</strong>
-          <span>La empresa. Queries en 16 milisegundos. Posts sobre eso en 16 minutos de lectura</span>
-        </a>
-      </div>
-      <p style="margin-top:1rem; font-size:0.85rem; color:#666;">
-        Email oficial del sitio serio: <code>javi@mycompanyname</code> — sí, literalmente eso pone en la homepage. Profesionalísimo.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>🏎️ Intereses detectados por scraping emocional</h2>
-      <p>
-        Dashboards analógicos de Porsche 996 · Indy500 con comentarios de Palou · Topuria comentando sus combates ·
-        Chernobyl podcast &gt; la serie · In-N-Out (solo hamburguesas, nada de burritos) ·
-        LEGO por acertar queries SQL sobre 1 billón de filas · Esp32 (post may 2025) ·
-        Vim keystrokes para SQL (post ene 2025).
-      </p>
-      <div class="quote-block">
-        «YOU CANNOT COMPETE WITH SOMEONE WHO IS HAVING FUN»
-        <br><small>— Recortes 2025. Excepto Javi, que compite consigo mismo siendo demasiado serio.</small>
-      </div>
-    </section>
-
-    <section class="card changelog" id="changelog">
-      <h2>📋 Changelog de esta web alternativa</h2>
-      <ul>
-        <li>
-          <time>20 jun 2026</time> — <strong>v1.0 — Creación inicial por Grok</strong>
-          <br>Primera versión. Fuentes: javisantana.com, Substack ("Programador" ene 2026, "Recortes 2025", "Comentarios del director"), about page, posts recientes.
-          <br>• Tres modos: Builder / CEO / LinkedIn Serious™
-          <br>• Barra de ensayo infinita (nod a "Comentarios del director")
-          <br>• Timeline desde digitalizador hasta ex-programador
-          <br>• Easter egg: 7 clics → popup del notario
-          <br>• Cursor de píxel-catedral
-        </li>
-      </ul>
-    </section>
+    <div class="social">
+      <a href="https://twitter.com/javisantana">@javisantana</a>
+      <a href="https://javisantana.substack.com">substack</a>
+      <a href="https://github.com/javisantana">github</a>
+      <a href="https://linkedin.com/in/javisantana">linkedin (shamans)</a>
+      <a href="https://tinybird.co">tinybird</a>
+      <a href="/">real site (boring)</a>
+    </div>
 
     <footer>
-      Hecho con cariño (y un poquito de mala leche) por <strong>Grok</strong>.
-      <br>La web seria está en <a href="https://javisantana.com">javisantana.com</a> — ésa sí construye catedrales de verdad.
-      <br><small>Haz 7 clics en cualquier sitio. Confía.</small>
+      <p>Made with excessive love and mild passive-aggression by Grok.</p>
+      <p>Javi would hate this. He'd also read the whole thing and then write a 2000-word response on Substack.</p>
+      <p class="blink" style="margin-top:1rem; color:var(--passive-lime);">● SERIOUS MODE: ENGAGED</p>
     </footer>
   </div>
 
-  <div class="easter-egg" id="click-counter">clics al notario: 0/7</div>
-
-  <div class="notary-popup" id="notary-popup">
-    <div class="notary-box">
-      <h3>🏛️ ACTA NOTARIAL</h3>
-      <p><strong>Nombre:</strong> Javi Santana</p>
-      <p><strong>Profesión:</strong> <span id="notary-profession">programador</span></p>
-      <p><strong>Estado civil:</strong> Casado con los datos</p>
-      <p style="margin-top:1rem; font-size:0.9rem;">
-        Crisis de identidad detectada. ¿CEO? ¿Builder? ¿Ex-programador?<br>
-        ChatGPT dice que pongas lo que quieras. Javi dice que le da vergüenza.
-      </p>
-      <button onclick="closeNotary()">Cerrar (como el ensayo, nunca termina del todo)</button>
-    </div>
-  </div>
-
+  <script src="/assets/js/tracking.js"></script>
   <script>
-    const modes = {
-      builder: {
-        title: 'Javi Santana',
-        subtitle: 'Los píxeles son los ladrillos humildes con los que uno puede construir catedrales.<br>(Y luego escribir 40 posts citando a Miyamoto sobre la energía del equipo.)',
-        heroTitle: 'Builder en la intersección de tech y data',
-        heroText: 'Hola, Javi Santana escribiendo. Cofundador de <strong>Tinybird</strong>. Antes CTO en <strong>CARTO</strong>. Antes eso, <strong>Agroguía</strong>. Programa en ratos libres. Lidera en horario laboral. Lo confiesa en Substack.',
-        heroQuote: '«Nunca fui programador, fui lo que tuve que ser en ese momento para conseguir lo que quería.»<br><small>— Substack "Programador", ene 2026</small>',
-        statYears: '20+'
-      },
-      ceo: {
-        title: 'Javi Santana, CEO',
-        subtitle: 'Empujar todos los días es carísimo a nivel mental.<br>(Pero alguien tiene que enviar emails titulados "Recortes".)',
-        heroTitle: 'Chief Executive Officer @ Tinybird',
-        heroText: 'Pasó de escribir SQL a firmar cosas. De analizar milisegundos a analizar energía de equipo (cita Miyamoto). De programar a <em>programar la programación de otros</em>. El Snowflake CEO "siempre da en el clavo", dice él. Coincidencia.',
-        heroQuote: '«Remote work is individual convenience at the expense of group effectiveness»<br><small>— Cita en Recortes 2025. Controversial. Como él.</small>',
-        statYears: 'CEO'
-      },
-      linkedin: {
-        title: 'Javier Santana',
-        subtitle: 'Builder | CEO | Data Engineering Leader | Cofounder @ Tinybird | Ex-CTO @ CARTO | Passionate about quality, long-term thinking, and analog dashboards',
-        heroTitle: 'Open to synergizing cathedral-grade pixel strategies',
-        heroText: 'Seasoned technology leader with 20+ years of experience at the intersection of data engineering and startup scaling. Proven track record building profitable companies (Agroguía exit), leading engineering teams (CARTO), and co-founding high-performance data platforms (Tinybird). Thought leader on SQL, LLMs, and the importance of rehearsing before the concert.',
-        heroQuote: '«Quality is the best business plan.»<br><small>— Pixar, quoted approximately 47 times across his content</small>',
-        statYears: '500+'
+    // SQL rain
+    (function() {
+      const canvas = document.getElementById('sqlRain');
+      const ctx = canvas.getContext('2d');
+      const chars = 'SELECT * FROM javi WHERE mood="serious" AND self_awareness=false; INSERT INTO cathedrals (pixels) VALUES (1); DROP TABLE impostor_syndrome;'.split('');
+      let drops = [];
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const cols = Math.floor(canvas.width / 18);
+        drops = Array(cols).fill(0).map(() => Math.random() * -100);
       }
+
+      function draw() {
+        ctx.fillStyle = 'rgba(10, 22, 40, 0.08)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00d4ff';
+        ctx.font = '14px Space Mono, monospace';
+
+        drops.forEach((y, i) => {
+          const char = chars[Math.floor(Math.random() * chars.length)];
+          const x = i * 18;
+          ctx.fillText(char, x, y);
+          if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i] += 14 + Math.random() * 6;
+        });
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      draw();
+    })();
+
+    // Mode switcher
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    const heroQuote = document.getElementById('heroQuote');
+    const notarioSim = document.getElementById('notarioSim');
+    const quotes = {
+      builder: '"Pixels are the humble bricks with which one can build cathedrals"<br><small style="color:#888; font-size:0.8rem;">— said unironically on javisantana.com</small>',
+      ceo: '"Remote work is individual convenience at the expense of group effectiveness"<br><small style="color:#888; font-size:0.8rem;">— Javi agrees with Snowflake CEO now. He IS the CEO. Character development.</small>',
+      notario: '"Nunca fui programador, fui lo que tuve que ser en ese momento"<br><small style="color:#888; font-size:0.8rem;">— Jan 2026, at the notary, in his head</small>'
     };
 
-    let clickCount = 0;
-    const professions = ['programador', 'CEO', 'Builder', 'digitalizador', 'ex-programador', 'líder de pensamiento', 'cofundador'];
-
-    document.querySelectorAll('.mode-btn').forEach(btn => {
+    modeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const mode = btn.dataset.mode;
-        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        modeBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        document.body.classList.toggle('linkedin-mode', mode === 'linkedin');
-
-        const m = modes[mode];
-        document.getElementById('main-title').textContent = m.title;
-        document.getElementById('main-subtitle').innerHTML = m.subtitle;
-        document.getElementById('hero-title').textContent = m.heroTitle;
-        document.getElementById('hero-text').innerHTML = m.heroText;
-        document.getElementById('hero-quote').innerHTML = m.heroQuote;
-        document.getElementById('stat-years').textContent = m.statYears;
+        document.body.className = 'mode-' + mode;
+        heroQuote.innerHTML = quotes[mode];
+        notarioSim.classList.toggle('visible', mode === 'notario');
       });
     });
 
-    document.addEventListener('click', () => {
-      clickCount++;
-      document.getElementById('click-counter').textContent = `clics al notario: ${clickCount}/7`;
-      if (clickCount === 7) {
-        document.getElementById('notary-profession').textContent =
-          professions[Math.floor(Math.random() * professions.length)];
-        document.getElementById('notary-popup').classList.add('show');
-        clickCount = 0;
+    // KPI counter animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.num').forEach(el => {
+            const target = +el.dataset.target;
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const tick = () => {
+              current = Math.min(current + step, target);
+              el.textContent = current + (target === 50 ? '%' : target === 3000 ? '+' : '');
+              if (current < target) requestAnimationFrame(tick);
+            };
+            tick();
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(document.getElementById('kpis'));
+
+    // Notario simulator
+    const professionInput = document.getElementById('professionInput');
+    const notarioVerdict = document.getElementById('notarioVerdict');
+
+    const verdicts = {
+      programador: 'El notario te mira. Tú miras el techo. Ambos sabéis que mientes. Eres CEO. Escribes en Substack. Programas a las 6AM. Pero "programador" suena a cualquiera. Clasismo detectado. Profesión registrada: "Builder de catedrales de pixels."',
+      ceo: 'Profesión aceptada. Los empleados de Tinybird ya están nerviosos. ¿Vas a publicar "Recortes 2026"?',
+      builder: 'Correcto. Es lo que pone en Twitter. Es lo que dice Tinybird. Es lo que niega el notario.',
+      digitalizador: 'Origin story unlocked. Achievement: automated your own job away. Respect.'
+    };
+
+    professionInput.addEventListener('input', () => {
+      const val = professionInput.value.toLowerCase().trim();
+      if (!val) {
+        notarioVerdict.textContent = 'Waiting for your existential input...';
+        return;
+      }
+      notarioVerdict.textContent = verdicts[val] ||
+        'Profesión registrada como "' + professionInput.value + '". El notario no entiende qué es Tinybird. Tú tampoco algunos días. Siguiente.';
+    });
+
+    // Easter egg: 7 clicks on title = identity crisis popup
+    let titleClicks = 0;
+    document.querySelector('h1').addEventListener('click', () => {
+      titleClicks++;
+      if (titleClicks === 7) {
+        alert('IDENTITY CRISIS UNLOCKED\n\nProfesión: ???\nEstado civil: casado con un Lotus Elise\nDNI: builder-ceo-programador-notario\n\nJavi wrote a whole Substack post about this moment. You clicked 7 times. Seek help. Or write a Substack post.');
+        titleClicks = 0;
       }
     });
-
-    function closeNotary() {
-      document.getElementById('notary-popup').classList.remove('show');
-      document.getElementById('click-counter').textContent = 'clics al notario: 0/7';
-    }
-
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX - 6 + 'px';
-      cursor.style.top = e.clientY - 6 + 'px';
-    });
-
-    document.title = modes.builder.title + ' — versión que se ríe un poco de sí mismo';
   </script>
 </body>
 </html>
