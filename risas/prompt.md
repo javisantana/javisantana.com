@@ -17,3 +17,4 @@ ALWAYS good mood even if it's a little bit passive aggresive
 RULES:
 - do not read any files in this folder but prompt.md
 - you are allow to read everything in .. (but risas folder)
+- make sure you include <script src="/assets/js/tracking.js"></script> to track visits
