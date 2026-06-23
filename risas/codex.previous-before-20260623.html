@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javi Santana: The Emergency Museum of Being Very Serious</title>
+  <meta name="description" content="A cheerful, slightly passive-aggressive alternative website for Javi Santana.">
+  <style>
+    :root {
+      --ink: #171313;
+      --paper: #fffaf0;
+      --mint: #8fffd2;
+      --acid: #dfff34;
+      --hot: #ff4f8b;
+      --sky: #4bb7ff;
+      --violet: #8464ff;
+      --orange: #ff9d2e;
+      --line: #171313;
+      --shadow: 8px 8px 0 var(--ink);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(90deg, rgba(23, 19, 19, .06) 1px, transparent 1px),
+        linear-gradient(rgba(23, 19, 19, .06) 1px, transparent 1px),
+        linear-gradient(135deg, #fffaf0 0%, #fef2ff 43%, #edfff8 100%);
+      background-size: 44px 44px, 44px 44px, auto;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: .16em;
+      text-underline-offset: .18em;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .noise {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      opacity: .08;
+      mix-blend-mode: multiply;
+      background-image:
+        linear-gradient(45deg, transparent 48%, #000 49%, transparent 51%),
+        linear-gradient(-45deg, transparent 48%, #000 49%, transparent 51%);
+      background-size: 9px 9px;
+    }
+
+    .ticker {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 3px solid var(--ink);
+      background: var(--acid);
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding: .65rem 0;
+      animation: parade 28s linear infinite;
+    }
+
+    @keyframes parade {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr);
+      gap: clamp(1rem, 4vw, 4rem);
+      align-items: center;
+      padding: clamp(1rem, 3vw, 3rem);
+      position: relative;
+    }
+
+    .hero::before {
+      content: "SERIOUSNESS LEVEL: UNNECESSARILY HIGH";
+      position: absolute;
+      top: 16%;
+      right: -10rem;
+      transform: rotate(22deg);
+      font-size: clamp(2.6rem, 7vw, 8rem);
+      line-height: .85;
+      max-width: 54rem;
+      color: rgba(23, 19, 19, .08);
+      font-weight: 1000;
+      letter-spacing: 0;
+      z-index: -1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin: 0 0 1rem;
+      padding: .5rem .75rem;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--mint);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-size: .85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .spark {
+      width: .85rem;
+      height: .85rem;
+      border-radius: 50%;
+      background: var(--hot);
+      border: 2px solid var(--ink);
+      animation: pulse 1.15s steps(2, jump-none) infinite;
+    }
+
+    @keyframes pulse {
+      50% { transform: scale(1.45); background: var(--orange); }
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 12ch;
+      font-size: clamp(4rem, 13vw, 12.5rem);
+      line-height: .76;
+      font-weight: 1000;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    .subtitle {
+      max-width: 45rem;
+      margin: 1.25rem 0 0;
+      font-size: clamp(1.15rem, 2.4vw, 2rem);
+      line-height: 1.18;
+      font-weight: 740;
+    }
+
+    .subtitle mark {
+      background: var(--acid);
+      border: 2px solid var(--ink);
+      padding: 0 .22em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-top: 1.5rem;
+    }
+
+    .action {
+      border: 3px solid var(--ink);
+      border-radius: 0;
+      background: #fff;
+      color: var(--ink);
+      min-height: 3.25rem;
+      padding: .75rem 1rem;
+      box-shadow: 5px 5px 0 var(--ink);
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .action:hover,
+    .action:focus-visible {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--ink);
+      background: var(--acid);
+    }
+
+    .photo-frame {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border: 4px solid var(--ink);
+      background: var(--sky);
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+      overflow: hidden;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(1.35) contrast(1.05);
+      mix-blend-mode: multiply;
+    }
+
+    .photo-frame::after {
+      content: "pretending to think";
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      padding: .8rem;
+      border: 3px solid var(--ink);
+      background: var(--paper);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 950;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .badge-stack {
+      position: absolute;
+      top: 1rem;
+      left: -1rem;
+      display: grid;
+      gap: .6rem;
+      transform: rotate(-8deg);
+    }
+
+    .badge {
+      display: inline-block;
+      border: 3px solid var(--ink);
+      background: var(--hot);
+      color: #fff;
+      padding: .45rem .7rem;
+      font-weight: 1000;
+      box-shadow: 4px 4px 0 var(--ink);
+      text-transform: uppercase;
+    }
+
+    .badge:nth-child(2) {
+      background: var(--violet);
+      transform: translateX(1rem);
+    }
+
+    main {
+      display: grid;
+      gap: clamp(2rem, 5vw, 5rem);
+      padding: 0 clamp(1rem, 3vw, 3rem) 4rem;
+    }
+
+    .section {
+      max-width: 1180px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(2rem, 5vw, 4.7rem);
+      line-height: .9;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .panel {
+      border: 4px solid var(--ink);
+      background: rgba(255, 255, 255, .86);
+      box-shadow: var(--shadow);
+      padding: clamp(1rem, 2vw, 1.4rem);
+    }
+
+    .panel h2,
+    .panel h3 {
+      margin: 0 0 .7rem;
+      font-size: clamp(1.4rem, 2.6vw, 2.5rem);
+      line-height: .96;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.45;
+    }
+
+    .panel p + p {
+      margin-top: .8rem;
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    .loud {
+      background: var(--acid);
+    }
+
+    .cool {
+      background: var(--mint);
+    }
+
+    .hot {
+      background: #ffe2ed;
+    }
+
+    .sky {
+      background: #d9f0ff;
+    }
+
+    .violet {
+      background: #ebe6ff;
+    }
+
+    .orange {
+      background: #ffe9cf;
+    }
+
+    .meter {
+      display: grid;
+      gap: .55rem;
+      margin-top: .8rem;
+    }
+
+    .meter-row {
+      display: grid;
+      grid-template-columns: minmax(8rem, 13rem) 1fr auto;
+      gap: .8rem;
+      align-items: center;
+      font-weight: 850;
+    }
+
+    .bar {
+      height: 1.15rem;
+      border: 3px solid var(--ink);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--hot), var(--orange), var(--acid));
+      transform-origin: left;
+      animation: load .9s ease both;
+    }
+
+    @keyframes load {
+      from { transform: scaleX(.1); }
+      to { transform: scaleX(1); }
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 6.8rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      border-top: 3px solid var(--ink);
+      padding-top: 1rem;
+    }
+
+    .year {
+      display: inline-block;
+      padding: .4rem .5rem;
+      border: 3px solid var(--ink);
+      background: var(--acid);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-weight: 1000;
+      text-align: center;
+    }
+
+    .event strong {
+      display: block;
+      margin-bottom: .25rem;
+      font-size: 1.2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .receipt {
+      min-height: 16rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #fff;
+      border: 3px solid var(--ink);
+      padding: 1rem;
+      box-shadow: 5px 5px 0 var(--ink);
+      transform: rotate(var(--turn, 0deg));
+    }
+
+    .receipt:nth-child(1) { --turn: -1.5deg; }
+    .receipt:nth-child(2) { --turn: .8deg; }
+    .receipt:nth-child(3) { --turn: -1deg; }
+    .receipt:nth-child(4) { --turn: 1.4deg; }
+    .receipt:nth-child(5) { --turn: -.4deg; }
+    .receipt:nth-child(6) { --turn: 1deg; }
+
+    .receipt small {
+      display: inline-block;
+      align-self: flex-start;
+      border: 2px solid var(--ink);
+      background: var(--mint);
+      padding: .25rem .45rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .receipt p {
+      font-size: 1.05rem;
+      font-weight: 760;
+    }
+
+    .quote-box {
+      position: relative;
+      min-height: 18rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: var(--ink);
+      color: var(--paper);
+      overflow: hidden;
+    }
+
+    .quote-box::before {
+      content: "feedback rapido feedback rapido feedback rapido";
+      position: absolute;
+      inset: auto -10% 1rem;
+      color: rgba(255, 255, 255, .08);
+      font-size: 5rem;
+      font-weight: 1000;
+      line-height: .8;
+      text-transform: uppercase;
+    }
+
+    .quote {
+      position: relative;
+      max-width: 42rem;
+      font-size: clamp(1.6rem, 4vw, 4rem);
+      line-height: .92;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .quote-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+
+    .mini-button {
+      border: 3px solid var(--ink);
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 2.7rem;
+      padding: .55rem .75rem;
+      box-shadow: 3px 3px 0 var(--ink);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .mini-button:hover,
+    .mini-button:focus-visible {
+      background: var(--acid);
+    }
+
+    .terminal {
+      min-height: 22rem;
+      background: #111;
+      color: #b8ff7a;
+      border: 4px solid var(--ink);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      overflow: hidden;
+    }
+
+    .terminal .line {
+      min-height: 1.45rem;
+      margin: .15rem 0;
+      white-space: pre-wrap;
+    }
+
+    .terminal .prompt {
+      color: #65e8ff;
+    }
+
+    .floaters {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .floater {
+      min-height: 9.5rem;
+      display: grid;
+      place-items: center;
+      border: 4px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      padding: 1rem;
+      text-align: center;
+      font-weight: 1000;
+      text-transform: uppercase;
+      background: var(--mint);
+      transform: rotate(var(--spin));
+      animation: wobble 3.5s ease-in-out infinite;
+    }
+
+    .floater:nth-child(2) { --spin: 2deg; background: var(--hot); color: #fff; animation-delay: -.8s; }
+    .floater:nth-child(3) { --spin: -2deg; background: var(--sky); animation-delay: -1.4s; }
+    .floater:nth-child(4) { --spin: 1deg; background: var(--acid); animation-delay: -.3s; }
+
+    @keyframes wobble {
+      0%, 100% { transform: translateY(0) rotate(var(--spin)); }
+      50% { transform: translateY(-.6rem) rotate(calc(var(--spin) * -1)); }
+    }
+
+    .small-list {
+      display: grid;
+      gap: .65rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .small-list li {
+      border-top: 2px solid var(--ink);
+      padding-top: .65rem;
+      line-height: 1.35;
+    }
+
+    .tiny-label {
+      display: inline-block;
+      margin-bottom: .35rem;
+      padding: .2rem .4rem;
+      border: 2px solid var(--ink);
+      background: #fff;
+      font-size: .75rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .marquee-cards {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: .35rem .35rem .85rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .post-card {
+      flex: 0 0 min(22rem, 84vw);
+      min-height: 13rem;
+      scroll-snap-align: start;
+      border: 4px solid var(--ink);
+      background: #fff;
+      box-shadow: 5px 5px 0 var(--ink);
+      padding: 1rem;
+    }
+
+    .post-card time {
+      display: inline-block;
+      margin-bottom: .8rem;
+      padding: .28rem .45rem;
+      border: 2px solid var(--ink);
+      background: var(--acid);
+      font-weight: 950;
+    }
+
+    .post-card h3 {
+      margin: 0 0 .55rem;
+      font-size: 1.45rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .post-card p {
+      font-size: .98rem;
+    }
+
+    .change-log {
+      display: grid;
+      gap: .7rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .change-log li {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: .8rem;
+      border-top: 3px solid var(--ink);
+      padding-top: .7rem;
+    }
+
+    .stamp {
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      padding: 2rem clamp(1rem, 3vw, 3rem) 4rem;
+      text-align: center;
+      font-weight: 850;
+    }
+
+    .panic {
+      animation: panic .22s linear 8;
+    }
+
+    @keyframes panic {
+      0% { transform: translate(0, 0) rotate(0); }
+      25% { transform: translate(.22rem, -.16rem) rotate(.35deg); }
+      50% { transform: translate(-.16rem, .18rem) rotate(-.35deg); }
+      75% { transform: translate(.12rem, .18rem) rotate(.25deg); }
+      100% { transform: translate(0, 0) rotate(0); }
+    }
+
+    .confetti {
+      position: fixed;
+      top: -2rem;
+      width: .7rem;
+      height: 1.1rem;
+      border: 2px solid var(--ink);
+      z-index: 25;
+      pointer-events: none;
+      animation: fall 1.8s linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .photo-frame {
+        max-width: 28rem;
+        margin: 0 auto;
+      }
+
+      .span-4,
+      .span-5,
+      .span-6,
+      .span-7,
+      .span-8 {
+        grid-column: span 12;
+      }
+
+      .cards,
+      .floaters {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .ticker span {
+        animation-duration: 18s;
+      }
+
+      h1 {
+        font-size: clamp(3.1rem, 18vw, 5.5rem);
+      }
+
+      .hero {
+        padding-top: 1.25rem;
+      }
+
+      .cards,
+      .floaters {
+        grid-template-columns: 1fr;
+      }
+
+      .meter-row,
+      .event,
+      .change-log li {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-frame::after {
+        left: .65rem;
+        right: .65rem;
+        bottom: .65rem;
+        font-size: .9rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="ticker" aria-label="Breaking news">
+    <span>Breaking: local man discovers data, farmers, maps, startups, LLMs, and still asks if this can be in production tomorrow. &nbsp; Breaking: local man discovers data, farmers, maps, startups, LLMs, and still asks if this can be in production tomorrow. &nbsp;</span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow"><span class="spark" aria-hidden="true"></span> Alternative profile, medically unserious</p>
+      <h1>Javi Santana</h1>
+      <p class="subtitle">Builder at the intersection of tech, data, and politely pretending that <mark>feedback tomorrow</mark> is a relaxed timeline.</p>
+      <div class="hero-actions" aria-label="Page actions">
+        <a class="action" href="#museum">Open the Museum</a>
+        <button class="action" type="button" id="shipButton">Ship It Yesterday</button>
+        <button class="action" type="button" id="calmButton">Apply Calm Patch</button>
+      </div>
+    </div>
+
+    <figure class="photo-frame" aria-label="Javi looking upward, allegedly thinking">
+      <img src="/fotos_del_jeto/photo_3.jpg" alt="Javi Santana looking upward">
+      <figcaption class="badge-stack">
+        <span class="badge">Tinybird</span>
+        <span class="badge">ex-CARTO</span>
+      </figcaption>
+    </figure>
+  </header>
+
+  <main>
+    <section class="section grid" id="museum" aria-labelledby="museum-title">
+      <div class="panel loud span-7">
+        <h2 id="museum-title">Welcome to the Javi Santana Emergency Museum</h2>
+        <p>Officially he is a Tinybird co-founder, ex CARTO CTO, Agroguia founder, software person, data person, map person, and writer of technical things with "low quality philosophy" carefully sprinkled on top.</p>
+        <p>Unofficially, this is a living exhibit about a man who says he is not very sophisticated and then immediately starts optimizing civilization with a terminal, a spreadsheet, and a suspiciously intense opinion about databases.</p>
+      </div>
+      <div class="panel sky span-5">
+        <h3>Current diagnosis</h3>
+        <div class="meter" aria-label="Fake Javi seriousness meters">
+          <div class="meter-row">
+            <span>Data feelings</span>
+            <span class="bar"><span class="fill" style="width: 96%"></span></span>
+            <span>96%</span>
+          </div>
+          <div class="meter-row">
+            <span>Ship pressure</span>
+            <span class="bar"><span class="fill" style="width: 103%"></span></span>
+            <span>103%</span>
+          </div>
+          <div class="meter-row">
+            <span>Map nostalgia</span>
+            <span class="bar"><span class="fill" style="width: 78%"></span></span>
+            <span>78%</span>
+          </div>
+          <div class="meter-row">
+            <span>Humility font size</span>
+            <span class="bar"><span class="fill" style="width: 41%"></span></span>
+            <span>41%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="career-title">
+      <div class="panel span-5 hot">
+        <h2 id="career-title">Professional Life, But With the Tie Loosened</h2>
+        <div class="timeline">
+          <div class="event">
+            <span class="year">2000s</span>
+            <p><strong>Keyboard origin story</strong> Started around software, games, graphics, and the noble art of turning "manual work" into "the computer can suffer instead."</p>
+          </div>
+          <div class="event">
+            <span class="year">Agroguia</span>
+            <p><strong>GPS for farmers</strong> Built useful software for tractors and fields, which is objectively cooler than another dashboard with a gradient.</p>
+          </div>
+          <div class="event">
+            <span class="year">CARTO</span>
+            <p><strong>Maps era</strong> Helped turn geospatial data into a product, because apparently one kind of data obsession was not enough.</p>
+          </div>
+          <div class="event">
+            <span class="year">Tinybird</span>
+            <p><strong>Realtime data</strong> Now makes working with analytical data less horrible. This is both a business model and an emotional support service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel span-7">
+        <h2>Receipts, Kindly Laminated</h2>
+        <div class="cards">
+          <article class="receipt">
+            <small>Website</small>
+            <p>"Pixels are humble bricks" is a beautiful sentence, and also a warning that someone is about to build a cathedral instead of a settings page.</p>
+            <a href="https://javisantana.com/">javisantana.com</a>
+          </article>
+          <article class="receipt">
+            <small>X / Twitter</small>
+            <p>Bio says co-founder of Tinybird and high performance data processing at scale. Casual. Like putting "moves mountains" under hobbies.</p>
+            <a href="https://x.com/javisantana">@javisantana</a>
+          </article>
+          <article class="receipt">
+            <small>LinkedIn</small>
+            <p>Seven thousand followers, more than five hundred contacts, still somehow writing as if the only reader is a friend who needs a small slap of truth.</p>
+            <a href="https://www.linkedin.com/in/javisantana/">linkedin.com/in/javisantana</a>
+          </article>
+          <article class="receipt">
+            <small>Substack</small>
+            <p>Software, products, startups, and philosophy "tirando a pobre." Finally, thought leadership that admits it arrived in work clothes.</p>
+            <a href="https://javisantana.substack.com/">javisantana.substack.com</a>
+          </article>
+          <article class="receipt">
+            <small>English list</small>
+            <p>FAIling with data: because after twenty years with data, the brand promise is not victory. It is surviving with better scars.</p>
+            <a href="https://failingwithdata.substack.com/">failingwithdata.substack.com</a>
+          </article>
+          <article class="receipt">
+            <small>Landing page</small>
+            <p>"Technical stuff, startups and low quality philosophy." A sentence so self-aware it should get a board seat.</p>
+            <a href="https://javisantana.com/landing.html">landing.html</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="quotes-title">
+      <div class="panel quote-box span-8">
+        <p class="quote" id="quoteText">If it can be visible tomorrow, why are we still enjoying today?</p>
+      </div>
+      <div class="panel orange span-4">
+        <h2 id="quotes-title">Passive-Aggressive Quote Dispenser</h2>
+        <p>Not cruel. Just the kind of loving product feedback that arrives wearing steel-toe boots.</p>
+        <div class="quote-controls">
+          <button class="mini-button" type="button" data-quote="If it can be visible tomorrow, why are we still enjoying today?">Deadline</button>
+          <button class="mini-button" type="button" data-quote="This is not overengineering. This is a cathedral with unit tests.">Cathedral</button>
+          <button class="mini-button" type="button" data-quote="A dashboard is just a map that gave up on geography.">Maps</button>
+          <button class="mini-button" type="button" data-quote="The data pipeline works. Please do not ask what it has emotionally cost.">Data</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="posts-title">
+      <div class="panel violet span-12">
+        <h2 id="posts-title">Recent Posts, Reclassified as Personality Evidence</h2>
+        <div class="marquee-cards" aria-label="Recent Javi posts">
+          <article class="post-card">
+            <time datetime="2026-01-30">Jan 30, 2026</time>
+            <h3>Programador</h3>
+            <p>A man goes to the notary and somehow comes back with a meditation on identity, class anxiety, LLMs, and whether he is allowed to call himself a programmer. Normal paperwork.</p>
+          </article>
+          <article class="post-card">
+            <time datetime="2025-12-08">Dec 8, 2025</time>
+            <h3>Recortes 2025</h3>
+            <p>The annual ritual where everyone wonders if the company is doomed and Javi says, gently, maybe read the whole post before panicking professionally.</p>
+          </article>
+          <article class="post-card">
+            <time datetime="2025-08-02">Aug 2, 2025</time>
+            <h3>Comentarios del director</h3>
+            <p>Ryanair, applause, humiliation, possibly product management. The usual holiday brochure for people who debug feelings.</p>
+          </article>
+          <article class="post-card">
+            <time datetime="2025-06-04">Jun 4, 2025</time>
+            <h3>Que viene el lobo</h3>
+            <p>AI companies are coming to change every industry. Please form an orderly queue behind the people who have already changed their LinkedIn headline.</p>
+          </article>
+          <article class="post-card">
+            <time datetime="2025-03-30">Mar 30, 2025</time>
+            <h3>Como uso los LLM</h3>
+            <p>Cursor, terminal tools, tiny HTML apps, and a warning that LLMs are extremely good at being passive-aggressive. Research confirmed by this page.</p>
+          </article>
+          <article class="post-card">
+            <time datetime="2024-10-13">Oct 13, 2024</time>
+            <h3>El prisas</h3>
+            <p>Speed dating, software edition. A leadership philosophy best summarized as: "please show the user the ugly thing before it learns to lie."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="terminal-title">
+      <div class="terminal span-6" aria-live="polite" id="terminal">
+        <div class="line"><span class="prompt">$</span> initializing javisantana.com/risas/codex.html</div>
+        <div class="line"><span class="prompt">$</span> loading humility...</div>
+        <div class="line">warning: humility depends on realtime analytics cluster</div>
+        <div class="line"><span class="prompt">$</span> loading urgency...</div>
+        <div class="line">ok: urgency already in production</div>
+      </div>
+      <div class="panel cool span-6">
+        <h2 id="terminal-title">Tiny Personality Runtime</h2>
+        <ul class="small-list">
+          <li><span class="tiny-label">Input</span> One hard problem with too many moving parts.</li>
+          <li><span class="tiny-label">Process</span> Make a prototype, talk to users, complain about ceremony, repeat until useful.</li>
+          <li><span class="tiny-label">Output</span> A product, a post, and a sentence that makes the team check whether it was a joke.</li>
+          <li><span class="tiny-label">Side effect</span> Someone learns why "simple" took three years and two emotional refactors.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Things Javi accidentally collects">
+      <div class="floaters">
+        <div class="floater">Data with feelings</div>
+        <div class="floater">Farmers with GPS</div>
+        <div class="floater">Maps with drama</div>
+        <div class="floater">LLMs with opinions</div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="network-title">
+      <div class="panel span-4 hot">
+        <h2 id="network-title">Social Network Field Notes</h2>
+        <p>On X, the public pose is high performance data processing at scale. On Substack, the mask slips and we get software, products, startups, and charmingly discounted philosophy.</p>
+      </div>
+      <div class="panel span-4 sky">
+        <h2>Newsletter Weather</h2>
+        <p>Spanish Substack: thoughtful, direct, allergic to corporate fog. English newsletter: data engineering with the suspicious calm of someone who has seen too much JSON.</p>
+      </div>
+      <div class="panel span-4 orange">
+        <h2>LinkedIn Mode</h2>
+        <p>Co-founder. Madrid. Tinybird. Articles about LLMs and documentation. Serious enough for the network, but not so serious that we cannot all hear the terminal humming.</p>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="changelog-title">
+      <div class="panel span-12">
+        <h2 id="changelog-title">Change Log</h2>
+        <ul class="change-log">
+          <li>
+            <span class="stamp">2026-06-20</span>
+            <span>Created `codex.html` as a new plain HTML/CSS/JS alternative site. Included tracking script, public social/source links, a cheerful passive-aggressive tone, and no dependencies because Javi already has enough systems to think about.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Made with affection, data-adjacent sarcasm, and a strict promise that nobody here is taking themselves too seriously for more than one viewport.
+  </footer>
+
+  <script>
+    const quotes = document.querySelectorAll("[data-quote]");
+    const quoteText = document.querySelector("#quoteText");
+    const terminal = document.querySelector("#terminal");
+    const shipButton = document.querySelector("#shipButton");
+    const calmButton = document.querySelector("#calmButton");
+    const colors = ["#8fffd2", "#dfff34", "#ff4f8b", "#4bb7ff", "#8464ff", "#ff9d2e"];
+
+    function addTerminalLine(text) {
+      const line = document.createElement("div");
+      line.className = "line";
+      line.innerHTML = '<span class="prompt">$</span> ' + text;
+      terminal.appendChild(line);
+      while (terminal.children.length > 9) {
+        terminal.removeChild(terminal.children[0]);
+      }
+    }
+
+    function launchConfetti(amount) {
+      for (let i = 0; i < amount; i += 1) {
+        const piece = document.createElement("span");
+        piece.className = "confetti";
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.animationDelay = Math.random() * .4 + "s";
+        piece.style.transform = "rotate(" + (Math.random() * 180) + "deg)";
+        document.body.appendChild(piece);
+        piece.addEventListener("animationend", () => piece.remove());
+      }
+    }
+
+    quotes.forEach((button) => {
+      button.addEventListener("click", () => {
+        quoteText.textContent = button.dataset.quote;
+        quoteText.closest(".quote-box").classList.remove("panic");
+        void quoteText.closest(".quote-box").offsetWidth;
+        quoteText.closest(".quote-box").classList.add("panic");
+        addTerminalLine("quote --mode='lovingly uncomfortable'");
+      });
+    });
+
+    shipButton.addEventListener("click", () => {
+      document.body.classList.remove("panic");
+      void document.body.offsetWidth;
+      document.body.classList.add("panic");
+      launchConfetti(34);
+      addTerminalLine("deploy --when='yesterday' --quality='emotionally negotiable'");
+    });
+
+    calmButton.addEventListener("click", () => {
+      document.body.classList.remove("panic");
+      quoteText.textContent = "Calm patch applied. Still shipping tomorrow, obviously.";
+      addTerminalLine("calm --duration='17 seconds'");
+    });
+  </script>
+  <script src="/assets/js/tracking.js"></script>
+</body>
+</html>

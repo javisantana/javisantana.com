@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javi Santana™ — Builder of Cathedrals (Unlicensed)</title>
+  <title>Javi Santana™ — Builder of Cathedrals (Unlicensed, Summer 2026 Refresh)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -158,6 +158,11 @@
     .mode-btn.active[data-mode="builder"] {
       border-color: var(--sql-blue);
       color: var(--sql-blue);
+    }
+
+    .mode-btn.active[data-mode="director"] {
+      border-color: #ff6b9d;
+      color: #ff6b9d;
     }
 
     main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
@@ -378,6 +383,108 @@
       margin: 1rem 0;
       font-style: italic;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.04), transparent, rgba(0, 212, 255, 0.04), transparent);
+      animation: spin 60s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    h1:hover {
+      animation: glitch 0.4s steps(2) infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px, 1px); }
+      50% { transform: translate(2px, -1px); }
+      75% { transform: translate(-1px, -1px); }
+    }
+
+    .panic-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      background: var(--notary-maroon);
+      color: #fff;
+      border: 3px solid var(--holy-gold);
+      border-radius: 12px;
+      cursor: pointer;
+      display: block;
+      margin: 1rem auto;
+      transition: transform 0.1s;
+    }
+
+    .panic-btn:hover { transform: scale(1.05); }
+    .panic-btn:active { transform: scale(0.95); }
+
+    .panic-result {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(45, 90, 39, 0.3);
+      border-radius: 10px;
+      border: 1px dashed var(--passive-lime);
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .panic-result.visible { display: block; }
+
+    .shaman-meter {
+      margin: 1rem 0;
+    }
+
+    .shaman-meter input[type="range"] {
+      width: 100%;
+      accent-color: var(--notary-maroon);
+    }
+
+    .shaman-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--passive-lime);
+      margin-top: 0.5rem;
+      min-height: 2.5rem;
+    }
+
+    .director-note {
+      background: linear-gradient(135deg, rgba(107, 29, 58, 0.15), rgba(45, 90, 39, 0.15));
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid #444;
+      margin-top: 1rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    body.mode-director {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='18' font-size='18'%3E🎼%3C/text%3E%3C/svg%3E") 12 12, auto;
+    }
+
+    body.mode-director h2 { color: #ff6b9d; }
+
+    .wolf-alert {
+      background: repeating-linear-gradient(-45deg, #2a0f1a, #2a0f1a 10px, #1a1628 10px, #1a1628 20px);
+      padding: 1rem;
+      border: 2px solid var(--holy-gold);
+      border-radius: 10px;
+      text-align: center;
+      animation: wolfPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes wolfPulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0); }
+      50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+    }
   </style>
 </head>
 <body class="mode-builder">
@@ -391,16 +498,24 @@
         <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
         <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
         <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
+        <span>🎼 prefers cathedral rehearsals over finished concerts — "solo Dios ve el último 10%"</span>
+        <span>🐺 "que viene el lobo" — even carnicerías noticed the code bots</span>
+        <span>💳 pays for Grok → Grok builds grok.html → infinite passive-aggressive loop</span>
+        <span>✈️ Ryanair to Treviso for culture; explains mantels to millennials in Substack</span>
         <span>⚠️ CEO MODE ACTIVATED 2025 — employees please do not panic at "Recortes" email subject lines</span>
         <span>🏗️ pixels → cathedrals → KPIs → existential Substack → repeat</span>
         <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
         <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
         <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
+        <span>🎼 prefers cathedral rehearsals over finished concerts — "solo Dios ve el último 10%"</span>
+        <span>🐺 "que viene el lobo" — even carnicerías noticed the code bots</span>
+        <span>💳 pays for Grok → Grok builds grok.html → infinite passive-aggressive loop</span>
+        <span>✈️ Ryanair to Treviso for culture; explains mantels to millennials in Substack</span>
       </div>
     </div>
 
     <header>
-      <div class="badge">ALTERNATIVE FACTS EDITION — powered by Grok (he pays for this)</div>
+      <div class="badge">SUMMER 2026 REFRESH — powered by Grok (yes, he still pays for this)</div>
       <h1>Javi Santana</h1>
       <p class="subtitle">Builder · CEO · Former Programador (retired, emotionally) · Ceiling Philosopher</p>
 
@@ -413,6 +528,7 @@
     <nav class="mode-bar">
       <button class="mode-btn active" data-mode="builder">🔧 Builder Mode</button>
       <button class="mode-btn" data-mode="ceo">👔 CEO Mode</button>
+      <button class="mode-btn" data-mode="director">🎼 Director Mode</button>
       <button class="mode-btn" data-mode="notario">📜 Notario Simulator</button>
     </nav>
 
@@ -426,6 +542,8 @@
           <div class="kpi"><span class="num" data-target="256">0</span><span class="label">MB RAM of first PC (Pentium III)</span></div>
           <div class="kpi"><span class="num" data-target="50">0</span><span class="label">% adult life NOT coding professionally*</span></div>
           <div class="kpi"><span class="num" data-target="3000">0</span><span class="label">word Substack posts about LinkedIn shamans</span></div>
+          <div class="kpi"><span class="num" data-target="2">0</span><span class="label">newsletters (ES + failingwithdata EN)</span></div>
+          <div class="kpi"><span class="num" data-target="119">0</span><span class="label">€ Zara suit vs bespoke index.html apps</span></div>
         </div>
         <p style="font-size:0.75rem; color:#555; margin-top:0.75rem;">*he still codes at 6AM. make it make sense.</p>
       </section>
@@ -441,7 +559,7 @@
           Career path: digitalizador (copied paper to database) → automated it out of existence → programmer → CTO at CARTO → farmer software → data cathedrals → CEO. He insists he never wanted the leadership roles, they just happened to walk past him and he accidentally founded things.
         </div>
 
-        <p>Find him on <a href="https://twitter.com/javisantana" style="color:var(--sql-blue)">Twitter</a>, <a href="https://www.linkedin.com/in/javisantana" style="color:var(--sql-blue)">LinkedIn</a> (the platform he calls full of shamans), or <a href="https://javisantana.substack.com" style="color:var(--sql-blue)">Substack</a> where he writes 3000-word essays about how he doesn't want to be what he is.</p>
+        <p>Find him on <a href="https://twitter.com/javisantana" style="color:var(--sql-blue)">Twitter</a>, <a href="https://www.linkedin.com/in/javisantana" style="color:var(--sql-blue)">LinkedIn</a> (the platform he calls full of shamans), <a href="https://javisantana.substack.com" style="color:var(--sql-blue)">Substack</a> (Spanish existential essays), or <a href="https://failingwithdata.substack.com" style="color:var(--sql-blue)">Failing With Data</a> (English, same guy, different font of seriousness).</p>
       </section>
 
       <section id="timeline">
@@ -510,10 +628,44 @@
       <section id="notario-section">
         <h2>Notario Identity Crisis Simulator™</h2>
         <p>Inspired by <a href="https://javisantana.substack.com/p/programador" style="color:var(--sql-blue)">"Programador"</a> (Jan 2026). Type your profession. Hear the verdict.</p>
-        <div class="notario-sim visible" id="notarioSim">
+        <div class="notario-sim" id="notarioSim">
           <p style="color:#aaa;">El notario pregunta: <strong>¿Profesión?</strong></p>
           <input type="text" id="professionInput" placeholder="programador" autocomplete="off">
           <p class="verdict" id="notarioVerdict">Waiting for your existential input...</p>
+        </div>
+      </section>
+
+      <section id="director-cut">
+        <h2>Director's commentary (stolen from Verona)</h2>
+        <p>From <a href="https://javisantana.substack.com/p/comentarios-del-director" style="color:var(--sql-blue)">"Comentarios del director"</a>: Javi paid cathedral entry, got 5 minutes, heard a rehearsal, and had a spiritual experience. He'd pay double to watch the mistakes.</p>
+        <div class="director-note">
+          "Disfruté más esa media hora que de las obras ejecutadas a la perfección en mi vida." — He literally prefers the messy rehearsal where the director stops to yell about volume. Same energy as reading his Substack drafts vs. his polished CEO emails. Same energy as this website.
+        </div>
+        <p style="margin-top:1rem; color:#888;">Pixels → cathedrals → but only if you can see the scaffolding and the conductor sweating. Software? Infinite rehearsal. Lotus Elise? Last bolt tightened. Peace.</p>
+      </section>
+
+      <section id="recortes-panic">
+        <h2>Recortes Panic Button™</h2>
+        <p>Every December, Tinybird employees see "Recortes" in the subject line and assume layoffs. It's just bookmarks. Classic Javi.</p>
+        <button class="panic-btn" id="panicBtn">📧 SEND "RECORTES 2026" TO ALL HANDS</button>
+        <div class="panic-result" id="panicResult">
+          <strong>Plot twist:</strong> It's a reading list. Jason Fried quotes. Snowflake CEO wisdom. Guillermo Rauch tweets. A goodbye letter to Switzerland. Things that "se me han quedado grabadas en el hipotálamo." Nobody was fired. Javi just wanted you to read more books and question if you're working on the right thing. <em>Working hard without asking "what are the better things" is a hidden form of laziness.</em> — He'd sign that with blood now that he's CEO.
+        </div>
+      </section>
+
+      <section id="shaman-detector">
+        <h2>LinkedIn Shaman Detector™</h2>
+        <p>Paste your inner monologue. We'll tell you if you sound like a middle manager who found AI.</p>
+        <div class="shaman-meter">
+          <input type="range" id="shamanSlider" min="0" max="100" value="0">
+          <p class="shaman-label" id="shamanLabel">Slide to add "leverage", "synergy", and "AI-first" to your coliflor startup.</p>
+        </div>
+      </section>
+
+      <section id="wolf-watch">
+        <h2>Wolf Watch (que viene el lobo)</h2>
+        <div class="wolf-alert">
+          <p><strong>🐺 THE WOLF IS HERE.</strong> Javi renamed nothing to .ai but rebuilt half of Tinybird for LLMs anyway. Carnicerías noticed. Developers evolved. He vibe-codes index.html apps while preaching focus. The wolf ate "programador" and spat out "builder."</p>
         </div>
       </section>
 
@@ -531,6 +683,7 @@
       <section id="changelog-section">
         <h2>Changelog (what Grok changed)</h2>
         <ul class="changelog">
+          <li><span class="date">2026-06-23</span> — Summer refresh. Added: Director Mode (🎼 cursor, Verona quotes), Recortes Panic Button, LinkedIn Shaman Detector slider, Wolf Watch section, cathedral rehearsal commentary, conic-gradient background, h1 glitch on hover, 2 new KPIs (dual newsletters, €119 Zara suit). Updated marquee (Grok meta-loop, Ryanair, lobo). Added failingwithdata.substack.com link. Re-read "Comentarios del director", "Que viene el lobo", landing.md. Mood: still loving, still passive-aggressive, now with rehearsal energy.</li>
           <li><span class="date">2026-06-20</span> — Initial creation. Sources: javisantana.com homepage, /about, Substack ("Programador", "Como uso los LLM", "Terminado y cerrado", "Recortes 2025", "Comentarios del director"), Twitter @javisantana. Features: SQL rain, mode switcher, KPI counters, Notario simulator, marquee of uncomfortable truths. Mood: loving passive-aggression. No farmers harmed. One CEO mildly roasted.</li>
         </ul>
       </section>
@@ -538,7 +691,8 @@
 
     <div class="social">
       <a href="https://twitter.com/javisantana">@javisantana</a>
-      <a href="https://javisantana.substack.com">substack</a>
+      <a href="https://javisantana.substack.com">substack (ES)</a>
+      <a href="https://failingwithdata.substack.com">failing with data (EN)</a>
       <a href="https://github.com/javisantana">github</a>
       <a href="https://linkedin.com/in/javisantana">linkedin (shamans)</a>
       <a href="https://tinybird.co">tinybird</a>
@@ -546,8 +700,8 @@
     </div>
 
     <footer>
-      <p>Made with excessive love and mild passive-aggression by Grok.</p>
-      <p>Javi would hate this. He'd also read the whole thing and then write a 2000-word response on Substack.</p>
+      <p>Made with excessive love and mild passive-aggression by Grok — the subscription he justified in a Substack post about not being a LinkedIn shaman.</p>
+      <p>Javi would hate this. He'd also read the whole thing, fix three typos mentally, and write a 2000-word response on Substack titled "Sobre las páginas que otros hacen sobre ti."</p>
       <p class="blink" style="margin-top:1rem; color:var(--passive-lime);">● SERIOUS MODE: ENGAGED</p>
     </footer>
   </div>
@@ -596,6 +750,7 @@
     const quotes = {
       builder: '"Pixels are the humble bricks with which one can build cathedrals"<br><small style="color:#888; font-size:0.8rem;">— said unironically on javisantana.com</small>',
       ceo: '"Remote work is individual convenience at the expense of group effectiveness"<br><small style="color:#888; font-size:0.8rem;">— Javi agrees with Snowflake CEO now. He IS the CEO. Character development.</small>',
+      director: '"Disfruté más el ensayo que el concierto. Solo Dios ve el último 10%."<br><small style="color:#888; font-size:0.8rem;">— Verona cathedral, Aug 2025. Also describes his relationship with software.</small>',
       notario: '"Nunca fui programador, fui lo que tuve que ser en ese momento"<br><small style="color:#888; font-size:0.8rem;">— Jan 2026, at the notary, in his head</small>'
     };
 
@@ -620,7 +775,7 @@
             const step = Math.ceil(target / 40);
             const tick = () => {
               current = Math.min(current + step, target);
-              el.textContent = current + (target === 50 ? '%' : target === 3000 ? '+' : '');
+              el.textContent = current + (target === 50 ? '%' : target === 3000 ? '+' : target === 119 ? '€' : '');
               if (current < target) requestAnimationFrame(tick);
             };
             tick();
@@ -639,7 +794,10 @@
       programador: 'El notario te mira. Tú miras el techo. Ambos sabéis que mientes. Eres CEO. Escribes en Substack. Programas a las 6AM. Pero "programador" suena a cualquiera. Clasismo detectado. Profesión registrada: "Builder de catedrales de pixels."',
       ceo: 'Profesión aceptada. Los empleados de Tinybird ya están nerviosos. ¿Vas a publicar "Recortes 2026"?',
       builder: 'Correcto. Es lo que pone en Twitter. Es lo que dice Tinybird. Es lo que niega el notario.',
-      digitalizador: 'Origin story unlocked. Achievement: automated your own job away. Respect.'
+      digitalizador: 'Origin story unlocked. Achievement: automated your own job away. Respect.',
+      cto: 'CTO en CARTO, CEO en Tinybird. El notario asiente. Los de ventas siguen siendo disfuncionales.',
+      chaman: 'LinkedIn Shaman detectado. Profesión registrada como "middle manager con ChatGPT". Javi te juzga desde Substack.',
+      emprendedor: 'Javi suspira. "No quiero ser emprendedor por ser emprendedor." Demasiado tarde. Ya fundaste tres cosas.'
     };
 
     professionInput.addEventListener('input', () => {
@@ -650,6 +808,26 @@
       }
       notarioVerdict.textContent = verdicts[val] ||
         'Profesión registrada como "' + professionInput.value + '". El notario no entiende qué es Tinybird. Tú tampoco algunos días. Siguiente.';
+    });
+
+    // Recortes panic button
+    document.getElementById('panicBtn').addEventListener('click', function() {
+      const result = document.getElementById('panicResult');
+      this.textContent = '😮‍💨 everyone panicked. it was bookmarks.';
+      result.classList.add('visible');
+    });
+
+    // Shaman detector
+    const shamanTexts = [
+      'Pareces un builder normal. Javi aprobaría. Sigue así.',
+      'Empiezas a oler a "thought leader". Una mención a "data-driven" detectada.',
+      'Nivel chamán: publicarías un hilo de 12 tweets sobre "el futuro de la IA" sin haber desplegado nada.',
+      'WhatEverFy.ai — coliflores multicolor con modelo propio. Javi te leería en LinkedIn y escribiría un post de 3000 palabras sobre ti sin nombrarte.',
+      'CRÍTICO: eres el middle manager que Javi describe en "Como uso los LLM". Deja LinkedIn. Abre Cursor. Haz un index.html.'
+    ];
+    document.getElementById('shamanSlider').addEventListener('input', function() {
+      const idx = Math.min(Math.floor(this.value / 25), shamanTexts.length - 1);
+      document.getElementById('shamanLabel').textContent = shamanTexts[idx];
     });
 
     // Easter egg: 7 clicks on title = identity crisis popup

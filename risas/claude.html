@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javi Santana - The Unnecessarily Serious Homepage</title>
+    <title>Javi Santana - The Unnecessarily Serious Homepage (now with CEO energy)</title>
     <script src="/assets/js/tracking.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Comic+Neue:wght@400;700&family=Space+Mono&display=swap');
@@ -331,6 +331,181 @@
         a { color: #ff6b35; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
+        .promotion-banner {
+            background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(255,107,53,0.08));
+            border: 2px dashed rgba(255,215,0,0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promotion-banner::before {
+            content: 'CEO CEO CEO CEO CEO CEO CEO CEO CEO CEO CEO CEO';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.6rem;
+            color: rgba(255,215,0,0.1);
+            letter-spacing: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .promotion-banner h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .promotion-banner p {
+            color: #aaa;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 0.8rem;
+        }
+
+        .running-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .running-stat {
+            text-align: center;
+        }
+
+        .running-stat .big-number {
+            font-family: 'Space Mono', monospace;
+            font-size: 3rem;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .running-stat .stat-label {
+            color: #666;
+            font-size: 0.8rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .vs-separator {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #c72c41;
+            font-style: italic;
+        }
+
+        .cathedral-section {
+            background: linear-gradient(135deg, rgba(78,205,196,0.03), rgba(199,44,65,0.05));
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        .cathedral-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .cathedral-section p {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .irony-meter {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .irony-meter h4 {
+            font-family: 'Space Mono', monospace;
+            color: #c72c41;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .meter-bar {
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            height: 24px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .meter-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 2s ease;
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            font-size: 0.75rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .santana-eng {
+            border: 2px solid rgba(255,107,53,0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            background: rgba(255,107,53,0.02);
+        }
+
+        .santana-eng h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+
+        .santana-eng .subtitle-eng {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .santana-eng p {
+            color: #888;
+            line-height: 1.7;
+            max-width: 550px;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+            color: #ffd700;
+        }
+
         .notary-dialog {
             background: rgba(255,255,255,0.02);
             border: 1px dashed rgba(255,255,255,0.1);
@@ -447,7 +622,7 @@
 
 <div class="hero">
     <div class="title-container">
-        <div class="tagline">co-founder, ex-cto, ex-programmer, current overthinker</div>
+        <div class="tagline">co-founder, ex-cto, ex-programmer, <span class="sparkle">current ceo</span>, eternal overthinker</div>
         <h1>Javi Santana</h1>
         <p class="subtitle">
             "<span class="strike">Pixels</span> Opinions are the humble bricks with which one can build <span class="strike">cathedrals</span> overly long blog posts about engineering principles"
@@ -464,7 +639,7 @@
 
 <div class="marquee-container">
     <div class="marquee-text">
-        QUALITY IS THE BEST BUSINESS PLAN &bull; UNDERSTAND PROBLEMS TO THE LAST DETAIL &bull; LONG TERM OVER SHORT TERM &bull; EFFORT OVER INNATE TALENT &bull; SIMPLICITY IS KING &bull; 16 MILLISECONDS OR BUST &bull; PIXELS ARE BRICKS &bull; TERMINADO Y CERRADO &bull; VISTEME DESPACIO QUE TENGO PRISA &bull; I BELIEVE IN SMALL AND EFFICIENT THINGS (except my car collection) &bull;
+        QUALITY IS THE BEST BUSINESS PLAN &bull; UNDERSTAND PROBLEMS TO THE LAST DETAIL &bull; LONG TERM OVER SHORT TERM &bull; EFFORT OVER INNATE TALENT &bull; SIMPLICITY IS KING &bull; 16 MILLISECONDS OR BUST &bull; PIXELS ARE BRICKS &bull; TERMINADO Y CERRADO &bull; VISTEME DESPACIO QUE TENGO PRISA &bull; I BELIEVE IN SMALL AND EFFICIENT THINGS (except my car collection) &bull; YOU CANNOT COMPETE WITH SOMEONE WHO IS HAVING FUN &bull; PUSHING EVERY DAY IS EXTREMELY EXPENSIVE MENTALLY (but I'll do it anyway) &bull; 10K IN UNDER 48 MINUTES AT 43 YEARS OLD &bull; REMOTE WORK IS INDIVIDUAL CONVENIENCE (says the man who codes alone at 6AM) &bull;
     </div>
 </div>
 
@@ -485,6 +660,22 @@
             A man who has spent 20+ years building technology companies but still gets existential anxiety when asked "what do you do?" at the notary. Has founded three companies, led engineering at one of Spain's most successful startups, raised $70M+ in funding... but please, call him a "builder." Not a programmer (that hurts), not an entrepreneur (too pretentious), not a manager (God forbid). Just a humble builder who happens to own a Lotus Elise and wake up at 6AM on weekends to code on microcontrollers. You know, as one does.
         </span>
     </p>
+</div>
+
+<div class="section">
+    <div class="promotion-banner">
+        <h3>BREAKING NEWS: He's CEO Now</h3>
+        <p>
+            In 2025, the man who doesn't want to be called an entrepreneur became CEO of Tinybird. His own words: <em>"Pushing every day is extremely expensive mentally."</em> Coincidentally, this is also what his employees say about him.
+        </p>
+        <p>
+            He quoted the Snowflake CEO and said he could "sign it in blood." Normal CEO behavior. Totally not intense at all.
+        </p>
+        <p style="color: #666; font-size: 0.85rem;">
+            Career trajectory: Programmer &rarr; CTO &rarr; Co-founder &rarr; CEO &rarr; <span style="color: #555;">"I'm just a builder, really"</span>
+        </p>
+        <p class="blink-warning">IDENTITY CRISIS LEVEL: CRITICAL</p>
+    </div>
 </div>
 
 <div class="section">
@@ -513,7 +704,7 @@
         <div class="timeline-item">
             <div class="year">2019-present</div>
             <h3>Tinybird - The Final Form(?)</h3>
-            <p>Co-founded a real-time data analytics company. Raised ~$70M from American and European investors. Built a product that processes data at absurd speeds. Still writes blog posts about how he's "not really an entrepreneur" and just "ended up here." Sir, you founded THREE companies. <span class="badge">~$70M raised</span> <span class="badge warn">still in denial</span></p>
+            <p>Co-founded a real-time data analytics company. Raised ~$70M from American and European investors. Built a product that processes data at absurd speeds. Became CEO in 2025 because apparently co-founding and raising $70M wasn't stressful enough. Still writes blog posts about how he's "not really an entrepreneur" and just "ended up here." Sir, you are the <em>chief executive officer</em> of the company you <em>founded</em>. <span class="badge">~$70M raised</span> <span class="badge warn">now CEO</span> <span class="badge warn">deeper denial</span></p>
         </div>
 
         <div class="timeline-item">
@@ -610,6 +801,118 @@
 </div>
 
 <div class="section">
+    <h2>The Athletic Arc</h2>
+    <p style="color: #666; margin-bottom: 1.5rem;">(Because being CEO, car enthusiast, weekend coder, and Substack philosopher wasn't enough hobbies)</p>
+
+    <div class="running-stats">
+        <div class="running-stat">
+            <span class="big-number">47:xx</span>
+            <span class="stat-label">10K time</span>
+        </div>
+        <div class="vs-separator">at</div>
+        <div class="running-stat">
+            <span class="big-number">43</span>
+            <span class="stat-label">years old</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>The Sub-48 Quest</h3>
+        <p>Added "run a 10K in under 50 minutes" to his life TODO list (yes, he has a life TODO list, because of course he does). Then, because he's incapable of doing anything at a normal level of intensity, he quoted Kipchoge's speech about embracing pain and pushed through to finish in under 48 minutes. Achievement unlocked at age 43.</p>
+        <div class="aside">The man builds real-time data platforms, races cars on tracks, wakes at 6AM to code, became CEO of a $70M startup, AND is training for running PRs. We're all just NPCs in his simulation.</div>
+    </div>
+
+    <div class="quote-block">
+        "YOU CANNOT COMPETE WITH SOMEONE WHO IS HAVING FUN"
+        <div class="attribution">&mdash; A quote Javi says is "tattooed on his hypothalamus." Not dramatic at all.</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>The Ryanair Enlightenment</h2>
+
+    <div class="cathedral-section">
+        <h3>When a Cathedral Rehearsal Changed Everything</h3>
+        <p>
+            Flew Ryanair to Treviso (the budget way to get to Venice, but he went to Padua instead because he's not a tourist, he's a <em>traveler</em>). Ended up in a cathedral in Verona where musicians were rehearsing for a concert.
+        </p>
+        <p>
+            Watched the director stop, give notes, repeat sections, adjust volumes. Claims he enjoyed that 30-minute rehearsal more than any finished concert he's ever attended in his life.
+        </p>
+        <p>
+            The takeaway? He prefers seeing how things are made over the finished product. He'd rather watch a Topuria fight breakdown than the actual fight. He'd rather listen to the Chernobyl podcast about production decisions than watch the show. He'd rather read post-mortems than launch announcements.
+        </p>
+        <p style="color: #666; font-style: italic;">
+            He literally said he would have paid double for the rehearsal. This man is the human embodiment of "I read the documentation before using the product."
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>The Ryanair Philosophy</h3>
+        <p>Opening line of the essay: <em>"Ryanair has two wonderful things: despite humiliating people with random rules, they still applaud on landing."</em> Then he explained tablecloths to millennials. Then he explained Romeo & Juliet to Gen Z. The man is a bridge between all generations and also a condescending uncle at dinner. Simultaneously.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>The Irony Machine</h2>
+
+    <div class="irony-meter">
+        <h4>Irony-O-Meter</h4>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">Measuring the gap between what Javi says and what Javi does:</p>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem;">Says "I'm not an entrepreneur" &bull; Is literally CEO</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 98%; background: linear-gradient(90deg, #ff6b35, #c72c41);"></div></div>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem; margin-top: 1rem;">Criticizes LinkedIn thought leaders &bull; Writes 3000-word Substack essays</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 87%; background: linear-gradient(90deg, #4ecdc4, #ff6b35);"></div></div>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem; margin-top: 1rem;">Advocates remote work limitations &bull; Codes alone at 6AM on weekends</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 92%; background: linear-gradient(90deg, #ffd700, #c72c41);"></div></div>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem; margin-top: 1rem;">Warns about AI hype &bull; Uses 4 different LLMs daily, built a roast-bot</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 95%; background: linear-gradient(90deg, #ff6b35, #4ecdc4);"></div></div>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem; margin-top: 1rem;">Believes in simplicity &bull; Has a Lotus, "other weekend cars" (plural), and a track addiction</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 78%; background: linear-gradient(90deg, #c72c41, #ffd700);"></div></div>
+
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 0.3rem; margin-top: 1rem;">Links to Claude's announcement saying "machines are better than me" &bull; This page was made by Claude</p>
+        <div class="meter-bar"><div class="meter-fill" style="width: 100%; background: linear-gradient(90deg, #ff6b35, #ffd700, #4ecdc4, #c72c41);"></div></div>
+        <div class="meter-label"><span></span><span style="color: #c72c41;">MAXIMUM IRONY</span></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Future Plans</h2>
+
+    <div class="santana-eng">
+        <h3>Santana Engineering</h3>
+        <div class="subtitle-eng">est. someday &bull; software/data &bull; japanese artisan vibes</div>
+        <p>
+            In his 2025 annual reflections, Javi revealed his retirement dream: starting "Santana Engineering" &mdash; a boutique software/data workshop inspired by a Japanese artisan car shop documentary.
+        </p>
+        <p>
+            He immediately followed this up with: <em>"I don't really like my last name, to be honest."</em>
+        </p>
+        <p>
+            So the dream is: a Japanese-inspired artisan software workshop, named after a surname he doesn't like, modeled after a car shop he saw in a YouTube documentary, announced in a newsletter that also discusses Ryanair and Daniel Kahneman's assisted death letter.
+        </p>
+        <p style="color: #555; font-size: 0.85rem; font-style: italic;">
+            Peak Javi. We wouldn't have it any other way.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>The Annual "Recortes" Tradition</h3>
+        <p>Every year Javi publishes "Recortes" (cuts/clippings) &mdash; his annual compilation of things that left a mark on him. His employees panic every time because "recortes" also means "layoffs" in Spanish. He acknowledges this, says <em>"yes, I did cut quite a few things this year"</em>, and then proceeds to share sentimental quotes about pain and perseverance for 3000 words. The cognitive whiplash is part of the brand.</p>
+    </div>
+
+    <div class="card">
+        <h3>The Secret Diary</h3>
+        <p>Keeps a diary for his daughter so she'll know "exactly what the hell was going through my head." Admits he doesn't know how to reliably deliver it to her in the future. The man who builds real-time data infrastructure capable of processing millions of events per second cannot figure out how to send a file to his daughter. <span class="badge">priorities</span></p>
+    </div>
+</div>
+
+<div class="section">
     <h2>Fun Facts</h2>
 
     <div class="card">
@@ -631,6 +934,21 @@
         <h3>The LinkedIn Take</h3>
         <p>Refers to LinkedIn thought leaders as "the same middle managers who don't know which way is up, who have found a new way to get noticed." Then goes on to write a 3000-word Substack post. The cognitive dissonance has its own gravitational field.</p>
     </div>
+
+    <div class="card">
+        <h3>The Claude Paradox</h3>
+        <p>In his "Programador" essay, Javi linked directly to <a href="https://www.anthropic.com/news/claude-opus-4-5">Anthropic's Claude announcement</a> while lamenting that "machines are better than you at what you were supposed to be good at." This webpage you're reading was made entirely by Claude. He commissioned the very machine he mourns to build his parody homepage. If irony were a programming language, Javi would be its principal maintainer.</p>
+    </div>
+
+    <div class="card">
+        <h3>The Recortes Panic</h3>
+        <p>Every December, Javi sends a newsletter titled "Recortes" (clippings/cuts). Every December, his Tinybird employees have a micro heart attack because "recortes" also means "layoffs." He knows this. He opens the essay by acknowledging it. He still uses the title. Every year. This is what they call "CEO energy."</p>
+    </div>
+
+    <div class="card">
+        <h3>The Condescending Uncle Energy</h3>
+        <p>In a single essay he explained what tablecloths are ("for millennials: tablecloths are like some things you put on top of tables, they used to be made of fabric"), then explained Romeo & Juliet ("for millennials"), then referenced IRC ("for Gen Z, a kind of Slack/Discord but well-made"). He is the Rosetta Stone of generational shade.</p>
+    </div>
 </div>
 
 <div class="section">
@@ -645,6 +963,12 @@
     <div class="counter">6:00</div>
     <div class="counter-label">AM wake-up time on Saturday, voluntarily, to code for fun</div>
 
+    <div class="counter">47:xx</div>
+    <div class="counter-label">minutes to run 10K at age 43, fueled by Kipchoge quotes</div>
+
+    <div class="counter">1</div>
+    <div class="counter-label">CEO title he definitely didn't want but somehow ended up with</div>
+
     <div class="counter">~119.93</div>
     <div class="counter-label">euros for a Zara suit, which is apparently the benchmark for everything</div>
 
@@ -657,12 +981,13 @@
 <div class="section changelog">
     <h2>Changelog</h2>
     <ul>
+        <li><span class="date">2026-06-23</span> - Major update by Claude (Opus 4.6, the very machine Javi mourns in his blog). Added: CEO promotion banner (he's CEO now, still in denial), the 10K athletic arc (sub-48 at 43, powered by Kipchoge), the Ryanair/cathedral rehearsal story (he'd pay double for behind-the-scenes), the Irony-O-Meter (measuring the gap between what he says and does), "Santana Engineering" retirement dream (Japanese vibes, Spanish surname he doesn't like), the Claude Paradox (he linked to Anthropic while lamenting machines), the Recortes annual panic (his employees think they're getting fired every December), and the Condescending Uncle Energy (explaining tablecloths to millennials). Sources: "Recortes 2025", "Comentarios del director", "Que viene el lobo", "Programador", and Twitter/X.</li>
         <li><span class="date">2026-06-20</span> - Initial creation by Claude. Assembled from Javi's blog posts, Substack, Twitter/X, and about page. Key sources: "Programador" (the notary crisis), "Terminado y cerrado" (the Lotus essay), "Como uso los LLM" (the LebrelBot incident), "ESP32" (the 6AM weekend programmer), and his actual about page where he admits to ceiling-staring. No farmers were harmed in the making of this page.</li>
     </ul>
 </div>
 
 <div class="footer">
-    <p>Made with passive-aggressive admiration by Claude |
+    <p>Made with passive-aggressive admiration by Claude (Opus 4.6 &mdash; yes, the one from the blog post) |
     <a href="https://javisantana.com">Visit the serious version</a> |
     <a href="https://javisantana.substack.com">Read the existential essays</a></p>
     <p style="margin-top: 1rem; color: #333;">
