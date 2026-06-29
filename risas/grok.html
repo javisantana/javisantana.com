@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javi Santana™ — Builder of Cathedrals (Unlicensed, Summer 2026 Refresh)</title>
+  <title>Javi Santana™ — Builder of Cathedrals (Unlicensed, Late June 2026 Refresh)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -163,6 +163,11 @@
     .mode-btn.active[data-mode="director"] {
       border-color: #ff6b9d;
       color: #ff6b9d;
+    }
+
+    .mode-btn.active[data-mode="track"] {
+      border-color: #ff6b35;
+      color: #ff6b35;
     }
 
     main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
@@ -485,6 +490,90 @@
       0%, 100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0); }
       50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
     }
+
+    .energy-bar {
+      height: 28px;
+      background: #111;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid #333;
+      margin: 1rem 0;
+    }
+
+    .energy-fill {
+      height: 100%;
+      width: 23%;
+      background: linear-gradient(90deg, var(--agro-green), var(--passive-lime), var(--holy-gold));
+      border-radius: 999px;
+      transition: width 0.4s ease;
+      animation: energyPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes energyPulse {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.25); }
+    }
+
+    .hp-gauge {
+      text-align: center;
+      padding: 1.5rem;
+      background: radial-gradient(circle at center, rgba(255, 107, 53, 0.15), transparent 70%);
+      border-radius: 16px;
+      border: 2px solid #ff6b35;
+    }
+
+    .hp-gauge input[type="range"] {
+      width: 100%;
+      accent-color: #ff6b35;
+      margin: 1rem 0;
+    }
+
+    .hp-readout {
+      font-family: 'Space Mono', monospace;
+      font-size: 2.5rem;
+      color: #ff6b35;
+      text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    }
+
+    .hp-verdict {
+      font-size: 1rem;
+      color: #ccc;
+      min-height: 3rem;
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .tweet-card {
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 4px solid var(--sql-blue);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .tweet-card .meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    .risas-banner {
+      background: linear-gradient(135deg, rgba(110, 69, 255, 0.2), rgba(255, 107, 157, 0.2));
+      border: 2px dashed var(--passive-lime);
+      border-radius: 14px;
+      padding: 1.25rem;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    body.mode-track {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='18' font-size='18'%3E🏎️%3C/text%3E%3C/svg%3E") 12 12, auto;
+    }
+
+    body.mode-track h2 { color: #ff6b35; }
   </style>
 </head>
 <body class="mode-builder">
@@ -493,31 +582,33 @@
   <div class="content-wrap">
     <div class="marquee-wrap">
       <div class="marquee" id="marquee">
-        <span>⚠️ CEO MODE ACTIVATED 2025 — employees please do not panic at "Recortes" email subject lines</span>
-        <span>🏗️ pixels → cathedrals → KPIs → existential Substack → repeat</span>
-        <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
-        <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
-        <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
-        <span>🎼 prefers cathedral rehearsals over finished concerts — "solo Dios ve el último 10%"</span>
-        <span>🐺 "que viene el lobo" — even carnicerías noticed the code bots</span>
-        <span>💳 pays for Grok → Grok builds grok.html → infinite passive-aggressive loop</span>
-        <span>✈️ Ryanair to Treviso for culture; explains mantels to millennials in Substack</span>
-        <span>⚠️ CEO MODE ACTIVATED 2025 — employees please do not panic at "Recortes" email subject lines</span>
-        <span>🏗️ pixels → cathedrals → KPIs → existential Substack → repeat</span>
-        <span>🐦 @javisantana still takes himself seriously on Twitter (Spanish)</span>
-        <span>📧 contact: javi@mycompanyname (he's funny AND professional)</span>
-        <span>⏰ wakes up 6:00 weekends to compress data on ESP32 — family asleep, Javi vibecoding</span>
-        <span>🎼 prefers cathedral rehearsals over finished concerts — "solo Dios ve el último 10%"</span>
-        <span>🐺 "que viene el lobo" — even carnicerías noticed the code bots</span>
-        <span>💳 pays for Grok → Grok builds grok.html → infinite passive-aggressive loop</span>
-        <span>✈️ Ryanair to Treviso for culture; explains mantels to millennials in Substack</span>
+        <span>⚠️ CEO MODE 2025 — "Recortes" subject line = bookmarks, not layoffs (probably)</span>
+        <span>🏎️ pinned tweet: 200hp Lotus → 475hp car → first 3 corners 🤣 — priorities</span>
+        <span>🐦 43.1K posts @javisantana — "low quality philosophy" (his words, landing.md)</span>
+        <span>🔋 Miyamoto: team energy is finite — Javi spent his on CEO + Substack + index.html</span>
+        <span>🎬 Robert Rodriguez Apr 2026: "experience in movies" ≠ watching Hollywood waste money</span>
+        <span>📁 /risas/ — Claude, Grok, Codex compete to roast him lovingly in vanilla HTML</span>
+        <span>⏰ 6:00 AM ESP32 lap timer — chef cooks for nobody, family still asleep</span>
+        <span>🐺 carnicerías noticed the code bots before some Tinybird engineers</span>
+        <span>💳 pays for Grok → Grok builds grok.html → he reads it, fixes typos mentally</span>
+        <span>📊 Spotify Wrapped = brutal data engineering at scale (579 likes, he wasn't joking)</span>
+        <span>⚠️ CEO MODE 2025 — "Recortes" subject line = bookmarks, not layoffs (probably)</span>
+        <span>🏎️ pinned tweet: 200hp Lotus → 475hp car → first 3 corners 🤣 — priorities</span>
+        <span>🐦 43.1K posts @javisantana — "low quality philosophy" (his words, landing.md)</span>
+        <span>🔋 Miyamoto: team energy is finite — Javi spent his on CEO + Substack + index.html</span>
+        <span>🎬 Robert Rodriguez Apr 2026: "experience in movies" ≠ watching Hollywood waste money</span>
+        <span>📁 /risas/ — Claude, Grok, Codex compete to roast him lovingly in vanilla HTML</span>
+        <span>⏰ 6:00 AM ESP32 lap timer — chef cooks for nobody, family still asleep</span>
+        <span>🐺 carnicerías noticed the code bots before some Tinybird engineers</span>
+        <span>💳 pays for Grok → Grok builds grok.html → he reads it, fixes typos mentally</span>
+        <span>📊 Spotify Wrapped = brutal data engineering at scale (579 likes, he wasn't joking)</span>
       </div>
     </div>
 
     <header>
-      <div class="badge">SUMMER 2026 REFRESH — powered by Grok (yes, he still pays for this)</div>
+      <div class="badge">LATE JUNE 2026 REFRESH — powered by Grok (subscription still active, unfortunately)</div>
       <h1>Javi Santana</h1>
-      <p class="subtitle">Builder · CEO · Former Programador (retired, emotionally) · Ceiling Philosopher</p>
+      <p class="subtitle">Builder · CEO · Former Programador (retired, emotionally) · Low-Quality Philosopher · 43.1K-Tweet Veteran</p>
 
       <div class="quote-block" id="heroQuote">
         "Pixels are the humble bricks with which one can build cathedrals"
@@ -529,6 +620,7 @@
       <button class="mode-btn active" data-mode="builder">🔧 Builder Mode</button>
       <button class="mode-btn" data-mode="ceo">👔 CEO Mode</button>
       <button class="mode-btn" data-mode="director">🎼 Director Mode</button>
+      <button class="mode-btn" data-mode="track">🏎️ Track Day Mode</button>
       <button class="mode-btn" data-mode="notario">📜 Notario Simulator</button>
     </nav>
 
@@ -544,8 +636,11 @@
           <div class="kpi"><span class="num" data-target="3000">0</span><span class="label">word Substack posts about LinkedIn shamans</span></div>
           <div class="kpi"><span class="num" data-target="2">0</span><span class="label">newsletters (ES + failingwithdata EN)</span></div>
           <div class="kpi"><span class="num" data-target="119">0</span><span class="label">€ Zara suit vs bespoke index.html apps</span></div>
+          <div class="kpi"><span class="num" data-target="43100">0</span><span class="label">tweets (pinned: 475hp panic)</span></div>
+          <div class="kpi"><span class="num" data-target="15600">0</span><span class="label">X followers watching seriously</span></div>
+          <div class="kpi"><span class="num" data-target="3">0</span><span class="label">people, 90min Zelda cinematics (Miyamoto)</span></div>
         </div>
-        <p style="font-size:0.75rem; color:#555; margin-top:0.75rem;">*he still codes at 6AM. make it make sense.</p>
+        <p style="font-size:0.75rem; color:#555; margin-top:0.75rem;">*he still codes at 6AM. make it make sense. also wrote "low quality philosophy" on his own landing page.</p>
       </section>
 
       <section id="about">
@@ -553,7 +648,7 @@
         <img src="/fotos_del_jeto/photo_3.jpg" alt="Javi mirando al techo" class="ceiling-photo">
         <p style="text-align:center; color:#888; margin-bottom:1rem;">Official pose: looking at the ceiling pretending to think something smart</p>
 
-        <p>Hi, <strong>Javi Santana typing</strong>. Builder at the intersection of tech and data. Cofounder of <a href="https://tinybird.co" style="color:var(--sql-blue)">Tinybird</a> — which he now runs as CEO because someone had to push every day and it turns out "empujar todos los días es carísimo a nivel mental."</p>
+        <p>Hi, <strong>Javi Santana typing</strong>. Builder at the intersection of tech and data. Cofounder of <a href="https://tinybird.co" style="color:var(--sql-blue)">Tinybird</a> — which he now runs as CEO because someone had to push every day and it turns out "empujar todos los días es carísimo a nivel mental." On <a href="/landing.html" style="color:var(--sql-blue)">landing.html</a> he admits he writes about "technical stuff, startups and <em>low quality philosophy</em>" because he's getting older. At least he's self-aware. Barely.</p>
 
         <div class="confession">
           Career path: digitalizador (copied paper to database) → automated it out of existence → programmer → CTO at CARTO → farmer software → data cathedrals → CEO. He insists he never wanted the leadership roles, they just happened to walk past him and he accidentally founded things.
@@ -669,6 +764,61 @@
         </div>
       </section>
 
+      <section id="hp-sim">
+        <h2>475hp Reality Check™ (pinned tweet simulator)</h2>
+        <p>His pinned X post (Sep 2025): going from a 200hp Lotus Elise to a 475hp car (+600kg). First three corners. Pure Javi — data engineer by day, track-day philosopher by weekend.</p>
+        <div class="hp-gauge">
+          <div class="hp-readout" id="hpReadout">200 hp</div>
+          <input type="range" id="hpSlider" min="200" max="475" value="200" step="5">
+          <p class="hp-verdict" id="hpVerdict">Lotus Elise mode. You can tighten the last bolt. Software envy: zero.</p>
+        </div>
+      </section>
+
+      <section id="team-energy">
+        <h2>Miyamoto Team Energy Meter™</h2>
+        <p>From his Nov 2025 homepage inspiration: Miyamoto made 90 minutes of Zelda cinematics with 3 people because <em>team energy is finite</em>. Javi internalized this. Then became CEO, writes 3000-word Substacks, vibe-codes apps, and pays for multiple AI subscriptions.</p>
+        <div class="energy-bar"><div class="energy-fill" id="energyFill"></div></div>
+        <p style="font-size:0.9rem; color:#aaa; text-align:center;" id="energyLabel">23% team energy remaining. Allocated to: CEO pushes (40%), cathedral metaphors (25%), ESP32 at dawn (12%), passive-aggressive bots (20%), cinema scenes (3%).</p>
+        <button class="panic-btn" id="energyBtn" style="background:var(--agro-green); border-color:var(--passive-lime); font-size:0.85rem; padding:0.75rem 1.5rem;">🔋 SPEND ENERGY ON NEW OKR</button>
+      </section>
+
+      <section id="rodriguez">
+        <h2>Robert Rodriguez Hiring Test™</h2>
+        <p>Apr 2026 inspiration on javisantana.com: Rodriguez says you need <em>"experience in movies"</em> (making your own messy thing), not <em>"movie experience"</em> (watching Hollywood waste money from the sidelines).</p>
+        <div class="card">
+          <h3>Javi's translation for Tinybird</h3>
+          <p>Joining to "learn how things are done" is movie experience. Building your own index.html tool with Cursor is experience in movies. He'd rather you figure it out than inherit a designed position where you never see why the company works (or doesn't). Loving passive-aggression: this also describes why he lets AI agents build parody websites about him in <code>/risas/</code>.</p>
+        </div>
+      </section>
+
+      <section id="twitter-hits">
+        <h2>Twitter Greatest Hits (43.1K posts, curated by Grok)</h2>
+        <div class="tweet-card">
+          "El wrapped de Spotify es un ejercicio brutal de analysis de datos a escala." — Then wrote a whole thread on how he'd architect it. 579 likes. Of course.
+          <div class="meta">@javisantana · Nov 2023 · data engineer cosplay</div>
+        </div>
+        <div class="tweet-card">
+          "Mi hija cada día nos pide que le metamos menos bocadillo... Resulta que les dejan salir al patio cuando se terminan el bocadillo. Para la siguiente que pongáis OKR."
+          <div class="meta">@javisantana · Apr 2022 · better than your sprint retro</div>
+        </div>
+        <div class="tweet-card">
+          "Patron que veo: persona buena técnicamente que sabe llevar proyectos... se vuelve a puestos técnicos puros. Para que te vas a comer el marrón por 4 duros más."
+          <div class="meta">@javisantana · Sep 2023 · describes his own career, doesn't notice</div>
+        </div>
+        <div class="tweet-card">
+          Bio still says "Co-founder of @Tinybird — I do high performance data processing at scale." He is also CEO. Titles are hard. Ask the notario.
+          <div class="meta">@javisantana · X profile · 15.6K followers · España</div>
+        </div>
+      </section>
+
+      <section id="risas-meta">
+        <h2>Meta: you are in /risas/</h2>
+        <div class="risas-banner">
+          <p>This page lives in the <strong>risas</strong> folder — alternative websites made by AI agents who read prompt.md and go slightly feral. Claude has one. Codex had one. Grok has this one. Javi collects them like cathedral bricks. He probably has opinions. He definitely has a Substack draft about it.</p>
+          <p style="margin-top:0.75rem;"><a href="/risas/" style="color:var(--passive-lime)">→ See the full agent roster</a> · <a href="/" style="color:var(--sql-blue)">→ Escape to the serious site</a></p>
+        </div>
+      </section>
+
       <section id="weekend">
         <h2>A typical Javi weekend (ESP32 edition)</h2>
         <p style="line-height:1.8; color:#bbb;">
@@ -683,6 +833,7 @@
       <section id="changelog-section">
         <h2>Changelog (what Grok changed)</h2>
         <ul class="changelog">
+          <li><span class="date">2026-06-29</span> — Late June refresh. Added: Track Day Mode (🏎️), 475hp Reality Check slider (pinned Sep 2025 tweet), Miyamoto Team Energy Meter with OKR button, Robert Rodriguez Hiring Test section, Twitter Greatest Hits (Spotify Wrapped, bocadillo OKR, career pattern tweet), /risas/ meta banner. New KPIs: 43.1K tweets, 15.6K followers, 3-person Zelda cinematics. Updated marquee (Miyamoto energy, Rodriguez Apr 2026, low quality philosophy). Re-read landing.md, X @javisantana profile, inspiration posts (2026-04-18, 2025-11-10). Mood: still loving, still passive-aggressive, now with horsepower.</li>
           <li><span class="date">2026-06-23</span> — Summer refresh. Added: Director Mode (🎼 cursor, Verona quotes), Recortes Panic Button, LinkedIn Shaman Detector slider, Wolf Watch section, cathedral rehearsal commentary, conic-gradient background, h1 glitch on hover, 2 new KPIs (dual newsletters, €119 Zara suit). Updated marquee (Grok meta-loop, Ryanair, lobo). Added failingwithdata.substack.com link. Re-read "Comentarios del director", "Que viene el lobo", landing.md. Mood: still loving, still passive-aggressive, now with rehearsal energy.</li>
           <li><span class="date">2026-06-20</span> — Initial creation. Sources: javisantana.com homepage, /about, Substack ("Programador", "Como uso los LLM", "Terminado y cerrado", "Recortes 2025", "Comentarios del director"), Twitter @javisantana. Features: SQL rain, mode switcher, KPI counters, Notario simulator, marquee of uncomfortable truths. Mood: loving passive-aggression. No farmers harmed. One CEO mildly roasted.</li>
         </ul>
@@ -751,6 +902,7 @@
       builder: '"Pixels are the humble bricks with which one can build cathedrals"<br><small style="color:#888; font-size:0.8rem;">— said unironically on javisantana.com</small>',
       ceo: '"Remote work is individual convenience at the expense of group effectiveness"<br><small style="color:#888; font-size:0.8rem;">— Javi agrees with Snowflake CEO now. He IS the CEO. Character development.</small>',
       director: '"Disfruté más el ensayo que el concierto. Solo Dios ve el último 10%."<br><small style="color:#888; font-size:0.8rem;">— Verona cathedral, Aug 2025. Also describes his relationship with software.</small>',
+      track: '"When you are used to a 200hp car and you drive a 475hp car (+600kg), first 3 corners 🤣"<br><small style="color:#888; font-size:0.8rem;">— pinned tweet, Sep 2025. Lotus Elise → humility → repeat.</small>',
       notario: '"Nunca fui programador, fui lo que tuve que ser en ese momento"<br><small style="color:#888; font-size:0.8rem;">— Jan 2026, at the notary, in his head</small>'
     };
 
@@ -830,12 +982,42 @@
       document.getElementById('shamanLabel').textContent = shamanTexts[idx];
     });
 
+    // HP slider (pinned tweet simulator)
+    const hpTexts = [
+      { max: 220, text: 'Lotus Elise mode. You can tighten the last bolt. Software envy: zero. Circuit Ricardo Tormo awaits.' },
+      { max: 300, text: 'Getting spicy. Still lighter than your Series B deck. Pastillas OK. Ego: manageable.' },
+      { max: 400, text: '+600kg of seriousness. First corner approaching. Javi\'s pinned tweet energy intensifies.' },
+      { max: 475, text: '475hp. First 3 corners 🤣 — this is the pinned tweet. Profesión en el notario: "conductor con humildad intermitente".' }
+    ];
+    document.getElementById('hpSlider').addEventListener('input', function() {
+      const hp = +this.value;
+      document.getElementById('hpReadout').textContent = hp + ' hp';
+      const msg = hpTexts.find(t => hp <= t.max);
+      document.getElementById('hpVerdict').textContent = msg ? msg.text : hpTexts[hpTexts.length - 1].text;
+    });
+
+    // Miyamoto team energy OKR button
+    const energyLabels = [
+      '23% team energy remaining. Allocated to: CEO pushes (40%), cathedral metaphors (25%), ESP32 at dawn (12%), passive-aggressive bots (20%), cinema scenes (3%).',
+      '12% — new OKR: "Ship passive-aggressive AI parody site." Miyamoto weeps. Cinema scenes cancelled.',
+      '4% — energy spent on reading Grok\'s changelog and mentally fixing typos. No cinema scenes. No Lotus maintenance.',
+      '0% — YOU CANNOT COMPETE WITH SOMEONE WHO IS HAVING FUN. Javi still having fun. Team energy: recharging at 6AM with ESP32.'
+    ];
+    let energyClicks = 0;
+    document.getElementById('energyBtn').addEventListener('click', function() {
+      energyClicks = Math.min(energyClicks + 1, 3);
+      const pct = [23, 12, 4, 0][energyClicks];
+      document.getElementById('energyFill').style.width = pct + '%';
+      document.getElementById('energyLabel').textContent = energyLabels[energyClicks];
+      this.textContent = energyClicks < 3 ? '🔋 SPEND MORE ENERGY ON OKR' : '🔋 ENERGY DEPLETED — GO WRITE SUBSTACK';
+    });
+
     // Easter egg: 7 clicks on title = identity crisis popup
     let titleClicks = 0;
     document.querySelector('h1').addEventListener('click', () => {
       titleClicks++;
       if (titleClicks === 7) {
-        alert('IDENTITY CRISIS UNLOCKED\n\nProfesión: ???\nEstado civil: casado con un Lotus Elise\nDNI: builder-ceo-programador-notario\n\nJavi wrote a whole Substack post about this moment. You clicked 7 times. Seek help. Or write a Substack post.');
+        alert('IDENTITY CRISIS UNLOCKED\n\nProfesión: ???\nEstado civil: casado con un Lotus Elise\nDNI: builder-ceo-programador-notario\nHP actual: 475 (primeras 3 curvas pendientes)\n\nJavi wrote a whole Substack post about this moment. You clicked 7 times. Seek help. Or write a Substack post.');
         titleClicks = 0;
       }
     });
