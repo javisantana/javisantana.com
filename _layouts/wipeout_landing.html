@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javi Santana — Anti-Grav League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: #020208;
+      color: #c8e8ff;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', 'Courier New', monospace;
+      font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / (900 - 320))), 18px);
+      line-height: 1.5;
+    }
+
+    .wo-scene {
+      --cyan: #00e8ff;
+      --magenta: #ff2da0;
+      --orange: #ff6a00;
+      --purple: #8b5cff;
+      --panel: rgba(0, 16, 40, 0.88);
+      --border: rgba(0, 232, 255, 0.55);
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+    }
+
+    .wo-grid {
+      position: fixed;
+      left: -20%;
+      right: -20%;
+      bottom: -10%;
+      height: 70vh;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(0, 232, 255, 0.18) 1px, transparent 1px),
+        linear-gradient(rgba(0, 232, 255, 0.18) 1px, transparent 1px);
+      background-size: 56px 56px;
+      transform: perspective(280px) rotateX(68deg);
+      transform-origin: 50% 100%;
+      animation: wo-grid-scroll 12s linear infinite;
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 85%);
+      -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 85%);
+    }
+    @keyframes wo-grid-scroll {
+      from { background-position: 0 0, 0 0; }
+      to   { background-position: 0 56px, 0 56px; }
+    }
+
+    .wo-scanlines {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px,
+        rgba(0, 0, 0, 0.18) 4px
+      );
+      opacity: 0.45;
+    }
+
+    .wo-glow-top {
+      position: fixed;
+      top: -30vh;
+      left: 50%;
+      width: 120vw;
+      height: 60vh;
+      transform: translateX(-50%);
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(107, 45, 255, 0.25) 0%, transparent 70%);
+    }
+
+    .wo-wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5em 1.5em 5em;
+    }
+
+    .wo-wrap a {
+      color: var(--cyan);
+      text-decoration: none;
+      transition: color 0.15s, text-shadow 0.15s;
+    }
+    .wo-wrap a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px var(--cyan);
+    }
+    .wo-wrap a:visited { color: #ff7ad0; text-decoration: none; }
+
+    .wo-header {
+      text-align: center;
+      margin-bottom: 2.5em;
+    }
+    .wo-badge {
+      display: inline-block;
+      font-family: 'Orbitron', 'Arial Narrow', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+      padding: 0.4em 1.4em;
+      transform: skewX(-14deg);
+      margin-bottom: 1.4em;
+      text-shadow: 0 0 14px rgba(255, 106, 0, 0.8);
+      box-shadow: 0 0 20px rgba(255, 106, 0, 0.25);
+    }
+    .wo-title {
+      font-family: 'Orbitron', 'Arial Narrow', sans-serif;
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      transform: skewX(-10deg);
+      color: var(--cyan);
+      text-shadow:
+        0 0 20px rgba(0, 232, 255, 0.8),
+        0 0 40px rgba(255, 45, 160, 0.4),
+        2px 2px 0 var(--magenta);
+    }
+    .wo-status {
+      margin-top: 1.5em;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(200, 232, 255, 0.65);
+    }
+    .wo-status::before {
+      content: '▶ ';
+      color: var(--cyan);
+      animation: wo-blink 1.2s step-end infinite;
+    }
+    @keyframes wo-blink { 50% { opacity: 0; } }
+
+    .wo-panel {
+      position: relative;
+      background: var(--panel);
+      border: 2px solid var(--border);
+      margin-bottom: 2em;
+      padding: 1.6em 1.8em;
+      box-shadow: 0 0 30px rgba(0, 232, 255, 0.12), inset 0 0 40px rgba(0, 80, 120, 0.15);
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+    .wo-panel::before, .wo-panel::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--cyan);
+    }
+    .wo-panel::before { top: 8px; left: 8px; border-width: 2px 0 0 2px; }
+    .wo-panel::after  { bottom: 8px; right: 8px; border-width: 0 2px 2px 0; }
+
+    .wo-label {
+      font-family: 'Orbitron', 'Arial Narrow', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--magenta);
+      margin-bottom: 1.2em;
+      transform: skewX(-8deg);
+      display: flex;
+      align-items: center;
+      gap: 0.8em;
+      text-shadow: 0 0 10px rgba(255, 45, 160, 0.5);
+    }
+    .wo-label::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--magenta), transparent);
+    }
+
+    .wo-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #b8d4ec;
+    }
+    .wo-text strong { color: #fff; font-weight: 400; }
+
+    .wo-stats {
+      list-style: none;
+      margin-top: 1em;
+    }
+    .wo-stats li {
+      position: relative;
+      padding: 0.6em 0 0.6em 1.8em;
+      border-bottom: 1px solid rgba(0, 232, 255, 0.15);
+      font-size: 0.9rem;
+    }
+    .wo-stats li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+    }
+    .wo-stats li:last-child { border-bottom: none; }
+
+    .wo-channel {
+      display: block;
+      padding: 0.8em 1em;
+      margin: 0.6em 0;
+      background: rgba(0, 232, 255, 0.06);
+      border-left: 4px solid var(--cyan);
+      transform: skewX(-3deg);
+    }
+    .wo-channel:hover {
+      background: rgba(0, 232, 255, 0.14);
+      border-left-color: var(--orange);
+    }
+    .wo-channel .lang {
+      font-family: 'Orbitron', 'Arial Narrow', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      color: var(--orange);
+      display: block;
+      margin-bottom: 0.3em;
+    }
+
+    .wo-log {
+      max-height: 52vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--cyan) transparent;
+    }
+    .wo-log-row {
+      display: grid;
+      grid-template-columns: 2.5em 1fr;
+      gap: 0.6em;
+      padding: 0.5em 0;
+      border-bottom: 1px solid rgba(139, 92, 255, 0.2);
+      font-size: 0.85rem;
+    }
+    .wo-log-row:hover { background: rgba(0, 232, 255, 0.06); }
+    .wo-log-num {
+      font-family: 'Orbitron', 'Arial Narrow', sans-serif;
+      font-size: 0.72rem;
+      color: var(--purple);
+      text-align: right;
+    }
+    .wo-log-row a { color: #d8eeff; }
+
+    .wo-footer {
+      text-align: center;
+      margin-top: 3em;
+      padding-top: 1.5em;
+      border-top: 2px solid rgba(0, 232, 255, 0.2);
+      font-size: 0.85rem;
+      color: rgba(200, 232, 255, 0.55);
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 600px) {
+      .wo-wrap { padding: 1.5em 1em 4em; }
+      .wo-panel { padding: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wo-scene">
+    <div class="wo-glow-top"></div>
+    <div class="wo-grid"></div>
+    <div class="wo-scanlines"></div>
+    {{ content }}
+  </div>
+  {% include tracker.html %}
+</body>
+</html>

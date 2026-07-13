@@ -1,45 +1,64 @@
 ---
-layout: base_data
+layout: wipeout_landing
 ---
 
-<div class="container desierto" style="margin-top:7em">
-  <div class="entry space">
-  <!-- <p style="font-size: 160%;margin:5em 0 5em 0;width: 80vw;position: relative;left: calc(-40vw + 50%);text-align: center;">Hey Twitter friend! Welcome to my digital home.</p> -->
-  <p style="margin: 4em 2em 2em 2em;font-size: 100%">
-  Hello I'm Javi Santana, you are landing here from a social network, this is the 101 about me:<br/>
-      <br />
-   • Tinybird co-founder<br/>
-   • I'm a tech person, love data, databases but my career started as a graphics/game programmer<br/>
-   • I write about technical stuff, startups and low quality philosophy (I'm getting older and that's what you do)<br/>
-  </p>
+<div class="wo-wrap">
 
-  <p style="margin: 1em 2em;font-size: 100%">
-  <strong>Subscribe to my newsletter</strong><br/>
-  • <a href="https://failingwithdata.substack.com">English mailing list</a> - Technical content about data engineering, product building, and startups<br/>
-  • <a href="https://javisantana.substack.com">Spanish mailing list</a> - Contenido técnico sobre ingeniería de datos, construcción de productos y startups
-  </p>
-  </div>
+  <header class="wo-header">
+    <div class="wo-badge">ANTI-GRAV LEAGUE</div>
+    <h1 class="wo-title">JAVI SANTANA</h1>
+    <div class="wo-status">pilot profile // incoming transmission</div>
+  </header>
 
-  <div class="entry space">
-    <h2 style="margin-bottom: 1em">Latest Articles</h2>
-   {% assign alldocs = site.posts | concat: site.inspiration |  concat: site.fastdata | sort:"date"%}	
-   {% for post in alldocs reversed %}
-   {% if post.title != "Index" %}
-        {% if forloop.index < 40 %}
-        <div class="entry " id="{{post.slug}}">
-        {% if post.title %} 
-        <p style="margin: 0 0 0 5%;font-size: 100%">• <a style="background-color: transparent; color: white;" href="{{ post.url}}">{{post.title}}</a></p>
+  <section class="wo-panel">
+    <div class="wo-label">01 — pilot file</div>
+    <p class="wo-text">
+      Hello, I'm Javi Santana. You landed here from a social network — here's the 101:
+    </p>
+    <ul class="wo-stats">
+      <li>Tinybird co-founder</li>
+      <li>Tech person — data, databases — career started as graphics / game programmer</li>
+      <li>Writes about technical stuff, startups, and low-quality philosophy (getting older, that's what you do)</li>
+    </ul>
+  </section>
+
+  <section class="wo-panel">
+    <div class="wo-label">02 — comm channels</div>
+    <p class="wo-text"><strong>Subscribe to my newsletter</strong></p>
+    <a class="wo-channel" href="https://failingwithdata.substack.com">
+      <span class="lang">EN //</span>
+      English mailing list — technical content about data engineering, product building, and startups
+    </a>
+    <a class="wo-channel" href="https://javisantana.substack.com">
+      <span class="lang">ES //</span>
+      Spanish mailing list — contenido técnico sobre ingeniería de datos, construcción de productos y startups
+    </a>
+  </section>
+
+  <section class="wo-panel">
+    <div class="wo-label">03 — data stream</div>
+    <div class="wo-log">
+      {% assign alldocs = site.posts | concat: site.inspiration | concat: site.fastdata | sort:"date" %}
+      {% assign log_pos = 0 %}
+      {% for post in alldocs reversed %}
+        {% if post.title != "Index" %}
+          {% assign log_pos = log_pos | plus: 1 %}
+          {% if log_pos < 40 %}
+            <div class="wo-log-row" id="{{ post.slug }}">
+              <span class="wo-log-num">{{ log_pos | prepend: '0' | slice: -2, 2 }}</span>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </div>
+          {% endif %}
         {% endif %}
-        </div>
-        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 
-    {% endif %}
-    {% endfor %}
+  <footer class="wo-footer">
+    Find me on
+    <a href="http://twitter.com/javisantana">twitter</a> ·
+    <a href="http://www.linkedin.com/in/javisantana">linkedin</a> ·
+    javi@tinybird.co
+  </footer>
 
-  </div>
-
-  <div class="entry space">
-    <p style="margin-bottom: 7em;font-size: 120%">
-    Find me on <a href="http://twitter.com/javisantana">twitter</a>, <a href="http://www.linkedin.com/in/javisantana">linkedin</a> or javi@tinybird.co</p>
-  </div>
 </div>
