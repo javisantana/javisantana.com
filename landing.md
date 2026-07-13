@@ -1,64 +1,93 @@
 ---
-layout: wipeout_landing
+layout: te_landing
 ---
 
-<div class="wo-wrap">
+<div class="te">
 
-  <header class="wo-header">
-    <div class="wo-badge">ANTI-GRAV LEAGUE</div>
-    <h1 class="wo-title">JAVI SANTANA</h1>
-    <div class="wo-status">pilot profile // incoming transmission</div>
+  <header class="te-header">
+    <div class="te-mark"></div>
+    <h1 class="te-name">javi santana</h1>
+    <p class="te-sub">builder · data · startups · low quality philosophy</p>
   </header>
 
-  <section class="wo-panel">
-    <div class="wo-label">01 — pilot file</div>
-    <p class="wo-text">
-      Hello, I'm Javi Santana. You landed here from a social network — here's the 101:
-    </p>
-    <ul class="wo-stats">
-      <li>Tinybird co-founder</li>
-      <li>Tech person — data, databases — career started as graphics / game programmer</li>
-      <li>Writes about technical stuff, startups, and low-quality philosophy (getting older, that's what you do)</li>
-    </ul>
+  <section class="te-section">
+    <div class="te-section-label">profile</div>
+
+    <div class="te-row">
+      <div class="te-thumb dark">JS</div>
+      <div class="te-row-body">
+        <div class="te-code">JS–101 <em>the 101.</em></div>
+        <p class="te-desc">
+          hello, you landed here from a social network. this is everything you need to know.
+        </p>
+        <ul class="te-specs">
+          <li>tinybird co-founder</li>
+          <li>tech person — data, databases — career started as graphics / game programmer</li>
+          <li>writes about technical stuff, startups, and low quality philosophy (getting older, that's what you do)</li>
+        </ul>
+        <dl class="te-spec-table">
+          <div class="te-spec-line"><dt>role</dt><dd>builder</dd></div>
+          <div class="te-spec-line"><dt>focus</dt><dd>data engineering, product, startups</dd></div>
+          <div class="te-spec-line"><dt>origin</dt><dd>graphics / game programming</dd></div>
+        </dl>
+      </div>
+    </div>
   </section>
 
-  <section class="wo-panel">
-    <div class="wo-label">02 — comm channels</div>
-    <p class="wo-text"><strong>Subscribe to my newsletter</strong></p>
-    <a class="wo-channel" href="https://failingwithdata.substack.com">
-      <span class="lang">EN //</span>
-      English mailing list — technical content about data engineering, product building, and startups
+  <section class="te-section">
+    <div class="te-section-label">newsletter series</div>
+
+    <a class="te-row" href="https://failingwithdata.substack.com">
+      <div class="te-thumb">EN</div>
+      <div class="te-row-body">
+        <div class="te-code">NL–EN <em>failing with data</em></div>
+        <p class="te-desc">technical content about data engineering, product building, and startups</p>
+        <span class="te-action">subscribe now</span>
+      </div>
     </a>
-    <a class="wo-channel" href="https://javisantana.substack.com">
-      <span class="lang">ES //</span>
-      Spanish mailing list — contenido técnico sobre ingeniería de datos, construcción de productos y startups
+
+    <a class="te-row" href="https://javisantana.substack.com">
+      <div class="te-thumb">ES</div>
+      <div class="te-row-body">
+        <div class="te-code">NL–ES <em>javi santana</em></div>
+        <p class="te-desc">contenido técnico sobre ingeniería de datos, construcción de productos y startups</p>
+        <span class="te-action">subscribe now</span>
+      </div>
     </a>
   </section>
 
-  <section class="wo-panel">
-    <div class="wo-label">03 — data stream</div>
-    <div class="wo-log">
+  <section class="te-section">
+    <div class="te-section-label">latest articles</div>
+
+    <div class="te-log">
       {% assign alldocs = site.posts | concat: site.inspiration | concat: site.fastdata | sort:"date" %}
       {% assign log_pos = 0 %}
       {% for post in alldocs reversed %}
         {% if post.title != "Index" %}
           {% assign log_pos = log_pos | plus: 1 %}
           {% if log_pos < 40 %}
-            <div class="wo-log-row" id="{{ post.slug }}">
-              <span class="wo-log-num">{{ log_pos | prepend: '0' | slice: -2, 2 }}</span>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </div>
+            <a class="te-row" href="{{ post.url }}" id="{{ post.slug }}">
+              <div class="te-thumb">{{ log_pos | prepend: '0' | slice: -2, 2 }}</div>
+              <div class="te-row-body">
+                <div class="te-code">AR–{{ log_pos | prepend: '0' | slice: -2, 2 }} <em>{{ post.title | downcase }}</em></div>
+                <span class="te-action">read more</span>
+              </div>
+            </a>
           {% endif %}
         {% endif %}
       {% endfor %}
     </div>
+
+    <p class="te-explore"><a href="/">explore all articles</a></p>
   </section>
 
-  <footer class="wo-footer">
-    Find me on
-    <a href="http://twitter.com/javisantana">twitter</a> ·
-    <a href="http://www.linkedin.com/in/javisantana">linkedin</a> ·
+  <footer class="te-footer">
+    find me on
+    <a href="http://twitter.com/javisantana">twitter</a>
+    <a href="http://www.linkedin.com/in/javisantana">linkedin</a>
     javi@tinybird.co
   </footer>
+
+  <p class="te-quote">our product philosophy is "everything should be instant fun" — teenage engineering</p>
 
 </div>
