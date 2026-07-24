@@ -12,4 +12,4 @@ published: true
 
 — Robert Rodriguez, *Rebel Without a Crew*
 
-Some people who joins Tinybird follow the same path, they want to join to learn how to do things. Most of the times makes more sense to go own your own and figure things out than being in an already designed position from where you don't see most of the details that make a company successful (or not that successful)
+Some people who join Tinybird do it to learn how to do things. Most of the times makes more sense to go on your own and figure things out than being in an already designed position from where you don't see most of the details that make a company successful (or not that successful)
