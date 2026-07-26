@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Landing"
+  short_description: "Optimize the landing page using behavioral data"
+  default_prompt: "Use $improve-landing to analyze traffic and improve the effectiveness of my landing page."
