@@ -78,13 +78,14 @@
             const top = rect.top + scrollY;
             const bottom = top + rect.height;
             const isVisible = Math.min(bottom, viewportBottom) - Math.max(top, viewportTop) > rect.height * 0.5;
+            const sectionName = el.dataset.analyticsSection || el.id || `section-${index}`;
             
             if (isVisible && !visibleSections.has(index)) {
                 visibleSections.add(index);
-                track('section_enter', { sectionIndex: index });
+                track('section_enter', { sectionIndex: index, sectionName });
             } else if (!isVisible && visibleSections.has(index)) {
                 visibleSections.delete(index);
-                track('section_exit', { sectionIndex: index });
+                track('section_exit', { sectionIndex: index, sectionName });
             }
         });
     }
@@ -93,6 +94,7 @@
     let scrollTimer;
     addEventListener('scroll', () => {
         const progress = getProgress();
+        const isNewMax = progress > maxProgress;
         if (progress > maxProgress) maxProgress = progress;
         lastActivity = Date.now();
         reading = true;
@@ -100,15 +102,25 @@
         clearTimeout(scrollTimer);
         scrollTimer = setTimeout(() => {
             updateSections();
-            track('scroll', { progress, isNewMax: progress > maxProgress ? 1 : 0 });
+            track('scroll', { progress, isNewMax: isNewMax ? 1 : 0 });
         }, 150);
     }, { passive: true });
     
     // Click
     document.addEventListener('click', e => {
         const el = e.target;
-        const data = { x: e.clientX, y: e.clientY, element: el.tagName };
-        if (el.tagName === 'A') data.href = el.href.slice(0, 50);
+        const link = el.closest && el.closest('a');
+        const section = el.closest && el.closest('[data-analytics-section]');
+        const data = {
+            x: e.clientX,
+            y: e.clientY,
+            element: el.tagName,
+            section: section?.dataset.analyticsSection
+        };
+        if (link) {
+            data.href = link.href.slice(0, 200);
+            data.label = link.dataset.analytics || link.textContent.trim().slice(0, 80);
+        }
         track('click', data);
     });
     
