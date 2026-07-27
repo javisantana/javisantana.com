@@ -120,6 +120,21 @@ Validate proportionally:
 
 Existing unrelated build warnings may be reported but should not be fixed without authorization.
 
+### Archive the visual state before pushing
+
+Before any push that includes landing-page changes, capture at least one full-page desktop
+screenshot of the final validated `/landing.html` and save it in `landing_history_shots/`.
+
+- Create the directory if it does not exist.
+- Use a non-overwriting filename such as `YYYY-MM-DD-HHMM-iteration-slug.png`.
+- Render the built site locally at a consistent desktop viewport; also archive a narrow/mobile
+  screenshot when the responsive layout changed.
+- Block or redirect the analytics endpoint during local capture so screenshots do not contaminate
+  visitor data.
+- Inspect the saved image for rendering failures before pushing.
+- Include the screenshot in the same push as the landing changes so the repository preserves the
+  page's visual history.
+
 ## Maintain the experiment log
 
 Append every deployed iteration to `landing_changes.md`; do not overwrite prior entries. Include:

@@ -1,6 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
+    const ANALYTICS_VERSION = '2026-07-27';
     
     if (!URL) return;
     
@@ -48,6 +49,7 @@
             path: location.pathname,
             referrer: document.referrer || undefined,
             viewportWidth: innerWidth,
+            analyticsVersion: ANALYTICS_VERSION,
             events: queue.splice(0)
         };
         
@@ -77,7 +79,9 @@
             const rect = el.getBoundingClientRect();
             const top = rect.top + scrollY;
             const bottom = top + rect.height;
-            const isVisible = Math.min(bottom, viewportBottom) - Math.max(top, viewportTop) > rect.height * 0.5;
+            const overlap = Math.max(0, Math.min(bottom, viewportBottom) - Math.max(top, viewportTop));
+            const visibilityThreshold = Math.min(rect.height * 0.25, innerHeight * 0.25);
+            const isVisible = overlap > 0 && overlap >= visibilityThreshold;
             const sectionName = el.dataset.analyticsSection || el.id || `section-${index}`;
             
             if (isVisible && !visibleSections.has(index)) {

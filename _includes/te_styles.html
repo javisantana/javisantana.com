@@ -31,6 +31,11 @@
   }
   .te a:hover { text-decoration: underline; }
   .te a:visited { color: var(--orange); }
+  .te-landing a:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+    text-decoration: none;
+  }
 
   a.te-mark {
     display: block;
@@ -570,5 +575,11 @@
     .te { padding: 2.5em 1em 5em; }
     .te-row { grid-template-columns: 48px 1fr; gap: 0.8em 1em; }
     .te-thumb { width: 48px; height: 48px; font-size: 0.58rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .te-landing .te-row {
+      transition: none;
+    }
   }
 </style>
