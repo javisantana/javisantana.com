@@ -1,4 +1,4 @@
-<script src="/assets/js/tracking.js?v=20260727"></script>
+<script src="/assets/js/tracking.js?v=20260728"></script>
 <script data-host="https://api.tinybird.co" data-token="p.eyJ1IjogIjRmN2U1ODEyLWUzMTAtNDJkYS1iMmU0LWZjZmU4MzYyZmJmYiIsICJpZCI6ICJhNjU4NDFlZi01OGRlLTQyMzAtOGRhZS04MDVlNzAyMjcyY2YiLCAiaG9zdCI6ICJldV9zaGFyZWQifQ.mHu_nLgjeMFsLsbm3tatm434FjRQJYFHIJ2WY1yE4_s">
 
   (function(){
@@ -220,7 +220,7 @@
    */
   function _trackPageHit() {
     // If local development environment
-    // if (/^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$/.test(location.hostname) || location.protocol === 'file:') return;
+    if (/^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1\]$/.test(location.hostname) || location.protocol === 'file:') return;
     // If test environment
     if (window.__nightmare || window.navigator.webdriver || window.Cypress)
       return

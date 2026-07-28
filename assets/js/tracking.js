@@ -1,9 +1,13 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = '2026-07-27';
+    const ANALYTICS_VERSION = '2026-07-28';
     
     if (!URL) return;
+    if (
+        location.protocol === 'file:' ||
+        /^(localhost|127(?:\.[0-9]+){3}|\[::1\])$/.test(location.hostname)
+    ) return;
     
     // Device detection
     const getDevice = () => {
@@ -68,7 +72,8 @@
     
     function getProgress() {
         const scrollableHeight = document.documentElement.scrollHeight - innerHeight;
-        return scrollableHeight > 0 ? Math.round((scrollY / scrollableHeight) * 100) : 0;
+        if (scrollableHeight <= 0) return 100;
+        return Math.max(0, Math.min(100, Math.round((scrollY / scrollableHeight) * 100)));
     }
     
     function updateSections() {
@@ -114,17 +119,17 @@
     document.addEventListener('click', e => {
         const el = e.target;
         const link = el.closest && el.closest('a');
+        if (!link) return;
+
         const section = el.closest && el.closest('[data-analytics-section]');
         const data = {
             x: e.clientX,
             y: e.clientY,
             element: el.tagName,
-            section: section?.dataset.analyticsSection
+            section: section?.dataset.analyticsSection,
+            href: link.href.slice(0, 200),
+            label: link.dataset.analytics || link.textContent.trim().slice(0, 80)
         };
-        if (link) {
-            data.href = link.href.slice(0, 200);
-            data.label = link.dataset.analytics || link.textContent.trim().slice(0, 80);
-        }
         track('click', data);
     });
     
@@ -134,7 +139,7 @@
         const text = getSelection().toString().trim();
         if (text.length > 3 && text.length < 500) {
             clearTimeout(selTimer);
-            selTimer = setTimeout(() => track('select', { text: text.slice(0, 100), length: text.length }), 500);
+            selTimer = setTimeout(() => track('select', { length: text.length }), 500);
         }
     });
     
@@ -154,7 +159,7 @@
     // Copy
     document.addEventListener('copy', () => {
         const text = getSelection().toString();
-        track('copy', { text: text.slice(0, 100), length: text.length });
+        track('copy', { length: text.length });
     });
     
     // Reached end
@@ -177,7 +182,10 @@
     
     setInterval(flush, FLUSH_MS);
     
-    addEventListener('beforeunload', () => {
+    let sessionEnded = false;
+    addEventListener('pagehide', () => {
+        if (sessionEnded) return;
+        sessionEnded = true;
         track('end', { 
             duration: Math.round((Date.now() - sessionStart) / 1000), 
             maxProgress, 

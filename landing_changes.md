@@ -112,3 +112,58 @@ timestamp, and keep excluding local referrers.
 - Newsletter and social click-through rates.
 - Median duration, maximum scroll, and reached-end rate, split by source and viewport.
 - Review selected and copied excerpts only in aggregate to identify repeatedly useful passages.
+
+## 2026-07-28 — Clean landing experiment boundary
+
+Deployment timestamp: pending. This iteration is not deployed yet.
+
+### Baseline
+
+Data window: 2026-07-27 10:36 CEST through 2026-07-28 18:34 CEST, covering the
+15 non-local-referrer sessions carrying `analyticsVersion = '2026-07-27'`. The window begins
+with the first observed versioned event; it is not a confirmed deployment timestamp. Repeated
+batched events were deduplicated by session and event payload.
+
+- Acquisition: 7 direct, 4 internal, 3 Twitter/X, and 1 search session.
+- 13 sessions were desktop and 2 were narrow/mobile, too few for a meaningful device comparison.
+- Median observed duration was 18 seconds among the 11 sessions with an end event. Median maximum
+  scroll was 18%, and 3 of 15 sessions reached the footer/end.
+- Section entry was 14 of 15 for `start-here`, 8 of 15 for `latest-writing`, 5 of 15 for `about`,
+  4 of 15 for `newsletter`, and 3 of 15 for `footer`.
+- Five sessions opened an article: 3 from the featured set and 2 from latest writing. There were
+  no newsletter or social clicks. Six of six link clicks carried both a stable label and a
+  destination; one additional click event was a non-link interaction.
+- In the 90-day window from 2026-04-29 through 2026-07-28, the current featured articles remained
+  the strongest relevant choices: 38 sessions for the four-years-of-data-engineering article,
+  23 for the Google-front-page article, and 20 for “40 things I learned about data.”
+- The database contains clearly local filesystem paths. Direct local visits have no localhost
+  referrer, so referrer filtering cannot remove all development traffic from the current cohort.
+
+### Hypothesis
+
+The current content is already producing article visits, and 15 sessions are not enough evidence
+for another layout or copy change. Preventing local collection, recording only actionable link
+clicks, and emitting one reliable end event will create a clean post-change cohort without
+disrupting the article-first experience.
+
+### Changes
+
+- Kept the landing content, order, and responsive layout unchanged.
+- Added analytics version `2026-07-28` and cache-busted the tracker URL.
+- Stopped analytics on `file:`, localhost, IPv4 loopback, and IPv6 loopback pages.
+- Limited click events to links, preserving nearest-anchor destination and stable label attribution.
+- Clamped scroll progress to 0–100% and reports 100% for pages without a scrollable area.
+- Moved session-end capture to `pagehide` and guarded it so one page view emits at most one end event.
+- Stopped sending selected or copied text; only aggregate-safe character counts are retained.
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-07-28'`, beginning at the confirmed deployment
+timestamp.
+
+- Confirm that local and filesystem paths no longer appear in the versioned cohort.
+- Coverage of `label` and `href` across all click events.
+- Coverage and uniqueness of end events, plus median duration and maximum scroll.
+- Article click-through rate for featured and latest writing.
+- Section entry and footer completion rates.
+- Newsletter and social click-through rates.
