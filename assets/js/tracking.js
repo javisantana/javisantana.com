@@ -1,7 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = '2026-07-28';
+    const ANALYTICS_VERSION = '2026-07-31';
     
     if (!URL) return;
     if (

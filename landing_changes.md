@@ -167,3 +167,66 @@ timestamp.
 - Article click-through rate for featured and latest writing.
 - Section entry and footer completion rates.
 - Newsletter and social click-through rates.
+
+## 2026-07-31 — Direct article CTA and denser first viewport
+
+Deployment timestamp: pending. This iteration is not deployed yet.
+
+### Baseline
+
+Data window: versioned non-local sessions with `analyticsVersion` in
+`('2026-07-27', '2026-07-28')` through 2026-07-31 14:32 UTC (latest event in
+`events.duckdb`). Localhost and `127.0.0.1` referrers are excluded. Batched events
+were expanded and deduplicated by session, event fields, and second.
+
+- 26 sessions: 14 direct, 6 Twitter/X, 4 internal, 2 search. Only 2 mobile
+  viewports (`viewportWidth < 700`); treat device splits as unreliable.
+- Median observed duration 18s; median maximum scroll 18%. 6 of 26 reached the
+  footer/end. 11 of 26 recorded 0% max scroll; 13 of 26 ended in ≤5s.
+- Section entry (versioned): `start-here` 23/26 (88%), `latest-writing` 13/26
+  (50%), `about` 7/26 (27%), `newsletter` 6/26 (23%), `footer` 5/26 (19%).
+- 7 of 26 sessions had a click. Attributable article labels included
+  `featured-four-years` (strongest), `latest-learn-to-cook`, `featured-forty-things`,
+  and `featured-google-frontpage`. No newsletter or social clicks in this window.
+- Measurement quality for `2026-07-28`: no `file:` paths; 18 of 19 click events
+  carried both `label` and `href`. End events still include long backgrounded
+  tabs (multi-hour `duration`); prefer medians.
+- 90-day article traffic (from 2026-05-01, non-local, content paths): featured
+  set remains appropriate—four-years (37 sessions), 40-things (20), Google
+  frontpage (18). Popular non-featured pieces include inspiration notes
+  (`experience-in-movies`, `learn-to-cook`) and `sql-agent`; kept out of “start
+  here” to preserve a clear professional introduction.
+
+### Hypothesis
+
+Most visitors bounce before scrolling past the first block. The primary hero CTA
+only jumped to `#start-here`, which is often already on screen, so it could not
+create an article visit. Putting a direct link to the strongest featured article
+in the first viewport, tightening hero density so writing stays visible, and
+shortening the latest list from 9 to 5 should raise article CTR among short
+sessions without changing who Javi is or what the page is for.
+
+### Changes
+
+- Primary hero CTA is now a direct link to the four-years data-engineering
+  article (`hero-read-four-years`), styled as a solid button.
+- Secondary hero links: in-page “more writing” and “about me” (no longer the
+  primary action).
+- Slightly shorter hero copy; reduced hero type size and vertical spacing so
+  featured cards sit higher in the first viewport.
+- Marked the top featured card as recommended (`te-featured-primary`) and
+  shortened card blurbs; reduced featured min-height.
+- Cut the dynamic latest list from 9 to 5 articles.
+- Analytics version `2026-07-31` with cache-busted tracker URL for a clean
+  post-change cohort.
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-07-31'`, beginning at the confirmed
+deployment timestamp; exclude local referrers.
+
+- Article CTR overall and for `hero-read-four-years` vs `featured-*` vs `latest-*`.
+- Share of sessions with any article click among those with duration ≤15s.
+- Section entry for `start-here` and `latest-writing`; footer completion.
+- Median duration and maximum scroll (ignore extreme open-tab durations).
+- Newsletter and social CTR (still secondary).

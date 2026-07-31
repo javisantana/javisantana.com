@@ -12,12 +12,13 @@ permalink: /landing.html
     <p class="te-kicker">Javi Santana · Madrid / internet</p>
     <h1 class="te-name">I build data products and write about what I learn.</h1>
     <p class="te-lede">
-      I’m a co-founder of <a href="https://www.tinybird.co" data-analytics="hero-tinybird">Tinybird</a>.
-      My work sits between engineering, product, and startups—usually where large amounts of data need to become useful, fast.
+      Co-founder of <a href="https://www.tinybird.co" data-analytics="hero-tinybird">Tinybird</a>.
+      I work where engineering, product, and startups meet—usually turning large amounts of data into something useful, fast.
     </p>
-    <nav class="te-hero-actions" aria-label="On this page">
-      <a href="#start-here" data-analytics="hero-start-reading">start reading <span aria-hidden="true">↓</span></a>
-      <a href="#about" data-analytics="hero-about">more about me</a>
+    <nav class="te-hero-actions" aria-label="Primary actions">
+      <a class="te-hero-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="hero-read-four-years">read a good starting point →</a>
+      <a href="#start-here" data-analytics="hero-more-writing">more writing</a>
+      <a href="#about" data-analytics="hero-about">about me</a>
     </nav>
   </header>
 
@@ -27,12 +28,12 @@ permalink: /landing.html
         <div class="te-section-label">start here</div>
         <h2 class="te-section-title">Three good places to begin</h2>
       </div>
-      <p>Popular, representative pieces from the archive.</p>
+      <p>The pieces people still read—and that best show how I think.</p>
     </div>
 
     <div class="te-featured-grid">
-      <a class="te-featured" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years">
-        <span class="te-featured-meta">01 · data engineering · en</span>
+      <a class="te-featured te-featured-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years">
+        <span class="te-featured-meta">01 · recommended · data engineering · en</span>
         <strong>Learnings after four years working with 50+ companies</strong>
         <span>Patterns from helping teams build real-time data systems.</span>
         <em>read article →</em>
@@ -41,14 +42,14 @@ permalink: /landing.html
       <a class="te-featured" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things">
         <span class="te-featured-meta">02 · data · en</span>
         <strong>40 things I learned about data</strong>
-        <span>Twenty years of data work condensed into practical observations.</span>
+        <span>Twenty years of data work in practical observations.</span>
         <em>read article →</em>
       </a>
 
       <a class="te-featured" href="/2013/06/27/como-aguantamos-una-portada-de-google.html" data-analytics="featured-google-frontpage">
         <span class="te-featured-meta">03 · engineering · es</span>
         <strong>Cómo aguantamos una portada de Google</strong>
-        <span>Una historia sobre escala, decisiones técnicas y sobrevivir al tráfico.</span>
+        <span>Escala, decisiones técnicas y sobrevivir al tráfico.</span>
         <em>leer artículo →</em>
       </a>
     </div>
@@ -58,7 +59,7 @@ permalink: /landing.html
     <div class="te-section-heading">
       <div>
         <div class="te-section-label">latest writing</div>
-        <h2 class="te-section-title">Notes from the workbench</h2>
+        <h2 class="te-section-title">Recent notes</h2>
       </div>
       <p>Data, software, building companies, and occasional low-quality philosophy.</p>
     </div>
@@ -69,7 +70,7 @@ permalink: /landing.html
       {%- for post in alldocs reversed -%}
         {%- if post.title != "Index" and post.name != "Index" -%}
           {%- assign log_pos = log_pos | plus: 1 -%}
-          {%- if log_pos < 10 %}
+          {%- if log_pos < 6 %}
             <a class="te-row te-article-row" href="{{ post.url }}" id="{{ post.slug }}" data-analytics="latest-{{ post.slug }}">
               <div class="te-thumb">{{ log_pos | prepend: '0' | slice: -2, 2 }}</div>
               <div class="te-row-body">
