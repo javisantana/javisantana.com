@@ -1,7 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = '2026-07-31';
+    const ANALYTICS_VERSION = '2026-08-03';
     
     if (!URL) return;
     if (
@@ -32,6 +32,11 @@
     let visibleSections = new Set();
     let lastActivity = sessionStart;
     let reading = true;
+    // Wall-clock duration still includes backgrounded tabs; activeMs only counts
+    // time while the document is visible so medians are not dominated by idle tabs.
+    let activeMs = 0;
+    let activeSliceStart = sessionStart;
+    let pageVisible = document.visibilityState !== 'hidden';
     
     /*
      * Event types:
@@ -143,15 +148,34 @@
         }
     });
     
+    function pauseActiveTime() {
+        if (!pageVisible) return;
+        activeMs += Date.now() - activeSliceStart;
+        pageVisible = false;
+    }
+
+    function resumeActiveTime() {
+        if (pageVisible) return;
+        activeSliceStart = Date.now();
+        pageVisible = true;
+    }
+
+    function getActiveDurationSeconds() {
+        const live = pageVisible ? (Date.now() - activeSliceStart) : 0;
+        return Math.round((activeMs + live) / 1000);
+    }
+
     // Visibility
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) {
             reading = false;
+            pauseActiveTime();
             track('blur');
             flush();
         } else {
             reading = true;
             lastActivity = Date.now();
+            resumeActiveTime();
             track('focus');
         }
     });
@@ -162,18 +186,23 @@
         track('copy', { length: text.length });
     });
     
-    // Reached end
+    // Reached end — prefer the instrumented landing footer when present
     let reachedEnd = false;
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !reachedEnd) {
                 reachedEnd = true;
-                track('reached_end', { secondsToReach: Math.round((Date.now() - sessionStart) / 1000) });
+                track('reached_end', {
+                    secondsToReach: Math.round((Date.now() - sessionStart) / 1000),
+                    activeSecondsToReach: getActiveDurationSeconds()
+                });
             }
         });
     }, { threshold: 0.5 });
     
-    const footer = document.querySelector('footer');
+    const footer =
+        document.querySelector('[data-analytics-section="footer"]') ||
+        document.querySelector('footer');
     if (footer) observer.observe(footer);
     
     // Init
@@ -186,10 +215,12 @@
     addEventListener('pagehide', () => {
         if (sessionEnded) return;
         sessionEnded = true;
-        track('end', { 
-            duration: Math.round((Date.now() - sessionStart) / 1000), 
-            maxProgress, 
-            reachedEnd: reachedEnd ? 1 : 0 
+        pauseActiveTime();
+        track('end', {
+            duration: Math.round((Date.now() - sessionStart) / 1000),
+            activeDuration: getActiveDurationSeconds(),
+            maxProgress,
+            reachedEnd: reachedEnd ? 1 : 0
         });
         flush();
     });

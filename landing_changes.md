@@ -170,7 +170,7 @@ timestamp.
 
 ## 2026-07-31 — Direct article CTA and denser first viewport
 
-Deployment timestamp: pending. This iteration is not deployed yet.
+Deployment timestamp: 2026-07-31 18:48 CEST (commit `b4576fe`).
 
 ### Baseline
 
@@ -230,3 +230,79 @@ deployment timestamp; exclude local referrers.
 - Section entry for `start-here` and `latest-writing`; footer completion.
 - Median duration and maximum scroll (ignore extreme open-tab durations).
 - Newsletter and social CTR (still secondary).
+
+## 2026-08-03 — Name-first hero and active duration
+
+Deployment timestamp: 2026-08-03 17:31 CEST (this commit).
+
+### Baseline
+
+Data window: non-local sessions with `analyticsVersion = '2026-07-31'` from
+2026-07-31 18:51 CEST through 2026-08-03 14:53 CEST (latest event in
+`events.duckdb` at analysis time). Localhost and `127.0.0.1` referrers
+excluded. Batched events expanded and deduplicated by session, fields, and
+second. Wall-clock durations above 1 hour treated as open-tab outliers for
+medians.
+
+- 18 sessions: 13 Twitter/X (`t.co`), 2 direct, 2 internal, 1 empty referrer.
+  Zero mobile viewports (`viewportWidth < 700`); device splits still unreliable.
+- Relative to the pre-change versioned cohort (`2026-07-27` + `2026-07-28`,
+  n=38): article session CTR 22.2% vs 13.2%; featured CTR 16.7% vs 7.9%;
+  hero article CTA 11.1% (new); newsletter CTR 11.1% vs 0%; section entry much
+  deeper (`latest-writing` 72% vs 37%, `about` 78% vs 18%, `footer` 61% vs 13%).
+  Mix shifted toward Twitter, so treat lift as directional, not proven.
+- Median duration among end events under 1h: 19s. Median max scroll 100%
+  (end-event `maxProgress` or scroll progress). 13/18 reached footer/end.
+- Short sessions (duration ≤15s): 3 of 5 had an article click (vs 1 of 21 pre).
+- Top landing click labels by sessions: `hero-about` (3),
+  `featured-forty-things` (3), `featured-four-years` (2),
+  `featured-google-frontpage` (2), `hero-read-four-years` (2). First newsletter
+  and social clicks appeared in this cohort.
+- Measurement quality: labels and hrefs present on link clicks. Wall-clock
+  `duration` still polluted by multi-hour backgrounded tabs (e.g. >20k seconds).
+  Some `reached_end` / 100% scroll pairs with near-zero end `maxProgress` remain
+  hard to interpret.
+- 90-day content traffic (from 2026-05-05, non-local): featured set still
+  appropriate for a professional intro—four-years (32 sessions), 40-things (21),
+  Google frontpage (14). Strong non-featured pieces (`learn-to-cook`,
+  `experience-in-movies`, `sql-agent`) stay out of “start here.”
+
+### Hypothesis
+
+The direct article CTA is working, especially on short Twitter sessions, but
+the most-clicked control is still `hero-about`: visitors arrive needing a clear
+name and role before they commit to a post. Putting the name in the H1 and a
+compact who/what line in the first viewport—while keeping the article CTA and
+making its label name the destination—should raise article CTR without another
+layout rewrite. Recording visibility-aware `activeDuration` will make the next
+cohort’s engagement medians trustworthy.
+
+### Changes
+
+- Hero H1 is now the name (“Javi Santana”); location stays in the kicker;
+  lede states co-founder role plus what he builds and writes about.
+- Primary CTA copy names the destination article
+  (`read: four years of data engineering →`); label `hero-read-four-years`
+  unchanged.
+- Slightly tighter hero spacing and name type scale so the first viewport stays
+  article-forward on desktop and mobile.
+- On narrow viewports, stack the primary CTA above secondary links and allow the
+  button label to wrap so it does not clip at 320px width.
+- Page title/description lead with the name for share/tab context.
+- Featured set, latest list length, section order, and visual system unchanged.
+- Analytics version `2026-08-03` with cache-busted tracker URL.
+- End events include `activeDuration` (seconds the document was visible);
+  `reached_end` prefers `[data-analytics-section="footer"]`.
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-08-03'`, beginning at the confirmed
+deployment timestamp; exclude local referrers. Prefer `activeDuration` for
+engagement medians; keep wall-clock `duration` only for outlier checks.
+
+- Article CTR overall and for `hero-read-four-years` vs `featured-*` vs `latest-*`.
+- Rate of `hero-about` clicks (should fall if the hero answers identity).
+- Share of sessions with any article click among those with `activeDuration` ≤15s.
+- Section entry for `start-here`, `latest-writing`, `about`; footer completion.
+- Newsletter and social CTR (secondary).
+- Coverage of `activeDuration` on end events.

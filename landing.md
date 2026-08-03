@@ -1,7 +1,7 @@
 ---
 layout: te_landing
-title: Data products, engineering, and startups
-description: Co-founder of Tinybird. I build data products and write about engineering, product, and startups.
+title: Javi Santana — data products, engineering, startups
+description: Javi Santana, co-founder of Tinybird. I build data products and write about engineering, product, and startups.
 permalink: /landing.html
 ---
 
@@ -9,16 +9,18 @@ permalink: /landing.html
 
   <header class="te-header te-landing-hero">
     <div class="te-mark-static" aria-hidden="true"></div>
-    <p class="te-kicker">Javi Santana · Madrid / internet</p>
-    <h1 class="te-name">I build data products and write about what I learn.</h1>
+    <p class="te-kicker">Madrid · internet</p>
+    <h1 class="te-name">Javi Santana</h1>
     <p class="te-lede">
       Co-founder of <a href="https://www.tinybird.co" data-analytics="hero-tinybird">Tinybird</a>.
-      I work where engineering, product, and startups meet—usually turning large amounts of data into something useful, fast.
+      I build data products and write about engineering, product, and startups—usually turning large amounts of data into something useful, fast.
     </p>
     <nav class="te-hero-actions" aria-label="Primary actions">
-      <a class="te-hero-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="hero-read-four-years">read a good starting point →</a>
-      <a href="#start-here" data-analytics="hero-more-writing">more writing</a>
-      <a href="#about" data-analytics="hero-about">about me</a>
+      <a class="te-hero-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="hero-read-four-years">read: four years of data engineering →</a>
+      <span class="te-hero-secondary">
+        <a href="#start-here" data-analytics="hero-more-writing">more writing</a>
+        <a href="#about" data-analytics="hero-about">about me</a>
+      </span>
     </nav>
   </header>
 
