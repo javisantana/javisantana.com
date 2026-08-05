@@ -7,7 +7,7 @@ layout: base_data
   <!-- <h1><span>@javisantana</span></h1> -->
   <p style="font-size: 160%;margin:5em 0 5em 0;width: 80vw;position: relative;left: calc(-40vw + 50%);text-align: center;">Pixels are the humble bricks with which one can build cathedrals</p>
   <p style="margin-bottom: 7em;font-size: 120%">
-  Hi, Javi Santana typing. Builder working at the intersection of tech and data, cofounder of <a href="https://tinybird.co">Tinybird</a>. Find me on <a href="http://twitter.com/javisantana">twitter</a>, <a href="http://www.linkedin.com/in/javisantana">linkedin</a> or javi@mycompanyname</p>
+  Hi, Javi Santana typing. Builder working at the intersection of tech and data, cofounder of <a href="https://tinybird.co">Tinybird</a>. Find me on <a href="http://x.com/javisantana">X</a>, <a href="http://www.linkedin.com/in/javisantana">linkedin</a></p>
   </div>
 
 
