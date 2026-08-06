@@ -306,3 +306,99 @@ engagement medians; keep wall-clock `duration` only for outlier checks.
 - Section entry for `start-here`, `latest-writing`, `about`; footer completion.
 - Newsletter and social CTR (secondary).
 - Coverage of `activeDuration` on end events.
+
+## 2026-08-06 — Compact "start here" rows
+
+Not deployed at time of writing. Deployment timestamp: _pending_.
+
+### Baseline
+
+Data window: non-local sessions with `analyticsVersion = '2026-08-03'`, from
+2026-08-03 15:33 UTC through 2026-08-06 14:01 UTC (latest event in
+`events.duckdb` at analysis time). Localhost and `127.0.0.1` referrers
+excluded. n=15 sessions — small; treat everything below as directional.
+
+- Acquisition: 7 `t.co`, 7 empty referrer, 1 internal. Mix shifted away from
+  Twitter versus the previous cohort (13/18 `t.co`), so cross-cohort rate
+  comparisons are confounded.
+- 2 sessions under 700px viewport — first mobile traffic in a versioned cohort,
+  still too few to segment on.
+- **Median `activeDuration` 6s** (9/15 sessions reported it; 6 sessions sent no
+  `end` event). This is the first trustworthy engagement number: the previous
+  cohort's 19s median was wall-clock and inflated by backgrounded tabs.
+- Section entry: `start-here` 14/15, `latest-writing` 11/15, `about` 4/15,
+  `newsletter` 3/15, `footer` 3/15.
+- Median max scroll 10%. The previous cohort's 100% median is **not**
+  comparable — the `2026-08-03` `reached_end` change (prefer the footer section
+  over a generic sentinel) removed the artifact that inflated it. Depth metrics
+  restart from this cohort.
+- Landing clicks by session: `hero-read-four-years` 2, `latest-learn-to-cook` 2,
+  `hero-tinybird` 1, `latest-experience-in-movies` 1. Article-click sessions
+  4/15 (26.7%) vs 4/18 (22.2%) previously.
+- `hero-about` fell to 0 clicks (was 3/18). The name-first hero appears to have
+  answered the identity question in place, as hypothesised on 2026-08-03.
+- The featured grid took **0 clicks** this cohort while the plainer 5-row latest
+  list took 3.
+- Pooled across all four versioned cohorts (n=71) the featured grid and the
+  latest list have earned **6 click-sessions each**, despite the grid occupying
+  roughly a full scroll and sitting higher on the page.
+- 90-day content traffic (from 2026-05-06, non-local): four-years 44 sessions,
+  learn-to-cook 31, experience-in-movies 27, 40-things 23, sql-agent 21.
+  `como-aguantamos-una-portada-de-google` has dropped out of the top 12; it is
+  now the weakest featured slot and worth revisiting if it stays flat.
+- Measurement quality: click labels and hrefs resolve correctly to the nearest
+  anchor. `activeDuration` coverage is 60% of sessions, limited by missing `end`
+  events rather than by the field itself.
+
+### Hypothesis
+
+Attention, not persuasion, is the binding constraint: the median visitor gives
+the page about six active seconds, and only a quarter of them ever reach the
+`about` section. Within that budget the three-card featured grid is expensive —
+it costs a full scroll of space and, pooled over 71 sessions, converts no better
+than a compact list of titles. Rendering "start here" in the same lightweight
+row form as the latest list should put both sets of articles inside the first
+six seconds of scrolling, raise total article CTR, and lift entry into the
+lower sections, without removing any link or changing the visual language.
+
+### Changes
+
+- The `te-featured-grid` three-card block became a `te-log` of three
+  `te-article-row` rows, identical in form to the latest-writing list. Titles,
+  URLs, and `featured-*` analytics labels are unchanged so the click comparison
+  carries across the boundary.
+- Card descriptions were dropped; each row keeps a single meta line
+  (`recommended · data engineering · en · read article →`) carrying topic,
+  language, and the affordance.
+- Slot 01 keeps its emphasis via a tinted row (`te-featured-row`) and an orange
+  index, replacing the larger `te-featured-primary` card treatment.
+- Added `overflow-wrap: break-word` to `.te-code` so long titles cannot overflow
+  a narrow row. The old `.te-featured*` rules are left in place but are now
+  unused by the landing page.
+- Featured set, latest list length, section order, hero, and about/newsletter
+  content are all unchanged.
+- Analytics version `2026-08-06` with cache-busted tracker URL.
+
+### Validation notes
+
+Verified with real device-metric emulation over CDP rather than
+`chrome --headless --window-size`: that flag does **not** set the layout width
+(it renders at 500px and crops), which means the `*-mobile-320.png` shots
+archived in earlier iterations do not show true 320px layout. At genuine 320px
+and 390px viewports `document.scrollWidth == clientWidth`, so the page has no
+horizontal overflow, and all rows wrap correctly. Shots archived as
+`2026-08-06-1900-compact-start-here-{desktop,mobile-320}.png`.
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-08-06'` from the confirmed
+deployment timestamp; exclude local referrers. Compare against the
+`2026-08-03` cohort, which shares the corrected depth instrumentation.
+
+- Total article-click sessions, and the `featured-*` vs `latest-*` split — the
+  core test of whether compact rows beat cards for the same content.
+- Section entry for `latest-writing`, `about`, `newsletter`, `footer`; the
+  shorter page should raise all four.
+- Median `activeDuration`, plus its coverage (missing `end` events, 6/15 here).
+- Median max scroll, now that the depth metric is trustworthy.
+- Newsletter and social CTR (secondary).

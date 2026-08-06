@@ -33,26 +33,29 @@ permalink: /landing.html
       <p>The pieces people still read—and that best show how I think.</p>
     </div>
 
-    <div class="te-featured-grid">
-      <a class="te-featured te-featured-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years">
-        <span class="te-featured-meta">01 · recommended · data engineering · en</span>
-        <strong>Learnings after four years working with 50+ companies</strong>
-        <span>Patterns from helping teams build real-time data systems.</span>
-        <em>read article →</em>
+    <div class="te-log te-featured-log">
+      <a class="te-row te-article-row te-featured-row" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years">
+        <div class="te-thumb">01</div>
+        <div class="te-row-body">
+          <div class="te-code">Learnings after four years working with 50+ companies</div>
+          <div class="te-article-meta">recommended · data engineering · en · read article →</div>
+        </div>
       </a>
 
-      <a class="te-featured" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things">
-        <span class="te-featured-meta">02 · data · en</span>
-        <strong>40 things I learned about data</strong>
-        <span>Twenty years of data work in practical observations.</span>
-        <em>read article →</em>
+      <a class="te-row te-article-row" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things">
+        <div class="te-thumb">02</div>
+        <div class="te-row-body">
+          <div class="te-code">40 things I learned about data</div>
+          <div class="te-article-meta">data · en · read article →</div>
+        </div>
       </a>
 
-      <a class="te-featured" href="/2013/06/27/como-aguantamos-una-portada-de-google.html" data-analytics="featured-google-frontpage">
-        <span class="te-featured-meta">03 · engineering · es</span>
-        <strong>Cómo aguantamos una portada de Google</strong>
-        <span>Escala, decisiones técnicas y sobrevivir al tráfico.</span>
-        <em>leer artículo →</em>
+      <a class="te-row te-article-row" href="/2013/06/27/como-aguantamos-una-portada-de-google.html" data-analytics="featured-google-frontpage">
+        <div class="te-thumb">03</div>
+        <div class="te-row-body">
+          <div class="te-code">Cómo aguantamos una portada de Google</div>
+          <div class="te-article-meta">engineering · es · leer artículo →</div>
+        </div>
       </a>
     </div>
   </section>
