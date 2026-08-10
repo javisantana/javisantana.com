@@ -13,6 +13,31 @@ Optimize for three outcomes, in order:
 
 Treat newsletter and social clicks as secondary outcomes.
 
+## Every change must be run as an experiment
+
+A change is not finished when it is coded. Each iteration is an experiment and must actually be
+**run**: deployed to the live site, exposed to real traffic, and then evaluated against the
+metrics stated up front before drawing any conclusion or starting the next iteration. Designing or
+merging a variant is not a result — only measured behavior is.
+
+Concretely, every iteration must:
+
+- State its hypothesis and the exact metrics that will judge it *before* deploying (see
+  "Form a hypothesis" and "Maintain the experiment log").
+- Define its exposure explicitly: full traffic, or a stated percentage/segment. If a change is
+  only shown to a slice, tag every event with that assignment so exposed and unexposed sessions
+  can be told apart later.
+- Be deployed, and record the real deployment timestamp so pre-change and post-change sessions are
+  separable. An undeployed change has produced no evidence — say so and leave a placeholder rather
+  than reporting it as run.
+- Be left live long enough to gather a usable sample before it is judged, superseded, or reverted.
+  Report sample sizes and do not conclude from a handful of sessions.
+
+Given this site's low landing traffic, a change may be run purely to collect qualitative signal
+(for example, a direct on-page question) rather than to reach statistical significance. That is
+still an experiment: it must be deployed, its exposure stated, and its responses reviewed. What is
+not acceptable is treating a coded-but-unmeasured change as a conclusion.
+
 ## Work from the source
 
 Inspect the repository before editing. Locate the source, layout, styles, tracking code, build

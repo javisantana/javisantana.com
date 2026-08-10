@@ -17,6 +17,22 @@ permalink: /landing.html
     </p>
     <nav class="te-hero-actions" aria-label="Primary actions">
       <a class="te-hero-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="hero-read-four-years">read: four years of data engineering →</a>
+      <div class="te-survey te-hero-survey" id="feedback" data-analytics-section="feedback" hidden>
+        <p class="te-survey-prompt">What brought you here?</p>
+        <div class="te-survey-choices" role="group" aria-label="What brought you here?">
+          <button type="button" class="te-chip" data-analytics="survey-data" data-choice="data-engineering">data engineering</button>
+          <button type="button" class="te-chip" data-analytics="survey-startups" data-choice="startups">startups / building</button>
+          <button type="button" class="te-chip" data-analytics="survey-product" data-choice="product">product</button>
+          <button type="button" class="te-chip" data-analytics="survey-curious" data-choice="curious">just curious about Javi</button>
+          <button type="button" class="te-chip te-chip-other" data-analytics="survey-other" data-choice="other">something else…</button>
+        </div>
+        <form class="te-survey-other-form" hidden>
+          <label class="te-visually-hidden" for="te-survey-text">Tell me what you were looking for</label>
+          <input id="te-survey-text" type="text" maxlength="140" autocomplete="off" placeholder="what were you looking for?">
+          <button type="submit" class="te-chip" data-analytics="survey-submit">send</button>
+        </form>
+        <p class="te-survey-thanks" role="status" hidden>Thanks — noted.</p>
+      </div>
       <span class="te-hero-secondary">
         <a href="#start-here" data-analytics="hero-more-writing">more writing</a>
         <a href="#about" data-analytics="hero-about">about me</a>
@@ -146,3 +162,119 @@ permalink: /landing.html
   </footer>
 
 </main>
+
+<script>
+  (function () {
+    // Landing micro-survey: "What brought you here?".
+    // Qualitative feedback capture; shown to a configurable slice of traffic.
+    // Reuses the existing window.Tinybird.trackEvent pipeline (see _includes/tracker.html).
+    var EXPOSURE_PCT = 50;               // exposure dial, not a powered A/B split
+    var DONE_KEY = 'landing-survey-done';
+    var ID_KEY = 'landing-survey-id';
+
+    try {
+      var section = document.getElementById('feedback');
+      if (!section) return;
+
+      // Preview override: ?show_survey=true forces the survey regardless of
+      // exposure bucket or prior dismissal (for local/manual checks).
+      var forceShow = false;
+      try {
+        forceShow = new URLSearchParams(location.search).get('show_survey') === 'true';
+      } catch (e) { /* URLSearchParams unavailable → no override */ }
+
+      // Already answered/dismissed on a previous visit → never show again.
+      if (!forceShow && localStorage.getItem(DONE_KEY)) return;
+
+      // Stable id: prefer the tracker's session cookie, fall back to a local id.
+      function sessionIdFromCookie() {
+        var out = null;
+        document.cookie.split(';').forEach(function (el) {
+          var parts = el.split('=');
+          if (parts[0].trim() === 'session-id') out = (parts[1] || '').trim();
+        });
+        return out;
+      }
+      function stableId() {
+        var id = sessionIdFromCookie();
+        if (id) return id;
+        id = localStorage.getItem(ID_KEY);
+        if (!id) {
+          id = String(Date.now()) + '-' + Math.random().toString(16).slice(2);
+          localStorage.setItem(ID_KEY, id);
+        }
+        return id;
+      }
+
+      // Hash id → 0..99 bucket.
+      function bucketOf(id) {
+        var h = 0;
+        for (var i = 0; i < id.length; i++) {
+          h = (h * 31 + id.charCodeAt(i)) >>> 0;
+        }
+        return h % 100;
+      }
+
+      var bucket = bucketOf(stableId());
+      if (!forceShow && bucket >= EXPOSURE_PCT) return;  // not in the exposed slice
+
+      var choices = section.querySelector('.te-survey-choices');
+      var otherForm = section.querySelector('.te-survey-other-form');
+      var thanks = section.querySelector('.te-survey-thanks');
+      var textInput = section.querySelector('#te-survey-text');
+
+      function record(choice, text) {
+        try {
+          if (window.Tinybird && typeof window.Tinybird.trackEvent === 'function') {
+            var payload = {
+              choice: choice,
+              bucket: bucket,
+              referrer: document.referrer,
+              viewportWidth: window.innerWidth
+            };
+            if (text) payload.text = text;
+            window.Tinybird.trackEvent('landing_feedback', payload);
+          }
+        } catch (e) { /* never let tracking break the page */ }
+        localStorage.setItem(DONE_KEY, '1');
+      }
+
+      function showThanks() {
+        choices.hidden = true;
+        if (otherForm) otherForm.hidden = true;
+        if (thanks) thanks.hidden = false;
+      }
+
+      choices.addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.te-chip');
+        if (!btn) return;
+        var choice = btn.getAttribute('data-choice');
+        if (choice === 'other') {
+          choices.hidden = true;
+          if (otherForm) {
+            otherForm.hidden = false;
+            if (textInput) textInput.focus();
+          }
+          return;
+        }
+        record(choice);
+        showThanks();
+      });
+
+      if (otherForm) {
+        otherForm.addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          var text = (textInput && textInput.value ? textInput.value : '').trim();
+          if (!text) return;               // never send empty free-text
+          record('other', text.slice(0, 140));
+          showThanks();
+        });
+      }
+
+      // Eligible + not yet answered → reveal the survey in place of the hero CTA.
+      var cta = document.querySelector('.te-hero-primary');
+      if (cta) cta.hidden = true;
+      section.hidden = false;
+    } catch (e) { /* fail closed: leave the survey hidden, keep the CTA */ }
+  })();
+</script>

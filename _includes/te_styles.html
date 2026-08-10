@@ -497,6 +497,78 @@
     color: #111;
   }
 
+  /* Micro-survey: "What brought you here?" */
+  /* The `hidden` attribute must win over the `display` rules below, otherwise
+     the other-form / choices / CTA can't be toggled off in script. */
+  .te-landing [hidden] { display: none !important; }
+  .te-hero-survey { flex: 1 1 100%; }
+  .te-hero-survey .te-survey-prompt {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin-bottom: 0.7em;
+  }
+  .te-landing .te-survey-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+  }
+  .te-landing .te-chip {
+    display: inline-block;
+    padding: 0.5em 0.9em;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: #111;
+    font: inherit;
+    font-size: 0.86rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+  }
+  .te-landing .te-chip:hover {
+    background: #111;
+    color: #efefea;
+    border-color: #111;
+  }
+  .te-landing .te-chip:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+  }
+  .te-landing .te-survey-other-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-top: 0.9em;
+  }
+  .te-landing .te-survey-other-form input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.5em 0.7em;
+    background: #fff;
+    border: 1px solid var(--rule);
+    color: #111;
+    font: inherit;
+    font-size: 0.86rem;
+  }
+  .te-landing .te-survey-other-form input:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+  }
+  .te-landing .te-survey-thanks {
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+  .te-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .te-prose {
     font-size: 0.95rem;
     line-height: 1.65;

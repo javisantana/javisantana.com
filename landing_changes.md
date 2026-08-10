@@ -402,3 +402,62 @@ deployment timestamp; exclude local referrers. Compare against the
 - Median `activeDuration`, plus its coverage (missing `end` events, 6/15 here).
 - Median max scroll, now that the depth metric is trustworthy.
 - Newsletter and social CTR (secondary).
+
+## 2026-08-10 — "What brought you here?" intent micro-survey
+
+Not deployed at time of writing. Deployment timestamp: _pending_.
+
+### Baseline and rationale
+
+Data window: `/landing.html` sessions grouped by `sessionId` over the 14 days
+through 2026-08-09, localhost/`127.0.0.1` excluded. **~1–18 sessions/day, ~100
+total.** That volume is far too small for a *measured* A/B split — two variants
+would take months to separate — so this iteration does **not** attempt a powered
+experiment.
+
+Instead it captures **stated intent**, which the dataset has never had. All
+prior iterations tuned layout from behavior (scroll, clicks) but we don't know
+*why* people arrive. A one-tap qualitative survey needs no statistical power to
+be useful: even a handful of answers tell us which audience the page actually
+serves.
+
+### Change
+
+- New inline `#feedback` section between `#newsletter` and the footer of
+  `landing.md`: heading "What brought you here?", five chips —
+  `data-engineering`, `startups`, `product`, `curious`, `other` — with an
+  optional 140-char free-text box behind the "something else…" chip.
+- Emits a new event `action='landing_feedback'` via the existing
+  `window.Tinybird.trackEvent` pipeline (`_includes/tracker.html`), payload
+  `{ choice, text?, bucket, referrer, viewportWidth }`. No backend change.
+- **Exposure dial, not an A/B test:** `EXPOSURE_PCT = 50`. Visitors are bucketed
+  0–99 by hashing the tracker's `session-id` cookie (local fallback id
+  otherwise); the section reveals only when `bucket < EXPOSURE_PCT`. The bucket
+  is stamped on every feedback event so exposure can be tuned later and, if
+  traffic grows, behavior compared honestly. Answer/dismissal is remembered in
+  `localStorage['landing-survey-done']` so repeat visitors aren't nagged.
+- Styling scoped under `.te-landing` (`.te-survey-*`, `.te-chip`,
+  `.te-visually-hidden`) in `_includes/te_styles.html`; reuses the page palette,
+  chips mirror `.te-landing a:focus-visible`. Accessible: semantic buttons,
+  `role="group"`, visually-hidden label, `role="status"` thank-you.
+
+### Validation
+
+Built with `npm run build`; generated `a/landing.html` contains the section, all
+five chips, the inline script, and the scoped CSS. Inline script passes
+`node --check`. Bucketing verified deterministic and ~49.9% exposed over 20k
+synthetic ids. `git diff --check` clean. Full-page screenshots not yet archived
+(pending the deploy, per skill).
+
+### Metrics to compare after deployment
+
+Filter to `action = 'landing_feedback'`, group by `sessionId`, from the confirmed
+deployment timestamp; exclude local referrers.
+
+- **Response rate**: distinct feedback sessions ÷ exposed `/landing.html`
+  sessions (`bucket < 50`). Low rate → raise `EXPOSURE_PCT` toward 100.
+- **Choice distribution** across the five chips — which audience the page serves.
+- **Free-text themes** from `choice='other'` submissions.
+- Sanity: exposed vs unexposed sessions should show no difference in existing
+  engagement metrics (`activeDuration`, max scroll, article CTR) — the survey
+  sits below the fold and should not distort them.
