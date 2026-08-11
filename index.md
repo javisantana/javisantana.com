@@ -31,7 +31,7 @@ lang: en
     {% endfor %}
   </nav>
 
-  <p><a href="/blog"><i>all posts →</i></a></p>
+  <p><a href="/blog/"><i>all posts →</i></a></p>
 
   <footer>
     <p><a href="https://x.com/javisantana"><i>x</i></a> · <a href="https://www.linkedin.com/in/javisantana"><i>linkedin</i></a> · <a href="https://javisantana.substack.com"><i>subscribe</i></a></p>
