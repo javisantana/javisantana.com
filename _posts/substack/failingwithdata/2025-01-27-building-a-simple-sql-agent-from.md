@@ -17,12 +17,11 @@ I wanted to create a really simple SQL Agent to teach myself how to do it, no li
 The basic algorithm to generate a working SQL based on a user question would work like (python-ish):
 
 ```
-``chat = LLM(system="You are an expert SQL query generator, write the SQL given the prompt.")
+chat = LLM(system="You are an expert SQL query generator, write the SQL given the prompt.")
 answer = chat(prompt)
 while not is_correct(answer):
     answer = chat(answer + ".Please fix the SQL query.")
 print(answer)
-``
 ```
 
 So, in theory, I’d just need to write a function (`is_correct`) that tells the model if the SQL is rigth, and the initial prompt. In theory.
@@ -32,7 +31,7 @@ Ok, so let’s build a super simple agent that write SQL given a prompt. For sim
 ## **1. Generate a SQL query for a given prompt**
 
 ```
-``LLM="llm -m gemini-2.0-flash-exp"
+LLM="llm -m gemini-2.0-flash-exp"
 prompt="You are an expert SQL for duckdb query generator. Do not write any explainations, just the SQL query. Generate a SQL query for: $1"
 flags=""
 
@@ -58,15 +57,13 @@ while true; do
     fi
 done
 
-``
 ```
 
 It kind of works. If you test with prompts that don’t require any table, it gives you pretty decent SQL queries.
 
 ```
-``./sqlagent_1.sh "generate a the fibonacci series"
+./sqlagent_1.sh "generate a the fibonacci series"
 ./sqlagent_1.sh "generate the game of life"
-``
 ```
 
 For the game of life needs a few iterations but that’s ok, it’s a recursive query. I coded that query myself a few years ago and it took me an afternoon.
@@ -74,8 +71,7 @@ For the game of life needs a few iterations but that’s ok, it’s a recursive 
 But if we ask for stuff like
 
 ```
-``./sqlagent_1.sh "generate a histogram with table http_requests"
-``
+./sqlagent_1.sh "generate a histogram with table http_requests"
 ```
 
 It fails. It does because we are asking to do something that can’t do as the http_requests table doesn’t exist. Humans are constanty asking for stuff that is not possible, so we need a way to stop the agent to try. Is there a way so the LLM can say “enough is enough” and stop trying?
@@ -83,7 +79,7 @@ It fails. It does because we are asking to do something that can’t do as the h
 To be honest, sometimes it finds the way and generates things like:
 
 ```
-``SELECT
+SELECT
     CASE 
         WHEN request_time < 1 THEN 1
         WHEN request_time < 2 THEN 2
@@ -100,7 +96,6 @@ To be honest, sometimes it finds the way and generates things like:
 FROM (SELECT random()*10 as request_time FROM range(100))
 GROUP BY bucket
 ORDER BY bucket;
-``
 ```
 
 ## **Step 2: trying to stop the agent**
@@ -108,21 +103,19 @@ ORDER BY bucket;
 So I tried adding a “If you unable to fix it, just return `select 'STOP'`” to the prompt but it does not work :)
 
 ```
-``prompt="Previous attempt failed with error: $ERROR Please fix the SQL query. If you are not able to fix it, just return `select 'STOP'`."
-``
+prompt="Previous attempt failed with error: $ERROR Please fix the SQL query. If you are not able to fix it, just return `select 'STOP'`."
 ```
 
 But being more explicit and setting the prompt to:
 
 ```
-``prompt="Previous attempt failed with error: $ERROR Please fix the SQL query. If you can't find the tables just return select 'STOP'."
-``
+prompt="Previous attempt failed with error: $ERROR Please fix the SQL query. If you can't find the tables just return select 'STOP'."
 ```
 
 it works (added the iteration number as debugging info)
 
 ```
-``-- [ITERATION 0] --------------------------------------
+-- [ITERATION 0] --------------------------------------
 *** Invalid SQL generated, retrying...
 *** Error: Catalog Error: Table with name http_requests does not exist!
 Did you mean "pg_sequences"?
@@ -132,7 +125,6 @@ LINE 5:     http_requests
 *** DONE!
 
 SELECT 'STOP'
-``
 ```
 
 ## **Step 3: using some the data inside the database**
@@ -144,7 +136,7 @@ There are just two changes to the agent: 1) we pass to the prompt a list of colu
 In this case I’m using a duckdb database I generated with all the views I track on this website. It looks like this
 
 ```
-``✗ duckdb test.db -c "describe web_requests" 
+✗ duckdb test.db -c "describe web_requests" 
 ┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
 │ column_name │ column_type │  null   │   key   │ default │  extra  │
 │   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
@@ -155,13 +147,12 @@ In this case I’m using a duckdb database I generated with all the views I trac
 │ version     │ VARCHAR     │ YES     │         │         │         │
 │ payload     │ VARCHAR     │ YES     │         │         │         │
 └─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
-``
 ```
 
 The code:
 
 ```
-``#!/bin/bash
+#!/bin/bash
 
 LLM="llm -m gemini-2.0-flash-exp"
 
@@ -206,13 +197,12 @@ while true; do
 done
 
 duckdb $DB -c "$SQL"
-``
 ```
 
 When running it, it can generate queries but the results are not good.
 
 ```
-``✗ ./sqlagent_3.sh test.db "visitors per day"
+✗ ./sqlagent_3.sh test.db "visitors per day"
 -- [ITERATION 0] --------------------------------------
 *** Invalid SQL generated, retrying...
 *** Error: Catalog Error: Scalar Function with name date does not exist!
@@ -232,7 +222,6 @@ ORDER BY day;
 ├────────────┼──────────┤
 │ 1970-01-21 │     7502 │
 └────────────┴──────────┘
-``
 ```
 
 I see many ways to fix this:

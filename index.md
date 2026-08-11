@@ -1,43 +1,39 @@
 ---
-layout: base_data
+layout: minimal
+lang: en
 ---
 
-<div class="container desierto">
-  <div class="entry space">
-  <!-- <h1><span>@javisantana</span></h1> -->
-  <p style="font-size: 160%;margin:5em 0 5em 0;width: 80vw;position: relative;left: calc(-40vw + 50%);text-align: center;">Pixels are the humble bricks with which one can build cathedrals</p>
-  <p style="margin-bottom: 7em;font-size: 120%">
-  Hi, Javi Santana typing. Builder working at the intersection of tech and data, cofounder of <a href="https://tinybird.co">Tinybird</a>. Find me on <a href="http://x.com/javisantana">X</a>, <a href="http://www.linkedin.com/in/javisantana">linkedin</a></p>
-  </div>
+<main class="home">
+  <h1>Javi Santana</h1>
+  <p class="tagline">Pixels are the humble bricks with which one can build cathedrals</p>
+  <p>Builder at the intersection of tech and data. Co-founder of <a href="https://tinybird.co"><i>Tinybird</i></a>. I write about engineering, product and startups — mostly in Spanish.</p>
 
-
-  {% assign alldocs = site.posts | concat: site.inspiration |  concat: site.fastdata | sort:"date"%}	
-    
-
-   {% for post in alldocs reversed %}
-   {% if post.title != "Index" %}
-        {% if forloop.index < 40 %}
-        <div class="entry space" id="{{post.slug}}">
-        {% else %}
-        <div class="entry " id="{{post.slug}}">
-        {% endif %}
-            {% if post.title %} 
-            <h2>{{post.title}} {% if forloop.index < 40 %}<a href="#{{ post.slug }}">#</a>{% endif %}</h2>
-        
-            {% endif %}
-            <a href="{{ post.url }}"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span></a>
-            {% if post.collection != "inspiration" %}
-              {% if forloop.index < 40 %}
-              <p>{{ post.content | strip_html | truncatewords: 50 }}
-              <a href="{{ post.url }}">read more</a>
-              </p>
-              {% endif %}
-            {% else %}
-              {{ post.content | split:'<!--break-->' | first }}
-              {% if post.content contains '<!--break-->' %}
-                  <a href="{{ post.url }}">read more</a>
-              {% endif %}
-            {% endif %}
+  <nav class="post-list">
+    {% assign quotes = site.inspiration | where_exp: "q", "q.name != 'index.md'" %}
+    {% assign feed = site.posts | concat: quotes | sort: "date" | reverse %}
+    {% assign shown = 26 %}
+    {% for item in feed limit: shown %}
+      {% assign num = shown | minus: forloop.index | plus: 1 %}
+      {% if item.collection == "inspiration" %}
+        {% assign label = item.title | default: item.content | strip_html | strip_newlines | truncatewords: 12 %}
+        <div class="row q">
+          <span class="n">{{ num }}.</span>
+          <a class="t" href="{{ item.url }}"><span class="qm">“</span><i>{{ label }}</i></a>
+          <span class="y">{{ item.date | date: "%Y" }}</span>
         </div>
-    {%endif %}
-  {% endfor %}
+      {% else %}
+        <div class="row">
+          <span class="n">{{ num }}.</span>
+          <a class="t" href="{{ item.url }}"><i>{{ item.title }}</i></a>
+          <span class="y">{{ item.date | date: "%Y" }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  <p><a href="/blog"><i>all posts →</i></a></p>
+
+  <footer>
+    <p><a href="https://x.com/javisantana"><i>x</i></a> · <a href="https://www.linkedin.com/in/javisantana"><i>linkedin</i></a> · <a href="https://javisantana.substack.com"><i>subscribe</i></a></p>
+  </footer>
+</main>

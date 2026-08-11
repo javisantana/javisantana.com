@@ -20,10 +20,9 @@ La primera es Cursor. Si no sabes que es, seguramente este post no sea para ti, 
 La segunda es `llm`, una herramienta de línea de comandos que tiene lo justo y necesario para trabajar con LLMs a alto nivel, sin tener que usar el API de OpenAI y permite automatizar fácilmente. Algunos ejemplos básicos que cubren el 99% de lo que uso y explican la herramienta.
 
 ```
-``$ llm "this is my prompt"
+$ llm "this is my prompt"
 $ llm -m gemini-2.0 "this is the prompt"
 $ llm --system "you are an expert on this" "the prompt"
-``
 ```
 
 # **Usos prácticos**
@@ -55,11 +54,10 @@ En Tinybird genero una newsletter cada dos semanas donde enviamos los artículos
 Para que nadie se sienta estafado por leer algo generado automáticamente le he dado personalidad propia al bot. Esto es una parte del prompt:
 
 ```
-`` Get the comments people made for each link and generate a brief comment about it. It should be funny, like making fun of the people in the company, but in the possitive [positive] way. We love to troll each others [each other] in this company. You act as an editor, you should have your own voice and speak in first person. This was the last one@newsletter.md
+ Get the comments people made for each link and generate a brief comment about it. It should be funny, like making fun of the people in the company, but in the possitive [positive] way. We love to troll each others [each other] in this company. You act as an editor, you should have your own voice and speak in first person. This was the last one@newsletter.md
 - Try to guess the company position based on their comments
 - Do not mention names just leave what you think is the position
 also introduce you at the beggining [beginning], your name is lebrelbot you work at tinybird, an AI bot and don't care about what other people say about
-``
 ```
 
 En las primeras iteraciones le dije que fuese un poco "pasivo-agresivo" y tuve que quitarlo porque los LLMs son especialmente buenos dando donde duele.
@@ -67,8 +65,7 @@ En las primeras iteraciones le dije que fuese un poco "pasivo-agresivo" y tuve q
 Para estas automatizaciones uso llm, por ejemplo, el comando para generar la lista de correo es:
 
 ```
-``uv run llm  -m gemini-2.0-flash --system "$(cat prompt) today is $(date)" "$(cat 2025-03-28/chat) `curl -s https://www.tinybird.co/blog-posts/rss.xml`"
-``
+uv run llm  -m gemini-2.0-flash --system "$(cat prompt) today is $(date)" "$(cat 2025-03-28/chat) `curl -s https://www.tinybird.co/blog-posts/rss.xml`"
 ```
 
 Le paso el prompt que comentaba antes, la fecha para que sepa donde estamos, el chat según viene de Slack (sin formatear, para qué perder el tiempo) y el RSS con los posts del blog Tinybird (que incluye al final de la lista). Te puedes suscribir [aquí](https://faster.tinybird.co/schema-evolution) si tienes curiosidad. [Este](https://gist.github.com/javisantana/55550118e3030476ffd762c13f1246fa) es la última edición.
@@ -82,13 +79,12 @@ Me parece un tema bastante interesante, de hecho hay más gente haciendo esto [p
 También lo uso para generar informes del comportamiento de los usuarios de Tinybird a nivel de producto, es decir, qué hace un usuario, donde se atasca, qué hace bien. En Tinybird guardamos todos los eventos (nuestro producto sirve para guardar datos, así que parece obvio) de lo que hacen los usuarios. Es una tabla muy con `user_id, timestamp, event_data`. En vez de usar una herramienta a medida, símplemente cojo los eventos y hago pipe al llm. Es algo más complejo que esto porque elimino bastante información para reducir los tokens que necesito enviar al LLM (aunque gemini tiene un contexto muy aceptable) y eliminar detalles de errores y otras cosas que no sean puro metadato.
 
 ```
-``curl https://api.tinybird.com/v0/pipes/user_events?user_id=lebrel | llm -m gemini-2.0-flash --system "You are an expert in analyzing user behavior on Tinybird, a web platform to work with analytical data. The first thing you'll recieve [receive] is a JSON with all the events from an user using Tinybird (a web platform to work with analytical data), generate a summary of what the user did.
+curl https://api.tinybird.com/v0/pipes/user_events?user_id=lebrel | llm -m gemini-2.0-flash --system "You are an expert in analyzing user behavior on Tinybird, a web platform to work with analytical data. The first thing you'll recieve [receive] is a JSON with all the events from an user using Tinybird (a web platform to work with analytical data), generate a summary of what the user did.
     You should include the following sections with a title for each one:
         1) relevant dates
         2) a timeline of events per day/week/month
         3) what errors the user hit
 "
-``
 ```
 
 El prompt es mucho más extenso, pero te haces una idea. Y si no, preguntame y te lo paso completo.

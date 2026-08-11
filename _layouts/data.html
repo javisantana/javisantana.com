@@ -1,51 +1,15 @@
 ---
-layout: te
+layout: minimal
 ---
-<div class="te">
-
-  <header class="te-header compact">
-    <a class="te-mark" href="/landing.html" aria-label="home"></a>
-    <h1 class="te-name"><a href="/landing.html">javi santana</a></h1>
-    <p class="te-sub">{% if page.collection == 'inspiration' %}inspiration{% elsif page.collection == 'fastdata' %}fastdata{% else %}article{% endif %}</p>
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | default: page.name }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
   </header>
 
-  <div class="te-post-header">
-    <div class="te-post-code">{% if page.collection == 'inspiration' %}IN{% elsif page.collection == 'fastdata' %}FD{% else %}PO{% endif %}–{{ page.date | date: '%Y–%m–%d' }} <em>{{ page.title | downcase }}</em></div>
-    <h2 class="te-post-title">{{ page.title | downcase }}</h2>
-    <dl class="te-spec-table">
-      <div class="te-spec-line"><dt>date</dt><dd>{{ page.date | date: '%b %d, %Y' }}</dd></div>
-      <div class="te-spec-line"><dt>path</dt><dd>{{ page.url }}</dd></div>
-      <div class="te-spec-line"><dt>views</dt><dd id="pageviews">—</dd></div>
-    </dl>
-  </div>
+  {{ content }}
 
-  <article class="te-prose">
-    {{ content }}
-  </article>
-
-  <footer class="te-footer">
-    <p><a href="/">← explore all articles</a></p>
-    <p>
-      <a href="https://failingwithdata.substack.com">subscribe now</a> ·
-      <a href="http://twitter.com/javisantana">twitter</a> ·
-      <a href="http://www.linkedin.com/in/javisantana">linkedin</a> ·
-      javi@tinybird.co
-    </p>
+  <footer class="post-footer">
+    <a href="/">← javi santana</a><span class="sep">·</span><a href="/blog">all posts</a><span class="sep">·</span><a href="https://javisantana.substack.com">subscribe</a><span class="sep">·</span><a href="https://x.com/javisantana">x</a><span class="sep">·</span><a href="https://www.linkedin.com/in/javisantana">linkedin</a>
   </footer>
-
-  <script>
-    const currentPath = window.location.pathname;
-    const apiUrl = `https://api.europe-west2.gcp.tinybird.co/v0/pipes/url_visits.json?path=${encodeURIComponent(currentPath)}&limit=100&token=p.eyJ1IjogIjhiNDNmMmZiLTA4N2YtNDc3Ny1hNWU2LTA3MmY3OGQzMzY0NiIsICJpZCI6ICI3ZWMwYmY5Yy0wZDc2LTQ5MmEtOGNiMC03ZTE5ZWRmZGMwMTIiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.qRnN2JjpFRx5mU9mLWS43yn0qGMHNaYr9WturqwF9tU`;
-
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const visits = data.data[0]?.visits || 0;
-        document.getElementById('pageviews').textContent = visits;
-      })
-      .catch(() => {
-        document.getElementById('pageviews').textContent = '—';
-      });
-  </script>
-
-</div>
+</article>
