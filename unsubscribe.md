@@ -50,36 +50,15 @@ layout: base_data
         return;
       }
 
-      try {
-        const response = await fetch('https://api.tinybird.co/v0/events?name=subscriptions', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer p.eyJ1IjogIjM5ZjBiNjdiLThjODQtNDU2Zi1iZTdmLWQ4MDhmMzhjN2YxMCIsICJpZCI6ICJiOTZlZDAyMi0wYmY2LTRhNTktYjZkYi05YzJhOWMyZGJiYTUiLCAiaG9zdCI6ICJldV9zaGFyZWQifQ.zmMJvSsUPvSZ5LBezK7cTc2A6TXBsg701nyXVprtWBk',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            reason: reason,
-            timestamp: new Date().toISOString(),
-            unsubscribe: 1,
-            source: window.location.href
-          })
-        });
-
-        if (response.ok) {
-          messageDiv.style.display = 'block';
-          messageDiv.style.color = '#4CAF50';
-          messageDiv.textContent = "You have been unsubscribed, it's sad yo see you leave.";
-          emailInput.value = '';
-          reasonInput.value = '';
-        } else {
-          throw new Error('Unsubscription failed, contact me so I sort this out.');
-        }
-      } catch (error) {
-        messageDiv.style.display = 'block';
-        messageDiv.style.color = '#ff4444';
-        messageDiv.textContent = 'Something went wrong. Please try again later.';
-      }
+      // The newsletters live on Substack — the real unsubscribe link is at the
+      // bottom of every email. This form no longer sends anywhere; point people
+      // to a channel that actually removes them.
+      const subject = encodeURIComponent('Unsubscribe');
+      const body = encodeURIComponent('Please unsubscribe ' + email + (reason ? ('\n\nReason: ' + reason) : ''));
+      messageDiv.style.display = 'block';
+      messageDiv.style.color = '#4CAF50';
+      messageDiv.innerHTML = "Use the unsubscribe link at the bottom of any newsletter email, " +
+        'or <a href="mailto:javi@tinybird.co?subject=' + subject + '&body=' + body + '">email me</a> and I\'ll remove you.';
     }
   </script>
 

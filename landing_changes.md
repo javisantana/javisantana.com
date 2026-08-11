@@ -461,3 +461,65 @@ deployment timestamp; exclude local referrers.
 - Sanity: exposed vs unexposed sessions should show no difference in existing
   engagement metrics (`activeDuration`, max scroll, article CTR) — the survey
   sits below the fold and should not distort them.
+
+## 2026-08-11 — Drop Tinybird; rewire survey to self-hosted analytics
+
+_Deployed: pending._
+
+### Why
+
+Checked the survey results in `events.duckdb` and found **zero** `landing_feedback`
+rows — not because nobody answered, but because the survey was emitting into the
+wrong pipeline. The page ran two trackers: the self-hosted `assets/js/tracking.js`
+(→ `e.javisantana.com`, the only source of `events.duckdb`, which is scp'd from the
+server) and the Tinybird web-analytics snippet in `_includes/tracker.html`
+(→ `api.tinybird.co`, datasource `analytics_events`, exposed as
+`window.Tinybird.trackEvent`). The survey called `window.Tinybird.trackEvent`, so its
+events went to Tinybird — never into `events.duckdb`. No stored row has ever carried an
+`action` key, confirming that pipeline never reached this DB. The generic click capture
+in `tracking.js` only records clicks inside `<a>` anchors, and the chips are `<button>`,
+so there was no fallback signal either.
+
+Decision: stop sending any data to Tinybird and route the survey through the
+self-hosted pipeline instead.
+
+### Change
+
+- **`_includes/tracker.html`**: removed the entire Tinybird analytics snippet
+  (page_hit + click events → `api.tinybird.co`, and the `window.Tinybird` global).
+  The include now loads only `/assets/js/tracking.js` (cache-buster bumped to
+  `?v=20260811`). Affects every layout at once.
+- **`assets/js/tracking.js`**: exposed a minimal public hook
+  `window.jsAnalytics = { track }` so page-level scripts can emit custom events
+  through the same batched, self-hosted pipeline.
+- **`landing.md`**: survey now calls `window.jsAnalytics.track('landing_feedback',
+  {choice, bucket[, text]})` instead of `window.Tinybird.trackEvent`. `referrer` and
+  `viewportWidth` dropped from the payload — the batch envelope already carries them.
+  Added a `survey_shown` event (with `bucket`) on reveal to give a real response-rate
+  denominator. Exposure/dedup logic unchanged (`EXPOSURE_PCT=50`,
+  `?show_survey=true` override, `localStorage['landing-survey-done']`).
+- **`unsubscribe.md`** (separate Tinybird touchpoint): removed the live POST to
+  `api.tinybird.co/v0/events?name=subscriptions`. The form no longer records anywhere;
+  it now directs people to the Substack unsubscribe link or a prefilled mailto, rather
+  than faking a success message.
+
+### Corrected query path (supersedes the prior entry)
+
+Survey responses now land in `events.duckdb` as batched events with a top-level
+`type`, alongside all other analytics — **not** under `action`. Query:
+
+- **Responses**: `json_extract_string(data,'$.type') = 'landing_feedback'`, with
+  `$.choice`, `$.bucket`, and (for `choice='other'`) `$.text`.
+- **Exposure denominator**: `json_extract_string(data,'$.type') = 'survey_shown'`,
+  distinct `$.sessionId`.
+- **Response rate**: distinct feedback sessions ÷ distinct `survey_shown` sessions.
+- Exclude localhost (the tracker no-ops on localhost, so local clicks aren't recorded
+  at all).
+
+### Validation
+
+`bundle exec jekyll build` clean. `node --check assets/js/tracking.js` OK; landing
+inline script parses via `new Function`. Built `a/landing.html` references
+`jsAnalytics` and no longer references `window.Tinybird`; `a/unsubscribe.html` no
+longer references `api.tinybird.co`. Not yet deployed — no responses to report until
+it is live and exposed.

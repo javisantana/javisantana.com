@@ -167,7 +167,8 @@ permalink: /landing.html
   (function () {
     // Landing micro-survey: "What brought you here?".
     // Qualitative feedback capture; shown to a configurable slice of traffic.
-    // Reuses the existing window.Tinybird.trackEvent pipeline (see _includes/tracker.html).
+    // Emits through the self-hosted analytics pipeline (window.jsAnalytics.track,
+    // exposed by /assets/js/tracking.js) so responses land in events.duckdb.
     var EXPOSURE_PCT = 50;               // exposure dial, not a powered A/B split
     var DONE_KEY = 'landing-survey-done';
     var ID_KEY = 'landing-survey-id';
@@ -223,19 +224,20 @@ permalink: /landing.html
       var thanks = section.querySelector('.te-survey-thanks');
       var textInput = section.querySelector('#te-survey-text');
 
-      function record(choice, text) {
+      // Self-hosted pipeline; the batch envelope already carries referrer and
+      // viewportWidth, so payloads stay minimal. Never let tracking break the page.
+      function emit(type, payload) {
         try {
-          if (window.Tinybird && typeof window.Tinybird.trackEvent === 'function') {
-            var payload = {
-              choice: choice,
-              bucket: bucket,
-              referrer: document.referrer,
-              viewportWidth: window.innerWidth
-            };
-            if (text) payload.text = text;
-            window.Tinybird.trackEvent('landing_feedback', payload);
+          if (window.jsAnalytics && typeof window.jsAnalytics.track === 'function') {
+            window.jsAnalytics.track(type, payload);
           }
-        } catch (e) { /* never let tracking break the page */ }
+        } catch (e) { /* swallow: analytics must never throw into the UI */ }
+      }
+
+      function record(choice, text) {
+        var payload = { choice: choice, bucket: bucket };
+        if (text) payload.text = text;
+        emit('landing_feedback', payload);
         localStorage.setItem(DONE_KEY, '1');
       }
 
@@ -275,6 +277,7 @@ permalink: /landing.html
       var cta = document.querySelector('.te-hero-primary');
       if (cta) cta.hidden = true;
       section.hidden = false;
+      emit('survey_shown', { bucket: bucket });  // denominator for response rate
     } catch (e) { /* fail closed: leave the survey hidden, keep the CTA */ }
   })();
 </script>

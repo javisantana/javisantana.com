@@ -49,7 +49,11 @@
         if (data) Object.assign(event, data);
         queue.push(event);
     }
-    
+
+    // Public hook so page-level scripts (e.g. the landing survey) can emit
+    // custom events through this same batched, self-hosted pipeline.
+    window.jsAnalytics = { track };
+
     function flush() {
         if (!queue.length) return;
         
