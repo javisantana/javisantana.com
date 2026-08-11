@@ -11,6 +11,6 @@ Hace un tiempo [dije](http://blep.blogspot.com/2005/06/4k-synth.html) que escrib
   
 \- [El artículo: 4k synth](http://qualopec.googlepages.com/4ksynth)  
   
-[![](http://qualopec.googlepages.com/square_filtrada.png/square_filtrada-full.jpg)](http://qualopec.googlepages.com/square_filtrada.png/square_filtrada-full.jpg)  
+[![](/blog_images/imported/49d1ca88-square_filtrada-full.jpg)](/blog_images/imported/49d1ca88-square_filtrada-full.jpg)  
   
 Espero que a alguien le resulte interesante.

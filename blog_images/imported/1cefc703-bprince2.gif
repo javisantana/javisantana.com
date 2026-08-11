@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>IT TECHNOLOGY FOR BUSINESS - The Underdogs</title>
+	<meta name="description" content="You&#039;ll learn which technologies are right for your business and will help you increase sales, speed up transactions, reduce labor costs and protect your data." />
+	<link rel="canonical" href="https://www.the-underdogs.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="IT TECHNOLOGY FOR BUSINESS - The Underdogs" />
+	<meta property="og:description" content="You&#039;ll learn which technologies are right for your business and will help you increase sales, speed up transactions, reduce labor costs and protect your data." />
+	<meta property="og:url" content="https://www.the-underdogs.org/" />
+	<meta property="og:site_name" content="The Underdogs" />
+	<meta property="article:modified_time" content="2026-04-17T13:28:02+00:00" />
+	<meta property="og:image" content="https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-1130x753.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.the-underdogs.org/","url":"https://www.the-underdogs.org/","name":"IT TECHNOLOGY FOR BUSINESS - The Underdogs","isPartOf":{"@id":"https://www.the-underdogs.org/#website"},"primaryImageOfPage":{"@id":"https://www.the-underdogs.org/#primaryimage"},"image":{"@id":"https://www.the-underdogs.org/#primaryimage"},"thumbnailUrl":"https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-1130x753.jpg","datePublished":"2021-05-06T13:31:11+00:00","dateModified":"2026-04-17T13:28:02+00:00","description":"You'll learn which technologies are right for your business and will help you increase sales, speed up transactions, reduce labor costs and protect your data.","breadcrumb":{"@id":"https://www.the-underdogs.org/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.the-underdogs.org/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.the-underdogs.org/#primaryimage","url":"https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280.jpg","contentUrl":"https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280.jpg","width":1280,"height":853},{"@type":"BreadcrumbList","@id":"https://www.the-underdogs.org/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.the-underdogs.org/#website","url":"https://www.the-underdogs.org/","name":"The Underdogs","description":"Conference About IT TECHNOLOGY ","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.the-underdogs.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="The Underdogs &raquo; Feed" href="https://www.the-underdogs.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Underdogs &raquo; Comments Feed" href="https://www.the-underdogs.org/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.the-underdogs.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.the-underdogs.org%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.the-underdogs.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.the-underdogs.org%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-button-inline-css">
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/button/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-cover-css' href='https://www.the-underdogs.org/wp-includes/blocks/cover/style.min.css?ver=7.0' media='all' />
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-latest-posts-inline-css">
+.wp-block-latest-posts{box-sizing:border-box}.wp-block-latest-posts.alignleft{margin-right:2em}.wp-block-latest-posts.alignright{margin-left:2em}.wp-block-latest-posts.wp-block-latest-posts__list{list-style:none}.wp-block-latest-posts.wp-block-latest-posts__list li{clear:both;overflow-wrap:break-word}.wp-block-latest-posts.is-grid{display:flex;flex-wrap:wrap}.wp-block-latest-posts.is-grid li{margin:0 1.25em 1.25em 0;width:100%}@media (min-width:600px){.wp-block-latest-posts.columns-2 li{width:calc(50% - .625em)}.wp-block-latest-posts.columns-2 li:nth-child(2n){margin-right:0}.wp-block-latest-posts.columns-3 li{width:calc(33.33333% - .83333em)}.wp-block-latest-posts.columns-3 li:nth-child(3n){margin-right:0}.wp-block-latest-posts.columns-4 li{width:calc(25% - .9375em)}.wp-block-latest-posts.columns-4 li:nth-child(4n){margin-right:0}.wp-block-latest-posts.columns-5 li{width:calc(20% - 1em)}.wp-block-latest-posts.columns-5 li:nth-child(5n){margin-right:0}.wp-block-latest-posts.columns-6 li{width:calc(16.66667% - 1.04167em)}.wp-block-latest-posts.columns-6 li:nth-child(6n){margin-right:0}}:root :where(.wp-block-latest-posts.is-grid){padding:0}:root :where(.wp-block-latest-posts.wp-block-latest-posts__list){padding-left:0}.wp-block-latest-posts__post-author,.wp-block-latest-posts__post-date{display:block;font-size:.8125em}.wp-block-latest-posts__post-excerpt,.wp-block-latest-posts__post-full-content{margin-bottom:1em;margin-top:.5em}.wp-block-latest-posts__featured-image a{display:inline-block}.wp-block-latest-posts__featured-image img{height:auto;max-width:100%;width:auto}.wp-block-latest-posts__featured-image.alignleft{float:left;margin-right:1em}.wp-block-latest-posts__featured-image.alignright{float:right;margin-left:1em}.wp-block-latest-posts__featured-image.aligncenter{margin-bottom:1em;text-align:center}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/latest-posts/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-buttons-inline-css">
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id="wp-block-columns-inline-css">
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id="wp-block-separator-inline-css">
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/separator/style.min.css */
+</style>
+<style id="wp-block-spacer-inline-css">
+.wp-block-spacer{clear:both}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/spacer/style.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:initial;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:#0000}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:initial}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:initial}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=https://www.the-underdogs.org/wp-includes/blocks/table/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='uagb-block-css-css' href='https://www.the-underdogs.org/wp-content/plugins/ultimate-addons-for-gutenberg/dist/blocks.style.css?ver=1.22.3' media='all' />
+<link rel='stylesheet' id='fontawesome-free-css' href='https://www.the-underdogs.org/wp-content/plugins/getwid/vendors/fontawesome-free/css/all.min.css?ver=5.5.0' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://www.the-underdogs.org/wp-content/plugins/gutentor/assets/library/slick/slick.min.css?ver=1.8.1' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://www.the-underdogs.org/wp-content/plugins/getwid/vendors/slick/slick/slick-theme.min.css?ver=1.9.0' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://www.the-underdogs.org/wp-content/plugins/gutentor/assets/library/magnific-popup/magnific-popup.min.css?ver=1.8.0' media='all' />
+<link rel='stylesheet' id='getwid-blocks-css' href='https://www.the-underdogs.org/wp-content/plugins/getwid/assets/css/blocks.style.css?ver=1.6.11' media='all' />
+<style id="getwid-blocks-inline-css">
+.wp-block-getwid-section .wp-block-getwid-section__wrapper .wp-block-getwid-section__inner-wrapper{max-width: 640px;}
+/*# sourceURL=getwid-blocks-inline-css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='uncover-style-css' href='https://www.the-underdogs.org/wp-content/themes/uncover/style.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='flexslider-css' href='https://www.the-underdogs.org/wp-content/themes/uncover/css/flexslider.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='uncover-google-fonts-css' href='//fonts.googleapis.com/css?family=Lato&#038;ver=7.0' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://www.the-underdogs.org/wp-content/themes/uncover/css/bootstrap.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.the-underdogs.org/wp-content/themes/uncover/fonts/font-awesome/css/font-awesome.min.css?ver=4.7.0' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='https://www.the-underdogs.org/wp-includes/css/dist/components/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://www.the-underdogs.org/wp-includes/css/dist/preferences/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://www.the-underdogs.org/wp-includes/css/dist/block-editor/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='wp-reusable-blocks-css' href='https://www.the-underdogs.org/wp-includes/css/dist/reusable-blocks/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='wp-patterns-css' href='https://www.the-underdogs.org/wp-includes/css/dist/patterns/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='wp-editor-css' href='https://www.the-underdogs.org/wp-includes/css/dist/editor/style.min.css?ver=7.0' media='all' />
+<link rel='stylesheet' id='gutentor-css' href='https://www.the-underdogs.org/wp-content/plugins/gutentor/dist/blocks.style.build.css?ver=3.0.9' media='all' />
+<script id="jquery-core-js" src="https://www.the-underdogs.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.the-underdogs.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.the-underdogs.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.the-underdogs.org/wp-json/wp/v2/pages/12" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.the-underdogs.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0" />
+<link rel='shortlink' href='https://www.the-underdogs.org/' />
+				<style id="uagb-style-conditional-extension">@media (min-width: 1025px){body .uag-hide-desktop.uagb-google-map__wrap,body .uag-hide-desktop{display:none}}@media (min-width: 768px) and (max-width: 1024px){body .uag-hide-tab.uagb-google-map__wrap,body .uag-hide-tab{display:none}}@media (max-width: 767px){body .uag-hide-mob.uagb-google-map__wrap,body .uag-hide-mob{display:none}}</style>
+							<style id="uagb-style-frontend">.uagb-block-751d52ea.uagb-section__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-right: auto;margin-left: auto;max-width: 100%;background-image: url('https://www.the-underdogs.org/wp-content/uploads/2021/05/lean-startup.jpg' );background-position: center center;background-attachment: scroll;background-repeat: no-repeat;background-size: cover;}.uagb-block-751d52ea > .uagb-section__video-wrap{opacity: 0.5;}.uagb-block-751d52ea > .uagb-section__inner-wrap{max-width: 2000px;}.uagb-block-751d52ea.wp-block-uagb-section{box-shadow:      ;}.uagb-block-751d52ea > .uagb-section__overlay{opacity: 0.75;background-color: #000000;}.uagb-block-bf03c755.uagb-section__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-right: auto;margin-left: auto;max-width: 900px;}.uagb-block-bf03c755 > .uagb-section__video-wrap{opacity: 0.5;}.uagb-block-bf03c755 > .uagb-section__inner-wrap{max-width: 100%;}.uagb-block-bf03c755.wp-block-uagb-section{box-shadow:      ;}.uagb-block-bee8d7be.uagb-columns__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;}.uagb-block-bee8d7be .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-bee8d7be > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-bee8d7be .uagb-column__inner-wrap{padding: 10px;}.uagb-block-bee8d7be .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-bee8d7be .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-bee8d7be.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-278c3393.uagb-column__wrap{width: 10%;}.uagb-block-51d7cd07.uagb-column__wrap{width: 80%;}.uagb-block-31d64a3d.uagb-column__wrap{width: 10%;}.uagb-block-88761d29.uagb-columns__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;}.uagb-block-88761d29 .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-88761d29 > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-88761d29 .uagb-column__inner-wrap{padding: 10px;}.uagb-block-88761d29 .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-88761d29 .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-88761d29.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-10cc0346.uagb-column__wrap{width: 50%;}.uagb-block-21c00245.uagb-column__wrap{width: 50%;}.uagb-block-e84b1740.uagb-section__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-right: auto;margin-left: auto;max-width: 100%;}.uagb-block-e84b1740 > .uagb-section__video-wrap{opacity: 0.5;}.uagb-block-e84b1740 > .uagb-section__inner-wrap{max-width: 2000px;}.uagb-block-e84b1740.wp-block-uagb-section{box-shadow:      ;}.uagb-block-0bfd9a09.uagb-columns__wrap{padding-left: 20px;padding-right: 20px;}.uagb-block-0bfd9a09 .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-0bfd9a09 > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-0bfd9a09 .uagb-column__inner-wrap{padding: 10px;}.uagb-block-0bfd9a09 .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-0bfd9a09 .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-0bfd9a09.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-5338500f.uagb-column__wrap{padding-left: 10px;width: 50%;}.uagb-block-5338500f > .uagb-column__overlay{background-color: #cf2e2e;}.uagb-block-26216c14.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-26216c14 > .uagb-column__overlay{opacity: 0.7;background-color: #cf2e2e;}.uagb-block-9cece37e.uagb-columns__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-top: -22px;}.uagb-block-9cece37e .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-9cece37e > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-9cece37e .uagb-column__inner-wrap{padding: 10px;}.uagb-block-9cece37e .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-9cece37e .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-9cece37e.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-0ed3cdcc.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-0ed3cdcc > .uagb-column__overlay{opacity: 0.79;background-color: #cf2e2e;}.uagb-block-f5d2832d.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-f5d2832d > .uagb-column__overlay{background-color: #cf2e2e;}.uagb-block-877a2cf0.uagb-section__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-right: auto;margin-left: auto;max-width: 100%;}.uagb-block-877a2cf0 > .uagb-section__video-wrap{opacity: 0.5;}.uagb-block-877a2cf0 > .uagb-section__inner-wrap{max-width: 2000px;}.uagb-block-877a2cf0.wp-block-uagb-section{box-shadow:      ;}.uagb-block-877a2cf0 > .uagb-section__overlay{background-color: transparent;background-image: linear-gradient(160deg,rgb(209,209,228) 0%,rgb(249,247,241) 58%);}.uagb-block-34c67af7.uagb-columns__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;border-style: solid;border-width: 1px;border-color: #000000;}.uagb-block-34c67af7 .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-34c67af7 > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-34c67af7 .uagb-column__inner-wrap{padding: 10px;}.uagb-block-34c67af7 .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-34c67af7 .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-34c67af7.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-468a1977.uagb-column__wrap{width: 50%;}.uagb-block-4fe600ae.uagb-column__wrap{width: 50%;}.uagb-block-c1c237ec.uagb-section__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-right: auto;margin-left: auto;max-width: 100%;}.uagb-block-c1c237ec > .uagb-section__video-wrap{opacity: 0.5;}.uagb-block-c1c237ec > .uagb-section__inner-wrap{max-width: 2000px;}.uagb-block-c1c237ec.wp-block-uagb-section{box-shadow:      ;}.uagb-block-b2b0f98e.uagb-columns__wrap{padding-left: 20px;padding-right: 20px;}.uagb-block-b2b0f98e .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-b2b0f98e > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-b2b0f98e .uagb-column__inner-wrap{padding: 10px;}.uagb-block-b2b0f98e .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-b2b0f98e .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-b2b0f98e.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-f0b72d2c.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-f0b72d2c > .uagb-column__overlay{background-color: #cf2e2e;}.uagb-block-10faf7a6.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-10faf7a6 > .uagb-column__overlay{opacity: 0.8;background-color: #cf2e2e;}.uagb-block-f04fc7ff.uagb-columns__wrap{padding-top: 20px;padding-left: 20px;padding-right: 20px;margin-top: -20px;}.uagb-block-f04fc7ff .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-f04fc7ff > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-f04fc7ff .uagb-column__inner-wrap{padding: 10px;}.uagb-block-f04fc7ff .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-f04fc7ff .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-f04fc7ff.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-d2dc8e19.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-d2dc8e19 > .uagb-column__overlay{opacity: 0.8;background-color: #cf2e2e;}.uagb-block-7db3a210.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-7db3a210 > .uagb-column__overlay{background-color: #cf2e2e;}.uagb-block-50dd69eb.uagb-columns__wrap{padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;margin-top: -20px;}.uagb-block-50dd69eb .uagb-columns__video-wrap{opacity: 0.5;}.uagb-block-50dd69eb > .uagb-columns__inner-wrap{max-width: 2000px;}.uagb-block-50dd69eb .uagb-column__inner-wrap{padding: 10px;}.uagb-block-50dd69eb .uagb-columns__shape-top .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-50dd69eb .uagb-columns__shape-bottom .uagb-columns__shape-fill{fill: rgba(51,51,51,1);}.uagb-block-50dd69eb.wp-block-uagb-columns{box-shadow:      ;}.uagb-block-fc12fa9c.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-fc12fa9c > .uagb-column__overlay{opacity: 1;background-color: #cf2e2e;}.uagb-block-6ad3f6e4.uagb-column__wrap{padding-left: 15px;width: 50%;}.uagb-block-6ad3f6e4 > .uagb-column__overlay{opacity: 0.8;background-color: #cf2e2e;}</style>
+				<link rel="icon" href="https://www.the-underdogs.org/wp-content/uploads/2021/05/cropped-LogoMakr-045feC-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.the-underdogs.org/wp-content/uploads/2021/05/cropped-LogoMakr-045feC-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.the-underdogs.org/wp-content/uploads/2021/05/cropped-LogoMakr-045feC-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.the-underdogs.org/wp-content/uploads/2021/05/cropped-LogoMakr-045feC-270x270.png" />
+<style id="wp-custom-css">
+.main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a {
+    color: #000000;
+    background-color: #cf2e2e;
+}
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+    color: #cf2e2e;
+}
+.site-footer {
+    color: #cccccc;
+    text-align: left;
+    display: none;
+}
+#footer-widgets a, #footer-widgets a:visited {
+    color: #cf2e2e;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background: #cf2e2e
+}
+</style>
+<link rel='stylesheet' id='testimonials-simple-css' href='https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/templates/simple/content.css?ver=3.2.18' media='all' />
+<link rel='stylesheet' id='wpmtst-slider-controls-sides-outside-buttons2-css' href='https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/assets/public/css/slider-controls-sides-outside-buttons2.css?ver=3.2.18' media='all' />
+<style id="core-block-supports-inline-css">
+.wp-container-core-buttons-is-layout-7d812b4c{justify-content:center;}.wp-container-core-columns-is-layout-8f761849{flex-wrap:nowrap;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+
+<body class="home wp-singular page-template page-template-template-gutentor-full-width page-template-template-gutentor-full-width-php page page-id-12 wp-theme-uncover gutentor-active">
+ <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header">
+		<div class="container">
+		
+		<div class="site-branding">
+		
+								<p class="site-title"><a href="https://www.the-underdogs.org/" rel="home">The Underdogs</a></p>
+								<p class="site-description">Conference About IT TECHNOLOGY </p>
+						</div><!-- .site-branding -->
+
+	<!--top menu-->
+<div id="menu_container">
+
+			<nav id="site-navigation" class="main-navigation clearfix">
+				<h3 class="menu-toggle">Menu</h3>
+			<div class="menu-main-container"><ul id="primary-menu" class="menu"><li id="menu-item-175" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-175"><a href="https://www.the-underdogs.org/" aria-current="page">Home</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://www.the-underdogs.org/conference-program/">Conference program</a></li>
+<li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="https://www.the-underdogs.org/topics-for-reports-and-projects/">Topics for reports and projects</a></li>
+<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://www.the-underdogs.org/registration/">Registration</a></li>
+<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://www.the-underdogs.org/contact/">Contact</a></li>
+<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="https://www.the-underdogs.org/privacy-policy/">Privacy Policy</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</div>
+
+	</div><!-- .container -->			
+	</header><!-- #masthead -->
+<section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-image uagb-block-751d52ea"><div class="uagb-section__overlay"></div><div class="uagb-section__inner-wrap">
+<div style="height:113px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h1 class="wp-block-heading has-text-align-center"><span style="color: #ffffff;" class="ugb-highlight">IT TECHNOLOGY FOR BUSINESS</span></h1>
+
+
+
+<section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-undefined uagb-block-bf03c755"><div class="uagb-section__overlay"></div><div class="uagb-section__inner-wrap">
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-undefined uagb-columns__gap-10 alignundefined uagb-block-bee8d7be"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-3">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-278c3393"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap"></div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-51d7cd07"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<div style="height:21px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading has-text-align-center"><strong><span style="color: #ffffff;" class="ugb-highlight">in 10 hours with real examples</span></strong></h3>
+
+
+
+<p class="has-text-align-center wp-block-paragraph"><strong><span style="color: #cf2e2e;" class="ugb-highlight">Speeding up the transaction ᛊ Data protection ᛊ Customer analysis ᛊ Labor efficiency</span></strong></p>
+
+
+
+<h3 class="wp-block-heading has-text-align-center"><span style="color: #ffffff;" class="ugb-highlight">You&#8217;ll learn which technologies are right for your business and will help you increase<br>sales, speed up transactions, reduce labor costs and protect your data.</span></h3>
+
+
+
+<div class="wp-block-buttons is-horizontal is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-7d812b4c wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-luminous-vivid-amber-background-color has-text-color has-background wp-element-button" href="https://www.the-underdogs.org/registration/" style="border-radius:50px">Register</a></div>
+</div>
+
+
+
+<div style="height:144px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center wp-block-paragraph"><span style="color: #ffffff;" class="ugb-highlight"><strong>Date:</strong> November 10 <strong>Location:</strong> Online/Offline <strong>Start: </strong>10 a.m. <strong>End: </strong>8 p.m.</span></p>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-31d64a3d"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap"></div></div>
+</div></section>
+</div></section>
+</div></section>
+
+
+
+<div class="wp-block-cover alignfull" style="min-height:200px;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-vivid-red-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-large-font-size wp-block-paragraph">How to overcome market challenges and accelerate business development &#8211; practical experience, cases, success stories from leaders of major organizations</p>
+</div></div>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center"><strong>5 000</strong></h2>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">participants</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center"><strong>50+</strong></h2>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">speakers</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center"><strong>100%</strong></h2>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">practices</p>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<div class="wp-block-columns are-vertically-aligned-center is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"></div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow"></div>
+</div>
+
+
+
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-center uagb-columns__gap-10 alignundefined uagb-block-88761d29"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-10cc0346"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h2 class="wp-block-heading has-text-align-center">The purpose of the event</h2>
+
+
+
+<p class="has-text-align-center wp-block-paragraph"><strong><span style="color: #000000;" class="ugb-highlight">For whom the event is for</span></strong></p>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">To show how modern technology can help in the development of your business. <br>To describe in detail the whole process of working with IT-technologies: from implementation to the result on real examples.</p>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">To achieve this goal eight practitioners will speak for you and share their experience.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-21c00245"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap"><div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img fetchpriority="high" decoding="async" width="1130" height="753" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-1130x753.jpg" alt="" class="wp-image-14" style="width:565px;height:377px" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-1130x753.jpg 1130w, https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-380x253.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280-768x512.jpg 768w, https://www.the-underdogs.org/wp-content/uploads/2021/05/post-it-4129907_1280.jpg 1280w" sizes="(max-width: 1130px) 100vw, 1130px" /></figure>
+</div></div></div>
+</div></section>
+
+
+
+<section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-undefined uagb-block-e84b1740"><div class="uagb-section__overlay"></div><div class="uagb-section__inner-wrap">
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-center uagb-columns__gap-10 alignundefined uagb-block-0bfd9a09"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-5338500f"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h2 class="wp-block-heading" style="font-size:40px"><span style="color: #000000;" class="ugb-highlight">Who will benefit from<br>Conference?</span></h2>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-26216c14"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>For business owners</strong></h3>
+
+
+
+<p class="wp-block-paragraph">You will learn how to conveniently automate some processes to spend less time, get more profit and reduce labor costs. In addition, you will be able to securely protect any data and safely manage your finances.<br>Company executives,SEO:<br>You&#8217;ll learn how you can use technology to streamline operations within your company, manage your workforce, and speed up customer transactions. We will discuss applications for working with employees, partners, data and finances.</p>
+</div></div>
+</div></section>
+
+
+
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-undefined uagb-columns__gap-10 alignundefined uagb-block-9cece37e"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-0ed3cdcc"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>For technology professionals</strong></h3>
+
+
+
+<p class="wp-block-paragraph">You will learn by practical examples what results IT developments in the field of artificial intelligence, machine learning, Internet of things, Big Data, and not only.<br>This will allow you to improve your skills, learn market needs, and profitably demonstrate your developments to a warm audience in the future.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-f5d2832d"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>LPR in finance, sales and management</strong></h3>
+
+
+
+<p class="wp-block-paragraph">You&#8217;ll be able to use modern technology to analyze any data and predict results. This will allow you to work faster and more efficiently and move up the career ladder.<br>In addition, we&#8217;ll tell you all about cybersecurity when working with documents and finances.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+</div></section>
+</div></section>
+
+
+
+<div class="wp-block-getwid-section alignfull alignfull getwid-section-content-custom-width"><div class="wp-block-getwid-section__wrapper getwid-padding-left-medium getwid-padding-right-medium"><div class="wp-block-getwid-section__inner-wrapper" style="max-width:1140px"><div class="wp-block-getwid-section__background-holder"><div class="wp-block-getwid-section__background"></div><div class="wp-block-getwid-section__foreground"></div></div><div class="wp-block-getwid-section__content"><div class="wp-block-getwid-section__inner-content">
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:0px;margin-top:0px"><span class="wp-block-getwid-advanced-heading__content" style="text-align:center">Leadership</span></div>
+
+
+
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:30px;margin-top:10px"><h2 class="wp-block-getwid-advanced-heading__content" style="text-align:center">Meet the guests</h2></div>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">We invited experienced IT executives to share their personal <br>experiences with technology implementation.</p>
+
+
+
+<div class="wp-block-getwid-advanced-spacer" style="height:40px" aria-hidden="true"></div>
+
+
+
+<div class="wp-block-columns has-3-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-foreground-60 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/127.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-56" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/127.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/127-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/127-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/127-768x768.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>William E. Staton</strong><br>IT director of the holding company</p></div></div></div></a></div>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper"><img decoding="async" width="768" height="768" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/1236-768x768.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-57" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/1236-768x768.jpg 768w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1236-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1236-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1236.jpg 1024w" sizes="(max-width: 768px) 100vw, 768px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><span class="wp-block-getwid-banner__title"><br><br><br><br><br></span><p class="wp-block-getwid-banner__text"><strong>Robin A. Pruitt</strong><br>Business analyst, product manager</p></div></div></div></a></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-foreground-60 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/1245.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-61" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/1245.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1245-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1245-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1245-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>Terrence M. Conti</strong><br>Conference moderator<br></p></div></div></div></a></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/124.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-59" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/124.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/124-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/124-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/124-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><br><strong>Tracy S. Reed</strong><br>Founder and Managing Partner</p></div></div></div></a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns has-3-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-foreground-60 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/1369.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-133" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/1369.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1369-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1369-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1369-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>Randall T. Carrera</strong><br>Company Founder. 17 years in IT</p></div></div></div></a></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-foreground-60 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/125.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-60" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/125.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/125-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/125-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/125-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>Kevin D. Reed</strong><br>Expert in the implementation of management systems</p></div></div></div></a></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/1203.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-62" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/1203.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1203-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1203-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/1203-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>Harold T. Burchett</strong><br>Expert in the implementation of management systems</p></div></div></div></a></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-banner has-animation-style1 has-text-animation-opacity-zoom-in has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper has-background has-black-background-color"><img loading="lazy" decoding="async" width="1024" height="1024" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/136.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source wp-image-134" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/136.jpg 1024w, https://www.the-underdogs.org/wp-content/uploads/2021/05/136-380x380.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/136-178x178.jpg 178w, https://www.the-underdogs.org/wp-content/uploads/2021/05/136-768x768.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><p class="wp-block-getwid-banner__text"><strong>Tony F. Tapscott</strong><br>Head of the school of negotiation, sales, presentations</p></div></div></div></a></div>
+</div>
+</div>
+</div></div></div></div></div>
+
+
+
+<section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-gradient uagb-block-877a2cf0"><div class="uagb-section__overlay"></div><div class="uagb-section__inner-wrap">
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-center uagb-columns__gap-10 alignundefined uagb-block-34c67af7"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-468a1977"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h2 class="wp-block-heading"><span style="color: #000000;" class="ugb-highlight">Register now and get 20% DISCOUNT on CONFERENCE attendance</span></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="color: #000000;" class="ugb-highlight">**Offer is limited and may disappear at any time!</span></p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-luminous-vivid-amber-background-color has-text-color has-background wp-element-button" href="https://www.the-underdogs.org/registration/" style="border-radius:50px">Get discount</a></div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-4fe600ae"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1130" height="753" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/man-15-1130x753.jpg" alt="" class="wp-image-18" srcset="https://www.the-underdogs.org/wp-content/uploads/2021/05/man-15-1130x753.jpg 1130w, https://www.the-underdogs.org/wp-content/uploads/2021/05/man-15-380x253.jpg 380w, https://www.the-underdogs.org/wp-content/uploads/2021/05/man-15-768x512.jpg 768w, https://www.the-underdogs.org/wp-content/uploads/2021/05/man-15.jpg 1280w" sizes="auto, (max-width: 1130px) 100vw, 1130px" /></figure>
+</div></div>
+</div></section>
+</div></section>
+
+
+
+<section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-undefined uagb-block-c1c237ec"><div class="uagb-section__overlay"></div><div class="uagb-section__inner-wrap">
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-center uagb-columns__gap-10 alignundefined uagb-block-b2b0f98e"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-f0b72d2c"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h2 class="wp-block-heading has-black-color has-text-color" style="font-size:50px">What is this<br>conference</h2>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-10faf7a6"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>To get knowledge!</strong></h3>
+
+
+
+<p class="wp-block-paragraph">Get practical knowledge of IT technologies implementation in large companies.</p>
+</div></div>
+</div></section>
+
+
+
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-undefined uagb-columns__gap-10 alignundefined uagb-block-f04fc7ff"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-d2dc8e19"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>Find solutions!</strong></h3>
+
+
+
+<p class="wp-block-paragraph">Find solutions for your business, accelerate the process, and minimize costs.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-7db3a210"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>What will be relevant?</strong></h3>
+
+
+
+<p class="wp-block-paragraph">Determine where the world of technology is moving, what will be relevant in six months</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+</div></section>
+
+
+
+<section class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-undefined uagb-columns__stack-mobile uagb-columns__valign-undefined uagb-columns__gap-10 alignundefined uagb-block-50dd69eb"><div class="uagb-columns__overlay"></div><div class="uagb-columns__inner-wrap uagb-columns__columns-2">
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-fc12fa9c"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<h3 class="wp-block-heading"><strong>Get answers</strong></h3>
+
+
+
+<p class="wp-block-paragraph">Get answers to your questions from the experts</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+
+
+
+<div class="wp-block-uagb-column uagb-column__wrap uagb-column__background-color uagb-block-6ad3f6e4"><div class="uagb-column__overlay"></div><div class="uagb-column__inner-wrap">
+<p class="wp-block-paragraph" style="font-size:25px">*Most important is the knowledge<br>and experience that you will receive<br>at the conference from our<br>speakers and guests.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div>
+</div></section>
+</div></section>
+
+
+
+<div class="wp-block-getwid-section alignfull alignfull getwid-section-content-custom-width"><div class="wp-block-getwid-section__wrapper"><div class="wp-block-getwid-section__inner-wrapper" style="max-width:1140px"><div class="wp-block-getwid-section__background-holder"><div class="wp-block-getwid-section__background"></div><div class="wp-block-getwid-section__foreground"></div></div><div class="wp-block-getwid-section__content"><div class="wp-block-getwid-section__inner-content">
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:0px;margin-top:0px"><span class="wp-block-getwid-advanced-heading__content" style="text-align:center">Only best services</span></div>
+
+
+
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:60px;margin-top:10px"><h2 class="wp-block-getwid-advanced-heading__content" style="text-align:center">Pricing Table</h2></div>
+
+
+
+<div class="wp-block-columns has-3-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-price-box has-background has-cyan-bluish-gray-background-color has-text-color has-black-color"><h3 class="wp-block-getwid-price-box__title">Online format (broadcast)</h3><div class="wp-block-getwid-price-box__pricing"><p class="wp-block-getwid-price-box__currency">$</p><p class="wp-block-getwid-price-box__amount">250</p></div><ul class="wp-block-getwid-price-box__features"><li>Online broadcast</li><li>Ability to ask questions to the speakers</li><li>Gifts from partners</li><li>Chat with speakers and participants</li><li>Answers of speakers to questions after the conference</li></ul>
+<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-text-color has-background wp-element-button" href="https://www.the-underdogs.org/contact/" style="background-color:#ffda76">Buy Ticket</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-price-box has-background has-text-color" style="background-color:#f96c6c;color:#000000"><h3 class="wp-block-getwid-price-box__title">Offline format in the hall</h3><div class="wp-block-getwid-price-box__pricing"><p class="wp-block-getwid-price-box__currency">$</p><p class="wp-block-getwid-price-box__amount">400</p></div><ul class="wp-block-getwid-price-box__features"><li>Only 100 participants</li><li>Circle of experts</li><li>Business dinner</li><li>Networking, socializing</li><li>Gifts from sponsors</li><li>Lunch</li><li>Conference Recording</li></ul>
+<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-luminous-vivid-amber-background-color has-text-color has-background wp-element-button" href="https://www.the-underdogs.org/contact/">Buy Ticket</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-getwid-price-box has-background has-text-color" style="background-color:#e9ebed;color:#000000"><h3 class="wp-block-getwid-price-box__title">Offline VIP (dinner)</h3><div class="wp-block-getwid-price-box__pricing"><p class="wp-block-getwid-price-box__currency">$</p><p class="wp-block-getwid-price-box__amount">600</p></div><ul class="wp-block-getwid-price-box__features"><li>Front row</li><li>Partner gifts</li><li>Lunch</li><li>Recording of the conference</li><li>Business dinner with speakers</li><li>Individual analysis/consultation on IT implementation by one of the speakers</li></ul>
+<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-text-color has-background wp-element-button" href="https://www.the-underdogs.org/contact/" style="background-color:#ffda76">Buy Ticket</a></div>
+</div>
+</div>
+</div>
+</div></div></div></div></div>
+
+
+
+<h2 class="wp-block-heading has-text-align-center">Blog</h2>
+
+
+<ul class="wp-block-latest-posts__list is-grid columns-3 wp-block-latest-posts"><li><div class="wp-block-latest-posts__featured-image aligncenter"><img loading="lazy" decoding="async" width="640" height="427" src="https://www.the-underdogs.org/wp-content/uploads/2026/07/etienne-boulanger-aafOjsh-9jU-unsplash.jpg" class="attachment-large size-large wp-post-image" alt="" style="" srcset="https://www.the-underdogs.org/wp-content/uploads/2026/07/etienne-boulanger-aafOjsh-9jU-unsplash.jpg 640w, https://www.the-underdogs.org/wp-content/uploads/2026/07/etienne-boulanger-aafOjsh-9jU-unsplash-380x254.jpg 380w" sizes="auto, (max-width: 640px) 100vw, 640px" /></div><a class="wp-block-latest-posts__post-title" href="https://www.the-underdogs.org/top-9-best-net-development-companies-2026/">Top 9 Best .NET Development Companies 2026</a><div class="wp-block-latest-posts__post-excerpt">Your legacy .NET Framework app is three versions behind, your CTO wants it on .NET 8 and Azure by Q3, and the last vendor you talked to couldn&#8217;t explain how they&#8217;d handle PCI DSS scope. That&#8217;s the moment most fintech teams start actually searching for a .NET partner instead of just asking around. The stakes &hellip;</div></li>
+<li><div class="wp-block-latest-posts__featured-image aligncenter"><img loading="lazy" decoding="async" width="640" height="427" src="https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-hBuwVLcYTnA-unsplash-3.jpg" class="attachment-large size-large wp-post-image" alt="" style="" srcset="https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-hBuwVLcYTnA-unsplash-3.jpg 640w, https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-hBuwVLcYTnA-unsplash-3-380x254.jpg 380w" sizes="auto, (max-width: 640px) 100vw, 640px" /></div><a class="wp-block-latest-posts__post-title" href="https://www.the-underdogs.org/top-8-boston-wrongful-death-attorneys-in-2026/">Top 8 Boston Wrongful Death Attorneys in 2026</a><div class="wp-block-latest-posts__post-excerpt">With so many wrongful death attorneys in Boston, it’s easy for families to choose poorly. The real problem isn’t a lack of good options — it’s that most rankings online are based on the wrong things. They reward nice websites, big ad budgets, and press mentions rather than courtroom ability or client support. Because of &hellip;</div></li>
+<li><div class="wp-block-latest-posts__featured-image aligncenter"><img loading="lazy" decoding="async" width="640" height="427" src="https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-mfB1B1s4sMc-unsplash-5.jpg" class="attachment-large size-large wp-post-image" alt="" style="" srcset="https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-mfB1B1s4sMc-unsplash-5.jpg 640w, https://www.the-underdogs.org/wp-content/uploads/2026/06/christin-hume-mfB1B1s4sMc-unsplash-5-380x254.jpg 380w" sizes="auto, (max-width: 640px) 100vw, 640px" /></div><a class="wp-block-latest-posts__post-title" href="https://www.the-underdogs.org/how-to-launch-a-crypto-trading-platform-in-canada/">How to Launch a Crypto Trading Platform in Canada</a><div class="wp-block-latest-posts__post-excerpt">Canada&#8217;s cryptocurrency market stands out as mature and well-regulated. Tech-savvy investors feel right at home here, and the rules — while strict — are actually clear compared to many other countries. Launching a platform means mixing strong tech with serious compliance and legal work. We guide you through what matters most, from setting up your &hellip;</div></li>
+<li><div class="wp-block-latest-posts__featured-image aligncenter"><img loading="lazy" decoding="async" width="640" height="427" src="https://www.the-underdogs.org/wp-content/uploads/2026/04/christin-hume-hBuwVLcYTnA-unsplash-1.jpg" class="attachment-large size-large wp-post-image" alt="" style="" srcset="https://www.the-underdogs.org/wp-content/uploads/2026/04/christin-hume-hBuwVLcYTnA-unsplash-1.jpg 640w, https://www.the-underdogs.org/wp-content/uploads/2026/04/christin-hume-hBuwVLcYTnA-unsplash-1-380x254.jpg 380w" sizes="auto, (max-width: 640px) 100vw, 640px" /></div><a class="wp-block-latest-posts__post-title" href="https://www.the-underdogs.org/cloud-cost-optimization-strategies-to-manage-your-it-infrastructure-budget-efficiently/">Cloud Cost Optimization – Strategies to Manage Your IT Infrastructure Budget Efficiently</a><div class="wp-block-latest-posts__post-excerpt">The transition from capital expenditure (CapEx) to operational expenditure (OpEx) is the fundamental economic promise of cloud computing. However, for many enterprises, the initial allure of cost savings is quickly overshadowed by &#8220;cloud bill shock&#8221;—the realization that unmanaged cloud environments can be significantly more expensive than traditional on-premises hardware. Effective cloud cost optimization is not &hellip;</div></li>
+</ul>
+
+<div class="strong-view strong-view-id-1 simple wpmtst-simple slider-container carousel slider-mode-horizontal slider-adaptive controls-type-sides-outside controls-style-buttons2" data-count=16 data-slider-var=strong_slider_id_1 data-state=idle><div class="strong-content wpmslider-content"><div class="wpmtst-testimonial testimonial t-slide post-507"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":453,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-453" src="https://www.the-underdogs.org/wp-content/uploads/2025/06/online_casino.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->The experts at LegjobbKaszino constantly research the Hungarian <a href="https://legjobbkaszino.org/">online casino</a> market to provide players with up-to-date reviews, bonus comparisons and tips for safe gaming. This allows users to choose only the best, proven platforms for quality entertainment.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-508"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":426,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-426" src="https://www.the-underdogs.org/wp-content/uploads/2025/02/175_175.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->Enjoy top slots, live casino games, and exclusive bonuses <a href="https://maggico-casino.com/es-cl/">Maggico</a></p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-509"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":423,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-423" src="https://www.the-underdogs.org/wp-content/uploads/2025/02/nove_casino_logo_white_300_300.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->Thank you for your cooperation and support! Our partner &#8220;<a href="https://novecasino.net/">Nové Casino Online</a>&#8221; offers unbiased reviews of new Czech casinos, conducts independent tests and brand analysis. Here you will find author ratings, exclusive bonuses and demo versions of popular slot machines.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-511"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":414,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-414" src="https://www.the-underdogs.org/wp-content/uploads/2024/10/uk-no-deposit-bonus.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->The best <a href="https://www.slotozilla.com/uk/no-deposit-bonus">NDB on Slotozilla</a> &#8211; list of the most lucrative free bonuses for UK players.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-512"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":332,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-332" src="https://www.the-underdogs.org/wp-content/uploads/2023/07/Pokiesportal.com_.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->G&#8217;day mate! Let&#8217;s dive into the <a href="https://pokiesportal.com/">thrilling world of online pokies</a>, an absolute Aussie favorite when it comes to online gambling. Picture yourself relaxing at home, sipping a cold drink, and spinning the reels of your favorite virtual pokie machines—it&#8217;s an experience that captures the essence of laid-back Aussie entertainment.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-513"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"lightbox":{"enabled":false},"id":462,"sizeSlug":"full","linkDestination":"custom","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><a href="https://cryptohorizon.net/"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-462" src="https://www.the-underdogs.org/wp-content/uploads/2025/07/Crypto-2-1.png" alt="best crypto casinos" /></a></figure><p><!-- /wp:image --><!-- wp:paragraph -->Looking for a fair and generous casino crypto bonus? Visit CryptoHorizon for multiple choices and bonus codes!</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-514"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":465,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-465" src="https://www.the-underdogs.org/wp-content/uploads/2025/11/photo_2025-11-03_17-06-55.jpg" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->Discover trusted gaming and great bonuses at the best <a href="https://www.premiumtimesng.com/casino/fi/virolaiset-nettikasinot/">Viro kasinot</a> online!</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-515"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":403,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-403" src="https://www.the-underdogs.org/wp-content/uploads/2024/09/Fortune-Tiger_3.jpg" alt="" /></figure><p><!-- /wp:image --></p><p><!-- wp:paragraph -->Fortune Tiger &#8211; the famous tiger game from PG Soft. Try it for free on <a href="https://demofortunetiger.com/">demofortunetiger.com</a> before playing with real money <!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-516"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":269,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-269" src="https://www.the-underdogs.org/wp-content/uploads/2022/04/theunder_psg1.png" alt="Pokie Spins Help" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->With top-notch 128-bit data encryption technology, sophisticated casino software, and certified RNG technology used in the games, reliable third party services, <a href="https://www.pokiespins.org/">Pokie Spins</a> platform helps players from Australia get unique gambling experience. By automating all behind the scenes processes, players can start to enjoy 700+ games from top providers and 200% up to $5,000 Sign Up Bonus from the first seconds &#8211; all from one place.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-517"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":279,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-279" src="https://www.the-underdogs.org/wp-content/uploads/2022/09/topkasynoonline-pl-175x175-1.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->One of our most reliable partners is Milan Rabszski from Poland. We are working together to promote and improve the IT infrastructure for the &#8220;<a href="http://topkasynoonline.com/">Online Kasyna</a>&#8221; project.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-518"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":379,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-379" src="https://www.the-underdogs.org/wp-content/uploads/2024/04/newlogo-onerep.jpg" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->Your primary source for best practices in online security, cyber defense, and safeguarding privacy, as presented on the <a href="https://onerep.com/blog/">OneRep blog</a>.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-519"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":266,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-266" src="https://www.the-underdogs.org/wp-content/uploads/2022/04/theunder_allss1.png" alt="AllSpins Win Casino" /></figure><p><!-- /wp:image --><!-- wp:paragraph -->All Spins Win is a business-oriented gambling website that disrupted the Aussie iGambling market in 2018. To meet the needs of the current generation of players, we constantly improve our platform by sticking to new-age technologies. By completing <a href="https://allspinswin.casino/">All Spins Win Login</a> form, you will get rewarded with a 300% up to $1,000 Bonus and get access to over 700 casino games. And live content only adds to the player&#8217;s experience of thrill. Due to constant data management and protection improvements, and 128-bit SSL encryption, a casino is a safe place for sharing payment details.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-521"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":445,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-445" src="https://www.the-underdogs.org/wp-content/uploads/2025/05/fortunica_casino.png" alt="" /></figure><p><!-- /wp:image --></p><p><!-- wp:paragraph -->From the website <a href="https://fortunica-casino.uk/en-gb">fortunica casino</a><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-522"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":385,"sizeSlug":"full","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-385" src="https://www.the-underdogs.org/wp-content/uploads/2024/05/online-loto-az-logo-.png" alt="" /></figure><p><!-- /wp:image --></p><p><!-- wp:paragraph -->Experience the rush of <a href="https://online-loto.com/">Online Loto</a>! Join now and see if your numbers come up. Play today! <!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-524"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><!-- wp:column --></p><div class="wp-block-column"><!-- wp:image {"id":224,"sizeSlug":"large","linkDestination":"none","align":"center"} --></p><figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="175" height="175" class="wp-image-224" src="https://www.the-underdogs.org/wp-content/uploads/2021/06/tips_gg_white_175.png" alt="" /></figure><p><!-- /wp:image --><!-- wp:paragraph --><a href="https://tips.gg/"><span class="has-inline-color has-luminous-vivid-amber-color">Tips.gg</span></a> is a premier website dedicated to providing comprehensive information on sports and esports matches, tournaments, and players. With its expertly curated predictions and meticulous analytics, Tips.gg empowers enthusiasts, fans, and bettors alike to make well-informed decisions, enriching their experience in the world of sports and esports.</p><p><!-- /wp:paragraph --></div><p><!-- /wp:column --></p></div><div class="clear"></div></div></div><div class="wpmtst-testimonial testimonial t-slide post-531"><div class="wpmtst-testimonial-inner testimonial-inner"><div data-infinite-loop="true"  class="wpmtst-testimonial-content testimonial-content"><div class="maybe-clear"></div><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-532" src="https://www.the-underdogs.org/wp-content/uploads/2025/12/PSloty_logo_335х150_1_1.png" alt="" width="175" height="175" srcset="https://www.the-underdogs.org/wp-content/uploads/2025/12/PSloty_logo_335х150_1_1.png 175w, https://www.the-underdogs.org/wp-content/uploads/2025/12/PSloty_logo_335х150_1_1-75x75.png 75w" sizes="auto, (max-width: 175px) 100vw, 175px" /><br />
+Business is like a casino game, where strategy and risk management shape the outcome. Success, as at <a href="https://pl.polskiesloty.com/spingranny-opinie/">Spingranny casino</a>, depends on smart decisions rather than pure luck.</p></div><div class="clear"></div></div></div></div></div>
+
+
+
+<div class="wp-block-getwid-section alignfull getwid-section-content-custom-width"><div class="wp-block-getwid-section__wrapper getwid-padding-top-large getwid-padding-bottom-large getwid-padding-left-medium getwid-padding-right-medium" style="min-height:70vh"><div class="wp-block-getwid-section__inner-wrapper" style="max-width:540px"><div class="wp-block-getwid-section__background-holder"><div class="wp-block-getwid-section__background" style="background-image:url('https://www.the-underdogs.org/wp-content/uploads/2021/05/diary-96.jpg')"><div class="wp-block-getwid-section__background-image-wrapper"><img decoding="async" class="wp-block-getwid-section__background-image" src="https://www.the-underdogs.org/wp-content/uploads/2021/05/diary-96.jpg" alt=""/></div></div><div class="wp-block-getwid-section__foreground" style="opacity:0.65;background-color:#000000"></div></div><div class="wp-block-getwid-section__content"><div class="wp-block-getwid-section__inner-content">
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:0px;margin-top:0px"><span class="wp-block-getwid-advanced-heading__content has-text-color" style="text-align:center;color:#ffffff">Get social with us</span></div>
+
+
+
+<div class="wp-block-getwid-advanced-heading" style="margin-bottom:30px;margin-top:10px"><h2 class="wp-block-getwid-advanced-heading__content has-text-color" style="text-align:center;color:#ffffff">Let's keep in touch</h2></div>
+
+
+
+<p class="has-text-align-center has-text-color wp-block-paragraph" style="color:#ffffff"></p>
+
+
+
+<div class="wp-block-getwid-advanced-spacer" style="height:40px" aria-hidden="true"></div>
+
+
+
+<div class="wp-block-getwid-social-links has-large-spacing has-icons-stacked"><ul class="wp-block-getwid-social-links__list getwid-justify-content-center"><li class="wp-block-getwid-social-links__item"><a class="wp-block-getwid-social-links__link" href="https://www.linkedin.com/"><span class="wp-block-getwid-social-links__wrapper has-text-color has-background" style="color:#000000;background-color:#ffffff"><i class="fab fa-linkedin-in"></i></span></a></li><li class="wp-block-getwid-social-links__item"><a class="wp-block-getwid-social-links__link" href="https://www.facebook.com/"><span class="wp-block-getwid-social-links__wrapper has-text-color has-background" style="color:#000000;background-color:#ffffff"><i class="fab fa-facebook-f"></i></span></a></li><li class="wp-block-getwid-social-links__item"><a class="wp-block-getwid-social-links__link" href="https://twitter.com/"><span class="wp-block-getwid-social-links__wrapper has-text-color has-background" style="color:#000000;background-color:#ffffff"><i class="fab fa-twitter"></i></span></a></li><li class="wp-block-getwid-social-links__item"><a class="wp-block-getwid-social-links__link" href="https://www.instagram.com/"><span class="wp-block-getwid-social-links__wrapper has-text-color has-background" style="color:#000000;background-color:#ffffff"><i class="fab fa-instagram"></i></span></a></li><li class="wp-block-getwid-social-links__item"><a class="wp-block-getwid-social-links__link" href="https://www.youtube.com/"><span class="wp-block-getwid-social-links__wrapper has-text-color has-background" style="color:#000000;background-color:#ffffff"><i class="fab fa-youtube"></i></span></a></li></ul></div>
+</div></div></div></div></div>
+	
+	
+<div id="footer-widgets">
+	<div class="container">
+		<div class="row">
+							<aside class="footer-active-3 footer-widget-area">
+				<div id="nav_menu-3" class="widget widget_nav_menu"><h3 class="widget-title">Navigation Menu</h3><div class="menu-main-container"><ul id="menu-main" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-175"><a href="https://www.the-underdogs.org/" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://www.the-underdogs.org/conference-program/">Conference program</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="https://www.the-underdogs.org/topics-for-reports-and-projects/">Topics for reports and projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://www.the-underdogs.org/registration/">Registration</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://www.the-underdogs.org/contact/">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="https://www.the-underdogs.org/privacy-policy/">Privacy Policy</a></li>
+</ul></div></div>				</aside><!-- .footer-widget-area -->
+							<aside class="footer-active-3 footer-widget-area">
+				<div id="text-3" class="widget widget_text"><h3 class="widget-title">Contact Details</h3>			<div class="textwidget"><p>3844 Glendale Avenue<br />
+Fullerton, CA 93632<br />
++1 818-642-0499<br />
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2940474f46695c474d4c5b4d464e5a07465b4e">[email&#160;protected]</a></p>
+</div>
+		</div>				</aside><!-- .footer-widget-area -->
+							<aside class="footer-active-3 footer-widget-area">
+				<div id="search-7" class="widget widget_search">
+<form role="search" method="get" class="searchform" action="https://www.the-underdogs.org/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit btn search-btn"><span class="screen-reader-text">Search</span><i class="fa fa-search"></i></button>
+</form>
+</div>				</aside><!-- .footer-widget-area -->
+					</div><!-- .inner-wrapper -->
+	</div><!-- .container -->
+</div><!-- #footer-widgets -->
+
+	<footer id="colophon" class="site-footer">
+	
+	<div class="container">
+	
+	
+		<div class="site-info">
+			Copyright 2026  | Powered by <a href="http://www.wordpress.org">WordPress</a> | uncover theme by <a href="https://www.themeszen.com">themeszen</a>
+		</div><!-- .site-info -->
+		
+	</div><!-- .container -->
+		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/uncover/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="flexslider-js" src="https://www.the-underdogs.org/wp-content/themes/uncover/js/jquery.flexslider.js?ver=2.1"></script>
+<script id="uncover-custom-js" src="https://www.the-underdogs.org/wp-content/themes/uncover/js/jquery.custom.js?ver=1.0"></script>
+<script id="getwid-blocks-frontend-js-js-extra">
+var Getwid = {"settings":{"date_time_utc":"2026-07-15 01:47:05","google_api_key":""},"ajax_url":"https://www.the-underdogs.org/wp-admin/admin-ajax.php","nonces":{"recaptcha_v2_contact_form":"a1273962db"}};
+//# sourceURL=getwid-blocks-frontend-js-js-extra
+</script>
+<script id="getwid-blocks-frontend-js-js" src="https://www.the-underdogs.org/wp-content/plugins/getwid/assets/js/frontend.blocks.js?ver=1.6.11"></script>
+<script id="uncover-navigation-js" src="https://www.the-underdogs.org/wp-content/themes/uncover/js/navigation.js?ver=20151215"></script>
+<script id="uncover-skip-link-focus-fix-js" src="https://www.the-underdogs.org/wp-content/themes/uncover/js/skip-link-focus-fix.js?ver=20151215"></script>
+<script id="gutentor-block-js-extra">
+var gutentorLS = {"fontAwesomeVersion":"5","restNonce":"d217df8bc0","restUrl":"https://www.the-underdogs.org/wp-json/"};
+//# sourceURL=gutentor-block-js-extra
+</script>
+<script id="gutentor-block-js" src="https://www.the-underdogs.org/wp-content/plugins/gutentor/assets/js/gutentor.min.js?ver=3.0.9"></script>
+<script id="jquery-actual-js" defer src="https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/assets/public/js/lib/actual/jquery-actual.min.js?ver=1.0.16"></script>
+<script id="imagesloaded-js" src="https://www.the-underdogs.org/wp-includes/js/imagesloaded.min.js?ver=5.0.0"></script>
+<script id="underscore-js" src="https://www.the-underdogs.org/wp-includes/js/underscore.min.js?ver=1.13.8"></script>
+<script id="verge-js" defer src="https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/assets/public/js/lib/verge/verge.min.js?ver=1.10.2"></script>
+<script id="wp-hooks-js" src="https://www.the-underdogs.org/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://www.the-underdogs.org/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wpmtst-slider-js-extra">
+var strong_slider_id_1 = {"config":{"mode":"horizontal","speed":1000,"pause":8000,"autoHover":1,"autoStart":1,"infiniteLoop":1,"stopAutoOnClick":1,"adaptiveHeight":1,"adaptiveHeightSpeed":500,"controls":1,"autoControls":0,"pager":0,"slideCount":16,"debug":false,"compat":{"lazyload":{"active":false,"classes":[]}},"touchEnabled":true,"type":"show_multiple","breakpoints":{"single":{"maxSlides":1,"moveSlides":1,"slideMargin":1},"multiple":{"desktop":{"width":1200,"maxSlides":2,"moveSlides":1,"slideMargin":20},"large":{"width":1024,"maxSlides":2,"moveSlides":1,"slideMargin":20},"medium":{"width":640,"maxSlides":1,"moveSlides":1,"slideMargin":10},"small":{"width":480,"maxSlides":1,"moveSlides":1,"slideMargin":1}}},"prevText":"","nextText":"","startText":"","stopText":"","nextUrl":"next-slide","prevUrl":"previous-slide"}};
+//# sourceURL=wpmtst-slider-js-extra
+</script>
+<script id="wpmtst-slider-js" defer src="https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/assets/public/js/lib/strongslider/jquery-strongslider.min.js?ver=3.2.18"></script>
+<script id="wpmtst-controller-js-extra">
+var strongControllerParms = {"initializeOn":"documentReady","method":"","universalTimer":"500","observerTimer":"500","event":"","script":"","containerId":"page","addedNodeId":"content","debug":""};
+//# sourceURL=wpmtst-controller-js-extra
+</script>
+<script id="wpmtst-controller-js" src="https://www.the-underdogs.org/wp-content/plugins/strong-testimonials/assets/public/js/controller.min.js?ver=3.2.18"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.the-underdogs.org/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.the-underdogs.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</body>
+</html>

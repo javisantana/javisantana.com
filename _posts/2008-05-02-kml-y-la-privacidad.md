@@ -71,4 +71,4 @@ Gracias al número de licencia conoces al usuario y con latitud y longitud conoc
   
 Por cierto, y no digo que tenga algo que ver, ya he implementado el writer para kml de agroguía :):  
   
-[![](http://4.bp.blogspot.com/_XzuP3e63Ok8/SBt0iTmt08I/AAAAAAAAA3s/BklMrhhdG28/s320/_bis.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SBt0iTmt08I/AAAAAAAAA3s/BklMrhhdG28/s1600-h/_bis.png)
+[![](/blog_images/imported/b4bf929a-_bis.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SBt0iTmt08I/AAAAAAAAA3s/BklMrhhdG28/s1600-h/_bis.png)

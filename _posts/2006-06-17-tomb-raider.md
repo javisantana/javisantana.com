@@ -16,6 +16,6 @@ Pero la cosa no queda ahí, mi pc se llama [qualopec](http://wikiraider.com/inde
 Una lástima que se deteriorara tanto con el paso del tiempo. Me ha alegrado ver algunas pantallas de aquel mítico tomb raider. ains... :)  
   
 EDIT: \*Parte\* de la música se puede descargar de [croftinc](http://www.croftinc.com/music_tr1.html) y no solo la de TR1.  
-![](http://wikiraider.com/images/a/a9/Cistern.jpg)  
+![](/blog_images/imported/18c4284f-Cistern.jpg)  
   
 (\*) los blogs se están conviertiendo en el marca, poco texto, muy sensacionalista y bien mascadito, además de muchas imágenes y videos.

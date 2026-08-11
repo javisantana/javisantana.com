@@ -14,7 +14,7 @@ Repasando los [resultados de la assembly](http://pouet.net/party.php?which=7&whe
   
 No he podido ver la demo en tiempo real porque en mi pc iba a saltos, "solo" he visto el video (merece la pena bajarse los 200 y pico megas en vez de ver el de youtube). De todas formas he estado echando un vistazo a los datos que trae el zip de la demo que esta vez no están encriptados como pasó con [iconoclast](http://pouet.net/prod.php?which=18350)(aunque la encriptación era solo un xor), de la que uso su track como sonido para despertarme. En él se pueden ver tanto las meshes (y sus lightmaps), las texturas y los shaders que usa.  
   
-[![](http://lh3.google.es/qualopec/RrimwF2mCxI/AAAAAAAAAJ0/eh8KcioeTBA/s400/asd.jpg)](http://picasaweb.google.es/qualopec/Screens/photo#5096006323504810770)  
+[![](/blog_images/imported/4de5768f-asd.jpg)](http://picasaweb.google.es/qualopec/Screens/photo#5096006323504810770)  
   
 Por último una nota curiosa que deja el programador en el readme:  
 """  

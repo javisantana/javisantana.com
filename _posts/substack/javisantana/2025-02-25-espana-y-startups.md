@@ -5,12 +5,12 @@ layout: post
 source_url: "https://javisantana.substack.com/p/espana-y-startups"
 substack: "javisantana"
 substack_id: 157807883
-cover_image: "https://substackcdn.com/image/fetch/$s_!JUil!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2354d5e1-f5e3-4bbb-9293-1da343e568f7_1284x1430.png"
+cover_image: "/blog_images/imported/6fa059d4-2354d5e1-f5e3-4bbb-9293-1da343e568f7_1284x1430.png"
 ---
 
 El otro día teníamos [esta](https://x.com/cuenca/status/1893376686952980697) conversación en twitter (para algunas cosas sigo pensando en pesetas, imaginate cambiar el nombre a twitter) donde Jaime Novoa la clava:
 
-![](https://substackcdn.com/image/fetch/$s_!JUil!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2354d5e1-f5e3-4bbb-9293-1da343e568f7_1284x1430.png)
+![](/blog_images/imported/b618b360-2354d5e1-f5e3-4bbb-9293-1da343e568f7_1284x1430.png)
 
 Es muy difícil hacer una lista mejor que esa, así que no la voy a tocar pero lo que sí voy a hacer es dar el punto de vista desde dentro, el de fundador de una startup. 
 
@@ -44,7 +44,7 @@ Por suerte nosotros vamos bien servidos. Pero vamos bien porque tenemos un track
 
 Puedo entender que alguien empezando lo tenga crudo y seguramente lo de “risk takers” vaya también por la gente de VC (y otras entidades que meten gallina) se atrevan con gente que parece lista, pero que no pinta tan bien en el excel. Lo peor es que perdemos todas las oportunidades cuando empiezan, me [autorreferencio](https://x.com/javisantana/status/1640065997225820162) un tuit de hace dos años (no voy a dejar pasa esta y aprovecho a darme la razón)
 
-![](https://substackcdn.com/image/fetch/$s_!NAlw!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F265d2fbb-db24-43b7-9d8d-32ba7df5d5ca_1306x564.png)
+![](/blog_images/imported/40d8c0f0-265d2fbb-db24-43b7-9d8d-32ba7df5d5ca_1306x564.png)
 
 Esto que digo no existe, pero se puede generar con dinero y la gente adecuada (más sobre esto después)
 

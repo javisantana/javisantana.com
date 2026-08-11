@@ -19,6 +19,6 @@ herramientas: blender, ODE, vc++ express, paint
   
 y otra más, un pequeño raytracer para móvil con ambient occlusion (sin filtrar). En un k610i tarda una media hora, no se puede decir que esté muy optimizado.  
   
-[![](http://3.bp.blogspot.com/_XzuP3e63Ok8/R3FYMIN_GdI/AAAAAAAAAQ0/ZWBDzAAcvWQ/s320/feliz_navidad.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/R3FYMIN_GdI/AAAAAAAAAQ0/ZWBDzAAcvWQ/s1600-h/feliz_navidad.jpg)  
+[![](/blog_images/imported/e8dc514f-feliz_navidad.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/R3FYMIN_GdI/AAAAAAAAAQ0/ZWBDzAAcvWQ/s1600-h/feliz_navidad.jpg)  
   
 si alguien quiere el código que lo pida :)

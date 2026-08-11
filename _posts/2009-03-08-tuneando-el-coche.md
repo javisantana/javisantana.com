@@ -12,7 +12,7 @@ tags:
 
 Soy un friki y no lo puedo remediar. Como además mi hermano lo sabe muy bien me ha regalado unas pegatinas en vinilo del quake para pegar en el carro.  
   
-[![](http://1.bp.blogspot.com/_XzuP3e63Ok8/SbQ3I7WbhRI/AAAAAAAABgI/ug_6MxCrs9U/s320/coche_quake.jpg)](http://1.bp.blogspot.com/_XzuP3e63Ok8/SbQ3I7WbhRI/AAAAAAAABgI/ug_6MxCrs9U/s1600-h/coche_quake.jpg)  
+[![](/blog_images/imported/ea385188-coche_quake.jpg)](http://1.bp.blogspot.com/_XzuP3e63Ok8/SbQ3I7WbhRI/AAAAAAAABgI/ug_6MxCrs9U/s1600-h/coche_quake.jpg)  
   
 Lo sé, es una frikada de mucho cuidado, pero le queda bien.  
   

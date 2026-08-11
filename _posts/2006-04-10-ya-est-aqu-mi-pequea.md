@@ -14,8 +14,8 @@ El coste total ha sido de 300€, incluídos gastos de envío e incluyen PDA, ba
 Pasando a la parte interesante, la aceleración 3D. Pensé que sería una aceleración por suave, pero no lo es tanto. Lo primero que probé fue un juego de rally que viene en el CD, [GeoRally](http://www.clickgamer.com/moreinfo.htm?pid=1701&section=PPC) y la verdad te quedas con los ojos como platos viendo como se mueve eso. Tal vez sea porque aún no he visto ninguna PSP :).  
 El siguiente paso ha sido bajarme el [powerVR SDK](http://www.pvrdev.com/Pub/MBX/) para opengles y probar las demos. He hecho unas fotitos, la primera es un efecto de partículas con reflejo, la segunda es una espcie de jarrón con envmap a modo de reflejo y transparencias y por último una cabeza con iluminación por pixel.  
   
-[![](http://static.flickr.com/44/126530232_63e972d483.jpg)](http://static.flickr.com/44/126530232_63e972d483.jpg)  
-[![](http://static.flickr.com/47/126532745_ed10bdb169.jpg)](http://static.flickr.com/47/126532745_ed10bdb169.jpg)  
-[![](http://static.flickr.com/45/126532744_e1ee02f4d8.jpg?v=0)](http://static.flickr.com/45/126532744_e1ee02f4d8.jpg?v=0)  
+[![](/blog_images/imported/59413c74-126530232_63e972d483.jpg)](/blog_images/imported/59413c74-126530232_63e972d483.jpg)  
+[![](/blog_images/imported/6b8c9bca-126532745_ed10bdb169.jpg)](/blog_images/imported/6b8c9bca-126532745_ed10bdb169.jpg)  
+[![](/blog_images/imported/085de025-126532744_e1ee02f4d8.jpg?v=0)](/blog_images/imported/085de025-126532744_e1ee02f4d8.jpg?v=0)  
   
 A ver si tengo algo de tiempo y programo algo, además el SDK es bastante completo, ejemplos, librerías y herramientas.

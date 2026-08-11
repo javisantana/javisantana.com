@@ -12,7 +12,7 @@ Al fin hemos subido la última versión del juego que presentamos al art futura 
 Si quieres un poco más de información puedes leerla en el [foro de stratos](http://www.stratos-ad.com/forums/index.php?act=ST&f=39&t=6736), de la misma forma que si tienes alguna duda o encuentras algún bug lo puedes postear en el mismo hilo.  
 
   
-![](http://static.flickr.com/29/45616240_d116a98279_m.jpg)
+![](/blog_images/imported/495c1fe2-45616240_d116a98279_m.jpg)
 
   
   

@@ -15,13 +15,13 @@ Leía "El semanal", suplemento del grupo Vocento -les cito porque me dieron de c
   
 En la entrevista decía cosas tales como (perdonad la mala calidad):  
   
-[![](http://3.bp.blogspot.com/_XzuP3e63Ok8/SRnrMmNRldI/AAAAAAAABTI/M7_yVCzBBMs/s400/rec.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/SRnrMmNRldI/AAAAAAAABTI/M7_yVCzBBMs/s1600-h/rec.jpg)  
+[![](/blog_images/imported/b768d7fe-rec.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/SRnrMmNRldI/AAAAAAAABTI/M7_yVCzBBMs/s1600-h/rec.jpg)  
   
 Es algo que ya me molesta mucho, la gente (me incluyo) por lo general hace caso a quien no debe.  
   
 Y luego al final de la entrevista:  
   
-[![](http://2.bp.blogspot.com/_XzuP3e63Ok8/SRnsFyVXTlI/AAAAAAAABTQ/CYvBun08o08/s400/rec2.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SRnsFyVXTlI/AAAAAAAABTQ/CYvBun08o08/s1600-h/rec2.jpg)  
+[![](/blog_images/imported/00cae70a-rec2.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SRnsFyVXTlI/AAAAAAAABTQ/CYvBun08o08/s1600-h/rec2.jpg)  
   
 Que puestas a huevo las preguntas y que bien respondidas.  
   

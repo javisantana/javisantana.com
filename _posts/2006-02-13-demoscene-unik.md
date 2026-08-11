@@ -15,4 +15,4 @@ Un detalle importante es que en algunas de sus prods dejan el código fuente. Po
   
 Una de las escenas que más me ha gustado ha sido la de la siguiente foto de [kardiogramm](http://www.pouet.net/prod.php?which=16347):  
   
-[![](http://static.flickr.com/31/99362898_17fe963f36_o.jpg)](http://static.flickr.com/31/99362898_17fe963f36_o.jpg)
+[![](/blog_images/imported/6f2f9980-99362898_17fe963f36_o.jpg)](/blog_images/imported/6f2f9980-99362898_17fe963f36_o.jpg)

@@ -14,6 +14,6 @@ Este fin de semana están haciendo un [concurso de modelado solo con cubos](http
   
 Por mi parte me he animado y he hecho una (lo primero que "modelo" en mi vida)  
   
-[![](http://2.bp.blogspot.com/_XzuP3e63Ok8/SCcwMxF1XfI/AAAAAAAAA5A/PO9r8g-HNWo/s320/1.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SCcwMxF1XfI/AAAAAAAAA5A/PO9r8g-HNWo/s1600-h/1.jpg)  
+[![](/blog_images/imported/f1390a7d-1.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SCcwMxF1XfI/AAAAAAAAA5A/PO9r8g-HNWo/s1600-h/1.jpg)  
   
 si, es triste y oscura.

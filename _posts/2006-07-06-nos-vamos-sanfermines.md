@@ -12,7 +12,7 @@ url: /2006/07/nos-vamos-sanfermines.html
 Por otro lado, una imagencilla nueva:  
   
 
-![](http://static.flickr.com/57/178006979_cc6dd1e612.jpg)
+![](/blog_images/imported/fbbc9726-178006979_cc6dd1e612.jpg)
 
   
   

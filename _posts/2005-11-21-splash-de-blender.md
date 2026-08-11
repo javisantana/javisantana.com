@@ -7,7 +7,7 @@ published: true
 url: /2005/11/splash-de-blender.html
 ---
 
-[![](http://www.artofinterpretation.com/images/splash235e2-byrjt2004.jpg)](http://www.artofinterpretation.com/images/splash235e2-byrjt2004.jpg)Me encantan los splash screen de blender siempre me he preguntado si pondrían el .blend a disposición del público. Me he puesto a buscar y no he encontrado los fuentes, pero si he encontrado que hay un concurso de splash screen. Sorprende la calidad de [muchos de ellos](http://www.elysiun.com/forum/viewtopic.php?t=32164&postdays=0&postorder=asc&start=0&sid=162185b2e60aaef67c6cf21e2a6edb4c).  
+[![](/blog_images/imported/c9ba6f65-splash235e2-byrjt2004.jpg)](/blog_images/imported/c9ba6f65-splash235e2-byrjt2004.jpg)Me encantan los splash screen de blender siempre me he preguntado si pondrían el .blend a disposición del público. Me he puesto a buscar y no he encontrado los fuentes, pero si he encontrado que hay un concurso de splash screen. Sorprende la calidad de [muchos de ellos](http://www.elysiun.com/forum/viewtopic.php?t=32164&postdays=0&postorder=asc&start=0&sid=162185b2e60aaef67c6cf21e2a6edb4c).  
   
 Ya ha empezado el [concurso para blender 2.40](http://www.elysiun.com/forum/viewtopic.php?t=54486)  
   

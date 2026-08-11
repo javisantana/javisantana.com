@@ -13,7 +13,7 @@ Como tengo cierta experiencia con blender, decidí crear un exportador para agil
   
 Qué mejor que una imagen para ilustrar el proceso.  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/blender_exporter.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/blender_exporter.jpg)  
+[![](/blog_images/imported/009d096f-blender_exporter.jpg)](/blog_images/imported/395225b2-blender_exporter.jpg)  
   
   
   

@@ -18,7 +18,7 @@ Descatar del juego que esta vez tiene música (gracias [sole](www.soledadpenades
 Sin más, unas fotillos:  
   
   
-![](http://static.flickr.com/20/72855700_9b0306b7b2.jpg)  
-![](http://static.flickr.com/35/72855701_82c827c844.jpg)  
-![](http://static.flickr.com/35/72856364_eb8e0d1b9b.jpg)  
-![](http://static.flickr.com/18/72855699_95a726d710.jpg)
+![](/blog_images/imported/75797f59-72855700_9b0306b7b2.jpg)  
+![](/blog_images/imported/a68b7956-72855701_82c827c844.jpg)  
+![](/blog_images/imported/0129cd39-72856364_eb8e0d1b9b.jpg)  
+![](/blog_images/imported/5c3c1151-72855699_95a726d710.jpg)

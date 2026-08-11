@@ -7,7 +7,7 @@ published: true
 url: /2006/02/blogs-la-saca.html
 ---
 
-[![](http://photos1.blogger.com/blogger/2315/213/320/blogs.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/blogs.png)A medida que vas visitando páginas encuentras blogs de gente que es enlazada o que comenta las noticias. Normalmente suelo encontrarlas en páginas de gran afluencia, como por ejemplo vidaextra, kedume, extra life!, etc y las voy metiendo a la saca, esto es, el gestor RSS de thunderbird que está bien, pero que le faltan cosas aún.  
+[![](/blog_images/imported/5e362e35-blogs.jpg)](/blog_images/imported/7a4aae96-blogs.png)A medida que vas visitando páginas encuentras blogs de gente que es enlazada o que comenta las noticias. Normalmente suelo encontrarlas en páginas de gran afluencia, como por ejemplo vidaextra, kedume, extra life!, etc y las voy metiendo a la saca, esto es, el gestor RSS de thunderbird que está bien, pero que le faltan cosas aún.  
   
 Los últimos que he encontrado y que me han gustado han sido:  
   

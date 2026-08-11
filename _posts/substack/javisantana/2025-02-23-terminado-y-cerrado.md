@@ -5,14 +5,14 @@ layout: post
 source_url: "https://javisantana.substack.com/p/terminado-y-cerrado"
 substack: "javisantana"
 substack_id: 157733262
-cover_image: "https://substackcdn.com/image/fetch/$s_!HMDQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70a1f30e-e2a5-4e16-8ff6-afd4c2c6f7cd_1500x500.jpeg"
+cover_image: "/blog_images/imported/2e0c0635-70a1f30e-e2a5-4e16-8ff6-afd4c2c6f7cd_1500x500.jpeg"
 ---
 
 Me gustan los coches, si por mi fuese tendría un parking con una casa pegada. No estoy ahí -aun- pero tengo la suerte de tener algún que otro coche de fin de semana. Uno de ellos, un Lotus Elise, es un coche peculiar, es un coche diseñado a mediados de los 90 con una premisa clarísima: ser lo mas ligero posible. Es una auténtica obra de ingeniería, aunque la intra historia tiene bastante más de cinta aislante que de glamour. Bueno, como todas las historias que salen bien. Hay un documental [por aquí](https://www.youtube.com/watch?v=a-TiFKr2yb0). 
 
 Para ilustrar, os dejo una foto del susodicho en [el mejor circuito del mundo](https://www.circuitricardotormo.com/).
 
-![Image](https://substackcdn.com/image/fetch/$s_!HMDQ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70a1f30e-e2a5-4e16-8ff6-afd4c2c6f7cd_1500x500.jpeg)
+![Image](/blog_images/imported/b95bb46d-70a1f30e-e2a5-4e16-8ff6-afd4c2c6f7cd_1500x500.jpeg)
 
 Lo llevaron al extremo, y cuando llevas las cosas al extremo o bien sale algo muy complejo o muy sencillo, Puedes ver la imagen del interior del coche debajo de estas lineas para saber lo que fue en este caso. No quiere decir que no tenga innovaciones súper interesantes, ya sabes que cuando pones límites siempre salen soluciones diferentes, te obliga a pensar, y pensando, echando horas, es como salen las cosas. Si quieres leer más, échale un ojo a la biografía de Colin Chapman o escucha alguna entrevista de los diseñadores del Lotus Elise, Julian Thomson y Richard Rackham, se aprende mucho de diseño de producto. Te dejo esta maravilla de quote de Dave Minter, que de nuevo, tiene mucho que ver con hacer producto.
 
@@ -20,7 +20,7 @@ Lo llevaron al extremo, y cuando llevas las cosas al extremo o bien sale algo mu
 
 Lotus never used to take cars back in transporting, always drove them. And quite rightly, you can learn so much about the car just driving it. It was always said you have got to pretend you are a customer… we were really trying to develop a car
 
-![Image](https://substackcdn.com/image/fetch/$s_!pzri!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faa9ed25e-1742-46f8-99cb-e65eed317d21_800x450.jpeg)
+![Image](/blog_images/imported/f9e992fb-aa9ed25e-1742-46f8-99cb-e65eed317d21_800x450.jpeg)
 
 ---
 

@@ -5,7 +5,7 @@ layout: post
 source_url: "https://javisantana.substack.com/p/que-viene-el-lobo"
 substack: "javisantana"
 substack_id: 164952865
-cover_image: "https://substackcdn.com/image/fetch/$s_!CoNH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F752e91be-778a-4e93-96cb-286ee31b39c6_2282x758.png"
+cover_image: "/blog_images/imported/6f9f544e-752e91be-778a-4e93-96cb-286ee31b39c6_2282x758.png"
 ---
 
 Cada semana se anuncian unas cientos de empresas que, dicen, van a cambiar el panorama de <ponga aquí su industria> usando IA. En esa misma semana empresas levantan millonadas argumentando que lo hacen para jugar al juego de la IA. Y las empresas de toda la vida, los Google, los Microsoft y demás ballenas se convierten en delfines anunciando modelos e integraciones con productos actuales.
@@ -14,7 +14,7 @@ Por otro lado tienes a unas cuantas otras empresas, nacidas al calor de la IA, h
 
 Es bastante obvio que hay un cambio. Bitcoin tardó en llegar a la boca del pueblo bastante más de un lustro. Esto está ya en la cabeza de todo dios en menos de 3 años. Si tienes interés, haz una búsqueda en google trends (bitcoin vs chatgpt): 
 
-![](https://substackcdn.com/image/fetch/$s_!CoNH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F752e91be-778a-4e93-96cb-286ee31b39c6_2282x758.png)
+![](/blog_images/imported/51c2c55f-752e91be-778a-4e93-96cb-286ee31b39c6_2282x758.png)
 
 Y hay un dilema tremendo si eres emprendedor/empresario es, a donde pego el tiro? las opciones que veo en mi cabeza:
 

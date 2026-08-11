@@ -13,6 +13,6 @@ tags:
 Me he pillado una PSP, la verdad casi con la única intención de rememorar los juegazos de psx :)  
   
   
-[![](http://lh6.google.es/qualopec/RqTR_12mCvI/AAAAAAAAAJg/t4RvRJGdL3E/s288/DSC00414.JPG)](http://picasaweb.google.es/qualopec/PSP/photo#5090424373553531634)  
+[![](/blog_images/imported/89aafd2e-DSC00414.JPG)](http://picasaweb.google.es/qualopec/PSP/photo#5090424373553531634)  
   
 La foto está hecha con el móvil :/

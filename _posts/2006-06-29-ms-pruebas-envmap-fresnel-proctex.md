@@ -12,14 +12,14 @@ En estos días de relax no he tocado demasiado este mini-motor/mini-banco-de-pru
 Envmap sin fresnel:  
   
 
-![](http://static.flickr.com/48/177603733_eefbdd59fe.jpg)
+![](/blog_images/imported/8a6c5a78-177603733_eefbdd59fe.jpg)
 
   
   
 Envmap con fresnel:  
   
 
-![](http://static.flickr.com/66/177603734_d55cb19504.jpg)
+![](/blog_images/imported/e3076947-177603734_d55cb19504.jpg)
 
   
   

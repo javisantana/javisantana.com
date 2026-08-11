@@ -11,4 +11,4 @@ url: /2006/01/hairy-harry.html
   
 En resumen diría que es un juego de voleyball en la que los jugadores son karatecas, la pelota es una bola de esas del yin y el yan y el escenario es el desierto con pirámides de fondo.  
   
-[![](http://www.pouet.net/screenshots/21052.jpg)](http://www.pouet.net/screenshots/21052.jpg)
+[![](/blog_images/imported/6378cd17-21052.jpg)](/blog_images/imported/6378cd17-21052.jpg)

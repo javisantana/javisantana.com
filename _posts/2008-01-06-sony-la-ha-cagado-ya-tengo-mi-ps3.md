@@ -13,7 +13,7 @@ Ya tengo la ps3 con el colin mcrae dirty ([que en paz descanse](http://www.elmun
   
 La consola promete, solo navegar por los menús da la sensación de que tiene pontencial. Todo era perfecto hasta que vi la caja con este símbolo:  
   
-[![](http://lh6.google.es/qualopec/R4C-YoN_HkI/AAAAAAAAAco/ah9uSjTYqac/s400/06012008150.jpg)](http://picasaweb.google.es/qualopec/PS3/photo#5152327304034065986)  
+[![](/blog_images/imported/756e1b3f-06012008150.jpg)](http://picasaweb.google.es/qualopec/PS3/photo#5152327304034065986)  
   
 Triste no? por lo menos espero que solo tenga que ver con alguno de los reproductores que lleva integrados.  
   

@@ -10,7 +10,7 @@ tags:
 - space invades
 ---
 
-[![](http://lh3.ggpht.com/_XzuP3e63Ok8/SR_-tKr_AHI/AAAAAAAABZY/ElBcFPn6Ncc/s400/07112008396.jpg)](http://picasaweb.google.es/lh/photo/N47zcxloyiT4VfrFtPV8pA)
+[![](/blog_images/imported/88d3c235-07112008396.jpg)](http://picasaweb.google.es/lh/photo/N47zcxloyiT4VfrFtPV8pA)
 
 De [informatica](http://picasaweb.google.es/qualopec/Informatica)
 

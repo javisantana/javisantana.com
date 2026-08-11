@@ -9,7 +9,7 @@ url: /2006/06/aventuras-la-vieja-usanza.html
 
 Hoy he visto una foto en el en un post del foro de stratos de [creación de aventuras gráficas](http://www.stratos-ad.com/forums3/viewtopic.php?t=6786). Concretamente esta:  
   
-![](http://static.flickr.com/47/162471828_8679dca10b_o.jpg)  
+![](/blog_images/imported/70eeb0e2-162471828_8679dca10b_o.jpg)  
   
 Es un mapa para la búsqueda de caminos. Si no recuerdo mal (spoiler)por esa sala encontrabas a la novia (/spoiler).  
   

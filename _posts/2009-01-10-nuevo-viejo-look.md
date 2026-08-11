@@ -14,7 +14,7 @@ He actualizado el look del blog, el otro me parecía un poco recargado y, sobret
   
 Una imagen del making of:  
   
-[![](http://1.bp.blogspot.com/_XzuP3e63Ok8/SWjruxsLZjI/AAAAAAAABd8/C3WJYlPGOWA/s320/logo_making_of.png)](http://1.bp.blogspot.com/_XzuP3e63Ok8/SWjruxsLZjI/AAAAAAAABd8/C3WJYlPGOWA/s1600-h/logo_making_of.png)  
+[![](/blog_images/imported/fc73da46-logo_making_of.png)](http://1.bp.blogspot.com/_XzuP3e63Ok8/SWjruxsLZjI/AAAAAAAABd8/C3WJYlPGOWA/s1600-h/logo_making_of.png)  
   
 Un video que he renderizado esta mañana, para no desaprovechar ciclos del pc. El render está hecho con blender, el post procesado con vegas y lo he subido a vimeo por que los hombres usamos vimeo :)  
 

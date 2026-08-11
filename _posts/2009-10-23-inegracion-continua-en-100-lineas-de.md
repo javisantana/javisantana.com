@@ -30,4 +30,4 @@ Funciona bien, realmente no hace demasiado, pero basta. Solo soporte un proyecto
 Si realmente quieres un servidor de integración continua potente puedes usar [hudson](https://hudson.dev.java.net/).  
   
 Un shot:  
-[![](http://4.bp.blogspot.com/_XzuP3e63Ok8/SuHwqpsmQwI/AAAAAAAABy4/cyMiSg5l4DM/s320/cipy_2.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SuHwqpsmQwI/AAAAAAAABy4/cyMiSg5l4DM/s1600-h/cipy_2.png)
+[![](/blog_images/imported/1ac66558-cipy_2.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SuHwqpsmQwI/AAAAAAAABy4/cyMiSg5l4DM/s1600-h/cipy_2.png)

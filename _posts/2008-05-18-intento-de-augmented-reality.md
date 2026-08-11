@@ -18,7 +18,7 @@ En esta mañana he hecho un prototipo de [augmented reality](http://en.wikipedia
   
 He cogido la webcam, un GPS, python y opengl y he preparado un prototipo. He colocado la webcam arriba en el coche (ver foto) junto al GPS de forma que a medida que el GPS me da información de posición con OpenGL renderizo las zonas por las que ya se ha pasado justo con la cámara en ese lugar.  
   
-[![](http://lh4.ggpht.com/qualopec/SC8jQxF1XhI/AAAAAAAAA5o/o7rg5LxHkKk/s800/100_4933.JPG)](http://picasaweb.google.es/qualopec/Agroguia02/photo#5201414865598897682)  
+[![](/blog_images/imported/b1b8c871-100_4933.JPG)](http://picasaweb.google.es/qualopec/Agroguia02/photo#5201414865598897682)  
   
   
 La prueba no ha quedado demasiado mal teniendo en cuenta que es un prototipo rápido, un video:  

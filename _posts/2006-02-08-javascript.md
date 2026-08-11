@@ -7,7 +7,7 @@ published: true
 url: /2006/02/javascript.html
 ---
 
-![](http://photos1.blogger.com/blogger/2315/213/320/javascriptDisabled.jpg)  
+![](/blog_images/imported/906667eb-javascriptDisabled.jpg)  
   
 Y un par de cosas bien hechas en javascript:  
   

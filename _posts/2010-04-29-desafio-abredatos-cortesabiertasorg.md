@@ -10,7 +10,7 @@ tags:
 - abredatos
 ---
 
-[![](http://www.abredatos.es/wp-content/uploads/2010/04/300x250-B.png)](http://www.abredatos.es/wp-content/uploads/2010/04/300x250-B.png)  
+[![](/blog_images/imported/512f3a95-300x250-B.png)](/blog_images/imported/512f3a95-300x250-B.png)  
   
 Sí, participé junto a [Félix López](http://twitter.com/flopezluis), [Edu Lanchares](http://twitter.com/edulan) y [Antonio Garrote](http://twitter.com/antoniogarrote) tratando de hacer una aplicación para mostrar el pueblo castellano leonés de que se habla en esas flamantes cortes.  
   

@@ -13,4 +13,4 @@ Me llamó poderosamente la atención el hecho de que las animaciones se generara
   
 [Karl sims](http://www.genarts.com/karl/) propone un algortimo genético en el cual a partir de unas funciones muy básicas (sumas, multiplicaciones...) y un grafo neuronal [genera criaturas](http://www.genarts.com/karl/evolved-virtual-creatures.html) en base a cubos usando una física "muy básica". Las crituras que crea tienen 3 propósitos, andar, salar y nadar. Lo que sorprende, sobretodo en las criaturas que nadan, es como la evolución hace que se parezcan a las criaturas que tenemos e la naturaleza. Si te interesa el tema no dejes de leer los dos papers: ["Evolving Virtual Creatures"](http://www.genarts.com/karl/papers/siggraph94.pdf) y ["Evolving 3D Morphology and Behavior by Competition"](http://www.genarts.com/karl/papers/alife94.pdf). Explica sin demasiados tecnicismos como están creadas las criaturas y las puedes ver en movimiento bajándote el video de [archive.org](http://www.archive.org/details/sims_evolved_virtual_creatures_1994)  
   
-![](http://www.genarts.com/karl/crab-vs-arm200.jpg)
+![](/blog_images/imported/cd8591e2-crab-vs-arm200.jpg)

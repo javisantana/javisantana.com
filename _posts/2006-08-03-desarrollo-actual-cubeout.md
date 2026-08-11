@@ -17,8 +17,8 @@ Bueno, dejando a un lado la chapa técnica la peculiaridad del juego es que un 3
   
 Bueno, una foto:  
   
-![](http://static.flickr.com/66/204142782_fe0a1c6b63.jpg)  
+![](/blog_images/imported/5f5d9830-204142782_fe0a1c6b63.jpg)  
   
 Un ejemplo de nave:  
   
-![](http://static.flickr.com/67/204146124_ce1bcc2b7b.jpg)
+![](/blog_images/imported/b0d5ad12-204146124_ce1bcc2b7b.jpg)

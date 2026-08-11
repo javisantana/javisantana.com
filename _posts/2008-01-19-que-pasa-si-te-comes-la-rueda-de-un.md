@@ -13,7 +13,7 @@ Pues dos cosas:
   
 \- que el coche te queda así (está desmangado):  
   
-[![](http://lh4.google.es/qualopec/R5IspoN_HnI/AAAAAAAAAeI/UGxEbg-paqM/s400/18012008170.jpg)](http://picasaweb.google.es/qualopec/Coches/photo#5157233616974978674)  
+[![](/blog_images/imported/1bf4e5fc-18012008170.jpg)](http://picasaweb.google.es/qualopec/Coches/photo#5157233616974978674)  
   
 \- que los HIJOS DE LA GRAN PUTÍSIMA del seguro te pones pegas para todo. Son unos HIJOS DE PUTA sin escrúpulos cabrones, eso dejando a un lado la incompetencia, llegando al límite de no saber ni leer lo que puse en el formlario web con el agente de la compañía.  
   

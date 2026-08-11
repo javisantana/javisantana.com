@@ -11,7 +11,7 @@ Hacía tiempo que tenía ganas de probar a renderizar un fractal y leyendo ayer 
   
 He hecho un pequeño código en python para hacer pruebecillas, la verdad que con muy poco código se obtienen imágenes bastante bonitas, de hecho estoy pensando en imprimir alguna y ponerla de poster. Se generan imágenes de este pelo:  
   
-[![](http://4.bp.blogspot.com/_XzuP3e63Ok8/R0X66nyK0tI/AAAAAAAAAMA/R3ncHOTqSN8/s320/coloring2.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/R0X66nyK0tI/AAAAAAAAAMA/R3ncHOTqSN8/s1600-h/coloring2.png)  
+[![](/blog_images/imported/dd9fd099-coloring2.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/R0X66nyK0tI/AAAAAAAAAMA/R3ncHOTqSN8/s1600-h/coloring2.png)  
   
   
   

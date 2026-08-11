@@ -6,7 +6,7 @@ source_url: "https://javisantana.substack.com/p/como-uso-los-llm"
 substack: "javisantana"
 substack_id: 160174776
 description: "Edición Marzo 2025"
-cover_image: "https://substackcdn.com/image/fetch/$s_!KR6g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2672e6ab-9bbf-44fc-b453-b647c2e77c1f_3454x1748.png"
+cover_image: "/blog_images/imported/77d5a04f-2672e6ab-9bbf-44fc-b453-b647c2e77c1f_3454x1748.png"
 ---
 
 Lo que pueden hacer los LLMs es básicamente un sueño hecho realidad para mí. Soy un "builder", me gusta construir y me parece magia todo lo que está pasando, es como revivir la época cuando aprendí a programar. Peeero como siempre que llega algo nuevo, está lo que idealizamos y luego la vida real, cuando la tecnología toca suelo, hay que hacerla funcionar y adaptarla al caso real. Aquí voy a ir al caso práctico, para hablarte de cómo la IA va a cambiar el futuro futuro, puedes ir a LinkedIn y leer a todos los chamanes, que no dejan de ser los mismos middle managers que no saben ni por dónde les viene, que han encontrado la nueva vía de hacerse notar.
@@ -33,7 +33,7 @@ $ llm --system "you are an expert on this" "the prompt"
 
 El editor de texto que estoy usando para escribir esto es una aplicación, toda contenida en un "index.html" que me permite escribir y además usar LLMs para ayudarme con cosas como corregir el inglés, contarme si hay frases que a un nativo le suenen mal, reescribir el documento como si fuese "Pérez Reverte", hacerlo más corto, etc.
 
-![Image](https://substackcdn.com/image/fetch/$s_!KR6g!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2672e6ab-9bbf-44fc-b453-b647c2e77c1f_3454x1748.png)
+![Image](/blog_images/imported/141f2a83-2672e6ab-9bbf-44fc-b453-b647c2e77c1f_3454x1748.png)
 
 Para ello uso Cursor, abro un nuevo proyecto, creo un index.html y le pido lo que quiero dejando claro que quiero una aplicación html/css/vanilla javascript.
 
@@ -41,7 +41,7 @@ Para ello uso Cursor, abro un nuevo proyecto, creo un index.html y le pido lo qu
 
 La herramienta que uso a nivel de producto para entender el "journey" de los usuarios de Tinybird, desde que llegan a la web, cuando se registran y como usan el producto. Uso el mismo sistema que antes, Cursor + app básica escrita en html/javascript, integrando con las API de Tinybird y PostHog para recoger datos y mostrarlos de una forma lógica.
 
-![](https://substackcdn.com/image/fetch/$s_!FXNn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25a1298c-b0eb-43ff-8d74-da3b5ea052e7_2310x1552.png)
+![](/blog_images/imported/113a11da-25a1298c-b0eb-43ff-8d74-da3b5ea052e7_2310x1552.png)
 
 Son aplicaciones muy muy sencillas, muy ad-hoc a como me gusta hacer las cosas. Son un puto traje a hecho por ti con un implante cerebral del mejor sastre del mundo vs uno de Zara de 119.93€. Es absurdo que en unos meses las aplicaciones, no solo las escriba quien las necesita, sino que las aplicaciones no sean fijas y no cambien todo el rato (sí, ahora estoy haciendo de chaman)
 

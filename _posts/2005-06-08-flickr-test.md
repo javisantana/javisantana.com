@@ -7,7 +7,7 @@ published: true
 url: /2005/06/flickr-test.html
 ---
 
-[![](http://photos12.flickr.com/18179682_e9af5d7946_m.jpg)](http://www.flickr.com/photos/43633509@N00/18179682/ "photo sharing")  
+[![](/blog_images/imported/eec6dd62-18179682_e9af5d7946_m.jpg)](http://www.flickr.com/photos/43633509@N00/18179682/ "photo sharing")  
 [eth\_bola\_defor](http://www.flickr.com/photos/43633509@N00/18179682/)  
 
 esto no es mas que una prueba de posteo desde flickr :). [La bola](ftp://ftp.codepixel.com/pub/conquest-september-2002/perlin_eth.zip) (solo windows ) está programada en C++ con opengl [para un concurso que hubo en codepixel hace un tiempo](ftp://ftp.codepixel.com/pub/conquest-september-2002/) :)  

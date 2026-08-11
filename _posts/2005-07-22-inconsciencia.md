@@ -11,7 +11,7 @@ LLevo unos días viendo como en mi navegador habitual (firefox) me aparecían pe
   
 Cual es mi sorpresa al ver que leyendo un texto en inglés desconocía el significado de una palabra y, sin querer, puse el ratón encima de la palabra para copiarla y me la tradujo. Es lo que siempre había soñado, no tener que preocuparme de buscar las palabras que no conozco :). Realmente no sé de donde viene eso, tal vez sea una extensión, tal vez sea builtin de firefox, poco me importa.  
   
-[![](http://photos1.blogger.com/blogger/2315/213/400/translate.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/translate.jpg)  
+[![](/blog_images/imported/7b67f5e8-translate.jpg)](/blog_images/imported/0c914ebb-translate.jpg)  
   
 Este es el tipo de tecnología que yo quiero, rápida,funcional y transparente para el usuario XDD.  
   

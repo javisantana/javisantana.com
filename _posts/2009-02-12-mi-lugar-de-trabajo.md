@@ -11,7 +11,7 @@ Además de mi trabajo habitual en [algor](http://www.algor.es/) (la web no pone 
   
 En mi caso me encuentro cómodo trabajando sobre una mesa -hay gente que se encuentra a gusto con el portátil sobre las piernas, ya ves-, y sobretodo con un par de pantallas, o como mínimo una grande y con buena resolución, con objeto de no tener que estar cambiando continuamente entre ventanas. Para ilustrar una foto:  
   
-[![](http://3.bp.blogspot.com/_XzuP3e63Ok8/SZSBlpcyauI/AAAAAAAABfI/r6HPKA8peOc/s320/lugar_de_trabajo.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/SZSBlpcyauI/AAAAAAAABfI/r6HPKA8peOc/s1600-h/lugar_de_trabajo.jpg)  
+[![](/blog_images/imported/cbb21bdf-lugar_de_trabajo.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/SZSBlpcyauI/AAAAAAAABfI/r6HPKA8peOc/s1600-h/lugar_de_trabajo.jpg)  
   
 Me gusta mucho tener la ventana al lado, además es grande y hasta el suelo, que puedes mirar desde el patio hasta el cielo para cuando tienes que reflexionar. Lo cierto es que me gustaría tener una habitación para mi solo, con el sistema de sonido bien montado, todo se andará.  
   

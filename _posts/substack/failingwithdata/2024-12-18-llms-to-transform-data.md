@@ -5,10 +5,10 @@ layout: post
 source_url: "https://failingwithdata.substack.com/p/llms-to-transform-data"
 substack: "failingwithdata"
 substack_id: 153255588
-cover_image: "https://substackcdn.com/image/fetch/$s_!AVGN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c3abb0a-cc50-4295-81a4-88fb82d0d45e_2348x516.png"
+cover_image: "/blog_images/imported/de5e8be3-5c3abb0a-cc50-4295-81a4-88fb82d0d45e_2348x516.png"
 ---
 
-![](https://substackcdn.com/image/fetch/$s_!AVGN!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c3abb0a-cc50-4295-81a4-88fb82d0d45e_2348x516.png)
+![](/blog_images/imported/29d060cb-5c3abb0a-cc50-4295-81a4-88fb82d0d45e_2348x516.png)
 
 I transform data every day and I usually do 2 kinds of transformations, changing the data format so I can use it in a tool (CSV to parquet) or the shape, like running an aggregation so I can understand it. I’m using LLMs more and more for this because it saves me a lot of time (and it’s cool)
 

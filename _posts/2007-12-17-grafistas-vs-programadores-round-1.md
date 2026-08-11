@@ -12,7 +12,7 @@ tags:
 
 Los pobres grafistas de [unkasoft](http://www.unkasoft.com/), faltos de argumentos, atacan a los programadores con cosas como esta:  
   
-[![](http://lh5.google.es/qualopec/R2bLt4N_GWI/AAAAAAAAAPI/k8OZolwQHFM/s800/17122007095.jpg)](http://picasaweb.google.es/qualopec/Misc/photo#5145023613362968930)  
+[![](/blog_images/imported/532e14e1-17122007095.jpg)](http://picasaweb.google.es/qualopec/Misc/photo#5145023613362968930)  
   
 Transcribo:  
 """  

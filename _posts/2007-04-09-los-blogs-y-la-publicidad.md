@@ -22,4 +22,4 @@ Pero la cosa no queda ahí, el otro día escribía un correo a [ssiia](http://ss
   
 Creo que voy a comenzar un blog de agroguía, ya no solo para dar publicidad, si no por poner algunas fotos de sitios chulos a los que hemos ido. Los campos de castilla son bonitos :)  
   
-[![](http://3.bp.blogspot.com/_XzuP3e63Ok8/RhqTIPu25UI/AAAAAAAAABg/9ZJb_Vgm570/s320/100_2416.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/RhqTIPu25UI/AAAAAAAAABg/9ZJb_Vgm570/s1600-h/100_2416.jpg)
+[![](/blog_images/imported/579bdddb-100_2416.jpg)](http://3.bp.blogspot.com/_XzuP3e63Ok8/RhqTIPu25UI/AAAAAAAAABg/9ZJb_Vgm570/s1600-h/100_2416.jpg)

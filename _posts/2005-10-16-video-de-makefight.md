@@ -7,7 +7,7 @@ published: true
 url: /2005/10/video-de-makefight.html
 ---
 
-[![](http://photos1.blogger.com/blogger/2315/213/320/3vs1.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/3vs1.jpg)Se acerca ArtFutura y aún no he sacado un video del juego que hemos presentado. El problema no es crear el video, el problema es el framerate con el que soy capaz de pillarlo. El juego ocupa bastante máquina y no puede con la captura y el juego. Sería posible si puediera capturar video en raw, pero el programa que uso no me da esa opción, cosa que me extraña. También es triste, todo hay que decirlo, que esté en la TV y no haya capturado un video desde otra máquina usando la salida s-video...  
+[![](/blog_images/imported/0edbacda-3vs1.jpg)](/blog_images/imported/8ab25031-3vs1.jpg)Se acerca ArtFutura y aún no he sacado un video del juego que hemos presentado. El problema no es crear el video, el problema es el framerate con el que soy capaz de pillarlo. El juego ocupa bastante máquina y no puede con la captura y el juego. Sería posible si puediera capturar video en raw, pero el programa que uso no me da esa opción, cosa que me extraña. También es triste, todo hay que decirlo, que esté en la TV y no haya capturado un video desde otra máquina usando la salida s-video...  
   
   
 De cualquier forma aquí dejo un video:  

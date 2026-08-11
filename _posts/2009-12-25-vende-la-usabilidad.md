@@ -13,6 +13,6 @@ El otro día fui a comprar unas cadenas (en realidad de tela) para el coche, lle
   
 Juzgad vosotros mismos:  
   
-[![](http://2.bp.blogspot.com/_XzuP3e63Ok8/SzSMjgBJJ4I/AAAAAAAAB1I/AUn8LrAJkhs/s320/usabilidad.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SzSMjgBJJ4I/AAAAAAAAB1I/AUn8LrAJkhs/s1600-h/usabilidad.jpg)  
+[![](/blog_images/imported/5d1bf869-usabilidad.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SzSMjgBJJ4I/AAAAAAAAB1I/AUn8LrAJkhs/s1600-h/usabilidad.jpg)  
   
 Adivinad cual compré.

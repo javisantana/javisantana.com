@@ -22,4 +22,4 @@ Son 6000€ (a pachas con hacienda, como no), pero lo más importante para mi es
   
 Dejo una imagen de la aplicación:  
   
-[![](http://1.bp.blogspot.com/_XzuP3e63Ok8/Skug078E7cI/AAAAAAAABxs/ggJA3_5479E/s320/ag_r.jpg)](http://1.bp.blogspot.com/_XzuP3e63Ok8/Skug078E7cI/AAAAAAAABxs/ggJA3_5479E/s1600-h/ag_r.jpg)
+[![](/blog_images/imported/0dde51bc-ag_r.jpg)](http://1.bp.blogspot.com/_XzuP3e63Ok8/Skug078E7cI/AAAAAAAABxs/ggJA3_5479E/s1600-h/ag_r.jpg)

@@ -9,7 +9,7 @@ url: /2006/01/regalo-para-la-vista-y-el-oido.html
 
 No me paso cada día por pouet, pero de vez en cuando si me gusta dejarme caer para ver si hay alguna cosa que me llame la atención. En la parte izquierda de la web hay un ranking de lo mejor del mes, muy útil cuando, como yo, no estás al día en las prods que salen. Una de las entradas es [Memories from the MCP](http://www.pouet.net/prod.php?which=20973)([web de los creadores](http://www.braincontrol.org/demos05.php)), una 64kb que me ha gustado bastante y aunque no me ha sorprendido como lo hicieron [fr08](http://www.pouet.net/prod.php?which=1221) (después de verla tuve unos días de decaimiento que aún se me ponen los pelos como escarpias), [iconoclast](http://www.pouet.net/prod.php?which=18350) o [195/95/256](http://www.pouet.net/prod.php?which=18252), si que se añade a mi lista de favoritas.  
   
-[![](http://www.braincontrol.org/screens/mcp7.jpg)](http://www.braincontrol.org/screens/mcp7.jpg)  
+[![](/blog_images/imported/f7eb045a-mcp7.jpg)](/blog_images/imported/f7eb045a-mcp7.jpg)  
   
   
   

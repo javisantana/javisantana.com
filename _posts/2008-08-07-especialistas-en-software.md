@@ -15,7 +15,7 @@ En dos años comprando PDAs Acer hemos tenido unoas 8 ó 9 rotas, algunas por qu
   
 Lo gracioso del tema no es que hayan funcionado bien, que ya de por si merecía un post, lo que me hace gracia son las recomendaciones que envían en forma te nota:  
   
-[![](http://4.bp.blogspot.com/_XzuP3e63Ok8/SJsxpS_FLMI/AAAAAAAAA9k/xHZ_-WFu6c4/s200/07082008288_red.jpg)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SJsxpS_FLMI/AAAAAAAAA9k/xHZ_-WFu6c4/s1600-h/07082008288_red.jpg)  
+[![](/blog_images/imported/0c0b60ff-07082008288_red.jpg)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SJsxpS_FLMI/AAAAAAAAA9k/xHZ_-WFu6c4/s1600-h/07082008288_red.jpg)  
   
 Ya me jodería comprarte una PDA para usarla como navegador, gastarte 160€ en tu copia de TOMTOM y que te digan que no uses el software porque estropea la PDA por sobrecarga. Aparte, el detalle de la cinta aislante es a tener en cuenta... :)  
   

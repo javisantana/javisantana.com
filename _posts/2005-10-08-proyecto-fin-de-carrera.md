@@ -19,6 +19,6 @@ De esta manera podré probar toda la semana que estoy sin coche sin tener que mo
   
 Por último dejo una imagen de la aplicación que he usado para guardar los datos.. :).  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/CEZoom0.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/CEZoom0.jpg)  
+[![](/blog_images/imported/f7db7cf3-CEZoom0.jpg)](/blog_images/imported/5864277a-CEZoom0.jpg)  
   
 \* creo que el verdadero término es accesoria, referido a que es una puerta grande por la cual pueden entrar de todo, sin embargo toda la vida lo he llamado cesoria.

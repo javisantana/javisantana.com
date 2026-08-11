@@ -12,7 +12,7 @@ Bien, pues después de un mes de intensísimo coding he terminado la primera bet
 El juego trata, en pocas palabras, de la creación de coches en base a palos y ruedas y pelear es un ring. Pongo unas imágenes y en los próximos días comentaré todo el desarrollo :)  
   
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/Dibujo71.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/Dibujo71.jpg) 3 contra 1  
+[![](/blog_images/imported/bd3ecbde-Dibujo71.jpg)](/blog_images/imported/4af7bf08-Dibujo71.jpg) 3 contra 1  
   
   
   
@@ -28,7 +28,7 @@ El juego trata, en pocas palabras, de la creación de coches en base a palos y r
   
   
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/editor2.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/editor2.jpg)El editor de coches, poniendo ruedas a placer :)  
+[![](/blog_images/imported/d7cd103d-editor2.jpg)](/blog_images/imported/e5fce2a4-editor2.jpg)El editor de coches, poniendo ruedas a placer :)  
   
   
   
@@ -43,7 +43,7 @@ El juego trata, en pocas palabras, de la creación de coches en base a palos y r
   
   
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/cerca1.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/cerca1.jpg)Modo dos jugadores  
+[![](/blog_images/imported/0ea6a016-cerca1.jpg)](/blog_images/imported/a2f5990e-cerca1.jpg)Modo dos jugadores  
   
   
   
@@ -58,5 +58,5 @@ El juego trata, en pocas palabras, de la creación de coches en base a palos y r
   
   
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/Dibujo5.jpg)](http://photos1.blogger.com/blogger/2315/213/1600/Dibujo5.jpg)  
+[![](/blog_images/imported/a86f2778-Dibujo5.jpg)](/blog_images/imported/dfc2172a-Dibujo5.jpg)  
 2 contra 1 en el escenario de la lava :)

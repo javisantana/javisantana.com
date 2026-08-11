@@ -22,8 +22,8 @@ Me voy a dar un paseo por el campo a darme feedback y despejarme un poco, se enc
   
 \- Un conejo a 2 metros de mi, con lo asustadizos que son:  
   
-[![](http://2.bp.blogspot.com/_XzuP3e63Ok8/SGkiFOdy5SI/AAAAAAAAA7o/Kzr09gDBmy4/s320/conejo.png)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SGkiFOdy5SI/AAAAAAAAA7o/Kzr09gDBmy4/s1600-h/conejo.png)  
+[![](/blog_images/imported/4c31c5d8-conejo.png)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SGkiFOdy5SI/AAAAAAAAA7o/Kzr09gDBmy4/s1600-h/conejo.png)  
   
 \- Hay cosas curiosas, cosas que todos los días ves y nunca te paras a pensar. Últimamente me ha dado por los pivots de riego... en esta foto se ve perfectamente como las bocas de más lejos echan más agua sobre el cultivo, parece lógico si piensas el área que cubre cada una sabiendo que al proporción de agua debe ser constante (o no, imaginemos que tenemos mapas ed rendimiento...)  
   
-[![](http://4.bp.blogspot.com/_XzuP3e63Ok8/SGkidHpYaDI/AAAAAAAAA7w/UXUSvf29pZE/s320/pivot.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SGkidHpYaDI/AAAAAAAAA7w/UXUSvf29pZE/s1600-h/pivot.png)
+[![](/blog_images/imported/0b8b92ae-pivot.png)](http://4.bp.blogspot.com/_XzuP3e63Ok8/SGkidHpYaDI/AAAAAAAAA7w/UXUSvf29pZE/s1600-h/pivot.png)

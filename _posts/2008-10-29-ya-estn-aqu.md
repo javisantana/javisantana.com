@@ -11,6 +11,6 @@ tags:
 
 Por fin han llegado:  
   
-[![](http://2.bp.blogspot.com/_XzuP3e63Ok8/SQi_VJJPGoI/AAAAAAAABTA/fucHIaUEKUs/s200/30102008392.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SQi_VJJPGoI/AAAAAAAABTA/fucHIaUEKUs/s1600-h/30102008392.jpg)  
+[![](/blog_images/imported/e59200e4-30102008392.jpg)](http://2.bp.blogspot.com/_XzuP3e63Ok8/SQi_VJJPGoI/AAAAAAAABTA/fucHIaUEKUs/s1600-h/30102008392.jpg)  
   
 Mis pegatinas de python!

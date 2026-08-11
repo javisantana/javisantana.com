@@ -16,20 +16,20 @@ Ya que no dispongo de un servidor donde tener alojado un script PHP o python que
 Manos a la obra, cogí [mi script para subir fotos a flickr  
 ](http://blep.blogspot.com/2006/02/tus-fotos-en-flickr.html)y lo modifiqué para que subiera los coches en forma de atachment a gmail y las etiquetara correctamente. También añadí funcionalidad para bajar los ficheros necesarios y todo funcionando. Lógicamente esta implementación tiene problemas: he tenido que usar un sistema de timestamp para que los coches con mismo nombre no se sobreescriban al bajarlos a disco y es posible que alguien con un sniffer o decodificando el código en python vea el password de la cuenta, entre y lo joda todo. Tampoco pretende ser perfecto.  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/gmail_mf.png)](http://photos1.blogger.com/blogger/2315/213/1600/gmail_mf.png)  
+[![](/blog_images/imported/6926ac7d-gmail_mf.png)](/blog_images/imported/86649cf4-gmail_mf.png)  
   
 De esta forma cada vez que arrancas makefight este automáticamente lanza un hilo que actuliza los coches mientras juegas. Estos coches son los que usará la máquina para darte cera. Aquí surge otro problema, si a una persona le da por hacer coches cojos :  
   
 En este los pesos están descompensados (la parte delantera es de metal que pesa más y la parte trasera de plástico que pesa poco aunque es barato), se queda pinado y las ruedas no tocan el tatami  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/mf3.png)](http://photos1.blogger.com/blogger/2315/213/1600/mf3.png)  
+[![](/blog_images/imported/15ebfd49-mf3.png)](/blog_images/imported/0c902ab2-mf3.png)  
   
 Este coche lo único que puede hacer es esperar a que le den por todos lados, le giren, las ruedas toquen el suelo y empiece a andar. Esperemos que el sistema de control de la IA sepa controlar cuando las ruedas están al contrario XD.  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/mf2.png)](http://photos1.blogger.com/blogger/2315/213/1600/mf2.png)  
+[![](/blog_images/imported/befce648-mf2.png)](/blog_images/imported/85915e20-mf2.png)  
   
 Pequeño pero matón. La experiencia dice que con un coche pequeño es más difícil pillarte porque corren más, tienen más agarre y giran más rápido, pero cuando te dan te han jodido y además es muy difícil echar del tatami con un coche así.  
   
-[![](http://photos1.blogger.com/blogger/2315/213/320/mf1.png)](http://photos1.blogger.com/blogger/2315/213/1600/mf1.png)  
+[![](/blog_images/imported/ef4daeea-mf1.png)](/blog_images/imported/1ae0cff0-mf1.png)  
   
 Espero no dar ideas :)
