@@ -523,3 +523,128 @@ inline script parses via `new Function`. Built `a/landing.html` references
 `jsAnalytics` and no longer references `window.Tinybird`; `a/unsubscribe.html` no
 longer references `api.tinybird.co`. Not yet deployed — no responses to report until
 it is live and exposed.
+
+## 2026-08-12 — Filter non-human traffic from landing measurement
+
+Not deployed at time of writing. Deployment timestamp: _pending_.
+
+### Baseline
+
+Data window: non-local sessions on `/landing.html` with `analyticsVersion = '2026-08-06'`
+(the current live cohort, first seen 2026-08-10 08:20 UTC) through 2026-08-12 06:02 UTC,
+the latest event in `events.duckdb`. Localhost and `127.0.0.1` referrers excluded.
+n = 60 landing sessions. Treat everything below as directional given the sample.
+
+The headline engagement numbers looked like a catastrophic regression — **median
+`activeDuration` 2s, median max scroll 0%** — but that is a measurement artifact, not
+visitor behaviour. Segmenting by acquisition source shows the baseline is dominated by
+**non-human traffic**:
+
+- **Direct / empty referrer: 40 of 60 sessions.** Median `activeDuration` 0s, median max
+  scroll 0%, 32/40 at ≤2s. Across all 40 there was **1 click total and 0 article clicks**.
+  **38 of them share one identical, stale user-agent** (`Chrome/150.0.0.0` on Mac) — a
+  crawler / headless signature. UA sampling also shows explicit bots in the cohort
+  (`AhrefsBot`, `HeadlessChrome`).
+- **Twitter (`t.co`): 16 sessions — the real audience.** Median `activeDuration` **10s**,
+  median max scroll **50%**, 12/16 clicked something and **9/16 (56%) clicked an article**.
+- **Internal: 4 sessions**, 3/4 clicked (small, mixed).
+
+So ~2/3 of recorded landing sessions are automated and were dragging every pooled median
+toward zero. Section-entry rates were also inflated: `start-here` 57/60 and
+`latest-writing` 55/60 fire on load for bots that never scroll.
+
+Content signal, restricted to the clean traffic and pooled across all five versioned
+cohorts (click-sessions by group), is consistent with prior entries and worth acting on
+**once measurement is trustworthy** — but not before:
+
+- Auto-generated **latest list: 15** click-sessions vs curated **"start here" featured
+  set: 8**, despite the featured block sitting higher with more emphasis.
+- Within the 2026-08-06 cohort the winners are inspiration notes — `latest-learn-to-cook`
+  (5), `latest-experience-in-movies` (4), `latest-programador` (3) — while
+  `featured-google-frontpage` took **0** clicks (already flagged 2026-08-06 as the weakest
+  featured slot; it has stayed flat).
+
+### Hypothesis
+
+No content or layout experiment can be judged while two-thirds of the sample is automated:
+the bots have no referrer, no scroll, and no clicks, so they crush engagement medians and
+dilute every click-through rate. The principle is **never let non-humans into the metrics
+that describe humans** — which is achieved by *segmenting* them out in analysis, not by
+deleting data. Doing so surfaces the real audience's behaviour (Twitter: 10s, 50% scroll,
+56% article CTR) and makes the next content iteration (revisit the underperforming featured
+set / dead Google slot) legible instead of noise.
+
+### Changes
+
+- **No source-side bot dropping.** An earlier draft of this iteration added a
+  `navigator.webdriver` + bot-UA early-return to `assets/js/tracking.js`; it was
+  **reverted**. Reasons: (1) it is irreversible — you lose the ability to audit how much
+  crawler / link-preview traffic you get, which is itself signal; (2) it does not catch the
+  actual pollution here — the 38-session `Chrome/150` cluster carries a clean UA and no
+  `webdriver` flag, so the guard only removed the few *declared* bots; (3) a wrong regex
+  silently kills analytics site-wide for little upside. Bot exclusion is handled entirely
+  in analysis instead (see the human-session filter below). Raw data keeps everything.
+- **`assets/js/tracking.js` / `_includes/tracker.html`**: bumped `ANALYTICS_VERSION` to
+  `2026-08-12` and the tracker cache-buster to `?v=20260812` so the post-fix cohort — the
+  one where `survey_shown` actually records — is queryable in isolation, per the
+  per-iteration boundary convention. No behavioural change to the tracker itself.
+- **`landing.md` — fixed the broken survey denominator.** The survey's `emit()` fired
+  `survey_shown` synchronously on reveal, but `tracking.js` (which defines
+  `window.jsAnalytics`) is loaded at the end of `<body>`, *after* the inline survey script
+  — so `window.jsAnalytics` did not exist yet and every `survey_shown` was silently
+  swallowed by the guard. (`landing_feedback` survived only because it fires on a click
+  seconds later, once the hook exists.) `emit()` now buffers via a short `setInterval`
+  poll and flushes once the hook is ready (giving up after ~5s), so `survey_shown`
+  records regardless of load order. This is the same "emitting into the void" class of bug
+  as the 2026-08-11 Tinybird→self-hosted fix, a different mechanism.
+- No other `landing.md` changes: hero, featured set, latest list, section order, about,
+  newsletter, and the survey's content/exposure (`EXPOSURE_PCT=50`) are unchanged.
+
+### Survey status at analysis time (2026-08-06 cohort)
+
+The rewired survey (live ~2026-08-11 08:55 UTC) produced **1 `landing_feedback` response**
+(`choice=startups`) and **0 `survey_shown`** events — no response-rate denominator — because
+of the load-order bug above. Combined with a ~1-day window and small eligible traffic
+(~24 human landing sessions since 2026-08-11, ~half exposed at `EXPOSURE_PCT=50`), the survey
+has effectively no measurable result yet. The fix above is a precondition for reading it at
+all; consider raising `EXPOSURE_PCT` toward 100 given the low volume.
+
+### Bots: nothing to fix in collection — exclude at query time
+
+The tracker already records everything needed to spot non-human traffic (`ip`, `ua`,
+`referrer`, scroll, duration, clicks). So collection stays as-is — record all of it, raw —
+and bot exclusion is a per-analysis decision, not a baked-in rule.
+
+For this cohort it isn't even a heuristic: the ~2/3 pollution is **37 sessions from a single
+IP** (`88.19.35.x`) — identical UA, empty referrer, every one at 0s active / 0% scroll / no
+clicks. Excluding that IP restores the real picture. The general query-time move is the same:
+drop any single IP producing many single-visit, zero-interaction sessions. Always report raw
+vs filtered side by side.
+
+### Validation
+
+`bundle exec jekyll build` clean (pre-existing unrelated Liquid/`doc/cv.html` warnings left
+untouched). `node --check assets/js/tracking.js` OK; the built survey inline script (with the
+load-order retry) passes `node --check`. `git diff assets/js/tracking.js` is version-only
+(`ANALYTICS_VERSION` `2026-08-06` → `2026-08-12`) — the bot guard was reverted. Built
+`a/landing.html` and `a/index.html` reference `?v=20260812`; featured internal links present
+in the build. `git diff --check` clean on all changed files. Desktop screenshot archived as
+`landing_history_shots/2026-08-12-bot-filter-measurement-desktop.png` (content visually
+identical to the 2026-08-06 iteration — this iteration changes no visible content).
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-08-12'` from the confirmed deployment timestamp;
+exclude local referrers.
+
+- Always report **raw and human-filtered side by side.** Bots are still recorded (no
+  source-side drop), so the raw share of empty-referrer zero-engagement sessions may stay
+  near the 40/60 seen in the 2026-08-06 cohort; the point is that the human-filtered view is
+  the one used for decisions.
+- Median `activeDuration` and median max scroll **on the human-filtered set** — expect the
+  real-audience range (Twitter baseline ~10s / ~50%), not the bot-diluted ~2s / 0%.
+- Article CTR overall and `featured-*` vs `latest-*`, computed on the human-filtered set —
+  the input to the next (content) iteration on the featured set and the dead Google slot.
+- **Survey now measurable**: `survey_shown` events should appear at all (they were 0), giving a
+  real denominator — response rate = distinct `landing_feedback` sessions ÷ distinct
+  `survey_shown` sessions. Low rate → raise `EXPOSURE_PCT` toward 100.

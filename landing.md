@@ -226,11 +226,23 @@ permalink: /landing.html
 
       // Self-hosted pipeline; the batch envelope already carries referrer and
       // viewportWidth, so payloads stay minimal. Never let tracking break the page.
+      // tracking.js (which defines window.jsAnalytics) loads *after* this inline
+      // script, so a synchronous emit on reveal (survey_shown) would fire before the
+      // hook exists and be lost. Buffer until the hook is ready, then flush.
       function emit(type, payload) {
+        function send() { window.jsAnalytics.track(type, payload); }
+        function ready() {
+          return window.jsAnalytics && typeof window.jsAnalytics.track === 'function';
+        }
         try {
-          if (window.jsAnalytics && typeof window.jsAnalytics.track === 'function') {
-            window.jsAnalytics.track(type, payload);
-          }
+          if (ready()) return send();
+          var tries = 0;
+          var iv = setInterval(function () {
+            try {
+              if (ready()) { clearInterval(iv); send(); }
+              else if (++tries > 50) { clearInterval(iv); }  // give up after ~5s
+            } catch (e) { clearInterval(iv); }
+          }, 100);
         } catch (e) { /* swallow: analytics must never throw into the UI */ }
       }
 
