@@ -6,7 +6,14 @@ lang: en
 <main class="home">
   <h1>Javi Santana</h1>
   <p class="tagline">Pixels are the humble bricks with which one can build cathedrals</p>
-  <p>Builder at the intersection of tech and data. Co-founder of <a href="https://tinybird.co"><i>Tinybird</i></a>. I write about engineering, product and startups — mostly in Spanish.</p>
+ <p>Rather than telling you who I am, I'll show you what I've built.</p>
+<ul>
+  <li><a href="https://tinybird.com"><i>Tinybird</i></a> (2018–) — real-time data infrastructure. Co-founder. Built the product, managed the FDE team, then ran it as CEO. Zero to $10M+ ARR.</li>
+  <li><a href="https://carto.com"><i>CARTO</i></a> (2012–2018) — founding engineer to CTO. Geospatial data infrastructure. Zero to $8M ARR.</li>
+  <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
+</ul> 
+
+  <p style="margin-top:3em">Here is what I wrote (all written by hand, no LLM traces)</p>
 
   <nav class="post-list">
     {% assign quotes = site.inspiration | where_exp: "q", "q.name != 'index.md'" %}
