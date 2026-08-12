@@ -8,7 +8,7 @@ lang: en
   <p class="tagline">Pixels are the humble bricks with which one can build cathedrals</p>
  <p>Rather than telling you who I am, I'll show you what I've built.</p>
 <ul>
-  <li><a href="https://tinybird.com"><i>Tinybird</i></a> (2018–) — real-time data infrastructure. Co-founder. Built the product, managed the FDE team, then ran it as CEO. Zero to $10M+ ARR.</li>
+  <li><a href="https://tinybird.com"><i>Tinybird</i></a> (2018–) — real-time data infrastructure. Co-founder. Built the product, managed the FDE team, then ran it as CEO.</li>
   <li><a href="https://carto.com"><i>CARTO</i></a> (2012–2018) — founding engineer to CTO. Geospatial data infrastructure. Zero to $8M ARR.</li>
   <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
 </ul> 
