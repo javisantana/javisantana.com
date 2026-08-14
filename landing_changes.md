@@ -651,8 +651,9 @@ exclude local referrers.
 
 ## 2026-08-14 — Survey at full exposure (collect the "why are you here" signal)
 
-Deployment timestamp: _pending push — placeholder until the commit lands on `gh-pages`._
-Cohort boundary: `analyticsVersion = '2026-08-14'` (tracker cache-buster `?v=20260814`).
+Deployment: commit `518e2f9`, pushed to `gh-pages` 2026-08-14T09:18:10+02:00 (07:18 UTC).
+Cohort boundary: `analyticsVersion = '2026-08-14'` (tracker cache-buster `?v=20260814`) — this
+version tag, not the wall-clock time, is the exact pre/post separator.
 
 ### Baseline
 
