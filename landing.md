@@ -169,7 +169,7 @@ permalink: /landing.html
     // Qualitative feedback capture; shown to a configurable slice of traffic.
     // Emits through the self-hosted analytics pipeline (window.jsAnalytics.track,
     // exposed by /assets/js/tracking.js) so responses land in events.duckdb.
-    var EXPOSURE_PCT = 50;               // exposure dial, not a powered A/B split
+    var EXPOSURE_PCT = 100;              // exposure dial, not a powered A/B split
     var DONE_KEY = 'landing-survey-done';
     var ID_KEY = 'landing-survey-id';
 

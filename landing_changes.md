@@ -648,3 +648,91 @@ exclude local referrers.
 - **Survey now measurable**: `survey_shown` events should appear at all (they were 0), giving a
   real denominator — response rate = distinct `landing_feedback` sessions ÷ distinct
   `survey_shown` sessions. Low rate → raise `EXPOSURE_PCT` toward 100.
+
+## 2026-08-14 — Survey at full exposure (collect the "why are you here" signal)
+
+Deployment timestamp: _pending push — placeholder until the commit lands on `gh-pages`._
+Cohort boundary: `analyticsVersion = '2026-08-14'` (tracker cache-buster `?v=20260814`).
+
+### Baseline
+
+Data through 2026-08-14 (latest event 2026-08-14T01:48 UTC). Landing = `/landing.html` (note
+`/` is now the archive, not the landing). Content-identical cohorts `2026-08-06` + `2026-08-12`
+pooled since the 2026-08-06 content shipped (the 2026-08-12 change was measurement-only). One
+direct-load IP `88.19.35.180` — **44 sessions, all NULL referrer, single-visit / zero
+interaction** — excluded from human metrics (same cluster flagged 2026-08-11/12).
+
+Human-filtered vs raw, side by side:
+
+| segment | sessions | median active | median scroll | click-through |
+|---|---|---|---|---|
+| **human** | 32 | 8s | 46% | **72%** (23/32) |
+| raw (incl. bot IP) | 72 | 2s | 0% | 33% |
+
+- Acquisition (human): 23 Twitter (18 clicked), 6 internal (5), 3 direct (0). Twitter is
+  high-intent; direct is not.
+- Content signal (human clicks, DIV/A resolve to the same anchor — instrumentation is sound):
+  `latest-*` recent notes dominate — `latest-learn-to-cook` **9**, `hero-about` **6**,
+  `latest-experience-in-movies` **4**, `latest-programador` **3**. The featured "start here"
+  set stays weak — `featured-forty-things` **2**, `featured-google-frontpage` **2**,
+  `featured-four-years` **0** in this window (and that article is *also* the hero primary CTA
+  `hero-read-four-years`, which itself drew only **1**). Newsletter secondary: en 2, es 1.
+- Survey: the 2026-08-12 load-order fix works — `survey_shown` now records (**4** shown, was
+  0). But at `EXPOSURE_PCT=50` on this traffic it yielded **1** `landing_feedback`. Both
+  feedback responses ever (`2026-08-06` + `2026-08-12`) say `choice=startups`. Effectively no
+  qualitative signal yet.
+
+### Hypothesis
+
+The measurement plumbing is fixed but the exposure dial, not the plumbing, is now the
+bottleneck: at 50% of ~15 human landing sessions/week the survey will never accumulate a
+readable "what brought you here?" distribution. This site's traffic is too low to power an
+A/B split, so there is nothing to protect by withholding the survey from half of visitors —
+and the CTA it replaces in the hero (`hero-read-four-years`, 1 click, duplicated as
+`featured-four-years` right below) is the page's weakest reading entry point, so the swap
+costs almost nothing. Raising exposure to 100% maximizes the qualitative signal — which
+audience actually lands here (startups vs data-eng vs product vs "curious about Javi") — that
+should drive the *next* iteration on the underperforming featured set. Content is held
+unchanged so that signal is clean and attributable to the exposure change alone.
+
+### Changes
+
+- **`landing.md` — `EXPOSURE_PCT` `50 → 100`.** Every eligible first-time visitor who has not
+  already answered/dismissed now sees the hero micro-survey in place of the primary CTA.
+  Returning/answered visitors are unaffected (the `DONE_KEY` early-return still keeps the CTA
+  for them). Survey content, choices, bucketing, and load-order-safe `emit()` unchanged.
+- **`assets/js/tracking.js` — `ANALYTICS_VERSION` `2026-08-12 → 2026-08-14`** and
+  **`_includes/tracker.html` cache-buster `?v=20260812 → ?v=20260814`**, per the per-iteration
+  boundary convention, so the full-exposure cohort is queryable in isolation. No behavioural
+  change to the tracker; collection stays raw (bots excluded at query time, not dropped).
+- No hero/featured/latest/about/newsletter/section-order or other visible content changes.
+
+### Validation
+
+`bundle exec jekyll build` clean (pre-existing unrelated Liquid / `doc/cv.html` warnings left
+untouched). Built `a/landing.html` shows `EXPOSURE_PCT = 100` and `tracking.js?v=20260814`;
+`a/index.html` also references `?v=20260814`. `node --check assets/js/tracking.js` OK and the
+built inline survey script parses. All three featured internal links present in the build.
+`git diff --check` clean; source diff is exactly three one-line changes (`landing.md`,
+`assets/js/tracking.js`, `_includes/tracker.html`) — `a/` build output is gitignored and
+rebuilt by CI. Desktop screenshot archived as
+`landing_history_shots/2026-08-14-survey-full-exposure-desktop.png`, captured from the local
+build with the analytics host (`e.javisantana.com`) blackholed so capture does not pollute
+`events.duckdb`; it shows the survey visible in the hero (the 100%-exposure state).
+
+### Metrics to compare after deployment
+
+Use sessions with `analyticsVersion = '2026-08-14'` from the confirmed deployment timestamp;
+exclude local referrers and the `88.19.35.180` bot IP; report raw and human-filtered side by
+side.
+
+- **Survey response rate** = distinct `landing_feedback` sessions ÷ distinct `survey_shown`
+  sessions, and the **`choice` distribution** — the primary output this iteration exists to
+  collect. `survey_shown` should now roughly track eligible human sessions (was ~half).
+- Watch that full exposure does not depress reading: compare human median `activeDuration`,
+  median max scroll, and overall/`featured-*`/`latest-*` article CTR against the 8s / 46% /
+  72% baseline above — the survey replacing the hero CTA should not cost article clicks.
+- Feed the `choice` mix into the next content iteration: it decides whether to lead the
+  featured set with startups vs data-eng vs identity-first pieces, and whether the dead
+  `featured-google-frontpage` / duplicated `featured-four-years` slots should be replaced by
+  proven `latest-*` winners (`learn-to-cook`, `experience-in-movies`).
