@@ -1,295 +1,166 @@
 ---
-layout: te_landing
+layout: minimal
+lang: en
 title: Javi Santana — data products, engineering, startups
 description: Javi Santana, co-founder of Tinybird. I build data products and write about engineering, product, and startups.
 permalink: /landing.html
 ---
 
-<main class="te te-landing">
+<main class="home">
+  <h1>Javi Santana</h1>
+  <p class="tagline">Pixels are the humble bricks with which one can build cathedrals</p>
+  <p>Rather than telling you who I am, I'll show you what I've built.</p>
+  <ul class="section" data-analytics-section="hero-identity">
+    <li><a href="https://tinybird.com" data-analytics="hero-tinybird"><i>Tinybird</i></a> (2018–) — real-time data infrastructure. Co-founder. Built the product, managed the FDE team, then ran it as CEO.</li>
+    <li><a href="https://carto.com" data-analytics="hero-carto"><i>CARTO</i></a> (2012–2018) — founding engineer to CTO. Geospatial data infrastructure. Zero to $8M ARR.</li>
+    <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/" data-analytics="hero-agroguia"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
+  </ul>
 
-  <header class="te-header te-landing-hero">
-    <div class="te-mark-static" aria-hidden="true"></div>
-    <p class="te-kicker">Madrid · internet</p>
-    <h1 class="te-name">Javi Santana</h1>
-    <p class="te-lede">
-      Co-founder of <a href="https://www.tinybird.co" data-analytics="hero-tinybird">Tinybird</a>.
-      I build data products and write about engineering, product, and startups—usually turning large amounts of data into something useful, fast.
-    </p>
-    <nav class="te-hero-actions" aria-label="Primary actions">
-      <a class="te-hero-primary" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="hero-read-four-years">read: four years of data engineering →</a>
-      <div class="te-survey te-hero-survey" id="feedback" data-analytics-section="feedback" hidden>
-        <p class="te-survey-prompt">What brought you here?</p>
-        <div class="te-survey-choices" role="group" aria-label="What brought you here?">
-          <button type="button" class="te-chip" data-analytics="survey-data" data-choice="data-engineering">data engineering</button>
-          <button type="button" class="te-chip" data-analytics="survey-startups" data-choice="startups">startups / building</button>
-          <button type="button" class="te-chip" data-analytics="survey-product" data-choice="product">product</button>
-          <button type="button" class="te-chip" data-analytics="survey-curious" data-choice="curious">just curious about Javi</button>
-          <button type="button" class="te-chip te-chip-other" data-analytics="survey-other" data-choice="other">something else…</button>
-        </div>
-        <form class="te-survey-other-form" hidden>
-          <label class="te-visually-hidden" for="te-survey-text">Tell me what you were looking for</label>
-          <input id="te-survey-text" type="text" maxlength="140" autocomplete="off" placeholder="what were you looking for?">
-          <button type="submit" class="te-chip" data-analytics="survey-submit">send</button>
-        </form>
-        <p class="te-survey-thanks" role="status" hidden>Thanks — noted.</p>
-      </div>
-      <span class="te-hero-secondary">
-        <a href="#start-here" data-analytics="hero-more-writing">more writing</a>
-        <a href="#about" data-analytics="hero-about">about me</a>
-      </span>
-    </nav>
-  </header>
-
-  <section class="te-section section" id="start-here" data-analytics-section="start-here">
-    <div class="te-section-heading">
-      <div>
-        <div class="te-section-label">start here</div>
-        <h2 class="te-section-title">Three good places to begin</h2>
-      </div>
-      <p>The pieces people still read—and that best show how I think.</p>
+  <p class="home-cta">Three good places to start reading:</p>
+  <nav class="post-list section" data-analytics-section="start-here">
+    <div class="row">
+      <span class="n">1.</span>
+      <a class="t" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years"><i>Learnings after four years working with +50 companies on data engineering</i></a>
+      <span class="y">2024</span>
     </div>
-
-    <div class="te-log te-featured-log">
-      <a class="te-row te-article-row te-featured-row" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years">
-        <div class="te-thumb">01</div>
-        <div class="te-row-body">
-          <div class="te-code">Learnings after four years working with 50+ companies</div>
-          <div class="te-article-meta">recommended · data engineering · en · read article →</div>
-        </div>
-      </a>
-
-      <a class="te-row te-article-row" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things">
-        <div class="te-thumb">02</div>
-        <div class="te-row-body">
-          <div class="te-code">40 things I learned about data</div>
-          <div class="te-article-meta">data · en · read article →</div>
-        </div>
-      </a>
-
-      <a class="te-row te-article-row" href="/2013/06/27/como-aguantamos-una-portada-de-google.html" data-analytics="featured-google-frontpage">
-        <div class="te-thumb">03</div>
-        <div class="te-row-body">
-          <div class="te-code">Cómo aguantamos una portada de Google</div>
-          <div class="te-article-meta">engineering · es · leer artículo →</div>
-        </div>
-      </a>
+    <div class="row">
+      <span class="n">2.</span>
+      <a class="t" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things"><i>40 things I learned about data</i></a>
+      <span class="y">2022</span>
     </div>
-  </section>
-
-  <section class="te-section section" id="latest" data-analytics-section="latest-writing">
-    <div class="te-section-heading">
-      <div>
-        <div class="te-section-label">latest writing</div>
-        <h2 class="te-section-title">Recent notes</h2>
-      </div>
-      <p>Data, software, building companies, and occasional low-quality philosophy.</p>
+    <div class="row">
+      <span class="n">3.</span>
+      <a class="t" href="/2025/01/16/i-love-sql.html" data-analytics="featured-i-love-sql"><i>I love SQL</i></a>
+      <span class="y">2025</span>
     </div>
+  </nav>
 
-    <div class="te-log">
-      {%- assign alldocs = site.posts | concat: site.inspiration | concat: site.fastdata | sort:"date" -%}
-      {%- assign log_pos = 0 -%}
-      {%- for post in alldocs reversed -%}
-        {%- if post.title != "Index" and post.name != "Index" -%}
-          {%- assign log_pos = log_pos | plus: 1 -%}
-          {%- if log_pos < 6 %}
-            <a class="te-row te-article-row" href="{{ post.url }}" id="{{ post.slug }}" data-analytics="latest-{{ post.slug }}">
-              <div class="te-thumb">{{ log_pos | prepend: '0' | slice: -2, 2 }}</div>
-              <div class="te-row-body">
-                <div class="te-code">{{ post.title | default: post.name }}</div>
-                <div class="te-article-meta">
-                  {% if post.date %}{{ post.date | date: "%b %Y" | downcase }} · {% endif %}read article →
-                </div>
-              </div>
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-      {%- endfor %}
+  <p class="home-cta">Recent writing, newest first — <a href="/" data-analytics="latest-all-articles"><i>full archive →</i></a></p>
+  <nav class="post-list section" data-analytics-section="latest-writing">
+    {%- assign featured_urls = "/2024/11/30/learnings-after-4-years-data-eng.html,/fastdata/40-things-I-learned-about-data.html,/2025/01/16/i-love-sql.html" | split: "," -%}
+    {%- assign alldocs = site.posts | concat: site.inspiration | concat: site.fastdata | sort:"date" -%}
+    {%- assign log_pos = 0 -%}
+    {%- for post in alldocs reversed -%}
+      {%- if post.title != "Index" and post.name != "Index" and post.title != "" and post.title != nil and log_pos < 6 -%}
+        {%- unless featured_urls contains post.url -%}
+        {%- assign log_pos = log_pos | plus: 1 -%}
+          <div class="row">
+            <span class="n">{{ log_pos }}.</span>
+            <a class="t" href="{{ post.url }}" data-analytics="latest-{{ post.slug }}"><i>{{ post.title | default: post.name }}</i></a>
+            <span class="y">{{ post.date | date: "%Y" }}</span>
+          </div>
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor %}
+  </nav>
+
+  <p class="home-cta">I also write about data infrastructure at scale on the <a href="https://www.tinybird.co/blog/authors/javisantana" data-analytics="tinybird-all-posts"><i>Tinybird blog</i></a>:</p>
+  <nav class="post-list section" data-analytics-section="tinybird-blog">
+    <div class="row">
+      <span class="n">1.</span>
+      <a class="t" href="https://www.tinybird.co/blog/what-i-learned-operating-clickhouse" data-analytics="tinybird-operating-clickhouse"><i>I've operated petabyte-scale ClickHouse® clusters for 5 years</i></a>
+      <span class="y">↗</span>
     </div>
-
-    <p class="te-explore"><a href="/" data-analytics="latest-all-articles">browse the full archive →</a></p>
-  </section>
-
-  <section class="te-section section te-about" id="about" data-analytics-section="about">
-    <div class="te-section-label">about</div>
-    <div class="te-about-grid">
-      <h2 class="te-section-title">Builder first, job title second.</h2>
-      <div class="te-about-copy">
-        <p>
-          I started as a graphics and game programmer, then moved through data engineering,
-          technical leadership, product, and company building. Today I’m a co-founder of Tinybird.
-        </p>
-        <p>
-          I write to make sense of the things I’m working on: high-performance data systems,
-          how products get made, what startups teach you, and the ideas that survive contact with reality.
-        </p>
-        <dl class="te-spec-table">
-          <div class="te-spec-line"><dt>focus</dt><dd>data · product · startups</dd></div>
-          <div class="te-spec-line"><dt>background</dt><dd>graphics · games · engineering</dd></div>
-          <div class="te-spec-line"><dt>based</dt><dd>Madrid, Spain</dd></div>
-        </dl>
-      </div>
+    <div class="row">
+      <span class="n">2.</span>
+      <a class="t" href="https://www.tinybird.co/blog/what-i-learned-operating-clickhouse-part-ii" data-analytics="tinybird-operating-clickhouse-ii"><i>Lessons learned from 5 years with ClickHouse® clusters: Part II</i></a>
+      <span class="y">↗</span>
     </div>
-  </section>
-
-  <section class="te-section section" id="newsletter" data-analytics-section="newsletter">
-    <div class="te-section-heading">
-      <div>
-        <div class="te-section-label">newsletters</div>
-        <h2 class="te-section-title">New writing, by email</h2>
-      </div>
-      <p>Choose your language. Both are free.</p>
+    <div class="row">
+      <span class="n">3.</span>
+      <a class="t" href="https://www.tinybird.co/blog/1b-rows-per-second-clickhouse" data-analytics="tinybird-1b-rows"><i>How to ingest 1 billion rows per second in ClickHouse®</i></a>
+      <span class="y">↗</span>
     </div>
-
-    <div class="te-newsletter-grid">
-      <a class="te-newsletter" href="https://failingwithdata.substack.com" data-analytics="newsletter-en">
-        <span class="te-thumb">EN</span>
-        <span><strong>Failing with Data</strong><small>Data engineering, product, and startups.</small></span>
-        <em>subscribe →</em>
-      </a>
-      <a class="te-newsletter" href="https://javisantana.substack.com" data-analytics="newsletter-es">
-        <span class="te-thumb">ES</span>
-        <span><strong>Javi Santana</strong><small>Tecnología, producto, startups y alguna otra cosa.</small></span>
-        <em>suscríbete →</em>
-      </a>
+    <div class="row">
+      <span class="n">4.</span>
+      <a class="t" href="https://www.tinybird.co/blog/why-we-maintain-a-clickhouse-fork-at-tinybird" data-analytics="tinybird-clickhouse-fork"><i>Why we maintain a ClickHouse® fork at Tinybird</i></a>
+      <span class="y">↗</span>
     </div>
-  </section>
+    <div class="row">
+      <span class="n">5.</span>
+      <a class="t" href="https://www.tinybird.co/blog/adding-join-support-for-parallel-replicas-on-clickhouse" data-analytics="tinybird-parallel-replicas"><i>Adding JOIN support for parallel replicas on ClickHouse®</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">6.</span>
+      <a class="t" href="https://www.tinybird.co/blog/when-to-use-columnar-database" data-analytics="tinybird-columnar"><i>When to use columnar databases over Postgres, MySQL, or MongoDB</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">7.</span>
+      <a class="t" href="https://www.tinybird.co/blog/ibm-confluent" data-analytics="tinybird-ibm-confluent"><i>Nobody Ever Got Fired for Buying Confluent</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">8.</span>
+      <a class="t" href="https://www.tinybird.co/blog/flink-is-95-problem" data-analytics="tinybird-flink"><i>Flink's 95% problem</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">9.</span>
+      <a class="t" href="https://www.tinybird.co/blog/data-engineering-for-developers" data-analytics="tinybird-data-eng-guide"><i>A Developer's Guide to Data Engineering</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">10.</span>
+      <a class="t" href="https://www.tinybird.co/blog/introducing-explorations" data-analytics="tinybird-explorations"><i>Explorations: a chat UI for real-time analytics</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">11.</span>
+      <a class="t" href="https://www.tinybird.co/blog/dbt-in-real-time" data-analytics="tinybird-dbt"><i>dbt in real-time</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">12.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tb-test" data-analytics="tinybird-tb-test"><i>Writing tests sucks. Use LLMs so it sucks less.</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">13.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tb-dev" data-analytics="tinybird-tb-dev"><i>Build fast software with big data requirements</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">14.</span>
+      <a class="t" href="https://www.tinybird.co/blog/local-first-experience" data-analytics="tinybird-local-first"><i>Local first.</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">15.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tb-create" data-analytics="tinybird-tb-create"><i>Vibe data engineering</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">16.</span>
+      <a class="t" href="https://www.tinybird.co/blog/the-perfect-data-ingestion-api-design" data-analytics="tinybird-ingestion-api"><i>The perfect data ingestion API design</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">17.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tinybird-forward" data-analytics="tinybird-forward"><i>Ship data as you ship code: deploy changes with one command</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">18.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tinybird-is-local-first" data-analytics="tinybird-is-local-first"><i>Ship data as you ship code: Tinybird becomes local-first</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">19.</span>
+      <a class="t" href="https://www.tinybird.co/blog/tinybird-local-docker-container" data-analytics="tinybird-local-docker"><i>Tinybird Local: Build with data on your machine</i></a>
+      <span class="y">↗</span>
+    </div>
+    <div class="row">
+      <span class="n">20.</span>
+      <a class="t" href="https://www.tinybird.co/blog/how-tinybird-scales" data-analytics="tinybird-how-scales"><i>How to scale a real-time data platform</i></a>
+      <span class="y">↗</span>
+    </div>
+  </nav>
 
-  <footer class="te-footer section" data-analytics-section="footer">
-    <span>Elsewhere</span>
-    <a href="https://x.com/javisantana" data-analytics="footer-x">X / Twitter</a>
-    <a href="https://www.linkedin.com/in/javisantana" data-analytics="footer-linkedin">LinkedIn</a>
-    <a href="mailto:javi@tinybird.co" data-analytics="footer-email">Email</a>
+  <p class="home-cta">New writing by email — <a href="https://failingwithdata.substack.com" data-analytics="newsletter-en"><i>Failing with Data (EN)</i></a> · <a href="https://javisantana.substack.com" data-analytics="newsletter-es"><i>Javi Santana (ES)</i></a></p>
+
+  <footer class="section" data-analytics-section="footer">
+    <p><a href="https://x.com/javisantana" data-analytics="footer-x"><i>x</i></a> · <a href="https://www.linkedin.com/in/javisantana" data-analytics="footer-linkedin"><i>linkedin</i></a> · <a href="mailto:javi@tinybird.co" data-analytics="footer-email"><i>email</i></a></p>
   </footer>
-
 </main>
-
-<script>
-  (function () {
-    // Landing micro-survey: "What brought you here?".
-    // Qualitative feedback capture; shown to a configurable slice of traffic.
-    // Emits through the self-hosted analytics pipeline (window.jsAnalytics.track,
-    // exposed by /assets/js/tracking.js) so responses land in events.duckdb.
-    var EXPOSURE_PCT = 100;              // exposure dial, not a powered A/B split
-    var DONE_KEY = 'landing-survey-done';
-    var ID_KEY = 'landing-survey-id';
-
-    try {
-      var section = document.getElementById('feedback');
-      if (!section) return;
-
-      // Preview override: ?show_survey=true forces the survey regardless of
-      // exposure bucket or prior dismissal (for local/manual checks).
-      var forceShow = false;
-      try {
-        forceShow = new URLSearchParams(location.search).get('show_survey') === 'true';
-      } catch (e) { /* URLSearchParams unavailable → no override */ }
-
-      // Already answered/dismissed on a previous visit → never show again.
-      if (!forceShow && localStorage.getItem(DONE_KEY)) return;
-
-      // Stable id: prefer the tracker's session cookie, fall back to a local id.
-      function sessionIdFromCookie() {
-        var out = null;
-        document.cookie.split(';').forEach(function (el) {
-          var parts = el.split('=');
-          if (parts[0].trim() === 'session-id') out = (parts[1] || '').trim();
-        });
-        return out;
-      }
-      function stableId() {
-        var id = sessionIdFromCookie();
-        if (id) return id;
-        id = localStorage.getItem(ID_KEY);
-        if (!id) {
-          id = String(Date.now()) + '-' + Math.random().toString(16).slice(2);
-          localStorage.setItem(ID_KEY, id);
-        }
-        return id;
-      }
-
-      // Hash id → 0..99 bucket.
-      function bucketOf(id) {
-        var h = 0;
-        for (var i = 0; i < id.length; i++) {
-          h = (h * 31 + id.charCodeAt(i)) >>> 0;
-        }
-        return h % 100;
-      }
-
-      var bucket = bucketOf(stableId());
-      if (!forceShow && bucket >= EXPOSURE_PCT) return;  // not in the exposed slice
-
-      var choices = section.querySelector('.te-survey-choices');
-      var otherForm = section.querySelector('.te-survey-other-form');
-      var thanks = section.querySelector('.te-survey-thanks');
-      var textInput = section.querySelector('#te-survey-text');
-
-      // Self-hosted pipeline; the batch envelope already carries referrer and
-      // viewportWidth, so payloads stay minimal. Never let tracking break the page.
-      // tracking.js (which defines window.jsAnalytics) loads *after* this inline
-      // script, so a synchronous emit on reveal (survey_shown) would fire before the
-      // hook exists and be lost. Buffer until the hook is ready, then flush.
-      function emit(type, payload) {
-        function send() { window.jsAnalytics.track(type, payload); }
-        function ready() {
-          return window.jsAnalytics && typeof window.jsAnalytics.track === 'function';
-        }
-        try {
-          if (ready()) return send();
-          var tries = 0;
-          var iv = setInterval(function () {
-            try {
-              if (ready()) { clearInterval(iv); send(); }
-              else if (++tries > 50) { clearInterval(iv); }  // give up after ~5s
-            } catch (e) { clearInterval(iv); }
-          }, 100);
-        } catch (e) { /* swallow: analytics must never throw into the UI */ }
-      }
-
-      function record(choice, text) {
-        var payload = { choice: choice, bucket: bucket };
-        if (text) payload.text = text;
-        emit('landing_feedback', payload);
-        localStorage.setItem(DONE_KEY, '1');
-      }
-
-      function showThanks() {
-        choices.hidden = true;
-        if (otherForm) otherForm.hidden = true;
-        if (thanks) thanks.hidden = false;
-      }
-
-      choices.addEventListener('click', function (ev) {
-        var btn = ev.target.closest('.te-chip');
-        if (!btn) return;
-        var choice = btn.getAttribute('data-choice');
-        if (choice === 'other') {
-          choices.hidden = true;
-          if (otherForm) {
-            otherForm.hidden = false;
-            if (textInput) textInput.focus();
-          }
-          return;
-        }
-        record(choice);
-        showThanks();
-      });
-
-      if (otherForm) {
-        otherForm.addEventListener('submit', function (ev) {
-          ev.preventDefault();
-          var text = (textInput && textInput.value ? textInput.value : '').trim();
-          if (!text) return;               // never send empty free-text
-          record('other', text.slice(0, 140));
-          showThanks();
-        });
-      }
-
-      // Eligible + not yet answered → reveal the survey in place of the hero CTA.
-      var cta = document.querySelector('.te-hero-primary');
-      if (cta) cta.hidden = true;
-      section.hidden = false;
-      emit('survey_shown', { bucket: bucket });  // denominator for response rate
-    } catch (e) { /* fail closed: leave the survey hidden, keep the CTA */ }
-  })();
-</script>
