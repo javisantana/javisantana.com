@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research-backed Wikipedia-style biography draft for Spanish software engineer and entrepreneur Javi Santana.">
+  <title>Javi Santana — Wikipedia-style research draft</title>
+  <style>
+    :root{
+      --text:#202122; --muted:#54595d; --border:#a2a9b1; --border2:#c8ccd1;
+      --panel:#f8f9fa; --panel2:#eaecf0; --link:#36c; --primary:#f1f8ff;
+      --independent:#f6fff4; --warning:#fff8e5;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:#fff;color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.62;font-size:16px
+    }
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{max-width:1160px;margin:0 auto;padding:28px 24px 72px}
+    .research-note{
+      border:1px solid var(--border2);background:var(--warning);padding:12px 14px;
+      margin-bottom:20px;font-size:.92rem
+    }
+    .research-note strong{color:#111}
+    h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.2}
+    h1{font-size:2.35rem;margin:0;padding:0 0 8px;border-bottom:1px solid var(--border)}
+    h2{font-size:1.62rem;margin:36px 0 12px;padding-bottom:5px;border-bottom:1px solid var(--border)}
+    h3{font-size:1.15rem;margin:27px 0 7px}
+    h4{font-size:1rem;margin:18px 0 5px}
+    p{margin:.68rem 0}
+    .subtitle{color:var(--muted);font-size:.95rem;margin:5px 0 20px}
+    .content{display:flow-root}
+    .infobox{
+      float:right;width:330px;margin:0 0 26px 30px;border:1px solid var(--border);
+      background:var(--panel);font-size:.91rem
+    }
+    .infobox-title{background:var(--panel2);text-align:center;font-weight:700;padding:9px 12px;font-size:1.08rem}
+    .portrait{display:block;width:100%;height:auto;background:#ddd}
+    .caption{padding:7px 10px 9px;color:var(--muted);font-size:.82rem;border-bottom:1px solid #ddd}
+    .infobox table{width:100%;border-collapse:collapse}
+    .infobox th,.infobox td{vertical-align:top;padding:7px 9px;border-top:1px solid #eaecf0}
+    .infobox th{width:34%;text-align:left;font-weight:600}
+    .toc{
+      display:inline-block;min-width:315px;max-width:520px;background:var(--panel);
+      border:1px solid var(--border);padding:12px 18px 12px 28px;margin:18px 0;font-size:.92rem
+    }
+    .toc>strong{display:block;text-align:center;margin-bottom:5px}
+    .toc ol{margin:0;padding-left:22px}.toc li{margin:2px 0}
+    sup.ref{font-size:.72em;line-height:0;vertical-align:super}
+    .source-badge{
+      display:inline-block;border:1px solid var(--border2);border-radius:2px;padding:0 5px;
+      margin-left:5px;font-size:.72rem;line-height:1.45;vertical-align:1px;color:#444
+    }
+    .source-badge.independent{background:var(--independent)}
+    .source-badge.primary{background:var(--primary)}
+    .callout{
+      margin:16px 0;padding:12px 14px;border-left:4px solid var(--border);
+      background:var(--panel);font-size:.93rem
+    }
+    .callout.primary{border-left-color:#6ea8d7;background:var(--primary)}
+    .callout.independent{border-left-color:#77aa67;background:var(--independent)}
+    .timeline,.research-table{width:100%;border-collapse:collapse;margin:15px 0;font-size:.92rem}
+    .timeline th,.timeline td,.research-table th,.research-table td{
+      border:1px solid var(--border2);padding:8px 10px;vertical-align:top
+    }
+    .timeline th,.research-table th{background:var(--panel);text-align:left}
+    .timeline td:first-child{white-space:nowrap;width:105px;font-weight:600}
+    .article-list{columns:2;column-gap:32px;padding-left:22px}
+    .article-list li{break-inside:avoid;margin:0 0 7px}
+    .references{font-size:.89rem;overflow-wrap:anywhere}
+    .references li{margin:.58rem 0;padding-left:3px}
+    .references .type{font-weight:600}
+    .footer-cats{
+      margin-top:38px;border:1px solid var(--border);background:var(--panel);
+      padding:10px 12px;font-size:.9rem
+    }
+    .footer-cats a{margin-right:10px}
+    .small{font-size:.86rem;color:var(--muted)}
+    code{background:#f3f3f3;padding:1px 4px;border-radius:2px}
+    @media(max-width:800px){
+      .page{padding:18px 15px 52px}
+      h1{font-size:1.95rem}
+      .infobox{float:none;width:100%;margin:0 0 22px}
+      .toc{width:100%;max-width:none}
+      .article-list{columns:1}
+      .timeline{font-size:.87rem}
+    }
+  </style>
+</head>
+<body>
+<main class="page">
+  <div class="research-note">
+    <strong>Research draft, not Wikipedia:</strong>
+    This page intentionally distinguishes <em>independent reporting</em> from Santana's own site, archived CVs,
+    GitHub repository and first-person writing. Primary sources are useful for chronology and his stated views,
+    but should not be used on Wikipedia to establish notability or controversial claims about a living person.
+  </div>
+
+  <h1>Javi Santana</h1>
+  <div class="subtitle">Spanish software engineer and technology entrepreneur</div>
+
+  <div class="content">
+    <aside class="infobox" aria-label="Biographical information">
+      <div class="infobox-title">Javi Santana</div>
+      <img class="portrait"
+           src="https://javisantana.com/fotos_del_jeto/javi_2026.jpg"
+           alt="Javi Santana speaking on stage"
+           referrerpolicy="no-referrer">
+      <div class="caption">
+        Santana speaking at an event. The file is included in his public
+        <a href="https://javisantana.com/fotos_del_jeto/">photo/bio page</a>.
+        The page itself warns that it does not guarantee the photograph's copyright status.
+      </div>
+      <table>
+        <tr><th>Born</th><td>1981, province of Valladolid, Spain <span class="source-badge independent">independent</span></td></tr>
+        <tr><th>Nationality</th><td>Spanish</td></tr>
+        <tr><th>Occupation</th><td>Software engineer, technology entrepreneur</td></tr>
+        <tr><th>Education</th><td>Telecommunications engineering, University of Valladolid <span class="source-badge primary">primary</span></td></tr>
+        <tr><th>Known for</th><td>Agroguía; CARTO (CartoDB); Tinybird</td></tr>
+        <tr><th>Current public title</th><td>Co-founder, Tinybird <span class="source-badge independent">company source</span></td></tr>
+        <tr><th>Website</th><td><a href="https://javisantana.com/">javisantana.com</a></td></tr>
+      </table>
+    </aside>
+
+    <p>
+      <strong>Javi Santana</strong> (also published as <strong>Javier Santana</strong>; born 1981) is a Spanish software engineer
+      and technology entrepreneur whose work has centered on developer tools, geospatial software and real-time
+      data infrastructure. He founded the agricultural GPS business <strong>Agroguía</strong>, later became
+      chief technology officer of <strong>CartoDB</strong> (now CARTO), worked as Data Services Lead at
+      <strong>BBVA</strong>, and co-founded <strong>Tinybird</strong>.
+      Independent reporting in 2016 described him as CartoDB's CTO and traced his path into the company through
+      Agroguía; a 2026 CEEI Valencia profile similarly summarizes the sequence Agroguía → CARTO → BBVA → Tinybird.
+      <sup class="ref"><a href="#ref-1">[1]</a></sup>
+      <sup class="ref"><a href="#ref-2">[2]</a></sup>
+      <sup class="ref"><a href="#ref-29">[29]</a></sup>
+    </p>
+
+    <p>
+      Santana also maintains an unusually long public record of his technical work. His GitHub-backed personal
+      site contains blog posts beginning in August 2003, and the current index numbers more than 670 entries through
+      2026. The repository exposes the old posts, experiments, slide decks, CV pages, photo assets and other project
+      material in public version control.
+      <sup class="ref"><a href="#ref-3">[3]</a></sup>
+      <sup class="ref"><a href="#ref-4">[4]</a></sup>
+      <sup class="ref"><a href="#ref-5">[5]</a></sup>
+    </p>
+
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#early">Early life, education and programming</a></li>
+        <li><a href="#early-career">Early technical career</a></li>
+        <li><a href="#agroguia">Agroguía</a></li>
+        <li><a href="#carto">CARTO / CartoDB</a></li>
+        <li><a href="#bbva">BBVA</a></li>
+        <li><a href="#tinybird">Tinybird</a></li>
+        <li><a href="#media">Podcasts, interviews and public appearances</a></li>
+        <li><a href="#writing">Writing and public technical archive</a></li>
+        <li><a href="#ideas">Engineering and product ideas</a></li>
+        <li><a href="#timeline">Selected chronology</a></li>
+        <li><a href="#wiki-readiness">Wikipedia sourcing assessment</a></li>
+        <li><a href="#references">References</a></li>
+      </ol>
+    </nav>
+
+    <section class="section" id="early">
+      <h2>Early life, education and programming</h2>
+      <p>
+        Santana was born in 1981 in the province of Valladolid, Spain. A 2018 <em>El Progreso</em> interview
+        identifies him as “Valladolid, 1981,” while a 2026 CEEI Valencia profile says he grew up in a small village
+        in the province. He has described a family background in agriculture; a 2016 <em>elDiario.es</em> profile
+        reported that he had helped his father and grandfather with farm work and that, in 2005, he chose an
+        agricultural topic for his university final project. That project became the basis for Agroguía.
+        <sup class="ref"><a href="#ref-29">[29]</a></sup>
+        <sup class="ref"><a href="#ref-2">[2]</a></sup>
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+      </p>
+      <p>
+        An older curriculum vitae preserved on Santana's website lists a Technical Telecommunications Engineering
+        qualification in electronic systems from the University of Valladolid (1999–2003), followed by a
+        Telecommunications Engineering degree completed in 2006. It gives the final-project title as
+        <em>“Sistema de ayuda al guiado de maquinaria agrícola mediante GPS bajo plataforma Pocket PC”</em>
+        (“GPS-based assistance system for guiding agricultural machinery on the Pocket PC platform”).
+        <sup class="ref"><a href="#ref-6">[6]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <p>
+        His archive also documents a parallel interest in graphics, games, demoscene programming and low-level
+        software. A September 2005 development diary for <em>MakeFight</em>, a vehicle-building fighting game
+        submitted to the ArtFutura 2005 competition, describes using Python, OpenGL and a C-based physics library.
+        A 2024 retrospective says that his entry into 3D programming was prompted by seeing a real-time graphics demo
+        while participating in programming IRC channels when he was around twenty.
+        <sup class="ref"><a href="#ref-7">[7]</a></sup>
+        <sup class="ref"><a href="#ref-8">[8]</a></sup>
+        <span class="source-badge primary">primary sources</span>
+      </p>
+    </section>
+
+    <section class="section" id="early-career">
+      <h2>Early technical career</h2>
+      <p>
+        Before CARTO, Santana's self-published résumés describe a mix of embedded systems, game technology,
+        web development and applied engineering. One résumé says that while studying he did freelance development
+        and worked as a television engineer, including database-migration software, control software for
+        center-pivot irrigation and technical work for a regional television broadcaster. It later lists work at
+        M2DEV on real-time 3D architectural visualization, at Unkasoft on game-development tools and mobile games,
+        and at Wellness Telecom on Python/Django web systems.
+        <sup class="ref"><a href="#ref-9">[9]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <p>
+        A second archived CV additionally lists R&amp;D work at Algor on distributed systems for embedded Linux and
+        at GMVending on embedded Linux, touch interfaces, C/C++, Python, JavaScript, Qt and OpenGL.
+        <sup class="ref"><a href="#ref-6">[6]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <div class="callout primary">
+        <strong>Why these jobs are treated cautiously:</strong> the early-career details above come from CV pages
+        Santana published himself. They are useful for reconstructing his technical trajectory, but this draft does
+        not present them as independently verified employment history.
+      </div>
+    </section>
+
+    <section class="section" id="agroguia">
+      <h2>Agroguía</h2>
+      <p>
+        Agroguía began as Santana's university final project. The system used GPS and a mobile computer to show
+        agricultural operators which parts of a field had been covered, particularly during tasks such as spreading
+        fertilizer or applying pesticides. Santana wrote in January 2007 that he had started selling early units
+        experimentally, reinvesting the proceeds in product improvements and targeted advertising.
+        <sup class="ref"><a href="#ref-10">[10]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <p>
+        Independent reporting later described the product as a GPS guidance system installed in tractors, with
+        emailed reports showing treated areas, elapsed time and gaps. By 2016, <em>elDiario.es</em> reported that
+        Agroguía had around 2,000 customers and had been profitable for most of its existence. The same article
+        described its online-sales model and the close relationship between Agroguía and CartoDB technology.
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+        <span class="source-badge independent">independent</span>
+      </p>
+      <p>
+        A 2013 CARTO article described Agroguía using CartoDB for real-time statistics and mapping, and identified
+        Santana as the product's originator. It also connected the project to his family's agricultural background
+        in Valladolid.
+        <sup class="ref"><a href="#ref-11">[11]</a></sup>
+      </p>
+      <p>
+        Santana continued experimenting around the product. In 2009 he wrote that an augmented-reality prototype,
+        which combined GPS with a camera view for farmers, had won the industry category of a 3M competition.
+        <sup class="ref"><a href="#ref-12">[12]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <p>
+        In a 2017 farewell post, Santana said that Agroguía had run for more than twelve years and that the business
+        was transferred to SmartRural on 3 July 2017 after he and his collaborators had devoted less time to it in
+        its later years. He described the product as deliberately narrow, technically simple and maintained for
+        years without unnecessary rewrites.
+        <sup class="ref"><a href="#ref-13">[13]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+    </section>
+
+    <section class="section" id="carto">
+      <h2>CARTO / CartoDB</h2>
+      <p>
+        Santana's connection to CartoDB grew directly out of Agroguía. In the 2016 <em>elDiario.es</em> profile,
+        he recalled that Javier de la Torre contacted him after becoming interested in agricultural data collected
+        by Agroguía. The initial project did not continue, but the relationship led to other collaborations,
+        including work for Google, and Santana subsequently joined CartoDB. The article identified him as the
+        company's CTO at the time.
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+      </p>
+      <p>
+        Santana's present-day site summarizes his CARTO period as 2012–2018, “founding engineer to CTO,” and says
+        the company grew from zero to $8 million in annual recurring revenue during that period. The revenue figure
+        is Santana's own retrospective claim and is therefore not treated here as independently verified.
+        <sup class="ref"><a href="#ref-3">[3]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+      <p>
+        The period coincided with CartoDB's transition from a small geospatial technology company into a
+        venture-backed software business. In 2016, <em>elDiario.es</em> reported clients including NASA, the United
+        Nations and Twitter and noted the company's $23 million financing round. Santana's own 2015 post about that
+        funding emphasized the operating pressure attached to venture capital rather than treating it as personal
+        wealth.
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+        <sup class="ref"><a href="#ref-14">[14]</a></sup>
+      </p>
+      <p>
+        His blog from the CARTO years increasingly shifted from graphics and embedded development toward data
+        systems, APIs, geospatial infrastructure, enterprise software, technical-team scaling and production
+        reliability. The site's index includes posts on vector tiles, local search, on-premise software,
+        engineering-team growth and, in 2018, a farewell entry titled <em>“Adiós CARTO”</em>.
+        <sup class="ref"><a href="#ref-3">[3]</a></sup>
+      </p>
+    </section>
+
+    <section class="section" id="bbva">
+      <h2>BBVA</h2>
+      <p>
+        After CARTO, Santana worked at BBVA as <strong>Data Services Lead</strong>. This role is stated in his public
+        speaker biography and in a 2026 CEEI Valencia profile.
+        <sup class="ref"><a href="#ref-2">[2]</a></sup>
+        <sup class="ref"><a href="#ref-15">[15]</a></sup>
+      </p>
+      <p>
+        In later personal writing, Santana characterized the bank period as a short corporate interlude before
+        starting Tinybird. His 2019 introduction to Tinybird says that he left a comfortable corporate 9-to-5 role
+        because he valued choosing how to work and working with people with whom he shared a strong professional
+        affinity.
+        <sup class="ref"><a href="#ref-16">[16]</a></sup>
+        <span class="source-badge primary">primary source</span>
+      </p>
+    </section>
+
+    <section class="section" id="tinybird">
+      <h2>Tinybird</h2>
+      <p>
+        Santana co-founded <strong>Tinybird</strong>, a real-time data infrastructure company. His current website
+        dates the project from 2018, while a September 2019 essay gives one of the earliest detailed public
+        descriptions of its model: a product for exposing large datasets through fast APIs, combined in the early
+        phase with data-analytics consulting as a way to understand customer problems.
+        <sup class="ref"><a href="#ref-3">[3]</a></sup>
+        <sup class="ref"><a href="#ref-16">[16]</a></sup>
+      </p>
+      <p>
+        Santana's 2019 and 2020 technical essays show the early architecture taking shape around Python, C++ and
+        ClickHouse, with an emphasis on minimizing dependencies, understanding the lower layers of the stack,
+        keeping the development environment simple and allowing technology choices to follow the needs of the
+        business. In 2020 he described a stack that also used Redis, ZooKeeper, Nginx and Ansible, while arguing
+        that unavoidable system complexity should be understood rather than hidden behind additional abstractions.
+        <sup class="ref"><a href="#ref-17">[17]</a></sup>
+        <sup class="ref"><a href="#ref-18">[18]</a></sup>
+      </p>
+      <p>
+        In a year-end 2020 review, Santana wrote that Tinybird had grown to eleven people and had handled a project
+        processing 12 trillion rows in a single day. A later Tinybird engineering article described the same
+        Black Friday workload and connected the team's experience with earlier high-load projects at CARTO.
+        <sup class="ref"><a href="#ref-19">[19]</a></sup>
+        <sup class="ref"><a href="#ref-20">[20]</a></sup>
+      </p>
+      <p>
+        Tinybird subsequently raised a $3 million seed round in 2021, a $37 million Series A in 2022 led by CRV and
+        Singular Ventures, and a $30 million Series B in 2024 led by Balderton Capital. TechCrunch reported in 2024
+        that the company had tripled revenue over the previous year and named Vercel, Canva and FanDuel among its
+        customers.
+        <sup class="ref"><a href="#ref-21">[21]</a></sup>
+        <sup class="ref"><a href="#ref-22">[22]</a></sup>
+        <span class="source-badge independent">independent</span>
+      </p>
+      <p>
+        Tinybird's current author page identifies Santana as a <strong>co-founder</strong> and shows continued
+        technical writing on ClickHouse, ingestion, data engineering and real-time systems through 2026.
+        <sup class="ref"><a href="#ref-23">[23]</a></sup>
+      </p>
+      <div class="callout">
+        <strong>CEO-title note:</strong> Santana's current personal site says he “built the product, managed the FDE
+        team, then ran it as CEO,” and a December 2025 personal post says he became Tinybird's CEO during 2025.
+        However, other public company materials have continued to identify Jorge Sancha as CEO. Because the public
+        record is inconsistent about the precise timing and present status of the title, this draft uses the
+        unambiguous current description “Tinybird co-founder.”
+        <sup class="ref"><a href="#ref-3">[3]</a></sup>
+        <sup class="ref"><a href="#ref-24">[24]</a></sup>
+      </div>
+    </section>
+
+
+    <section class="section" id="media">
+      <h2>Podcasts, interviews and public appearances</h2>
+      <p>
+        Santana has been interviewed repeatedly about software engineering, entrepreneurship, CTO work, data
+        infrastructure and product development. Taken together, these recordings provide a substantial first-person
+        oral history of his career: the earliest items focus on the developer-to-CTO transition at CARTO, while later
+        appearances revisit Agroguía and BBVA and document the formation, architecture, product model and management
+        philosophy of Tinybird. Because statements made by Santana in interviews remain primary-source testimony,
+        this draft attributes them to the relevant conversation when they are not independently corroborated.
+      </p>
+
+      <div class="callout independent">
+        <strong>Media record:</strong> this research pass documents at least <strong>19 substantive interview,
+        podcast or recorded-conversation appearances from 2017–2026</strong>, in addition to conference talks and
+        company technical sessions. The list below de-duplicates the same episode when it was syndicated to YouTube,
+        Spotify, Apple Podcasts and iVoox.
+      </div>
+
+      <h3>Long-form interviews and podcast appearances</h3>
+      <table class="research-table media-table">
+        <thead>
+          <tr><th>Date</th><th>Programme / interview</th><th>Format</th><th>Biographical or technical subjects</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>14 Oct 2017</td>
+            <td><a href="https://www.xataka.com/empresas-y-economia/cto-de-carto-db-asi-veo-la-carrera-del-programador-hoy-dia-insert-coin-1x04"><strong>Xataka — Insert Coin 1x04</strong></a><br><em>“CTO de Carto DB: así veo la carrera del programador hoy día”</em> <sup class="ref"><a href="#ref-26">[26]</a></sup></td>
+            <td>Video + full podcast</td>
+            <td>Developer career paths, formal education, consultancies versus startups, entrepreneurship and fashionable frameworks; recorded while he was CARTO CTO.</td>
+          </tr>
+          <tr>
+            <td>15 Feb 2018</td>
+            <td><a href="https://www.ivoox.com/javier-santana-ni-monos-ni-lagartos-audios-mp3_rf_23801611_1.html"><strong>Ni Monos Ni Lagartos</strong></a><br><em>“Javier Santana en Ni Monos Ni Lagartos”</em> <sup class="ref"><a href="#ref-27">[27]</a></sup></td>
+            <td>Video/podcast · 25 min</td>
+            <td>Professional and personal profile filmed between CARTO's offices and the Carlos Sainz karting circuit; Agroguía, CARTO, cars and his recurring joke about becoming a baker.</td>
+          </tr>
+          <tr>
+            <td>1 Mar 2018</td>
+            <td><a href="https://podnews.net/podcast/i6eyk/episodes"><strong>K Fund PodKast, Ep. 26</strong></a><br><em>“Javi Santana (ex-CTO de Carto): hay vida más allá de los mapas”</em> <sup class="ref"><a href="#ref-28">[28]</a></sup></td>
+            <td>Podcast</td>
+            <td>Agroguía and entry into Vizzuality/CARTO; transition from developer to CTO; technical-stack choices; recruiting and onboarding engineers. K Fund noted that an earlier recording made in December had been lost and the interview had to be recorded again.</td>
+          </tr>
+          <tr>
+            <td>7 Jul 2018</td>
+            <td><a href="https://www.elprogreso.es/articulo/economia/javier-santana-sector-agricola-es-campo-perfecto-hacer-tecnologia/201807070200001322111.html"><strong>El Progreso</strong></a><br><em>“El sector agrícola es un campo perfecto para hacer tecnología”</em> <sup class="ref"><a href="#ref-29">[29]</a></sup></td>
+            <td>Written interview</td>
+            <td>Agroguía, CARTO and his then-new BBVA data-services role. This independent interview is also the strongest source located in this pass for his birth year (1981).</td>
+          </tr>
+          <tr>
+            <td>21 Oct 2020</td>
+            <td><a href="https://www.ivoox.com/desarrollo-software-javi-santana-audios-mp3_rf_58278177_1.html"><strong>Software 2.0 — Andrés Torrubia</strong></a><br><em>“Desarrollo de Software — Javi Santana”</em> <sup class="ref"><a href="#ref-30">[30]</a></sup></td>
+            <td>Podcast · 1 h 50 min</td>
+            <td>Conventional software, programming languages, machine-learning-driven “Software 2.0”, and the sequence Agroguía → CARTO → BBVA → Tinybird.</td>
+          </tr>
+          <tr>
+            <td>21 Oct 2020</td>
+            <td><a href="https://www.ubook.com/podcast/498864/bigdateame"><strong>Bigdatéame, BD57</strong></a><br><em>“Elena Torró y Javi Santana, de Tinybird”</em> <sup class="ref"><a href="#ref-31">[31]</a></sup></td>
+            <td>Podcast · 57 min</td>
+            <td>Early Tinybird product and infrastructure: turning data into API endpoints and the systems operating underneath the service.</td>
+          </tr>
+          <tr>
+            <td>18 Feb 2021</td>
+            <td><a href="https://podcasts.apple.com/us/podcast/m%C3%A1s-que-startups/id1301582923"><strong>Más Que Startups, #77</strong></a><br><em>“Decisiones de tecnología con Juanjo Traver y Javi Santana”</em> <sup class="ref"><a href="#ref-32">[32]</a></sup></td>
+            <td>Podcast · 1 h 19 min</td>
+            <td>Choosing technology at different startup stages, assembling technical teams, and outsourcing versus in-house development.</td>
+          </tr>
+          <tr>
+            <td>28 Jan 2022</td>
+            <td><a href="https://www.kfund.vc/post/podkast-154-especial-ctos-gestion-y-crecimiento-personal-mercado-laboral-y-mejores-practicas"><strong>K Fund PodKast, #154</strong></a><br><em>“Especial CTOs”</em> <sup class="ref"><a href="#ref-33">[33]</a></sup></td>
+            <td>Panel podcast</td>
+            <td>With Pau Ramón and Miguel Carranza: how the CTO role changes as a company grows, the engineering labour market, team management and stack selection.</td>
+          </tr>
+          <tr>
+            <td>21 Mar 2023</td>
+            <td><a href="https://open.spotify.com/episode/6p899HOkYaTlcaCpUOYPRs"><strong>SeedRocket</strong></a><br><em>“Tinybird: Crear data products a gran escala con Javi Santana”</em> <sup class="ref"><a href="#ref-34">[34]</a></sup></td>
+            <td>Podcast/video · 1 h 1 min</td>
+            <td>A detailed career retrospective: Agroguía, the route into Vizzuality/CARTO, consulting-to-product transitions, BBVA, the founding of Tinybird, its first client, fundraising, communication and customer success.</td>
+          </tr>
+          <tr>
+            <td>4 May 2023</td>
+            <td><a href="https://podcasts.apple.com/us/podcast/14-arquitectura-tecnolog%C3%ADa-y-datos/id1613788351?i=1000611741088"><strong>La hora de Datola, #14</strong></a><br><em>“Arquitectura, tecnología y datos”</em> <sup class="ref"><a href="#ref-35">[35]</a></sup></td>
+            <td>Podcast · 1 h 8 min</td>
+            <td>Agroguía and agricultural data, CARTO and geospatial analytics, database history, scalable data systems, open source, privacy, Tinybird, hypergrowth and hiring.</td>
+          </tr>
+          <tr>
+            <td>16 Jan 2024</td>
+            <td><a href="https://www.ivoox.com/076-el-poder-datos-129412-audios-mp3_rf_122636978_1.html"><strong>Heavy Mental, #076</strong></a><br><em>“El poder de los datos”</em> <sup class="ref"><a href="#ref-36">[36]</a></sup></td>
+            <td>Podcast/video · 1 h 19 min</td>
+            <td>Long-form conversation around data, technology and the practical consequences of building data products.</td>
+          </tr>
+          <tr>
+            <td>16 Jan 2024</td>
+            <td><a href="https://podcast.marsbased.com/podcasts-es/tecnologia-escalado-tinybird-javi-santana"><strong>Life on Mars, #078</strong></a><br><em>“Tecnología y escalado a alta velocidad”</em> <sup class="ref"><a href="#ref-37">[37]</a></sup></td>
+            <td>Podcast/video · ~1 h</td>
+            <td>Tinybird's technology stack, AI, rapid iteration, organisational culture, uncertainty and luck, talent retention, internal communication, growth and venture investment.</td>
+          </tr>
+          <tr>
+            <td>12 Oct 2024</td>
+            <td><a href="https://juegoconsentido.com/episodios/"><strong>JuegoConSentido, #034</strong></a><br><em>“Datos, velocidad y emprendimiento”</em> <sup class="ref"><a href="#ref-38">[38]</a></sup></td>
+            <td>Podcast/video · 2 h</td>
+            <td>The most expansive personal career interview found in this pass: early studies, Agroguía, an episode involving Google, CARTO, burnout, BBVA, Tinybird, fundraising, cars, advice to younger engineers, happiness and definitions of success.</td>
+          </tr>
+          <tr>
+            <td>22 Nov 2024</td>
+            <td><a href="https://juegoconsentido.com/episodios/especial-trg24-en-directo-con-heavy-mental-javi-santana-y-roberto-canales/"><strong>JuegoConSentido, #042 — TRG24 live</strong></a> <sup class="ref"><a href="#ref-39">[39]</a></sup></td>
+            <td>Live panel/podcast · 1 h 22 min</td>
+            <td>A shorter on-stage appearance near the end of the programme, answering questions about what he would do if starting again and what “superpower” he would choose.</td>
+          </tr>
+          <tr>
+            <td>18 Dec 2024</td>
+            <td><a href="https://www.ivoox.com/eliminamos-al-equipo-producto-para-ser-todos-audios-mp3_rf_137028780_1.html"><strong>Entrevistas a Product Leaders</strong></a><br><em>“Eliminamos al equipo de Producto para ser todos Producto”</em> <sup class="ref"><a href="#ref-40">[40]</a></sup></td>
+            <td>Podcast/video · 1 h 8 min</td>
+            <td>Tinybird's developer product, customer types, product management without a conventional product team, roadmap decisions, self-service acquisition, content, build-in-public practices and team structure.</td>
+          </tr>
+          <tr>
+            <td>6 Mar 2025</td>
+            <td><a href="https://es.linkedin.com/posts/javisantana_ayer-fui-a-la-tertulia-de-itnig-startup-activity-7303699447568326657-azHj"><strong>Itnig Startup Ecosystem — live tertulia</strong></a> <sup class="ref"><a href="#ref-41">[41]</a></sup></td>
+            <td>Live conversation / podcast</td>
+            <td>Tinybird, startups and AI in the week of MWC/4YFN 2025; contemporaneous attendee coverage also describes discussion of AI and business models.</td>
+          </tr>
+          <tr>
+            <td>27 Mar 2025</td>
+            <td><a href="https://www.youtube.com/watch?v=SzM0uK3dVKw"><strong>Manfred — Otro recruiting es posible</strong></a><br><em>“Cómo afecta la IA en desarrollo y en selección”</em> <sup class="ref"><a href="#ref-42">[42]</a></sup></td>
+            <td>Video/podcast interview</td>
+            <td>AI-assisted coding and product interfaces, Tinybird's high-autonomy organisation, hiring signals, technical tests that permit AI use, and recruiting for adaptability rather than fixed tool experience.</td>
+          </tr>
+          <tr>
+            <td>2024/2025</td>
+            <td><a href="https://crane.vc/founder-stories-value-creation-at-tinybird/"><strong>Crane Venture Partners — Founder Stories</strong></a><br><em>“Value Creation at Tinybird”</em> <sup class="ref"><a href="#ref-43">[43]</a></sup></td>
+            <td>Written founder interview</td>
+            <td>Tinybird's shift from product-centric technical language toward communicating business value; the founders' early lack of go-to-market experience; using a consulting posture to create customer conversations.</td>
+          </tr>
+          <tr>
+            <td>4 May 2026</td>
+            <td><a href="https://ceeivalencia.emprenemjunts.es/?n=36194&amp;op=8"><strong>CEEI Valencia</strong></a><br><em>“Los datos no son magia, pero explorarlos sí tiene algo mágico”</em> <sup class="ref"><a href="#ref-2">[2]</a></sup></td>
+            <td>Written interview</td>
+            <td>Childhood in a small Valladolid village, agricultural family background, entrepreneurship as a consequence of building useful things, data exploration, AI, cars and reflections on failure and craft.</td>
+          </tr>
+          <tr>
+            <td>5 May 2026</td>
+            <td><a href="https://ceeivalencia.emprenemjunts.es/?lang=1&amp;n=26313&amp;op=14"><strong>CEEI Valencia Scale Up Demo Day</strong></a><br><em>“Construir sin humo: de la tracción al exit, pasando por el producto”</em> <sup class="ref"><a href="#ref-44">[44]</a></sup></td>
+            <td>Live founder conversation</td>
+            <td>With Iñaki Arriaga and moderated by Estefanía Pastor: product, sustainable company-building, traction, execution speed and decisions behind technology businesses.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>What the interviews add to the biography</h3>
+      <p>
+        The interviews make several career transitions much clearer than résumé-style biographies do. In K Fund's
+        2018 episode, Santana describes the move from individual developer to CTO as a change in kind rather than
+        merely a promotion: recruiting, onboarding and organisational communication become part of the technical
+        job. Four years later, K Fund's CTO roundtable revisits the same theme after Tinybird, explicitly discussing
+        how the role must change as a company scales.
+        <sup class="ref"><a href="#ref-28">[28]</a></sup>
+        <sup class="ref"><a href="#ref-33">[33]</a></sup>
+      </p>
+      <p>
+        The 2023 SeedRocket and Datola conversations provide the clearest spoken bridge between Santana's successive
+        products. He recounts Agroguía as a practical commercial project rather than an attempt to “be an
+        entrepreneur,” describes how that work connected him with the people behind Vizzuality/CARTO, contrasts the
+        startup environment with his BBVA period, and then explains Tinybird's founding around large-scale data
+        problems and customer work. These are first-person accounts, but they align in broad chronology with the
+        earlier independent reporting on Agroguía and CARTO.
+        <sup class="ref"><a href="#ref-34">[34]</a></sup>
+        <sup class="ref"><a href="#ref-35">[35]</a></sup>
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+      </p>
+      <p>
+        By 2024–2025, the interviews shift from “how the company was started” to “how the company should operate.”
+        The Product Leaders episode documents Tinybird's unusual decision to distribute product responsibility
+        broadly rather than rely on a conventional product-management department; the Manfred interview extends that
+        operating philosophy to AI-assisted development and hiring; and the Crane interview shows an analogous shift
+        in go-to-market thinking from explaining technical mechanisms to explaining customer value.
+        <sup class="ref"><a href="#ref-40">[40]</a></sup>
+        <sup class="ref"><a href="#ref-42">[42]</a></sup>
+        <sup class="ref"><a href="#ref-43">[43]</a></sup>
+      </p>
+      <p>
+        The two-hour JuegoConSentido interview is useful as a map of topics to verify elsewhere because it covers
+        parts of the biography that shorter company profiles omit, including burnout, the BBVA transition and
+        personal interests. Claims made there—especially numerical claims about fundraising—are not automatically
+        treated as verified facts in this page unless supported by independent reporting.
+        <sup class="ref"><a href="#ref-38">[38]</a></sup>
+      </p>
+
+      <h3>Selected conference talks and technical sessions</h3>
+      <table class="research-table media-table">
+        <thead><tr><th>Year</th><th>Event</th><th>Session</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><td>2017</td><td><a href="https://carto.com/locations-event/2017/videos/">CARTO Locations</a> <sup class="ref"><a href="#ref-45">[45]</a></sup></td><td><em>Connecting the Dots</em></td><td>Location intelligence / CARTO.</td></tr>
+          <tr><td>2018</td><td><a href="https://wecodefest.com/2018/">WeCodeFest</a> <sup class="ref"><a href="#ref-15">[15]</a></sup></td><td>Speaker appearance</td><td>Software development and experience from Agroguía/CARTO.</td></tr>
+          <tr><td>2019</td><td><a href="https://t3chfest.es/2019/programa/">T3chFest</a> <sup class="ref"><a href="#ref-46">[46]</a></sup></td><td><em>Internals de una base de datos analítica de alto rendimiento: ClickHouse</em></td><td>Database internals and analytical performance.</td></tr>
+          <tr><td>2019</td><td><a href="https://clickhouse.com/blog/clickhouse-meetup-in-madrid-on-april-2-2019">ClickHouse Meetup Madrid</a> <sup class="ref"><a href="#ref-47">[47]</a></sup></td><td>Opening remarks / organiser</td><td>ClickHouse community and large-scale analytics.</td></tr>
+          <tr><td>2020/2021</td><td><a href="https://www.trgcon.com/blog/tarugo20-javi-santana/">Tarugoconf / #tarugo20</a> <sup class="ref"><a href="#ref-48">[48]</a></sup></td><td><em>20 años de desarrollo de software</em></td><td>A retrospective on two decades of software-development practices.</td></tr>
+          <tr><td>2022</td><td><a href="https://www.tinybird.co/docs/live">Tinybird Live</a> <sup class="ref"><a href="#ref-49">[49]</a></sup></td><td><em>Building a complete IoT backend with Redpanda and Tinybird</em>; <em>Analyze your logs and build a web application firewall</em></td><td>Hands-on real-time data architecture.</td></tr>
+          <tr><td>2026</td><td><a href="https://itnig.net/techfounders/">Itnig Tech Founders Retreat</a> <sup class="ref"><a href="#ref-50">[50]</a></sup></td><td><em>Cyber &amp; Data: the invisible infrastructure that every AI agent runs on</em></td><td>AI infrastructure, data and security roundtable.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout primary">
+        <strong>Archive note:</strong> Santana's older <a href="https://javisantana.com/about/">About</a> page also
+        points to historical interviews and a SoundCloud recording about his CARTO CTO experience. Some older media
+        URLs have moved or disappeared, so this page only promotes an item into the dated index above when its
+        metadata can still be independently resolved.
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <h2>Writing and public technical archive</h2>
+      <p>
+        Santana's personal site functions as both a blog and a technical archive. The public GitHub repository
+        contains a <code>_posts</code> directory whose earliest visible files are dated 4 August 2003. The current
+        site index numbers 678 entries through 2026, while the repository also includes older CVs, experiments,
+        project pages, talks, source material and a dedicated photo directory.
+        <sup class="ref"><a href="#ref-3">[3]</a></sup>
+        <sup class="ref"><a href="#ref-4">[4]</a></sup>
+        <sup class="ref"><a href="#ref-5">[5]</a></sup>
+      </p>
+      <p>
+        The archive makes it possible to follow changes in Santana's interests over more than two decades:
+        early C/C++, Python, OpenGL and game-development experiments; GPS and embedded systems; building and selling
+        Agroguía; software-team practices; geospatial and data infrastructure at CARTO; and later databases,
+        ClickHouse, real-time analytics, product strategy and LLM-assisted development.
+      </p>
+
+      <h3>Representative posts</h3>
+      <ul class="article-list">
+        <li><a href="https://javisantana.com/2005/09/28/desarrollo-de-makefight-i.html">Desarrollo de Makefight (I)</a> (2005) — game/graphics development.</li>
+        <li><a href="https://javisantana.com/2006/10/01/hagamos-negocios.html">hagamos negocios</a> (2006) — turning the university GPS project into a product.</li>
+        <li><a href="https://javisantana.com/2007/01/12/agrogua-avanza-poco-poco.html">agroguía avanza poco a poco</a> (2007) — early sales and customer feedback.</li>
+        <li><a href="https://javisantana.com/2009/07/01/agroguia-ar-gana-los-premios-3m.html">Agroguia AR gana los premios 3M</a> (2009) — augmented-reality experiment.</li>
+        <li><a href="https://javisantana.com/2015/09/12/23-millones.html">23 millones</a> (2015) — reflections on CARTO's venture round.</li>
+        <li><a href="https://javisantana.com/2017/11/13/adios-agroguia.html">Adios Agroguia</a> (2017) — twelve-year retrospective and transfer.</li>
+        <li><a href="https://javisantana.com/2019/09/22/tinybird.html">Tinybird</a> (2019) — early company/product thesis.</li>
+        <li><a href="https://javisantana.com/2019/10/06/como-elegimos-la-tecnologia-tinybird.html">Como Elegimos La Tecnologia Tinybird</a> (2019) — architectural principles.</li>
+        <li><a href="https://javisantana.com/2020/04/10/tecnologia-tinybird.html">Tecnologia Tinybird</a> (2020) — early production stack.</li>
+        <li><a href="https://javisantana.com/2020/12/18/tinybird-resumen.html">Tinybird, resumen del año</a> (2020) — team and scale retrospective.</li>
+        <li><a href="https://javisantana.com/2024/03/23/16-milisegundos.html">16 milisegundos</a> (2024) — retrospective on 3D programming and performance.</li>
+        <li><a href="https://javisantana.com/">Current index</a> (2003–2026) — complete numbered archive.</li>
+      </ul>
+
+      <div class="callout primary">
+        The archive is especially valuable as a <strong>primary-source record of changing ideas</strong>: it shows
+        what Santana said at the time, rather than only later recollections. For encyclopedic use, however, claims
+        about company performance, job titles or personal achievements still require independent corroboration.
+      </div>
+    </section>
+
+    <section class="section" id="ideas">
+      <h2>Engineering and product ideas</h2>
+      <p>
+        Across his writing, Santana repeatedly treats software engineering as a product discipline rather than a
+        separate technical function. In the 2020 Tinybird architecture essay he wrote that product and technology
+        form a single system in an early-stage company, and he argued for conservative, understandable technology
+        where possible.
+        <sup class="ref"><a href="#ref-18">[18]</a></sup>
+      </p>
+      <p>
+        His Tinybird writing also emphasizes fundamentals, small technical teams, low dependency counts,
+        performance and direct contact with customers. The 2019 technology-selection essay argues that technical
+        sophistication should follow validation of the business problem, while the original Tinybird essay presents
+        consulting as a form of intensive user research rather than as a failure to build a software product.
+        <sup class="ref"><a href="#ref-17">[17]</a></sup>
+        <sup class="ref"><a href="#ref-16">[16]</a></sup>
+      </p>
+      <p>
+        A similar pattern appears much earlier in the Agroguía archive. In 2007 Santana wrote that targeted
+        advertising, customer trust and refusing unsuitable sales mattered more than simply maximizing the number
+        of units sold. His 2017 farewell to Agroguía praised narrow scope and long-lived “working code” over
+        fashionable rewrites.
+        <sup class="ref"><a href="#ref-10">[10]</a></sup>
+        <sup class="ref"><a href="#ref-13">[13]</a></sup>
+      </p>
+    </section>
+
+    <section class="section" id="timeline">
+      <h2>Selected chronology</h2>
+      <table class="timeline">
+        <thead><tr><th>Year</th><th>Documented milestone</th><th>Source basis</th></tr></thead>
+        <tbody>
+          <tr><td>2003</td><td>Earliest posts preserved in the GitHub-backed personal archive.</td><td>Primary: GitHub repository.</td></tr>
+          <tr><td>2005</td><td>Works on MakeFight and begins the university agricultural GPS project that becomes Agroguía.</td><td>Primary blog; independent profile.</td></tr>
+          <tr><td>2006</td><td>Completes Telecommunications Engineering degree; begins trying to commercialize the GPS guidance project.</td><td>Primary CV/blog.</td></tr>
+          <tr><td>2007</td><td>Documents initial Agroguía sales, customer feedback and agriculture-industry publicity.</td><td>Primary blog.</td></tr>
+          <tr><td>2009</td><td>Writes that Agroguía AR wins a 3M industry prize; continues embedded/software work.</td><td>Primary blog/CV.</td></tr>
+          <tr><td>2012</td><td>Begins CARTO/CartoDB period according to his current career summary.</td><td>Primary summary; later independent coverage.</td></tr>
+          <tr><td>2013</td><td>CARTO describes Agroguía using CartoDB for real-time statistics and mapping.</td><td>Company source.</td></tr>
+          <tr><td>2015</td><td>Writes about the pressure associated with CartoDB's large venture round.</td><td>Primary blog; financing independently reported later.</td></tr>
+          <tr><td>2016</td><td><em>elDiario.es</em> profiles Santana as CartoDB CTO; reports about 2,000 Agroguía customers.</td><td>Independent.</td></tr>
+          <tr><td>2017</td><td>Transfers Agroguía to SmartRural, publishes a twelve-year retrospective, and appears on Xataka's <em>Insert Coin</em> discussing the developer career.</td><td>Primary blog; independent interview.</td></tr>
+          <tr><td>2018</td><td>Leaves CARTO; appears on Ni Monos Ni Lagartos and K Fund; an independent <em>El Progreso</em> interview documents his move into BBVA data services. Current site dates Tinybird from this year.</td><td>Independent interview + podcasts + primary career summary.</td></tr>
+          <tr><td>2019</td><td>Publishes Tinybird's early product thesis and architecture choices.</td><td>Primary blog.</td></tr>
+          <tr><td>2020</td><td>Describes Tinybird production architecture, eleven-person team and 12-trillion-row workload; appears in long-form Software 2.0 and Bigdatéame interviews.</td><td>Primary blog; company engineering article; podcasts.</td></tr>
+          <tr><td>2021</td><td>Tinybird raises a $3M seed round.</td><td>Independent funding coverage.</td></tr>
+          <tr><td>2022</td><td>Tinybird raises $37M Series A led by CRV and Singular Ventures; Santana joins K Fund's CTO roundtable and Tinybird Live technical sessions.</td><td>Independent funding coverage; podcast/company video archive.</td></tr>
+          <tr><td>2023</td><td>SeedRocket and La hora de Datola publish hour-long interviews covering the full Agroguía → CARTO → BBVA → Tinybird arc and his approach to data architecture.</td><td>Podcasts/interviews.</td></tr>
+          <tr><td>2024</td><td>Tinybird raises $30M Series B led by Balderton; TechCrunch reports revenue tripled in the prior year. Santana appears in Heavy Mental, Life on Mars, JuegoConSentido and Product Leaders long-form interviews.</td><td>Independent funding coverage + podcast/video interviews.</td></tr>
+          <tr><td>2025</td><td>Santana says he took a CEO role at Tinybird during the year; public appearances include Itnig, Manfred's AI/recruiting series and a Crane Venture Partners founder interview.</td><td>Primary; interview records; present-title record is inconsistent.</td></tr>
+          <tr><td>2026</td><td>CEEI Valencia publishes a substantial profile and founder conversation; Santana also joins Itnig's Tech Founders Retreat. Tinybird's author page continues to list him as co-founder; personal archive reaches at least 678 numbered entries.</td><td>Interview/event sources + company source + primary archive.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="wiki-readiness">
+      <h2>Wikipedia sourcing assessment</h2>
+      <p>
+        A standalone Wikipedia article would need to be built primarily from significant, independent coverage
+        about Santana himself—not from his own blog, Tinybird's site, speaker bios or company announcements.
+        The strongest biographical source located for this draft is the 2016 <em>elDiario.es</em> feature, which
+        covers his background, Agroguía and CartoDB in depth. The 2026 CEEI profile/interview adds recent career
+        context, while TechCrunch provides strong independent coverage of Tinybird as a company.
+        <sup class="ref"><a href="#ref-1">[1]</a></sup>
+        <sup class="ref"><a href="#ref-2">[2]</a></sup>
+        <sup class="ref"><a href="#ref-21">[21]</a></sup>
+        <sup class="ref"><a href="#ref-22">[22]</a></sup>
+      </p>
+      <p>
+        The personal archive is exceptionally useful for <em>finding leads</em>—project names, dates, talks, awards,
+        technologies, company transitions and historical claims—but most of those details should be upgraded to
+        independent sources before being placed in an actual biography of a living person.
+      </p>
+      <p>
+        The podcast/interview archive is similarly useful for chronology and for Santana's own account of decisions,
+        but an interview does not become an independent source merely because it is hosted by a third party. Xataka
+        and <em>El Progreso</em> provide editorially framed independent interviews; most podcast episodes are best
+        treated as primary testimony and used with attribution.
+        <sup class="ref"><a href="#ref-26">[26]</a></sup>
+        <sup class="ref"><a href="#ref-29">[29]</a></sup>
+      </p>
+      <table class="research-table">
+        <thead><tr><th>Claim area</th><th>Current evidence</th><th>Wikipedia treatment</th></tr></thead>
+        <tbody>
+          <tr><td>Agroguía origins and ~2,000 customers</td><td>Detailed independent <em>elDiario.es</em> feature.</td><td>Good candidate for article prose.</td></tr>
+          <tr><td>CARTO CTO role</td><td>Independent 2016 profile + public bios.</td><td>Good candidate.</td></tr>
+          <tr><td>Early pre-CARTO jobs</td><td>Mostly archived self-published CVs.</td><td>Use only if independently corroborated.</td></tr>
+          <tr><td>CARTO “$8M ARR”</td><td>Current personal site.</td><td>Do not state as fact without independent source.</td></tr>
+          <tr><td>Agroguía “$200k+/year”</td><td>Current personal site.</td><td>Do not state as fact without independent source.</td></tr>
+          <tr><td>Tinybird funding</td><td>TechCrunch and investor/company reporting.</td><td>Strong company context.</td></tr>
+          <tr><td>Tinybird CEO timing</td><td>Conflicting public records.</td><td>Avoid present-title claim until clarified.</td></tr>
+          <tr><td>Blog/archive since 2003</td><td>Public GitHub repository and live site.</td><td>Can be attributed as his own archive.</td></tr>
+          <tr><td>Birth year</td><td><em>El Progreso</em> independently identifies him as “Valladolid, 1981”; a 2026 CEEI profile gives an age consistent with that year.</td><td>1981 can be used; exact birth date remains omitted.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section references" id="references">
+      <h2>References</h2>
+      <ol>
+        <li id="ref-1"><span class="type">Independent.</span> Lucía Caballero,
+          <em>“Del campo a trabajar para la NASA: la desconocida historia de Agroguía, el ‘conejillo de indias’ de CartoDB”</em>,
+          <em>elDiario.es / HojaDeRouter</em>, 27 January 2016.
+          <a href="https://www.eldiario.es/hojaderouter/emprendedores/cartodb-agroguia-javier-santana-javier-de-la-torre-sergio-arias_1_4216854.html">Source</a>.
+        </li>
+        <li id="ref-2"><span class="type">Profile/interview.</span> CEEI Valencia,
+          Javi Santana profile and 2026 interview material.
+          <a href="https://ceeivalencia.emprenemjunts.es/?idpf=3240&amp;lang=1&amp;op=52">Profile</a>;
+          <a href="https://ceeivalencia.emprenemjunts.es/?n=36194&amp;op=8">Interview</a>.
+        </li>
+        <li id="ref-3"><span class="type">Primary.</span> Javi Santana, personal site / career summary and complete post index.
+          <a href="https://javisantana.com/">javisantana.com</a>.
+        </li>
+        <li id="ref-4"><span class="type">Primary archive.</span> GitHub,
+          <a href="https://github.com/javisantana/javisantana.com">javisantana/javisantana.com</a>, public repository.
+        </li>
+        <li id="ref-5"><span class="type">Primary archive.</span> GitHub <code>_posts</code> directory, showing entries beginning in August 2003.
+          <a href="https://github.com/javisantana/javisantana.com/tree/gh-pages/_posts">Source</a>.
+        </li>
+        <li id="ref-6"><span class="type">Primary.</span> Javier Santana, archived CV.
+          <a href="https://javisantana.com/doc/cv.html">Source</a>.
+        </li>
+        <li id="ref-7"><span class="type">Primary.</span> Javi Santana,
+          <em>“Desarrollo de Makefight (I)”</em>, 28 September 2005.
+          <a href="https://javisantana.com/2005/09/28/desarrollo-de-makefight-i.html">Source</a>.
+        </li>
+        <li id="ref-8"><span class="type">Primary.</span> Javi Santana,
+          <em>“16 milisegundos”</em>, 23 March 2024.
+          <a href="https://javisantana.com/2024/03/23/16-milisegundos.html">Source</a>.
+        </li>
+        <li id="ref-9"><span class="type">Primary.</span> Javi Santana, older résumé page.
+          <a href="https://javisantana.com/base.html">Source</a>.
+        </li>
+        <li id="ref-10"><span class="type">Primary.</span> Javi Santana,
+          <em>“agroguía avanza poco a poco”</em>, 12 January 2007.
+          <a href="https://javisantana.com/2007/01/12/agrogua-avanza-poco-poco.html">Source</a>.
+        </li>
+        <li id="ref-11"><span class="type">Company source.</span> CARTO,
+          <em>“Precision Rice Planting at 70 miles/hr with the help of CartoDB”</em>.
+          <a href="https://carto.com/blog/precision-rice-planting-at-70-miles-hr-with-the-help-of/">Source</a>.
+        </li>
+        <li id="ref-12"><span class="type">Primary.</span> Javi Santana,
+          <em>“Agroguia AR gana los premios 3M”</em>, 1 July 2009.
+          <a href="https://javisantana.com/2009/07/01/agroguia-ar-gana-los-premios-3m.html">Source</a>.
+        </li>
+        <li id="ref-13"><span class="type">Primary.</span> Javi Santana,
+          <em>“Adios Agroguia”</em>, 13 November 2017.
+          <a href="https://javisantana.com/2017/11/13/adios-agroguia.html">Source</a>.
+        </li>
+        <li id="ref-14"><span class="type">Primary.</span> Javi Santana,
+          <em>“23 millones”</em>, 12 September 2015.
+          <a href="https://javisantana.com/2015/09/12/23-millones.html">Source</a>.
+        </li>
+        <li id="ref-15"><span class="type">Event biography.</span> WeCodeFest 2018, Javi Santana speaker bio.
+          <a href="https://wecodefest.com/2018/">Source</a>.
+        </li>
+        <li id="ref-16"><span class="type">Primary.</span> Javi Santana,
+          <em>“Tinybird”</em>, 22 September 2019.
+          <a href="https://javisantana.com/2019/09/22/tinybird.html">Source</a>.
+        </li>
+        <li id="ref-17"><span class="type">Primary.</span> Javi Santana,
+          <em>“Como Elegimos La Tecnologia Tinybird”</em>, 6 October 2019.
+          <a href="https://javisantana.com/2019/10/06/como-elegimos-la-tecnologia-tinybird.html">Source</a>.
+        </li>
+        <li id="ref-18"><span class="type">Primary.</span> Javi Santana,
+          <em>“Tecnologia Tinybird”</em>, 10 April 2020.
+          <a href="https://javisantana.com/2020/04/10/tecnologia-tinybird.html">Source</a>.
+        </li>
+        <li id="ref-19"><span class="type">Primary.</span> Javi Santana,
+          <em>“Tinybird, resumen del año”</em>, 18 December 2020.
+          <a href="https://javisantana.com/2020/12/18/tinybird-resumen.html">Source</a>.
+        </li>
+        <li id="ref-20"><span class="type">Company engineering source.</span> Javi Santana,
+          <em>“How we processed 12 trillion rows during Black Friday”</em>, Tinybird.
+          <a href="https://www.tinybird.co/blog/how-we-setup-real-time-analytics-service-to-process-12-trillion-rows-during-black-friday">Source</a>.
+        </li>
+        <li id="ref-21"><span class="type">Independent.</span> Romain Dillet,
+          <em>“Tinybird adds $37 million to run realtime analytics APIs for you”</em>, TechCrunch, 5 April 2022.
+          <a href="https://techcrunch.com/2022/04/05/tinybird-adds-37-million-to-run-realtime-analytics-apis-for-you/">Source</a>.
+        </li>
+        <li id="ref-22"><span class="type">Independent.</span> Romain Dillet,
+          <em>“Tinybird raises another $30 million to transform data into real-time APIs”</em>, TechCrunch, 17 June 2024.
+          <a href="https://techcrunch.com/2024/06/17/tinybird-raises-another-30-million-to-transform-data-into-real-time-apis/">Source</a>.
+        </li>
+        <li id="ref-23"><span class="type">Company source.</span> Tinybird,
+          <em>Posts by Javi Santana</em>.
+          <a href="https://www.tinybird.co/blog/authors/javisantana">Source</a>.
+        </li>
+        <li id="ref-24"><span class="type">Primary.</span> Javi Santana,
+          <em>“Recortes 2025”</em>, December 2025, stating that he moved into the CEO role during that year.
+          <a href="https://javisantana.substack.com/p/recortes-2025">Source</a>.
+        </li>
+        <li id="ref-25"><span class="type">Primary / media kit.</span> Javi Santana,
+          public biography and photo page.
+          <a href="https://javisantana.com/fotos_del_jeto/">Source</a>.
+        </li>
+
+        <li id="ref-26"><span class="type">Independent interview.</span> Yúbal Fernández,
+          <em>“CTO de Carto DB: 'así veo la carrera del programador hoy día' (Insert Coin 1x04)”</em>, Xataka,
+          14 October 2017. The page notes that the edited video accompanied a full podcast version.
+          <a href="https://www.xataka.com/empresas-y-economia/cto-de-carto-db-asi-veo-la-carrera-del-programador-hoy-dia-insert-coin-1x04">Source</a>.
+        </li>
+        <li id="ref-27"><span class="type">Interview/podcast.</span> <em>Ni Monos Ni Lagartos</em>,
+          <em>“Javier Santana en Ni Monos Ni Lagartos”</em>, 15 February 2018, 25:08.
+          <a href="https://www.ivoox.com/javier-santana-ni-monos-ni-lagartos-audios-mp3_rf_23801611_1.html">Source</a>.
+        </li>
+        <li id="ref-28"><span class="type">Podcast.</span> K Fund PodKast, episode 26,
+          <em>“Javi Santana (ex-CTO de Carto): hay vida más allá de los mapas”</em>, 1 March 2018.
+          <a href="https://podnews.net/podcast/i6eyk/episodes">Episode archive</a>.
+        </li>
+        <li id="ref-29"><span class="type">Independent interview.</span> X.A.R. (AGN),
+          <em>“Javier Santana: ‘El sector agrícola es un campo perfecto para hacer tecnología’”</em>,
+          <em>El Progreso</em>, 7 July 2018. Identifies Santana as “Valladolid, 1981” and describes his BBVA role.
+          <a href="https://www.elprogreso.es/articulo/economia/javier-santana-sector-agricola-es-campo-perfecto-hacer-tecnologia/201807070200001322111.html">Source</a>.
+        </li>
+        <li id="ref-30"><span class="type">Podcast.</span> Andrés Torrubia, <em>Software 2.0</em>,
+          <em>“Desarrollo de Software — Javi Santana”</em>, 21 October 2020, 1:50:08.
+          <a href="https://www.ivoox.com/desarrollo-software-javi-santana-audios-mp3_rf_58278177_1.html">Source</a>.
+        </li>
+        <li id="ref-31"><span class="type">Podcast.</span> <em>Bigdatéame</em>, BD57,
+          <em>“Elena Torró y Javi Santana, de Tinybird”</em>, 21 October 2020, approximately 57 minutes.
+          <a href="https://www.ubook.com/podcast/498864/bigdateame">Episode archive</a>.
+        </li>
+        <li id="ref-32"><span class="type">Podcast.</span> <em>Más Que Startups</em> #77,
+          <em>“Decisiones de tecnología con Juanjo Traver y Javi Santana”</em>, 18 February 2021.
+          <a href="https://podcasts.apple.com/us/podcast/m%C3%A1s-que-startups/id1301582923">Podcast archive</a>.
+        </li>
+        <li id="ref-33"><span class="type">Podcast.</span> Jaime Novoa, K Fund PodKast #154,
+          <em>“Especial CTOs: gestión y crecimiento personal, mercado laboral y mejores prácticas”</em>,
+          28 January 2022.
+          <a href="https://www.kfund.vc/post/podkast-154-especial-ctos-gestion-y-crecimiento-personal-mercado-laboral-y-mejores-practicas">Source</a>.
+        </li>
+        <li id="ref-34"><span class="type">Podcast/interview.</span> SeedRocket,
+          <em>“Tinybird: Crear data products a gran escala con Javi Santana”</em>, 21 March 2023, 1:01:11.
+          <a href="https://open.spotify.com/episode/6p899HOkYaTlcaCpUOYPRs">Spotify</a>;
+          <a href="https://www.ivoox.com/en/tinybird-crear-data-products-a-gran-escala-con-audios-mp3_rf_104908398_1.html">iVoox</a>.
+        </li>
+        <li id="ref-35"><span class="type">Podcast.</span> <em>La hora de Datola</em> #14,
+          <em>“Arquitectura, tecnología y datos”</em>, 4 May 2023, 1 hour 8 minutes.
+          <a href="https://podcasts.apple.com/us/podcast/14-arquitectura-tecnolog%C3%ADa-y-datos/id1613788351?i=1000611741088">Source</a>.
+        </li>
+        <li id="ref-36"><span class="type">Podcast.</span> <em>Heavy Mental</em> #076,
+          <em>“El poder de los datos”</em>, 16 January 2024, 1:19:17.
+          <a href="https://www.ivoox.com/076-el-poder-datos-129412-audios-mp3_rf_122636978_1.html">Source</a>.
+        </li>
+        <li id="ref-37"><span class="type">Podcast.</span> MarsBased, <em>Life on Mars</em> #078,
+          <em>“Tecnología y escalado a alta velocidad, con Javi Santana”</em>, recorded/published January 2024.
+          <a href="https://podcast.marsbased.com/podcasts-es/tecnologia-escalado-tinybird-javi-santana">Episode page</a>.
+        </li>
+        <li id="ref-38"><span class="type">Podcast/interview.</span> <em>JuegoConSentido</em> #034,
+          <em>“Datos, velocidad y emprendimiento”</em>, 12 October 2024, 2:00:13.
+          <a href="https://juegoconsentido.com/episodios/">Episode index</a>;
+          <a href="https://www.ivoox.com/034-como-vivir-siendo-tan-extremadamente-guapo-con-audios-mp3_rf_134774588_1.html">iVoox</a>.
+        </li>
+        <li id="ref-39"><span class="type">Live podcast.</span> <em>JuegoConSentido</em> #042,
+          <em>“Especial TRG24 en directo”</em>, 22 November 2024, 1:22:13.
+          <a href="https://juegoconsentido.com/episodios/especial-trg24-en-directo-con-heavy-mental-javi-santana-y-roberto-canales/">Source</a>.
+        </li>
+        <li id="ref-40"><span class="type">Podcast/interview.</span> Dani Diestre Tomas,
+          <em>Entrevistas a Product Leaders</em>, <em>“Eliminamos al equipo de Producto para ser todos Producto”</em>,
+          18 December 2024, 1:08:15.
+          <a href="https://www.ivoox.com/eliminamos-al-equipo-producto-para-ser-todos-audios-mp3_rf_137028780_1.html">Source</a>.
+        </li>
+        <li id="ref-41"><span class="type">Live conversation / primary record.</span> Javi Santana,
+          post about his Itnig Startup Ecosystem tertulia during MWC/4YFN week, March 2025.
+          <a href="https://es.linkedin.com/posts/javisantana_ayer-fui-a-la-tertulia-de-itnig-startup-activity-7303699447568326657-azHj">Santana's account</a>.
+        </li>
+        <li id="ref-42"><span class="type">Podcast/video interview.</span> Manfred,
+          <em>“Cómo afecta la IA en desarrollo y en selección, con Javi Santana”</em>, 27 March 2025.
+          <a href="https://www.youtube.com/watch?v=SzM0uK3dVKw">YouTube</a>.
+        </li>
+        <li id="ref-43"><span class="type">Investor interview / primary company perspective.</span> Crane Venture Partners,
+          <em>“Founder Stories: Value Creation at Tinybird”</em>, interview with Javi Santana.
+          <a href="https://crane.vc/founder-stories-value-creation-at-tinybird/">Source</a>.
+        </li>
+        <li id="ref-44"><span class="type">Recorded/live founder conversation.</span> CEEI Valencia,
+          <em>“Construir sin humo: de la tracción al exit, pasando por el producto”</em>, with Iñaki Arriaga and
+          Javi Santana, 5 May 2026.
+          <a href="https://ceeivalencia.emprenemjunts.es/?lang=1&amp;n=26313&amp;op=14">Source</a>.
+        </li>
+        <li id="ref-45"><span class="type">Conference video archive.</span> CARTO Locations 2017,
+          <em>“Connecting the Dots”</em>, Javier Santana.
+          <a href="https://carto.com/locations-event/2017/videos/">Source</a>.
+        </li>
+        <li id="ref-46"><span class="type">Conference programme.</span> T3chFest 2019,
+          <em>“Internals de una base de datos analítica de alto rendimiento: ClickHouse”</em>, Javi Santana.
+          <a href="https://t3chfest.es/2019/programa/">Source</a>.
+        </li>
+        <li id="ref-47"><span class="type">Community/event report.</span> ClickHouse,
+          <em>“ClickHouse Meetup in Madrid”</em>, identifying Santana as the organiser who opened the event.
+          <a href="https://clickhouse.com/blog/clickhouse-meetup-in-madrid-on-april-2-2019">Source</a>.
+        </li>
+        <li id="ref-48"><span class="type">Conference archive.</span> TRG / Tarugoconf,
+          <em>“20 años de desarrollo de software”</em>, Javi Santana.
+          <a href="https://www.trgcon.com/blog/tarugo20-javi-santana/">Source</a>.
+        </li>
+        <li id="ref-49"><span class="type">Company technical-video archive.</span> Tinybird Live, 2022 sessions,
+          including <em>“Building a complete IoT backend with Redpanda and Tinybird”</em> and a web-application-firewall session.
+          <a href="https://www.tinybird.co/docs/live">Source</a>.
+        </li>
+        <li id="ref-50"><span class="type">Event programme.</span> Itnig Tech Founders Retreat 2026,
+          listing Javi Santana in the roundtable <em>“Cyber &amp; Data: the invisible infrastructure that every AI agent runs on”</em>.
+          <a href="https://itnig.net/techfounders/">Source</a>.
+        </li>
+
+      </ol>
+    </section>
+
+    <footer class="footer-cats" data-analytics-section="footer">
+      <strong>Draft categories:</strong>
+      <a href="#">Spanish technology entrepreneurs</a>
+      <a href="#">Spanish software engineers</a>
+      <a href="#">University of Valladolid alumni</a>
+      <a href="#">Database people</a>
+      <a href="#">Living people</a>
+    </footer>
+    <p class="small">
+      Last researched: September 2026. This file is a research-backed mock-up and does not imply that the subject
+      currently has, or meets the criteria for, a Wikipedia article.
+    </p>
+  </div>
+</main>
+  <script src="/assets/js/tracking.js?v=20260827"></script>
+</body>
+</html>
