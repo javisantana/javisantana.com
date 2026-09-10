@@ -3,6 +3,13 @@ layout: data
 published: true
 name: Learnings after 4 years as a
 title: Learnings after 4 years working with +50 companies on data engineering projects
+related:
+  - url: /fastdata/40-things-I-learned-about-data.html
+    title: 40 things I learned about data
+  - url: /2019/06/13/data-lake.html
+    title: Data Lake parte I, Introducción
+  - url: /2025/01/16/i-love-sql.html
+    title: I love SQL
 ---
 
 
