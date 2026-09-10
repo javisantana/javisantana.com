@@ -5,6 +5,7 @@ layout: post
 source_url: "https://javisantana.substack.com/p/programador"
 substack: "javisantana"
 substack_id: 184889954
+related: como-uso-los-llm, movies, learnings
 ---
 
 Cuando vas al notario, además de sentirte ajeno a todo aquel ritual, te preguntan tu nombre, DNI, estado civil y, por razones que ChatGPT me ha aclarado, tu profesión. Siempre es un momento complicado y responder “programador” me cuesta. Y lo tengo que reconocer, es así porque creo que van a pensar que soy “un cualquiera”. Hay que ser gilipollas, aunque no voy mal encaminado, hay un tufillo clasista en ese tema (dejando a un lado la parte práctica y legal)
