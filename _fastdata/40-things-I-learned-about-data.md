@@ -4,6 +4,7 @@ published: true
 name: 40 things I learned about data
 tags: en, API, data
 date: 2022-11-01
+related: learnings, data-lake I, i-love-sql
 ---
 
 Today there are 40 days left until my 40th birthday. I’ve been working with data for 20+ years now and I feel like trying to summarize what I’ve learned in a few points.

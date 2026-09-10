@@ -9,6 +9,21 @@ layout: minimal
 
   {{ content }}
 
+  <nav class="continue" aria-label="Continue reading">
+    <p>Continue reading</p>
+    <ul>
+      {% if page.related %}
+        {% for rel in page.related %}
+          <li><a href="{{ rel.url }}">{{ rel.title }}</a>{% if rel.dek %} — {{ rel.dek }}{% endif %}</li>
+        {% endfor %}
+      {% else %}
+        <li><a href="/2024/11/30/learnings-after-4-years-data-eng.html">Learnings after 4 years of data eng</a></li>
+        <li><a href="/2025/03/30/como-uso-los-llm.html">Como uso los LLM</a></li>
+        <li><a href="/2026/01/30/programador.html">Programador</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+
   <footer class="post-footer">
     <a href="/">← all posts</a><span class="sep">·</span><a href="https://javisantana.substack.com">subscribe</a><span class="sep">·</span><a href="https://x.com/javisantana">x</a><span class="sep">·</span><a href="https://www.linkedin.com/in/javisantana">linkedin</a>
   </footer>

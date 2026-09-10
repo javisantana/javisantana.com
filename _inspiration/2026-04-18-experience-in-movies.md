@@ -4,6 +4,7 @@ title: Robert Rodriguez on experience in movies
 date: 2026-04-18
 layout: data
 published: true
+related: programador, learn-to-cook, miyamoto-on-team-energy
 ---
 
 > The most important and useful thing you need to be a filmmaker is "experience in movies," as opposed to "movie experience." There's a difference. They always tell you in film school and in Hollywood that in order to be a filmmaker you need to get "movie experience" so you can work your way up in the business. The reasoning being that by working on other films, even as a production assistant, you get to see firsthand how others make movies. Now, that's exactly the kind of experience you don't need. You don't want to learn how other people make movies especially real Hollywood movies, because nine times out of ten their methods are wasteful and inefficient. You don't need to learn that!
