@@ -11,7 +11,16 @@ lang: en
   <li><a href="https://tinybird.com"><i>Tinybird</i></a> (2018–) — real-time data infrastructure. Co-founder. Built the product, managed the FDE team, then ran it as CEO.</li>
   <li><a href="https://carto.com"><i>CARTO</i></a> (2012–2018) — founding engineer to CTO. Geospatial data infrastructure. Zero to $8M ARR.</li>
   <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
-</ul> 
+</ul>
+
+  <section class="start-here">
+    <h2>Start here</h2>
+    <ul>
+      <li><a href="/2024/11/30/learnings-after-4-years-data-eng.html">Learnings after four years working with +50 companies on data engineering</a> — practical lessons from real-time data projects</li>
+      <li><a href="/fastdata/40-things-I-learned-about-data.html">40 things I learned about data</a> — dense checklist for data engineers</li>
+      <li><a href="/2025/01/16/i-love-sql.html">I love SQL</a> — why SQL still wins</li>
+    </ul>
+  </section>
 
   <p style="margin-top:3em">Here is what I wrote (all written by hand, no LLM traces)</p>
 
