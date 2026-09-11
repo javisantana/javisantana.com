@@ -7,7 +7,16 @@ substack: "javisantana"
 substack_id: 160174776
 description: "Edición Marzo 2025"
 cover_image: "/blog_images/imported/77d5a04f-2672e6ab-9bbf-44fc-b453-b647c2e77c1f_3454x1748.png"
-related: programador, i-love-sql, learnings
+related:
+  - url: /2026/01/30/programador.html
+    title: Programador
+    year: 2026
+  - url: /2025/01/16/i-love-sql.html
+    title: I love SQL
+    year: 2025
+  - url: /2024/11/30/learnings-after-4-years-data-eng.html
+    title: Learnings after 4 years of data eng
+    year: 2024
 ---
 
 Lo que pueden hacer los LLMs es básicamente un sueño hecho realidad para mí. Soy un "builder", me gusta construir y me parece magia todo lo que está pasando, es como revivir la época cuando aprendí a programar. Peeero como siempre que llega algo nuevo, está lo que idealizamos y luego la vida real, cuando la tecnología toca suelo, hay que hacerla funcionar y adaptarla al caso real. Aquí voy a ir al caso práctico, para hablarte de cómo la IA va a cambiar el futuro futuro, puedes ir a LinkedIn y leer a todos los chamanes, que no dejan de ser los mismos middle managers que no saben ni por dónde les viene, que han encontrado la nueva vía de hacerse notar.
