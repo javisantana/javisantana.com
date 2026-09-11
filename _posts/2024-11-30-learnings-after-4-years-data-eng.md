@@ -6,10 +6,13 @@ title: Learnings after 4 years working with +50 companies on data engineering pr
 related:
   - url: /fastdata/40-things-I-learned-about-data.html
     title: 40 things I learned about data
+    year: 2022
   - url: /2019/06/13/data-lake.html
     title: Data Lake parte I, Introducción
+    year: 2019
   - url: /2025/01/16/i-love-sql.html
     title: I love SQL
+    year: 2025
 ---
 
 
