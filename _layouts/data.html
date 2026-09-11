@@ -9,6 +9,35 @@ layout: minimal
 
   {{ content }}
 
+  <p style="margin-top:2.5em">Continue reading</p>
+  <nav class="post-list">
+    {% if page.related %}
+      {% for rel in page.related %}
+      <div class="row">
+        <span class="n">{{ forloop.index }}.</span>
+        <a class="t" href="{{ rel.url }}"><i>{{ rel.title }}</i></a>
+        <span class="y">{% if rel.year %}{{ rel.year }}{% endif %}</span>
+      </div>
+      {% endfor %}
+    {% else %}
+      <div class="row">
+        <span class="n">1.</span>
+        <a class="t" href="/2024/11/30/learnings-after-4-years-data-eng.html"><i>Learnings after 4 years of data eng</i></a>
+        <span class="y">2024</span>
+      </div>
+      <div class="row">
+        <span class="n">2.</span>
+        <a class="t" href="/2025/03/30/como-uso-los-llm.html"><i>Como uso los LLM</i></a>
+        <span class="y">2025</span>
+      </div>
+      <div class="row">
+        <span class="n">3.</span>
+        <a class="t" href="/2026/01/30/programador.html"><i>Programador</i></a>
+        <span class="y">2026</span>
+      </div>
+    {% endif %}
+  </nav>
+
   <footer class="post-footer">
     <a href="/">← all posts</a><span class="sep">·</span><a href="https://javisantana.substack.com">subscribe</a><span class="sep">·</span><a href="https://x.com/javisantana">x</a><span class="sep">·</span><a href="https://www.linkedin.com/in/javisantana">linkedin</a>
   </footer>
