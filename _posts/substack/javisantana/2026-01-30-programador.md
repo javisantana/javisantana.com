@@ -5,7 +5,16 @@ layout: post
 source_url: "https://javisantana.substack.com/p/programador"
 substack: "javisantana"
 substack_id: 184889954
-related: como-uso-los-llm, movies, learnings
+related:
+  - url: /2025/03/30/como-uso-los-llm.html
+    title: Como uso los LLM
+    year: 2025
+  - url: /inspiration/2026-04-18-experience-in-movies.html
+    title: Robert Rodriguez on experience in movies
+    year: 2026
+  - url: /2024/11/30/learnings-after-4-years-data-eng.html
+    title: Learnings after 4 years of data eng
+    year: 2024
 ---
 
 Cuando vas al notario, además de sentirte ajeno a todo aquel ritual, te preguntan tu nombre, DNI, estado civil y, por razones que ChatGPT me ha aclarado, tu profesión. Siempre es un momento complicado y responder “programador” me cuesta. Y lo tengo que reconocer, es así porque creo que van a pensar que soy “un cualquiera”. Hay que ser gilipollas, aunque no voy mal encaminado, hay un tufillo clasista en ese tema (dejando a un lado la parte práctica y legal)
