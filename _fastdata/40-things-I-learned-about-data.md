@@ -4,7 +4,16 @@ published: true
 name: 40 things I learned about data
 tags: en, API, data
 date: 2022-11-01
-related: learnings, data-lake I, i-love-sql
+related:
+  - url: /2024/11/30/learnings-after-4-years-data-eng.html
+    title: Learnings after 4 years of data eng
+    year: 2024
+  - url: /2019/06/13/data-lake.html
+    title: Data Lake parte I, Introducción
+    year: 2019
+  - url: /2025/01/16/i-love-sql.html
+    title: I love SQL
+    year: 2025
 ---
 
 Today there are 40 days left until my 40th birthday. I’ve been working with data for 20+ years now and I feel like trying to summarize what I’ve learned in a few points.
