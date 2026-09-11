@@ -13,14 +13,24 @@ lang: en
   <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
 </ul>
 
-  <section class="start-here">
-    <h2>Start here</h2>
-    <ul>
-      <li><a href="/2024/11/30/learnings-after-4-years-data-eng.html">Learnings after four years working with +50 companies on data engineering</a> — practical lessons from real-time data projects</li>
-      <li><a href="/fastdata/40-things-I-learned-about-data.html">40 things I learned about data</a> — dense checklist for data engineers</li>
-      <li><a href="/2025/01/16/i-love-sql.html">I love SQL</a> — why SQL still wins</li>
-    </ul>
-  </section>
+  <p style="margin-top:3em">Three good places to start reading:</p>
+  <nav class="post-list">
+    <div class="row">
+      <span class="n">1.</span>
+      <a class="t" href="/2024/11/30/learnings-after-4-years-data-eng.html"><i>Learnings after four years working with +50 companies on data engineering</i></a>
+      <span class="y">2024</span>
+    </div>
+    <div class="row">
+      <span class="n">2.</span>
+      <a class="t" href="/fastdata/40-things-I-learned-about-data.html"><i>40 things I learned about data</i></a>
+      <span class="y">2022</span>
+    </div>
+    <div class="row">
+      <span class="n">3.</span>
+      <a class="t" href="/2025/01/16/i-love-sql.html"><i>I love SQL</i></a>
+      <span class="y">2025</span>
+    </div>
+  </nav>
 
   <p style="margin-top:3em">Here is what I wrote (all written by hand, no LLM traces)</p>
 
