@@ -59,7 +59,7 @@ permalink: /landing.html
     <div class="row">
       <span class="n">1.</span>
       <a class="t" href="https://www.tinybird.co/blog/what-i-learned-operating-clickhouse" data-analytics="tinybird-operating-clickhouse"><i>I've operated petabyte-scale ClickHouse® clusters for 5 years</i></a>
-      <span class="y">↗</span>
+      <span class="y"><a href="https://news.ycombinator.com/item?id=49601138" data-analytics="tinybird-operating-clickhouse-hn"><i>HN front page</i></a></span>
     </div>
     <div class="row">
       <span class="n">2.</span>
