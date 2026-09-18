@@ -143,15 +143,13 @@ En Tinybird casi nadie de los que contratamos con este perfil tenían experienci
 
 No creo que diste mucho de lo que buscas en un ingeniero de producto/backend/loquesea pero yo pongo MUCHO \-muchísimo- foco en la forma de descubrir lo desconocido.
 
-El proceso es el siguiente: propongo un ejercicio técnico MUY abierto pero sencillísimo (por [aquí](https://javisantana.substack.com/p/puede-chatgpt-trabajar-en-tinybird)(\*) tienes un ejemplo). Una vez veo la aproximación en las preguntas posteriores juego a cambiar las reglas todo el rato para ver cual es la forma de plantear los problemas.
+El proceso es el siguiente: propongo un ejercicio técnico MUY abierto pero sencillísimo (por [aquí](https://javisantana.substack.com/p/puede-chatgpt-trabajar-en-tinybird)[^1] tienes un ejemplo). Una vez veo la aproximación en las preguntas posteriores juego a cambiar las reglas todo el rato para ver cual es la forma de plantear los problemas.
 
 En general el criterio de selección es sencillo: si se pone a resolver sin preguntar, mala señal, si pregunta, plantea hipótesis, busca entender, aclarar y acotar el problema, ese es tu perfil. Bonus points si además es técnicamente solvente, claro.
 
 Un detalle importante sobre el hiring, nunca termina y tampoco es algo que hagas de vez en cuando. Tienes que estar hablando de lo que haces, tienes que ser atractivo para la gente para que cuando lances la oferta ya tengas gente buena, interesada. Esto es tan fácil como publicar periódicamente cosas útiles, cosa que casi nadie hace porque le dejan esta tarea a gente de marketing que no tiene ni zorra idea de lo que escriben (por lo general).
 
 Por último, el hiring es un tetris: tienes que buscar la pieza correcta en cada momento, a veces el palo largo viene bien, otras veces no. El balance es la clave.
-
-(\*) Si lees el post, verás que prohibí usar chatGPT. Más tarde lo haría obligatorio.
 
 ## Onboarding
 
@@ -164,7 +162,7 @@ En Tinybird uso técnicas milenarias, a nadie se le habrían ocurrido:
 
 - Tengo grabado un curso con los básicos que \*tienen\* que ver. Son fundamentos, nada que ver con la empresa, ni el producto ni cristo que lo fundó. Cosas muy muy básicas e iterar sobre ellas, mil veces. De hecho, este contenido lo publicamos y sirve como herramienta de marketing y para el hiring continuo que comentaba antes.
 
-- Una serie de ejercicios reales donde iteramos sobre los fundamentos, ya con el producto. Obviamente hay una persona que se encarga de seguir, preguntar, explicar los errores y poner ejercicios para hacer hincapié en las cosas que no se entendieron. También solía poner problemas complicados de resolver para que no se vengan arriba (\*).  
+- Una serie de ejercicios reales donde iteramos sobre los fundamentos, ya con el producto. Obviamente hay una persona que se encarga de seguir, preguntar, explicar los errores y poner ejercicios para hacer hincapié en las cosas que no se entendieron. También solía poner problemas complicados de resolver para que no se vengan arriba[^2].  
 - Poco a poco ir entrando en algún cliente, siempre de la mano de otro FDE. Normalmente suelen ser clientes más pequeños, donde sea más fácil entender el contexto y perder el miedo a preguntar o liarla.  
 - Al mismo tiempo esa gente tiene que escribir lo que aprende, a diario, así generan un hábito de escritura que servirá para documentar y que los demás aprendan (incluídos los LLM, claro). Despreciamos el valor de saber explicar las cosas por escrito y lo bueno que es documentar lo que uno hace. Mucho del conocimiento adquirido del equipo, lo que le ha hecho mejor, son los posts internos explicando cómo han resuelto cosas al cliente.  
 - Por último, el último truco es “[echar a los leones](https://javisantana.com/2021/01/23/echar-a-los-leones.html)” que viene a ser soltarles en algún marrón para que se busquen la vida. Mano de santo.
@@ -174,13 +172,6 @@ En Tinybird uso técnicas milenarias, a nadie se le habrían ocurrido:
 A nadie le gusta hablar de despedir porque culturalmente es algo que duele. Es normal, si tu país es un sitio donde la mayoría de trabajos son poco cualificados y el objetivo vital es tener trabajo fijo (siendo el funcionariado el monstruo final), es normal que sea así. Por suerte en nuestro sector si te echan de un sitio, al día siguiente estás haciendo 4 entrevistas. Sigue doliendo, pero es drama, no hay sangre.
 
 Aclarado lo anterior, puedes despedir por que no esté a la altura, no encaje bien en el equipo o lo que sea, pero lo que NUNCA puedes permitir es que un cliente no esté bien atendido o haya “excusas”. Es un negocio de confianza, es el básico que no puedes perder. Del mismo modo, si eres FDE y tu jefe te pide que mientas, vete haciendo backup del correo electrónico y abriendo linkedin.
-
-\---
-
-(\*) Como manager hay dos cosas importantes que suelo hacer:
-
-1) Cuando mi hija me viene con los ejercicios de sumas de números de 3 cifras para que se los corrija, muchas veces le digo “hay una suma que está mal” sin haber mirado ni una sola cuenta. Esto dispara dos cosas, una de ellas es que aprende a asegurarse que el trabajo está bien hecho y la segunda, a pensar que no siempre “el jefe” tiene la razón, que a veces se equivoca, pero tienes que saber confrontarlo. El “pensamiento crítico” va a ser el conocimiento estrella de las siguientes décadas (con la IA de sabelotodo). Con los empleados funciona igual, piensan que no tienes razón pero no te lo suelen decir.   
-2) A la gente hay que ponerle siempre objetivos un poco más allá de lo esperado (por ti y por ellos). Si alguien tiene capacidad pero no lo pruebas, nunca lo sabrás. Además, durante el proceso de onboarding, pone las expectativas más altas, pero siendo aún un juego.
 
 # El trabajo, no técnico, con el cliente
 
@@ -256,4 +247,9 @@ Apúntate a este curso por solo… que noooo.
 
 Si has llegado hasta aquí, tienes una empresa de producto B2B, quieres montar un equipo o tienes uno pero tienes dudas, encantado de ayudar, escríbeme y hablamos. Gratis, yo no me dedico a esto, lo hago como forma de poner [mi granito de arena en el ecosistema](https://javisantana.com/2025/02/25/espana-y-startups.html).
 
- 
+[^1]: Si lees el post, verás que prohibí usar chatGPT. Más tarde lo haría obligatorio.
+
+[^2]: Como manager hay dos cosas importantes que suelo hacer:
+
+    1. Cuando mi hija me viene con los ejercicios de sumas de números de 3 cifras para que se los corrija, muchas veces le digo “hay una suma que está mal” sin haber mirado ni una sola cuenta. Esto dispara dos cosas, una de ellas es que aprende a asegurarse que el trabajo está bien hecho y la segunda, a pensar que no siempre “el jefe” tiene la razón, que a veces se equivoca, pero tienes que saber confrontarlo. El “pensamiento crítico” va a ser el conocimiento estrella de las siguientes décadas (con la IA de sabelotodo). Con los empleados funciona igual, piensan que no tienes razón pero no te lo suelen decir.
+    2. A la gente hay que ponerle siempre objetivos un poco más allá de lo esperado (por ti y por ellos). Si alguien tiene capacidad pero no lo pruebas, nunca lo sabrás. Además, durante el proceso de onboarding, pone las expectativas más altas, pero siendo aún un juego.

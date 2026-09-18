@@ -33,6 +33,12 @@
   padding-top: 0;
 }
 
+.fde-content .footnotes {
+  border-top: 1px solid var(--rule);
+  margin-top: 4em;
+  padding-top: 1.5em;
+}
+
 .fde-ask-trigger {
   background: #111;
   border: 0;
