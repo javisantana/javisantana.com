@@ -35,27 +35,32 @@ lang: en
   <p style="margin-top:3em">Here is what I wrote (all written by hand, no LLM traces)</p>
 
   <nav class="post-list">
-    {% assign quotes = site.inspiration | where_exp: "q", "q.name != 'index.md'" %}
-    {% assign feed = site.posts | concat: quotes | sort: "date" | reverse %}
+    {% assign feed = site.posts | sort: "date" | reverse %}
     {% assign total = feed | size %}
     {% for item in feed %}
+      {% unless item.title == "Index" or item.title == "" or item.title == nil %}
       {% assign num = total | minus: forloop.index | plus: 1 %}
-      {% if item.collection == "inspiration" %}
-        {% assign label = item.title | default: item.content | strip_html | strip_newlines | truncatewords: 12 %}
-        <div class="row q">
-          <span class="n">{{ num }}.</span>
-          <a class="t" href="{{ item.url }}"><span class="qm">“</span><i>{{ label }}</i></a>
-          <span class="y">{{ item.date | date: "%Y" }}</span>
-        </div>
-      {% else %}
-        {% unless item.title == "Index" or item.title == "" or item.title == nil %}
-        <div class="row">
-          <span class="n">{{ num }}.</span>
-          <a class="t" href="{{ item.url }}"><i>{{ item.title }}</i></a>
-          <span class="y">{{ item.date | date: "%Y" }}</span>
-        </div>
-        {% endunless %}
-      {% endif %}
+      <div class="row">
+        <span class="n">{{ num }}.</span>
+        <a class="t" href="{{ item.url }}"><i>{{ item.title }}</i></a>
+        <span class="y">{{ item.date | date: "%Y" }}</span>
+      </div>
+      {% endunless %}
+    {% endfor %}
+  </nav>
+
+  <p style="margin-top:3em">Inspiration</p>
+  <nav class="post-list">
+    {% assign quotes = site.inspiration | where_exp: "q", "q.name != 'index.md'" | sort: "date" | reverse %}
+    {% assign qtotal = quotes | size %}
+    {% for item in quotes %}
+      {% assign label = item.title | default: item.content | strip_html | strip_newlines | truncatewords: 12 %}
+      {% assign num = qtotal | minus: forloop.index | plus: 1 %}
+      <div class="row q">
+        <span class="n">{{ num }}.</span>
+        <a class="t" href="{{ item.url }}"><span class="qm">“</span><i>{{ label }}</i></a>
+        <span class="y">{{ item.date | date: "%Y" }}</span>
+      </div>
     {% endfor %}
   </nav>
 
