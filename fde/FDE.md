@@ -54,7 +54,7 @@ Un detalle que no puede pasar desapercibido: cuando te metes en un cliente a res
 
 Cualquier cosa que hagas, la clave es el equipo. Ed Catmull ya explicó esto en una frase mucho mejor que yo lo podría hacer:
 
-There is an important principle here that may seem obvious, yet— in my experience— is not obvious at all. Getting the right people and the right chemistry is more important than getting the right idea.
+> There is an important principle here that may seem obvious, yet— in my experience— is not obvious at all. Getting the right people and the right chemistry is more important than getting the right idea.
 
 La gente adecuada con la química adecuada, quédate con esto. Eso sí, lo que haces tiene que tener un mínimo de sentido, pero eso Catmull lo dio por hecho, pero somos Españoles, es mejor no confiarse.
 
