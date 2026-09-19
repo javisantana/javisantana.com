@@ -10,7 +10,7 @@ Pero si te tienes que quedar con una cosa es: los FDE son útiles, tienen sentid
 
 ## Para quién es esto
 
-Esto en realidad es para fundadores o gente montando estos equipos, es decir, empresas B2B, que vengan a empresas relativamente grandes (aunque no necesariamente) con productos que requieren cierta integración. 
+Esto en realidad es para fundadores o gente montando estos equipos, es decir, empresas B2B, que vendan a empresas relativamente grandes (aunque no necesariamente) con productos que requieren cierta integración.
 
 Pero si quieres o tienes  un rol de este tipo creo que puede ser de ayuda entender cómo otros lo hacen. Esto ayuda, da igual de que hablemos.
 
