@@ -56,7 +56,7 @@ Whatever you do, the team is the key. Ed Catmull explained it in one sentence fa
 
 > There is an important principle here that may seem obvious, yet— in my experience— is not obvious at all. Getting the right people and the right chemistry is more important than getting the right idea.
 
-The right people with the right chemistry. Remember that. What you do still needs to make at least some sense, obviously. Catmull took that for granted, but we are Spanish, so it is better not to risk it.
+The right people with the right chemistry. Remember that. What you do still needs to make at least some sense, obviously. Catmull took that for granted, but we are Spanish (for the non-spanish reader, we are usually pretty bad at selling ourselves, so I wanted to laugh at it), so it is better not to risk it.
 
 Our premise was: “people are working with data the way they did 15 years ago, but the technology and hardware are much better now; we can help them do it better.” Eight years later, I can say that premise was correct.
 
