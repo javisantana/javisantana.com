@@ -197,7 +197,7 @@ En cualquier caso, como cualquier contrato, siempre limita horas, fechas e impli
 
 Puedes no cobrarlo y asumir que tendrás retorno, a veces funciona, especialmente si estás hasta arriba de millones porque has levantado una ronda totalmente sobrevalorada y donde unos miles al mes te dan igual.
 
-## No solo hay que hacerlo si no que lo parezca: las reuniones de negocio
+## No solo hay que hacerlo sino que lo parezca: las reuniones de negocio
 
 Como decía, el track de negocio tiene otra tarea: que se vea lo que se hace, a veces no es trivial que se vea el impacto del trabajo que hace el FDE, así que cuando la persona “de negocio” se reuna, y tiene que hacerlo regularmente, con la persona “de negocio” del otro lado, lo primerito que se explica es “mira, esto es lo que hemos hecho”. 
 
@@ -234,7 +234,7 @@ No todo el monte es orégano, algunos de los problemas que nos hemos encontrado:
 
 - Demasiada dependencia del FDE para que el producto se quede  
 - La empresa final se apoya demasiado en tu FDE y espera cosas que no deberían  
-- Terminas dejando a un lado la parte de crecimiento orgánico del tu producto. Se te olvida que el self-service puede ser una buena vía.   
+- Terminas dejando a un lado la parte de crecimiento orgánico de tu producto. Se te olvida que el self-service puede ser una buena vía.   
 - Es difícil tener la cultura de FDE y la de product led groth al mismo tiempo.  
 - El equipo de producto se acostumbra a que los problemas del producto los suple una persona  
 - Los FDE terminan quejándose porque el producto falla pero no atacan el problema  

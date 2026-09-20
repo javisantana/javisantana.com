@@ -6,6 +6,8 @@
   <title>{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   {% if page.description %}<meta name="description" content="{{ page.description | strip_html | escape }}">{% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
+  {% if page.alternate_es %}<link rel="alternate" hreflang="es" href="{{ page.alternate_es }}">{% endif %}
+  {% if page.alternate_en %}<link rel="alternate" hreflang="en" href="{{ page.alternate_en }}">{% endif %}
   <link rel="stylesheet" href="{{ site.baseurl }}/min.css">
   {% if page.stylesheet %}<link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">{% endif %}
   {% if page.script %}<script src="{{ page.script | relative_url }}" defer></script>{% endif %}

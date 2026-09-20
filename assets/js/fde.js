@@ -12,6 +12,7 @@
     const status = document.getElementById('fde-ask-status');
     const readingTime = document.getElementById('fde-reading-time');
     if (!article || !trigger || !panel || !form) return;
+    const english = document.documentElement.lang.toLowerCase().startsWith('en');
 
     const track = (type, data) => {
       if (window.jsAnalytics && typeof window.jsAnalytics.track === 'function') {
@@ -21,7 +22,7 @@
 
     const words = article.textContent.trim().split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.ceil(words / 210));
-    readingTime.textContent = `${minutes} min de lectura`;
+    readingTime.textContent = english ? `${minutes} min read` : `${minutes} min de lectura`;
 
     const headings = Array.from(article.querySelectorAll(':scope > h1'));
     headings.forEach((heading, index) => {
@@ -185,7 +186,7 @@
         question: value,
         questionLength: value.length
       });
-      status.textContent = 'enviada';
+      status.textContent = english ? 'sent' : 'enviada';
       question.value = '';
       form.querySelector('[type="submit"]').disabled = true;
       setTimeout(() => {

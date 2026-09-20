@@ -6,6 +6,8 @@ lang: es
 description: "Una guía práctica para montar, contratar, entrenar y gestionar un equipo de Forward Deployed Engineers en una empresa B2B."
 stylesheet: /assets/css/fde.css
 script: /assets/js/fde.js
+alternate_es: /fde/
+alternate_en: /fde/en/
 ---
 
 {% include_relative FDE.md %}

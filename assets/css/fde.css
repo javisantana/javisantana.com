@@ -2,6 +2,21 @@
   margin-bottom: 3.6em;
 }
 
+.fde-language-switch {
+  color: var(--muted);
+  font: 12px/1.4 var(--mono);
+  margin-bottom: 1.5em;
+}
+
+.fde-language-switch a {
+  color: var(--muted);
+}
+
+.fde-language-switch strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
 .fde-content,
 .fde-content * {
   -webkit-touch-callout: default;
@@ -14,6 +29,15 @@
   font-family: var(--mono);
   font-size: 12px;
   margin: 1.2em 0 0;
+}
+
+.fde-post .fde-translation-note {
+  border-left: 2px solid var(--rule);
+  color: #555;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 1.4em 0 0;
+  padding-left: 0.8em;
 }
 
 .fde-content > h1 {

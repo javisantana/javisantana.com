@@ -3,9 +3,17 @@ layout: minimal
 ---
 <article class="post fde-post" id="fde-article">
   <header class="post-header">
+    <nav class="fde-language-switch" aria-label="{% if page.lang == 'en' %}Article language{% else %}Idioma del artículo{% endif %}">
+      {% if page.lang == 'en' %}<a href="/fde/" lang="es">Español</a> <span aria-hidden="true">·</span> <strong>English</strong>{% else %}<strong>Español</strong> <span aria-hidden="true">·</span> <a href="/fde/en/" lang="en">English</a>{% endif %}
+    </nav>
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }} <span aria-hidden="true">·</span> <span id="fde-reading-time">lectura larga</span> <span aria-hidden="true">·</span> <a href="/landing.html">Javi Santana</a></p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }} <span aria-hidden="true">·</span> <span id="fde-reading-time">{% if page.lang == 'en' %}long read{% else %}lectura larga{% endif %}</span> <span aria-hidden="true">·</span> <a href="/landing.html">Javi Santana</a></p>
+    {% if page.lang == 'en' %}
+    <p class="fde-translation-note">Translated from the <a href="/fde/">Spanish original</a> by OpenAI Codex. This edition incorporates revisions requested or made manually by Javi Santana.</p>
+    <p class="fde-hint">Select any passage to ask a question. I’ll receive it and add the answer to the document.</p>
+    {% else %}
     <p class="fde-hint">Selecciona cualquier fragmento para hacer una pregunta. La pregunta se enviará y la respuesta se añadirá al documento.</p>
+    {% endif %}
   </header>
 
   <div class="fde-content">
@@ -13,8 +21,8 @@ layout: minimal
   </div>
 
   <footer class="post-footer">
-    <a href="/">← todos los posts</a><span class="sep">·</span><a href="https://javisantana.substack.com">suscríbete</a><span class="sep">·</span><a href="https://x.com/javisantana">x</a><span class="sep">·</span><a href="https://www.linkedin.com/in/javisantana">linkedin</a>
-    <p>© 2026 Javi Santana. Todos los derechos reservados.</p>
+    <a href="/">← {% if page.lang == 'en' %}all posts{% else %}todos los posts{% endif %}</a><span class="sep">·</span><a href="https://javisantana.substack.com">{% if page.lang == 'en' %}subscribe{% else %}suscríbete{% endif %}</a><span class="sep">·</span><a href="https://x.com/javisantana">x</a><span class="sep">·</span><a href="https://www.linkedin.com/in/javisantana">linkedin</a>
+    <p>© 2026 Javi Santana. {% if page.lang == 'en' %}All rights reserved.{% else %}Todos los derechos reservados.{% endif %}</p>
   </footer>
 </article>
 
@@ -23,16 +31,16 @@ layout: minimal
 <div class="fde-ask-panel" id="fde-ask-panel" role="dialog" aria-modal="true" aria-labelledby="fde-ask-title" hidden>
   <form class="fde-ask-form" id="fde-ask-form">
     <div class="fde-ask-bar">
-      <strong id="fde-ask-title">Pregunta sobre este fragmento</strong>
-      <button class="fde-ask-close" id="fde-ask-close" type="button" aria-label="Cerrar">×</button>
+      <strong id="fde-ask-title">{% if page.lang == 'en' %}Ask about this passage{% else %}Pregunta sobre este fragmento{% endif %}</strong>
+      <button class="fde-ask-close" id="fde-ask-close" type="button" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}">×</button>
     </div>
     <blockquote id="fde-ask-quote"></blockquote>
-    <p class="fde-ask-note">Enviaré tu pregunta y añadiré la respuesta al documento.</p>
-    <label for="fde-ask-question">Tu pregunta</label>
+    <p class="fde-ask-note">{% if page.lang == 'en' %}I’ll receive your question and add the answer to the document.{% else %}Enviaré tu pregunta y añadiré la respuesta al documento.{% endif %}</p>
+    <label for="fde-ask-question">{% if page.lang == 'en' %}Your question{% else %}Tu pregunta{% endif %}</label>
     <textarea id="fde-ask-question" maxlength="500" rows="3" required></textarea>
     <div class="fde-ask-actions">
       <span id="fde-ask-status" role="status" aria-live="polite"></span>
-      <button type="submit">enviar</button>
+      <button type="submit">{% if page.lang == 'en' %}send{% else %}enviar{% endif %}</button>
     </div>
   </form>
 </div>
