@@ -16,20 +16,25 @@ permalink: /landing.html
     <li><a href="https://web.archive.org/web/20190828133838/http://agroguia.es/" data-analytics="hero-agroguia"><i>Agroguía</i></a> (2006–2017) — founder. GPS guidance software for tractors. Bootstrapped, profitable, run by one person. $200k+/year.</li>
   </ul>
 
-  <p class="home-cta">Three good places to start reading:</p>
+  <p class="home-cta">Four good places to start reading:</p>
   <nav class="post-list section" data-analytics-section="start-here">
     <div class="row">
       <span class="n">1.</span>
+      <a class="t" href="/fde/en/" data-analytics="featured-fde"><i>Forward Deployed Engineers from the trenches</i></a>
+      <span class="y">2026</span>
+    </div>
+    <div class="row">
+      <span class="n">2.</span>
       <a class="t" href="/2024/11/30/learnings-after-4-years-data-eng.html" data-analytics="featured-four-years"><i>Learnings after four years working with +50 companies on data engineering</i></a>
       <span class="y">2024</span>
     </div>
     <div class="row">
-      <span class="n">2.</span>
+      <span class="n">3.</span>
       <a class="t" href="/fastdata/40-things-I-learned-about-data.html" data-analytics="featured-forty-things"><i>40 things I learned about data</i></a>
       <span class="y">2022</span>
     </div>
     <div class="row">
-      <span class="n">3.</span>
+      <span class="n">4.</span>
       <a class="t" href="/2025/01/16/i-love-sql.html" data-analytics="featured-i-love-sql"><i>I love SQL</i></a>
       <span class="y">2025</span>
     </div>
