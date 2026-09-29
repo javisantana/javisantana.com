@@ -234,3 +234,18 @@ img { max-width: 100%; height: auto; }
 .highlight .err { color: #a61717; background: #e3d2d2; }
 .highlight .gd { color: #000; background: #ffdddd; }
 .highlight .gi { color: #000; background: #ddffdd; }
+/* Compact TOC — matches muted archive chrome */
+#markdown-toc {
+  margin: 1.2em 0 2em;
+  padding: 0 0 0 1.2em;
+  color: var(--muted);
+  font-size: 0.95em;
+}
+#markdown-toc ul { margin: 0.2em 0; padding-left: 1.2em; }
+#markdown-toc a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  font-style: italic;
+}
+#markdown-toc a:hover { border-bottom-style: solid; }
