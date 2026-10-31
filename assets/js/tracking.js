@@ -1,7 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = '2026-08-14';
+    const ANALYTICS_VERSION = '2026-10-30';
 
     if (!URL) return;
     if (
@@ -70,6 +70,7 @@
         if (!flush.sent) {
             batch.device = device;
             batch.sessionStart = sessionStart;
+            if (location.search) batch.search = location.search.slice(0, 500);
             flush.sent = true;
         }
         
