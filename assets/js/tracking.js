@@ -1,7 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = '2026-10-30';
+    const ANALYTICS_VERSION = "2026-11-03";
 
     if (!URL) return;
     if (
@@ -26,6 +26,8 @@
     const sessionId = Math.random().toString(36).slice(2, 11);
     const sessionStart = Date.now();
     const device = getDevice();
+    const visitor = (() => { try { const K = "ja_v", now = Date.now(); let v = JSON.parse(localStorage.getItem(K) || "null"); if (!v || !v.id) v = { id: (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + now.toString(36)), first: now, last: 0, n: 0 }; const gap = v.last ? now - v.last : null; if (!v.last || gap > 1800000) v.n++; v.last = now; if (/[?&]me=1\b/.test(location.search)) v.owner = 1; localStorage.setItem(K, JSON.stringify(v)); return { id: v.id, firstSeen: v.first, visitN: v.n, sinceLastMs: gap, owner: v.owner || 0 }; } catch (e) { return null; } })();
+    const navType = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0] || {}).type;
     
     let queue = [];
     let maxProgress = 0;
@@ -71,6 +73,8 @@
             batch.device = device;
             batch.sessionStart = sessionStart;
             if (location.search) batch.search = location.search.slice(0, 500);
+            if (visitor) batch.visitor = visitor;
+            if (navType) batch.navType = navType;
             flush.sent = true;
         }
         

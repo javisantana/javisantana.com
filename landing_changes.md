@@ -711,7 +711,7 @@ unchanged so that signal is clean and attributable to the exposure change alone.
 ### Validation
 
 `bundle exec jekyll build` clean (pre-existing unrelated Liquid / `doc/cv.html` warnings left
-untouched). Built `a/landing.html` shows `EXPOSURE_PCT = 100` and `tracking.js?v=20261030`;
+untouched). Built `a/landing.html` shows `EXPOSURE_PCT = 100` and `tracking.js?v=20261103`;
 `a/index.html` also references `?v=20260814`. `node --check assets/js/tracking.js` OK and the
 built inline survey script parses. All three featured internal links present in the build.
 `git diff --check` clean; source diff is exactly three one-line changes (`landing.md`,
