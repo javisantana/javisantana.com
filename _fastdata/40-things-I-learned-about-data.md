@@ -20,6 +20,9 @@ Today there are 40 days left until my 40th birthday. I’ve been working with da
 
 I’ll share one thing every day until I turn 40.
 
+* TOC
+{:toc}
+
 ## 1. It’s hard to capture reality with data
 
 Trying to recreate an accurate version of reality, no matter what that is or how simple it looks, is hard.
