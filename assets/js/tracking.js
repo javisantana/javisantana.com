@@ -1,7 +1,7 @@
 (function() {
     const URL = window.ANALYTICS_URL || 'https://e.javisantana.com';
     const FLUSH_MS = 1000;
-    const ANALYTICS_VERSION = "2026-11-03";
+    const ANALYTICS_VERSION = "2026-11-06";
 
     if (!URL) return;
     if (
@@ -28,6 +28,199 @@
     const device = getDevice();
     const visitor = (() => { try { const K = "ja_v", now = Date.now(); let v = JSON.parse(localStorage.getItem(K) || "null"); if (!v || !v.id) v = { id: (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + now.toString(36)), first: now, last: 0, n: 0 }; const gap = v.last ? now - v.last : null; if (!v.last || gap > 1800000) v.n++; v.last = now; if (/[?&]me=1\b/.test(location.search)) v.owner = 1; localStorage.setItem(K, JSON.stringify(v)); return { id: v.id, firstSeen: v.first, visitN: v.n, sinceLastMs: gap, owner: v.owner || 0 }; } catch (e) { return null; } })();
     const navType = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0] || {}).type;
+    let fpDigest = null;
+    const fp = (() => {
+        try {
+            const fnv = (s) => {
+                let h = 2166136261;
+                const str = String(s == null ? "" : s);
+                for (let i = 0; i < str.length; i++) {
+                    h ^= str.charCodeAt(i);
+                    h = Math.imul(h, 16777619);
+                }
+                return (h >>> 0).toString(36);
+            };
+            const mq = (q) => (window.matchMedia && matchMedia(q).matches) ? 1 : 0;
+            const uaData = navigator.userAgentData || {};
+            const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+            const digest = (o) => {
+                o.hash = fnv([
+                    o.screenW, o.screenH, o.availW, o.availH, o.availX, o.availY, o.dpr, o.colorDepth,
+                    o.tz, o.tzOffset, o.lang, o.langs, o.platform, o.cores, o.memory, o.touch,
+                    o.dark, o.brands, o.uaPlatform, o.canvas, o.glUnmaskedVendor, o.glUnmaskedRenderer,
+                    o.glExts, o.fonts, o.audio, o.architecture, o.bitness, o.model, o.platformVersion,
+                    o.colorGamut, o.hdr, o.pdf, o.math
+                ].join("|"));
+                return o;
+            };
+            let ls = 0, ss = 0;
+            try { ls = window.localStorage ? 1 : 0; } catch (e) {}
+            try { ss = window.sessionStorage ? 1 : 0; } catch (e) {}
+            const out = {
+                screenW: screen.width,
+                screenH: screen.height,
+                availW: screen.availWidth,
+                availH: screen.availHeight,
+                availX: screen.availLeft || 0,
+                availY: screen.availTop || 0,
+                dpr: devicePixelRatio || 1,
+                colorDepth: screen.colorDepth,
+                viewH: innerHeight,
+                tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || ""),
+                tzOffset: new Date().getTimezoneOffset(),
+                lang: navigator.language || "",
+                langs: (navigator.languages || []).slice(0, 8).join(","),
+                platform: navigator.platform || "",
+                cores: navigator.hardwareConcurrency || 0,
+                memory: navigator.deviceMemory || 0,
+                touch: navigator.maxTouchPoints || 0,
+                dark: mq("(prefers-color-scheme: dark)"),
+                brands: (uaData.brands || []).map(b => b.brand + "/" + b.version).join(","),
+                uaMobile: uaData.mobile ? 1 : 0,
+                uaPlatform: uaData.platform || "",
+                net: conn.effectiveType || "",
+                vendor: navigator.vendor || "",
+                cookie: navigator.cookieEnabled ? 1 : 0,
+                ls: ls,
+                ss: ss,
+                idb: window.indexedDB ? 1 : 0,
+                pdf: navigator.pdfViewerEnabled ? 1 : 0,
+                colorGamut: mq("(color-gamut: rec2020)") ? "rec2020" : mq("(color-gamut: p3)") ? "p3" : mq("(color-gamut: srgb)") ? "srgb" : "",
+                hdr: mq("(dynamic-range: high)"),
+                motion: mq("(prefers-reduced-motion: reduce)"),
+                contrast: mq("(prefers-contrast: more)") ? "more" : mq("(prefers-contrast: less)") ? "less" : "",
+                inverted: mq("(inverted-colors: inverted)"),
+                forcedColors: mq("(forced-colors: active)"),
+                hover: mq("(hover: hover)"),
+                pointer: mq("(pointer: fine)") ? "fine" : mq("(pointer: coarse)") ? "coarse" : "",
+                orient: ((screen.orientation && screen.orientation.type) || "") + ":" + ((screen.orientation && screen.orientation.angle) || 0),
+                math: [Math.tan(-1e300), Math.pow(Math.PI, -100), Math.expm1(1)].join(",")
+            };
+            try {
+                const c = document.createElement("canvas");
+                c.width = 280;
+                c.height = 60;
+                const ctx = c.getContext("2d");
+                if (ctx) {
+                    ctx.textBaseline = "alphabetic";
+                    ctx.fillStyle = "#f60";
+                    ctx.fillRect(125, 1, 62, 20);
+                    ctx.fillStyle = "#069";
+                    ctx.font = "11pt Arial";
+                    ctx.fillText("Cwm fjordbank glyphs vext quiz \ud83d\ude00", 2, 15);
+                    ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
+                    ctx.font = "18pt Times New Roman";
+                    ctx.fillText("Cwm fjordbank glyphs vext quiz \ud83d\ude00", 4, 45);
+                    ctx.globalCompositeOperation = "multiply";
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgb(255,0,255)";
+                    ctx.arc(50, 30, 20, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgb(0,255,255)";
+                    ctx.arc(70, 30, 20, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgb(255,255,0)";
+                    ctx.arc(60, 45, 20, 0, Math.PI * 2);
+                    ctx.fill();
+                    out.canvas = fnv(c.toDataURL());
+                }
+            } catch (e) {}
+            try {
+                const gc = document.createElement("canvas");
+                const gl = gc.getContext("webgl") || gc.getContext("experimental-webgl");
+                if (gl) {
+                    const ext = gl.getExtension("WEBGL_debug_renderer_info");
+                    out.glVendor = gl.getParameter(gl.VENDOR) || "";
+                    out.glRenderer = gl.getParameter(gl.RENDERER) || "";
+                    out.glUnmaskedVendor = ext ? (gl.getParameter(ext.UNMASKED_VENDOR_WEBGL) || "") : "";
+                    out.glUnmaskedRenderer = ext ? (gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || "") : "";
+                    out.glVersion = gl.getParameter(gl.VERSION) || "";
+                    out.glExts = fnv((gl.getSupportedExtensions() || []).join(","));
+                }
+            } catch (e) {}
+            try {
+                const base = ["monospace", "sans-serif", "serif"];
+                const fonts = ["Arial","Arial Black","Calibri","Cambria","Comic Sans MS","Courier","Courier New","Georgia","Helvetica","Helvetica Neue","Impact","Lucida Console","Lucida Grande","Menlo","Monaco","Palatino","Tahoma","Times","Times New Roman","Trebuchet MS","Verdana","Gill Sans","Futura","Optima","Didot","American Typewriter","Andale Mono","Consolas","Ubuntu","Liberation Sans","Noto Sans","Roboto","SF Pro Text","Segoe UI","Geneva"];
+                const span = document.createElement("span");
+                span.style.cssText = "position:absolute;left:-9999px;font-size:72px;";
+                span.textContent = "mmmmmmmmmmlli";
+                document.documentElement.appendChild(span);
+                const widths = {};
+                for (let i = 0; i < base.length; i++) {
+                    span.style.fontFamily = base[i];
+                    widths[base[i]] = span.offsetWidth + "x" + span.offsetHeight;
+                }
+                const found = [];
+                for (let i = 0; i < fonts.length; i++) {
+                    const f = fonts[i];
+                    for (let j = 0; j < base.length; j++) {
+                        span.style.fontFamily = JSON.stringify(f) + "," + base[j];
+                        if (span.offsetWidth + "x" + span.offsetHeight !== widths[base[j]]) {
+                            found.push(f);
+                            break;
+                        }
+                    }
+                }
+                span.remove();
+                out.fonts = found.join(",");
+            } catch (e) {}
+            try {
+                const Ctx = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+                if (Ctx) {
+                    const actx = new Ctx(1, 44100, 44100);
+                    const osc = actx.createOscillator();
+                    osc.type = "triangle";
+                    osc.frequency.value = 10000;
+                    const comp = actx.createDynamicsCompressor();
+                    comp.threshold.value = -50;
+                    comp.knee.value = 40;
+                    comp.ratio.value = 12;
+                    comp.attack.value = 0;
+                    comp.release.value = 0.25;
+                    osc.connect(comp);
+                    comp.connect(actx.destination);
+                    osc.start(0);
+                    actx.oncomplete = (ev) => {
+                        try {
+                            const data = ev.renderedBuffer.getChannelData(0);
+                            let sum = 0;
+                            for (let i = 4500; i < 5000; i++) sum += Math.abs(data[i]);
+                            out.audio = String(sum);
+                            digest(out);
+                        } catch (e2) {}
+                    };
+                    actx.startRendering();
+                }
+            } catch (e) {}
+            try {
+                if (uaData.getHighEntropyValues) {
+                    uaData.getHighEntropyValues(["architecture","bitness","model","platformVersion","fullVersionList","uaFullVersion"]).then((hi) => {
+                        out.architecture = hi.architecture || "";
+                        out.bitness = hi.bitness || "";
+                        out.model = hi.model || "";
+                        out.platformVersion = hi.platformVersion || "";
+                        out.uaFullVersion = hi.uaFullVersion || "";
+                        out.fullVersionList = (hi.fullVersionList || []).map(b => b.brand + "/" + b.version).join(",");
+                        digest(out);
+                    }).catch(() => {});
+                }
+            } catch (e) {}
+            try {
+                if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+                    navigator.mediaDevices.enumerateDevices().then((devs) => {
+                        out.media = devs.map(d => d.kind.charAt(0)).sort().join("");
+                        digest(out);
+                    }).catch(() => {});
+                }
+            } catch (e) {}
+            fpDigest = digest;
+            return digest(out);
+        } catch (e) {
+            return null;
+        }
+    })();
     
     let queue = [];
     let maxProgress = 0;
@@ -75,6 +268,7 @@
             if (location.search) batch.search = location.search.slice(0, 500);
             if (visitor) batch.visitor = visitor;
             if (navType) batch.navType = navType;
+            if (fp) { if (fpDigest) fpDigest(fp); batch.fp = fp; }
             flush.sent = true;
         }
         
